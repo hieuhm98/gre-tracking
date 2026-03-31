@@ -1,19 +1,29 @@
-import { createClient } from "@/lib/supabase/server";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useAuth } from "@/context/auth";
 import { PLAN } from "@/lib/constants";
 import MilestoneItem from "@/components/MilestoneItem";
 
-export default async function MilestonesPage() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+export default function MilestonesPage() {
+  const { user, supabase } = useAuth();
+  const [completed, setCompleted] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const { data: completed } = await supabase
-    .from("milestones")
-    .select("sprint, kpi_name, completed_at")
-    .eq("user_id", user!.id);
+  const fetchMilestones = async () => {
+    if (!user) return;
+    const { data } = await supabase
+      .from("milestones")
+      .select("sprint, kpi_name, completed_at")
+      .eq("user_id", user.id);
 
-  const completedSet = new Set(
-    completed?.map((m) => `${m.sprint}::${m.kpi_name}`) ?? []
-  );
+    setCompleted(data ?? []);
+    setLoading(false);
+  };
+
+  useEffect(() => { fetchMilestones(); }, [user]);
+
+  const completedSet = new Set(completed.map((m) => `${m.sprint}::${m.kpi_name}`));
 
   const total = PLAN.phases.reduce((acc, phase) => {
     if (phase.sprints.length > 0) {
@@ -24,6 +34,8 @@ export default async function MilestonesPage() {
 
   const done = completedSet.size;
 
+  if (loading) return <div className="text-zinc-500 text-sm p-8">Loading...</div>;
+
   return (
     <div className="max-w-2xl mx-auto space-y-8">
       <div>
@@ -33,7 +45,6 @@ export default async function MilestonesPage() {
         </p>
       </div>
 
-      {/* Overall progress */}
       <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
         <div
           className="h-full bg-green-500 rounded-full transition-all"
@@ -41,7 +52,6 @@ export default async function MilestonesPage() {
         />
       </div>
 
-      {/* Phase 1 sprints */}
       {PLAN.phases[0].sprints.map((sprint) => (
         <div key={sprint.id}>
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
@@ -57,14 +67,14 @@ export default async function MilestonesPage() {
                 sprintId={sprint.id}
                 kpi={kpi}
                 isCompleted={completedSet.has(`${sprint.id}::${kpi}`)}
-                completedAt={completed?.find((m) => m.sprint === sprint.id && m.kpi_name === kpi)?.completed_at}
+                completedAt={completed.find((m) => m.sprint === sprint.id && m.kpi_name === kpi)?.completed_at}
+                onToggled={fetchMilestones}
               />
             ))}
           </div>
         </div>
       ))}
 
-      {/* Phase 2 & 3 KPIs */}
       {PLAN.phases.slice(1).map((phase) => (
         <div key={phase.id}>
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
@@ -80,7 +90,8 @@ export default async function MilestonesPage() {
                 sprintId={`phase${phase.id}`}
                 kpi={kpi}
                 isCompleted={completedSet.has(`phase${phase.id}::${kpi}`)}
-                completedAt={completed?.find((m) => m.sprint === `phase${phase.id}` && m.kpi_name === kpi)?.completed_at}
+                completedAt={completed.find((m) => m.sprint === `phase${phase.id}` && m.kpi_name === kpi)?.completed_at}
+                onToggled={fetchMilestones}
               />
             ))}
           </div>

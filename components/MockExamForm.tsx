@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/context/auth";
 
 const ERROR_CATEGORIES = ["verbal", "quant", "reading", "writing", "vocab", "careless"];
 
-export default function MockExamForm() {
-  const router = useRouter();
+interface Props {
+  onSaved?: () => void;
+}
+
+export default function MockExamForm({ onSaved }: Props) {
+  const { user, supabase } = useAuth();
   const [open, setOpen] = useState(false);
   const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
   const [examName, setExamName] = useState("");
@@ -26,8 +29,6 @@ export default function MockExamForm() {
     setLoading(true);
     setError("");
 
-    const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
 
     // Build error_log — only include categories with a value
     const errorLog = Object.fromEntries(
@@ -53,7 +54,7 @@ export default function MockExamForm() {
       setExamName("");
       setErrors({});
       setNotes("");
-      router.refresh();
+      onSaved?.();
     }
 
     setLoading(false);

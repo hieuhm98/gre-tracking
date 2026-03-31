@@ -1,16 +1,21 @@
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { AuthProvider, useAuth } from "@/context/auth";
 import Sidebar from "@/components/Sidebar";
 
-export default async function AppLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+function AppShell({ children }: { children: React.ReactNode }) {
+  const { user, loading } = useAuth();
+  const router = useRouter();
 
-  if (!user) redirect("/login");
+  useEffect(() => {
+    if (!loading && !user) {
+      router.replace("/login");
+    }
+  }, [user, loading, router]);
+
+  if (loading || !user) return null;
 
   return (
     <div className="flex min-h-screen">
@@ -19,5 +24,13 @@ export default async function AppLayout({
         {children}
       </main>
     </div>
+  );
+}
+
+export default function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <AuthProvider>
+      <AppShell>{children}</AppShell>
+    </AuthProvider>
   );
 }

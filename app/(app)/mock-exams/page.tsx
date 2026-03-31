@@ -1,21 +1,35 @@
-import { createClient } from "@/lib/supabase/server";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useAuth } from "@/context/auth";
 import { formatDate } from "@/lib/utils";
 import MockExamForm from "@/components/MockExamForm";
 
-export default async function MockExamsPage() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+export default function MockExamsPage() {
+  const { user, supabase } = useAuth();
+  const [exams, setExams] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const { data: exams } = await supabase
-    .from("mock_exams")
-    .select("*")
-    .eq("user_id", user!.id)
-    .order("date", { ascending: false });
+  const fetchExams = async () => {
+    if (!user) return;
+    const { data } = await supabase
+      .from("mock_exams")
+      .select("*")
+      .eq("user_id", user.id)
+      .order("date", { ascending: false });
+
+    setExams(data ?? []);
+    setLoading(false);
+  };
+
+  useEffect(() => { fetchExams(); }, [user]);
 
   const avgScore =
-    exams && exams.length > 0
+    exams.length > 0
       ? Math.round(exams.reduce((s, e) => s + (e.score ?? 0), 0) / exams.length)
       : null;
+
+  if (loading) return <div className="text-zinc-500 text-sm p-8">Loading...</div>;
 
   return (
     <div className="max-w-2xl mx-auto space-y-8">
@@ -26,8 +40,7 @@ export default async function MockExamsPage() {
         </p>
       </div>
 
-      {/* Summary */}
-      {exams && exams.length > 0 && (
+      {exams.length > 0 && (
         <div className="grid grid-cols-3 gap-3">
           <div className="card text-center">
             <div className="text-2xl font-bold">{exams.length}</div>
@@ -46,10 +59,9 @@ export default async function MockExamsPage() {
         </div>
       )}
 
-      <MockExamForm />
+      <MockExamForm onSaved={fetchExams} />
 
-      {/* History */}
-      {exams && exams.length > 0 && (
+      {exams.length > 0 && (
         <div>
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
             Exam history

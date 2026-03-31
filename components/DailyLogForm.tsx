@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/context/auth";
 
 interface Props {
   existing: {
@@ -11,10 +10,11 @@ interface Props {
     vocab_count: number;
     notes: string | null;
   } | null;
+  onSaved?: () => void;
 }
 
-export default function DailyLogForm({ existing }: Props) {
-  const router = useRouter();
+export default function DailyLogForm({ existing, onSaved }: Props) {
+  const { user, supabase } = useAuth();
   const today = new Date().toISOString().split("T")[0];
 
   const [pages, setPages] = useState(existing?.pages_read?.toString() ?? "");
@@ -30,8 +30,6 @@ export default function DailyLogForm({ existing }: Props) {
     setError("");
     setSaved(false);
 
-    const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
 
     const payload = {
       user_id: user!.id,
@@ -49,7 +47,7 @@ export default function DailyLogForm({ existing }: Props) {
       setError(error.message);
     } else {
       setSaved(true);
-      router.refresh();
+      onSaved?.();
     }
 
     setLoading(false);

@@ -1,21 +1,34 @@
-import { createClient } from "@/lib/supabase/server";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useAuth } from "@/context/auth";
 import { formatDate } from "@/lib/utils";
 import DailyLogForm from "@/components/DailyLogForm";
 
-export default async function LogPage() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+export default function LogPage() {
+  const { user, supabase } = useAuth();
+  const [logs, setLogs] = useState<any[]>([]);
+  const [todayLog, setTodayLog] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  const { data: logs } = await supabase
-    .from("daily_logs")
-    .select("*")
-    .eq("user_id", user!.id)
-    .order("date", { ascending: false })
-    .limit(30);
+  const fetchLogs = async () => {
+    if (!user) return;
+    const { data } = await supabase
+      .from("daily_logs")
+      .select("*")
+      .eq("user_id", user.id)
+      .order("date", { ascending: false })
+      .limit(30);
 
-  // Check if today already logged
-  const today = new Date().toISOString().split("T")[0];
-  const todayLog = logs?.find((l) => l.date === today) ?? null;
+    const today = new Date().toISOString().split("T")[0];
+    setLogs(data ?? []);
+    setTodayLog(data?.find((l) => l.date === today) ?? null);
+    setLoading(false);
+  };
+
+  useEffect(() => { fetchLogs(); }, [user]);
+
+  if (loading) return <div className="text-zinc-500 text-sm p-8">Loading...</div>;
 
   return (
     <div className="max-w-2xl mx-auto space-y-8">
@@ -26,10 +39,9 @@ export default async function LogPage() {
         </p>
       </div>
 
-      <DailyLogForm existing={todayLog} />
+      <DailyLogForm existing={todayLog} onSaved={fetchLogs} />
 
-      {/* History */}
-      {logs && logs.length > 0 && (
+      {logs.length > 0 && (
         <div>
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
             History

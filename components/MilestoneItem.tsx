@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/context/auth";
 import { formatDate } from "@/lib/utils";
 
 interface Props {
@@ -10,17 +9,16 @@ interface Props {
   kpi: string;
   isCompleted: boolean;
   completedAt?: string;
+  onToggled?: () => void;
 }
 
-export default function MilestoneItem({ sprintId, kpi, isCompleted, completedAt }: Props) {
-  const router = useRouter();
+export default function MilestoneItem({ sprintId, kpi, isCompleted, completedAt, onToggled }: Props) {
+  const { user, supabase } = useAuth();
   const [loading, setLoading] = useState(false);
   const [checked, setChecked] = useState(isCompleted);
 
   async function toggle() {
     setLoading(true);
-    const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
 
     if (!checked) {
       await supabase.from("milestones").insert({
@@ -41,7 +39,7 @@ export default function MilestoneItem({ sprintId, kpi, isCompleted, completedAt 
     }
 
     setLoading(false);
-    router.refresh();
+    onToggled?.();
   }
 
   return (

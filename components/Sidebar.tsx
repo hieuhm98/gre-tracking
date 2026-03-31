@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/context/auth";
 import { cn } from "@/lib/utils";
 
 const NAV = [
@@ -15,12 +15,11 @@ const NAV = [
 export default function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
+  const { supabase } = useAuth();
 
   async function handleSignOut() {
-    const supabase = createClient();
     await supabase.auth.signOut();
     router.push("/login");
-    router.refresh();
   }
 
   return (
