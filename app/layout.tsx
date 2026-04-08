@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GRE Tracker",
-  description: "Track your GRE study progress",
+  title: "Milestone Tracking",
+  description: "Track your milestones and IT knowledge",
 };
 
 export default function RootLayout({

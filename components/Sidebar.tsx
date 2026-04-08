@@ -12,6 +12,12 @@ const NAV = [
   { href: "/mock-exams", label: "Mock Exams", icon: "◷" },
 ];
 
+const KNOWLEDGE_NAV = [
+  { href: "/knowledge", label: "IT Knowledge", icon: "◉" },
+  { href: "/knowledge-review", label: "Review", icon: "⟳" },
+  { href: "/my-articles", label: "My Articles", icon: "✎" },
+];
+
 export default function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
@@ -25,11 +31,11 @@ export default function Sidebar() {
   return (
     <aside className="w-56 shrink-0 border-r border-zinc-800 flex flex-col h-screen sticky top-0">
       <div className="px-5 py-6 border-b border-zinc-800">
-        <div className="font-bold text-lg tracking-tight">GRE Tracker</div>
+        <div className="font-bold text-lg tracking-tight">Milestone Tracking</div>
         <div className="text-xs text-zinc-500 mt-0.5">25 Mar → 7 Aug 2026</div>
       </div>
 
-      <nav className="flex-1 px-3 py-4 space-y-1">
+      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
         {NAV.map((item) => (
           <Link
             key={item.href}
@@ -37,6 +43,27 @@ export default function Sidebar() {
             className={cn(
               "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
               pathname === item.href
+                ? "bg-zinc-800 text-zinc-100 font-medium"
+                : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60"
+            )}
+          >
+            <span className="text-base">{item.icon}</span>
+            {item.label}
+          </Link>
+        ))}
+
+        <div className="pt-3 pb-1">
+          <div className="px-3 text-xs font-semibold text-zinc-600 uppercase tracking-wider mb-1">
+            IT Knowledge
+          </div>
+        </div>
+        {KNOWLEDGE_NAV.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={cn(
+              "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
+              pathname === item.href || (item.href === "/my-articles" && pathname.startsWith("/my-articles"))
                 ? "bg-zinc-800 text-zinc-100 font-medium"
                 : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60"
             )}

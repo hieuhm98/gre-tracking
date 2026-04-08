@@ -30,7 +30,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <div className="text-3xl font-bold mb-1">GRE Tracker</div>
+          <div className="text-3xl font-bold mb-1">Milestone Tracking</div>
           <p className="text-zinc-400 text-sm">Sign in to your account</p>
         </div>
 

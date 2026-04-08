@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q1",
+    "question": "Thành phần nào được gọi là 'bộ não' của máy tính?",
+    "options": ["RAM", "CPU", "Ổ cứng SSD", "Mainboard"],
+    "answer": 1,
+    "explanation": "CPU (Central Processing Unit) là bộ xử lý trung tâm, thực thi mọi lệnh tính toán và điều phối các thành phần khác."
+  },
+  {
+    "id": "q2",
+    "question": "Điều gì xảy ra với dữ liệu trong RAM khi bạn tắt máy tính?",
+    "options": ["Dữ liệu được lưu vào ổ cứng tự động", "Dữ liệu bị xóa hoàn toàn", "Dữ liệu được nén lại", "Dữ liệu chuyển sang CPU"],
+    "answer": 1,
+    "explanation": "RAM là bộ nhớ tạm thời (volatile). Khi mất điện hoặc tắt máy, toàn bộ dữ liệu trong RAM bị xóa."
+  },
+  {
+    "id": "q3",
+    "question": "Sự khác biệt chính giữa SSD và HDD là gì?",
+    "options": ["SSD lưu được nhiều dữ liệu hơn HDD", "SSD nhanh hơn và bền hơn HDD nhưng giá đắt hơn", "HDD nhanh hơn SSD", "SSD và HDD hoàn toàn giống nhau về tốc độ"],
+    "answer": 1,
+    "explanation": "SSD (Solid State Drive) dùng chip flash, không có bộ phận cơ học nên nhanh hơn và ít hỏng hơn HDD, nhưng giá thành cao hơn trên mỗi GB."
+  },
+  {
+    "id": "q4",
+    "question": "1 Terabyte (TB) bằng bao nhiêu Gigabyte (GB)?",
+    "options": ["100 GB", "512 GB", "1,024 GB", "2,048 GB"],
+    "answer": 2,
+    "explanation": "1 TB = 1,024 GB theo quy đổi nhị phân. Trong thực tế thương mại, các nhà sản xuất thường tính 1 TB = 1,000 GB."
+  },
+  {
+    "id": "q5",
+    "question": "Hệ điều hành (Operating System) có vai trò gì?",
+    "options": ["Chỉ để chạy trò chơi điện tử", "Quản lý tài nguyên phần cứng và cung cấp môi trường cho phần mềm chạy", "Thay thế CPU khi CPU bị lỗi", "Lưu trữ dữ liệu dài hạn"],
+    "answer": 1,
+    "explanation": "OS là phần mềm nền tảng, đóng vai trò cầu nối giữa phần cứng và phần mềm ứng dụng, quản lý bộ nhớ, CPU, thiết bị ngoại vi..."
+  },
+  {
+    "id": "q6",
+    "question": "Khi bạn mở nhiều ứng dụng cùng lúc và máy bắt đầu chậm lại, nguyên nhân phổ biến nhất là gì?",
+    "options": ["CPU quá nóng", "RAM không đủ để chứa tất cả ứng dụng đang chạy", "Ổ cứng bị đầy", "Mainboard bị lỗi"],
+    "answer": 1,
+    "explanation": "RAM lưu trữ dữ liệu của các ứng dụng đang chạy. Khi RAM đầy, OS phải dùng ổ cứng làm bộ nhớ ảo (virtual memory), gây ra tình trạng chậm đáng kể."
+  },
+  {
+    "id": "q7",
+    "question": "Thiết bị nào sau đây là thiết bị ĐẦU RA (output)?",
+    "options": ["Bàn phím", "Chuột", "Màn hình", "Webcam"],
+    "answer": 2,
+    "explanation": "Thiết bị đầu ra hiển thị kết quả từ máy tính đến người dùng. Màn hình là thiết bị đầu ra phổ biến nhất. Bàn phím, chuột, webcam là thiết bị đầu vào."
+  },
+  {
+    "id": "q8",
+    "question": "Linux thường được sử dụng phổ biến nhất ở đâu?",
+    "options": ["Trên máy tính cá nhân của người dùng thông thường", "Trên server và hệ thống đám mây", "Chỉ trên điện thoại Android", "Trên máy Mac của Apple"],
+    "answer": 1,
+    "explanation": "Linux là hệ điều hành mã nguồn mở, ổn định, bảo mật cao và miễn phí, nên được dùng rộng rãi trên server, cloud, và các hệ thống nhúng."
+  },
+  {
+    "id": "q9",
+    "question": "Đơn vị nhỏ nhất của dữ liệu trong máy tính là gì?",
+    "options": ["Byte", "Kilobyte", "Bit", "Nibble"],
+    "answer": 2,
+    "explanation": "Bit (binary digit) là đơn vị nhỏ nhất, chỉ mang giá trị 0 hoặc 1. 8 bit tạo thành 1 Byte."
+  },
+  {
+    "id": "q10",
+    "question": "Tốc độ CPU được đo bằng đơn vị gì?",
+    "options": ["GB (Gigabyte)", "GHz (Gigahertz)", "Mbps (Megabit per second)", "W (Watt)"],
+    "answer": 1,
+    "explanation": "GHz (Gigahertz) đo số tỷ chu kỳ xử lý mỗi giây. CPU 3.5 GHz thực hiện 3.5 tỷ chu kỳ mỗi giây."
+  },
+  {
+    "id": "q11",
+    "question": "Mainboard (bo mạch chủ) có chức năng gì?",
+    "options": ["Xử lý đồ họa chuyên dụng", "Kết nối và cho phép các linh kiện phần cứng giao tiếp với nhau", "Lưu trữ dữ liệu dài hạn", "Quản lý nguồn điện cho máy tính"],
+    "answer": 1,
+    "explanation": "Mainboard là bảng mạch chính kết nối CPU, RAM, ổ cứng, GPU và tất cả các linh kiện khác, tạo thành hệ thống hoàn chỉnh."
+  },
+  {
+    "id": "q12",
+    "question": "Phần mềm nào sau đây là phần mềm HỆ THỐNG (system software)?",
+    "options": ["Microsoft Word", "Google Chrome", "Driver card màn hình", "Adobe Photoshop"],
+    "answer": 2,
+    "explanation": "Driver thiết bị là phần mềm hệ thống, giúp OS giao tiếp với phần cứng cụ thể. Word, Chrome, Photoshop đều là phần mềm ứng dụng."
+  },
+  {
+    "id": "q13",
+    "question": "Nếu một file ảnh có dung lượng 5 MB, đó là bao nhiêu KB?",
+    "options": ["500 KB", "5,000 KB", "5,120 KB", "512 KB"],
+    "answer": 2,
+    "explanation": "1 MB = 1,024 KB. Vậy 5 MB = 5 × 1,024 = 5,120 KB."
+  },
+  {
+    "id": "q14",
+    "question": "CPU có nhiều nhân (multi-core) mang lại lợi ích gì?",
+    "options": ["Tiết kiệm điện hơn đáng kể", "Xử lý nhiều tác vụ song song cùng lúc, tăng hiệu năng tổng thể", "Tăng dung lượng lưu trữ", "Giảm nhiệt độ CPU"],
+    "answer": 1,
+    "explanation": "Mỗi nhân CPU có thể xử lý một luồng tác vụ độc lập. CPU 8 nhân có thể xử lý 8 tác vụ song song, cải thiện đáng kể hiệu năng đa nhiệm."
+  },
+  {
+    "id": "q15",
+    "question": "Thứ tự đúng khi mô tả luồng xử lý cơ bản của máy tính là gì?",
+    "options": ["Output → CPU → Input → Storage", "Input → CPU (dùng RAM) → Output, lưu vào Storage khi cần", "Storage → RAM → CPU → Input", "CPU → Input → RAM → Output"],
+    "answer": 1,
+    "explanation": "Luồng cơ bản: nhận đầu vào (Input) → CPU xử lý với sự hỗ trợ của RAM → xuất kết quả (Output). Dữ liệu được lưu dài hạn xuống ổ cứng (Storage) khi cần."
+  }
+]

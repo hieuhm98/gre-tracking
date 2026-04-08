@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q1",
+    "question": "Mạng LAN (Local Area Network) thường được sử dụng ở đâu?",
+    "options": ["Kết nối giữa hai quốc gia", "Trong một khu vực nhỏ như văn phòng hoặc nhà ở", "Kết nối toàn bộ Internet", "Chỉ kết nối điện thoại di động"],
+    "answer": 1,
+    "explanation": "LAN là mạng cục bộ, kết nối thiết bị trong phạm vi nhỏ như một tòa nhà, văn phòng, hoặc nhà ở."
+  },
+  {
+    "id": "q2",
+    "question": "Internet được phân loại là loại mạng nào?",
+    "options": ["LAN", "MAN", "WAN", "PAN"],
+    "answer": 2,
+    "explanation": "Internet là WAN (Wide Area Network) lớn nhất thế giới, kết nối hàng tỷ thiết bị trên toàn cầu qua nhiều khoảng cách địa lý."
+  },
+  {
+    "id": "q3",
+    "question": "Chức năng chính của Router là gì?",
+    "options": ["Phát sóng WiFi trong nhà", "Kết nối mạng LAN với Internet và định tuyến gói tin", "Kết nối nhiều thiết bị trong cùng một LAN", "Chuyển đổi tín hiệu analog sang digital"],
+    "answer": 1,
+    "explanation": "Router định tuyến gói tin giữa các mạng khác nhau — điển hình là kết nối mạng LAN nội bộ với Internet (WAN)."
+  },
+  {
+    "id": "q4",
+    "question": "Switch khác Router ở điểm nào?",
+    "options": ["Switch kết nối ra Internet, Router không kết nối được Internet", "Switch kết nối thiết bị trong cùng LAN, Router kết nối các mạng với nhau", "Switch và Router hoàn toàn giống nhau", "Switch chỉ dùng cho WiFi"],
+    "answer": 1,
+    "explanation": "Switch hoạt động trong nội bộ LAN, chuyển dữ liệu trực tiếp giữa các thiết bị. Router kết nối các mạng khác nhau (LAN ↔ Internet)."
+  },
+  {
+    "id": "q5",
+    "question": "Gói tin (packet) trong mạng máy tính là gì?",
+    "options": ["Một file được nén lại trước khi gửi", "Đơn vị dữ liệu nhỏ được chia ra từ dữ liệu lớn để truyền qua mạng", "Kết nối vật lý giữa hai máy tính", "Địa chỉ IP của thiết bị đích"],
+    "answer": 1,
+    "explanation": "Dữ liệu lớn được chia thành nhiều gói tin nhỏ, mỗi gói mang địa chỉ nguồn/đích và một phần dữ liệu. Chúng được lắp ráp lại khi đến nơi."
+  },
+  {
+    "id": "q6",
+    "question": "Băng thông (bandwidth) 100 Mbps có nghĩa là gì?",
+    "options": ["Tải được 100 MB mỗi giây", "Truyền tối đa 100 triệu bit mỗi giây", "Ping là 100 millisecond", "Kết nối được 100 thiết bị cùng lúc"],
+    "answer": 1,
+    "explanation": "Mbps = Megabit per second. 100 Mbps = 100 triệu bit/giây. Lưu ý: 8 bit = 1 byte, nên tốc độ tải thực tế là khoảng 12.5 MB/s."
+  },
+  {
+    "id": "q7",
+    "question": "Độ trễ (latency/ping) thấp quan trọng nhất với ứng dụng nào?",
+    "options": ["Tải file lớn qua đêm", "Game online thời gian thực, họp video, giao dịch tài chính", "Xem phim streaming độ phân giải thấp", "Gửi email"],
+    "answer": 1,
+    "explanation": "Ping thấp nghĩa là phản hồi nhanh — quan trọng với các ứng dụng tương tác thời gian thực. Tải file cần bandwidth cao, không cần ping thấp."
+  },
+  {
+    "id": "q8",
+    "question": "Địa chỉ IP nội bộ (Private IP) 192.168.1.100 thuộc về phạm vi nào?",
+    "options": ["Địa chỉ IP công khai trên Internet", "Địa chỉ IP trong mạng LAN nội bộ", "Địa chỉ IP của DNS server", "Địa chỉ IP của ISP"],
+    "answer": 1,
+    "explanation": "Dải 192.168.x.x là private IP, chỉ dùng trong mạng LAN nội bộ, không định tuyến trực tiếp trên Internet."
+  },
+  {
+    "id": "q9",
+    "question": "So với WiFi, kết nối mạng có dây (Ethernet) có ưu điểm gì?",
+    "options": ["Tiện lợi hơn vì không cần dây", "Tốc độ ổn định hơn, độ trễ thấp hơn và bảo mật hơn", "Rẻ hơn khi lắp đặt", "Hỗ trợ nhiều thiết bị hơn"],
+    "answer": 1,
+    "explanation": "Ethernet không bị nhiễu sóng, không chia sẻ băng thông với thiết bị khác, khó bị nghe lén hơn — nhưng bất tiện vì phải dùng cáp vật lý."
+  },
+  {
+    "id": "q10",
+    "question": "Modem có chức năng gì trong hệ thống mạng gia đình?",
+    "options": ["Định tuyến gói tin đến đúng thiết bị", "Chuyển đổi tín hiệu từ ISP thành tín hiệu số để router sử dụng", "Tăng cường sóng WiFi trong nhà", "Lưu trữ cài đặt mạng nội bộ"],
+    "answer": 1,
+    "explanation": "Modem (modulator-demodulator) chuyển tín hiệu từ đường dây (cáp đồng, cáp quang...) của ISP thành tín hiệu số mà router và máy tính có thể xử lý."
+  },
+  {
+    "id": "q11",
+    "question": "Khi bạn gửi một file 10MB qua email, dữ liệu được truyền như thế nào?",
+    "options": ["File được gửi nguyên vẹn một lần duy nhất", "File được chia thành nhiều gói tin nhỏ, gửi qua nhiều tuyến đường rồi lắp ráp lại", "File được nén thành 1 gói duy nhất rồi giải nén ở đầu nhận", "File chỉ được truyền khi cả hai máy cùng online"],
+    "answer": 1,
+    "explanation": "Mọi dữ liệu truyền qua mạng đều được chia thành packet. Các packet có thể đi theo nhiều tuyến đường khác nhau và được lắp ráp theo đúng thứ tự ở đầu nhận."
+  },
+  {
+    "id": "q12",
+    "question": "MAN (Metropolitan Area Network) có phạm vi bao nhiêu?",
+    "options": ["Trong một phòng máy tính", "Một tòa nhà văn phòng", "Một thành phố hoặc khu vực đô thị", "Toàn cầu"],
+    "answer": 2,
+    "explanation": "MAN có phạm vi trung gian, lớn hơn LAN (một tòa nhà) nhưng nhỏ hơn WAN (toàn cầu). Điển hình là mạng kết nối nhiều campus của một trường đại học."
+  },
+  {
+    "id": "q13",
+    "question": "Khi bạn truy cập google.com từ nhà, gói tin đi theo thứ tự nào?",
+    "options": ["Máy tính → Google → Router → ISP", "Máy tính → Router → ISP → Internet → Google", "Router → Máy tính → ISP → Google", "ISP → Router → Google → Máy tính"],
+    "answer": 1,
+    "explanation": "Gói tin từ máy bạn → router (chuyển ra ngoài LAN) → ISP (nhà mạng) → qua nhiều router trên Internet → đến server Google."
+  },
+  {
+    "id": "q14",
+    "question": "Băng thông cao nhưng ping cao (ví dụ kết nối vệ tinh) phù hợp với tác vụ nào?",
+    "options": ["Game online thời gian thực", "Video call chất lượng cao", "Tải file lớn hoặc cập nhật phần mềm", "Giao dịch chứng khoán tự động"],
+    "answer": 2,
+    "explanation": "Bandwidth cao = tải nhiều dữ liệu nhanh. Ping cao chỉ gây vấn đề khi cần tương tác thời gian thực. Tải file không cần phản hồi nhanh nên ping không quan trọng."
+  },
+  {
+    "id": "q15",
+    "question": "Thiết bị nào sau đây giúp mở rộng vùng phủ sóng WiFi trong một tòa nhà lớn?",
+    "options": ["Modem", "Switch", "Access Point (Điểm truy cập WiFi)", "Firewall"],
+    "answer": 2,
+    "explanation": "Access Point phát sóng WiFi để thiết bị kết nối không dây. Trong tòa nhà lớn, nhiều Access Point được đặt ở các vị trí khác nhau để đảm bảo phủ sóng toàn bộ."
+  }
+]
