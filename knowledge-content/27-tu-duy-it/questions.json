@@ -1,0 +1,182 @@
+[
+  {
+    "id": "think-01",
+    "question": "Khi nghe requirement 'quản lý đơn hàng', framework NOUN-VERB-STATE giúp làm gì?",
+    "options": [
+      "Ước lượng thời gian development",
+      "Xác định entities (dữ liệu), tính năng cần build và lifecycle của đối tượng",
+      "Chọn ngôn ngữ lập trình phù hợp",
+      "Vẽ wireframe ngay lập tức"
+    ],
+    "answer": 1,
+    "explanation": "NOUN → entities cần lưu trong database (đơn hàng, khách hàng, sản phẩm). VERB → tính năng / API cần xây dựng (tạo, xem, hủy, giao). STATE → lifecycle của đối tượng (pending → confirmed → shipping → delivered). Ba chiều này cho cái nhìn toàn diện về hệ thống."
+  },
+  {
+    "id": "think-02",
+    "question": "Requirement: 'Nhân viên được assign vào nhiều dự án, một dự án có nhiều nhân viên.' Đây là quan hệ gì trong database?",
+    "options": [
+      "Quan hệ 1-N: một nhân viên có nhiều dự án",
+      "Quan hệ 1-1: mỗi nhân viên chỉ có một dự án",
+      "Quan hệ N-N: cần bảng trung gian (project_members)",
+      "Không cần quan hệ, lưu riêng từng bảng"
+    ],
+    "answer": 2,
+    "explanation": "Nhiều-Nhiều (N-N) cần bảng trung gian: project_members(project_id, user_id, role). Không thể lưu 'nhiều project_id' vào 1 cột user, cũng không thể lưu 'nhiều user_id' vào 1 cột project. Bảng trung gian giải quyết vấn đề này và cho phép thêm thông tin về mối quan hệ (ví dụ role trong dự án)."
+  },
+  {
+    "id": "think-03",
+    "question": "Khi vẽ luồng màn hình (screen flow) cho một feature, bạn phát hiện ra điều gì hữu ích nhất?",
+    "options": [
+      "Màu sắc phù hợp cho từng màn hình",
+      "Màn hình bị thiếu, entry/exit points và màn hình cần authentication",
+      "Số lượng component cần code",
+      "Performance của từng màn hình"
+    ],
+    "answer": 1,
+    "explanation": "Screen flow diagram giúp: phát hiện màn hình bị bỏ sót (ví dụ quên trang 'Xác nhận đơn hàng thành công'), xác định đâu cần login (unauthorized user bị redirect), và xác định entry point nào user có thể vào hệ thống từ đó."
+  },
+  {
+    "id": "think-04",
+    "question": "Requirement: 'Admin thay đổi giá sản phẩm.' Câu hỏi nào QUAN TRỌNG nhất BA cần hỏi thêm?",
+    "options": [
+      "Giao diện form thay đổi giá trông như thế nào?",
+      "Lịch sử thay đổi giá có cần lưu không? Đơn hàng cũ dùng giá cũ hay giá mới?",
+      "Dùng input type number hay text cho trường giá?",
+      "Nút Save đặt ở trên hay dưới form?"
+    ],
+    "answer": 1,
+    "explanation": "Đây là câu hỏi về audit trail và business rule quan trọng: đơn hàng đã đặt với giá cũ có bị ảnh hưởng không? Có cần log ai thay đổi, lúc nào, từ giá nào sang giá nào? Thiếu yêu cầu này có thể gây vấn đề pháp lý và tranh chấp với khách hàng."
+  },
+  {
+    "id": "think-05",
+    "question": "State machine của 'Đơn hàng' hữu ích để làm gì?",
+    "options": [
+      "Thiết kế màu sắc hiển thị trạng thái",
+      "Xác định ai được phép chuyển trạng thái nào, điều kiện gì và hệ thống làm gì khi chuyển",
+      "Tính số lượng API cần xây dựng",
+      "Đặt tên bảng database"
+    ],
+    "answer": 1,
+    "explanation": "State machine xác định: CÁC TRẠNG THÁI (pending, confirmed, shipping...), CHUYỂN TIẾP HỢP LỆ (không thể từ delivered về pending), AI được trigger (user hủy, admin xác nhận, shipper cập nhật), và HỆ THỐNG LÀM GÌ khi chuyển (gửi email, trừ tồn kho, tạo transaction)."
+  },
+  {
+    "id": "think-06",
+    "question": "Khi phân tích một màn hình, câu hỏi 'Xem gì? Làm gì? Đến đâu?' giúp xác định điều gì?",
+    "options": [
+      "Chỉ xác định màu sắc và layout",
+      "Dữ liệu cần hiển thị, actions có thể thực hiện và navigation links",
+      "Số lượng API cần gọi",
+      "Kích thước màn hình responsive"
+    ],
+    "answer": 1,
+    "explanation": "'Xem gì?' → data model cần (columns trong DB). 'Làm gì?' → tính năng và API cần (nút bấm, form, dropdown). 'Đến đâu?' → navigation flow (links và routing). Ba câu hỏi này đủ để define scope của một màn hình."
+  },
+  {
+    "id": "think-07",
+    "question": "Scenario: 2 user cùng lúc đặt mua sản phẩm chỉ còn 1 cái trong kho. BA cần xác định gì?",
+    "options": [
+      "Không cần lo — đây là vấn đề kỹ thuật của developer",
+      "Cần define business rule: ai đặt trước được mua, hệ thống xử lý tồn kho concurrent như thế nào",
+      "Chỉ cần hiển thị 'Hết hàng' khi tồn kho = 0",
+      "Tăng số lượng sản phẩm trong kho"
+    ],
+    "answer": 1,
+    "explanation": "Concurrency là business problem, không chỉ là kỹ thuật. BA cần define: first-come-first-served hay lottery? Khi user B checkout thì hiển thị gì? Có hold tồn kho khi user đang checkout không (bao nhiêu phút)? Thiếu rule này → BE không biết implement gì."
+  },
+  {
+    "id": "think-08",
+    "question": "Mỗi khi xác định một happy path, BA cần bổ sung thêm điều gì?",
+    "options": [
+      "Màu sắc của success message",
+      "Animation transition giữa các bước",
+      "Empty state, error state, loading state và edge cases",
+      "Tên biến trong code"
+    ],
+    "answer": 2,
+    "explanation": "Happy path chỉ là 20% công việc. 80% còn lại: Loading state (đang gọi API), Empty state (không có dữ liệu), Error state (API fail, timeout), Edge cases (user nhập giá trị biên, concurrent actions, network slow). Thiếu những trạng thái này → UX xấu hoặc bugs."
+  },
+  {
+    "id": "think-09",
+    "question": "Requirement: 'Hệ thống gửi thông báo nhắc nhở'. Câu hỏi 'WHEN' cần làm rõ điều gì?",
+    "options": [
+      "Màu nền của notification",
+      "Thông báo trigger lúc nào, tần suất, múi giờ, và có tắt được không",
+      "Kích thước font chữ thông báo",
+      "Số lượng notification tối đa"
+    ],
+    "answer": 1,
+    "explanation": "WHEN xác định: trigger khi nào (X ngày trước deadline? lúc 8 giờ sáng?), tần suất (một lần hay lặp lại?), múi giờ của user (UTC+7?), và điều kiện dừng (đã hoàn thành task thì không nhắc nữa?). Thiếu thông tin này → BE không biết schedule cron job như thế nào."
+  },
+  {
+    "id": "think-10",
+    "question": "Khi nhận requirement, thứ tự tư duy nào ĐÚNG nhất?",
+    "options": [
+      "Thiết kế UI đẹp → nghĩ đến data → xác định API",
+      "Xác định entities và quan hệ → xác định luồng/màn hình → xác định API → đặt câu hỏi edge cases",
+      "Viết user story ngay → estimate → code",
+      "Hỏi dev xem cần bao lâu → trình bày với stakeholder"
+    ],
+    "answer": 1,
+    "explanation": "Thứ tự đúng: (1) Identify NOUN → entities và quan hệ (data model), (2) Identify VERB → tính năng và luồng, (3) Identify STATE → lifecycle, (4) Define screens và navigation, (5) Define API, (6) Edge cases và open questions. Bắt đầu từ UI trước dễ bỏ sót data requirements."
+  },
+  {
+    "id": "think-11",
+    "question": "Một bảng database tốt thường cần những trường nào ngoài business data?",
+    "options": [
+      "Chỉ cần các trường business, không cần gì thêm",
+      "id, created_at, updated_at — và thường thêm created_by, deleted_at (soft delete)",
+      "Chỉ cần id là đủ",
+      "Cần thêm các trường CSS cho UI"
+    ],
+    "answer": 1,
+    "explanation": "Trường metadata thường gặp: id (primary key, định danh), created_at (audit), updated_at (audit), created_by/updated_by (ai thay đổi), deleted_at (soft delete — ẩn thay vì xóa thật). Những trường này không phải yêu cầu nghiệp vụ rõ ràng nhưng gần như luôn cần cho tracking và debugging."
+  },
+  {
+    "id": "think-12",
+    "question": "Tại sao BA cần nghĩ đến phân quyền (authorization) ngay khi nhận requirement?",
+    "options": [
+      "Chỉ cần nghĩ đến khi có yêu cầu cụ thể về bảo mật",
+      "Vì phân quyền ảnh hưởng đến data model, API design và UI — khó thêm sau này",
+      "Để tăng độ phức tạp của hệ thống",
+      "Chỉ cần ẩn button ở FE là đủ"
+    ],
+    "answer": 1,
+    "explanation": "Phân quyền ảnh hưởng sâu: data model cần thêm role/permission tables, API cần middleware kiểm tra role, UI cần conditional rendering, queries cần filter theo user context (user A không thấy data của user B). Thiết kế phân quyền sau khi build xong rất tốn kém."
+  },
+  {
+    "id": "think-13",
+    "question": "Khi phân tích requirement 'export báo cáo doanh thu', câu hỏi nào KHÔNG liên quan?",
+    "options": [
+      "Dữ liệu lấy từ đâu và filter theo điều kiện gì?",
+      "Format xuất (Excel, PDF, CSV)?",
+      "Font chữ được dùng trong file Excel output?",
+      "Ai có quyền export? Lượng dữ liệu có lớn không (cần async)?"
+    ],
+    "answer": 2,
+    "explanation": "Font chữ trong file output là chi tiết UI/design quá nhỏ, không ảnh hưởng đến requirement phân tích. Các câu hỏi quan trọng hơn: data source, filter conditions, format, permission, và performance (nếu export 100k rows cần xử lý async với job queue, không thể block HTTP request)."
+  },
+  {
+    "id": "think-14",
+    "question": "Trong ví dụ app quản lý chi tiêu, câu hỏi 'Thu nhập có cần ghi lại không?' quan trọng vì sao?",
+    "options": [
+      "Không quan trọng — có thể thêm sau",
+      "Ảnh hưởng đến data model, UI và tính năng báo cáo — thêm sau tốn kém hơn nhiều",
+      "Chỉ để BA hiểu rõ hơn, không ảnh hưởng đến dev",
+      "Chỉ ảnh hưởng đến màu sắc biểu đồ"
+    ],
+    "answer": 1,
+    "explanation": "Quyết định này ảnh hưởng lớn: có thu nhập → cần bảng transactions với type (income/expense), báo cáo thêm cột 'thu', 'chi', 'còn lại', logic tính balance thay đổi, UI cần thêm form nhập thu nhập. Nếu hỏi sau khi đã build: cần thêm cột, sửa nhiều API và UI."
+  },
+  {
+    "id": "think-15",
+    "question": "Thói quen tư duy nào giúp BA phát triển tư duy IT tốt nhất?",
+    "options": [
+      "Học thuộc lòng tất cả SQL queries",
+      "Khi dùng bất kỳ app nào, tự hỏi: data gì được lưu, màn hình nào có, trạng thái chuyển như thế nào",
+      "Đọc code của developer",
+      "Học lập trình đầy đủ một ngôn ngữ"
+    ],
+    "answer": 1,
+    "explanation": "Tư duy IT là skill, không phải kiến thức — cần luyện tập hằng ngày. Mỗi lần dùng Grab, Shopee, Jira, hãy tự hỏi: entities là gì, tính năng build từ đâu, state machine của order/ticket trông ra sao. Sau vài tháng, tư duy này trở thành phản xạ tự nhiên."
+  }
+]

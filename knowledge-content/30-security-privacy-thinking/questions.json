@@ -1,0 +1,182 @@
+[
+  {
+    "id": "sec-01",
+    "question": "Tại sao BA cần có tư duy security, không chỉ để cho dev lo?",
+    "options": [
+      "Vì BA phải viết code bảo mật thay dev",
+      "Vì BA là người nắm requirement — nếu BA không hỏi, security gap sẽ không được specify và dev cũng không tự thêm vào",
+      "Vì security là trách nhiệm của BA theo quy định pháp luật",
+      "Vì dev không biết về security"
+    ],
+    "answer": 1,
+    "explanation": "Dev implement những gì được specify. Nếu BA không hỏi 'ai được xem đơn hàng của người khác không?' thì không ai nghĩ đến lỗ hổng IDOR. Security gap thường đến từ assumption — 'chắc dev tự biết' — nhưng dev không có context business để biết rule đó."
+  },
+  {
+    "id": "sec-02",
+    "question": "IDOR (Insecure Direct Object Reference) là lỗ hổng gì?",
+    "options": [
+      "Mật khẩu quá ngắn, dễ đoán",
+      "Hệ thống không mã hóa dữ liệu truyền đi",
+      "User có thể truy cập tài nguyên của người khác bằng cách thay đổi ID trên URL/request",
+      "Tấn công bằng cách gửi nhiều request cùng lúc"
+    ],
+    "answer": 2,
+    "explanation": "Ví dụ: /api/orders/1234 trả về đơn hàng. Nếu không kiểm tra ownership, user B chỉ cần đổi thành /api/orders/1235 là xem được đơn hàng của user A. BA cần specify: 'User chỉ được xem đơn hàng của chính mình' — câu này nghe hiển nhiên nhưng nếu không viết ra, không ai verify."
+  },
+  {
+    "id": "sec-03",
+    "question": "Dữ liệu nào thuộc loại 'Restricted' (nhạy cảm nhất) cần bảo vệ cao nhất?",
+    "options": [
+      "Tên sản phẩm, giá bán công khai",
+      "Báo cáo doanh thu nội bộ, chiến lược kinh doanh",
+      "Mật khẩu, CCCD/CMND, thông tin thẻ tín dụng, dữ liệu y tế",
+      "Tên công ty, địa chỉ văn phòng"
+    ],
+    "answer": 2,
+    "explanation": "4 cấp độ dữ liệu: Public (ai xem cũng được), Internal (nội bộ công ty), Confidential (báo cáo, chiến lược — cần auth), Restricted (mật khẩu, CCCD, thẻ tín dụng, y tế — cần encrypt + audit trail + access tối thiểu). BA cần classify để spec đúng biện pháp bảo vệ."
+  },
+  {
+    "id": "sec-04",
+    "question": "Authentication và Authorization khác nhau thế nào?",
+    "options": [
+      "Chúng giống nhau, chỉ khác tên gọi",
+      "Authentication: bạn là ai; Authorization: bạn được làm gì",
+      "Authorization: bạn là ai; Authentication: bạn được làm gì",
+      "Authentication dùng cho web, Authorization dùng cho mobile"
+    ],
+    "answer": 1,
+    "explanation": "Authentication (AuthN): xác nhận danh tính — login bằng email/password, Google, Face ID. Authorization (AuthZ): xác nhận quyền hạn — manager được approve đơn, nhân viên chỉ được xem. Lỗi hay gặp: hệ thống có login (AuthN) nhưng không check quyền (AuthZ) → mọi user đều làm được mọi thứ."
+  },
+  {
+    "id": "sec-05",
+    "question": "Điều gì là 'red line' tuyệt đối không được làm trong hệ thống?",
+    "options": [
+      "Không được dùng HTTPS cho API nội bộ",
+      "Lưu password dạng plaintext trong database",
+      "Không được log lỗi ra console",
+      "Không được dùng JWT token"
+    ],
+    "answer": 1,
+    "explanation": "5 red lines: (1) Lưu password plaintext — hash bằng bcrypt/argon2. (2) Log dữ liệu nhạy cảm — CCCD, password không được xuất hiện trong log. (3) Sensitive data trong URL — /reset?token=abc123 bị lưu vào server log. (4) Tin client input tuyệt đối — luôn validate server-side. (5) Lộ thông tin hệ thống trong error message."
+  },
+  {
+    "id": "sec-06",
+    "question": "Privacy by Design có nghĩa là gì?",
+    "options": [
+      "Thiết kế UI cho người dùng cao tuổi",
+      "Chỉ thu thập dữ liệu tối thiểu cần thiết và tích hợp privacy vào hệ thống từ đầu, không phải thêm vào sau",
+      "Yêu cầu user đọc và ký Privacy Policy",
+      "Mã hóa toàn bộ database"
+    ],
+    "answer": 1,
+    "explanation": "Privacy by Design: xây privacy vào kiến trúc từ đầu, không phải patch sau. 7 nguyên tắc: proactive (phòng ngừa), privacy by default, embedded (tích hợp vào thiết kế), full functionality (không đánh đổi), end-to-end security, visibility, respect user. Câu hỏi BA cần hỏi: 'Chúng ta có thực sự cần thu thập field này không?'"
+  },
+  {
+    "id": "sec-07",
+    "question": "Khi BA viết requirement cho tính năng upload file, câu hỏi security nào QUAN TRỌNG NHẤT?",
+    "options": [
+      "File sẽ được lưu trên server hay cloud?",
+      "Loại file nào được phép upload? Kích thước tối đa? File có được scan malware không?",
+      "Dev sẽ dùng thư viện gì để xử lý file?",
+      "User upload bao nhiêu file mỗi ngày?"
+    ],
+    "answer": 1,
+    "explanation": "Upload file là attack surface nguy hiểm: (1) Whitelist extension — chỉ allow .jpg/.png/.pdf, reject .exe/.sh/.php. (2) Giới hạn kích thước để tránh DoS. (3) Scan malware trước khi lưu. (4) Không lưu theo tên user đặt — tránh path traversal. (5) Kiểm tra content-type thật, không chỉ dựa vào extension."
+  },
+  {
+    "id": "sec-08",
+    "question": "Audit Trail trong hệ thống ghi lại những gì?",
+    "options": [
+      "Chỉ ghi lại lỗi hệ thống (error log)",
+      "Ghi lại WHO làm gì (WHAT), khi nào (WHEN), từ đâu (WHERE) — đặc biệt cho các action nhạy cảm",
+      "Chỉ ghi lại transaction tài chính",
+      "Ghi lại toàn bộ nội dung request/response của mọi API"
+    ],
+    "answer": 1,
+    "explanation": "Audit trail = lịch sử hành động cho mục đích kiểm tra và truy cứu: user_id (WHO), action (WHAT: created/updated/deleted), timestamp (WHEN), ip_address (WHERE), affected_record (cái gì bị thay đổi). Cần thiết cho: compliance, điều tra incident, resolve tranh chấp. BA cần specify tính năng nào cần audit trail."
+  },
+  {
+    "id": "sec-09",
+    "question": "GDPR 'Right to Erasure' (Right to be Forgotten) yêu cầu điều gì?",
+    "options": [
+      "User có quyền xem toàn bộ dữ liệu của mình",
+      "User có quyền yêu cầu xóa dữ liệu cá nhân của mình khỏi hệ thống",
+      "Hệ thống phải tự động xóa dữ liệu sau 2 năm",
+      "User có quyền chỉnh sửa dữ liệu cá nhân"
+    ],
+    "answer": 1,
+    "explanation": "GDPR 6 quyền: (1) Access — xem dữ liệu của mình. (2) Erasure — yêu cầu xóa. (3) Rectification — sửa dữ liệu sai. (4) Portability — export dữ liệu. (5) Object — từ chối một số xử lý. (6) Restriction. BA cần hỏi: 'Nếu user yêu cầu xóa account, chúng ta xử lý thế nào?' — có exception cho dữ liệu tài chính phải giữ theo luật."
+  },
+  {
+    "id": "sec-10",
+    "question": "Tại sao không nên đặt token reset password vào URL query string?",
+    "options": [
+      "URL quá dài sẽ khó nhớ",
+      "URL được lưu vào server log, browser history, và có thể bị leak qua Referer header — lộ token = ai cũng reset được password đó",
+      "Query string không được hỗ trợ trên mobile",
+      "Token trong URL sẽ bị expire nhanh hơn"
+    ],
+    "answer": 1,
+    "explanation": "URL /reset-password?token=abc123 xuất hiện trong: server access log, browser history, proxy log, Referer header khi click link tiếp theo. Token = key để reset password → nếu leak = account takeover. Best practice: token lưu trong POST body hoặc header, không bao giờ trong URL cho dữ liệu nhạy cảm."
+  },
+  {
+    "id": "sec-11",
+    "question": "Khi hệ thống có lỗi, error message nào là ĐÚNG về mặt security?",
+    "options": [
+      "\"SQLException: column 'password' not found in table 'users' at line 47\"",
+      "\"Error: Connection to 192.168.1.50:5432 failed\"",
+      "\"Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.\"",
+      "\"User not found in database: user@email.com\""
+    ],
+    "answer": 2,
+    "explanation": "Error message không được lộ: tên bảng/cột trong DB, stack trace, IP/port nội bộ, thông tin có hay không email/user trong hệ thống (vì hacker dùng để enumerate users). Thông báo chung chung vừa an toàn vừa đủ để user hiểu cần làm gì. Log chi tiết ở server-side, user chỉ thấy thông báo generic."
+  },
+  {
+    "id": "sec-12",
+    "question": "Coupon 'SALE50' chỉ dùng được 1 lần/user. BA cần specify điều gì để tránh lỗ hổng?",
+    "options": [
+      "Chỉ cần validate coupon còn hiệu lực về ngày tháng",
+      "Validate: coupon hợp lệ + chưa quá hạn + user này chưa dùng coupon này + đơn đủ điều kiện + áp dụng 1 coupon/đơn",
+      "Chỉ cần check tổng số lần coupon được dùng toàn hệ thống",
+      "Chỉ cần validate ở phía client (JavaScript) để giảm tải server"
+    ],
+    "answer": 1,
+    "explanation": "Coupon validation đầy đủ: (1) Coupon tồn tại và chưa hết hạn. (2) User này chưa dùng coupon này (check bảng used_coupons). (3) Đơn hàng đủ điều kiện áp dụng. (4) Mỗi đơn chỉ 1 coupon. (5) Validate server-side — không tin client. Bỏ sót bất kỳ điều kiện nào = lỗ hổng để abuse. BA cần specify tất cả edge cases này."
+  },
+  {
+    "id": "sec-13",
+    "question": "Nguyên tắc 'Principle of Least Privilege' có nghĩa là gì?",
+    "options": [
+      "User nên có ít quyền nhất có thể để thực hiện công việc của họ",
+      "Hệ thống nên có ít tính năng nhất có thể",
+      "Dev nên viết code ít nhất có thể",
+      "Database nên có ít bảng nhất có thể"
+    ],
+    "answer": 0,
+    "explanation": "Least Privilege: mỗi actor (user, service, process) chỉ được quyền tối thiểu cần thiết để làm việc của mình. Nhân viên sale không cần xem bảng lương. Service gửi email không cần quyền đọc database user. Admin A không cần xem dữ liệu của team B. BA cần spec role/permission matrix rõ ràng thay vì 'admin thì xem được tất cả'."
+  },
+  {
+    "id": "sec-14",
+    "question": "'Assume Breach' mindset trong security có nghĩa là gì?",
+    "options": [
+      "Giả định hệ thống sẽ bị hack và thiết kế để minimize damage, detect nhanh, recover nhanh",
+      "Giả định tất cả dev đều có thể phá hoại hệ thống",
+      "Không cần build defense vì breach không thể tránh được",
+      "Chỉ cần backup thường xuyên là đủ"
+    ],
+    "answer": 0,
+    "explanation": "Assume Breach: không hỏi 'nếu bị hack thì sao' mà hỏi 'khi bị hack, chúng ta detect được không? Damage có bị giới hạn không? Recover được bao lâu?' Dẫn đến: defense in depth (nhiều lớp bảo vệ), anomaly detection (alert bất thường), blast radius reduction (breach 1 service không lây toàn bộ), incident response plan."
+  },
+  {
+    "id": "sec-15",
+    "question": "Khi BA nhận yêu cầu 'Admin có thể xem báo cáo doanh thu theo từng nhân viên', câu hỏi security nào cần hỏi?",
+    "options": [
+      "Báo cáo sẽ export ra file PDF hay Excel?",
+      "Admin nào được xem? Có phân cấp không (CEO xem tất cả, Manager chỉ xem team mình)? Có log ai xem báo cáo không?",
+      "Dữ liệu sẽ được lấy từ bảng nào trong database?",
+      "Báo cáo cần realtime hay end-of-day là đủ?"
+    ],
+    "answer": 1,
+    "explanation": "Câu hỏi security cho báo cáo nhạy cảm: (1) Phân cấp quyền — không phải mọi admin đều xem được mọi thứ. (2) Audit trail — ai xem báo cáo gì, lúc nào (quan trọng cho dữ liệu lương/hiệu suất). (3) Data masking — có cần ẩn bớt số không? (4) Export — xuất ra file có watermark không? Dữ liệu nhân viên = nhạy cảm, BA không nên assume 'admin xem được tất cả'."
+  }
+]

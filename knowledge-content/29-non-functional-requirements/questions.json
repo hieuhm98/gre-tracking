@@ -1,0 +1,182 @@
+[
+  {
+    "id": "nfr-01",
+    "question": "Sự khác biệt chính giữa Functional Requirements và Non-Functional Requirements là gì?",
+    "options": [
+      "FR do BA viết, NFR do dev viết",
+      "FR mô tả hệ thống làm gì; NFR mô tả hệ thống tốt đến mức nào (tốc độ, độ tin cậy, bảo mật...)",
+      "FR quan trọng hơn NFR",
+      "NFR chỉ liên quan đến hệ thống lớn"
+    ],
+    "answer": 1,
+    "explanation": "FR: 'User có thể tìm kiếm sản phẩm.' NFR: 'Kết quả tìm kiếm trả về trong < 500ms.' Cả hai đều quan trọng — FR đúng mà NFR sai = hệ thống build đúng tính năng nhưng quá chậm, hay crash, hoặc không bảo mật. NFR hay bị bỏ sót vì không hiện ra trực tiếp trên UI."
+  },
+  {
+    "id": "nfr-02",
+    "question": "Hệ thống có uptime 99.9% nghĩa là cho phép downtime tối đa bao nhiêu mỗi năm?",
+    "options": [
+      "Khoảng 9 phút",
+      "Khoảng 9 giờ",
+      "Khoảng 9 ngày",
+      "Khoảng 1 giờ"
+    ],
+    "answer": 1,
+    "explanation": "99.9% uptime = 0.1% downtime = 8.76 giờ/năm (khoảng 9 giờ). 99.99% = 52 phút/năm. 99% = 87 giờ/năm (gần 4 ngày). Banking/healthcare cần 99.99%+. Hệ thống nội bộ có thể chấp nhận 99%. BA cần xác định SLA này với stakeholder dựa trên business impact của downtime."
+  },
+  {
+    "id": "nfr-03",
+    "question": "Tại sao NFR cần được xác định SỚM trong dự án, không phải sau?",
+    "options": [
+      "Để viết tài liệu cho đầy đủ",
+      "Vì NFR ảnh hưởng đến kiến trúc hệ thống — thay đổi kiến trúc sau khi build rất tốn kém",
+      "Vì dev không làm được nếu không có NFR từ đầu",
+      "Vì stakeholder yêu cầu"
+    ],
+    "answer": 1,
+    "explanation": "NFR 'xử lý 10,000 đơn/phút' cần message queue, async processing, database sharding — quyết định kiến trúc. Nếu biết muộn, phải rewrite. Giống xây nhà: muốn thêm tầng sau khi xây xong phải phá móng. BA phải khai thác NFR trong phase discovery, không phải sprint 5."
+  },
+  {
+    "id": "nfr-04",
+    "question": "Database Index giải quyết vấn đề gì?",
+    "options": [
+      "Giảm dung lượng lưu trữ",
+      "Tăng tốc độ query bằng cách tạo cấu trúc lookup thay vì scan toàn bộ bảng",
+      "Tự động backup dữ liệu",
+      "Ngăn duplicate data"
+    ],
+    "answer": 1,
+    "explanation": "Không có index: query 1 triệu rows phải scan tất cả = chậm. Có index: lookup trực tiếp = nhanh hơn 100-1000x. NFR 'danh sách đơn hàng < 1s với 1 triệu records' = signal cần index. BA không cần biết tạo index thế nào, nhưng cần specify performance requirement để dev biết cần index."
+  },
+  {
+    "id": "nfr-05",
+    "question": "Caching có thể không phù hợp cho tính năng nào?",
+    "options": [
+      "Dashboard báo cáo tổng quan",
+      "Danh sách sản phẩm (cập nhật mỗi giờ)",
+      "Số dư tài khoản ngân hàng cần real-time",
+      "Danh sách tỉnh thành"
+    ],
+    "answer": 2,
+    "explanation": "Cache = dữ liệu có thể trễ một chút. Số dư tài khoản phải real-time — hiển thị sai số dư là lỗi nghiêm trọng. BA cần specify: 'dữ liệu này có thể trễ tối đa bao nhiêu?' Câu trả lời xác định có dùng cache không và TTL (time-to-live) bao lâu."
+  },
+  {
+    "id": "nfr-06",
+    "question": "Availability và Reliability khác nhau như thế nào?",
+    "options": [
+      "Chúng giống nhau, chỉ khác tên",
+      "Availability: hệ thống có mặt; Reliability: hệ thống xử lý đúng khi có mặt",
+      "Reliability: hệ thống có mặt; Availability: xử lý đúng",
+      "Availability chỉ dùng cho cloud, Reliability cho on-premise"
+    ],
+    "answer": 1,
+    "explanation": "Hệ thống tính tiền sai 100% thời gian = available nhưng không reliable. Hệ thống đôi khi down nhưng khi chạy luôn tính đúng = unreliable (availability) nhưng reliable. Thanh toán cần cả hai: luôn có mặt VÀ luôn tính đúng, không charge 2 lần (idempotent)."
+  },
+  {
+    "id": "nfr-07",
+    "question": "Peak time là gì và tại sao BA cần xác định?",
+    "options": [
+      "Giờ cao điểm khi nhiều user dùng hệ thống cùng lúc — ảnh hưởng đến scalability và infrastructure",
+      "Thời điểm team làm việc hiệu quả nhất",
+      "Giờ deploy code lên production",
+      "Thời gian backup database"
+    ],
+    "answer": 0,
+    "explanation": "Peak time quyết định capacity cần chuẩn bị: e-commerce peak vào 12h trưa và 20h tối, hoặc Flash Sale, Black Friday. Fintech peak vào cuối tháng (thanh toán lương). BA cần hỏi: 'Gấp bao nhiêu lần so với average?' để dev plan auto-scaling hoặc cấu hình infrastructure đúng."
+  },
+  {
+    "id": "nfr-08",
+    "question": "Soft Delete khác Hard Delete như thế nào và khi nào dùng Soft Delete?",
+    "options": [
+      "Soft Delete xóa chậm hơn Hard Delete",
+      "Soft Delete đánh dấu deleted_at thay vì xóa thật — dùng khi cần lưu lịch sử, audit trail hoặc cho phép khôi phục",
+      "Hard Delete an toàn hơn vì xóa hoàn toàn",
+      "Soft Delete chỉ dùng cho file, Hard Delete cho database"
+    ],
+    "answer": 1,
+    "explanation": "Soft delete: thêm cột deleted_at, query có WHERE deleted_at IS NULL. Dùng khi: cần audit (ai xóa, khi nào), user cần undo, compliance yêu cầu lưu trữ X năm, dữ liệu liên quan đến giao dịch tài chính. Hard delete: khi data không còn giá trị và không cần comply."
+  },
+  {
+    "id": "nfr-09",
+    "question": "NFR về Maintainability 'code coverage tối thiểu 70%' có nghĩa là gì với BA?",
+    "options": [
+      "70% code phải được comment đầy đủ",
+      "70% logic code phải có automated test — giúp dev refactor an toàn và giảm regression bugs",
+      "70% tính năng phải được hoàn thành",
+      "70% user phải có thể dùng hệ thống không cần training"
+    ],
+    "answer": 1,
+    "explanation": "Code coverage = % code được chạy qua automated tests. 70% nghĩa là nếu thay đổi code, 70% trường hợp sẽ được kiểm tra tự động. Ít test = dev sợ refactor = technical debt tích lũy = velocity giảm. BA nên đưa test coverage vào Definition of Done."
+  },
+  {
+    "id": "nfr-10",
+    "question": "Câu nào dưới đây là NFR được viết TỐT?",
+    "options": [
+      "Hệ thống phải nhanh và ổn định",
+      "API thanh toán phải trả kết quả trong < 3 giây ở percentile 99 với 1,000 concurrent users",
+      "Dashboard phải load nhanh",
+      "Hệ thống phải bảo mật và đáng tin cậy"
+    ],
+    "answer": 1,
+    "explanation": "NFR tốt phải: có ngưỡng cụ thể (< 3 giây), có điều kiện đo lường (percentile 99), có context (1,000 concurrent users). Percentile 99 nghĩa là 99% requests phải đáp ứng — chấp nhận 1% chậm hơn. Các option còn lại quá mơ hồ, không ai biết khi nào 'pass'."
+  },
+  {
+    "id": "nfr-11",
+    "question": "RTO và RPO trong disaster recovery là gì?",
+    "options": [
+      "RTO: thời gian recover tối đa; RPO: lượng data loss chấp nhận được",
+      "RTO: dung lượng backup; RPO: tần suất backup",
+      "RTO: số lượng replica; RPO: kích thước log",
+      "Cả hai đều liên quan đến database indexing"
+    ],
+    "answer": 0,
+    "explanation": "RTO (Recovery Time Objective): hệ thống phải recover trong bao lâu sau incident. RPO (Recovery Point Objective): có thể chấp nhận mất data tối đa bao lâu. Banking: RTO < 1h, RPO = 0 (không mất data). Blog: RTO < 24h, RPO < 1h là chấp nhận được. BA cần xác định với business stakeholder."
+  },
+  {
+    "id": "nfr-12",
+    "question": "Tại sao BA cần hỏi 'có peak time cụ thể không?' khi viết requirement?",
+    "options": [
+      "Để lên lịch deploy code",
+      "Để team biết khi nào nên làm overtime",
+      "Để dev và infra plan capacity đúng — peak traffic quyết định architecture và infrastructure cost",
+      "Để tính ngày delivery của feature"
+    ],
+    "answer": 2,
+    "explanation": "Peak traffic 10x average = cần infrastructure 10x hoặc auto-scaling. Không biết peak = under-provision (hệ thống sập vào Flash Sale) hoặc over-provision (tốn tiền mãi mãi). BA hỏi: bình thường bao nhiêu user? Peak bao nhiêu? Peak kéo dài bao lâu? → Infra team plan đúng."
+  },
+  {
+    "id": "nfr-13",
+    "question": "NFR về Usability 'tuân thủ WCAG 2.1 AA' liên quan đến điều gì?",
+    "options": [
+      "Tốc độ tải trang web",
+      "Bảo mật xác thực người dùng",
+      "Accessibility — hệ thống có thể dùng được bởi người khuyết tật (khiếm thị, khiếm thính...)",
+      "Tương thích với các trình duyệt khác nhau"
+    ],
+    "answer": 2,
+    "explanation": "WCAG (Web Content Accessibility Guidelines) là chuẩn accessibility cho web: alt text cho ảnh (screen reader), contrast ratio đủ (người khiếm thị màu), keyboard navigation (không dùng chuột được), caption cho video (người khiếm thính). Level AA là mức thường được yêu cầu trong compliance."
+  },
+  {
+    "id": "nfr-14",
+    "question": "Khi BA write NFR cho e-commerce vs hệ thống nội bộ 50 người, điều gì ĐÚNG?",
+    "options": [
+      "NFR giống nhau, chỉ khác về tính năng",
+      "E-commerce cần NFR nghiêm ngặt hơn về performance, availability và security",
+      "Hệ thống nội bộ không cần NFR",
+      "Chỉ cần NFR cho hệ thống có thanh toán"
+    ],
+    "answer": 1,
+    "explanation": "NFR phải phù hợp với business context: hệ thống nội bộ 50 user, 8h-17h có thể chấp nhận response 3s, 99% uptime, maintenance ban đêm. E-commerce 10,000 user 24/7 cần response < 2s, 99.9% uptime, PCI DSS nếu có card payment. Over-engineering NFR = lãng phí; under-engineering = system fail."
+  },
+  {
+    "id": "nfr-15",
+    "question": "Câu hỏi nào BA KHÔNG cần hỏi khi xác định NFR performance?",
+    "options": [
+      "Bao nhiêu records sẽ có sau 1 năm?",
+      "User chấp nhận chờ tối đa bao lâu cho màn hình này?",
+      "Dev sẽ dùng ngôn ngữ lập trình nào?",
+      "Có peak time cụ thể không và tần suất ra sao?"
+    ],
+    "answer": 2,
+    "explanation": "Ngôn ngữ lập trình là quyết định kỹ thuật của dev, BA không cần (và không nên) specify. BA cần: data volume (để biết cần index/cache), user expectation (để set SLA), peak pattern (để plan capacity). Những câu hỏi này giúp BA viết NFR đo lường được, không phải implementation detail."
+  }
+]
