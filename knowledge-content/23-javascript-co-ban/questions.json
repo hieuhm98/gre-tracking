@@ -1,0 +1,177 @@
+[
+  {
+    "id": "js-01",
+    "question": "Sự khác biệt chính giữa let, const và var trong JavaScript là gì?",
+    "options": [
+      "Không có sự khác biệt, chỉ là cú pháp khác nhau",
+      "let và const có block scope và được giới thiệu từ ES6; var có function scope và dễ gây lỗi",
+      "var nhanh hơn let và const",
+      "const không thể dùng trong vòng lặp"
+    ],
+    "answer": 1,
+    "explanation": "var có function scope và bị hoisted theo cách dễ gây bug. let và const có block scope (an toàn hơn). const không cho gán lại biến, nhưng object/array vẫn có thể thay đổi nội dung. Code hiện đại dùng const là mặc định, let khi cần thay đổi."
+  },
+  {
+    "id": "js-02",
+    "question": "Kết quả của 5 == '5' và 5 === '5' trong JavaScript là gì?",
+    "options": [
+      "Cả hai đều là true",
+      "Cả hai đều là false",
+      "5 == '5' là true, 5 === '5' là false",
+      "5 == '5' là false, 5 === '5' là true"
+    ],
+    "answer": 2,
+    "explanation": "== (loose equality) tự động chuyển đổi kiểu trước khi so sánh — '5' được chuyển thành 5. === (strict equality) so sánh cả giá trị lẫn kiểu — number và string là khác nhau. Luôn dùng === trong thực tế."
+  },
+  {
+    "id": "js-03",
+    "question": "Arrow function khác function thường ở điểm gì quan trọng nhất?",
+    "options": [
+      "Arrow function nhanh hơn",
+      "Arrow function không có this riêng, dùng this từ scope bao quanh",
+      "Arrow function không thể có tham số",
+      "Arrow function chỉ dùng được trong class"
+    ],
+    "answer": 1,
+    "explanation": "Arrow function không có this riêng — nó kế thừa this từ scope bao quanh (lexical this). Function thường tạo this riêng phụ thuộc vào cách gọi. Đây là lý do React hay dùng arrow function trong event handlers."
+  },
+  {
+    "id": "js-04",
+    "question": "Phương thức Array nào KHÔNG thay đổi mảng gốc?",
+    "options": [
+      "push()",
+      "splice()",
+      "map()",
+      "sort()"
+    ],
+    "answer": 2,
+    "explanation": "map() trả về mảng mới, không thay đổi mảng gốc (immutable). push(), splice() thay đổi trực tiếp mảng gốc (mutate). sort() cũng mutate. Các immutable methods: map, filter, reduce, slice, concat, find, findIndex."
+  },
+  {
+    "id": "js-05",
+    "question": "typeof null trong JavaScript trả về gì?",
+    "options": ["'null'", "'undefined'", "'object'", "'boolean'"],
+    "answer": 2,
+    "explanation": "typeof null trả về 'object' — đây là một bug lịch sử của JavaScript từ phiên bản đầu tiên và không được sửa để giữ tương thích ngược. Để kiểm tra đúng: value === null."
+  },
+  {
+    "id": "js-06",
+    "question": "async/await trong JavaScript dùng để làm gì?",
+    "options": [
+      "Làm cho code chạy nhanh hơn bằng cách dùng nhiều CPU",
+      "Viết code bất đồng bộ theo cú pháp trông như đồng bộ, dễ đọc hơn",
+      "Tạo nhiều thread song song",
+      "Ngăn JavaScript chạy bất đồng bộ"
+    ],
+    "answer": 1,
+    "explanation": "async/await là cú pháp sugar trên Promise, giúp viết code async trông như sync. await tạm dừng function (không block thread), chờ Promise resolve. Kết hợp try/catch để xử lý lỗi gọn gàng hơn .then().catch()."
+  },
+  {
+    "id": "js-07",
+    "question": "Destructuring trong JavaScript là gì?",
+    "options": [
+      "Xóa bỏ một biến khỏi bộ nhớ",
+      "Cú pháp để trích xuất giá trị từ array hoặc object vào các biến riêng",
+      "Chia một function thành nhiều function nhỏ",
+      "Chuyển đổi object thành string"
+    ],
+    "answer": 1,
+    "explanation": "Destructuring cho phép: const { name, age } = user; hoặc const [first, second] = arr;. Giúp code ngắn gọn hơn. Rất phổ biến trong React: const { data, loading, error } = useFetch('/api');"
+  },
+  {
+    "id": "js-08",
+    "question": "Spread operator (...) trong JavaScript dùng để làm gì?",
+    "options": [
+      "Tạo vòng lặp vô hạn",
+      "Mở rộng iterable (array, object) thành các phần tử riêng lẻ",
+      "Khai báo rest parameters",
+      "Tạo function generator"
+    ],
+    "answer": 1,
+    "explanation": "Spread (...) mở rộng array/object. Copy array: [...arr], merge: [...arr1, ...arr2]. Copy object: {...obj}, override: {...obj, key: newValue}. Rất hay dùng để tạo bản copy tránh mutation gốc."
+  },
+  {
+    "id": "js-09",
+    "question": "Event delegation là gì và tại sao nên dùng?",
+    "options": [
+      "Gắn event listener vào mỗi phần tử con — chính xác hơn",
+      "Gắn event listener vào parent element, xử lý event của tất cả phần tử con",
+      "Tự động remove event listener sau khi kích hoạt",
+      "Chuyển event từ FE lên BE xử lý"
+    ],
+    "answer": 1,
+    "explanation": "Event delegation gắn 1 listener vào parent thay vì N listener cho N items. Dùng event.target.closest() để xác định element được click. Hiệu quả hơn về memory và tự động hoạt động với items được thêm động (dynamic)."
+  },
+  {
+    "id": "js-10",
+    "question": "Nullish coalescing operator (??) khác với OR operator (||) như thế nào?",
+    "options": [
+      "Chúng hoàn toàn giống nhau",
+      "?? chỉ fallback khi giá trị là null hoặc undefined; || fallback với mọi giá trị falsy (0, '', false...)",
+      "|| chỉ dùng cho boolean, ?? dùng cho mọi kiểu",
+      "?? nhanh hơn ||"
+    ],
+    "answer": 1,
+    "explanation": "const val = 0 || 'default' → 'default' (vì 0 là falsy). const val = 0 ?? 'default' → 0 (vì 0 không phải null/undefined). ?? hữu ích khi 0, '' hoặc false là giá trị hợp lệ cần giữ lại."
+  },
+  {
+    "id": "js-11",
+    "question": "DOM là gì trong ngữ cảnh JavaScript?",
+    "options": [
+      "Một thư viện JavaScript phổ biến",
+      "Database Of Methods — nơi lưu các phương thức JS",
+      "Document Object Model — biểu diễn cấu trúc HTML dưới dạng object để JS thao tác",
+      "Display Output Manager — quản lý hiển thị trên màn hình"
+    ],
+    "answer": 2,
+    "explanation": "DOM (Document Object Model) là representation của HTML document dưới dạng cây object. JS tương tác với DOM để đọc/thay đổi nội dung, style, cấu trúc HTML mà không cần tải lại trang. Ví dụ: document.querySelector(), element.textContent."
+  },
+  {
+    "id": "js-12",
+    "question": "Phương thức Array nào dùng để tìm phần tử ĐẦU TIÊN thỏa mãn điều kiện?",
+    "options": [
+      "filter()",
+      "find()",
+      "findAll()",
+      "search()"
+    ],
+    "answer": 1,
+    "explanation": "find() trả về phần tử đầu tiên thỏa điều kiện (hoặc undefined nếu không có). filter() trả về mảng tất cả phần tử thỏa điều kiện. Ví dụ: users.find(u => u.id === 5) trả về 1 user, không phải mảng."
+  },
+  {
+    "id": "js-13",
+    "question": "Khi BA mô tả requirement 'validate email format ở phía client', dev nên làm gì?",
+    "options": [
+      "Chỉ validate ở FE là đủ, không cần BE",
+      "Validate ở FE cho UX tốt, nhưng BE bắt buộc phải validate lại",
+      "Chỉ validate ở BE, FE không cần",
+      "Không cần validate vì trình duyệt tự làm khi dùng input type='email'"
+    ],
+    "answer": 1,
+    "explanation": "FE validation là UX — phản hồi nhanh cho user. Nhưng FE validation có thể bị bypass (Postman, console, modify request). BE PHẢI validate lại mọi dữ liệu đầu vào. Đây là nguyên tắc bảo mật 'never trust client input'."
+  },
+  {
+    "id": "js-14",
+    "question": "localStorage.setItem() và localStorage.getItem() dùng để làm gì?",
+    "options": [
+      "Lưu và đọc dữ liệu trên server",
+      "Lưu và đọc dữ liệu trong trình duyệt của user (vĩnh viễn đến khi xóa)",
+      "Lưu dữ liệu tạm trong session hiện tại",
+      "Cache HTTP response từ server"
+    ],
+    "answer": 1,
+    "explanation": "localStorage lưu key-value trong trình duyệt, tồn tại đến khi bị xóa thủ công hoặc clear storage. Dùng để lưu token, preferences, cache nhỏ. Chỉ lưu string — cần JSON.stringify/parse với object."
+  },
+  {
+    "id": "js-15",
+    "question": "Tại sao nên đặt thẻ <script src='app.js'> ở cuối thẻ <body> thay vì trong <head>?",
+    "options": [
+      "Không có lý do kỹ thuật, chỉ là convention",
+      "Để HTML render trước, tránh blocking — user thấy nội dung nhanh hơn",
+      "JavaScript không chạy được khi đặt trong <head>",
+      "SEO yêu cầu script phải ở cuối body"
+    ],
+    "answer": 1,
+    "explanation": "Khi trình duyệt gặp <script>, nó dừng parse HTML để tải và chạy JS. Đặt script ở cuối body cho HTML render xong trước, user thấy trang sớm hơn. Cách hiện đại hơn là dùng thuộc tính defer hoặc async trên script tag."
+  }
+]

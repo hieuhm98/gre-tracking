@@ -1,0 +1,182 @@
+[
+  {
+    "id": "task-01",
+    "question": "Khi BA nhận được yêu cầu 'user có thể tìm kiếm sản phẩm', task nào là của Backend?",
+    "options": [
+      "Tạo thanh search bar với giao diện đẹp",
+      "Xử lý debounce 300ms khi user gõ",
+      "Xây dựng search query logic, index database và trả về kết quả qua API",
+      "Hiển thị loading spinner khi đang search"
+    ],
+    "answer": 2,
+    "explanation": "FE: UI search bar, debounce, hiển thị kết quả, loading state. BE: query logic (full-text search, filter, sort), database index để search nhanh, API endpoint trả về kết quả có pagination. BE cũng quyết định algorithm search (LIKE, full-text, Elasticsearch...)."
+  },
+  {
+    "id": "task-02",
+    "question": "Tại sao API Contract cần được thống nhất TRƯỚC khi FE và BE bắt đầu code?",
+    "options": [
+      "Vì BA yêu cầu như vậy",
+      "Để FE và BE có thể làm song song — FE dùng mock, BE build API thật",
+      "Vì đây là yêu cầu pháp lý",
+      "Để tránh phải viết documentation sau"
+    ],
+    "answer": 1,
+    "explanation": "API Contract = thỏa thuận về format request/response. Sau khi có contract, FE dùng mock data để làm UI, BE build API thật. Khi cả hai xong, integration nhanh vì format đã thống nhất. Không có contract → FE phải chờ BE hoặc sau này phải sửa nhiều."
+  },
+  {
+    "id": "task-03",
+    "question": "Yêu cầu 'gửi email xác nhận khi đơn hàng được đặt' là task của ai?",
+    "options": [
+      "Frontend developer",
+      "Backend developer",
+      "DevOps engineer",
+      "Database administrator"
+    ],
+    "answer": 1,
+    "explanation": "Gửi email là task của BE: tích hợp email service (SendGrid, AWS SES), tạo email template, trigger gửi khi đơn hàng created. FE chỉ hiển thị thông báo 'Email xác nhận đã được gửi đến địa chỉ của bạn'. BA cần specify: trigger khi nào, nội dung email, trong bao lâu."
+  },
+  {
+    "id": "task-04",
+    "question": "Khi tạo ticket kỹ thuật cho FE, thông tin nào QUAN TRỌNG nhất cần cung cấp?",
+    "options": [
+      "Màu sắc chính xác theo mã hex",
+      "Link Figma design, API endpoint cần gọi và Acceptance Criteria đầy đủ",
+      "Tên thư viện JavaScript cần dùng",
+      "Số lần component sẽ được render"
+    ],
+    "answer": 1,
+    "explanation": "Ticket FE cần: Figma link (visual reference), API contract/link (biết data format), Acceptance Criteria rõ ràng (biết khi nào xong), responsive requirements, và dependencies (API nào cần ready trước). Thiếu một trong các thứ này, dev phải dừng lại để hỏi."
+  },
+  {
+    "id": "task-05",
+    "question": "Dependency trong task breakdown là gì và tại sao quan trọng?",
+    "options": [
+      "Thư viện JavaScript được dùng trong project",
+      "Mối quan hệ 'task A phải xong trước task B mới bắt đầu được'",
+      "Số lượng developer cần cho một task",
+      "Danh sách bug cần fix trước khi release"
+    ],
+    "answer": 1,
+    "explanation": "Dependency là ràng buộc thứ tự: ví dụ FE hiển thị danh sách sản phẩm phụ thuộc BE có API GET /products. Nếu không xác định dependency, sprint plan sẽ sai — một task có thể blocked vì task khác chưa xong. BA cần liệt kê dependency khi viết ticket."
+  },
+  {
+    "id": "task-06",
+    "question": "Validation rule 'giá sản phẩm phải lớn hơn 0' cần được xử lý ở đâu?",
+    "options": [
+      "Chỉ ở FE — validate trên form trước khi submit",
+      "Chỉ ở BE — FE không cần quan tâm",
+      "Cả FE (UX tốt hơn) và BE (bảo mật, bắt buộc)",
+      "Ở Database bằng constraint"
+    ],
+    "answer": 2,
+    "explanation": "FE validate để user nhận phản hồi nhanh (không cần chờ API). BE validate bắt buộc vì FE có thể bị bypass. BA cần chỉ rõ trong AC: loại validate nào (format, business rule), thông báo lỗi cụ thể, và validate ở cả hai tầng."
+  },
+  {
+    "id": "task-07",
+    "question": "Khi BA thấy dev estimate một task rất cao, nguyên nhân phổ biến nhất là gì?",
+    "options": [
+      "Dev đang lười biếng",
+      "AC chưa rõ ràng, có dependency phức tạp, hoặc cần tích hợp bên thứ ba",
+      "Task đó không cần thiết",
+      "Dev thiếu kỹ năng"
+    ],
+    "answer": 1,
+    "explanation": "Estimate cao thường do: AC mơ hồ (dev không biết khi nào xong), dependency chưa rõ (cần chờ API khác), tích hợp phức tạp (payment gateway, third-party API), hoặc technical debt cần giải quyết. BA nên hỏi: 'Điều gì làm task này phức tạp?' để làm rõ."
+  },
+  {
+    "id": "task-08",
+    "question": "Task 'tạo empty state khi danh sách trống' thuộc về ai?",
+    "options": [
+      "Backend",
+      "Frontend",
+      "Designer",
+      "BA"
+    ],
+    "answer": 1,
+    "explanation": "Empty state là task FE: hiển thị UI phù hợp khi API trả về array rỗng. Ví dụ: ảnh minh họa, text 'Chưa có sản phẩm nào', nút call-to-action 'Tạo sản phẩm đầu tiên'. BA cần specify nội dung empty state message trong AC."
+  },
+  {
+    "id": "task-09",
+    "question": "Upload ảnh cần task nào ở Backend?",
+    "options": [
+      "Chỉ lưu URL ảnh vào database",
+      "Validate file type/size, lưu file vào storage (S3/GCS), trả về URL",
+      "Không cần — FE tự xử lý upload",
+      "Chỉ tạo API nhận URL từ FE"
+    ],
+    "answer": 1,
+    "explanation": "BE upload task bao gồm: nhận file từ FE, validate (type: jpg/png/webp, size: max 5MB), xử lý nếu cần (resize, convert), lưu vào storage service (S3, GCS), trả về URL. BA cần specify: định dạng cho phép, kích thước tối đa, có cần resize không."
+  },
+  {
+    "id": "task-10",
+    "question": "Điều gì nên được xác định ĐẦU TIÊN khi phân tích một feature mới?",
+    "options": [
+      "Màu sắc và font chữ",
+      "Số lượng developer cần",
+      "Các màn hình FE và API endpoint BE cần thiết",
+      "Timeline release"
+    ],
+    "answer": 2,
+    "explanation": "Bước đầu: xác định màn hình (FE scope) và API cần thiết (BE scope). Từ đó mới chia task, xác định dependency, estimate effort, và plan sprint. Thiếu bước này, team sẽ phát hiện ra 'còn thiếu API' hoặc 'UI cần thêm màn hình' giữa sprint."
+  },
+  {
+    "id": "task-11",
+    "question": "BA cần mô tả gì trong AC để giúp FE xử lý pagination đúng?",
+    "options": [
+      "Chỉ cần nói 'có pagination' là đủ",
+      "Số items mỗi trang, vị trí phân trang (top/bottom), các trường hợp edge (1 trang, trang cuối)",
+      "Màu sắc và style của nút Next/Prev",
+      "Tên thư viện pagination cần dùng"
+    ],
+    "answer": 1,
+    "explanation": "Pagination AC cần: số items/trang (20? 50?), style (page numbers? load more? infinite scroll?), edge cases (chỉ 1 trang thì ẩn pagination, trang cuối disable nút Next), và API format (server-side hay client-side pagination?)."
+  },
+  {
+    "id": "task-12",
+    "question": "Khi FE cần hiển thị dữ liệu real-time (ví dụ: số người đang online), cần thêm task gì ở BE?",
+    "options": [
+      "Không cần gì thêm, FE tự poll API định kỳ là đủ",
+      "Thêm WebSocket server hoặc Server-Sent Events để push data real-time",
+      "Chỉ cần tạo thêm GET API",
+      "Dùng thêm database cache"
+    ],
+    "answer": 1,
+    "explanation": "Real-time data cần BE implement WebSocket (hai chiều) hoặc Server-Sent Events (một chiều từ server). Polling (FE gọi API mỗi X giây) là giải pháp đơn giản hơn nhưng tốn tài nguyên hơn. BA cần chỉ rõ: độ trễ chấp nhận được và volume user."
+  },
+  {
+    "id": "task-13",
+    "question": "Phân quyền 'admin mới xóa được user, member chỉ được xem' cần task nào?",
+    "options": [
+      "Chỉ FE: ẩn nút Xóa với non-admin",
+      "Chỉ BE: kiểm tra role trước khi xử lý DELETE request",
+      "Cả FE (ẩn nút) và BE (kiểm tra role trong API) — cả hai bắt buộc",
+      "Chỉ database: constraint không cho xóa"
+    ],
+    "answer": 2,
+    "explanation": "FE ẩn nút Xóa là UX — ngăn user vô tình click. BE kiểm tra role là bảo mật — bắt buộc. Vì user có thể gọi API DELETE trực tiếp bỏ qua UI. BA cần specify trong AC: cả 'ẩn UI' lẫn 'BE trả về 403 Forbidden khi non-admin gọi DELETE'."
+  },
+  {
+    "id": "task-14",
+    "question": "Task nào dưới đây là BACKEND task?",
+    "options": [
+      "Hiển thị skeleton loader khi đang tải",
+      "Tạo responsive grid 3 cột trên desktop",
+      "Gửi thông báo push đến mobile app khi có tin nhắn mới",
+      "Xử lý animation khi hover vào card"
+    ],
+    "answer": 2,
+    "explanation": "Push notification đến mobile là task BE: tích hợp Firebase Cloud Messaging (FCM) hoặc APNs, tạo notification payload, trigger khi có event (tin nhắn mới). FE chỉ cần đăng ký nhận token và xử lý notification khi nhận được."
+  },
+  {
+    "id": "task-15",
+    "question": "Khi viết ticket kỹ thuật, phần 'Out of Scope' dùng để làm gì?",
+    "options": [
+      "Liệt kê bugs đã biết",
+      "Mô tả technical debt",
+      "Ngăn scope creep bằng cách xác định rõ những gì KHÔNG thuộc task này",
+      "Liệt kê tasks cho sprint sau"
+    ],
+    "answer": 2,
+    "explanation": "'Out of Scope' rất quan trọng để ngăn dev tự thêm tính năng 'vì tiện' (scope creep). Ví dụ: 'Out of scope: Export PDF (ticket riêng), push notification (phase 2), search auto-complete (sprint sau).' Giúp team focused vào đúng phạm vi đã estimate."
+  }
+]

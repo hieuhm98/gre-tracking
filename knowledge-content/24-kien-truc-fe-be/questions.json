@@ -1,0 +1,177 @@
+[
+  {
+    "id": "febe-01",
+    "question": "Frontend (FE) chạy ở đâu?",
+    "options": [
+      "Trên server của công ty",
+      "Trong trình duyệt của người dùng",
+      "Trong database",
+      "Trên cloud (AWS, GCP)"
+    ],
+    "answer": 1,
+    "explanation": "Frontend chạy trong trình duyệt (browser) của người dùng — HTML, CSS, JavaScript được tải về máy user và chạy ở đó. Backend chạy trên server của công ty, người dùng không nhìn thấy."
+  },
+  {
+    "id": "febe-02",
+    "question": "Đâu là trách nhiệm của Backend, KHÔNG phải Frontend?",
+    "options": [
+      "Hiển thị loading spinner khi chờ API",
+      "Validate format email trong form",
+      "Tính toán business rule và lưu vào database",
+      "Hiển thị error message khi API thất bại"
+    ],
+    "answer": 2,
+    "explanation": "Business logic và database operations là trách nhiệm của BE. FE có thể validate format để tăng UX, nhưng BE bắt buộc phải validate và xử lý logic nghiệp vụ — không thể để FE làm thay."
+  },
+  {
+    "id": "febe-03",
+    "question": "JWT Token được dùng để làm gì trong web application?",
+    "options": [
+      "Mã hóa dữ liệu trong database",
+      "Nén file JavaScript để tải nhanh hơn",
+      "Xác thực danh tính user sau khi đăng nhập (authentication token)",
+      "Kết nối FE với database trực tiếp"
+    ],
+    "answer": 2,
+    "explanation": "JWT (JSON Web Token) được BE tạo sau khi user đăng nhập. FE lưu token và gửi kèm mỗi request trong header Authorization. BE verify token để xác nhận danh tính user mà không cần check database mỗi lần."
+  },
+  {
+    "id": "febe-04",
+    "question": "REST API sử dụng HTTP method nào để TẠO MỚI một resource?",
+    "options": ["GET", "PUT", "POST", "PATCH"],
+    "answer": 2,
+    "explanation": "GET: đọc dữ liệu. POST: tạo mới. PUT: cập nhật toàn bộ. PATCH: cập nhật một phần. DELETE: xóa. Ví dụ: POST /api/users tạo user mới, GET /api/users lấy danh sách."
+  },
+  {
+    "id": "febe-05",
+    "question": "HTTP status code 404 có nghĩa là gì?",
+    "options": [
+      "Server lỗi nội bộ",
+      "Không có quyền truy cập",
+      "Không tìm thấy resource được yêu cầu",
+      "Request thành công"
+    ],
+    "answer": 2,
+    "explanation": "404 Not Found — URL không tồn tại hoặc resource đã bị xóa. Các code quan trọng: 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 422 Validation Error, 500 Server Error."
+  },
+  {
+    "id": "febe-06",
+    "question": "Authentication và Authorization khác nhau như thế nào?",
+    "options": [
+      "Chúng là một, chỉ khác tên gọi",
+      "Authentication xác thực bạn là ai; Authorization xác định bạn được làm gì",
+      "Authorization xác thực bạn là ai; Authentication xác định bạn được làm gì",
+      "Authentication chỉ dùng cho login, Authorization chỉ dùng cho logout"
+    ],
+    "answer": 1,
+    "explanation": "Authentication (AuthN): 'Bạn là ai?' — đăng nhập bằng email/password, xác nhận danh tính. Authorization (AuthZ): 'Bạn được phép làm gì?' — phân quyền, ví dụ: admin mới xóa được user."
+  },
+  {
+    "id": "febe-07",
+    "question": "Môi trường Staging (UAT) dùng để làm gì?",
+    "options": [
+      "Môi trường để developer viết code hằng ngày",
+      "Môi trường để người dùng thực sử dụng",
+      "Môi trường kiểm thử nghiệm thu, giống Production nhất có thể",
+      "Môi trường để chạy automated tests"
+    ],
+    "answer": 2,
+    "explanation": "Staging/UAT (User Acceptance Testing) là môi trường sát với Production nhất, dùng để BA, QA và stakeholder verify tính năng trước khi release. Không bao giờ test feature mới trực tiếp trên Production."
+  },
+  {
+    "id": "febe-08",
+    "question": "API Contract là gì và ai cần tham gia thống nhất?",
+    "options": [
+      "Hợp đồng pháp lý giữa công ty và vendor API",
+      "Thỏa thuận về format request/response giữa FE và BE team",
+      "Tài liệu kỹ thuật chỉ BE cần đọc",
+      "Test case cho API"
+    ],
+    "answer": 1,
+    "explanation": "API Contract là thỏa thuận giữa FE và BE về endpoint URL, HTTP method, request body, response format (success và error), HTTP status codes. Cần FE, BE và BA tham gia. Xong contract → FE và BE có thể làm song song."
+  },
+  {
+    "id": "febe-09",
+    "question": "Trong SPA (Single Page Application), điều gì xảy ra khi user chuyển trang?",
+    "options": [
+      "Trình duyệt tải lại toàn bộ trang từ server",
+      "JavaScript thay đổi nội dung trang mà không tải lại, chỉ gọi API để lấy dữ liệu",
+      "Server render HTML mới và gửi về",
+      "Trình duyệt load file HTML mới"
+    ],
+    "answer": 1,
+    "explanation": "SPA (React, Vue, Angular) dùng client-side routing. Khi chuyển trang, JS thay đổi nội dung DOM và URL (History API) mà không reload. Chỉ gọi API để lấy dữ liệu cần thiết — nhanh hơn nhưng cần xử lý SEO và deep linking đặc biệt."
+  },
+  {
+    "id": "febe-10",
+    "question": "BA mô tả 'tính năng gửi email xác nhận đơn hàng'. Đây là task của ai?",
+    "options": [
+      "Frontend developer",
+      "Backend developer",
+      "Database administrator",
+      "Cả FE và BE làm như nhau"
+    ],
+    "answer": 1,
+    "explanation": "Gửi email là task của Backend — BE tích hợp email service (SendGrid, SES, NodeMailer), tạo template, trigger khi đơn hàng được tạo. FE chỉ hiển thị thông báo 'Email xác nhận đã được gửi'."
+  },
+  {
+    "id": "febe-11",
+    "question": "Khi BE trả về lỗi validation (422), FE nên làm gì?",
+    "options": [
+      "Hiển thị lỗi chung: 'Có lỗi xảy ra'",
+      "Tự sửa dữ liệu và gửi lại",
+      "Hiển thị thông báo lỗi cụ thể theo từng field từ response",
+      "Reload lại trang"
+    ],
+    "answer": 2,
+    "explanation": "FE nhận lỗi từ BE và hiển thị đúng vị trí: ví dụ lỗi 'Email đã được sử dụng' hiển thị ngay dưới field email. BE trả về error fields cụ thể, FE map vào UI. BA cần mô tả error message cụ thể trong AC."
+  },
+  {
+    "id": "febe-12",
+    "question": "Cron job trong Backend là gì?",
+    "options": [
+      "Một loại database query đặc biệt",
+      "Tác vụ tự động chạy theo lịch định kỳ (mỗi ngày, mỗi giờ...)",
+      "Cách deploy code lên server",
+      "Phương thức HTTP để gọi API theo lịch"
+    ],
+    "answer": 1,
+    "explanation": "Cron job là tác vụ nền chạy tự động theo lịch. Ví dụ: gửi email nhắc nhở lúc 8h sáng mỗi ngày, tính toán báo cáo cuối tháng, dọn dẹp dữ liệu cũ. BA cần xác định tần suất và trigger condition trong requirement."
+  },
+  {
+    "id": "febe-13",
+    "question": "Tại sao phân quyền (authorization) PHẢI được kiểm tra ở Backend, không chỉ ẩn button ở Frontend?",
+    "options": [
+      "Vì Frontend không có đủ thông tin",
+      "Vì user có thể bypass FE bằng cách gọi API trực tiếp (Postman, curl...)",
+      "Vì Backend nhanh hơn Frontend",
+      "Không cần — ẩn button ở FE là đủ bảo mật"
+    ],
+    "answer": 1,
+    "explanation": "Ẩn button ở FE chỉ là UX, không phải bảo mật. User có thể dùng Postman, curl hoặc browser console để gọi thẳng API. BE phải verify quyền mỗi request. Ví dụ: ẩn nút 'Xóa' với non-admin nhưng API DELETE cũng phải kiểm tra role."
+  },
+  {
+    "id": "febe-14",
+    "question": "BA cần xác định 4 trạng thái UI nào cho mỗi màn hình load dữ liệu từ API?",
+    "options": [
+      "Start, Running, Pause, Stop",
+      "Loading, Success, Error, Empty",
+      "Get, Post, Put, Delete",
+      "Draft, Review, Approved, Published"
+    ],
+    "answer": 1,
+    "explanation": "Mỗi màn hình gọi API cần 4 states: Loading (skeleton/spinner khi đang gọi), Success (hiển thị dữ liệu), Error (API thất bại — hiển thị lỗi + nút Thử lại), Empty (thành công nhưng không có data — hiển thị empty state và call-to-action)."
+  },
+  {
+    "id": "febe-15",
+    "question": "Khi FE và BE cần làm song song (parallel), điều gì cần hoàn thành TRƯỚC?",
+    "options": [
+      "FE hoàn thành UI trước, rồi BE mới biết cần API gì",
+      "BE hoàn thành tất cả API trước, FE mới bắt đầu",
+      "API Contract (thống nhất format request/response) phải xong trước",
+      "Database schema phải xong trước tất cả"
+    ],
+    "answer": 2,
+    "explanation": "API Contract phải thống nhất trước. Sau đó FE dùng mock data (hardcode hoặc mock server) để làm UI, BE build API thật. Khi cả hai xong, integration nhanh vì đã biết format. Đây là cách tối ưu để không team nào phải chờ team kia."
+  }
+]
