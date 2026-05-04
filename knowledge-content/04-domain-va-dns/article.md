@@ -1,4 +1,4 @@
-# Domain & DNS
+# Domain, URL & DNS
 
 ## 1. Domain (Tên miền) là gì?
 
@@ -37,7 +37,169 @@ Tiền tố tự tạo để phân chia dịch vụ:
 
 ---
 
-## 3. DNS hoạt động như thế nào?
+## 3. URI vs URL vs URN
+
+Ba khái niệm này hay bị nhầm lẫn — nhưng có quan hệ **bao hàm**:
+
+```
+            URI (định danh tài nguyên)
+           /                          \
+        URL                          URN
+   (vị trí + cách lấy)         (chỉ định danh)
+```
+
+- **URI** (Uniform Resource Identifier) — chuỗi định danh **bất kỳ** tài nguyên nào. Là khái niệm rộng nhất.
+- **URL** (Uniform Resource Locator) — một loại URI **cho biết tài nguyên ở đâu** và **truy cập bằng cách nào** (giao thức). Đây là loại bạn gặp hằng ngày.
+- **URN** (Uniform Resource Name) — một loại URI **chỉ đặt tên** cho tài nguyên, không nói nó ở đâu. Ví dụ: `urn:isbn:0451450523` (mã sách).
+
+| Loại | Ví dụ | Cho biết "ở đâu"? |
+|------|-------|---|
+| URL | `https://example.com/blog/post-1` | Có (https + host + path) |
+| URN | `urn:isbn:0451450523` | Không — chỉ là tên |
+| URI | Cả hai ví dụ trên đều là URI | Tùy loại |
+
+**Quy tắc nhớ**: Mọi URL đều là URI, nhưng không phải URI nào cũng là URL.
+
+---
+
+## 4. Cấu trúc đầy đủ của URL
+
+```
+https://shop.example.com:443/products/detail?id=123&lang=vi#reviews
+│        │                │   │               │              │
+│        │                │   │               │              fragment
+│        │                │   │               query string
+│        │                │   path
+│        │                port (443 = mặc định HTTPS, có thể ẩn)
+│        host = subdomain + domain + TLD
+scheme (giao thức)
+```
+
+| Thành phần | Vai trò |
+|-----------|---------|
+| **Scheme** | Giao thức truy cập: `http`, `https`, `ftp`, `mailto`, `file` |
+| **Host** | Địa chỉ máy chủ (domain hoặc IP) |
+| **Port** | Cổng dịch vụ — `80` cho http, `443` cho https; nếu mặc định thì có thể bỏ |
+| **Path** | Đường dẫn đến tài nguyên trên server |
+| **Query** | Tham số `?key=value&key2=value2` — lọc, tìm kiếm, phân trang |
+| **Fragment** | Mỏ neo `#section` — chỉ vị trí trong trang, **không gửi lên server** |
+
+---
+
+## 5. Path — đường dẫn của một URL
+
+**Path** là phần sau host, bắt đầu bằng `/`. Nó mô tả tài nguyên cụ thể bạn muốn truy cập.
+
+### Path là cây phân cấp
+
+Path mô phỏng **hệ thống thư mục**:
+
+```
+example.com/                 ← root
+example.com/blog             ← danh sách bài viết
+example.com/blog/seo         ← danh mục SEO
+example.com/blog/seo/sitemap-la-gi  ← một bài cụ thể
+example.com/products
+example.com/products/laptop
+example.com/products/laptop/macbook-pro
+```
+
+Quan hệ "cha — con" trong path tạo nên **kiến trúc thông tin** (information architecture) của website.
+
+### Phân biệt với query
+
+| | Path | Query |
+|--|------|-------|
+| Vai trò | Định vị **tài nguyên duy nhất** | Tham số bổ sung, lọc, sắp xếp |
+| Đổi thì sao | Tài nguyên khác hoàn toàn | Cùng tài nguyên, view khác |
+| SEO | Quan trọng — Google index theo path | Thường bị bỏ qua hoặc canonical hóa |
+| Ví dụ | `/products/laptop` | `?sort=price&page=2` |
+
+### Các kiểu path phổ biến
+
+- **Tĩnh**: `/about`, `/contact` — luôn cố định.
+- **Động (slug)**: `/blog/cach-toi-uu-seo` — phần slug đại diện cho 1 bài viết.
+- **Dynamic param**: `/users/123` — `123` là id user, server sẽ trả về dữ liệu khác nhau.
+- **Lồng (nested)**: `/shop/category/laptop/asus` — phản ánh phân cấp danh mục.
+
+### Trailing slash
+`/blog/` và `/blog` về kỹ thuật **có thể là 2 URL khác nhau**. Hầu hết website chọn 1 chuẩn rồi redirect 301 cái còn lại để tránh trùng lặp nội dung.
+
+---
+
+## 6. Sitemap — bản đồ URL của website
+
+**Sitemap** là danh sách tất cả URL quan trọng của một website, giúp **search engine** (Google, Bing) khám phá và index nội dung nhanh hơn.
+
+### Vì sao cần sitemap?
+
+- Website lớn có hàng nghìn URL — bot không thể tự crawl hết.
+- Trang mới hoặc trang ít liên kết nội bộ → bot khó tìm thấy.
+- Sitemap nói rõ với bot: "Đây là toàn bộ trang tôi muốn được index, ưu tiên thế nào, sửa lần cuối khi nào."
+
+### Cấu trúc sitemap.xml
+
+Sitemap thường đặt tại `https://example.com/sitemap.xml`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://example.com/blog/sitemap-la-gi</loc>
+    <lastmod>2026-04-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+```
+
+| Thẻ | Ý nghĩa |
+|-----|---------|
+| `<loc>` | URL đầy đủ (bắt buộc) |
+| `<lastmod>` | Ngày sửa lần cuối |
+| `<changefreq>` | Tần suất thay đổi: `daily`, `weekly`, `monthly`... |
+| `<priority>` | Mức ưu tiên 0.0 — 1.0 (tương đối trong cùng site) |
+
+### Sitemap index — khi site quá lớn
+
+Một file sitemap chỉ chứa tối đa **50.000 URL** hoặc **50MB**. Site lớn chia thành nhiều sitemap nhỏ rồi gom vào **sitemap index**:
+
+```xml
+<sitemapindex>
+  <sitemap><loc>https://example.com/sitemap-posts.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-products.xml</loc></sitemap>
+  <sitemap><loc>https://example.com/sitemap-pages.xml</loc></sitemap>
+</sitemapindex>
+```
+
+### Quan hệ sitemap ↔ path
+
+Sitemap chính là **danh sách các URL hợp lệ**, mà mỗi URL = `scheme + host + path`. Vì vậy:
+
+- Path **rõ ràng, có cấu trúc cây** → sitemap tự nhiên dễ hiểu.
+- Path lộn xộn, dài, nhiều tham số → sitemap khó duy trì, SEO yếu.
+- Một path tốt = vừa thân thiện với người (đọc được, đoán được) vừa thân thiện với bot.
+
+### robots.txt nói gì với sitemap?
+
+File `robots.txt` ở root site thường khai báo vị trí sitemap:
+
+```
+User-agent: *
+Disallow: /admin/
+Sitemap: https://example.com/sitemap.xml
+```
+
+Nó là cách **chính thức** để báo cho bot biết sitemap ở đâu.
+
+---
+
+## 7. DNS hoạt động như thế nào?
 
 DNS (Domain Name System) là hệ thống phân cấp toàn cầu để phân giải domain thành IP.
 
@@ -70,7 +232,7 @@ DNS (Domain Name System) là hệ thống phân cấp toàn cầu để phân gi
 
 ---
 
-## 4. TTL (Time To Live)
+## 8. TTL (Time To Live)
 
 Mỗi DNS record có **TTL** — thời gian (giây) mà kết quả được cache.
 
@@ -82,7 +244,7 @@ Mỗi DNS record có **TTL** — thời gian (giây) mà kết quả được ca
 
 ---
 
-## 5. Đăng ký domain
+## 9. Đăng ký domain
 
 Bạn đăng ký domain qua **Registrar** (nhà đăng ký):
 - Quốc tế: GoDaddy, Namecheap, Google Domains, Cloudflare.
@@ -92,21 +254,11 @@ Sau khi đăng ký, bạn chỉnh DNS records tại **Nameserver** (thường c�
 
 ---
 
-## 6. Domain vs URL vs IP
+## 10. Tóm tắt
 
-| | Ví dụ | Dùng cho |
-|--|-------|---------|
-| IP Address | `93.184.216.34` | Địa chỉ máy tính thực sự |
-| Domain | `example.com` | Tên thân thiện với người dùng |
-| URL | `https://example.com/about?lang=vi` | Địa chỉ đầy đủ gồm giao thức, domain, đường dẫn, query |
-
----
-
-## 7. Tóm tắt
-
-- **Domain** = tên dễ nhớ thay cho IP.
-- **TLD** = phần đuôi (.com, .vn...).
-- **Subdomain** = tiền tố để phân dịch vụ (mail., api., www.).
-- **DNS** = hệ thống phân giải domain → IP.
-- **DNS Record A** = quan trọng nhất, ánh xạ domain → IPv4.
-- **TTL** = thời gian cache DNS.
+- **Domain** = tên dễ nhớ thay cho IP; gồm subdomain + second-level + TLD.
+- **URI** là khái niệm tổng; **URL** = URI có vị trí; **URN** = URI chỉ là tên.
+- **URL** = scheme + host + port + **path** + query + fragment.
+- **Path** mô tả tài nguyên theo cấu trúc cây — quan trọng cho SEO và UX.
+- **Sitemap.xml** = danh sách URL của site, giúp Google index; khai báo trong `robots.txt`.
+- **DNS** phân giải domain → IP; **Record A** quan trọng nhất; **TTL** quyết định tốc độ cập nhật DNS.
