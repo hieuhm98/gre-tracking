@@ -2,181 +2,301 @@
   {
     "id": "td-01",
     "question": "Technical Debt (nợ kỹ thuật) là gì?",
+    "questionEn": "What is Technical Debt?",
     "options": [
       "Chi phí mua phần mềm và license",
       "Việc làm tắt hoặc bỏ qua best practice để đổi lấy tốc độ, tích lũy thành khó khăn cho tương lai",
       "Số lượng bug chưa được fix trong hệ thống",
       "Chi phí thuê thêm developer"
     ],
+    "optionsEn": [
+      "The cost of buying software and licenses",
+      "Taking shortcuts or skipping best practices in exchange for speed, which accumulates into difficulties for the future",
+      "The number of unfixed bugs in the system",
+      "The cost of hiring additional developers"
+    ],
     "answer": 1,
-    "explanation": "Technical debt là phép ẩn dụ nợ tài chính: 'vay' bằng cách làm tắt để có kết quả nhanh, sau đó 'trả lãi' dưới dạng tốn thêm thời gian mỗi khi muốn thay đổi code đó. Không phải lúc nào cũng xấu — vay có chủ ý và có kế hoạch trả là chấp nhận được."
+    "explanation": "Technical debt là phép ẩn dụ nợ tài chính: 'vay' bằng cách làm tắt để có kết quả nhanh, sau đó 'trả lãi' dưới dạng tốn thêm thời gian mỗi khi muốn thay đổi code đó. Không phải lúc nào cũng xấu — vay có chủ ý và có kế hoạch trả là chấp nhận được.",
+    "explanationEn": "Technical debt is a financial-debt metaphor: you 'borrow' by taking shortcuts to get a fast result, then 'pay interest' in the form of extra time every time you want to change that code. It isn't always bad — borrowing intentionally with a plan to repay is acceptable."
   },
   {
     "id": "td-02",
     "question": "Nguyên tắc YAGNI trong phát triển phần mềm có nghĩa là gì?",
+    "questionEn": "What does the YAGNI principle mean in software development?",
     "options": [
       "You Always Get New Ideas — luôn thêm tính năng mới",
       "You Aren't Gonna Need It — đừng build cái bạn nghĩ sẽ cần, chỉ build cái biết chắc cần bây giờ",
       "Your Application Gets Needs Immediately — app phải đáp ứng nhu cầu ngay lập tức",
       "Yet Another General Notation Interface — một chuẩn giao diện"
     ],
+    "optionsEn": [
+      "You Always Get New Ideas — always add new features",
+      "You Aren't Gonna Need It — don't build what you think you'll need, only build what you know for sure you need now",
+      "Your Application Gets Needs Immediately — the app must meet needs instantly",
+      "Yet Another General Notation Interface — an interface standard"
+    ],
     "answer": 1,
-    "explanation": "YAGNI ngăn over-engineering: đừng build generic system 'phòng trường hợp sau này cần' khi chưa có yêu cầu cụ thể. 3 tuần build flexible system vs 3 ngày build specific solution — nếu 'sau này' không đến, 3 tuần đó là lãng phí. Build khi có yêu cầu thật."
+    "explanation": "YAGNI ngăn over-engineering: đừng build generic system 'phòng trường hợp sau này cần' khi chưa có yêu cầu cụ thể. 3 tuần build flexible system vs 3 ngày build specific solution — nếu 'sau này' không đến, 3 tuần đó là lãng phí. Build khi có yêu cầu thật.",
+    "explanationEn": "YAGNI prevents over-engineering: don't build a generic system 'just in case it's needed later' when there's no concrete requirement yet. 3 weeks to build a flexible system vs 3 days to build a specific solution — if 'later' never comes, those 3 weeks are wasted. Build when there's a real requirement."
   },
   {
     "id": "td-03",
     "question": "Trong tam giác trade-off Nhanh-Tốt-Rẻ, điều gì đúng?",
+    "questionEn": "In the Fast-Good-Cheap trade-off triangle, which statement is true?",
     "options": [
       "Với đủ team giỏi và ngân sách, có thể đạt được cả 3",
       "Chỉ được chọn 2 trong 3 — đây là constraint không thể tránh",
       "Chỉ start-up mới gặp tam giác này, enterprise thì không",
       "Rẻ và Tốt luôn có thể đạt được cùng lúc"
     ],
+    "optionsEn": [
+      "With a skilled enough team and enough budget, you can achieve all 3",
+      "You can only pick 2 out of 3 — this is an unavoidable constraint",
+      "Only start-ups face this triangle; enterprises don't",
+      "Cheap and Good can always be achieved at the same time"
+    ],
     "answer": 1,
-    "explanation": "Nhanh+Rẻ+Tốt là impossible trong thực tế. Nhanh+Rẻ = nhiều bug, không scalable (MVP). Nhanh+Tốt = cần nhiều dev giỏi, chi phí cao. Tốt+Rẻ = mất nhiều thời gian. BA cần align với stakeholder về ưu tiên từ đầu — không align = stakeholder expect cả 3 = team burnout."
+    "explanation": "Nhanh+Rẻ+Tốt là impossible trong thực tế. Nhanh+Rẻ = nhiều bug, không scalable (MVP). Nhanh+Tốt = cần nhiều dev giỏi, chi phí cao. Tốt+Rẻ = mất nhiều thời gian. BA cần align với stakeholder về ưu tiên từ đầu — không align = stakeholder expect cả 3 = team burnout.",
+    "explanationEn": "Fast+Cheap+Good is impossible in practice. Fast+Cheap = many bugs, not scalable (MVP). Fast+Good = needs many skilled devs, high cost. Good+Cheap = takes a lot of time. The BA must align with stakeholders on priorities from the start — no alignment = stakeholders expect all 3 = team burnout."
   },
   {
     "id": "td-04",
     "question": "Dấu hiệu nào cho thấy team đang có technical debt cao?",
+    "questionEn": "Which sign indicates that a team has high technical debt?",
     "options": [
       "Team deploy code mỗi ngày",
       "Dev nói 'phần này không ai dám đụng vào', velocity giảm, fix bug chỗ này break chỗ khác",
       "Team có nhiều automated tests",
       "Stakeholder hài lòng với tốc độ delivery"
     ],
+    "optionsEn": [
+      "The team deploys code every day",
+      "Devs say 'nobody dares to touch this part', velocity declines, and fixing a bug here breaks something else",
+      "The team has many automated tests",
+      "Stakeholders are happy with the delivery speed"
+    ],
     "answer": 1,
-    "explanation": "Dấu hiệu debt cao: 'code này không ai hiểu tại sao viết vậy', estimate ngày càng tăng cho feature đơn giản, regression bug xuất hiện thường xuyên, không ai dám refactor vì thiếu test, deploy phức tạp và rủi ro. BA nhận ra điều này = cần giảm feature pressure, dành capacity cho tech cleanup."
+    "explanation": "Dấu hiệu debt cao: 'code này không ai hiểu tại sao viết vậy', estimate ngày càng tăng cho feature đơn giản, regression bug xuất hiện thường xuyên, không ai dám refactor vì thiếu test, deploy phức tạp và rủi ro. BA nhận ra điều này = cần giảm feature pressure, dành capacity cho tech cleanup.",
+    "explanationEn": "Signs of high debt: 'no one understands why this code was written this way', estimates keep growing for simple features, regression bugs appear frequently, no one dares to refactor due to a lack of tests, and deployments are complex and risky. When a BA notices this = they need to reduce feature pressure and dedicate capacity to tech cleanup."
   },
   {
     "id": "td-05",
     "question": "MVP (Minimum Viable Product) có nghĩa là gì?",
+    "questionEn": "What does MVP (Minimum Viable Product) mean?",
     "options": [
       "Sản phẩm rẻ tiền, chất lượng thấp để tiết kiệm chi phí",
       "Phiên bản nhỏ nhất đủ để validate assumption quan trọng nhất và thu thập feedback thật",
       "Phiên bản đầy đủ tính năng nhất có thể",
       "Prototype không dùng được, chỉ để demo"
     ],
+    "optionsEn": [
+      "A cheap, low-quality product to save costs",
+      "The smallest version sufficient to validate the most important assumption and gather real feedback",
+      "The most feature-complete version possible",
+      "An unusable prototype, only for demos"
+    ],
     "answer": 1,
-    "explanation": "MVP không phải làm xấu — là làm đủ nhỏ để học nhanh. Mục tiêu: ship cho user thật, validate assumption ('người dùng có dùng feature này không?'), thu thập feedback trước khi đầu tư thêm. Feature thừa trong MVP là lãng phí nếu chưa validate nhu cầu."
+    "explanation": "MVP không phải làm xấu — là làm đủ nhỏ để học nhanh. Mục tiêu: ship cho user thật, validate assumption ('người dùng có dùng feature này không?'), thu thập feedback trước khi đầu tư thêm. Feature thừa trong MVP là lãng phí nếu chưa validate nhu cầu.",
+    "explanationEn": "MVP isn't about building something bad — it's building something small enough to learn quickly. The goal: ship to real users, validate an assumption ('will users actually use this feature?'), and gather feedback before investing further. Extra features in an MVP are wasteful if the need hasn't been validated."
   },
   {
     "id": "td-06",
     "question": "Shortcut nào dưới đây là KHÔNG bao giờ hợp lý?",
+    "questionEn": "Which shortcut below is NEVER reasonable?",
     "options": [
       "Hardcode danh sách để test UX trước khi build API",
       "Bỏ qua pagination khi mới có 100 user",
       "Lưu password dạng plaintext 'tạm thời'",
       "Dùng Google Calendar thay vì build calendar riêng cho MVP"
     ],
+    "optionsEn": [
+      "Hardcoding a list to test UX before building the API",
+      "Skipping pagination when there are only 100 users",
+      "Storing passwords as plaintext 'temporarily'",
+      "Using Google Calendar instead of building a custom calendar for an MVP"
+    ],
     "answer": 2,
-    "explanation": "Security shortcuts không bao giờ được chấp nhận — kể cả 'tạm thời'. Password plaintext là vi phạm bảo mật nghiêm trọng, có thể gây rò rỉ dữ liệu hàng loạt. Các shortcut còn lại là conscious trade-off hợp lý: hardcode để validate, bỏ pagination khi data nhỏ, dùng tool có sẵn."
+    "explanation": "Security shortcuts không bao giờ được chấp nhận — kể cả 'tạm thời'. Password plaintext là vi phạm bảo mật nghiêm trọng, có thể gây rò rỉ dữ liệu hàng loạt. Các shortcut còn lại là conscious trade-off hợp lý: hardcode để validate, bỏ pagination khi data nhỏ, dùng tool có sẵn.",
+    "explanationEn": "Security shortcuts are never acceptable — not even 'temporarily'. Plaintext passwords are a serious security violation that can cause mass data breaches. The other shortcuts are reasonable conscious trade-offs: hardcoding to validate, skipping pagination when data is small, and using an existing tool."
   },
   {
     "id": "td-07",
     "question": "Khi dev raise concern 'cần refactor trước khi làm feature mới', BA nên làm gì?",
+    "questionEn": "When a dev raises the concern 'we need to refactor before building the new feature', what should the BA do?",
     "options": [
       "Bỏ qua, deadline quan trọng hơn",
       "Hỏi impact cụ thể nếu không refactor, sau đó cùng quyết định có trade-off không và ghi vào backlog",
       "Đồng ý ngay để dev vui",
       "Escalate lên manager để manager quyết định"
     ],
+    "optionsEn": [
+      "Ignore it, the deadline is more important",
+      "Ask about the specific impact of not refactoring, then decide together whether to trade off and log it in the backlog",
+      "Agree immediately to keep the dev happy",
+      "Escalate to the manager so the manager decides"
+    ],
     "answer": 1,
-    "explanation": "BA cần hiểu impact thật: 'nếu không refactor, điều gì xảy ra trong 1 tháng tới?' Nếu impact cao (bug risk, không thể add feature liên quan), cần ưu tiên. Nếu impact thấp, có thể ghi vào backlog với plan rõ. Key: không bỏ qua, không đồng ý mù quáng — hiểu rồi quyết định."
+    "explanation": "BA cần hiểu impact thật: 'nếu không refactor, điều gì xảy ra trong 1 tháng tới?' Nếu impact cao (bug risk, không thể add feature liên quan), cần ưu tiên. Nếu impact thấp, có thể ghi vào backlog với plan rõ. Key: không bỏ qua, không đồng ý mù quáng — hiểu rồi quyết định.",
+    "explanationEn": "The BA needs to understand the real impact: 'if we don't refactor, what happens over the next month?' If the impact is high (bug risk, inability to add related features), it should be prioritized. If the impact is low, it can be logged in the backlog with a clear plan. Key: don't ignore it, don't blindly agree — understand first, then decide."
   },
   {
     "id": "td-08",
     "question": "Technical Debt Ledger (sổ nợ kỹ thuật) giúp gì?",
+    "questionEn": "What does a Technical Debt Ledger help with?",
     "options": [
       "Tự động fix technical debt",
       "Track các shortcut đã làm, lý do, impact và sprint target để trả nợ — tránh quên",
       "Tính điểm performance của developer",
       "Generate báo cáo cho ban lãnh đạo"
     ],
+    "optionsEn": [
+      "Automatically fixing technical debt",
+      "Tracking the shortcuts taken, the reasons, the impact, and the sprint target for repayment — so nothing is forgotten",
+      "Scoring developer performance",
+      "Generating reports for leadership"
+    ],
     "answer": 1,
-    "explanation": "Debt ledger đảm bảo shortcut 'tạm thời' không tồn tại mãi mãi. Stakeholder thấy trade-off được ghi nhận, PO có cơ sở allocate capacity refactor, dev không cảm thấy 'build xấu mà không ai quan tâm'. Không track = debt tích lũy vô hạn."
+    "explanation": "Debt ledger đảm bảo shortcut 'tạm thời' không tồn tại mãi mãi. Stakeholder thấy trade-off được ghi nhận, PO có cơ sở allocate capacity refactor, dev không cảm thấy 'build xấu mà không ai quan tâm'. Không track = debt tích lũy vô hạn.",
+    "explanationEn": "A debt ledger ensures a 'temporary' shortcut doesn't last forever. Stakeholders see that the trade-off has been recorded, the PO has a basis to allocate capacity for refactoring, and devs don't feel like they 'built something bad and no one cares'. No tracking = debt accumulates without limit."
   },
   {
     "id": "td-09",
     "question": "Điều gì đúng về quyết định Build vs Buy (tự build vs mua/dùng SaaS)?",
+    "questionEn": "What is true about the Build vs Buy decision (building it yourself vs buying/using SaaS)?",
     "options": [
       "Luôn tự build để kiểm soát hoàn toàn",
       "Luôn dùng SaaS để tiết kiệm thời gian",
       "Hầu hết non-core functionality nên dùng SaaS; chỉ tự build khi SaaS không đáp ứng được yêu cầu đặc thù",
       "Build hay Buy không ảnh hưởng đến technical debt"
     ],
+    "optionsEn": [
+      "Always build it yourself for full control",
+      "Always use SaaS to save time",
+      "Most non-core functionality should use SaaS; only build it yourself when SaaS can't meet a specific requirement",
+      "Build vs Buy doesn't affect technical debt"
+    ],
     "answer": 2,
-    "explanation": "Tự build email server, authentication, payment processing là over-engineering với 99% sản phẩm. SaaS như SendGrid, Auth0, Stripe đã giải quyết các vấn đề khó (deliverability, security, compliance) tốt hơn team nhỏ. Tự build chỉ hợp lý khi có yêu cầu đặc biệt hoặc scale cực lớn."
+    "explanation": "Tự build email server, authentication, payment processing là over-engineering với 99% sản phẩm. SaaS như SendGrid, Auth0, Stripe đã giải quyết các vấn đề khó (deliverability, security, compliance) tốt hơn team nhỏ. Tự build chỉ hợp lý khi có yêu cầu đặc biệt hoặc scale cực lớn.",
+    "explanationEn": "Building your own email server, authentication, or payment processing is over-engineering for 99% of products. SaaS like SendGrid, Auth0, and Stripe already solve the hard problems (deliverability, security, compliance) better than a small team can. Building it yourself only makes sense when there's a special requirement or extreme scale."
   },
   {
     "id": "td-10",
     "question": "RICE framework dùng để làm gì trong quản lý product?",
+    "questionEn": "What is the RICE framework used for in product management?",
     "options": [
       "Estimate thời gian development",
       "Ưu tiên feature dựa trên Reach, Impact, Confidence, Effort",
       "Đánh giá chất lượng code",
       "Phân công task cho developer"
     ],
+    "optionsEn": [
+      "Estimating development time",
+      "Prioritizing features based on Reach, Impact, Confidence, and Effort",
+      "Assessing code quality",
+      "Assigning tasks to developers"
+    ],
     "answer": 1,
-    "explanation": "RICE = (Reach × Impact × Confidence) / Effort. Giúp so sánh khách quan giữa các feature: feature phục vụ ít user nhưng impact cao và ít effort có thể ưu tiên hơn feature phục vụ nhiều user nhưng effort lớn và không chắc. Tránh ưu tiên theo cảm tính hay theo ai nói to hơn."
+    "explanation": "RICE = (Reach × Impact × Confidence) / Effort. Giúp so sánh khách quan giữa các feature: feature phục vụ ít user nhưng impact cao và ít effort có thể ưu tiên hơn feature phục vụ nhiều user nhưng effort lớn và không chắc. Tránh ưu tiên theo cảm tính hay theo ai nói to hơn.",
+    "explanationEn": "RICE = (Reach × Impact × Confidence) / Effort. It enables objective comparison between features: a feature serving fewer users but with high impact and low effort may be prioritized over a feature serving many users but with large, uncertain effort. It avoids prioritizing by gut feeling or by whoever speaks loudest."
   },
   {
     "id": "td-11",
     "question": "Trong ví dụ về tính năng recommendation, tại sao Option B (rule-based đơn giản) là quyết định đúng?",
+    "questionEn": "In the recommendation feature example, why is Option B (simple rule-based) the right decision?",
     "options": [
       "Vì AI recommendation không bao giờ tốt hơn rule-based",
       "Vì có business value ngay, không delay launch, và team biết mình đang vay với plan trả rõ ràng",
       "Vì dev không đủ skill làm AI recommendation",
       "Vì stakeholder yêu cầu như vậy"
     ],
+    "optionsEn": [
+      "Because AI recommendation is never better than rule-based",
+      "Because it delivers immediate business value, doesn't delay the launch, and the team knows it's borrowing with a clear repayment plan",
+      "Because the devs don't have the skills to build AI recommendation",
+      "Because the stakeholders demanded it"
+    ],
     "answer": 1,
-    "explanation": "Conscious debt với plan là acceptable: recommendation đơn giản > không có recommendation. Không delay launch. Sau 2 tháng có data thật → implement AI đúng cách. Key khác biệt với bad debt: được ghi nhận, có sprint target, có điều kiện rõ ('khi có đủ data')."
+    "explanation": "Conscious debt với plan là acceptable: recommendation đơn giản > không có recommendation. Không delay launch. Sau 2 tháng có data thật → implement AI đúng cách. Key khác biệt với bad debt: được ghi nhận, có sprint target, có điều kiện rõ ('khi có đủ data').",
+    "explanationEn": "Conscious debt with a plan is acceptable: a simple recommendation > no recommendation. No launch delay. After 2 months of real data → implement AI the proper way. The key difference from bad debt: it's recorded, has a sprint target, and has a clear condition ('once there's enough data')."
   },
   {
     "id": "td-12",
     "question": "Câu hỏi 'Assumption quan trọng nhất cần validate là gì?' giúp BA làm gì?",
+    "questionEn": "What does the question 'What's the most important assumption to validate?' help the BA do?",
     "options": [
       "Viết test case cho QA",
       "Xác định feature nhỏ nhất để học nhanh nhất — tránh over-build trước khi có feedback",
       "Estimate effort development",
       "Phân công task cho team"
     ],
+    "optionsEn": [
+      "Write test cases for QA",
+      "Identify the smallest feature to learn the fastest — avoiding over-building before there's feedback",
+      "Estimate development effort",
+      "Assign tasks to the team"
+    ],
     "answer": 1,
-    "explanation": "Câu hỏi này là trái tim của MVP thinking. Nếu assumption là 'user sẽ dùng feature này', build feature nhỏ nhất để test assumption đó. Nếu assumption sai → không đầu tư thêm. Nếu đúng → invest properly. Tránh build full system cho assumption chưa được validate."
+    "explanation": "Câu hỏi này là trái tim của MVP thinking. Nếu assumption là 'user sẽ dùng feature này', build feature nhỏ nhất để test assumption đó. Nếu assumption sai → không đầu tư thêm. Nếu đúng → invest properly. Tránh build full system cho assumption chưa được validate.",
+    "explanationEn": "This question is the heart of MVP thinking. If the assumption is 'users will use this feature', build the smallest feature to test that assumption. If the assumption is wrong → don't invest further. If it's right → invest properly. It avoids building a full system for an assumption that hasn't been validated."
   },
   {
     "id": "td-13",
     "question": "Khi nào Generalization (làm generic, reusable) là sai lầm?",
+    "questionEn": "When is Generalization (making things generic and reusable) a mistake?",
     "options": [
       "Khi có nhiều hơn 3 use case tương tự",
       "Khi chưa có use case thứ hai thật sự — đây là YAGNI violation, tốn effort mà chưa có giá trị",
       "Khi team có đủ thời gian",
       "Khi architect yêu cầu"
     ],
+    "optionsEn": [
+      "When there are more than 3 similar use cases",
+      "When there isn't yet a real second use case — this is a YAGNI violation, spending effort without any value yet",
+      "When the team has enough time",
+      "When the architect requires it"
+    ],
     "answer": 1,
-    "explanation": "Rule of three: nếu chỉ có 1 use case, build specific. Nếu thêm case thứ 2, có thể refactor. Nếu có case thứ 3, mới nên generalize. Generalize sớm từ 1 use case thường sai design (vì chưa biết pattern thật), tốn gấp 3-4x thời gian, và thường phải làm lại anyway khi case 2 đến."
+    "explanation": "Rule of three: nếu chỉ có 1 use case, build specific. Nếu thêm case thứ 2, có thể refactor. Nếu có case thứ 3, mới nên generalize. Generalize sớm từ 1 use case thường sai design (vì chưa biết pattern thật), tốn gấp 3-4x thời gian, và thường phải làm lại anyway khi case 2 đến.",
+    "explanationEn": "Rule of three: if there's only 1 use case, build specific. When a 2nd case appears, you can refactor. Only when there's a 3rd case should you generalize. Generalizing early from 1 use case usually leads to the wrong design (because the real pattern isn't known yet), costs 3-4x the time, and often has to be redone anyway when the 2nd case arrives."
   },
   {
     "id": "td-14",
     "question": "Velocity sprint giảm dần qua các sprint cho thấy điều gì?",
+    "questionEn": "What does a gradually declining sprint velocity across sprints indicate?",
     "options": [
       "Team đang bị demotivate",
       "Requirement ngày càng phức tạp hơn",
       "Technical debt đang tích lũy — mỗi feature mới tốn nhiều thời gian hơn vì phải làm việc xung quanh code cũ",
       "Team cần thêm người"
     ],
+    "optionsEn": [
+      "The team is getting demotivated",
+      "The requirements are getting more complex",
+      "Technical debt is accumulating — each new feature takes more time because of having to work around old code",
+      "The team needs more people"
+    ],
     "answer": 2,
-    "explanation": "Velocity giảm là triệu chứng điển hình của debt tích lũy: code ngày càng coupled, không có test nên phải test thủ công nhiều hơn, refactor sợ break chỗ khác. BA nhận ra pattern này cần raise với PO: cần sprint cleanup hoặc risk velocity về 0."
+    "explanation": "Velocity giảm là triệu chứng điển hình của debt tích lũy: code ngày càng coupled, không có test nên phải test thủ công nhiều hơn, refactor sợ break chỗ khác. BA nhận ra pattern này cần raise với PO: cần sprint cleanup hoặc risk velocity về 0.",
+    "explanationEn": "Declining velocity is a classic symptom of accumulating debt: the code becomes increasingly coupled, there are no tests so more manual testing is needed, and refactoring risks breaking something else. When a BA notices this pattern, they should raise it with the PO: a cleanup sprint is needed, or velocity risks dropping to 0."
   },
   {
     "id": "td-15",
     "question": "BA nên dành bao nhiêu % capacity sprint cho technical debt theo best practice?",
+    "questionEn": "What % of sprint capacity should a BA dedicate to technical debt as a best practice?",
     "options": [
       "0% — debt là vấn đề của dev, không liên quan đến BA",
       "50% — debt và feature ngang nhau",
       "10-20% — đủ để prevent debt tích lũy mà không ảnh hưởng quá nhiều đến feature delivery",
       "100% trong sprint riêng biệt mỗi quý"
     ],
+    "optionsEn": [
+      "0% — debt is the devs' problem, not related to the BA",
+      "50% — debt and features are equal",
+      "10-20% — enough to prevent debt from accumulating without affecting feature delivery too much",
+      "100% in a separate sprint each quarter"
+    ],
     "answer": 2,
-    "explanation": "10-20% là guideline phổ biến: đủ để dần dần trả nợ và refactor, không để debt tích lũy mãi, nhưng vẫn deliver feature. Sprint 100% debt ít hiệu quả hơn — đến lúc đó debt đã quá lớn và tốn nhiều hơn. Đây là quyết định cần BA/PO align với stakeholder từ đầu dự án."
+    "explanation": "10-20% là guideline phổ biến: đủ để dần dần trả nợ và refactor, không để debt tích lũy mãi, nhưng vẫn deliver feature. Sprint 100% debt ít hiệu quả hơn — đến lúc đó debt đã quá lớn và tốn nhiều hơn. Đây là quyết định cần BA/PO align với stakeholder từ đầu dự án.",
+    "explanationEn": "10-20% is a common guideline: enough to gradually repay debt and refactor, so debt doesn't accumulate indefinitely, while still delivering features. A 100%-debt sprint is less effective — by that point the debt is already too large and costs more. This is a decision the BA/PO needs to align with stakeholders on from the start of the project."
   }
 ]

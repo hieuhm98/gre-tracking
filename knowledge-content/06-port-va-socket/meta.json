@@ -1,1 +1,7 @@
-{"title": "Port & Socket", "description": "Cổng mạng là gì, các cổng phổ biến, socket connection và cách ứng dụng giao tiếp qua mạng."}
+{
+  "group": "ba-po-pm",
+  "title": "Port & Socket",
+  "titleEn": "Port & Socket",
+  "description": "Cổng mạng là gì, các cổng phổ biến, socket connection và cách ứng dụng giao tiếp qua mạng.",
+  "descriptionEn": "What network ports are, common ports, socket connections, and how applications communicate over the network."
+}

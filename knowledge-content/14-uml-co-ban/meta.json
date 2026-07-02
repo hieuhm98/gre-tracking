@@ -1,1 +1,7 @@
-{"title": "UML cơ bản", "description": "Use case diagram, activity diagram, sequence diagram và cách dùng UML để mô tả hệ thống."}
+{
+  "group": "ba-po-pm",
+  "title": "UML cơ bản",
+  "titleEn": "UML Basics",
+  "description": "Use case diagram, activity diagram, sequence diagram và cách dùng UML để mô tả hệ thống.",
+  "descriptionEn": "Use case diagrams, activity diagrams, sequence diagrams, and how to use UML to describe systems."
+}

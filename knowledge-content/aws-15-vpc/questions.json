@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q1",
+    "question": "Một Amazon VPC gắn với phạm vi nào, và một subnet gắn với phạm vi nào?",
+    "questionEn": "What scope is an Amazon VPC tied to, and what scope is a subnet tied to?",
+    "options": [
+      "VPC gắn với 1 Region; subnet gắn với 1 Availability Zone",
+      "VPC gắn với 1 Availability Zone; subnet gắn với 1 Region",
+      "Cả VPC và subnet đều gắn toàn cầu (global)",
+      "VPC gắn với 1 tài khoản; subnet gắn với toàn Region"
+    ],
+    "optionsEn": [
+      "A VPC is tied to one Region; a subnet is tied to one Availability Zone",
+      "A VPC is tied to one Availability Zone; a subnet is tied to one Region",
+      "Both VPC and subnet are global",
+      "A VPC is tied to one account; a subnet spans a whole Region"
+    ],
+    "answer": 0,
+    "explanation": "VPC nằm trong một Region duy nhất, còn mỗi subnet nằm trong đúng một AZ. Vì vậy để đạt HA, ta tạo subnet ở nhiều AZ khác nhau.",
+    "explanationEn": "A VPC lives in a single Region, while each subnet lives in exactly one AZ. This is why we create subnets across multiple AZs to achieve high availability."
+  },
+  {
+    "id": "q2",
+    "question": "Điều gì quyết định một subnet là public hay private?",
+    "questionEn": "What determines whether a subnet is public or private?",
+    "options": [
+      "Kích thước CIDR block của subnet",
+      "Một thuộc tính 'public' bật/tắt trên subnet",
+      "Route table của subnet có tuyến 0.0.0.0/0 trỏ tới Internet Gateway hay không",
+      "Subnet nằm ở AZ số chẵn hay lẻ"
+    ],
+    "optionsEn": [
+      "The size of the subnet's CIDR block",
+      "A 'public' on/off attribute on the subnet",
+      "Whether the subnet's route table has a 0.0.0.0/0 route to an Internet Gateway",
+      "Whether the subnet is in an even- or odd-numbered AZ"
+    ],
+    "answer": 2,
+    "explanation": "Subnet là public khi route table của nó có tuyến mặc định trỏ tới IGW. Bản thân subnet không có thuộc tính public/private cố hữu.",
+    "explanationEn": "A subnet is public when its route table has a default route to an IGW. The subnet itself has no inherent public/private attribute."
+  },
+  {
+    "id": "q3",
+    "question": "Sự khác biệt cốt lõi giữa Security Group và NACL là gì?",
+    "questionEn": "What is the core difference between a Security Group and a NACL?",
+    "options": [
+      "Security Group là stateless; NACL là stateful",
+      "Security Group là stateful (cấp instance); NACL là stateless (cấp subnet)",
+      "Cả hai đều stateful nhưng khác cấp áp dụng",
+      "Security Group có luật Deny; NACL chỉ có luật Allow"
+    ],
+    "optionsEn": [
+      "A Security Group is stateless; a NACL is stateful",
+      "A Security Group is stateful (instance level); a NACL is stateless (subnet level)",
+      "Both are stateful but apply at different levels",
+      "A Security Group has Deny rules; a NACL has Allow rules only"
+    ],
+    "answer": 1,
+    "explanation": "SG là stateful (tự cho phép lưu lượng phản hồi) và áp dụng ở cấp instance. NACL là stateless (phải mở cả 2 chiều) và áp dụng ở cấp subnet.",
+    "explanationEn": "SGs are stateful (return traffic is auto-allowed) and apply at the instance level. NACLs are stateless (you must open both directions) and apply at the subnet level."
+  },
+  {
+    "id": "q4",
+    "question": "Một công ty cần CHẶN một địa chỉ IP độc hại cụ thể ở lớp subnet. Nên dùng công cụ nào?",
+    "questionEn": "A company needs to BLOCK a specific malicious IP address at the subnet level. Which tool should be used?",
+    "options": [
+      "Security Group với luật Deny",
+      "Network ACL (NACL) với luật Deny",
+      "Route table trỏ IP đó vào black hole",
+      "IAM policy chặn IP"
+    ],
+    "optionsEn": [
+      "A Security Group with a Deny rule",
+      "A Network ACL (NACL) with a Deny rule",
+      "A route table sending that IP to a black hole",
+      "An IAM policy blocking the IP"
+    ],
+    "answer": 1,
+    "explanation": "Chỉ NACL mới có luật Deny và áp dụng ở cấp subnet, nên là công cụ đúng để chặn một IP cụ thể. Security Group chỉ có luật Allow.",
+    "explanationEn": "Only NACLs support Deny rules and operate at the subnet level, making them the right tool to block a specific IP. Security Groups only have Allow rules."
+  },
+  {
+    "id": "q5",
+    "question": "Instance ở private subnet cần ra Internet để tải bản cập nhật, nhưng KHÔNG được nhận kết nối vào từ Internet. Giải pháp phù hợp nhất?",
+    "questionEn": "Instances in a private subnet need to reach the Internet to download updates but must NOT accept inbound connections from the Internet. What is the MOST suitable solution?",
+    "options": [
+      "Gắn Internet Gateway trực tiếp vào private subnet",
+      "Gán Public IP cho từng instance",
+      "Định tuyến lưu lượng ra qua NAT Gateway đặt ở public subnet",
+      "Tạo VPC Peering tới một VPC khác có Internet"
+    ],
+    "optionsEn": [
+      "Attach an Internet Gateway directly to the private subnet",
+      "Assign a Public IP to each instance",
+      "Route outbound traffic through a NAT Gateway placed in a public subnet",
+      "Create VPC Peering to another VPC that has Internet access"
+    ],
+    "answer": 2,
+    "explanation": "NAT Gateway (đặt ở public subnet) cho phép instance private khởi tạo kết nối ra Internet nhưng chặn mọi kết nối vào chủ động — đúng yêu cầu.",
+    "explanationEn": "A NAT Gateway (in a public subnet) lets private instances initiate outbound connections while blocking inbound-initiated connections — exactly the requirement."
+  },
+  {
+    "id": "q6",
+    "question": "Ưu điểm chính của NAT Gateway so với NAT Instance là gì?",
+    "questionEn": "What is the main advantage of a NAT Gateway over a NAT Instance?",
+    "options": [
+      "NAT Gateway cho phép gắn Security Group",
+      "NAT Gateway rẻ hơn trong mọi trường hợp",
+      "NAT Gateway được AWS quản lý hoàn toàn, tự scale và có độ sẵn sàng cao",
+      "NAT Gateway có thể dùng làm bastion host"
+    ],
+    "optionsEn": [
+      "A NAT Gateway lets you attach a Security Group",
+      "A NAT Gateway is always cheaper",
+      "A NAT Gateway is fully AWS-managed, auto-scales, and is highly available",
+      "A NAT Gateway can be used as a bastion host"
+    ],
+    "answer": 2,
+    "explanation": "NAT Gateway được AWS quản lý, tự động scale băng thông và HA trong AZ — bạn không phải tự vá lỗi hay lo scale như NAT Instance.",
+    "explanationEn": "A NAT Gateway is AWS-managed, auto-scales bandwidth, and is highly available within its AZ — you don't have to patch or scale it yourself as with a NAT Instance."
+  },
+  {
+    "id": "q7",
+    "question": "Instance trong private subnet cần truy cập Amazon S3 một cách riêng tư, KHÔNG qua Internet, và không muốn phát sinh phí endpoint. Nên dùng gì?",
+    "questionEn": "Instances in a private subnet need to access Amazon S3 privately, WITHOUT the Internet, and want to avoid endpoint charges. What should be used?",
+    "options": [
+      "Interface Endpoint (PrivateLink)",
+      "Gateway Endpoint",
+      "NAT Gateway tới S3",
+      "VPC Peering tới VPC của AWS"
+    ],
+    "optionsEn": [
+      "An Interface Endpoint (PrivateLink)",
+      "A Gateway Endpoint",
+      "A NAT Gateway to S3",
+      "VPC Peering to an AWS VPC"
+    ],
+    "answer": 1,
+    "explanation": "Gateway Endpoint hỗ trợ S3 và DynamoDB, hoạt động bằng cách thêm route, và MIỄN PHÍ — phù hợp nhất cho truy cập S3 riêng tư không tốn phí.",
+    "explanationEn": "A Gateway Endpoint supports S3 and DynamoDB, works by adding a route, and is FREE — the best fit for private, no-cost S3 access."
+  },
+  {
+    "id": "q8",
+    "question": "Loại VPC Endpoint nào dựa trên AWS PrivateLink và tạo một ENI có IP private trong subnet?",
+    "questionEn": "Which type of VPC Endpoint is based on AWS PrivateLink and creates an ENI with a private IP in the subnet?",
+    "options": [
+      "Gateway Endpoint",
+      "Interface Endpoint",
+      "Egress-only Internet Gateway",
+      "Transit Gateway attachment"
+    ],
+    "optionsEn": [
+      "Gateway Endpoint",
+      "Interface Endpoint",
+      "Egress-only Internet Gateway",
+      "Transit Gateway attachment"
+    ],
+    "answer": 1,
+    "explanation": "Interface Endpoint dùng AWS PrivateLink, tạo ENI với IP private trong subnet và hỗ trợ hầu hết dịch vụ AWS (khác Gateway Endpoint chỉ cho S3/DynamoDB).",
+    "explanationEn": "An Interface Endpoint uses AWS PrivateLink, creating an ENI with a private IP in the subnet and supporting most AWS services (unlike Gateway Endpoints, which cover only S3/DynamoDB)."
+  },
+  {
+    "id": "q9",
+    "question": "VPC A peer với VPC B, và VPC B peer với VPC C. VPC A có tự động giao tiếp được với VPC C không?",
+    "questionEn": "VPC A is peered with VPC B, and VPC B is peered with VPC C. Can VPC A automatically communicate with VPC C?",
+    "options": [
+      "Có, peering là bắc cầu (transitive)",
+      "Không, VPC Peering không bắc cầu — cần tạo peering A–C riêng",
+      "Có, nếu cả ba dùng chung route table",
+      "Chỉ khi ba VPC nằm cùng một AZ"
+    ],
+    "optionsEn": [
+      "Yes, peering is transitive",
+      "No, VPC Peering is non-transitive — a separate A–C peering is required",
+      "Yes, if all three share a route table",
+      "Only if the three VPCs are in the same AZ"
+    ],
+    "answer": 1,
+    "explanation": "VPC Peering không mang tính bắc cầu. A không nói chuyện được với C qua B; phải tạo peering A–C trực tiếp. Ở quy mô lớn nên dùng Transit Gateway.",
+    "explanationEn": "VPC Peering is non-transitive. A cannot reach C through B; you must create a direct A–C peering. At scale, use a Transit Gateway instead."
+  },
+  {
+    "id": "q10",
+    "question": "Một doanh nghiệp cần kết nối hàng chục VPC và mạng on-premises theo mô hình hub-and-spoke với định tuyến bắc cầu. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "An enterprise needs to connect dozens of VPCs and on-premises networks in a hub-and-spoke model with transitive routing. Which service fits best?",
+    "options": [
+      "Nhiều kết nối VPC Peering full-mesh",
+      "AWS Transit Gateway",
+      "Internet Gateway dùng chung",
+      "Một NAT Gateway trung tâm"
+    ],
+    "optionsEn": [
+      "Many full-mesh VPC Peering connections",
+      "AWS Transit Gateway",
+      "A shared Internet Gateway",
+      "A single central NAT Gateway"
+    ],
+    "answer": 1,
+    "explanation": "Transit Gateway là hub trung tâm kết nối nhiều VPC và on-prem với định tuyến bắc cầu, tránh sự phức tạp của peering full-mesh.",
+    "explanationEn": "A Transit Gateway is a central hub connecting many VPCs and on-prem networks with transitive routing, avoiding the complexity of full-mesh peering."
+  },
+  {
+    "id": "q11",
+    "question": "Công ty cần kết nối on-premises với AWS có băng thông ổn định, độ trễ thấp, KHÔNG đi qua Internet công cộng. Lựa chọn nào phù hợp nhất?",
+    "questionEn": "A company needs an on-premises-to-AWS connection with stable bandwidth, low latency, and that does NOT traverse the public Internet. Which option fits best?",
+    "options": [
+      "Site-to-Site VPN",
+      "AWS Direct Connect",
+      "VPC Peering",
+      "Internet Gateway"
+    ],
+    "optionsEn": [
+      "Site-to-Site VPN",
+      "AWS Direct Connect",
+      "VPC Peering",
+      "Internet Gateway"
+    ],
+    "answer": 1,
+    "explanation": "Direct Connect là đường vật lý riêng, băng thông ổn định, độ trễ thấp, không qua Internet công cộng. VPN đi qua Internet nên băng thông/độ trễ biến động.",
+    "explanationEn": "Direct Connect is a dedicated physical link with stable bandwidth, low latency, and no public Internet. VPN goes over the Internet, so bandwidth/latency vary."
+  },
+  {
+    "id": "q12",
+    "question": "Cần thiết lập kết nối on-premises tới AWS THẬT NHANH và chi phí thấp, chấp nhận đi qua Internet có mã hóa. Nên chọn gì?",
+    "questionEn": "You need an on-premises-to-AWS connection set up VERY QUICKLY and cheaply, accepting an encrypted path over the Internet. What should you choose?",
+    "options": [
+      "AWS Direct Connect",
+      "Site-to-Site VPN (IPsec)",
+      "Transit Gateway peering",
+      "Interface Endpoint"
+    ],
+    "optionsEn": [
+      "AWS Direct Connect",
+      "Site-to-Site VPN (IPsec)",
+      "Transit Gateway peering",
+      "An Interface Endpoint"
+    ],
+    "answer": 1,
+    "explanation": "Site-to-Site VPN dựng đường hầm IPsec mã hóa qua Internet trong vài phút–giờ, chi phí thấp. Direct Connect mất nhiều tuần để lắp đặt.",
+    "explanationEn": "A Site-to-Site VPN builds an encrypted IPsec tunnel over the Internet in minutes-to-hours at low cost. Direct Connect takes weeks to provision."
+  },
+  {
+    "id": "q13",
+    "question": "Đội bảo mật muốn ghi lại metadata lưu lượng IP (nguồn/đích, cổng, ACCEPT/REJECT) trong VPC để điều tra vì sao kết nối bị chặn. Nên bật gì?",
+    "questionEn": "A security team wants to record IP traffic metadata (source/destination, ports, ACCEPT/REJECT) in the VPC to investigate why a connection is blocked. What should they enable?",
+    "options": [
+      "VPC Flow Logs",
+      "CloudTrail data events",
+      "AWS Config rules",
+      "S3 access logs"
+    ],
+    "optionsEn": [
+      "VPC Flow Logs",
+      "CloudTrail data events",
+      "AWS Config rules",
+      "S3 access logs"
+    ],
+    "answer": 0,
+    "explanation": "VPC Flow Logs ghi metadata lưu lượng IP (kèm ACCEPT/REJECT) ở cấp VPC/subnet/ENI, lý tưởng để gỡ lỗi kết nối và audit. Không ghi payload gói tin.",
+    "explanationEn": "VPC Flow Logs record IP traffic metadata (including ACCEPT/REJECT) at the VPC/subnet/ENI level, ideal for connectivity debugging and auditing. They do not capture packet payload."
+  },
+  {
+    "id": "q14",
+    "question": "Quản trị viên cần SSH an toàn vào các instance ở private subnet (không có Public IP). Kiến trúc truyền thống nào được dùng?",
+    "questionEn": "An administrator needs to securely SSH into instances in a private subnet (no Public IP). What traditional architecture is used?",
+    "options": [
+      "Gán Public IP tạm thời cho từng instance",
+      "Bastion Host (jump box) đặt ở public subnet",
+      "NAT Gateway",
+      "Gateway Endpoint tới EC2"
+    ],
+    "optionsEn": [
+      "Temporarily assign a Public IP to each instance",
+      "A Bastion Host (jump box) in a public subnet",
+      "A NAT Gateway",
+      "A Gateway Endpoint to EC2"
+    ],
+    "answer": 1,
+    "explanation": "Bastion Host ở public subnet là điểm trung gian để SSH vào instance private an toàn. Phương án hiện đại hơn là SSM Session Manager (không cần mở SSH).",
+    "explanationEn": "A Bastion Host in a public subnet is the intermediary to SSH safely into private instances. A more modern option is SSM Session Manager (no open SSH needed)."
+  },
+  {
+    "id": "q15",
+    "question": "Với NACL (stateless), điều gì bắt buộc để lưu lượng phản hồi (response) từ instance quay về client hoạt động đúng?",
+    "questionEn": "For a NACL (stateless), what is required so that response traffic from the instance back to the client works correctly?",
+    "options": [
+      "Không cần gì thêm; NACL tự cho phép lưu lượng phản hồi",
+      "Phải mở tường minh dải cổng ephemeral ở luật outbound (và inbound tương ứng)",
+      "Phải gắn Security Group vào NACL",
+      "Phải bật stateful mode trên NACL"
+    ],
+    "optionsEn": [
+      "Nothing extra; the NACL auto-allows response traffic",
+      "You must explicitly open the ephemeral port range in outbound rules (and the corresponding inbound)",
+      "You must attach a Security Group to the NACL",
+      "You must enable stateful mode on the NACL"
+    ],
+    "answer": 1,
+    "explanation": "NACL là stateless nên không nhớ kết nối; lưu lượng phản hồi dùng cổng ephemeral phải được mở tường minh. Đây là khác biệt then chốt so với Security Group stateful.",
+    "explanationEn": "NACLs are stateless and do not remember connections; response traffic uses ephemeral ports that must be explicitly allowed. This is the key difference from stateful Security Groups."
+  }
+]

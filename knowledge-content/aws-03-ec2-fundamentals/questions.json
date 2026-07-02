@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "Amazon EC2 cung cấp loại tài nguyên nào và thuộc mô hình dịch vụ nào?",
+    "questionEn": "What does Amazon EC2 provide, and which service model does it belong to?",
+    "options": [
+      "Cơ sở dữ liệu được quản lý hoàn toàn (SaaS)",
+      "Máy chủ ảo (IaaS)",
+      "Hàm serverless chạy theo sự kiện (FaaS)",
+      "Lưu trữ đối tượng (object storage)"
+    ],
+    "optionsEn": [
+      "A fully managed database (SaaS)",
+      "Virtual servers (IaaS)",
+      "Event-driven serverless functions (FaaS)",
+      "Object storage"
+    ],
+    "answer": 1,
+    "explanation": "EC2 (Elastic Compute Cloud) cung cấp máy chủ ảo và thuộc mô hình IaaS — bạn tự quản lý OS và ứng dụng, AWS quản lý hạ tầng vật lý.",
+    "explanationEn": "EC2 (Elastic Compute Cloud) provides virtual servers and belongs to the IaaS model — you manage the OS and applications, AWS manages the physical infrastructure."
+  },
+  {
+    "id": "q2",
+    "question": "Trong tên instance `m5.2xlarge`, các thành phần `m`, `5`, `2xlarge` lần lượt là gì?",
+    "questionEn": "In the instance name `m5.2xlarge`, what do `m`, `5`, and `2xlarge` represent?",
+    "options": [
+      "Region, Availability Zone, số vCPU",
+      "Họ (family), thế hệ (generation), kích thước (size)",
+      "Kích thước, họ, thế hệ",
+      "Loại ổ đĩa, dung lượng RAM, băng thông mạng"
+    ],
+    "optionsEn": [
+      "Region, Availability Zone, number of vCPUs",
+      "Family, generation, size",
+      "Size, family, generation",
+      "Disk type, RAM amount, network bandwidth"
+    ],
+    "answer": 1,
+    "explanation": "Quy tắc đặt tên là family + generation + size: `m` là họ general purpose, `5` là thế hệ thứ 5, `2xlarge` là kích thước.",
+    "explanationEn": "The naming convention is family + generation + size: `m` is the general purpose family, `5` is the 5th generation, and `2xlarge` is the size."
+  },
+  {
+    "id": "q3",
+    "question": "Một ứng dụng cần lượng RAM rất lớn để chạy database in-memory. Nên chọn họ instance nào?",
+    "questionEn": "An application needs a very large amount of RAM to run an in-memory database. Which instance family should you choose?",
+    "options": [
+      "Compute Optimized (`c`)",
+      "General Purpose (`t`)",
+      "Memory Optimized (`r`)",
+      "Storage Optimized (`i`)"
+    ],
+    "optionsEn": [
+      "Compute Optimized (`c`)",
+      "General Purpose (`t`)",
+      "Memory Optimized (`r`)",
+      "Storage Optimized (`i`)"
+    ],
+    "answer": 2,
+    "explanation": "Họ Memory Optimized (ví dụ `r`, `x`, `z`) được tối ưu cho RAM lớn — phù hợp database in-memory, cache và phân tích dữ liệu lớn.",
+    "explanationEn": "The Memory Optimized family (e.g., `r`, `x`, `z`) is optimized for large RAM — ideal for in-memory databases, caching, and big-data analytics."
+  },
+  {
+    "id": "q4",
+    "question": "Đâu là mô tả ĐÚNG về Security Group của EC2?",
+    "questionEn": "Which statement correctly describes an EC2 Security Group?",
+    "options": [
+      "Stateless và hỗ trợ cả rule allow lẫn deny",
+      "Stateful, chỉ có rule allow, traffic trả về được tự động cho phép",
+      "Stateful nhưng phải khai báo rule cho cả chiều đi và chiều về",
+      "Chỉ kiểm soát traffic outbound, không kiểm soát inbound"
+    ],
+    "optionsEn": [
+      "Stateless and supports both allow and deny rules",
+      "Stateful, allow rules only, return traffic is automatically permitted",
+      "Stateful but you must declare rules for both inbound and return directions",
+      "Controls outbound traffic only, not inbound"
+    ],
+    "answer": 1,
+    "explanation": "Security Group là stateful và chỉ có rule allow. Vì stateful, traffic trả về được tự động cho phép mà không cần rule riêng. Không match rule nào = chặn.",
+    "explanationEn": "A Security Group is stateful and has allow rules only. Because it is stateful, return traffic is automatically permitted without a separate rule. No matching rule = blocked."
+  },
+  {
+    "id": "q5",
+    "question": "Bạn cần cho phép các instance tầng web gọi tới các instance tầng app mà không phải liệt kê IP cụ thể. Cách tốt nhất trong Security Group là gì?",
+    "questionEn": "You need to let web-tier instances reach app-tier instances without listing specific IPs. What is the best approach in a Security Group?",
+    "options": [
+      "Mở port cho 0.0.0.0/0",
+      "Tham chiếu Security Group của tầng web làm nguồn trong rule của tầng app",
+      "Tạo một Network ACL deny cho mọi IP khác",
+      "Gán cùng một key pair cho cả hai tầng"
+    ],
+    "optionsEn": [
+      "Open the port to 0.0.0.0/0",
+      "Reference the web-tier Security Group as the source in the app-tier rule",
+      "Create a Network ACL that denies all other IPs",
+      "Assign the same key pair to both tiers"
+    ],
+    "answer": 1,
+    "explanation": "Security Group có thể tham chiếu một Security Group khác làm nguồn/đích. Điều này lý tưởng cho traffic tier-to-tier vì IP instance có thể thay đổi.",
+    "explanationEn": "A Security Group can reference another Security Group as its source/destination. This is ideal for tier-to-tier traffic because instance IPs can change."
+  },
+  {
+    "id": "q6",
+    "question": "User Data trong EC2 chạy khi nào và bao nhiêu lần theo mặc định?",
+    "questionEn": "By default, when and how often does EC2 User Data run?",
+    "options": [
+      "Mỗi lần instance khởi động lại (reboot)",
+      "Một lần duy nhất, ở lần boot đầu tiên",
+      "Liên tục theo lịch định kỳ",
+      "Chỉ khi instance bị dừng (stop)"
+    ],
+    "optionsEn": [
+      "Every time the instance reboots",
+      "Only once, on the first boot",
+      "Continuously on a periodic schedule",
+      "Only when the instance is stopped"
+    ],
+    "answer": 1,
+    "explanation": "User Data (script bootstrap) chạy một lần duy nhất ở lần boot đầu tiên với quyền root, dùng để cài phần mềm và cấu hình instance tự động.",
+    "explanationEn": "User Data (a bootstrap script) runs only once on the first boot with root privileges, used to install software and configure the instance automatically."
+  },
+  {
+    "id": "q7",
+    "question": "Một batch job có thể chịu được gián đoạn và cần chi phí thấp nhất. Nên chọn hình thức mua EC2 nào?",
+    "questionEn": "A batch job can tolerate interruptions and needs the lowest cost. Which EC2 purchasing option should you choose?",
+    "options": [
+      "On-Demand",
+      "Reserved Instances",
+      "Spot Instances",
+      "Dedicated Hosts"
+    ],
+    "optionsEn": [
+      "On-Demand",
+      "Reserved Instances",
+      "Spot Instances",
+      "Dedicated Hosts"
+    ],
+    "answer": 2,
+    "explanation": "Spot Instances rẻ nhất (giảm tới ~90%) nhưng có thể bị AWS thu hồi với thông báo trước 2 phút — phù hợp hoàn hảo cho workload chịu được gián đoạn như batch.",
+    "explanationEn": "Spot Instances are the cheapest (up to ~90% off) but can be reclaimed by AWS with a 2-minute notice — a perfect fit for interruption-tolerant workloads like batch jobs."
+  },
+  {
+    "id": "q8",
+    "question": "Một ứng dụng production chạy 24/7 với tải ổn định, dự đoán được trong 3 năm tới. Lựa chọn tiết kiệm chi phí nhất (khi cần cam kết) là gì?",
+    "questionEn": "A production app runs 24/7 with steady, predictable load for the next 3 years. What is the most cost-effective choice when commitment is acceptable?",
+    "options": [
+      "On-Demand",
+      "Spot Instances",
+      "Reserved Instances hoặc Savings Plans 3 năm",
+      "Capacity Reservations"
+    ],
+    "optionsEn": [
+      "On-Demand",
+      "Spot Instances",
+      "3-year Reserved Instances or Savings Plans",
+      "Capacity Reservations"
+    ],
+    "answer": 2,
+    "explanation": "Workload ổn định, dự đoán được và chạy liên tục là ứng viên lý tưởng cho cam kết dài hạn (Reserved Instances hoặc Savings Plans), giúp giảm giá tới ~72%.",
+    "explanationEn": "Steady, predictable, always-on workloads are ideal candidates for a long-term commitment (Reserved Instances or Savings Plans), giving up to ~72% discount."
+  },
+  {
+    "id": "q9",
+    "question": "Điểm khác biệt chính giữa Savings Plans và Reserved Instances là gì?",
+    "questionEn": "What is the main difference between Savings Plans and Reserved Instances?",
+    "options": [
+      "Savings Plans rẻ hơn On-Demand còn Reserved Instances thì không",
+      "Savings Plans cam kết theo mức chi tiêu $/giờ nên linh hoạt hơn về loại instance/region",
+      "Reserved Instances không yêu cầu cam kết thời hạn",
+      "Savings Plans chỉ áp dụng cho Spot Instances"
+    ],
+    "optionsEn": [
+      "Savings Plans are cheaper than On-Demand while Reserved Instances are not",
+      "Savings Plans commit to a $/hour spend, making them more flexible across instance type/region",
+      "Reserved Instances require no term commitment",
+      "Savings Plans apply only to Spot Instances"
+    ],
+    "answer": 1,
+    "explanation": "Savings Plans cam kết theo mức chi tiêu $/giờ trong 1 hoặc 3 năm, cho phép linh hoạt hơn về family, size và region so với Reserved Instances vốn khóa cấu hình cụ thể.",
+    "explanationEn": "Savings Plans commit to a $/hour spend over 1 or 3 years, allowing more flexibility across family, size, and region than Reserved Instances, which lock a specific configuration."
+  },
+  {
+    "id": "q10",
+    "question": "Công ty cần chạy phần mềm có giấy phép tính theo số socket/core vật lý (BYOL) và cần thấy được phần cứng cơ bản. Nên dùng gì?",
+    "questionEn": "A company must run software licensed per physical socket/core (BYOL) and needs visibility into the underlying hardware. What should they use?",
+    "options": [
+      "Dedicated Hosts",
+      "Spot Instances",
+      "On-Demand thông thường",
+      "Capacity Reservations"
+    ],
+    "optionsEn": [
+      "Dedicated Hosts",
+      "Spot Instances",
+      "Regular On-Demand",
+      "Capacity Reservations"
+    ],
+    "answer": 0,
+    "explanation": "Dedicated Hosts cho bạn một server vật lý riêng và cho phép thấy/kiểm soát sockets và cores — cần thiết cho giấy phép BYOL tính theo per-socket/per-core.",
+    "explanationEn": "Dedicated Hosts give you a dedicated physical server and let you see/control sockets and cores — required for per-socket/per-core BYOL licensing."
+  },
+  {
+    "id": "q11",
+    "question": "AMI (Amazon Machine Image) là gì?",
+    "questionEn": "What is an AMI (Amazon Machine Image)?",
+    "options": [
+      "Một tường lửa ảo kiểm soát traffic của instance",
+      "Một template chứa OS và phần mềm để launch instance",
+      "Một loại ổ đĩa mạng bền vững",
+      "Một chính sách IAM gán cho instance"
+    ],
+    "optionsEn": [
+      "A virtual firewall controlling an instance's traffic",
+      "A template containing the OS and software to launch an instance",
+      "A type of durable network disk",
+      "An IAM policy attached to an instance"
+    ],
+    "answer": 1,
+    "explanation": "AMI là ảnh/template chứa hệ điều hành, cấu hình và phần mềm. Khi launch instance bạn phải chọn một AMI. Custom AMI giúp tạo nhiều instance giống hệt nhau nhanh chóng.",
+    "explanationEn": "An AMI is an image/template containing the OS, configuration, and software. You must select an AMI when launching an instance. Custom AMIs let you quickly create many identical instances."
+  },
+  {
+    "id": "q12",
+    "question": "Bạn cần dùng một Custom AMI đã tạo ở region us-east-1 tại region ap-southeast-1. Phải làm gì?",
+    "questionEn": "You need to use a Custom AMI created in us-east-1 in the ap-southeast-1 region. What must you do?",
+    "options": [
+      "AMI tự động có sẵn ở mọi region, không cần làm gì",
+      "Copy AMI sang region ap-southeast-1",
+      "Chuyển instance sang region đó rồi tạo lại AMI thủ công",
+      "Đổi Security Group để cho phép cross-region"
+    ],
+    "optionsEn": [
+      "AMIs are automatically available in every region, nothing to do",
+      "Copy the AMI to the ap-southeast-1 region",
+      "Move the instance to that region and manually recreate the AMI",
+      "Change the Security Group to allow cross-region access"
+    ],
+    "answer": 1,
+    "explanation": "AMI gắn với một region cụ thể. Muốn dùng ở region khác, bạn phải copy AMI sang region đó trước khi launch instance.",
+    "explanationEn": "An AMI is tied to a specific region. To use it elsewhere, you must copy the AMI to the target region before launching an instance."
+  },
+  {
+    "id": "q13",
+    "question": "Bạn không SSH được vào EC2 Linux (kết nối port 22 bị timeout) dù instance đang chạy. Nguyên nhân phổ biến nhất là gì?",
+    "questionEn": "You cannot SSH into an EC2 Linux instance (port 22 connection times out) even though it is running. What is the most common cause?",
+    "options": [
+      "AMI đã bị xóa",
+      "Security Group chưa mở inbound port 22 cho IP của bạn",
+      "User Data chưa chạy xong",
+      "Instance thuộc họ Compute Optimized"
+    ],
+    "optionsEn": [
+      "The AMI was deleted",
+      "The Security Group has not opened inbound port 22 for your IP",
+      "User Data has not finished running",
+      "The instance is in the Compute Optimized family"
+    ],
+    "answer": 1,
+    "explanation": "SSH dùng port 22. Nếu kết nối timeout, nguyên nhân thường gặp nhất là Security Group chưa có rule inbound cho phép port 22 từ IP của bạn.",
+    "explanationEn": "SSH uses port 22. If the connection times out, the most common cause is that the Security Group lacks an inbound rule allowing port 22 from your IP."
+  },
+  {
+    "id": "q14",
+    "question": "Đâu là mô tả ĐÚNG về Spot Instances?",
+    "questionEn": "Which statement correctly describes Spot Instances?",
+    "options": [
+      "Cam kết 1 hoặc 3 năm để đổi lấy giảm giá cao",
+      "Rẻ nhất (tới ~90%) nhưng có thể bị thu hồi với thông báo trước 2 phút",
+      "Đảm bảo không bao giờ bị gián đoạn",
+      "Chỉ dùng được với Dedicated Hosts"
+    ],
+    "optionsEn": [
+      "Require a 1- or 3-year commitment in exchange for a high discount",
+      "Cheapest (up to ~90%) but can be reclaimed with a 2-minute notice",
+      "Guaranteed to never be interrupted",
+      "Can only be used with Dedicated Hosts"
+    ],
+    "answer": 1,
+    "explanation": "Spot Instances tận dụng capacity dư thừa với giá rẻ nhất (tới ~90%), nhưng AWS có thể thu hồi khi cần capacity, chỉ báo trước 2 phút. Spot Fleet giúp kết hợp nhiều loại để đạt dung lượng mục tiêu.",
+    "explanationEn": "Spot Instances use spare capacity at the cheapest price (up to ~90%), but AWS can reclaim them when it needs capacity, with only a 2-minute notice. A Spot Fleet combines pools to reach a target capacity."
+  }
+]

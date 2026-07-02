@@ -1,14 +1,33 @@
 "use client";
 
 import { useState } from "react";
+import { useLang } from "@/context/lang";
+import { type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export interface Question {
   id: string;
   question: string;
+  questionEn?: string;
   options: string[];
+  optionsEn?: string[];
   answer: number;
   explanation?: string;
+  explanationEn?: string;
+}
+
+/** Resolve a bilingual question to plain strings for the active language. */
+export function localizeQuestion(q: Question, lang: Lang) {
+  const en = lang === "en";
+  const options =
+    en && q.optionsEn && q.optionsEn.length === q.options.length ? q.optionsEn : q.options;
+  return {
+    id: q.id,
+    answer: q.answer,
+    question: en ? q.questionEn || q.question : q.question,
+    options,
+    explanation: en ? q.explanationEn || q.explanation : q.explanation,
+  };
 }
 
 interface Props {
@@ -18,16 +37,24 @@ interface Props {
 
 type AnswerMap = Record<string, number | null>;
 
-export default function QuizBlock({ questions, title = "Knowledge Check" }: Props) {
+export default function QuizBlock({ questions, title }: Props) {
+  const { lang, t } = useLang();
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [showResults, setShowResults] = useState(false);
 
-  if (questions.length === 0) return null;
+  if (questions.length === 0) {
+    return (
+      <div className="mt-10 border-t border-zinc-700 pt-8 text-sm text-zinc-500">
+        {t("quiz.empty")}
+      </div>
+    );
+  }
 
-  const currentQ = questions[currentIdx];
+  const localized = questions.map((q) => localizeQuestion(q, lang));
+  const currentQ = localized[currentIdx];
   const totalAnswered = Object.values(answers).filter((v) => v !== null && v !== undefined).length;
-  const correctCount = questions.filter((q) => answers[q.id] === q.answer).length;
+  const correctCount = localized.filter((q) => answers[q.id] === q.answer).length;
 
   function handleSelect(qId: string, optionIdx: number) {
     if (showResults) return;
@@ -45,13 +72,13 @@ export default function QuizBlock({ questions, title = "Knowledge Check" }: Prop
   return (
     <div className="mt-10 border-t border-zinc-700 pt-8">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-semibold text-zinc-100">{title}</h2>
-        <span className="text-xs text-zinc-500">{questions.length} questions</span>
+        <h2 className="text-lg font-semibold text-zinc-100">{title ?? t("quiz.title")}</h2>
+        <span className="text-xs text-zinc-500">{questions.length} {t("quiz.questions")}</span>
       </div>
 
       {/* Question palette */}
       <div className="flex flex-wrap gap-2 mb-6">
-        {questions.map((q, i) => {
+        {localized.map((q, i) => {
           const answered = answers[q.id] !== undefined && answers[q.id] !== null;
           const isCorrect = showResults && answers[q.id] === q.answer;
           const isWrong = showResults && answered && answers[q.id] !== q.answer;
@@ -79,7 +106,7 @@ export default function QuizBlock({ questions, title = "Knowledge Check" }: Prop
         <div className="card space-y-4">
           <div className="flex items-start gap-3">
             <span className="text-xs font-mono text-zinc-500 mt-0.5 shrink-0">
-              {currentIdx + 1}/{questions.length}
+              {currentIdx + 1}/{localized.length}
             </span>
             <p className="text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
           </div>
@@ -117,23 +144,23 @@ export default function QuizBlock({ questions, title = "Knowledge Check" }: Prop
                 disabled={currentIdx === 0}
                 className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40"
               >
-                ← Prev
+                {t("quiz.prev")}
               </button>
               <button
-                onClick={() => setCurrentIdx((i) => Math.min(questions.length - 1, i + 1))}
-                disabled={currentIdx === questions.length - 1}
+                onClick={() => setCurrentIdx((i) => Math.min(localized.length - 1, i + 1))}
+                disabled={currentIdx === localized.length - 1}
                 className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40"
               >
-                Next →
+                {t("quiz.next")}
               </button>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-zinc-500">Answered: {totalAnswered}/{questions.length}</span>
+              <span className="text-xs text-zinc-500">{t("quiz.answered")}: {totalAnswered}/{localized.length}</span>
               <button
                 onClick={() => setShowResults(true)}
                 className="btn-primary text-sm px-4 py-1.5"
               >
-                View Results
+                {t("quiz.viewResults")}
               </button>
             </div>
           </div>
@@ -147,19 +174,19 @@ export default function QuizBlock({ questions, title = "Knowledge Check" }: Prop
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-2xl font-bold text-zinc-100">
-                  {correctCount}/{questions.length}
+                  {correctCount}/{localized.length}
                 </div>
                 <div className="text-sm text-zinc-400 mt-0.5">
-                  {Math.round((correctCount / questions.length) * 100)}% correct
+                  {Math.round((correctCount / localized.length) * 100)}% {t("quiz.correct")}
                 </div>
               </div>
               <button onClick={handleReset} className="btn-secondary text-sm">
-                Retry
+                {t("quiz.retry")}
               </button>
             </div>
           </div>
 
-          {questions.map((q, i) => {
+          {localized.map((q, i) => {
             const userAnswer = answers[q.id];
             const isCorrect = userAnswer === q.answer;
             const skipped = userAnswer === undefined || userAnswer === null;
@@ -194,8 +221,8 @@ export default function QuizBlock({ questions, title = "Knowledge Check" }: Prop
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
                         <span>{opt}</span>
-                        {isCorrectOpt && <span className="ml-auto shrink-0">✓ Correct</span>}
-                        {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">← Your answer</span>}
+                        {isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.correctLabel")}</span>}
+                        {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.yourAnswer")}</span>}
                       </div>
                     );
                   })}
@@ -203,7 +230,7 @@ export default function QuizBlock({ questions, title = "Knowledge Check" }: Prop
 
                 {q.explanation && (
                   <div className="bg-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-400 leading-relaxed">
-                    <span className="text-zinc-500 font-medium">Explanation: </span>
+                    <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
                     {q.explanation}
                   </div>
                 )}

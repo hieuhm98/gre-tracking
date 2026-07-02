@@ -1,1 +1,7 @@
-{"title": "Host & Server", "description": "Mô hình client-server, localhost, địa chỉ IP, web hosting và các loại server."}
+{
+  "group": "ba-po-pm",
+  "title": "Host & Server",
+  "titleEn": "Host & Server",
+  "description": "Mô hình client-server, localhost, địa chỉ IP, web hosting và các loại server.",
+  "descriptionEn": "The client-server model, localhost, IP addresses, web hosting, and the types of servers."
+}

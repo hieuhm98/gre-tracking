@@ -1,0 +1,262 @@
+[
+  {
+    "id": "q1",
+    "question": "Một team muốn chạy các container trên ECS nhưng KHÔNG muốn cung cấp, patch hay scale bất kỳ EC2 instance nào. Họ cần ít công sức vận hành nhất. Giải pháp nào phù hợp NHẤT?",
+    "questionEn": "A team wants to run containers on ECS but does NOT want to provision, patch, or scale any EC2 instances. They need the least operational effort. Which solution is MOST suitable?",
+    "options": [
+      "Dùng ECS với Fargate launch type",
+      "Dùng ECS với EC2 launch type và Auto Scaling Group",
+      "Tự cài Kubernetes trên các EC2 instance",
+      "Dùng EC2 instance với Docker cài thủ công"
+    ],
+    "optionsEn": [
+      "Use ECS with the Fargate launch type",
+      "Use ECS with the EC2 launch type and an Auto Scaling Group",
+      "Self-install Kubernetes on EC2 instances",
+      "Use EC2 instances with Docker installed manually"
+    ],
+    "answer": 0,
+    "explanation": "Fargate là engine serverless: không cần cung cấp hay quản lý EC2, bạn chỉ khai báo CPU/RAM và trả theo task. Đây là lựa chọn ít vận hành nhất cho container trên ECS.",
+    "explanationEn": "Fargate is a serverless engine: no EC2 to provision or manage; you just declare CPU/RAM and pay per task. It gives the least operational overhead for containers on ECS."
+  },
+  {
+    "id": "q2",
+    "question": "Một container chạy trên ECS Fargate cần đọc và ghi object trong một bucket S3. Cách ĐÚNG và an toàn nhất để cấp quyền này là gì?",
+    "questionEn": "A container running on ECS Fargate needs to read and write objects in an S3 bucket. What is the CORRECT and most secure way to grant this permission?",
+    "options": [
+      "Nhúng access key vào biến môi trường của container",
+      "Gán một ECS Task Role có quyền S3 vào Task Definition",
+      "Gán EC2 Instance Role cho instance chạy task",
+      "Dùng root user credentials trong Dockerfile"
+    ],
+    "optionsEn": [
+      "Embed access keys in the container's environment variables",
+      "Attach an ECS Task Role with S3 permissions to the Task Definition",
+      "Attach an EC2 Instance Role to the instance running the task",
+      "Use root user credentials inside the Dockerfile"
+    ],
+    "answer": 1,
+    "explanation": "ECS Task Role cấp quyền cho chính container gọi dịch vụ AWS theo least privilege, hoạt động cả với Fargate. Fargate không có EC2 để gán instance role, và nhúng key là không an toàn.",
+    "explanationEn": "The ECS Task Role grants the container itself permission to call AWS services with least privilege and works with Fargate. Fargate has no EC2 for an instance role, and embedding keys is insecure."
+  },
+  {
+    "id": "q3",
+    "question": "Công ty đã có sẵn kiến thức Kubernetes, dùng Helm và kubectl, và muốn chạy workload có thể di chuyển sang cả on-premises/đám mây khác. Dịch vụ AWS nào phù hợp NHẤT?",
+    "questionEn": "A company already has Kubernetes expertise, uses Helm and kubectl, and wants workloads portable to on-premises/other clouds. Which AWS service is MOST suitable?",
+    "options": [
+      "Amazon ECS với Fargate",
+      "AWS App Runner",
+      "Amazon EKS",
+      "AWS Lambda"
+    ],
+    "optionsEn": [
+      "Amazon ECS with Fargate",
+      "AWS App Runner",
+      "Amazon EKS",
+      "AWS Lambda"
+    ],
+    "answer": 2,
+    "explanation": "EKS là Kubernetes control plane được quản lý, phù hợp khi cần Kubernetes chuẩn open-source, tính di động/multi-cloud và tận dụng tooling k8s có sẵn như Helm/kubectl.",
+    "explanationEn": "EKS is a managed Kubernetes control plane, ideal when you need standard open-source Kubernetes, portability/multi-cloud, and existing k8s tooling like Helm/kubectl."
+  },
+  {
+    "id": "q4",
+    "question": "Nhóm dev cần một nơi private để lưu trữ và phân phối Docker image cho ECS, tích hợp IAM và có quét lỗ hổng. Dịch vụ nào phù hợp?",
+    "questionEn": "A dev team needs a private place to store and distribute Docker images for ECS, integrated with IAM and with vulnerability scanning. Which service fits?",
+    "options": [
+      "Amazon S3",
+      "Amazon ECR",
+      "AWS CodeArtifact",
+      "Amazon EFS"
+    ],
+    "optionsEn": [
+      "Amazon S3",
+      "Amazon ECR",
+      "AWS CodeArtifact",
+      "Amazon EFS"
+    ],
+    "answer": 1,
+    "explanation": "ECR là registry Docker image được quản lý, hỗ trợ registry private/public, tích hợp IAM cho quyền push/pull và có image scanning; tích hợp gốc với ECS/EKS.",
+    "explanationEn": "ECR is a managed Docker image registry supporting private/public registries, IAM-based push/pull permissions, and image scanning; it integrates natively with ECS/EKS."
+  },
+  {
+    "id": "q5",
+    "question": "Một startup muốn deploy nhanh một web API dạng container từ image trong ECR mà không phải cấu hình cluster, ALB hay auto scaling thủ công. Giải pháp ĐƠN GIẢN nhất là gì?",
+    "questionEn": "A startup wants to quickly deploy a containerized web API from an image in ECR without manually configuring a cluster, ALB, or auto scaling. What is the SIMPLEST solution?",
+    "options": [
+      "Tự dựng ECS cluster EC2 và cấu hình ALB",
+      "Triển khai EKS với managed node groups",
+      "AWS App Runner",
+      "Chạy container trên một EC2 instance đơn lẻ"
+    ],
+    "optionsEn": [
+      "Build an ECS EC2 cluster and configure an ALB yourself",
+      "Deploy EKS with managed node groups",
+      "AWS App Runner",
+      "Run the container on a single EC2 instance"
+    ],
+    "answer": 2,
+    "explanation": "App Runner là dịch vụ fully managed, deploy web app/API từ image hoặc source với cấu hình tối thiểu, tự lo auto scaling, load balancing và TLS — đơn giản nhất cho web service.",
+    "explanationEn": "App Runner is a fully managed service that deploys web apps/APIs from an image or source with minimal config, handling auto scaling, load balancing, and TLS — the simplest option for a web service."
+  },
+  {
+    "id": "q6",
+    "question": "Nhiều ECS task (chạy trên cả Fargate và EC2) cần chia sẻ cùng một tập dữ liệu và dữ liệu phải bền vững sau khi task khởi động lại. Lựa chọn lưu trữ nào phù hợp NHẤT?",
+    "questionEn": "Multiple ECS tasks (on both Fargate and EC2) need to share the same dataset and the data must persist across task restarts. Which storage option is MOST suitable?",
+    "options": [
+      "Amazon EBS gắn vào một instance",
+      "Instance store của EC2",
+      "Amazon EFS mount vào các task",
+      "Lưu trong lớp ghi của container"
+    ],
+    "optionsEn": [
+      "Amazon EBS attached to one instance",
+      "EC2 instance store",
+      "Amazon EFS mounted into the tasks",
+      "Store in the container's writable layer"
+    ],
+    "answer": 2,
+    "explanation": "EFS là file system dùng chung, mount được vào nhiều task đồng thời, dữ liệu bền vững và hoạt động với cả Fargate lẫn EC2. EBS chỉ gắn 1 instance/1 AZ và không hợp cho chia sẻ đa task với Fargate.",
+    "explanationEn": "EFS is a shared file system that can mount into many tasks at once, persists data, and works with both Fargate and EC2. EBS attaches to a single instance/AZ and is unsuitable for multi-task sharing with Fargate."
+  },
+  {
+    "id": "q7",
+    "question": "Một ECS Service chạy sau một Application Load Balancer cần tự động tăng số task khi lưu lượng request tăng. Cách cấu hình phù hợp NHẤT là gì?",
+    "questionEn": "An ECS Service behind an Application Load Balancer needs to automatically increase the number of tasks as request traffic rises. What is the MOST suitable configuration?",
+    "options": [
+      "ECS Service Auto Scaling target tracking theo ALBRequestCountPerTarget",
+      "Tăng thủ công desired count mỗi khi có tải",
+      "EC2 Auto Scaling theo số instance, không đổi số task",
+      "Bật EBS auto scaling cho volume"
+    ],
+    "optionsEn": [
+      "ECS Service Auto Scaling target tracking on ALBRequestCountPerTarget",
+      "Manually increase the desired count whenever load rises",
+      "EC2 Auto Scaling by instance count, leaving task count unchanged",
+      "Enable EBS auto scaling for the volume"
+    ],
+    "answer": 0,
+    "explanation": "ECS Service Auto Scaling với Target Tracking có thể dùng chỉ số ALBRequestCountPerTarget (số request/target) để tự động điều chỉnh số task theo lưu lượng.",
+    "explanationEn": "ECS Service Auto Scaling with Target Tracking can use the ALBRequestCountPerTarget metric to automatically adjust the task count based on traffic."
+  },
+  {
+    "id": "q8",
+    "question": "Trên ECS EC2 launch type, đội vận hành muốn giảm số lượng EC2 instance đang dùng để tiết kiệm chi phí bằng cách xếp task dày lên các instance hiện có. Task placement strategy nào phù hợp NHẤT?",
+    "questionEn": "On the ECS EC2 launch type, ops wants to reduce the number of EC2 instances in use to save cost by densely packing tasks onto existing instances. Which task placement strategy is MOST suitable?",
+    "options": [
+      "spread theo Availability Zone",
+      "random",
+      "binpack theo CPU hoặc memory",
+      "spread theo instanceId"
+    ],
+    "optionsEn": [
+      "spread across Availability Zones",
+      "random",
+      "binpack on CPU or memory",
+      "spread across instanceId"
+    ],
+    "answer": 2,
+    "explanation": "binpack xếp task vào các instance còn ít tài nguyên trống nhất trước, dùng ít instance nhất → tiết kiệm chi phí. spread thì rải đều để tăng HA chứ không tối ưu số instance.",
+    "explanationEn": "binpack packs tasks onto instances with the least free resources first, using the fewest instances → saving cost. spread distributes evenly for HA rather than minimizing instance count."
+  },
+  {
+    "id": "q9",
+    "question": "Một workload cần GPU instance type cụ thể và tối ưu chi phí ở mức tải ổn định, đội chấp nhận tự quản việc patch và scale hạ tầng. Launch type nào phù hợp NHẤT?",
+    "questionEn": "A workload needs specific GPU instance types and cost optimization at steady load, and the team accepts managing patching and infrastructure scaling. Which launch type is MOST suitable?",
+    "options": [
+      "Fargate launch type",
+      "EC2 launch type",
+      "App Runner",
+      "Lambda container image"
+    ],
+    "optionsEn": [
+      "Fargate launch type",
+      "EC2 launch type",
+      "App Runner",
+      "Lambda container image"
+    ],
+    "answer": 1,
+    "explanation": "EC2 launch type cho phép kiểm soát chi tiết instance type (bao gồm GPU) và tối ưu chi phí ở tải ổn định, đổi lại bạn phải tự quản instance. Fargate hạn chế ở CPU/RAM và không chọn GPU tùy ý.",
+    "explanationEn": "The EC2 launch type allows fine-grained instance-type control (including GPU) and cost optimization at steady load, in exchange for managing the instances yourself. Fargate is limited to CPU/RAM and does not offer arbitrary GPU selection."
+  },
+  {
+    "id": "q10",
+    "question": "Để chạy nhiều task của cùng một ECS Service trên một EC2 instance và cho ALB định tuyến đúng tới từng task, tính năng nào cần được sử dụng?",
+    "questionEn": "To run multiple tasks of the same ECS Service on one EC2 instance and let the ALB route correctly to each task, which feature must be used?",
+    "options": [
+      "Dynamic port mapping với ALB",
+      "Cổng host cố định cho mọi task",
+      "NLB với địa chỉ IP tĩnh",
+      "Gán một Elastic IP cho mỗi task"
+    ],
+    "optionsEn": [
+      "Dynamic port mapping with the ALB",
+      "A fixed host port for every task",
+      "An NLB with static IP addresses",
+      "Assign an Elastic IP to each task"
+    ],
+    "answer": 0,
+    "explanation": "Dynamic port mapping cho phép nhiều task chạy trên cùng một instance với các cổng host ngẫu nhiên; ALB tự map traffic tới đúng cổng động của từng task. Cổng host cố định sẽ gây xung đột.",
+    "explanationEn": "Dynamic port mapping lets multiple tasks run on the same instance with random host ports; the ALB automatically maps traffic to each task's dynamic port. A fixed host port would cause conflicts."
+  },
+  {
+    "id": "q11",
+    "question": "Trong ECS EC2 launch type, thành phần nào cấp quyền để ECS agent trên host đăng ký cluster và pull image từ ECR?",
+    "questionEn": "In the ECS EC2 launch type, which component grants permission for the ECS agent on the host to register with the cluster and pull images from ECR?",
+    "options": [
+      "ECS Task Role",
+      "EC2 Instance Role (instance profile)",
+      "S3 bucket policy",
+      "Security group của instance"
+    ],
+    "optionsEn": [
+      "ECS Task Role",
+      "EC2 Instance Role (instance profile)",
+      "An S3 bucket policy",
+      "The instance's security group"
+    ],
+    "answer": 1,
+    "explanation": "EC2 Instance Role (qua instance profile) cấp quyền cấp host cho ECS agent: đăng ký cluster, pull image, gửi log. Task Role thì cấp quyền cho chính container gọi dịch vụ AWS.",
+    "explanationEn": "The EC2 Instance Role (via an instance profile) grants host-level permissions to the ECS agent: registering with the cluster, pulling images, sending logs. The Task Role instead grants the container itself permission to call AWS services."
+  },
+  {
+    "id": "q12",
+    "question": "Khẳng định nào về AWS Fargate là ĐÚNG trong bối cảnh kỳ thi?",
+    "questionEn": "Which statement about AWS Fargate is CORRECT in an exam context?",
+    "options": [
+      "Fargate là một orchestrator container thay thế cho ECS",
+      "Fargate là compute engine serverless dùng bên dưới ECS hoặc EKS",
+      "Fargate yêu cầu bạn quản lý các EC2 instance trong cluster",
+      "Fargate chỉ chạy được với EKS, không chạy với ECS"
+    ],
+    "optionsEn": [
+      "Fargate is a container orchestrator that replaces ECS",
+      "Fargate is a serverless compute engine used underneath ECS or EKS",
+      "Fargate requires you to manage EC2 instances in the cluster",
+      "Fargate works only with EKS, not with ECS"
+    ],
+    "answer": 1,
+    "explanation": "Fargate không phải orchestrator; nó là launch type / compute engine serverless chạy bên dưới cả ECS và EKS, giúp không phải quản lý EC2.",
+    "explanationEn": "Fargate is not an orchestrator; it is a serverless launch type / compute engine that runs underneath both ECS and EKS, removing the need to manage EC2."
+  },
+  {
+    "id": "q13",
+    "question": "Một ECS Service cần luôn duy trì đúng 4 task chạy song song, tự thay thế task bị lỗi và đăng ký task vào một target group của ALB. Thành phần nào của ECS đảm nhiệm việc này?",
+    "questionEn": "An ECS Service must always maintain exactly 4 tasks running in parallel, replace failed tasks, and register tasks into an ALB target group. Which ECS component handles this?",
+    "options": [
+      "Task Definition",
+      "ECS Service với desired count = 4",
+      "Một task đơn lẻ chạy standalone",
+      "Cluster capacity provider"
+    ],
+    "optionsEn": [
+      "The Task Definition",
+      "An ECS Service with desired count = 4",
+      "A single standalone task",
+      "The cluster capacity provider"
+    ],
+    "answer": 1,
+    "explanation": "ECS Service duy trì số task mong muốn (desired count), tự thay thế task chết và tích hợp với ALB (target group). Task Definition chỉ là bản thiết kế, không tự duy trì số lượng task.",
+    "explanationEn": "The ECS Service maintains the desired task count, replaces failed tasks, and integrates with the ALB (target group). The Task Definition is only a blueprint and does not maintain running task counts."
+  }
+]

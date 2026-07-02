@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q1",
+    "question": "Bạn cần trỏ root domain 'example.com' (zone apex, không có subdomain) tới một Application Load Balancer. Bạn nên dùng loại bản ghi nào?",
+    "questionEn": "You need to point the root domain 'example.com' (zone apex, no subdomain) to an Application Load Balancer. Which record type should you use?",
+    "options": [
+      "CNAME record trỏ tới DNS name của ALB",
+      "Alias record kiểu A trỏ tới ALB",
+      "A record với IP tĩnh của ALB",
+      "NS record trỏ tới ALB"
+    ],
+    "optionsEn": [
+      "A CNAME record pointing to the ALB's DNS name",
+      "An Alias record of type A pointing to the ALB",
+      "An A record with the ALB's static IP",
+      "An NS record pointing to the ALB"
+    ],
+    "answer": 1,
+    "explanation": "CNAME KHÔNG dùng được ở zone apex (root domain). Alias là phần mở rộng của Route 53, dùng được ở apex, miễn phí, kiểu A/AAAA và trỏ tới tài nguyên AWS như ALB. ALB cũng không có IP tĩnh nên A record IP tĩnh không phù hợp.",
+    "explanationEn": "A CNAME CANNOT be used at the zone apex (root domain). An Alias is a Route 53 extension that works at the apex, is free, is type A/AAAA, and points to AWS resources like an ALB. An ALB also has no static IP, so a static-IP A record is not viable."
+  },
+  {
+    "id": "q2",
+    "question": "Đâu là điểm khác biệt đúng giữa CNAME và Alias record trong Route 53?",
+    "questionEn": "Which is a correct difference between a CNAME and an Alias record in Route 53?",
+    "options": [
+      "CNAME miễn phí còn Alias tính phí mỗi truy vấn",
+      "Alias dùng được ở zone apex và miễn phí, còn CNAME thì không dùng được ở apex",
+      "CNAME chỉ trỏ tới tài nguyên AWS, Alias trỏ tới hostname bất kỳ",
+      "Cả hai đều cho phép bạn tự đặt TTL tùy ý"
+    ],
+    "optionsEn": [
+      "CNAME is free while Alias is billed per query",
+      "Alias works at the zone apex and is free, while CNAME cannot be used at the apex",
+      "CNAME only points to AWS resources, Alias points to any hostname",
+      "Both let you set a custom TTL freely"
+    ],
+    "answer": 1,
+    "explanation": "Alias hoạt động ở zone apex và miễn phí; CNAME không dùng được ở apex và có tính phí truy vấn. Alias chỉ trỏ tới tài nguyên AWS và KHÔNG cho đặt TTL (AWS tự quản lý), trong khi CNAME trỏ tới hostname bất kỳ và bạn tự đặt TTL.",
+    "explanationEn": "Alias works at the zone apex and is free; CNAME cannot be used at the apex and is billed per query. Alias points only to AWS resources and does NOT allow a custom TTL (AWS manages it), whereas CNAME points to any hostname and you set the TTL."
+  },
+  {
+    "id": "q3",
+    "question": "Một công ty muốn phát hành phiên bản mới của ứng dụng, ban đầu chỉ gửi 10% traffic tới môi trường mới và 90% tới môi trường cũ để canary test. Routing policy nào phù hợp nhất?",
+    "questionEn": "A company wants to release a new version of an app, initially sending only 10% of traffic to the new environment and 90% to the old one for a canary test. Which routing policy fits best?",
+    "options": [
+      "Latency-based routing",
+      "Geolocation routing",
+      "Weighted routing",
+      "Failover routing"
+    ],
+    "optionsEn": [
+      "Latency-based routing",
+      "Geolocation routing",
+      "Weighted routing",
+      "Failover routing"
+    ],
+    "answer": 2,
+    "explanation": "Weighted routing chia traffic theo trọng số giữa nhiều tài nguyên (vd 90/10), rất phù hợp cho canary hay A/B testing. Bạn có thể tăng dần weight của môi trường mới khi tự tin hơn.",
+    "explanationEn": "Weighted routing splits traffic by weight across resources (e.g. 90/10), ideal for canary or A/B testing. You can gradually raise the new environment's weight as confidence grows."
+  },
+  {
+    "id": "q4",
+    "question": "Ứng dụng của bạn được triển khai ở us-east-1 và ap-southeast-1. Bạn muốn mỗi người dùng được phục vụ từ Region cho tốc độ phản hồi nhanh nhất. Routing policy nào nên dùng?",
+    "questionEn": "Your application is deployed in us-east-1 and ap-southeast-1. You want each user served from the Region that gives the fastest response. Which routing policy should you use?",
+    "options": [
+      "Geolocation routing",
+      "Latency-based routing",
+      "Simple routing",
+      "Multi-Value Answer routing"
+    ],
+    "optionsEn": [
+      "Geolocation routing",
+      "Latency-based routing",
+      "Simple routing",
+      "Multi-Value Answer routing"
+    ],
+    "answer": 1,
+    "explanation": "Latency-based routing định tuyến tới Region có ĐỘ TRỄ thấp nhất so với người dùng, giúp phản hồi nhanh nhất. Đây không nhất thiết là Region gần nhất về địa lý — điểm khác biệt hay bị nhầm với Geolocation.",
+    "explanationEn": "Latency-based routing routes to the Region with the lowest LATENCY relative to the user, giving the fastest response. This isn't necessarily the geographically nearest Region — a distinction often confused with Geolocation."
+  },
+  {
+    "id": "q5",
+    "question": "Một dịch vụ chỉ được phép phục vụ người dùng ở Việt Nam do quy định pháp lý; người dùng ngoài Việt Nam phải nhận nội dung mặc định. Routing policy nào phù hợp nhất?",
+    "questionEn": "A service may serve only users in Vietnam due to legal regulations; users outside Vietnam must receive default content. Which routing policy fits best?",
+    "options": [
+      "Latency-based routing",
+      "Weighted routing",
+      "Geolocation routing với một bản ghi default",
+      "Failover routing"
+    ],
+    "optionsEn": [
+      "Latency-based routing",
+      "Weighted routing",
+      "Geolocation routing with a default record",
+      "Failover routing"
+    ],
+    "answer": 2,
+    "explanation": "Geolocation routing định tuyến theo VỊ TRÍ THỰC TẾ của người dùng (lục địa/quốc gia/bang), phù hợp cho tuân thủ pháp lý và bản địa hóa. Nên tạo bản ghi default để xử lý các vị trí không khớp, ở đây là người dùng ngoài Việt Nam.",
+    "explanationEn": "Geolocation routing routes by the user's PHYSICAL LOCATION (continent/country/state), suitable for legal compliance and localization. You should create a default record to handle non-matching locations — here, users outside Vietnam."
+  },
+  {
+    "id": "q6",
+    "question": "Bạn thiết lập Failover routing với một server primary và một server secondary dự phòng. Điều kiện BẮT BUỘC để failover hoạt động là gì?",
+    "questionEn": "You set up Failover routing with a primary server and a standby secondary. What is REQUIRED for failover to work?",
+    "options": [
+      "Phải bật Route 53 Traffic Flow",
+      "Primary và secondary phải ở cùng một Region",
+      "Phải có health check gắn trên bản ghi primary",
+      "TTL của primary phải bằng 0"
+    ],
+    "optionsEn": [
+      "Route 53 Traffic Flow must be enabled",
+      "Primary and secondary must be in the same Region",
+      "A health check must be attached to the primary record",
+      "The primary's TTL must be 0"
+    ],
+    "answer": 2,
+    "explanation": "Failover routing BẮT BUỘC có health check gắn trên primary. Route 53 dựa vào health check này để biết primary đã unhealthy và tự chuyển traffic sang secondary. Không cần Traffic Flow, cùng Region hay TTL=0.",
+    "explanationEn": "Failover routing REQUIRES a health check attached to the primary. Route 53 relies on it to detect that the primary is unhealthy and shift traffic to the secondary. Traffic Flow, same Region, or TTL=0 are not required."
+  },
+  {
+    "id": "q7",
+    "question": "Bạn muốn Route 53 trả về tối đa 8 bản ghi khỏe mạnh cho mỗi truy vấn và để client tự chọn, có tích hợp health check. Đây là routing policy nào?",
+    "questionEn": "You want Route 53 to return up to 8 healthy records per query and let the client pick, integrated with health checks. Which routing policy is this?",
+    "options": [
+      "Simple routing với nhiều giá trị",
+      "Multi-Value Answer routing",
+      "Weighted routing",
+      "Geoproximity routing"
+    ],
+    "optionsEn": [
+      "Simple routing with multiple values",
+      "Multi-Value Answer routing",
+      "Weighted routing",
+      "Geoproximity routing"
+    ],
+    "answer": 1,
+    "explanation": "Multi-Value Answer trả về tối đa 8 bản ghi HEALTHY (nhờ health check), client tự chọn — một dạng cân bằng tải phía client. Simple routing với nhiều giá trị thì KHÔNG hỗ trợ health check nên có thể trả về bản ghi hỏng.",
+    "explanationEn": "Multi-Value Answer returns up to 8 HEALTHY records (thanks to health checks) and the client picks — a form of client-side load balancing. Simple routing with multiple values does NOT support health checks, so it may return broken records."
+  },
+  {
+    "id": "q8",
+    "question": "Một kiến trúc sư đề xuất dùng Multi-Value Answer routing để THAY THẾ hoàn toàn cho một Elastic Load Balancer. Nhận định này đúng hay sai và vì sao?",
+    "questionEn": "An architect proposes using Multi-Value Answer routing to FULLY REPLACE an Elastic Load Balancer. Is this correct, and why?",
+    "options": [
+      "Đúng, vì nó phân phối traffic đều như một load balancer L7",
+      "Sai, Multi-Value là cân bằng tải phía client cơ bản, không thay thế được ELB",
+      "Đúng, vì nó rẻ hơn ELB và có cùng tính năng",
+      "Sai, vì Multi-Value không hỗ trợ health check"
+    ],
+    "optionsEn": [
+      "Correct, because it distributes traffic evenly like an L7 load balancer",
+      "Incorrect, Multi-Value is basic client-side load balancing and cannot replace an ELB",
+      "Correct, because it is cheaper than ELB with the same features",
+      "Incorrect, because Multi-Value does not support health checks"
+    ],
+    "answer": 1,
+    "explanation": "Multi-Value Answer chỉ trả về danh sách bản ghi healthy để client tự chọn — nó KHÔNG có các tính năng của ELB như termination TLS, phân phối theo thuật toán, sticky session, health check tầng ứng dụng phức tạp. Nó có hỗ trợ health check, nhưng vẫn không thay thế được ELB.",
+    "explanationEn": "Multi-Value Answer only returns a list of healthy records for the client to choose from — it lacks ELB features like TLS termination, algorithmic distribution, sticky sessions, and rich application-layer health checks. It does support health checks, but still cannot replace an ELB."
+  },
+  {
+    "id": "q9",
+    "question": "Bạn cần Route 53 giám sát sức khỏe của một database chạy trong private subnet, không có endpoint public. Cách nào phù hợp?",
+    "questionEn": "You need Route 53 to monitor the health of a database running in a private subnet with no public endpoint. Which approach fits?",
+    "options": [
+      "Endpoint health check trỏ tới IP private của database",
+      "Calculated health check kết hợp nhiều database",
+      "CloudWatch Alarm health check dựa trên metric của database",
+      "Không thể giám sát tài nguyên private bằng Route 53"
+    ],
+    "optionsEn": [
+      "An Endpoint health check pointing to the database's private IP",
+      "A Calculated health check combining multiple databases",
+      "A CloudWatch Alarm health check based on the database's metric",
+      "You cannot monitor private resources with Route 53"
+    ],
+    "answer": 2,
+    "explanation": "Endpoint health check yêu cầu endpoint truy cập được từ Internet công cộng nên không dùng cho tài nguyên private. Giải pháp là tạo CloudWatch metric/alarm cho tài nguyên private, rồi dùng CloudWatch Alarm health check để Route 53 theo dõi trạng thái alarm đó.",
+    "explanationEn": "An Endpoint health check requires a publicly reachable endpoint, so it can't be used for private resources. The solution is to create a CloudWatch metric/alarm for the private resource, then use a CloudWatch Alarm health check so Route 53 tracks that alarm's state."
+  },
+  {
+    "id": "q10",
+    "question": "Route 53 endpoint health check hoạt động như thế nào?",
+    "questionEn": "How does a Route 53 endpoint health check work?",
+    "options": [
+      "Một checker duy nhất trong Region chính gửi ping mỗi giờ",
+      "Khoảng 15 health checker toàn cầu gửi request tới public endpoint và đánh giá healthy/unhealthy theo ngưỡng",
+      "Nó đọc log của ứng dụng để xác định trạng thái",
+      "Nó chỉ kiểm tra khi có truy vấn DNS đến"
+    ],
+    "optionsEn": [
+      "A single checker in the main Region pings every hour",
+      "About 15 global health checkers send requests to the public endpoint and evaluate healthy/unhealthy against a threshold",
+      "It reads the application's logs to determine status",
+      "It only checks when a DNS query arrives"
+    ],
+    "answer": 1,
+    "explanation": "Endpoint health check dùng khoảng 15 health checker phân bố toàn cầu, gửi request HTTP/HTTPS/TCP tới public endpoint. Endpoint được coi healthy/unhealthy dựa trên ngưỡng số lần thành công/thất bại (healthy/unhealthy threshold).",
+    "explanationEn": "An endpoint health check uses about 15 globally distributed health checkers sending HTTP/HTTPS/TCP requests to the public endpoint. The endpoint is deemed healthy/unhealthy based on success/failure thresholds (healthy/unhealthy threshold)."
+  },
+  {
+    "id": "q11",
+    "question": "Bạn muốn tạo một health check tổng hợp: hệ thống được coi là healthy khi ít nhất 2 trong 3 thành phần con còn hoạt động. Loại health check nào phù hợp?",
+    "questionEn": "You want an aggregate health check: the system is healthy when at least 2 of 3 child components are up. Which health check type fits?",
+    "options": [
+      "Endpoint health check",
+      "CloudWatch Alarm health check",
+      "Calculated health check",
+      "Latency health check"
+    ],
+    "optionsEn": [
+      "Endpoint health check",
+      "CloudWatch Alarm health check",
+      "Calculated health check",
+      "Latency health check"
+    ],
+    "answer": 2,
+    "explanation": "Calculated health check kết hợp nhiều child health check bằng logic (AND/OR/NOT hoặc ngưỡng số lượng child healthy). Bạn có thể cấu hình 'healthy khi >= 2 trong 3 child healthy'. Không có loại 'Latency health check'.",
+    "explanationEn": "A Calculated health check combines multiple child health checks using logic (AND/OR/NOT, or a threshold count of healthy children). You can configure 'healthy when >= 2 of 3 children are healthy'. There is no 'Latency health check' type."
+  },
+  {
+    "id": "q12",
+    "question": "Bạn cần một hosted zone chỉ phân giải tên miền nội bộ như 'db.internal.corp' cho các EC2 bên trong VPC, không lộ ra Internet. Bạn nên dùng gì?",
+    "questionEn": "You need a hosted zone that resolves internal names like 'db.internal.corp' only for EC2 instances inside a VPC, not exposed to the Internet. What should you use?",
+    "options": [
+      "Public Hosted Zone",
+      "Private Hosted Zone liên kết với VPC",
+      "Một CNAME public trỏ vào IP private",
+      "Route 53 Resolver Outbound endpoint"
+    ],
+    "optionsEn": [
+      "A Public Hosted Zone",
+      "A Private Hosted Zone associated with the VPC",
+      "A public CNAME pointing to the private IP",
+      "A Route 53 Resolver Outbound endpoint"
+    ],
+    "answer": 1,
+    "explanation": "Private Hosted Zone chỉ trả lời truy vấn từ bên trong (các) VPC được liên kết, hoàn hảo cho tên miền nội bộ không lộ ra Internet. Public Hosted Zone sẽ trả lời cho toàn Internet, không phù hợp yêu cầu bảo mật nội bộ.",
+    "explanationEn": "A Private Hosted Zone answers queries only from within the associated VPC(s), perfect for internal names not exposed to the Internet. A Public Hosted Zone would answer the entire Internet, which does not meet the internal-privacy requirement."
+  },
+  {
+    "id": "q13",
+    "question": "Trước khi migration lớn, bạn muốn thay đổi DNS có hiệu lực nhanh trên toàn cầu. Bạn nên làm gì với TTL của bản ghi?",
+    "questionEn": "Before a major migration, you want DNS changes to take effect quickly worldwide. What should you do with the record's TTL?",
+    "options": [
+      "Tăng TTL lên cao (vd 48 giờ) để ổn định",
+      "Hạ TTL xuống thấp (vd 60 giây) trước khi thay đổi",
+      "TTL không ảnh hưởng tới tốc độ lan truyền thay đổi",
+      "Xóa TTL để bản ghi không bao giờ cache"
+    ],
+    "optionsEn": [
+      "Raise the TTL high (e.g. 48 hours) for stability",
+      "Lower the TTL (e.g. 60 seconds) before making the change",
+      "TTL does not affect how fast changes propagate",
+      "Remove the TTL so the record is never cached"
+    ],
+    "answer": 1,
+    "explanation": "TTL là thời gian bản ghi được cache ở resolver/client. Hạ TTL xuống thấp trước khi migration khiến cache hết hạn nhanh, nên thay đổi sau đó lan truyền nhanh. Sau khi ổn định, nên nâng TTL lên lại để giảm truy vấn và chi phí.",
+    "explanationEn": "TTL is how long a record is cached on resolvers/clients. Lowering the TTL before migration makes caches expire quickly, so the subsequent change propagates fast. After stabilizing, raise the TTL again to reduce queries and cost."
+  },
+  {
+    "id": "q14",
+    "question": "Bạn muốn dịch chuyển thêm traffic sang Region us-east-1 vượt quá vùng địa lý mặc định của nó, bằng cách 'mở rộng' vùng phục vụ của Region đó. Routing policy nào cho phép điều này?",
+    "questionEn": "You want to shift more traffic toward the us-east-1 Region beyond its default geographic area by 'expanding' that Region's serving area. Which routing policy allows this?",
+    "options": [
+      "Geolocation routing",
+      "Geoproximity routing với bias",
+      "Latency-based routing",
+      "Weighted routing"
+    ],
+    "optionsEn": [
+      "Geolocation routing",
+      "Geoproximity routing with bias",
+      "Latency-based routing",
+      "Weighted routing"
+    ],
+    "answer": 1,
+    "explanation": "Geoproximity routing định tuyến theo khoảng cách địa lý giữa user và tài nguyên, và cho phép đặt BIAS để mở rộng/thu hẹp vùng phục vụ của một tài nguyên, dịch chuyển traffic có chủ đích. Geolocation chỉ định tuyến theo vị trí user, không có bias, và cần bật Route 53 Traffic Flow cho Geoproximity.",
+    "explanationEn": "Geoproximity routing routes by geographic distance between user and resource and lets you set a BIAS to expand/shrink a resource's serving area, deliberately shifting traffic. Geolocation only routes by user location with no bias, and Geoproximity requires Route 53 Traffic Flow."
+  },
+  {
+    "id": "q15",
+    "question": "Đội vận hành cần chọn dịch vụ DNS có mức cam kết availability cao nhất trong AWS. Route 53 có SLA availability bao nhiêu?",
+    "questionEn": "The operations team needs a DNS service with the highest availability commitment in AWS. What availability SLA does Route 53 offer?",
+    "options": [
+      "99.9%",
+      "99.99%",
+      "100%",
+      "Route 53 không cung cấp SLA"
+    ],
+    "optionsEn": [
+      "99.9%",
+      "99.99%",
+      "100%",
+      "Route 53 offers no SLA"
+    ],
+    "answer": 2,
+    "explanation": "Route 53 là dịch vụ AWS duy nhất cam kết SLA availability 100%. Đây là chi tiết hay được hỏi trong đề SAA-C03 để phân biệt Route 53 với các dịch vụ khác.",
+    "explanationEn": "Route 53 is the only AWS service that commits to a 100% availability SLA. This detail is frequently tested in SAA-C03 to distinguish Route 53 from other services."
+  }
+]

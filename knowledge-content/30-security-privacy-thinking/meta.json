@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "Tư Duy Security & Privacy",
-  "description": "Cách BA nhìn requirement qua lens bảo mật: phát hiện điểm rủi ro, phân loại data nhạy cảm, tư duy privacy-by-design và đặt câu hỏi đúng với dev."
+  "titleEn": "Security & Privacy Thinking",
+  "description": "Cách BA nhìn requirement qua lens bảo mật: phát hiện điểm rủi ro, phân loại data nhạy cảm, tư duy privacy-by-design và đặt câu hỏi đúng với dev.",
+  "descriptionEn": "How a BA reads requirements through a security lens: spotting risk points, classifying sensitive data, thinking privacy-by-design, and asking developers the right questions."
 }

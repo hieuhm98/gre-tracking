@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "AWS Serverless App – Cognito, Step Functions & SAM",
+  "titleEn": "AWS Serverless App – Cognito, Step Functions & SAM",
+  "description": "Xây dựng ứng dụng serverless: Cognito cho đăng nhập/danh tính, Step Functions điều phối workflow, SAM triển khai và các kiến trúc tham chiếu phổ biến.",
+  "descriptionEn": "Building serverless apps: Cognito for sign-in/identity, Step Functions for workflow orchestration, SAM for deployment, and common reference architectures."
+}

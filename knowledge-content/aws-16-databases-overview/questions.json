@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q1",
+    "question": "Một mạng xã hội cần lưu trữ và truy vấn các mối quan hệ phức tạp giữa người dùng (bạn bè của bạn bè, gợi ý kết nối). Database nào PHÙ HỢP NHẤT?",
+    "questionEn": "A social network needs to store and query complex relationships between users (friends of friends, connection suggestions). Which database is MOST suitable?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon Neptune",
+      "Amazon RDS for PostgreSQL",
+      "Amazon Redshift"
+    ],
+    "optionsEn": [
+      "Amazon DynamoDB",
+      "Amazon Neptune",
+      "Amazon RDS for PostgreSQL",
+      "Amazon Redshift"
+    ],
+    "answer": 1,
+    "explanation": "Neptune là graph database, tối ưu cho việc duyệt các quan hệ phức tạp như social graph và recommendation, hiệu quả hơn nhiều so với JOIN trên DB quan hệ.",
+    "explanationEn": "Neptune is a graph database optimized for traversing complex relationships such as social graphs and recommendations, far more efficient than JOINs on a relational DB."
+  },
+  {
+    "id": "q2",
+    "question": "Một ứng dụng di động cần database serverless với độ trễ đọc/ghi ở mức mili-giây đơn con số và scale tự động cho hàng triệu người dùng. Chọn database nào?",
+    "questionEn": "A mobile application needs a serverless database with single-digit millisecond read/write latency that auto-scales for millions of users. Which database should be chosen?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon Aurora",
+      "Amazon RDS for MySQL",
+      "Amazon Redshift"
+    ],
+    "optionsEn": [
+      "Amazon DynamoDB",
+      "Amazon Aurora",
+      "Amazon RDS for MySQL",
+      "Amazon Redshift"
+    ],
+    "answer": 0,
+    "explanation": "DynamoDB là NoSQL key-value fully serverless, cho độ trễ single-digit ms và scale ngang gần như vô hạn — lý tưởng cho app di động traffic lớn.",
+    "explanationEn": "DynamoDB is a fully serverless NoSQL key-value store delivering single-digit-ms latency and near-infinite horizontal scale — ideal for high-traffic mobile apps."
+  },
+  {
+    "id": "q3",
+    "question": "Một công ty cần chạy các truy vấn phân tích tổng hợp phức tạp (OLAP) trên hàng petabyte dữ liệu lịch sử cho báo cáo BI. Database nào phù hợp nhất?",
+    "questionEn": "A company needs to run complex aggregate analytical (OLAP) queries over petabytes of historical data for BI reporting. Which database fits best?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon RDS for Oracle",
+      "Amazon Redshift",
+      "Amazon ElastiCache"
+    ],
+    "optionsEn": [
+      "Amazon DynamoDB",
+      "Amazon RDS for Oracle",
+      "Amazon Redshift",
+      "Amazon ElastiCache"
+    ],
+    "answer": 2,
+    "explanation": "Redshift là data warehouse columnar cho OLAP quy mô petabyte, tối ưu cho truy vấn phân tích tổng hợp và BI — không dùng RDS (OLTP) cho khối lượng này.",
+    "explanationEn": "Redshift is a columnar data warehouse for petabyte-scale OLAP, optimized for aggregate analytical and BI queries — RDS (OLTP) is not appropriate at this volume."
+  },
+  {
+    "id": "q4",
+    "question": "Một tổ chức tài chính cần một sổ cái bất biến, có thể xác minh bằng mật mã, ghi lại toàn bộ lịch sử thay đổi giao dịch không thể chỉnh sửa. Chọn database nào?",
+    "questionEn": "A financial institution needs an immutable, cryptographically verifiable ledger that records a complete, unalterable history of transaction changes. Which database should be chosen?",
+    "options": [
+      "Amazon Aurora",
+      "Amazon Timestream",
+      "Amazon DynamoDB",
+      "Amazon QLDB"
+    ],
+    "optionsEn": [
+      "Amazon Aurora",
+      "Amazon Timestream",
+      "Amazon DynamoDB",
+      "Amazon QLDB"
+    ],
+    "answer": 3,
+    "explanation": "QLDB (Quantum Ledger Database) cung cấp sổ cái bất biến, append-only và có thể xác minh bằng mật mã — đúng cho audit trail tài chính.",
+    "explanationEn": "QLDB (Quantum Ledger Database) provides an immutable, append-only, cryptographically verifiable ledger — exactly right for a financial audit trail."
+  },
+  {
+    "id": "q5",
+    "question": "Một nền tảng IoT thu thập hàng triệu điểm dữ liệu cảm biến theo thời gian và cần truy vấn theo khoảng thời gian một cách hiệu quả. Database nào phù hợp nhất?",
+    "questionEn": "An IoT platform ingests millions of time-ordered sensor data points and needs efficient range-by-time queries. Which database is MOST suitable?",
+    "options": [
+      "Amazon Timestream",
+      "Amazon Neptune",
+      "Amazon RDS for MySQL",
+      "Amazon DocumentDB"
+    ],
+    "optionsEn": [
+      "Amazon Timestream",
+      "Amazon Neptune",
+      "Amazon RDS for MySQL",
+      "Amazon DocumentDB"
+    ],
+    "answer": 0,
+    "explanation": "Timestream là time-series database chuyên dụng cho dữ liệu IoT/metrics theo thời gian, tối ưu ghi và truy vấn theo khoảng thời gian.",
+    "explanationEn": "Timestream is a purpose-built time-series database for time-ordered IoT/metrics data, optimized for ingestion and range-by-time queries."
+  },
+  {
+    "id": "q6",
+    "question": "Một nhóm đang di chuyển một ứng dụng sử dụng MongoDB lên AWS và muốn một dịch vụ được quản lý tương thích với MongoDB. Chọn dịch vụ nào?",
+    "questionEn": "A team is migrating a MongoDB-based application to AWS and wants a managed service compatible with MongoDB. Which service should be chosen?",
+    "options": [
+      "Amazon Keyspaces",
+      "Amazon DynamoDB",
+      "Amazon DocumentDB",
+      "Amazon Aurora"
+    ],
+    "optionsEn": [
+      "Amazon Keyspaces",
+      "Amazon DynamoDB",
+      "Amazon DocumentDB",
+      "Amazon Aurora"
+    ],
+    "answer": 2,
+    "explanation": "DocumentDB là database document được quản lý, tương thích với MongoDB — cho phép di chuyển workload MongoDB mà giữ nguyên API.",
+    "explanationEn": "DocumentDB is a managed document database that is MongoDB-compatible — allowing MongoDB workloads to migrate while keeping the same API."
+  },
+  {
+    "id": "q7",
+    "question": "Một ứng dụng web nặng về đọc muốn giảm tải cho RDS bằng cách cache kết quả truy vấn và lưu session trong bộ nhớ (in-memory). Chọn dịch vụ nào?",
+    "questionEn": "A read-heavy web application wants to offload RDS by caching query results and storing sessions in memory. Which service should be chosen?",
+    "options": [
+      "Amazon MemoryDB for Redis",
+      "Amazon ElastiCache",
+      "Amazon DynamoDB Accelerator (DAX)",
+      "Amazon Redshift"
+    ],
+    "optionsEn": [
+      "Amazon MemoryDB for Redis",
+      "Amazon ElastiCache",
+      "Amazon DynamoDB Accelerator (DAX)",
+      "Amazon Redshift"
+    ],
+    "answer": 1,
+    "explanation": "ElastiCache là cache in-memory (Redis/Memcached) dùng để giảm tải DB, cache truy vấn và lưu session — đúng use case caching bên cạnh RDS.",
+    "explanationEn": "ElastiCache is an in-memory cache (Redis/Memcached) used to offload a DB, cache queries, and store sessions — the classic caching use case alongside RDS."
+  },
+  {
+    "id": "q8",
+    "question": "Một dịch vụ cần tốc độ Redis (độ trễ đọc micro-giây) NHƯNG dữ liệu phải bền vững để dùng làm primary database, không chỉ là cache. Chọn dịch vụ nào?",
+    "questionEn": "A service needs Redis-like speed (microsecond read latency) BUT the data must be durable so it can serve as a primary database, not just a cache. Which service should be chosen?",
+    "options": [
+      "Amazon ElastiCache for Redis",
+      "Amazon DynamoDB",
+      "Amazon MemoryDB for Redis",
+      "Amazon RDS for PostgreSQL"
+    ],
+    "optionsEn": [
+      "Amazon ElastiCache for Redis",
+      "Amazon DynamoDB",
+      "Amazon MemoryDB for Redis",
+      "Amazon RDS for PostgreSQL"
+    ],
+    "answer": 2,
+    "explanation": "MemoryDB for Redis là in-memory tương thích Redis nhưng bền vững qua Multi-AZ transaction log, có thể làm primary database — khác với ElastiCache (chỉ cache).",
+    "explanationEn": "MemoryDB for Redis is Redis-compatible in-memory but durable via a Multi-AZ transaction log, so it can act as a primary database — unlike ElastiCache (cache only)."
+  },
+  {
+    "id": "q9",
+    "question": "Một công ty đang chạy workload Apache Cassandra tại chỗ và muốn một dịch vụ serverless tương thích Cassandra (CQL) trên AWS. Chọn dịch vụ nào?",
+    "questionEn": "A company runs an on-premises Apache Cassandra workload and wants a serverless Cassandra-compatible (CQL) service on AWS. Which service should be chosen?",
+    "options": [
+      "Amazon Keyspaces",
+      "Amazon DocumentDB",
+      "Amazon Neptune",
+      "Amazon DynamoDB"
+    ],
+    "optionsEn": [
+      "Amazon Keyspaces",
+      "Amazon DocumentDB",
+      "Amazon Neptune",
+      "Amazon DynamoDB"
+    ],
+    "answer": 0,
+    "explanation": "Keyspaces (for Apache Cassandra) là dịch vụ wide-column serverless tương thích Cassandra/CQL — đúng cho di chuyển workload Cassandra.",
+    "explanationEn": "Keyspaces (for Apache Cassandra) is a serverless wide-column service compatible with Cassandra/CQL — the right choice for migrating a Cassandra workload."
+  },
+  {
+    "id": "q10",
+    "question": "Một hệ thống đặt hàng cần transaction ACID, JOIN phức tạp và schema quan hệ cố định, với engine PostgreSQL được quản lý. Chọn database nào?",
+    "questionEn": "An order-processing system needs ACID transactions, complex JOINs, and a fixed relational schema, using a managed PostgreSQL engine. Which database should be chosen?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon Timestream",
+      "Amazon RDS for PostgreSQL",
+      "Amazon ElastiCache"
+    ],
+    "optionsEn": [
+      "Amazon DynamoDB",
+      "Amazon Timestream",
+      "Amazon RDS for PostgreSQL",
+      "Amazon ElastiCache"
+    ],
+    "answer": 2,
+    "explanation": "RDS for PostgreSQL là database quan hệ được quản lý, hỗ trợ ACID, JOIN và schema cố định — đúng cho workload OLTP truyền thống.",
+    "explanationEn": "RDS for PostgreSQL is a managed relational database supporting ACID, JOINs, and a fixed schema — the right fit for a traditional OLTP workload."
+  },
+  {
+    "id": "q11",
+    "question": "Một startup cần database quan hệ tương thích MySQL với hiệu năng cao gấp nhiều lần MySQL thường, storage tự mở rộng và HA cao qua nhiều AZ. Chọn database nào?",
+    "questionEn": "A startup needs a MySQL-compatible relational database with several times the performance of standard MySQL, auto-scaling storage, and high availability across multiple AZs. Which database should be chosen?",
+    "options": [
+      "Amazon Redshift",
+      "Amazon Aurora",
+      "Amazon DynamoDB",
+      "Amazon DocumentDB"
+    ],
+    "optionsEn": [
+      "Amazon Redshift",
+      "Amazon Aurora",
+      "Amazon DynamoDB",
+      "Amazon DocumentDB"
+    ],
+    "answer": 1,
+    "explanation": "Aurora là engine quan hệ tương thích MySQL/PostgreSQL do AWS xây dựng, hiệu năng cao hơn, storage tự mở rộng và 6 bản sao trên 3 AZ.",
+    "explanationEn": "Aurora is an AWS-built MySQL/PostgreSQL-compatible relational engine with higher performance, auto-scaling storage, and 6 copies across 3 AZs."
+  },
+  {
+    "id": "q12",
+    "question": "Trong một database RDS, nhóm muốn giảm tải truy vấn báo cáo read-heavy khỏi instance chính mà KHÔNG ảnh hưởng ghi. Nên dùng tính năng nào?",
+    "questionEn": "In an RDS database, the team wants to offload read-heavy reporting queries from the primary instance WITHOUT affecting writes. Which feature should be used?",
+    "options": [
+      "Multi-AZ deployment",
+      "Read Replicas",
+      "Automated backups",
+      "Storage auto scaling"
+    ],
+    "optionsEn": [
+      "Multi-AZ deployment",
+      "Read Replicas",
+      "Automated backups",
+      "Storage auto scaling"
+    ],
+    "answer": 1,
+    "explanation": "Read Replicas dùng để scale đọc và offload báo cáo. Multi-AZ chỉ dùng cho HA/failover, không phục vụ scale đọc.",
+    "explanationEn": "Read Replicas are used to scale reads and offload reporting. Multi-AZ is for HA/failover only and does not serve read scaling."
+  },
+  {
+    "id": "q13",
+    "question": "Một engine gợi ý sản phẩm và hệ thống phát hiện gian lận cần phân tích các mối quan hệ nhiều bậc giữa các thực thể trong thời gian thực. Database nào phù hợp nhất?",
+    "questionEn": "A product recommendation engine and fraud-detection system need to analyze multi-hop relationships between entities in real time. Which database is MOST suitable?",
+    "options": [
+      "Amazon Redshift",
+      "Amazon RDS for MySQL",
+      "Amazon Neptune",
+      "Amazon Timestream"
+    ],
+    "optionsEn": [
+      "Amazon Redshift",
+      "Amazon RDS for MySQL",
+      "Amazon Neptune",
+      "Amazon Timestream"
+    ],
+    "answer": 2,
+    "explanation": "Neptune (graph) tối ưu cho duyệt quan hệ nhiều bậc — đúng cho recommendation và fraud detection, nơi các quan hệ là trung tâm.",
+    "explanationEn": "Neptune (graph) is optimized for multi-hop relationship traversal — ideal for recommendation and fraud detection where relationships are central."
+  },
+  {
+    "id": "q14",
+    "question": "Một trò chơi trực tuyến cần một bảng xếp hạng (leaderboard) thời gian thực với độ trễ cực thấp, dữ liệu có thể tái tạo và không cần bền vững lâu dài. Chọn dịch vụ nào?",
+    "questionEn": "An online game needs a real-time leaderboard with ultra-low latency where the data is reproducible and does not require long-term durability. Which service should be chosen?",
+    "options": [
+      "Amazon ElastiCache for Redis",
+      "Amazon QLDB",
+      "Amazon Redshift",
+      "Amazon RDS for SQL Server"
+    ],
+    "optionsEn": [
+      "Amazon ElastiCache for Redis",
+      "Amazon QLDB",
+      "Amazon Redshift",
+      "Amazon RDS for SQL Server"
+    ],
+    "answer": 0,
+    "explanation": "ElastiCache for Redis cho độ trễ micro-giây và hỗ trợ cấu trúc sorted set — lý tưởng cho leaderboard thời gian thực khi không yêu cầu độ bền cao.",
+    "explanationEn": "ElastiCache for Redis delivers microsecond latency and supports sorted sets — ideal for a real-time leaderboard when high durability is not required."
+  },
+  {
+    "id": "q15",
+    "question": "Một công ty cần chọn giữa DynamoDB, RDS và Redshift. Yêu cầu: lưu catalog sản phẩm dạng key-value linh hoạt, scale lớn, serverless, độ trễ mili-giây. Chọn dịch vụ nào?",
+    "questionEn": "A company must choose among DynamoDB, RDS, and Redshift. Requirement: store a flexible key-value product catalog at massive scale, serverless, with millisecond latency. Which service should be chosen?",
+    "options": [
+      "Amazon RDS for MySQL",
+      "Amazon Redshift",
+      "Amazon DynamoDB",
+      "Amazon Neptune"
+    ],
+    "optionsEn": [
+      "Amazon RDS for MySQL",
+      "Amazon Redshift",
+      "Amazon DynamoDB",
+      "Amazon Neptune"
+    ],
+    "answer": 2,
+    "explanation": "DynamoDB phù hợp nhất: NoSQL key-value serverless, schema linh hoạt, scale lớn và độ trễ mili-giây. RDS là OLTP quan hệ, Redshift là OLAP — không khớp yêu cầu.",
+    "explanationEn": "DynamoDB fits best: serverless NoSQL key-value with a flexible schema, massive scale, and millisecond latency. RDS is relational OLTP and Redshift is OLAP — neither matches."
+  }
+]

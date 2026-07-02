@@ -1,1 +1,7 @@
-{"title": "SQL cơ bản", "description": "SELECT, INSERT, UPDATE, DELETE, WHERE, JOIN và các câu lệnh SQL thiết yếu."}
+{
+  "group": "ba-po-pm",
+  "title": "SQL cơ bản",
+  "titleEn": "SQL Basics",
+  "description": "SELECT, INSERT, UPDATE, DELETE, WHERE, JOIN và các câu lệnh SQL thiết yếu.",
+  "descriptionEn": "SELECT, INSERT, UPDATE, DELETE, WHERE, JOIN, and other essential SQL statements."
+}

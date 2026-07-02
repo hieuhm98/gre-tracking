@@ -1,1 +1,7 @@
-{"title": "Giao thức mạng", "description": "TCP/IP, UDP, HTTP/HTTPS, DNS và cách dữ liệu di chuyển qua mạng."}
+{
+  "group": "ba-po-pm",
+  "title": "Giao thức mạng",
+  "titleEn": "Network Protocols",
+  "description": "TCP/IP, UDP, HTTP/HTTPS, DNS và cách dữ liệu di chuyển qua mạng.",
+  "descriptionEn": "TCP/IP, UDP, HTTP/HTTPS, DNS, and how data moves across a network."
+}

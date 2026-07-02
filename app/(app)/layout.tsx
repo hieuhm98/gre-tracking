@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { AuthProvider, useAuth } from "@/context/auth";
+import { LanguageProvider } from "@/context/lang";
 import Sidebar from "@/components/Sidebar";
 
 function AppShell({ children }: { children: React.ReactNode }) {
@@ -30,7 +31,9 @@ function AppShell({ children }: { children: React.ReactNode }) {
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <AuthProvider>
-      <AppShell>{children}</AppShell>
+      <LanguageProvider>
+        <AppShell>{children}</AppShell>
+      </LanguageProvider>
     </AuthProvider>
   );
 }

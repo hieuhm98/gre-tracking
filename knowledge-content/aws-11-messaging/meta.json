@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "Decoupling – SQS, SNS, Kinesis & Amazon MQ",
+  "titleEn": "Decoupling – SQS, SNS, Kinesis & Amazon MQ",
+  "description": "Tách rời hệ thống với SQS, SNS, Kinesis và Amazon MQ để tăng khả năng chịu lỗi và mở rộng.",
+  "descriptionEn": "Decouple systems with SQS, SNS, Kinesis, and Amazon MQ for resilience and scalability."
+}

@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "CloudFront & Global Accelerator",
+  "titleEn": "CloudFront & Global Accelerator",
+  "description": "CDN toàn cầu với CloudFront, bảo mật origin bằng OAC và tăng tốc mạng với Global Accelerator",
+  "descriptionEn": "Global CDN with CloudFront, securing origins with OAC, and network acceleration with Global Accelerator"
+}

@@ -2,181 +2,301 @@
   {
     "id": "nfr-01",
     "question": "Sự khác biệt chính giữa Functional Requirements và Non-Functional Requirements là gì?",
+    "questionEn": "What is the main difference between Functional Requirements and Non-Functional Requirements?",
     "options": [
       "FR do BA viết, NFR do dev viết",
       "FR mô tả hệ thống làm gì; NFR mô tả hệ thống tốt đến mức nào (tốc độ, độ tin cậy, bảo mật...)",
       "FR quan trọng hơn NFR",
       "NFR chỉ liên quan đến hệ thống lớn"
     ],
+    "optionsEn": [
+      "FRs are written by the BA, NFRs are written by devs",
+      "FRs describe what the system does; NFRs describe how well the system does it (speed, reliability, security, etc.)",
+      "FRs are more important than NFRs",
+      "NFRs only apply to large systems"
+    ],
     "answer": 1,
-    "explanation": "FR: 'User có thể tìm kiếm sản phẩm.' NFR: 'Kết quả tìm kiếm trả về trong < 500ms.' Cả hai đều quan trọng — FR đúng mà NFR sai = hệ thống build đúng tính năng nhưng quá chậm, hay crash, hoặc không bảo mật. NFR hay bị bỏ sót vì không hiện ra trực tiếp trên UI."
+    "explanation": "FR: 'User có thể tìm kiếm sản phẩm.' NFR: 'Kết quả tìm kiếm trả về trong < 500ms.' Cả hai đều quan trọng — FR đúng mà NFR sai = hệ thống build đúng tính năng nhưng quá chậm, hay crash, hoặc không bảo mật. NFR hay bị bỏ sót vì không hiện ra trực tiếp trên UI.",
+    "explanationEn": "FR: 'A user can search for products.' NFR: 'Search results return in < 500ms.' Both matter — a correct FR with a wrong NFR means the system has the right features but is too slow, crashes often, or is insecure. NFRs are frequently missed because they don't show up directly on the UI."
   },
   {
     "id": "nfr-02",
     "question": "Hệ thống có uptime 99.9% nghĩa là cho phép downtime tối đa bao nhiêu mỗi năm?",
+    "questionEn": "A system with 99.9% uptime allows for a maximum of how much downtime per year?",
     "options": [
       "Khoảng 9 phút",
       "Khoảng 9 giờ",
       "Khoảng 9 ngày",
       "Khoảng 1 giờ"
     ],
+    "optionsEn": [
+      "About 9 minutes",
+      "About 9 hours",
+      "About 9 days",
+      "About 1 hour"
+    ],
     "answer": 1,
-    "explanation": "99.9% uptime = 0.1% downtime = 8.76 giờ/năm (khoảng 9 giờ). 99.99% = 52 phút/năm. 99% = 87 giờ/năm (gần 4 ngày). Banking/healthcare cần 99.99%+. Hệ thống nội bộ có thể chấp nhận 99%. BA cần xác định SLA này với stakeholder dựa trên business impact của downtime."
+    "explanation": "99.9% uptime = 0.1% downtime = 8.76 giờ/năm (khoảng 9 giờ). 99.99% = 52 phút/năm. 99% = 87 giờ/năm (gần 4 ngày). Banking/healthcare cần 99.99%+. Hệ thống nội bộ có thể chấp nhận 99%. BA cần xác định SLA này với stakeholder dựa trên business impact của downtime.",
+    "explanationEn": "99.9% uptime = 0.1% downtime = 8.76 hours/year (about 9 hours). 99.99% = 52 minutes/year. 99% = 87 hours/year (nearly 4 days). Banking/healthcare needs 99.99%+. An internal system can accept 99%. The BA must agree on this SLA with stakeholders based on the business impact of downtime."
   },
   {
     "id": "nfr-03",
     "question": "Tại sao NFR cần được xác định SỚM trong dự án, không phải sau?",
+    "questionEn": "Why do NFRs need to be defined EARLY in a project rather than later?",
     "options": [
       "Để viết tài liệu cho đầy đủ",
       "Vì NFR ảnh hưởng đến kiến trúc hệ thống — thay đổi kiến trúc sau khi build rất tốn kém",
       "Vì dev không làm được nếu không có NFR từ đầu",
       "Vì stakeholder yêu cầu"
     ],
+    "optionsEn": [
+      "To make the documentation complete",
+      "Because NFRs shape the system architecture — changing the architecture after building is very expensive",
+      "Because devs can't do anything without NFRs from the start",
+      "Because stakeholders demand it"
+    ],
     "answer": 1,
-    "explanation": "NFR 'xử lý 10,000 đơn/phút' cần message queue, async processing, database sharding — quyết định kiến trúc. Nếu biết muộn, phải rewrite. Giống xây nhà: muốn thêm tầng sau khi xây xong phải phá móng. BA phải khai thác NFR trong phase discovery, không phải sprint 5."
+    "explanation": "NFR 'xử lý 10,000 đơn/phút' cần message queue, async processing, database sharding — quyết định kiến trúc. Nếu biết muộn, phải rewrite. Giống xây nhà: muốn thêm tầng sau khi xây xong phải phá móng. BA phải khai thác NFR trong phase discovery, không phải sprint 5.",
+    "explanationEn": "The NFR 'process 10,000 orders/minute' requires a message queue, async processing, and database sharding — all architectural decisions. Learning it late forces a rewrite. It's like building a house: adding a floor after it's finished means tearing up the foundation. The BA must draw out NFRs during discovery, not in sprint 5."
   },
   {
     "id": "nfr-04",
     "question": "Database Index giải quyết vấn đề gì?",
+    "questionEn": "What problem does a database index solve?",
     "options": [
       "Giảm dung lượng lưu trữ",
       "Tăng tốc độ query bằng cách tạo cấu trúc lookup thay vì scan toàn bộ bảng",
       "Tự động backup dữ liệu",
       "Ngăn duplicate data"
     ],
+    "optionsEn": [
+      "Reducing storage size",
+      "Speeding up queries by creating a lookup structure instead of scanning the whole table",
+      "Automatically backing up data",
+      "Preventing duplicate data"
+    ],
     "answer": 1,
-    "explanation": "Không có index: query 1 triệu rows phải scan tất cả = chậm. Có index: lookup trực tiếp = nhanh hơn 100-1000x. NFR 'danh sách đơn hàng < 1s với 1 triệu records' = signal cần index. BA không cần biết tạo index thế nào, nhưng cần specify performance requirement để dev biết cần index."
+    "explanation": "Không có index: query 1 triệu rows phải scan tất cả = chậm. Có index: lookup trực tiếp = nhanh hơn 100-1000x. NFR 'danh sách đơn hàng < 1s với 1 triệu records' = signal cần index. BA không cần biết tạo index thế nào, nhưng cần specify performance requirement để dev biết cần index.",
+    "explanationEn": "Without an index, a query over 1 million rows must scan them all = slow. With an index, it's a direct lookup = 100–1000x faster. The NFR 'order list in < 1s across 1 million records' is a signal that an index is needed. The BA doesn't need to know how to create an index, but must specify the performance requirement so devs know one is required."
   },
   {
     "id": "nfr-05",
     "question": "Caching có thể không phù hợp cho tính năng nào?",
+    "questionEn": "For which feature might caching be inappropriate?",
     "options": [
       "Dashboard báo cáo tổng quan",
       "Danh sách sản phẩm (cập nhật mỗi giờ)",
       "Số dư tài khoản ngân hàng cần real-time",
       "Danh sách tỉnh thành"
     ],
+    "optionsEn": [
+      "An overview reporting dashboard",
+      "A product list (updated hourly)",
+      "A bank account balance that needs to be real-time",
+      "A list of provinces/cities"
+    ],
     "answer": 2,
-    "explanation": "Cache = dữ liệu có thể trễ một chút. Số dư tài khoản phải real-time — hiển thị sai số dư là lỗi nghiêm trọng. BA cần specify: 'dữ liệu này có thể trễ tối đa bao nhiêu?' Câu trả lời xác định có dùng cache không và TTL (time-to-live) bao lâu."
+    "explanation": "Cache = dữ liệu có thể trễ một chút. Số dư tài khoản phải real-time — hiển thị sai số dư là lỗi nghiêm trọng. BA cần specify: 'dữ liệu này có thể trễ tối đa bao nhiêu?' Câu trả lời xác định có dùng cache không và TTL (time-to-live) bao lâu.",
+    "explanationEn": "A cache means data can be slightly stale. An account balance must be real-time — showing a wrong balance is a serious error. The BA needs to specify: 'how stale can this data be at most?' The answer determines whether to cache and how long the TTL (time-to-live) should be."
   },
   {
     "id": "nfr-06",
     "question": "Availability và Reliability khác nhau như thế nào?",
+    "questionEn": "How do Availability and Reliability differ?",
     "options": [
       "Chúng giống nhau, chỉ khác tên",
       "Availability: hệ thống có mặt; Reliability: hệ thống xử lý đúng khi có mặt",
       "Reliability: hệ thống có mặt; Availability: xử lý đúng",
       "Availability chỉ dùng cho cloud, Reliability cho on-premise"
     ],
+    "optionsEn": [
+      "They are the same thing, just different names",
+      "Availability: the system is up; Reliability: the system processes correctly while it is up",
+      "Reliability: the system is up; Availability: it processes correctly",
+      "Availability is only for cloud, Reliability is for on-premise"
+    ],
     "answer": 1,
-    "explanation": "Hệ thống tính tiền sai 100% thời gian = available nhưng không reliable. Hệ thống đôi khi down nhưng khi chạy luôn tính đúng = unreliable (availability) nhưng reliable. Thanh toán cần cả hai: luôn có mặt VÀ luôn tính đúng, không charge 2 lần (idempotent)."
+    "explanation": "Hệ thống tính tiền sai 100% thời gian = available nhưng không reliable. Hệ thống đôi khi down nhưng khi chạy luôn tính đúng = unreliable (availability) nhưng reliable. Thanh toán cần cả hai: luôn có mặt VÀ luôn tính đúng, không charge 2 lần (idempotent).",
+    "explanationEn": "A system that miscalculates money 100% of the time is available but not reliable. A system that is occasionally down but always calculates correctly when running has low availability but is reliable. Payments need both: always up AND always correct, never charging twice (idempotent)."
   },
   {
     "id": "nfr-07",
     "question": "Peak time là gì và tại sao BA cần xác định?",
+    "questionEn": "What is peak time and why does the BA need to identify it?",
     "options": [
       "Giờ cao điểm khi nhiều user dùng hệ thống cùng lúc — ảnh hưởng đến scalability và infrastructure",
       "Thời điểm team làm việc hiệu quả nhất",
       "Giờ deploy code lên production",
       "Thời gian backup database"
     ],
+    "optionsEn": [
+      "The peak hours when many users use the system at the same time — affecting scalability and infrastructure",
+      "The time when the team works most productively",
+      "The time when code is deployed to production",
+      "The time when the database is backed up"
+    ],
     "answer": 0,
-    "explanation": "Peak time quyết định capacity cần chuẩn bị: e-commerce peak vào 12h trưa và 20h tối, hoặc Flash Sale, Black Friday. Fintech peak vào cuối tháng (thanh toán lương). BA cần hỏi: 'Gấp bao nhiêu lần so với average?' để dev plan auto-scaling hoặc cấu hình infrastructure đúng."
+    "explanation": "Peak time quyết định capacity cần chuẩn bị: e-commerce peak vào 12h trưa và 20h tối, hoặc Flash Sale, Black Friday. Fintech peak vào cuối tháng (thanh toán lương). BA cần hỏi: 'Gấp bao nhiêu lần so với average?' để dev plan auto-scaling hoặc cấu hình infrastructure đúng.",
+    "explanationEn": "Peak time determines the capacity you must prepare: e-commerce peaks at noon and 8 PM, or during Flash Sales and Black Friday. Fintech peaks at month-end (payroll). The BA needs to ask: 'How many times higher than average?' so devs can plan auto-scaling or size the infrastructure correctly."
   },
   {
     "id": "nfr-08",
     "question": "Soft Delete khác Hard Delete như thế nào và khi nào dùng Soft Delete?",
+    "questionEn": "How does Soft Delete differ from Hard Delete, and when should you use Soft Delete?",
     "options": [
       "Soft Delete xóa chậm hơn Hard Delete",
       "Soft Delete đánh dấu deleted_at thay vì xóa thật — dùng khi cần lưu lịch sử, audit trail hoặc cho phép khôi phục",
       "Hard Delete an toàn hơn vì xóa hoàn toàn",
       "Soft Delete chỉ dùng cho file, Hard Delete cho database"
     ],
+    "optionsEn": [
+      "Soft Delete removes records more slowly than Hard Delete",
+      "Soft Delete marks deleted_at instead of truly deleting — used when you need to keep history, an audit trail, or allow restoration",
+      "Hard Delete is safer because it removes the record completely",
+      "Soft Delete is only for files, Hard Delete is for databases"
+    ],
     "answer": 1,
-    "explanation": "Soft delete: thêm cột deleted_at, query có WHERE deleted_at IS NULL. Dùng khi: cần audit (ai xóa, khi nào), user cần undo, compliance yêu cầu lưu trữ X năm, dữ liệu liên quan đến giao dịch tài chính. Hard delete: khi data không còn giá trị và không cần comply."
+    "explanation": "Soft delete: thêm cột deleted_at, query có WHERE deleted_at IS NULL. Dùng khi: cần audit (ai xóa, khi nào), user cần undo, compliance yêu cầu lưu trữ X năm, dữ liệu liên quan đến giao dịch tài chính. Hard delete: khi data không còn giá trị và không cần comply.",
+    "explanationEn": "Soft delete: add a deleted_at column and add WHERE deleted_at IS NULL to queries. Use it when you need an audit (who deleted, when), users need undo, compliance requires retention for X years, or the data relates to financial transactions. Hard delete: when the data has no remaining value and there is no compliance need."
   },
   {
     "id": "nfr-09",
     "question": "NFR về Maintainability 'code coverage tối thiểu 70%' có nghĩa là gì với BA?",
+    "questionEn": "What does the Maintainability NFR 'minimum 70% code coverage' mean for a BA?",
     "options": [
       "70% code phải được comment đầy đủ",
       "70% logic code phải có automated test — giúp dev refactor an toàn và giảm regression bugs",
       "70% tính năng phải được hoàn thành",
       "70% user phải có thể dùng hệ thống không cần training"
     ],
+    "optionsEn": [
+      "70% of the code must be fully commented",
+      "70% of the logic code must have automated tests — helping devs refactor safely and reducing regression bugs",
+      "70% of features must be completed",
+      "70% of users must be able to use the system without training"
+    ],
     "answer": 1,
-    "explanation": "Code coverage = % code được chạy qua automated tests. 70% nghĩa là nếu thay đổi code, 70% trường hợp sẽ được kiểm tra tự động. Ít test = dev sợ refactor = technical debt tích lũy = velocity giảm. BA nên đưa test coverage vào Definition of Done."
+    "explanation": "Code coverage = % code được chạy qua automated tests. 70% nghĩa là nếu thay đổi code, 70% trường hợp sẽ được kiểm tra tự động. Ít test = dev sợ refactor = technical debt tích lũy = velocity giảm. BA nên đưa test coverage vào Definition of Done.",
+    "explanationEn": "Code coverage = the percentage of code exercised by automated tests. 70% means that when code changes, 70% of cases are checked automatically. Few tests = devs are afraid to refactor = technical debt accumulates = velocity drops. The BA should include test coverage in the Definition of Done."
   },
   {
     "id": "nfr-10",
     "question": "Câu nào dưới đây là NFR được viết TỐT?",
+    "questionEn": "Which of the following is a WELL-written NFR?",
     "options": [
       "Hệ thống phải nhanh và ổn định",
       "API thanh toán phải trả kết quả trong < 3 giây ở percentile 99 với 1,000 concurrent users",
       "Dashboard phải load nhanh",
       "Hệ thống phải bảo mật và đáng tin cậy"
     ],
+    "optionsEn": [
+      "The system must be fast and stable",
+      "The payment API must return results in < 3 seconds at the 99th percentile with 1,000 concurrent users",
+      "The dashboard must load fast",
+      "The system must be secure and reliable"
+    ],
     "answer": 1,
-    "explanation": "NFR tốt phải: có ngưỡng cụ thể (< 3 giây), có điều kiện đo lường (percentile 99), có context (1,000 concurrent users). Percentile 99 nghĩa là 99% requests phải đáp ứng — chấp nhận 1% chậm hơn. Các option còn lại quá mơ hồ, không ai biết khi nào 'pass'."
+    "explanation": "NFR tốt phải: có ngưỡng cụ thể (< 3 giây), có điều kiện đo lường (percentile 99), có context (1,000 concurrent users). Percentile 99 nghĩa là 99% requests phải đáp ứng — chấp nhận 1% chậm hơn. Các option còn lại quá mơ hồ, không ai biết khi nào 'pass'.",
+    "explanationEn": "A good NFR must have: a concrete threshold (< 3 seconds), a measurable condition (99th percentile), and context (1,000 concurrent users). The 99th percentile means 99% of requests must meet the target — tolerating 1% being slower. The other options are too vague; nobody can tell when they 'pass'."
   },
   {
     "id": "nfr-11",
     "question": "RTO và RPO trong disaster recovery là gì?",
+    "questionEn": "What are RTO and RPO in disaster recovery?",
     "options": [
       "RTO: thời gian recover tối đa; RPO: lượng data loss chấp nhận được",
       "RTO: dung lượng backup; RPO: tần suất backup",
       "RTO: số lượng replica; RPO: kích thước log",
       "Cả hai đều liên quan đến database indexing"
     ],
+    "optionsEn": [
+      "RTO: maximum recovery time; RPO: acceptable amount of data loss",
+      "RTO: backup size; RPO: backup frequency",
+      "RTO: number of replicas; RPO: log size",
+      "Both are related to database indexing"
+    ],
     "answer": 0,
-    "explanation": "RTO (Recovery Time Objective): hệ thống phải recover trong bao lâu sau incident. RPO (Recovery Point Objective): có thể chấp nhận mất data tối đa bao lâu. Banking: RTO < 1h, RPO = 0 (không mất data). Blog: RTO < 24h, RPO < 1h là chấp nhận được. BA cần xác định với business stakeholder."
+    "explanation": "RTO (Recovery Time Objective): hệ thống phải recover trong bao lâu sau incident. RPO (Recovery Point Objective): có thể chấp nhận mất data tối đa bao lâu. Banking: RTO < 1h, RPO = 0 (không mất data). Blog: RTO < 24h, RPO < 1h là chấp nhận được. BA cần xác định với business stakeholder.",
+    "explanationEn": "RTO (Recovery Time Objective): how quickly the system must recover after an incident. RPO (Recovery Point Objective): how much data loss can be tolerated. Banking: RTO < 1h, RPO = 0 (no data loss). A blog: RTO < 24h, RPO < 1h is acceptable. The BA must agree on these with the business stakeholder."
   },
   {
     "id": "nfr-12",
     "question": "Tại sao BA cần hỏi 'có peak time cụ thể không?' khi viết requirement?",
+    "questionEn": "Why does the BA need to ask 'is there a specific peak time?' when writing requirements?",
     "options": [
       "Để lên lịch deploy code",
       "Để team biết khi nào nên làm overtime",
       "Để dev và infra plan capacity đúng — peak traffic quyết định architecture và infrastructure cost",
       "Để tính ngày delivery của feature"
     ],
+    "optionsEn": [
+      "To schedule code deployments",
+      "So the team knows when to work overtime",
+      "So devs and infra can plan capacity correctly — peak traffic drives architecture and infrastructure cost",
+      "To calculate the feature's delivery date"
+    ],
     "answer": 2,
-    "explanation": "Peak traffic 10x average = cần infrastructure 10x hoặc auto-scaling. Không biết peak = under-provision (hệ thống sập vào Flash Sale) hoặc over-provision (tốn tiền mãi mãi). BA hỏi: bình thường bao nhiêu user? Peak bao nhiêu? Peak kéo dài bao lâu? → Infra team plan đúng."
+    "explanation": "Peak traffic 10x average = cần infrastructure 10x hoặc auto-scaling. Không biết peak = under-provision (hệ thống sập vào Flash Sale) hoặc over-provision (tốn tiền mãi mãi). BA hỏi: bình thường bao nhiêu user? Peak bao nhiêu? Peak kéo dài bao lâu? → Infra team plan đúng.",
+    "explanationEn": "Peak traffic at 10x average means you need 10x the infrastructure or auto-scaling. Not knowing the peak leads to under-provisioning (the system crashes during a Flash Sale) or over-provisioning (paying for capacity forever). The BA asks: how many users normally? How many at peak? How long does the peak last? → The infra team plans correctly."
   },
   {
     "id": "nfr-13",
     "question": "NFR về Usability 'tuân thủ WCAG 2.1 AA' liên quan đến điều gì?",
+    "questionEn": "What does the Usability NFR 'comply with WCAG 2.1 AA' relate to?",
     "options": [
       "Tốc độ tải trang web",
       "Bảo mật xác thực người dùng",
       "Accessibility — hệ thống có thể dùng được bởi người khuyết tật (khiếm thị, khiếm thính...)",
       "Tương thích với các trình duyệt khác nhau"
     ],
+    "optionsEn": [
+      "Web page load speed",
+      "User authentication security",
+      "Accessibility — the system can be used by people with disabilities (visual, hearing, etc.)",
+      "Compatibility with different browsers"
+    ],
     "answer": 2,
-    "explanation": "WCAG (Web Content Accessibility Guidelines) là chuẩn accessibility cho web: alt text cho ảnh (screen reader), contrast ratio đủ (người khiếm thị màu), keyboard navigation (không dùng chuột được), caption cho video (người khiếm thính). Level AA là mức thường được yêu cầu trong compliance."
+    "explanation": "WCAG (Web Content Accessibility Guidelines) là chuẩn accessibility cho web: alt text cho ảnh (screen reader), contrast ratio đủ (người khiếm thị màu), keyboard navigation (không dùng chuột được), caption cho video (người khiếm thính). Level AA là mức thường được yêu cầu trong compliance.",
+    "explanationEn": "WCAG (Web Content Accessibility Guidelines) is the accessibility standard for the web: alt text for images (screen readers), sufficient contrast ratio (for color-blind users), keyboard navigation (for those who can't use a mouse), captions for video (for deaf users). Level AA is the tier commonly required for compliance."
   },
   {
     "id": "nfr-14",
     "question": "Khi BA write NFR cho e-commerce vs hệ thống nội bộ 50 người, điều gì ĐÚNG?",
+    "questionEn": "When a BA writes NFRs for e-commerce vs an internal 50-person system, what is TRUE?",
     "options": [
       "NFR giống nhau, chỉ khác về tính năng",
       "E-commerce cần NFR nghiêm ngặt hơn về performance, availability và security",
       "Hệ thống nội bộ không cần NFR",
       "Chỉ cần NFR cho hệ thống có thanh toán"
     ],
+    "optionsEn": [
+      "The NFRs are the same, only the features differ",
+      "E-commerce needs stricter NFRs for performance, availability, and security",
+      "An internal system doesn't need NFRs",
+      "Only systems with payments need NFRs"
+    ],
     "answer": 1,
-    "explanation": "NFR phải phù hợp với business context: hệ thống nội bộ 50 user, 8h-17h có thể chấp nhận response 3s, 99% uptime, maintenance ban đêm. E-commerce 10,000 user 24/7 cần response < 2s, 99.9% uptime, PCI DSS nếu có card payment. Over-engineering NFR = lãng phí; under-engineering = system fail."
+    "explanation": "NFR phải phù hợp với business context: hệ thống nội bộ 50 user, 8h-17h có thể chấp nhận response 3s, 99% uptime, maintenance ban đêm. E-commerce 10,000 user 24/7 cần response < 2s, 99.9% uptime, PCI DSS nếu có card payment. Over-engineering NFR = lãng phí; under-engineering = system fail.",
+    "explanationEn": "NFRs must fit the business context: an internal 50-user system running 8 AM–5 PM can accept a 3s response, 99% uptime, and nighttime maintenance. E-commerce with 10,000 users, 24/7, needs < 2s response, 99.9% uptime, and PCI DSS if card payments exist. Over-engineering NFRs wastes money; under-engineering makes the system fail."
   },
   {
     "id": "nfr-15",
     "question": "Câu hỏi nào BA KHÔNG cần hỏi khi xác định NFR performance?",
+    "questionEn": "Which question does the BA NOT need to ask when defining performance NFRs?",
     "options": [
       "Bao nhiêu records sẽ có sau 1 năm?",
       "User chấp nhận chờ tối đa bao lâu cho màn hình này?",
       "Dev sẽ dùng ngôn ngữ lập trình nào?",
       "Có peak time cụ thể không và tần suất ra sao?"
     ],
+    "optionsEn": [
+      "How many records will there be after 1 year?",
+      "What is the maximum wait a user will accept for this screen?",
+      "Which programming language will the devs use?",
+      "Is there a specific peak time, and how frequent is it?"
+    ],
     "answer": 2,
-    "explanation": "Ngôn ngữ lập trình là quyết định kỹ thuật của dev, BA không cần (và không nên) specify. BA cần: data volume (để biết cần index/cache), user expectation (để set SLA), peak pattern (để plan capacity). Những câu hỏi này giúp BA viết NFR đo lường được, không phải implementation detail."
+    "explanation": "Ngôn ngữ lập trình là quyết định kỹ thuật của dev, BA không cần (và không nên) specify. BA cần: data volume (để biết cần index/cache), user expectation (để set SLA), peak pattern (để plan capacity). Những câu hỏi này giúp BA viết NFR đo lường được, không phải implementation detail.",
+    "explanationEn": "The programming language is a technical decision for the devs; the BA doesn't need to (and shouldn't) specify it. The BA needs: data volume (to know if indexing/caching is needed), user expectations (to set the SLA), and the peak pattern (to plan capacity). These questions help the BA write measurable NFRs, not implementation details."
   }
 ]

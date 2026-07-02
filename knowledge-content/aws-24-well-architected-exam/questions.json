@@ -1,0 +1,232 @@
+[
+  {
+    "id": "q1",
+    "question": "AWS Well-Architected Framework hiện có bao nhiêu trụ cột (pillar)?",
+    "questionEn": "How many pillars does the AWS Well-Architected Framework currently have?",
+    "options": ["4", "5", "6", "7"],
+    "optionsEn": ["4", "5", "6", "7"],
+    "answer": 2,
+    "explanation": "Ban đầu khung có 5 trụ cột; năm 2021 AWS bổ sung trụ cột thứ 6 là Sustainability, nâng tổng số lên 6.",
+    "explanationEn": "The framework originally had 5 pillars; in 2021 AWS added a 6th pillar, Sustainability, bringing the total to 6."
+  },
+  {
+    "id": "q2",
+    "question": "Một câu hỏi yêu cầu giải pháp 'MOST cost-effective' (tối ưu chi phí nhất). Trụ cột nào đang được ưu tiên?",
+    "questionEn": "A question asks for the 'MOST cost-effective' solution. Which pillar is being prioritized?",
+    "options": ["Reliability", "Cost Optimization", "Security", "Operational Excellence"],
+    "optionsEn": ["Reliability", "Cost Optimization", "Security", "Operational Excellence"],
+    "answer": 1,
+    "explanation": "Từ khóa 'cost-effective' ánh xạ trực tiếp tới trụ cột Cost Optimization; hãy ưu tiên serverless, Spot, S3 tiering, dịch vụ managed.",
+    "explanationEn": "The keyword 'cost-effective' maps directly to the Cost Optimization pillar; favor serverless, Spot, S3 tiering, and managed services."
+  },
+  {
+    "id": "q3",
+    "question": "Câu hỏi yêu cầu kiến trúc 'MOST highly available'. Cụm dịch vụ nào phù hợp nhất với trụ cột được nhắm tới?",
+    "questionEn": "A question asks for the 'MOST highly available' architecture. Which set of services best fits the targeted pillar?",
+    "options": [
+      "Một EC2 instance duy nhất trong một AZ",
+      "Auto Scaling group + ELB trải trên nhiều AZ + RDS Multi-AZ",
+      "Lưu toàn bộ trong một EBS volume và snapshot hằng tuần",
+      "Chạy mọi thứ trên một Region duy nhất không có backup"
+    ],
+    "optionsEn": [
+      "A single EC2 instance in one AZ",
+      "An Auto Scaling group + ELB across multiple AZs + RDS Multi-AZ",
+      "Store everything on one EBS volume with weekly snapshots",
+      "Run everything in a single Region with no backups"
+    ],
+    "answer": 1,
+    "explanation": "'Highly available' thuộc trụ cột Reliability. Phân bố qua nhiều AZ với ASG + ELB và cơ sở dữ liệu Multi-AZ loại bỏ điểm lỗi đơn.",
+    "explanationEn": "'Highly available' belongs to the Reliability pillar. Spreading across multiple AZs with ASG + ELB and a Multi-AZ database removes single points of failure."
+  },
+  {
+    "id": "q4",
+    "question": "Đề bài nhấn mạnh 'LEAST operational overhead' (ít công vận hành nhất) cho một API xử lý sự kiện. Lựa chọn nào tốt nhất?",
+    "questionEn": "The prompt emphasizes 'LEAST operational overhead' for an event-processing API. Which choice is best?",
+    "options": [
+      "Tự quản lý một cụm EC2 và cài phần mềm hàng đợi riêng",
+      "Dùng API Gateway + Lambda + DynamoDB (serverless)",
+      "Dựng một máy chủ vật lý on-premises",
+      "Chạy ứng dụng trên EC2 và tự viết script auto scaling"
+    ],
+    "optionsEn": [
+      "Self-manage an EC2 cluster and install your own queue software",
+      "Use API Gateway + Lambda + DynamoDB (serverless)",
+      "Build an on-premises physical server",
+      "Run the app on EC2 and write your own auto scaling scripts"
+    ],
+    "answer": 1,
+    "explanation": "'Least operational overhead' nghiêng về Operational Excellence — chọn dịch vụ serverless/managed để AWS lo hạ tầng, vá lỗi và mở rộng.",
+    "explanationEn": "'Least operational overhead' leans toward Operational Excellence — choose serverless/managed services so AWS handles infrastructure, patching, and scaling."
+  },
+  {
+    "id": "q5",
+    "question": "Trusted Advisor cung cấp các khuyến nghị theo bao nhiêu nhóm kiểm tra (check categories)?",
+    "questionEn": "Trusted Advisor provides recommendations across how many check categories?",
+    "options": ["3", "5", "6", "10"],
+    "optionsEn": ["3", "5", "6", "10"],
+    "answer": 1,
+    "explanation": "Trusted Advisor có 5 nhóm: Cost Optimization, Security, Fault Tolerance, Performance và Service Limits.",
+    "explanationEn": "Trusted Advisor has 5 categories: Cost Optimization, Security, Fault Tolerance, Performance, and Service Limits."
+  },
+  {
+    "id": "q6",
+    "question": "Muốn xem ĐẦY ĐỦ tất cả các check của Trusted Advisor thì cần điều kiện gì?",
+    "questionEn": "What is required to see the FULL set of Trusted Advisor checks?",
+    "options": [
+      "Chỉ cần tài khoản Free Tier",
+      "Bật MFA cho tài khoản root",
+      "Có gói Business hoặc Enterprise Support",
+      "Kích hoạt CloudTrail ở tất cả Region"
+    ],
+    "optionsEn": [
+      "Only a Free Tier account is needed",
+      "Enable MFA on the root account",
+      "Have a Business or Enterprise Support plan",
+      "Enable CloudTrail in all Regions"
+    ],
+    "answer": 2,
+    "explanation": "Tài khoản Basic/Developer chỉ thấy một phần check. Đầy đủ tất cả check yêu cầu gói Business hoặc Enterprise Support.",
+    "explanationEn": "Basic/Developer accounts see only a subset. The full set of checks requires a Business or Enterprise Support plan."
+  },
+  {
+    "id": "q7",
+    "question": "Bạn muốn ĐÁNH GIÁ (review) một workload theo từng trụ cột và nhận danh sách rủi ro kèm khuyến nghị. Dùng công cụ nào?",
+    "questionEn": "You want to REVIEW a workload against each pillar and get a list of risks with recommendations. Which tool do you use?",
+    "options": ["AWS Well-Architected Tool", "Amazon CloudWatch", "AWS Config", "AWS CloudFormation"],
+    "optionsEn": ["AWS Well-Architected Tool", "Amazon CloudWatch", "AWS Config", "AWS CloudFormation"],
+    "answer": 0,
+    "explanation": "AWS Well-Architected Tool (miễn phí) hướng dẫn bạn trả lời câu hỏi theo trụ cột và xuất ra danh sách rủi ro high/medium kèm khuyến nghị cải thiện.",
+    "explanationEn": "The AWS Well-Architected Tool (free) guides you through per-pillar questions and produces a list of high/medium risks with improvement recommendations."
+  },
+  {
+    "id": "q8",
+    "question": "Đề bài: 'cần TÁCH RỜI (decouple) tầng nhận đơn và tầng xử lý để chịu tải đột biến'. Dịch vụ nào?",
+    "questionEn": "Prompt: 'need to DECOUPLE the order-intake tier from the processing tier to absorb traffic spikes.' Which service?",
+    "options": ["Amazon SNS", "Amazon SQS", "Amazon Kinesis Data Streams", "AWS Step Functions"],
+    "optionsEn": ["Amazon SNS", "Amazon SQS", "Amazon Kinesis Data Streams", "AWS Step Functions"],
+    "answer": 1,
+    "explanation": "Từ khóa 'decouple' + hàng đợi công việc bất đồng bộ ánh xạ tới SQS, giúp đệm tải và tách rời producer/consumer.",
+    "explanationEn": "The keyword 'decouple' plus an asynchronous work queue maps to SQS, which buffers load and separates producers from consumers."
+  },
+  {
+    "id": "q9",
+    "question": "Đề bài: cần gửi cùng một thông điệp tới NHIỀU đích cùng lúc (fan-out). Kiến trúc nào phù hợp nhất?",
+    "questionEn": "Prompt: you must deliver the same message to MANY targets simultaneously (fan-out). Which architecture fits best?",
+    "options": [
+      "Một hàng đợi SQS duy nhất cho tất cả consumer",
+      "SNS topic gửi tới nhiều hàng đợi SQS đăng ký (fan-out)",
+      "Ghi trực tiếp vào một bảng DynamoDB",
+      "Dùng một EC2 làm broker tự viết"
+    ],
+    "optionsEn": [
+      "A single SQS queue for all consumers",
+      "An SNS topic fanning out to multiple subscribed SQS queues",
+      "Write directly to one DynamoDB table",
+      "Use a self-built EC2 broker"
+    ],
+    "answer": 1,
+    "explanation": "'Fan-out' là mẫu SNS phát tới nhiều SQS đăng ký, mỗi consumer xử lý độc lập từ hàng đợi riêng.",
+    "explanationEn": "'Fan-out' is the SNS-to-multiple-SQS pattern, where each consumer processes independently from its own queue."
+  },
+  {
+    "id": "q10",
+    "question": "Đề bài yêu cầu 'truy vấn SQL không cần máy chủ (serverless) trực tiếp trên dữ liệu trong S3'. Dịch vụ nào?",
+    "questionEn": "The prompt asks for 'serverless SQL queries directly over data in S3.' Which service?",
+    "options": ["Amazon Redshift", "Amazon Athena", "Amazon RDS", "Amazon EMR"],
+    "optionsEn": ["Amazon Redshift", "Amazon Athena", "Amazon RDS", "Amazon EMR"],
+    "answer": 1,
+    "explanation": "Athena là dịch vụ truy vấn SQL serverless chạy trực tiếp trên dữ liệu trong S3, tính phí theo lượng dữ liệu quét.",
+    "explanationEn": "Athena is a serverless SQL query service that runs directly on data in S3, billed by the amount of data scanned."
+  },
+  {
+    "id": "q11",
+    "question": "Cần cho phép quản trị viên truy cập instance EC2 để chẩn đoán mà KHÔNG mở cổng 22 (SSH) và không dùng bastion host. Giải pháp nào?",
+    "questionEn": "You must let admins access an EC2 instance for troubleshooting WITHOUT opening port 22 (SSH) and without a bastion host. Which solution?",
+    "options": [
+      "Mở security group cho 0.0.0.0/0 trên cổng 22",
+      "Dùng AWS Systems Manager Session Manager",
+      "Cấp Elastic IP công khai cho instance",
+      "Tạo một NAT Gateway"
+    ],
+    "optionsEn": [
+      "Open the security group to 0.0.0.0/0 on port 22",
+      "Use AWS Systems Manager Session Manager",
+      "Assign a public Elastic IP to the instance",
+      "Create a NAT Gateway"
+    ],
+    "answer": 1,
+    "explanation": "SSM Session Manager cho phép truy cập shell qua AWS API mà không cần mở cổng SSH hay bastion, và ghi log truy cập vào CloudTrail — tốt cho Security.",
+    "explanationEn": "SSM Session Manager provides shell access via the AWS API without opening SSH or a bastion, and logs access to CloudTrail — good for Security."
+  },
+  {
+    "id": "q12",
+    "question": "Ứng dụng đọc cùng một dữ liệu từ RDS rất nhiều lần khiến CSDL quá tải. Cách tối ưu HIỆU NĂNG đọc?",
+    "questionEn": "An app reads the same data from RDS very frequently, overloading the database. How do you optimize read PERFORMANCE?",
+    "options": [
+      "Tăng gấp đôi kích thước instance RDS mãi mãi",
+      "Đặt Amazon ElastiCache trước RDS để cache truy vấn đọc",
+      "Chuyển sang lưu dữ liệu trong S3",
+      "Bật RDS Multi-AZ để tăng tốc độ đọc"
+    ],
+    "optionsEn": [
+      "Permanently double the RDS instance size",
+      "Put Amazon ElastiCache in front of RDS to cache read queries",
+      "Move the data to S3",
+      "Enable RDS Multi-AZ to speed up reads"
+    ],
+    "answer": 1,
+    "explanation": "ElastiCache (Redis/Memcached) cache dữ liệu truy vấn nhiều, giảm tải RDS và độ trễ. Lưu ý Multi-AZ dùng cho HA/failover, không phải tăng tốc độ đọc.",
+    "explanationEn": "ElastiCache (Redis/Memcached) caches frequently queried data, offloading RDS and cutting latency. Note that Multi-AZ is for HA/failover, not read speed."
+  },
+  {
+    "id": "q13",
+    "question": "Cần di chuyển một cơ sở dữ liệu Oracle on-premises sang Amazon Aurora PostgreSQL (khác engine). Bộ công cụ nào?",
+    "questionEn": "You need to migrate an on-premises Oracle database to Amazon Aurora PostgreSQL (a different engine). Which toolset?",
+    "options": [
+      "Chỉ dùng AWS Backup",
+      "AWS DMS kết hợp Schema Conversion Tool (SCT)",
+      "Amazon S3 Transfer Acceleration",
+      "AWS Snowball"
+    ],
+    "optionsEn": [
+      "AWS Backup only",
+      "AWS DMS combined with the Schema Conversion Tool (SCT)",
+      "Amazon S3 Transfer Acceleration",
+      "AWS Snowball"
+    ],
+    "answer": 1,
+    "explanation": "Khi đổi engine (heterogeneous migration), SCT chuyển đổi schema/thủ tục còn DMS di chuyển dữ liệu, hỗ trợ cả replication liên tục.",
+    "explanationEn": "For a heterogeneous (different-engine) migration, SCT converts the schema/procedures while DMS moves the data, including ongoing replication."
+  },
+  {
+    "id": "q14",
+    "question": "Công ty lo ngại có dữ liệu nhạy cảm (PII) nằm rải rác trong các bucket S3. Dịch vụ nào tự động phát hiện và phân loại?",
+    "questionEn": "A company worries that sensitive data (PII) is scattered across S3 buckets. Which service automatically discovers and classifies it?",
+    "options": ["Amazon Macie", "Amazon GuardDuty", "AWS WAF", "Amazon Inspector"],
+    "optionsEn": ["Amazon Macie", "Amazon GuardDuty", "AWS WAF", "Amazon Inspector"],
+    "answer": 0,
+    "explanation": "Macie dùng machine learning để phát hiện và phân loại dữ liệu nhạy cảm (PII) trong S3. GuardDuty phát hiện mối đe dọa, WAF lọc lưu lượng web, Inspector quét lỗ hổng.",
+    "explanationEn": "Macie uses machine learning to discover and classify sensitive data (PII) in S3. GuardDuty detects threats, WAF filters web traffic, and Inspector scans for vulnerabilities."
+  },
+  {
+    "id": "q15",
+    "question": "Trong bốn đáp án cho một câu hỏi 'least operational overhead', đâu là mẫu 'distractor' điển hình cần loại?",
+    "questionEn": "Among four answers to a 'least operational overhead' question, which is a typical 'distractor' pattern to eliminate?",
+    "options": [
+      "Dùng dịch vụ managed/serverless đúng nhu cầu",
+      "Tự dựng và tự vá một cụm EC2 với Classic Load Balancer (CLB)",
+      "Dùng Lambda cho tác vụ chạy theo sự kiện ngắn",
+      "Dùng DynamoDB thay vì tự quản lý CSDL trên EC2"
+    ],
+    "optionsEn": [
+      "Use the right managed/serverless service for the need",
+      "Self-build and self-patch an EC2 cluster with a Classic Load Balancer (CLB)",
+      "Use Lambda for short event-driven tasks",
+      "Use DynamoDB instead of self-managing a database on EC2"
+    ],
+    "answer": 1,
+    "explanation": "Distractor điển hình là giải pháp tự quản lý nhiều thao tác và dùng công nghệ lỗi thời (CLB) — trái với yêu cầu 'least operational overhead'. Ưu tiên managed/serverless và ALB/NLB thay cho CLB.",
+    "explanationEn": "The typical distractor is a high-touch self-managed solution using deprecated tech (CLB) — contrary to 'least operational overhead'. Prefer managed/serverless and ALB/NLB over CLB."
+  }
+]

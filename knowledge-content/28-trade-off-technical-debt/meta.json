@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "Tư Duy Trade-off & Technical Debt",
-  "description": "Tại sao dev nói 'không đơn giản vậy', khi nào shortcut là hợp lý, và cách BA đưa ra quyết định đánh đổi thông minh giữa tốc độ và chất lượng."
+  "titleEn": "Trade-off Thinking & Technical Debt",
+  "description": "Tại sao dev nói 'không đơn giản vậy', khi nào shortcut là hợp lý, và cách BA đưa ra quyết định đánh đổi thông minh giữa tốc độ và chất lượng.",
+  "descriptionEn": "Why developers say 'it's not that simple', when a shortcut is reasonable, and how a BA makes smart trade-off decisions between speed and quality."
 }

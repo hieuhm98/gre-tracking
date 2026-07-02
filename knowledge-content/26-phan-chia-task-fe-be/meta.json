@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "Phân Chia Task cho FE & BE",
-  "description": "Kỹ năng BA cần có để breakdown task kỹ thuật, phân biệt trách nhiệm FE/BE và ước lượng effort."
+  "titleEn": "Splitting Tasks Between FE & BE",
+  "description": "Kỹ năng BA cần có để breakdown task kỹ thuật, phân biệt trách nhiệm FE/BE và ước lượng effort.",
+  "descriptionEn": "The skills a BA needs to break down technical tasks, distinguish FE/BE responsibilities, and estimate effort."
 }

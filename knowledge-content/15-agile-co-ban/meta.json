@@ -1,1 +1,7 @@
-{"title": "Agile là gì?", "description": "Agile manifesto, 4 values, 12 principles, tư duy iterative và so sánh với Waterfall."}
+{
+  "group": "ba-po-pm",
+  "title": "Agile là gì?",
+  "titleEn": "What Is Agile?",
+  "description": "Agile manifesto, 4 values, 12 principles, tư duy iterative và so sánh với Waterfall.",
+  "descriptionEn": "The Agile Manifesto, 4 values, 12 principles, the iterative mindset, and a comparison with Waterfall."
+}

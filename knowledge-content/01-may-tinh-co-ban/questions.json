@@ -2,106 +2,151 @@
   {
     "id": "q1",
     "question": "Thành phần nào được gọi là 'bộ não' của máy tính?",
+    "questionEn": "Which component is called the 'brain' of the computer?",
     "options": ["RAM", "CPU", "Ổ cứng SSD", "Mainboard"],
+    "optionsEn": ["RAM", "CPU", "SSD storage", "Motherboard"],
     "answer": 1,
-    "explanation": "CPU (Central Processing Unit) là bộ xử lý trung tâm, thực thi mọi lệnh tính toán và điều phối các thành phần khác."
+    "explanation": "CPU (Central Processing Unit) là bộ xử lý trung tâm, thực thi mọi lệnh tính toán và điều phối các thành phần khác.",
+    "explanationEn": "The CPU (Central Processing Unit) is the central processor that executes all computational instructions and coordinates the other components."
   },
   {
     "id": "q2",
     "question": "Điều gì xảy ra với dữ liệu trong RAM khi bạn tắt máy tính?",
+    "questionEn": "What happens to the data in RAM when you turn off the computer?",
     "options": ["Dữ liệu được lưu vào ổ cứng tự động", "Dữ liệu bị xóa hoàn toàn", "Dữ liệu được nén lại", "Dữ liệu chuyển sang CPU"],
+    "optionsEn": ["The data is automatically saved to storage", "The data is completely erased", "The data is compressed", "The data is moved to the CPU"],
     "answer": 1,
-    "explanation": "RAM là bộ nhớ tạm thời (volatile). Khi mất điện hoặc tắt máy, toàn bộ dữ liệu trong RAM bị xóa."
+    "explanation": "RAM là bộ nhớ tạm thời (volatile). Khi mất điện hoặc tắt máy, toàn bộ dữ liệu trong RAM bị xóa.",
+    "explanationEn": "RAM is volatile (temporary) memory. When power is lost or the machine is turned off, all data in RAM is erased."
   },
   {
     "id": "q3",
     "question": "Sự khác biệt chính giữa SSD và HDD là gì?",
+    "questionEn": "What is the main difference between an SSD and an HDD?",
     "options": ["SSD lưu được nhiều dữ liệu hơn HDD", "SSD nhanh hơn và bền hơn HDD nhưng giá đắt hơn", "HDD nhanh hơn SSD", "SSD và HDD hoàn toàn giống nhau về tốc độ"],
+    "optionsEn": ["An SSD can store more data than an HDD", "An SSD is faster and more durable than an HDD but more expensive", "An HDD is faster than an SSD", "SSDs and HDDs are identical in speed"],
     "answer": 1,
-    "explanation": "SSD (Solid State Drive) dùng chip flash, không có bộ phận cơ học nên nhanh hơn và ít hỏng hơn HDD, nhưng giá thành cao hơn trên mỗi GB."
+    "explanation": "SSD (Solid State Drive) dùng chip flash, không có bộ phận cơ học nên nhanh hơn và ít hỏng hơn HDD, nhưng giá thành cao hơn trên mỗi GB.",
+    "explanationEn": "An SSD (Solid State Drive) uses flash chips and has no moving parts, so it is faster and less prone to failure than an HDD, but it costs more per GB."
   },
   {
     "id": "q4",
     "question": "1 Terabyte (TB) bằng bao nhiêu Gigabyte (GB)?",
+    "questionEn": "How many Gigabytes (GB) are there in 1 Terabyte (TB)?",
     "options": ["100 GB", "512 GB", "1,024 GB", "2,048 GB"],
+    "optionsEn": ["100 GB", "512 GB", "1,024 GB", "2,048 GB"],
     "answer": 2,
-    "explanation": "1 TB = 1,024 GB theo quy đổi nhị phân. Trong thực tế thương mại, các nhà sản xuất thường tính 1 TB = 1,000 GB."
+    "explanation": "1 TB = 1,024 GB theo quy đổi nhị phân. Trong thực tế thương mại, các nhà sản xuất thường tính 1 TB = 1,000 GB.",
+    "explanationEn": "1 TB = 1,024 GB using binary conversion. In commercial practice, manufacturers often count 1 TB as 1,000 GB."
   },
   {
     "id": "q5",
     "question": "Hệ điều hành (Operating System) có vai trò gì?",
+    "questionEn": "What is the role of the operating system (OS)?",
     "options": ["Chỉ để chạy trò chơi điện tử", "Quản lý tài nguyên phần cứng và cung cấp môi trường cho phần mềm chạy", "Thay thế CPU khi CPU bị lỗi", "Lưu trữ dữ liệu dài hạn"],
+    "optionsEn": ["Only to run video games", "To manage hardware resources and provide an environment for software to run", "To replace the CPU when it fails", "To store data long-term"],
     "answer": 1,
-    "explanation": "OS là phần mềm nền tảng, đóng vai trò cầu nối giữa phần cứng và phần mềm ứng dụng, quản lý bộ nhớ, CPU, thiết bị ngoại vi..."
+    "explanation": "OS là phần mềm nền tảng, đóng vai trò cầu nối giữa phần cứng và phần mềm ứng dụng, quản lý bộ nhớ, CPU, thiết bị ngoại vi...",
+    "explanationEn": "The OS is the foundational software that acts as the bridge between hardware and application software, managing memory, the CPU, peripheral devices, and more."
   },
   {
     "id": "q6",
     "question": "Khi bạn mở nhiều ứng dụng cùng lúc và máy bắt đầu chậm lại, nguyên nhân phổ biến nhất là gì?",
+    "questionEn": "When you open many applications at once and the machine starts to slow down, what is the most common cause?",
     "options": ["CPU quá nóng", "RAM không đủ để chứa tất cả ứng dụng đang chạy", "Ổ cứng bị đầy", "Mainboard bị lỗi"],
+    "optionsEn": ["The CPU is overheating", "There is not enough RAM to hold all the running applications", "The storage drive is full", "The motherboard is faulty"],
     "answer": 1,
-    "explanation": "RAM lưu trữ dữ liệu của các ứng dụng đang chạy. Khi RAM đầy, OS phải dùng ổ cứng làm bộ nhớ ảo (virtual memory), gây ra tình trạng chậm đáng kể."
+    "explanation": "RAM lưu trữ dữ liệu của các ứng dụng đang chạy. Khi RAM đầy, OS phải dùng ổ cứng làm bộ nhớ ảo (virtual memory), gây ra tình trạng chậm đáng kể.",
+    "explanationEn": "RAM holds the data of running applications. When RAM is full, the OS has to use storage as virtual memory, which causes significant slowdowns."
   },
   {
     "id": "q7",
     "question": "Thiết bị nào sau đây là thiết bị ĐẦU RA (output)?",
+    "questionEn": "Which of the following is an OUTPUT device?",
     "options": ["Bàn phím", "Chuột", "Màn hình", "Webcam"],
+    "optionsEn": ["Keyboard", "Mouse", "Monitor", "Webcam"],
     "answer": 2,
-    "explanation": "Thiết bị đầu ra hiển thị kết quả từ máy tính đến người dùng. Màn hình là thiết bị đầu ra phổ biến nhất. Bàn phím, chuột, webcam là thiết bị đầu vào."
+    "explanation": "Thiết bị đầu ra hiển thị kết quả từ máy tính đến người dùng. Màn hình là thiết bị đầu ra phổ biến nhất. Bàn phím, chuột, webcam là thiết bị đầu vào.",
+    "explanationEn": "Output devices present the computer's results to the user. The monitor is the most common output device. Keyboard, mouse, and webcam are input devices."
   },
   {
     "id": "q8",
     "question": "Linux thường được sử dụng phổ biến nhất ở đâu?",
+    "questionEn": "Where is Linux most commonly used?",
     "options": ["Trên máy tính cá nhân của người dùng thông thường", "Trên server và hệ thống đám mây", "Chỉ trên điện thoại Android", "Trên máy Mac của Apple"],
+    "optionsEn": ["On the personal computers of ordinary users", "On servers and cloud systems", "Only on Android phones", "On Apple Mac computers"],
     "answer": 1,
-    "explanation": "Linux là hệ điều hành mã nguồn mở, ổn định, bảo mật cao và miễn phí, nên được dùng rộng rãi trên server, cloud, và các hệ thống nhúng."
+    "explanation": "Linux là hệ điều hành mã nguồn mở, ổn định, bảo mật cao và miễn phí, nên được dùng rộng rãi trên server, cloud, và các hệ thống nhúng.",
+    "explanationEn": "Linux is an open-source operating system that is stable, highly secure, and free, so it is widely used on servers, cloud platforms, and embedded systems."
   },
   {
     "id": "q9",
     "question": "Đơn vị nhỏ nhất của dữ liệu trong máy tính là gì?",
+    "questionEn": "What is the smallest unit of data in a computer?",
     "options": ["Byte", "Kilobyte", "Bit", "Nibble"],
+    "optionsEn": ["Byte", "Kilobyte", "Bit", "Nibble"],
     "answer": 2,
-    "explanation": "Bit (binary digit) là đơn vị nhỏ nhất, chỉ mang giá trị 0 hoặc 1. 8 bit tạo thành 1 Byte."
+    "explanation": "Bit (binary digit) là đơn vị nhỏ nhất, chỉ mang giá trị 0 hoặc 1. 8 bit tạo thành 1 Byte.",
+    "explanationEn": "A bit (binary digit) is the smallest unit and holds only a value of 0 or 1. Eight bits make up 1 Byte."
   },
   {
     "id": "q10",
     "question": "Tốc độ CPU được đo bằng đơn vị gì?",
+    "questionEn": "In what unit is CPU speed measured?",
     "options": ["GB (Gigabyte)", "GHz (Gigahertz)", "Mbps (Megabit per second)", "W (Watt)"],
+    "optionsEn": ["GB (Gigabyte)", "GHz (Gigahertz)", "Mbps (Megabit per second)", "W (Watt)"],
     "answer": 1,
-    "explanation": "GHz (Gigahertz) đo số tỷ chu kỳ xử lý mỗi giây. CPU 3.5 GHz thực hiện 3.5 tỷ chu kỳ mỗi giây."
+    "explanation": "GHz (Gigahertz) đo số tỷ chu kỳ xử lý mỗi giây. CPU 3.5 GHz thực hiện 3.5 tỷ chu kỳ mỗi giây.",
+    "explanationEn": "GHz (Gigahertz) measures billions of processing cycles per second. A 3.5 GHz CPU performs 3.5 billion cycles per second."
   },
   {
     "id": "q11",
     "question": "Mainboard (bo mạch chủ) có chức năng gì?",
+    "questionEn": "What is the function of the motherboard?",
     "options": ["Xử lý đồ họa chuyên dụng", "Kết nối và cho phép các linh kiện phần cứng giao tiếp với nhau", "Lưu trữ dữ liệu dài hạn", "Quản lý nguồn điện cho máy tính"],
+    "optionsEn": ["Dedicated graphics processing", "Connecting the hardware components and letting them communicate with each other", "Long-term data storage", "Managing the computer's power supply"],
     "answer": 1,
-    "explanation": "Mainboard là bảng mạch chính kết nối CPU, RAM, ổ cứng, GPU và tất cả các linh kiện khác, tạo thành hệ thống hoàn chỉnh."
+    "explanation": "Mainboard là bảng mạch chính kết nối CPU, RAM, ổ cứng, GPU và tất cả các linh kiện khác, tạo thành hệ thống hoàn chỉnh.",
+    "explanationEn": "The motherboard is the main circuit board that connects the CPU, RAM, storage, GPU, and all other components into a complete system."
   },
   {
     "id": "q12",
     "question": "Phần mềm nào sau đây là phần mềm HỆ THỐNG (system software)?",
+    "questionEn": "Which of the following is SYSTEM software?",
     "options": ["Microsoft Word", "Google Chrome", "Driver card màn hình", "Adobe Photoshop"],
+    "optionsEn": ["Microsoft Word", "Google Chrome", "A graphics card driver", "Adobe Photoshop"],
     "answer": 2,
-    "explanation": "Driver thiết bị là phần mềm hệ thống, giúp OS giao tiếp với phần cứng cụ thể. Word, Chrome, Photoshop đều là phần mềm ứng dụng."
+    "explanation": "Driver thiết bị là phần mềm hệ thống, giúp OS giao tiếp với phần cứng cụ thể. Word, Chrome, Photoshop đều là phần mềm ứng dụng.",
+    "explanationEn": "A device driver is system software that helps the OS communicate with specific hardware. Word, Chrome, and Photoshop are all application software."
   },
   {
     "id": "q13",
     "question": "Nếu một file ảnh có dung lượng 5 MB, đó là bao nhiêu KB?",
+    "questionEn": "If an image file is 5 MB in size, how many KB is that?",
     "options": ["500 KB", "5,000 KB", "5,120 KB", "512 KB"],
+    "optionsEn": ["500 KB", "5,000 KB", "5,120 KB", "512 KB"],
     "answer": 2,
-    "explanation": "1 MB = 1,024 KB. Vậy 5 MB = 5 × 1,024 = 5,120 KB."
+    "explanation": "1 MB = 1,024 KB. Vậy 5 MB = 5 × 1,024 = 5,120 KB.",
+    "explanationEn": "1 MB = 1,024 KB. So 5 MB = 5 × 1,024 = 5,120 KB."
   },
   {
     "id": "q14",
     "question": "CPU có nhiều nhân (multi-core) mang lại lợi ích gì?",
+    "questionEn": "What benefit does a multi-core CPU provide?",
     "options": ["Tiết kiệm điện hơn đáng kể", "Xử lý nhiều tác vụ song song cùng lúc, tăng hiệu năng tổng thể", "Tăng dung lượng lưu trữ", "Giảm nhiệt độ CPU"],
+    "optionsEn": ["Significantly better power efficiency", "Processing multiple tasks in parallel at the same time, boosting overall performance", "Increased storage capacity", "Lower CPU temperature"],
     "answer": 1,
-    "explanation": "Mỗi nhân CPU có thể xử lý một luồng tác vụ độc lập. CPU 8 nhân có thể xử lý 8 tác vụ song song, cải thiện đáng kể hiệu năng đa nhiệm."
+    "explanation": "Mỗi nhân CPU có thể xử lý một luồng tác vụ độc lập. CPU 8 nhân có thể xử lý 8 tác vụ song song, cải thiện đáng kể hiệu năng đa nhiệm.",
+    "explanationEn": "Each CPU core can handle an independent thread of work. An 8-core CPU can process 8 tasks in parallel, significantly improving multitasking performance."
   },
   {
     "id": "q15",
     "question": "Thứ tự đúng khi mô tả luồng xử lý cơ bản của máy tính là gì?",
+    "questionEn": "What is the correct order describing the basic processing flow of a computer?",
     "options": ["Output → CPU → Input → Storage", "Input → CPU (dùng RAM) → Output, lưu vào Storage khi cần", "Storage → RAM → CPU → Input", "CPU → Input → RAM → Output"],
+    "optionsEn": ["Output → CPU → Input → Storage", "Input → CPU (using RAM) → Output, saving to Storage when needed", "Storage → RAM → CPU → Input", "CPU → Input → RAM → Output"],
     "answer": 1,
-    "explanation": "Luồng cơ bản: nhận đầu vào (Input) → CPU xử lý với sự hỗ trợ của RAM → xuất kết quả (Output). Dữ liệu được lưu dài hạn xuống ổ cứng (Storage) khi cần."
+    "explanation": "Luồng cơ bản: nhận đầu vào (Input) → CPU xử lý với sự hỗ trợ của RAM → xuất kết quả (Output). Dữ liệu được lưu dài hạn xuống ổ cứng (Storage) khi cần.",
+    "explanationEn": "The basic flow: receive input → the CPU processes it with the help of RAM → produce output. Data is saved long-term to storage when needed."
   }
 ]

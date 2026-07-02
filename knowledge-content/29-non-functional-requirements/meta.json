@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "Non-Functional Requirements (NFR)",
-  "description": "Performance, scalability, availability, reliability — những yêu cầu phi chức năng mà BA hay bỏ sót nhưng quyết định hệ thống có dùng được trong thực tế không."
+  "titleEn": "Non-Functional Requirements (NFR)",
+  "description": "Performance, scalability, availability, reliability — những yêu cầu phi chức năng mà BA hay bỏ sót nhưng quyết định hệ thống có dùng được trong thực tế không.",
+  "descriptionEn": "Performance, scalability, availability, reliability — the non-functional requirements that BAs often overlook but that determine whether a system is actually usable in the real world."
 }

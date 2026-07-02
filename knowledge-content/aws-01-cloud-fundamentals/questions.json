@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "Trong mô hình IaaS, khách hàng chịu trách nhiệm quản lý phần nào?",
+    "questionEn": "In the IaaS model, what is the customer responsible for managing?",
+    "options": [
+      "Chỉ dữ liệu người dùng, còn lại AWS lo hết",
+      "Hệ điều hành, runtime, ứng dụng và dữ liệu",
+      "Phần cứng vật lý và ảo hóa",
+      "Không quản lý gì cả"
+    ],
+    "optionsEn": [
+      "Only user data; AWS handles the rest",
+      "The operating system, runtime, application, and data",
+      "Physical hardware and virtualization",
+      "Nothing at all"
+    ],
+    "answer": 1,
+    "explanation": "IaaS (ví dụ EC2) cung cấp hạ tầng ảo hóa; khách hàng tự quản lý OS, runtime, ứng dụng và dữ liệu. AWS lo phần cứng, mạng nền tảng và ảo hóa.",
+    "explanationEn": "IaaS (e.g., EC2) provides virtualized infrastructure; the customer manages the OS, runtime, application, and data. AWS handles hardware, the underlying network, and virtualization."
+  },
+  {
+    "id": "q2",
+    "question": "Một Availability Zone (AZ) được định nghĩa chính xác nhất là gì?",
+    "questionEn": "What is the most accurate definition of an Availability Zone (AZ)?",
+    "options": [
+      "Một data center vật lý duy nhất",
+      "Một hoặc nhiều data center riêng biệt với điện, làm mát và mạng độc lập",
+      "Một khu vực địa lý chứa nhiều Region",
+      "Một điểm cache nội dung của CloudFront"
+    ],
+    "optionsEn": [
+      "A single physical data center",
+      "One or more discrete data centers with independent power, cooling, and networking",
+      "A geographic area that contains multiple Regions",
+      "A CloudFront content cache point"
+    ],
+    "answer": 1,
+    "explanation": "Một AZ gồm 1 HOẶC NHIỀU data center riêng biệt trong một Region, với nguồn điện/làm mát/mạng độc lập. Đây là fact hay bị hỏi trong SAA-C03.",
+    "explanationEn": "An AZ consists of ONE OR MORE discrete data centers within a Region, with independent power, cooling, and networking. This is a commonly tested SAA-C03 fact."
+  },
+  {
+    "id": "q3",
+    "question": "Hầu hết các AWS Region hiện nay có tối thiểu bao nhiêu Availability Zone?",
+    "questionEn": "How many Availability Zones does most modern AWS Regions have at minimum?",
+    "options": [
+      "1 AZ",
+      "2 AZ",
+      "3 AZ",
+      "10 AZ"
+    ],
+    "optionsEn": [
+      "1 AZ",
+      "2 AZs",
+      "3 AZs",
+      "10 AZs"
+    ],
+    "answer": 2,
+    "explanation": "Hầu hết Region có ≥ 3 AZ (thường đúng 3). Nhiều AZ cho phép thiết kế Multi-AZ đạt tính sẵn sàng cao khi một AZ gặp sự cố.",
+    "explanationEn": "Most Regions have ≥ 3 AZs (usually exactly 3). Multiple AZs enable Multi-AZ designs for high availability when one AZ fails."
+  },
+  {
+    "id": "q4",
+    "question": "Một công ty y tế ở Đức bắt buộc phải lưu dữ liệu bệnh nhân trong lãnh thổ EU theo GDPR. Yếu tố nào QUAN TRỌNG NHẤT khi chọn Region?",
+    "questionEn": "A German healthcare company must store patient data within the EU under GDPR. Which factor is MOST important when choosing a Region?",
+    "options": [
+      "Giá (Region rẻ nhất)",
+      "Compliance / data residency (vị trí pháp lý của dữ liệu)",
+      "Số lượng Edge Location",
+      "Băng thông Internet"
+    ],
+    "optionsEn": [
+      "Price (the cheapest Region)",
+      "Compliance / data residency (the legal location of data)",
+      "The number of Edge Locations",
+      "Internet bandwidth"
+    ],
+    "answer": 1,
+    "explanation": "Khi có yêu cầu pháp lý về nơi lưu dữ liệu (GDPR), compliance/data residency là yếu tố bắt buộc quyết định Region — phải chọn Region trong EU trước, rồi mới xét latency/giá.",
+    "explanationEn": "When there is a legal requirement on where data resides (GDPR), compliance/data residency is the mandatory deciding factor — you must pick an EU Region first, then consider latency/price."
+  },
+  {
+    "id": "q5",
+    "question": "Ứng dụng cần phục vụ nội dung tĩnh (ảnh, video) với độ trễ thấp cho người dùng khắp thế giới. Nên dùng gì?",
+    "questionEn": "An application needs to serve static content (images, video) with low latency to users worldwide. What should be used?",
+    "options": [
+      "Thêm nhiều EC2 trong một AZ",
+      "CloudFront với các Edge Location",
+      "Chuyển toàn bộ sang một Region duy nhất",
+      "Tăng kích thước EBS volume"
+    ],
+    "optionsEn": [
+      "Add more EC2 instances in a single AZ",
+      "CloudFront with Edge Locations",
+      "Move everything to a single Region",
+      "Increase the EBS volume size"
+    ],
+    "answer": 1,
+    "explanation": "CloudFront (CDN) cache nội dung tại các Edge Location gần người dùng khắp thế giới, giảm độ trễ. Edge Location nhiều hơn Region/AZ nên phủ rộng hơn.",
+    "explanationEn": "CloudFront (CDN) caches content at Edge Locations near users worldwide, reducing latency. Edge Locations outnumber Regions/AZs and cover a wider area."
+  },
+  {
+    "id": "q6",
+    "question": "Dịch vụ nào sau đây là GLOBAL (không gắn với một Region cụ thể)?",
+    "questionEn": "Which of the following services is GLOBAL (not tied to a specific Region)?",
+    "options": [
+      "EC2",
+      "VPC",
+      "IAM",
+      "RDS"
+    ],
+    "optionsEn": [
+      "EC2",
+      "VPC",
+      "IAM",
+      "RDS"
+    ],
+    "answer": 2,
+    "explanation": "IAM là dịch vụ global — users, roles, policies dùng chung trên mọi Region. EC2, VPC, RDS đều là Region-scoped (gắn với một Region cụ thể).",
+    "explanationEn": "IAM is a global service — users, roles, and policies are shared across all Regions. EC2, VPC, and RDS are all Region-scoped (tied to a specific Region)."
+  },
+  {
+    "id": "q7",
+    "question": "Theo mô hình trách nhiệm chung (Shared Responsibility Model), khách hàng chịu trách nhiệm về điều gì?",
+    "questionEn": "Under the Shared Responsibility Model, what is the customer responsible for?",
+    "options": [
+      "Bảo mật vật lý của các data center",
+      "Bảo trì phần cứng máy chủ",
+      "Bảo mật dữ liệu, cấu hình IAM, patch OS và security group",
+      "Cung cấp điện và làm mát cho Region"
+    ],
+    "optionsEn": [
+      "Physical security of the data centers",
+      "Server hardware maintenance",
+      "Securing data, IAM configuration, OS patching, and security groups",
+      "Providing power and cooling for the Region"
+    ],
+    "answer": 2,
+    "explanation": "Khách hàng lo bảo mật 'IN the cloud': dữ liệu, IAM, patch OS, mã hóa, security group. AWS lo 'OF the cloud': hạ tầng vật lý, phần cứng, ảo hóa.",
+    "explanationEn": "The customer handles security 'IN the cloud': data, IAM, OS patching, encryption, security groups. AWS handles 'OF the cloud': physical infrastructure, hardware, virtualization."
+  },
+  {
+    "id": "q8",
+    "question": "Để đạt tính sẵn sàng cao (high availability) cho một ứng dụng web trong một Region, cách chuẩn là gì?",
+    "questionEn": "To achieve high availability for a web application within a Region, what is the standard approach?",
+    "options": [
+      "Chạy tất cả instance trong một AZ duy nhất",
+      "Triển khai instance trên nhiều Availability Zone (Multi-AZ)",
+      "Chỉ dùng Edge Location",
+      "Tắt bớt instance để tiết kiệm chi phí"
+    ],
+    "optionsEn": [
+      "Run all instances in a single AZ",
+      "Deploy instances across multiple Availability Zones (Multi-AZ)",
+      "Use only Edge Locations",
+      "Shut down instances to save cost"
+    ],
+    "answer": 1,
+    "explanation": "Multi-AZ là chuẩn cho high availability: nếu một AZ hỏng, instance ở AZ khác vẫn phục vụ. Các AZ được cách ly lỗi vật lý nhưng kết nối độ trễ thấp.",
+    "explanationEn": "Multi-AZ is the standard for high availability: if one AZ fails, instances in another AZ keep serving. AZs are physically fault-isolated but connected with low latency."
+  },
+  {
+    "id": "q9",
+    "question": "Lệnh nào dùng để cấu hình AWS CLI với Access Key, Secret Key và Region?",
+    "questionEn": "Which command is used to configure the AWS CLI with Access Key, Secret Key, and Region?",
+    "options": [
+      "aws login",
+      "aws configure",
+      "aws init",
+      "aws setup"
+    ],
+    "optionsEn": [
+      "aws login",
+      "aws configure",
+      "aws init",
+      "aws setup"
+    ],
+    "answer": 1,
+    "explanation": "`aws configure` yêu cầu nhập Access Key ID, Secret Access Key, Region mặc định và định dạng output. CLI và SDK dùng Access Key để xác thực, không dùng mật khẩu console.",
+    "explanationEn": "`aws configure` prompts for the Access Key ID, Secret Access Key, default Region, and output format. The CLI and SDK authenticate with Access Keys, not the console password."
+  },
+  {
+    "id": "q10",
+    "question": "Một startup muốn học và thử nghiệm AWS với chi phí thấp nhất trong 12 tháng đầu. Họ nên dùng gì?",
+    "questionEn": "A startup wants to learn and experiment with AWS at the lowest cost during the first 12 months. What should they use?",
+    "options": [
+      "Reserved Instances trả trước 3 năm",
+      "AWS Free Tier",
+      "Dedicated Hosts",
+      "Mua trọn một Region"
+    ],
+    "optionsEn": [
+      "3-year prepaid Reserved Instances",
+      "AWS Free Tier",
+      "Dedicated Hosts",
+      "Purchasing an entire Region"
+    ],
+    "answer": 1,
+    "explanation": "AWS Free Tier gồm gói 12 tháng miễn phí (EC2 t2.micro 750 giờ/tháng, S3 5GB) và Always Free — phù hợp để học và thử nghiệm với chi phí thấp nhất.",
+    "explanationEn": "The AWS Free Tier includes a 12-month free package (EC2 t2.micro 750 hours/month, S3 5GB) and Always Free tiers — ideal for learning and experimenting at the lowest cost."
+  },
+  {
+    "id": "q11",
+    "question": "Khẳng định nào ĐÚNG về mối quan hệ giữa Region và dữ liệu?",
+    "questionEn": "Which statement is TRUE about the relationship between Regions and data?",
+    "options": [
+      "Dữ liệu tự động sao chép giữa tất cả các Region",
+      "Region độc lập; dữ liệu không tự sao chép giữa Region trừ khi được cấu hình",
+      "Mọi Region chia sẻ chung một tập dữ liệu",
+      "Xóa dữ liệu ở một Region sẽ xóa ở mọi Region"
+    ],
+    "optionsEn": [
+      "Data is automatically replicated across all Regions",
+      "Regions are independent; data is not auto-replicated between Regions unless configured",
+      "All Regions share one common dataset",
+      "Deleting data in one Region deletes it in every Region"
+    ],
+    "answer": 1,
+    "explanation": "Các Region độc lập và cách ly. Dữ liệu KHÔNG tự sao chép giữa các Region — bạn phải chủ động bật cross-Region replication (ví dụ S3 CRR) nếu cần.",
+    "explanationEn": "Regions are independent and isolated. Data is NOT auto-replicated between Regions — you must explicitly enable cross-Region replication (e.g., S3 CRR) when needed."
+  },
+  {
+    "id": "q12",
+    "question": "Một team dev muốn tạo tài nguyên AWS trực tiếp từ code Python trong ứng dụng của họ. Nên dùng công cụ nào?",
+    "questionEn": "A dev team wants to create AWS resources directly from Python code in their application. Which tool should they use?",
+    "options": [
+      "Management Console",
+      "AWS SDK (ví dụ boto3)",
+      "Chỉ dùng CLI thủ công",
+      "Không thể làm bằng code"
+    ],
+    "optionsEn": [
+      "The Management Console",
+      "The AWS SDK (e.g., boto3)",
+      "The CLI manually only",
+      "It cannot be done in code"
+    ],
+    "answer": 1,
+    "explanation": "SDK là thư viện lập trình (boto3 cho Python) để gọi AWS API từ trong ứng dụng. Console dùng cho thao tác thủ công qua web; SDK phù hợp cho tự động hóa trong code.",
+    "explanationEn": "The SDK is a programming library (boto3 for Python) to call AWS APIs from within an application. The Console is for manual web actions; the SDK is suited for automation in code."
+  },
+  {
+    "id": "q13",
+    "question": "Lợi ích 'Stop guessing capacity' (không phải đoán dung lượng) của cloud có nghĩa là gì?",
+    "questionEn": "What does the cloud advantage 'stop guessing capacity' mean?",
+    "options": [
+      "Luôn phải mua thừa server để dự phòng",
+      "Scale tài nguyên lên/xuống theo nhu cầu thực, tránh thừa hoặc thiếu",
+      "Không bao giờ cần thêm tài nguyên",
+      "AWS tự động chọn Region cho bạn"
+    ],
+    "optionsEn": [
+      "Always over-provision servers as a buffer",
+      "Scale resources up/down to match real demand, avoiding excess or shortage",
+      "You never need to add resources",
+      "AWS automatically chooses the Region for you"
+    ],
+    "answer": 1,
+    "explanation": "Trên on-premises bạn phải đoán trước dung lượng (thừa thì lãng phí, thiếu thì nghẽn). Cloud cho phép scale linh hoạt theo nhu cầu thực tế, chỉ trả cho phần dùng.",
+    "explanationEn": "On-premises you must guess capacity ahead (over-provisioning wastes money, under-provisioning causes bottlenecks). The cloud lets you scale flexibly to real demand, paying only for what you use."
+  },
+  {
+    "id": "q14",
+    "question": "Khẳng định nào ĐÚNG về một Amazon S3 bucket?",
+    "questionEn": "Which statement is TRUE about an Amazon S3 bucket?",
+    "options": [
+      "Tên bucket chỉ cần duy nhất trong một Region",
+      "Tên bucket là duy nhất toàn cầu, nhưng dữ liệu được lưu trong một Region cụ thể",
+      "S3 là dịch vụ global và dữ liệu nằm ở mọi Region",
+      "S3 bucket không thuộc Region nào"
+    ],
+    "optionsEn": [
+      "The bucket name only needs to be unique within a Region",
+      "The bucket name is globally unique, but the data is stored in a specific Region",
+      "S3 is a global service and data lives in every Region",
+      "An S3 bucket does not belong to any Region"
+    ],
+    "answer": 1,
+    "explanation": "Tên S3 bucket phải duy nhất trên TOÀN CẦU, nhưng dữ liệu thực tế được lưu trong Region bạn chọn khi tạo bucket. Đây là điểm dễ nhầm giữa 'global namespace' và 'Region-scoped data'.",
+    "explanationEn": "An S3 bucket name must be GLOBALLY unique, but the actual data is stored in the Region you choose at creation. This is a common point of confusion between a 'global namespace' and 'Region-scoped data'."
+  }
+]

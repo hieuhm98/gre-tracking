@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "AWS Monitoring – CloudWatch, CloudTrail, Config, X-Ray",
+  "titleEn": "AWS Monitoring – CloudWatch, CloudTrail, Config, X-Ray",
+  "description": "Bộ dịch vụ giám sát và quan sát trên AWS cho SAA-C03: CloudWatch đo hiệu năng/log, CloudTrail kiểm toán API, Config kiểm tra tuân thủ và X-Ray truy vết microservices.",
+  "descriptionEn": "AWS monitoring and observability services for SAA-C03: CloudWatch for performance/logs, CloudTrail for API auditing, Config for compliance, and X-Ray for microservices tracing."
+}

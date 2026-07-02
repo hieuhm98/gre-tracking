@@ -1,1 +1,7 @@
-{"title": "Quản lý dự án IT", "description": "Scope, timeline, risk management, stakeholder và các công cụ quản lý dự án phổ biến."}
+{
+  "group": "ba-po-pm",
+  "title": "Quản lý dự án IT",
+  "titleEn": "IT Project Management",
+  "description": "Scope, timeline, risk management, stakeholder và các công cụ quản lý dự án phổ biến.",
+  "descriptionEn": "Scope, timeline, risk management, stakeholders, and popular project management tools."
+}

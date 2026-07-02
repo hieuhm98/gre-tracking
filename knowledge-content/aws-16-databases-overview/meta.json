@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "AWS Databases – Chọn đúng loại database",
+  "titleEn": "AWS Databases – Choosing the Right Database",
+  "description": "Khung quyết định chọn database trên AWS: RDS/Aurora, DynamoDB, ElastiCache, Redshift, Neptune, DocumentDB, Keyspaces, QLDB, Timestream và MemoryDB theo access pattern.",
+  "descriptionEn": "AWS database decision framework: RDS/Aurora, DynamoDB, ElastiCache, Redshift, Neptune, DocumentDB, Keyspaces, QLDB, Timestream, and MemoryDB matched to access patterns."
+}

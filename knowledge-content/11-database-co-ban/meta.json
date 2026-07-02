@@ -1,1 +1,7 @@
-{"title": "Database là gì?", "description": "RDBMS, bảng, hàng, cột, khóa chính, khóa ngoại và các loại database phổ biến."}
+{
+  "group": "ba-po-pm",
+  "title": "Database là gì?",
+  "titleEn": "What Is a Database?",
+  "description": "RDBMS, bảng, hàng, cột, khóa chính, khóa ngoại và các loại database phổ biến.",
+  "descriptionEn": "RDBMS, tables, rows, columns, primary keys, foreign keys, and common database types."
+}

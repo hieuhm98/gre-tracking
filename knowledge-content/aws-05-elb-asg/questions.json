@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q1",
+    "question": "Một ứng dụng web cần định tuyến request `/api/*` tới một nhóm server và `/images/*` tới một nhóm server khác dựa trên đường dẫn URL. Loại load balancer nào PHÙ HỢP NHẤT?",
+    "questionEn": "A web app needs to route `/api/*` requests to one group of servers and `/images/*` to another based on the URL path. Which load balancer is MOST suitable?",
+    "options": [
+      "Network Load Balancer (NLB)",
+      "Application Load Balancer (ALB)",
+      "Gateway Load Balancer (GWLB)",
+      "Classic Load Balancer (CLB)"
+    ],
+    "optionsEn": [
+      "Network Load Balancer (NLB)",
+      "Application Load Balancer (ALB)",
+      "Gateway Load Balancer (GWLB)",
+      "Classic Load Balancer (CLB)"
+    ],
+    "answer": 1,
+    "explanation": "ALB hoạt động ở layer 7 và hỗ trợ path-based routing (định tuyến theo đường dẫn URL). NLB ở layer 4 không đọc được URL, GWLB dùng cho appliance, CLB không hỗ trợ path routing.",
+    "explanationEn": "ALB operates at layer 7 and supports path-based routing. NLB at layer 4 cannot read URLs, GWLB is for appliances, and CLB does not support path routing."
+  },
+  {
+    "id": "q2",
+    "question": "Một hệ thống gaming dùng TCP cần độ trễ cực thấp, hàng triệu kết nối/giây, và một địa chỉ IP tĩnh để khách hàng whitelist. Nên chọn loại nào?",
+    "questionEn": "A TCP-based gaming system needs ultra-low latency, millions of connections per second, and a static IP address for customers to whitelist. Which type should you choose?",
+    "options": [
+      "Application Load Balancer",
+      "Network Load Balancer",
+      "Classic Load Balancer",
+      "Gateway Load Balancer"
+    ],
+    "optionsEn": [
+      "Application Load Balancer",
+      "Network Load Balancer",
+      "Classic Load Balancer",
+      "Gateway Load Balancer"
+    ],
+    "answer": 1,
+    "explanation": "NLB hoạt động ở layer 4, cho độ trễ cực thấp, xử lý hàng triệu request/giây và có IP tĩnh mỗi AZ (hỗ trợ Elastic IP) — lý tưởng cho whitelist. ALB không cung cấp IP tĩnh.",
+    "explanationEn": "NLB operates at layer 4, delivers ultra-low latency, handles millions of requests per second, and has a static IP per AZ (supports Elastic IP) — ideal for whitelisting. ALB does not provide a static IP."
+  },
+  {
+    "id": "q3",
+    "question": "Công ty cần triển khai và mở rộng một fleet firewall ảo của bên thứ ba để kiểm tra toàn bộ traffic mạng. Dịch vụ AWS nào phù hợp nhất?",
+    "questionEn": "A company needs to deploy and scale a fleet of third-party virtual firewalls to inspect all network traffic. Which AWS service fits best?",
+    "options": [
+      "Application Load Balancer",
+      "Network Load Balancer",
+      "Gateway Load Balancer",
+      "Classic Load Balancer"
+    ],
+    "optionsEn": [
+      "Application Load Balancer",
+      "Network Load Balancer",
+      "Gateway Load Balancer",
+      "Classic Load Balancer"
+    ],
+    "answer": 2,
+    "explanation": "GWLB hoạt động ở layer 3 với giao thức GENEVE, được thiết kế để triển khai và scale các virtual appliance như firewall, IDS/IPS. Nó vừa là bridge trong suốt vừa là load balancer.",
+    "explanationEn": "GWLB operates at layer 3 with the GENEVE protocol and is designed to deploy and scale virtual appliances like firewalls and IDS/IPS. It acts as both a transparent bridge and a load balancer."
+  },
+  {
+    "id": "q4",
+    "question": "Về cross-zone load balancing, phát biểu nào ĐÚNG?",
+    "questionEn": "Regarding cross-zone load balancing, which statement is TRUE?",
+    "options": [
+      "ALB luôn bật cross-zone và miễn phí; NLB tắt mặc định và tính phí data giữa AZ khi bật",
+      "NLB luôn bật cross-zone và miễn phí; ALB tắt mặc định",
+      "Cả ALB và NLB đều tắt cross-zone mặc định",
+      "Cross-zone không tồn tại trên ALB"
+    ],
+    "optionsEn": [
+      "ALB always has cross-zone on and free; NLB is off by default and charges inter-AZ data when enabled",
+      "NLB always has cross-zone on and free; ALB is off by default",
+      "Both ALB and NLB have cross-zone off by default",
+      "Cross-zone does not exist on ALB"
+    ],
+    "answer": 0,
+    "explanation": "ALB luôn bật cross-zone và không tính phí. NLB (và CLB) tắt cross-zone mặc định; riêng NLB khi bật sẽ phát sinh phí truyền dữ liệu giữa các AZ.",
+    "explanationEn": "ALB always enables cross-zone at no charge. NLB (and CLB) have it off by default; for NLB specifically, enabling it incurs inter-AZ data transfer charges."
+  },
+  {
+    "id": "q5",
+    "question": "Bạn cần host nhiều website HTTPS với các domain và certificate khác nhau trên cùng một listener của load balancer. Tính năng nào cho phép điều này?",
+    "questionEn": "You need to host multiple HTTPS websites with different domains and certificates on the same load balancer listener. Which feature enables this?",
+    "options": [
+      "Connection draining",
+      "SNI (Server Name Indication)",
+      "Cross-zone load balancing",
+      "Stickiness"
+    ],
+    "optionsEn": [
+      "Connection draining",
+      "SNI (Server Name Indication)",
+      "Cross-zone load balancing",
+      "Stickiness"
+    ],
+    "answer": 1,
+    "explanation": "SNI cho phép gắn nhiều certificate cho nhiều domain trên cùng một listener. ALB và NLB hỗ trợ SNI; CLB thì không (chỉ 1 cert/LB).",
+    "explanationEn": "SNI allows multiple certificates for multiple domains on the same listener. ALB and NLB support SNI; CLB does not (only 1 cert per LB)."
+  },
+  {
+    "id": "q6",
+    "question": "Khi một EC2 instance bị gỡ khỏi target group, bạn muốn các request đang xử lý dở hoàn tất thay vì bị cắt đột ngột. Cấu hình nào giải quyết việc này trên ALB?",
+    "questionEn": "When an EC2 instance is removed from a target group, you want in-flight requests to finish rather than be cut abruptly. Which setting handles this on ALB?",
+    "options": [
+      "Cooldown period",
+      "Deregistration delay (connection draining)",
+      "Health check interval",
+      "Target tracking policy"
+    ],
+    "optionsEn": [
+      "Cooldown period",
+      "Deregistration delay (connection draining)",
+      "Health check interval",
+      "Target tracking policy"
+    ],
+    "answer": 1,
+    "explanation": "Deregistration delay (tên cũ trên CLB là connection draining) cho phép request đang chạy hoàn tất trước khi instance bị gỡ hẳn, mặc định 300 giây. Cooldown là khái niệm của ASG, không liên quan.",
+    "explanationEn": "Deregistration delay (called connection draining on CLB) lets in-flight requests complete before the instance is fully removed, defaulting to 300 seconds. Cooldown is an ASG concept and unrelated here."
+  },
+  {
+    "id": "q7",
+    "question": "Khi tạo Auto Scaling Group mới trên AWS hiện nay (2023+), nên dùng cái nào để định nghĩa cấu hình instance?",
+    "questionEn": "When creating a new Auto Scaling Group on AWS today (2023+), what should you use to define the instance configuration?",
+    "options": [
+      "Launch configuration (được khuyến nghị)",
+      "Launch template (launch configuration đã deprecated)",
+      "AMI trực tiếp không cần template",
+      "CloudFormation stack là bắt buộc"
+    ],
+    "optionsEn": [
+      "Launch configuration (recommended)",
+      "Launch template (launch configuration is deprecated)",
+      "An AMI directly with no template",
+      "A CloudFormation stack is required"
+    ],
+    "answer": 1,
+    "explanation": "Launch template được ưu tiên và hỗ trợ versioning, mix instance type và spot. Launch configuration đã bị deprecated và AWS khuyến nghị không dùng cho thiết kế mới.",
+    "explanationEn": "Launch templates are preferred and support versioning, mixed instance types, and spot. Launch configurations are deprecated and AWS recommends against them for new designs."
+  },
+  {
+    "id": "q8",
+    "question": "Một web app chạy trên ASG. Đôi khi OS của instance vẫn sống nhưng ứng dụng bị treo và trả về lỗi. Làm sao để ASG phát hiện và thay thế những instance 'lỗi ứng dụng' này?",
+    "questionEn": "A web app runs on an ASG. Sometimes the instance OS is still up but the application hangs and returns errors. How can ASG detect and replace these 'application-failed' instances?",
+    "options": [
+      "Chỉ dùng EC2 health check",
+      "Bật ELB health check cho ASG",
+      "Tăng cooldown period",
+      "Chuyển sang launch configuration"
+    ],
+    "optionsEn": [
+      "Use only the EC2 health check",
+      "Enable the ELB health check on the ASG",
+      "Increase the cooldown period",
+      "Switch to a launch configuration"
+    ],
+    "answer": 1,
+    "explanation": "EC2 health check chỉ nhìn trạng thái phần cứng/OS. Bật ELB health check để ASG dựa vào health check của load balancer (kiểm tra ứng dụng) và thay thế instance app-unhealthy dù OS vẫn sống.",
+    "explanationEn": "The EC2 health check only sees hardware/OS status. Enable the ELB health check so ASG relies on the load balancer's application-level check and replaces app-unhealthy instances even when the OS is up."
+  },
+  {
+    "id": "q9",
+    "question": "Bạn muốn ASG giữ mức sử dụng CPU trung bình quanh 50% và để AWS tự động tính toán số instance cần thêm/bớt. Chính sách scaling nào ĐƠN GIẢN NHẤT?",
+    "questionEn": "You want ASG to keep average CPU utilization around 50% and let AWS automatically compute how many instances to add/remove. Which scaling policy is the SIMPLEST?",
+    "options": [
+      "Simple scaling",
+      "Step scaling",
+      "Target tracking scaling",
+      "Scheduled scaling"
+    ],
+    "optionsEn": [
+      "Simple scaling",
+      "Step scaling",
+      "Target tracking scaling",
+      "Scheduled scaling"
+    ],
+    "answer": 2,
+    "explanation": "Target tracking chỉ cần chọn metric và giá trị mục tiêu (ví dụ CPU 50%), AWS tự tính toán và điều chỉnh — đơn giản và phổ biến nhất. Simple/step cần cấu hình alarm và bước thủ công.",
+    "explanationEn": "Target tracking only requires picking a metric and target value (e.g. CPU 50%); AWS computes and adjusts automatically — the simplest and most common. Simple/step scaling require manually configuring alarms and steps."
+  },
+  {
+    "id": "q10",
+    "question": "Lưu lượng của một hệ thống báo cáo tăng đột biến vào đúng 8h sáng mỗi ngày làm việc và giảm sau 18h. Cách hiệu quả nhất để chuẩn bị capacity là gì?",
+    "questionEn": "A reporting system's traffic spikes at exactly 8 AM every business day and drops after 6 PM. What is the most effective way to prepare capacity?",
+    "options": [
+      "Scheduled scaling",
+      "Chỉ dùng target tracking với CPU",
+      "Tăng maximum lên rất cao vĩnh viễn",
+      "Dùng NLB thay cho ASG"
+    ],
+    "optionsEn": [
+      "Scheduled scaling",
+      "Use only target tracking on CPU",
+      "Permanently raise the maximum very high",
+      "Use NLB instead of ASG"
+    ],
+    "answer": 0,
+    "explanation": "Vì tải có quy luật thời gian rõ ràng (8h sáng ngày làm việc), scheduled scaling cho phép tăng desired capacity trước thời điểm cao điểm, đảm bảo sẵn sàng ngay mà không chờ metric phản ứng.",
+    "explanationEn": "Because the load follows a clear time pattern (8 AM on business days), scheduled scaling lets you raise desired capacity ahead of the peak, ensuring readiness without waiting for metrics to react."
+  },
+  {
+    "id": "q11",
+    "question": "Một ASG có nhu cầu tải mang tính chu kỳ nhưng biến động, và bạn muốn scale CHỦ ĐỘNG (trước khi tải tăng) dựa trên dữ liệu lịch sử. Chính sách nào phù hợp nhất?",
+    "questionEn": "An ASG has cyclic but variable load, and you want to scale PROACTIVELY (before load rises) based on historical data. Which policy fits best?",
+    "options": [
+      "Simple scaling",
+      "Predictive scaling",
+      "Manual scaling",
+      "Step scaling"
+    ],
+    "optionsEn": [
+      "Simple scaling",
+      "Predictive scaling",
+      "Manual scaling",
+      "Step scaling"
+    ],
+    "answer": 1,
+    "explanation": "Predictive scaling dùng machine learning phân tích lịch sử để dự đoán tải tương lai và scale trước (proactive). Simple/step chỉ phản ứng sau khi metric vượt ngưỡng (reactive).",
+    "explanationEn": "Predictive scaling uses machine learning on historical data to forecast future load and scale ahead (proactive). Simple/step only react after a metric breaches a threshold (reactive)."
+  },
+  {
+    "id": "q12",
+    "question": "Sau mỗi lần ASG thực hiện scaling, hệ thống cần một khoảng thời gian để metric ổn định trước khi thực hiện hành động scaling tiếp theo. Khái niệm này gọi là gì?",
+    "questionEn": "After each ASG scaling action, the system needs a period for metrics to stabilize before performing the next scaling action. What is this concept called?",
+    "options": [
+      "Deregistration delay",
+      "Cooldown period",
+      "Health check grace",
+      "Connection draining"
+    ],
+    "optionsEn": [
+      "Deregistration delay",
+      "Cooldown period",
+      "Health check grace",
+      "Connection draining"
+    ],
+    "answer": 1,
+    "explanation": "Cooldown period (mặc định 300 giây) tạm dừng các hành động scaling tiếp theo để metric ổn định, tránh scale liên tục quá mức. Deregistration delay/connection draining là khái niệm của load balancer.",
+    "explanationEn": "The cooldown period (default 300 seconds) pauses further scaling actions so metrics can settle, avoiding excessive back-to-back scaling. Deregistration delay/connection draining are load balancer concepts."
+  },
+  {
+    "id": "q13",
+    "question": "Để đạt tính sẵn sàng cao (HA) cho tầng web chạy trên ASG, cấu hình nào là quan trọng nhất?",
+    "questionEn": "To achieve high availability (HA) for a web tier running on an ASG, which configuration is most important?",
+    "options": [
+      "Đặt tất cả instance trong một AZ duy nhất để giảm độ trễ",
+      "Cấu hình ASG trải trên nhiều AZ với subnet ở mỗi AZ",
+      "Dùng vertical scaling thay vì horizontal",
+      "Tắt health check để tránh thay thế instance"
+    ],
+    "optionsEn": [
+      "Place all instances in a single AZ to reduce latency",
+      "Configure the ASG to span multiple AZs with subnets in each AZ",
+      "Use vertical scaling instead of horizontal",
+      "Disable health checks to avoid instance replacement"
+    ],
+    "answer": 1,
+    "explanation": "ASG trải trên nhiều AZ (mỗi AZ một subnet) đảm bảo nếu một AZ chết, instance vẫn chạy ở AZ khác. Đây là nền tảng của HA: multi-AZ để chịu lỗi.",
+    "explanationEn": "An ASG spanning multiple AZs (a subnet in each) ensures that if one AZ fails, instances still run in another. This is the foundation of HA: multi-AZ for fault tolerance."
+  },
+  {
+    "id": "q14",
+    "question": "Một ứng dụng lưu session cục bộ trên từng instance, nên mỗi user cần luôn được gửi tới đúng instance đã tạo session. Tính năng nào của ELB giải quyết điều này?",
+    "questionEn": "An application stores sessions locally on each instance, so each user must always be routed to the same instance that created their session. Which ELB feature solves this?",
+    "options": [
+      "Cross-zone load balancing",
+      "Stickiness (session affinity)",
+      "SNI",
+      "Deregistration delay"
+    ],
+    "optionsEn": [
+      "Cross-zone load balancing",
+      "Stickiness (session affinity)",
+      "SNI",
+      "Deregistration delay"
+    ],
+    "answer": 1,
+    "explanation": "Stickiness (session affinity) dùng cookie (ALB/CLB) hoặc source IP (NLB) để buộc client luôn vào cùng một target, phù hợp khi session lưu cục bộ trên instance.",
+    "explanationEn": "Stickiness (session affinity) uses a cookie (ALB/CLB) or source IP (NLB) to bind a client to the same target, which suits sessions stored locally on the instance."
+  },
+  {
+    "id": "q15",
+    "question": "Trong Auto Scaling Group, ba giá trị min, desired, max có ý nghĩa gì?",
+    "questionEn": "In an Auto Scaling Group, what do the three values min, desired, and max mean?",
+    "options": [
+      "min là số instance mục tiêu, desired là trần, max là sàn",
+      "min là số tối thiểu luôn duy trì, desired là số mong muốn hiện tại, max là trần khi scale-out",
+      "Cả ba đều phải bằng nhau",
+      "desired là số instance tối đa AWS cho phép trên toàn account"
+    ],
+    "optionsEn": [
+      "min is the target count, desired is the ceiling, max is the floor",
+      "min is the minimum always maintained, desired is the current target count, max is the ceiling when scaling out",
+      "All three must be equal",
+      "desired is the maximum instances AWS allows across the whole account"
+    ],
+    "answer": 1,
+    "explanation": "min = số instance tối thiểu luôn duy trì; desired = số mong muốn hiện tại mà ASG cố giữ; max = giới hạn trên khi scale-out. Scaling policy điều chỉnh desired trong khoảng [min, max].",
+    "explanationEn": "min = the minimum always maintained; desired = the current target count ASG tries to hold; max = the upper limit when scaling out. Scaling policies adjust desired within the [min, max] range."
+  }
+]

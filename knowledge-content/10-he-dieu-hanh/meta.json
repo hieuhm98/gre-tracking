@@ -1,1 +1,7 @@
-{"title": "Hệ điều hành", "description": "OS là gì, quản lý process, file system, CLI vs GUI và vai trò của hệ điều hành."}
+{
+  "group": "ba-po-pm",
+  "title": "Hệ điều hành",
+  "titleEn": "Operating Systems",
+  "description": "OS là gì, quản lý process, file system, CLI vs GUI và vai trò của hệ điều hành.",
+  "descriptionEn": "What an OS is, process management, file systems, CLI vs GUI, and the role of the operating system."
+}

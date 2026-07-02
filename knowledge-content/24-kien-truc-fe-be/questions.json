@@ -2,176 +2,291 @@
   {
     "id": "febe-01",
     "question": "Frontend (FE) chạy ở đâu?",
+    "questionEn": "Where does the Frontend (FE) run?",
     "options": [
       "Trên server của công ty",
       "Trong trình duyệt của người dùng",
       "Trong database",
       "Trên cloud (AWS, GCP)"
     ],
+    "optionsEn": [
+      "On the company's server",
+      "In the user's browser",
+      "In the database",
+      "On the cloud (AWS, GCP)"
+    ],
     "answer": 1,
-    "explanation": "Frontend chạy trong trình duyệt (browser) của người dùng — HTML, CSS, JavaScript được tải về máy user và chạy ở đó. Backend chạy trên server của công ty, người dùng không nhìn thấy."
+    "explanation": "Frontend chạy trong trình duyệt (browser) của người dùng — HTML, CSS, JavaScript được tải về máy user và chạy ở đó. Backend chạy trên server của công ty, người dùng không nhìn thấy.",
+    "explanationEn": "The frontend runs in the user's browser — HTML, CSS, and JavaScript are downloaded to the user's machine and run there. The backend runs on the company's server, out of the user's sight."
   },
   {
     "id": "febe-02",
     "question": "Đâu là trách nhiệm của Backend, KHÔNG phải Frontend?",
+    "questionEn": "Which is a responsibility of the Backend, NOT the Frontend?",
     "options": [
       "Hiển thị loading spinner khi chờ API",
       "Validate format email trong form",
       "Tính toán business rule và lưu vào database",
       "Hiển thị error message khi API thất bại"
     ],
+    "optionsEn": [
+      "Displaying a loading spinner while waiting for an API",
+      "Validating the email format in a form",
+      "Computing business rules and saving to the database",
+      "Displaying an error message when an API fails"
+    ],
     "answer": 2,
-    "explanation": "Business logic và database operations là trách nhiệm của BE. FE có thể validate format để tăng UX, nhưng BE bắt buộc phải validate và xử lý logic nghiệp vụ — không thể để FE làm thay."
+    "explanation": "Business logic và database operations là trách nhiệm của BE. FE có thể validate format để tăng UX, nhưng BE bắt buộc phải validate và xử lý logic nghiệp vụ — không thể để FE làm thay.",
+    "explanationEn": "Business logic and database operations are the BE's responsibility. The FE may validate formats to improve UX, but the BE must validate and handle business logic — it cannot be delegated to the FE."
   },
   {
     "id": "febe-03",
     "question": "JWT Token được dùng để làm gì trong web application?",
+    "questionEn": "What is a JWT Token used for in a web application?",
     "options": [
       "Mã hóa dữ liệu trong database",
       "Nén file JavaScript để tải nhanh hơn",
       "Xác thực danh tính user sau khi đăng nhập (authentication token)",
       "Kết nối FE với database trực tiếp"
     ],
+    "optionsEn": [
+      "Encrypting data in the database",
+      "Compressing JavaScript files to load faster",
+      "Verifying a user's identity after login (an authentication token)",
+      "Connecting the FE directly to the database"
+    ],
     "answer": 2,
-    "explanation": "JWT (JSON Web Token) được BE tạo sau khi user đăng nhập. FE lưu token và gửi kèm mỗi request trong header Authorization. BE verify token để xác nhận danh tính user mà không cần check database mỗi lần."
+    "explanation": "JWT (JSON Web Token) được BE tạo sau khi user đăng nhập. FE lưu token và gửi kèm mỗi request trong header Authorization. BE verify token để xác nhận danh tính user mà không cần check database mỗi lần.",
+    "explanationEn": "A JWT (JSON Web Token) is created by the BE after the user logs in. The FE stores the token and sends it with each request in the Authorization header. The BE verifies the token to confirm the user's identity without checking the database every time."
   },
   {
     "id": "febe-04",
     "question": "REST API sử dụng HTTP method nào để TẠO MỚI một resource?",
+    "questionEn": "Which HTTP method does a REST API use to CREATE a new resource?",
     "options": ["GET", "PUT", "POST", "PATCH"],
+    "optionsEn": ["GET", "PUT", "POST", "PATCH"],
     "answer": 2,
-    "explanation": "GET: đọc dữ liệu. POST: tạo mới. PUT: cập nhật toàn bộ. PATCH: cập nhật một phần. DELETE: xóa. Ví dụ: POST /api/users tạo user mới, GET /api/users lấy danh sách."
+    "explanation": "GET: đọc dữ liệu. POST: tạo mới. PUT: cập nhật toàn bộ. PATCH: cập nhật một phần. DELETE: xóa. Ví dụ: POST /api/users tạo user mới, GET /api/users lấy danh sách.",
+    "explanationEn": "GET: read data. POST: create. PUT: full update. PATCH: partial update. DELETE: delete. Example: POST /api/users creates a new user, GET /api/users retrieves the list."
   },
   {
     "id": "febe-05",
     "question": "HTTP status code 404 có nghĩa là gì?",
+    "questionEn": "What does HTTP status code 404 mean?",
     "options": [
       "Server lỗi nội bộ",
       "Không có quyền truy cập",
       "Không tìm thấy resource được yêu cầu",
       "Request thành công"
     ],
+    "optionsEn": [
+      "Internal server error",
+      "No access permission",
+      "The requested resource was not found",
+      "The request succeeded"
+    ],
     "answer": 2,
-    "explanation": "404 Not Found — URL không tồn tại hoặc resource đã bị xóa. Các code quan trọng: 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 422 Validation Error, 500 Server Error."
+    "explanation": "404 Not Found — URL không tồn tại hoặc resource đã bị xóa. Các code quan trọng: 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 422 Validation Error, 500 Server Error.",
+    "explanationEn": "404 Not Found — the URL does not exist or the resource has been deleted. Key codes: 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 422 Validation Error, 500 Server Error."
   },
   {
     "id": "febe-06",
     "question": "Authentication và Authorization khác nhau như thế nào?",
+    "questionEn": "How do Authentication and Authorization differ?",
     "options": [
       "Chúng là một, chỉ khác tên gọi",
       "Authentication xác thực bạn là ai; Authorization xác định bạn được làm gì",
       "Authorization xác thực bạn là ai; Authentication xác định bạn được làm gì",
       "Authentication chỉ dùng cho login, Authorization chỉ dùng cho logout"
     ],
+    "optionsEn": [
+      "They are the same, just different names",
+      "Authentication verifies who you are; Authorization determines what you are allowed to do",
+      "Authorization verifies who you are; Authentication determines what you are allowed to do",
+      "Authentication is only for login, Authorization is only for logout"
+    ],
     "answer": 1,
-    "explanation": "Authentication (AuthN): 'Bạn là ai?' — đăng nhập bằng email/password, xác nhận danh tính. Authorization (AuthZ): 'Bạn được phép làm gì?' — phân quyền, ví dụ: admin mới xóa được user."
+    "explanation": "Authentication (AuthN): 'Bạn là ai?' — đăng nhập bằng email/password, xác nhận danh tính. Authorization (AuthZ): 'Bạn được phép làm gì?' — phân quyền, ví dụ: admin mới xóa được user.",
+    "explanationEn": "Authentication (AuthN): 'Who are you?' — logging in with email/password to confirm identity. Authorization (AuthZ): 'What are you allowed to do?' — permissions, e.g. only an admin can delete a user."
   },
   {
     "id": "febe-07",
     "question": "Môi trường Staging (UAT) dùng để làm gì?",
+    "questionEn": "What is the Staging (UAT) environment used for?",
     "options": [
       "Môi trường để developer viết code hằng ngày",
       "Môi trường để người dùng thực sử dụng",
       "Môi trường kiểm thử nghiệm thu, giống Production nhất có thể",
       "Môi trường để chạy automated tests"
     ],
+    "optionsEn": [
+      "An environment for developers to write code day to day",
+      "An environment for real users to use",
+      "An acceptance-testing environment, as close to Production as possible",
+      "An environment for running automated tests"
+    ],
     "answer": 2,
-    "explanation": "Staging/UAT (User Acceptance Testing) là môi trường sát với Production nhất, dùng để BA, QA và stakeholder verify tính năng trước khi release. Không bao giờ test feature mới trực tiếp trên Production."
+    "explanation": "Staging/UAT (User Acceptance Testing) là môi trường sát với Production nhất, dùng để BA, QA và stakeholder verify tính năng trước khi release. Không bao giờ test feature mới trực tiếp trên Production.",
+    "explanationEn": "Staging/UAT (User Acceptance Testing) is the environment closest to Production, used by the BA, QA, and stakeholders to verify features before release. Never test new features directly on Production."
   },
   {
     "id": "febe-08",
     "question": "API Contract là gì và ai cần tham gia thống nhất?",
+    "questionEn": "What is an API Contract and who needs to agree on it?",
     "options": [
       "Hợp đồng pháp lý giữa công ty và vendor API",
       "Thỏa thuận về format request/response giữa FE và BE team",
       "Tài liệu kỹ thuật chỉ BE cần đọc",
       "Test case cho API"
     ],
+    "optionsEn": [
+      "A legal contract between the company and an API vendor",
+      "An agreement on the request/response format between the FE and BE teams",
+      "A technical document that only the BE needs to read",
+      "Test cases for the API"
+    ],
     "answer": 1,
-    "explanation": "API Contract là thỏa thuận giữa FE và BE về endpoint URL, HTTP method, request body, response format (success và error), HTTP status codes. Cần FE, BE và BA tham gia. Xong contract → FE và BE có thể làm song song."
+    "explanation": "API Contract là thỏa thuận giữa FE và BE về endpoint URL, HTTP method, request body, response format (success và error), HTTP status codes. Cần FE, BE và BA tham gia. Xong contract → FE và BE có thể làm song song.",
+    "explanationEn": "An API Contract is an agreement between the FE and BE on the endpoint URL, HTTP method, request body, response format (success and error), and HTTP status codes. The FE, BE, and BA all need to be involved. Once the contract is done, the FE and BE can work in parallel."
   },
   {
     "id": "febe-09",
     "question": "Trong SPA (Single Page Application), điều gì xảy ra khi user chuyển trang?",
+    "questionEn": "In an SPA (Single Page Application), what happens when the user navigates to another page?",
     "options": [
       "Trình duyệt tải lại toàn bộ trang từ server",
       "JavaScript thay đổi nội dung trang mà không tải lại, chỉ gọi API để lấy dữ liệu",
       "Server render HTML mới và gửi về",
       "Trình duyệt load file HTML mới"
     ],
+    "optionsEn": [
+      "The browser reloads the entire page from the server",
+      "JavaScript changes the page content without reloading, only calling an API to fetch data",
+      "The server renders new HTML and sends it back",
+      "The browser loads a new HTML file"
+    ],
     "answer": 1,
-    "explanation": "SPA (React, Vue, Angular) dùng client-side routing. Khi chuyển trang, JS thay đổi nội dung DOM và URL (History API) mà không reload. Chỉ gọi API để lấy dữ liệu cần thiết — nhanh hơn nhưng cần xử lý SEO và deep linking đặc biệt."
+    "explanation": "SPA (React, Vue, Angular) dùng client-side routing. Khi chuyển trang, JS thay đổi nội dung DOM và URL (History API) mà không reload. Chỉ gọi API để lấy dữ liệu cần thiết — nhanh hơn nhưng cần xử lý SEO và deep linking đặc biệt.",
+    "explanationEn": "SPAs (React, Vue, Angular) use client-side routing. When navigating, JS changes the DOM content and the URL (History API) without reloading. It only calls an API to fetch the needed data — faster, but SEO and deep linking need special handling."
   },
   {
     "id": "febe-10",
     "question": "BA mô tả 'tính năng gửi email xác nhận đơn hàng'. Đây là task của ai?",
+    "questionEn": "A BA describes 'the feature of sending an order confirmation email'. Whose task is this?",
     "options": [
       "Frontend developer",
       "Backend developer",
       "Database administrator",
       "Cả FE và BE làm như nhau"
     ],
+    "optionsEn": [
+      "Frontend developer",
+      "Backend developer",
+      "Database administrator",
+      "Both FE and BE equally"
+    ],
     "answer": 1,
-    "explanation": "Gửi email là task của Backend — BE tích hợp email service (SendGrid, SES, NodeMailer), tạo template, trigger khi đơn hàng được tạo. FE chỉ hiển thị thông báo 'Email xác nhận đã được gửi'."
+    "explanation": "Gửi email là task của Backend — BE tích hợp email service (SendGrid, SES, NodeMailer), tạo template, trigger khi đơn hàng được tạo. FE chỉ hiển thị thông báo 'Email xác nhận đã được gửi'.",
+    "explanationEn": "Sending email is a Backend task — the BE integrates an email service (SendGrid, SES, NodeMailer), creates the template, and triggers it when an order is created. The FE only shows the message 'A confirmation email has been sent'."
   },
   {
     "id": "febe-11",
     "question": "Khi BE trả về lỗi validation (422), FE nên làm gì?",
+    "questionEn": "When the BE returns a validation error (422), what should the FE do?",
     "options": [
       "Hiển thị lỗi chung: 'Có lỗi xảy ra'",
       "Tự sửa dữ liệu và gửi lại",
       "Hiển thị thông báo lỗi cụ thể theo từng field từ response",
       "Reload lại trang"
     ],
+    "optionsEn": [
+      "Show a generic error: 'Something went wrong'",
+      "Automatically fix the data and resend",
+      "Show a specific error message for each field from the response",
+      "Reload the page"
+    ],
     "answer": 2,
-    "explanation": "FE nhận lỗi từ BE và hiển thị đúng vị trí: ví dụ lỗi 'Email đã được sử dụng' hiển thị ngay dưới field email. BE trả về error fields cụ thể, FE map vào UI. BA cần mô tả error message cụ thể trong AC."
+    "explanation": "FE nhận lỗi từ BE và hiển thị đúng vị trí: ví dụ lỗi 'Email đã được sử dụng' hiển thị ngay dưới field email. BE trả về error fields cụ thể, FE map vào UI. BA cần mô tả error message cụ thể trong AC.",
+    "explanationEn": "The FE receives the error from the BE and displays it in the right place: for example, the error 'Email is already in use' appears right below the email field. The BE returns specific error fields, and the FE maps them into the UI. The BA needs to describe specific error messages in the AC."
   },
   {
     "id": "febe-12",
     "question": "Cron job trong Backend là gì?",
+    "questionEn": "What is a cron job in the Backend?",
     "options": [
       "Một loại database query đặc biệt",
       "Tác vụ tự động chạy theo lịch định kỳ (mỗi ngày, mỗi giờ...)",
       "Cách deploy code lên server",
       "Phương thức HTTP để gọi API theo lịch"
     ],
+    "optionsEn": [
+      "A special kind of database query",
+      "A task that runs automatically on a recurring schedule (daily, hourly...)",
+      "A way to deploy code to the server",
+      "An HTTP method for calling APIs on a schedule"
+    ],
     "answer": 1,
-    "explanation": "Cron job là tác vụ nền chạy tự động theo lịch. Ví dụ: gửi email nhắc nhở lúc 8h sáng mỗi ngày, tính toán báo cáo cuối tháng, dọn dẹp dữ liệu cũ. BA cần xác định tần suất và trigger condition trong requirement."
+    "explanation": "Cron job là tác vụ nền chạy tự động theo lịch. Ví dụ: gửi email nhắc nhở lúc 8h sáng mỗi ngày, tính toán báo cáo cuối tháng, dọn dẹp dữ liệu cũ. BA cần xác định tần suất và trigger condition trong requirement.",
+    "explanationEn": "A cron job is a background task that runs automatically on a schedule. Examples: sending a reminder email at 8 AM every day, computing end-of-month reports, cleaning up old data. The BA needs to specify the frequency and trigger conditions in the requirement."
   },
   {
     "id": "febe-13",
     "question": "Tại sao phân quyền (authorization) PHẢI được kiểm tra ở Backend, không chỉ ẩn button ở Frontend?",
+    "questionEn": "Why MUST authorization be checked on the Backend, not just by hiding a button on the Frontend?",
     "options": [
       "Vì Frontend không có đủ thông tin",
       "Vì user có thể bypass FE bằng cách gọi API trực tiếp (Postman, curl...)",
       "Vì Backend nhanh hơn Frontend",
       "Không cần — ẩn button ở FE là đủ bảo mật"
     ],
+    "optionsEn": [
+      "Because the Frontend does not have enough information",
+      "Because the user can bypass the FE by calling the API directly (Postman, curl...)",
+      "Because the Backend is faster than the Frontend",
+      "It is not needed — hiding the button on the FE is secure enough"
+    ],
     "answer": 1,
-    "explanation": "Ẩn button ở FE chỉ là UX, không phải bảo mật. User có thể dùng Postman, curl hoặc browser console để gọi thẳng API. BE phải verify quyền mỗi request. Ví dụ: ẩn nút 'Xóa' với non-admin nhưng API DELETE cũng phải kiểm tra role."
+    "explanation": "Ẩn button ở FE chỉ là UX, không phải bảo mật. User có thể dùng Postman, curl hoặc browser console để gọi thẳng API. BE phải verify quyền mỗi request. Ví dụ: ẩn nút 'Xóa' với non-admin nhưng API DELETE cũng phải kiểm tra role.",
+    "explanationEn": "Hiding a button on the FE is UX, not security. A user can use Postman, curl, or the browser console to call the API directly. The BE must verify permissions on every request. Example: hide the 'Delete' button from non-admins, but the DELETE API must also check the role."
   },
   {
     "id": "febe-14",
     "question": "BA cần xác định 4 trạng thái UI nào cho mỗi màn hình load dữ liệu từ API?",
+    "questionEn": "What 4 UI states does a BA need to define for every screen that loads data from an API?",
     "options": [
       "Start, Running, Pause, Stop",
       "Loading, Success, Error, Empty",
       "Get, Post, Put, Delete",
       "Draft, Review, Approved, Published"
     ],
+    "optionsEn": [
+      "Start, Running, Pause, Stop",
+      "Loading, Success, Error, Empty",
+      "Get, Post, Put, Delete",
+      "Draft, Review, Approved, Published"
+    ],
     "answer": 1,
-    "explanation": "Mỗi màn hình gọi API cần 4 states: Loading (skeleton/spinner khi đang gọi), Success (hiển thị dữ liệu), Error (API thất bại — hiển thị lỗi + nút Thử lại), Empty (thành công nhưng không có data — hiển thị empty state và call-to-action)."
+    "explanation": "Mỗi màn hình gọi API cần 4 states: Loading (skeleton/spinner khi đang gọi), Success (hiển thị dữ liệu), Error (API thất bại — hiển thị lỗi + nút Thử lại), Empty (thành công nhưng không có data — hiển thị empty state và call-to-action).",
+    "explanationEn": "Every screen that calls an API needs 4 states: Loading (skeleton/spinner while calling), Success (display data), Error (API failed — show the error + a Retry button), Empty (succeeded but no data — show an empty state and a call-to-action)."
   },
   {
     "id": "febe-15",
     "question": "Khi FE và BE cần làm song song (parallel), điều gì cần hoàn thành TRƯỚC?",
+    "questionEn": "When the FE and BE need to work in parallel, what must be completed FIRST?",
     "options": [
       "FE hoàn thành UI trước, rồi BE mới biết cần API gì",
       "BE hoàn thành tất cả API trước, FE mới bắt đầu",
       "API Contract (thống nhất format request/response) phải xong trước",
       "Database schema phải xong trước tất cả"
     ],
+    "optionsEn": [
+      "The FE finishes the UI first, then the BE learns what APIs are needed",
+      "The BE finishes all APIs first, then the FE begins",
+      "The API Contract (agreed request/response format) must be done first",
+      "The database schema must be done before everything"
+    ],
     "answer": 2,
-    "explanation": "API Contract phải thống nhất trước. Sau đó FE dùng mock data (hardcode hoặc mock server) để làm UI, BE build API thật. Khi cả hai xong, integration nhanh vì đã biết format. Đây là cách tối ưu để không team nào phải chờ team kia."
+    "explanation": "API Contract phải thống nhất trước. Sau đó FE dùng mock data (hardcode hoặc mock server) để làm UI, BE build API thật. Khi cả hai xong, integration nhanh vì đã biết format. Đây là cách tối ưu để không team nào phải chờ team kia.",
+    "explanationEn": "The API Contract must be agreed on first. Then the FE uses mock data (hardcoded or a mock server) to build the UI while the BE builds the real API. When both are done, integration is fast because the format is already known. This is the optimal way so neither team has to wait for the other."
   }
 ]

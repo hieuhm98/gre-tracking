@@ -1,17 +1,152 @@
 [
-  {"id":"q1","question":"Port (cổng) trong mạng máy tính dùng để làm gì?","options":["Xác định máy tính nào trong mạng","Phân biệt ứng dụng nào nhận dữ liệu trên cùng một máy","Đo tốc độ kết nối mạng","Mã hóa dữ liệu truyền tải"],"answer":1,"explanation":"IP xác định máy tính. Port phân biệt ứng dụng. Một máy có thể chạy web server (port 80), SSH (port 22), database (port 5432) cùng lúc — port giúp phân luồng đúng."},
-  {"id":"q2","question":"Dịch vụ nào chạy trên port 443?","options":["FTP","SSH","HTTP","HTTPS"],"answer":3,"explanation":"Port 443 là cổng mặc định của HTTPS — HTTP có mã hóa TLS/SSL. Port 80 là HTTP thông thường."},
-  {"id":"q3","question":"Dịch vụ nào chạy trên port 22?","options":["HTTP","DNS","SSH","SMTP"],"answer":2,"explanation":"Port 22 là SSH (Secure Shell) — dùng để điều khiển server từ xa qua kết nối mã hóa. Chặn port 22 = không ai SSH vào server được."},
-  {"id":"q4","question":"Một máy tính chạy MySQL database, port nào thường được sử dụng?","options":["80","443","3306","27017"],"answer":2,"explanation":"MySQL mặc định chạy trên port 3306. PostgreSQL dùng 5432, MongoDB dùng 27017, Redis dùng 6379."},
-  {"id":"q5","question":"Khi bạn truy cập https://example.com (không gõ port), browser tự dùng port nào?","options":["Port 8080","Port 80","Port 443","Port 3000"],"answer":2,"explanation":"HTTPS mặc định là port 443. Browser tự thêm :443 khi bạn dùng https://. Tương tự, http:// tự dùng port 80."},
-  {"id":"q6","question":"Firewall kiểm soát traffic mạng bằng cách nào?","options":["Mã hóa tất cả dữ liệu","Mở hoặc chặn các port cụ thể","Tăng tốc độ kết nối","Phân giải tên miền"],"answer":1,"explanation":"Firewall lọc traffic dựa trên rules: cho phép hoặc chặn dựa trên IP, port, protocol. Mở port 80/443 → cho phép web traffic; chặn port 22 → ngăn SSH."},
-  {"id":"q7","question":"Socket trong mạng máy tính là gì?","options":["Cổng USB vật lý","Tổ hợp IP + Port + Protocol tạo thành điểm kết nối","Loại cáp mạng đặc biệt","Phần mềm quản lý mạng"],"answer":1,"explanation":"Socket = IP Address + Port + Protocol. Ví dụ: (192.168.1.1, 80, TCP). Socket là endpoint của một kết nối — mỗi kết nối TCP có 2 socket (client và server)."},
-  {"id":"q8","question":"WebSocket khác HTTP ở điểm gì cơ bản nhất?","options":["WebSocket nhanh hơn HTTP","WebSocket cho phép kết nối hai chiều liên tục, HTTP chỉ request-response một chiều","WebSocket mã hóa tốt hơn HTTP","WebSocket chỉ dùng cho mobile"],"answer":1,"explanation":"HTTP: client gửi request → server trả response → kết thúc. WebSocket: kết nối được duy trì, cả hai bên có thể gửi dữ liệu bất cứ lúc nào — cần thiết cho chat, notification real-time."},
-  {"id":"q9","question":"Khi deploy ứng dụng web trên AWS, bạn cần làm gì để người dùng truy cập được?","options":["Không cần làm gì thêm","Mở port 80 và 443 trong Security Group/Firewall rules","Cài đặt DNS server riêng","Mua thêm địa chỉ IP tĩnh"],"answer":1,"explanation":"Cloud providers mặc định chặn tất cả port. Bạn phải cấu hình Security Group (AWS) hoặc Firewall rules để mở port 80 (HTTP) và 443 (HTTPS) thì người dùng mới vào được."},
-  {"id":"q10","question":"Port 53 được sử dụng bởi dịch vụ nào?","options":["FTP","SMTP","DNS","SSH"],"answer":2,"explanation":"Port 53 là DNS. Mọi yêu cầu phân giải tên miền đều đi qua port 53 của DNS server (thường dùng UDP, đôi khi TCP cho response lớn)."},
-  {"id":"q11","question":"Ứng dụng nào phù hợp nhất để dùng WebSocket?","options":["Trang web tin tức tĩnh","Hệ thống chat real-time và live notification","Form đăng ký tài khoản","Trang hiển thị catalog sản phẩm"],"answer":1,"explanation":"WebSocket lý tưởng khi cần đẩy dữ liệu từ server xuống client ngay khi có cập nhật (push) — chat, game, live stock ticker, thông báo real-time."},
-  {"id":"q12","question":"Port 8080 thường dùng để làm gì?","options":["Thay thế HTTPS","Alternative cho port 80 trong môi trường phát triển","Kết nối database PostgreSQL","SSH với mã hóa cao hơn"],"answer":1,"explanation":"Port 8080 thường dùng làm alternative cho port 80 (HTTP) khi dev hoặc khi port 80 bị chiếm. Không cần quyền root để mở port > 1024."},
-  {"id":"q13","question":"Dải port 0-1023 có đặc điểm gì?","options":["Dành cho client sử dụng tạm thời","Well-known ports - dành riêng cho các dịch vụ chuẩn như HTTP, SSH, FTP","Chỉ dùng được trên Windows","Dành cho database server"],"answer":1,"explanation":"Ports 0-1023 là well-known ports, được IANA gán cho các giao thức/dịch vụ chuẩn. Cần quyền root/admin để mở các port này trên Linux/Mac."},
-  {"id":"q14","question":"http://localhost:3000 — con số 3000 có ý nghĩa gì?","options":["Số phiên bản phần mềm","Cổng (port) mà ứng dụng đang lắng nghe trên máy tính cá nhân","Số lượng kết nối tối đa","Tốc độ kết nối Mbps"],"answer":1,"explanation":"3000 là số port. localhost là địa chỉ IP của chính máy bạn (127.0.0.1). Nghĩa là: kết nối đến ứng dụng đang chạy và lắng nghe trên cổng 3000 của máy bạn."},
-  {"id":"q15","question":"Redis thường chạy trên port nào?","options":["3306","5432","6379","27017"],"answer":2,"explanation":"Redis (in-memory cache/message queue) chạy mặc định trên port 6379. MySQL: 3306, PostgreSQL: 5432, MongoDB: 27017."}
+  {
+    "id": "q1",
+    "question": "Port (cổng) trong mạng máy tính dùng để làm gì?",
+    "questionEn": "What is a port used for in computer networking?",
+    "options": ["Xác định máy tính nào trong mạng", "Phân biệt ứng dụng nào nhận dữ liệu trên cùng một máy", "Đo tốc độ kết nối mạng", "Mã hóa dữ liệu truyền tải"],
+    "optionsEn": ["To identify which computer is on the network", "To distinguish which application receives data on the same machine", "To measure network connection speed", "To encrypt transmitted data"],
+    "answer": 1,
+    "explanation": "IP xác định máy tính. Port phân biệt ứng dụng. Một máy có thể chạy web server (port 80), SSH (port 22), database (port 5432) cùng lúc — port giúp phân luồng đúng.",
+    "explanationEn": "IP identifies the computer. The port distinguishes the application. One machine can run a web server (port 80), SSH (port 22), and a database (port 5432) at the same time — ports route the traffic correctly."
+  },
+  {
+    "id": "q2",
+    "question": "Dịch vụ nào chạy trên port 443?",
+    "questionEn": "Which service runs on port 443?",
+    "options": ["FTP", "SSH", "HTTP", "HTTPS"],
+    "optionsEn": ["FTP", "SSH", "HTTP", "HTTPS"],
+    "answer": 3,
+    "explanation": "Port 443 là cổng mặc định của HTTPS — HTTP có mã hóa TLS/SSL. Port 80 là HTTP thông thường.",
+    "explanationEn": "Port 443 is the default port for HTTPS — HTTP with TLS/SSL encryption. Port 80 is plain HTTP."
+  },
+  {
+    "id": "q3",
+    "question": "Dịch vụ nào chạy trên port 22?",
+    "questionEn": "Which service runs on port 22?",
+    "options": ["HTTP", "DNS", "SSH", "SMTP"],
+    "optionsEn": ["HTTP", "DNS", "SSH", "SMTP"],
+    "answer": 2,
+    "explanation": "Port 22 là SSH (Secure Shell) — dùng để điều khiển server từ xa qua kết nối mã hóa. Chặn port 22 = không ai SSH vào server được.",
+    "explanationEn": "Port 22 is SSH (Secure Shell) — used to control a server remotely over an encrypted connection. Blocking port 22 means nobody can SSH into the server."
+  },
+  {
+    "id": "q4",
+    "question": "Một máy tính chạy MySQL database, port nào thường được sử dụng?",
+    "questionEn": "A computer runs a MySQL database — which port is typically used?",
+    "options": ["80", "443", "3306", "27017"],
+    "optionsEn": ["80", "443", "3306", "27017"],
+    "answer": 2,
+    "explanation": "MySQL mặc định chạy trên port 3306. PostgreSQL dùng 5432, MongoDB dùng 27017, Redis dùng 6379.",
+    "explanationEn": "MySQL runs on port 3306 by default. PostgreSQL uses 5432, MongoDB uses 27017, and Redis uses 6379."
+  },
+  {
+    "id": "q5",
+    "question": "Khi bạn truy cập https://example.com (không gõ port), browser tự dùng port nào?",
+    "questionEn": "When you visit https://example.com (without typing a port), which port does the browser use automatically?",
+    "options": ["Port 8080", "Port 80", "Port 443", "Port 3000"],
+    "optionsEn": ["Port 8080", "Port 80", "Port 443", "Port 3000"],
+    "answer": 2,
+    "explanation": "HTTPS mặc định là port 443. Browser tự thêm :443 khi bạn dùng https://. Tương tự, http:// tự dùng port 80.",
+    "explanationEn": "HTTPS defaults to port 443. The browser automatically appends :443 when you use https://. Similarly, http:// automatically uses port 80."
+  },
+  {
+    "id": "q6",
+    "question": "Firewall kiểm soát traffic mạng bằng cách nào?",
+    "questionEn": "How does a firewall control network traffic?",
+    "options": ["Mã hóa tất cả dữ liệu", "Mở hoặc chặn các port cụ thể", "Tăng tốc độ kết nối", "Phân giải tên miền"],
+    "optionsEn": ["By encrypting all data", "By opening or blocking specific ports", "By increasing connection speed", "By resolving domain names"],
+    "answer": 1,
+    "explanation": "Firewall lọc traffic dựa trên rules: cho phép hoặc chặn dựa trên IP, port, protocol. Mở port 80/443 → cho phép web traffic; chặn port 22 → ngăn SSH.",
+    "explanationEn": "A firewall filters traffic based on rules: allowing or blocking based on IP, port, and protocol. Opening ports 80/443 → allows web traffic; blocking port 22 → prevents SSH."
+  },
+  {
+    "id": "q7",
+    "question": "Socket trong mạng máy tính là gì?",
+    "questionEn": "What is a socket in computer networking?",
+    "options": ["Cổng USB vật lý", "Tổ hợp IP + Port + Protocol tạo thành điểm kết nối", "Loại cáp mạng đặc biệt", "Phần mềm quản lý mạng"],
+    "optionsEn": ["A physical USB port", "The combination of IP + Port + Protocol that forms a connection endpoint", "A special type of network cable", "Network management software"],
+    "answer": 1,
+    "explanation": "Socket = IP Address + Port + Protocol. Ví dụ: (192.168.1.1, 80, TCP). Socket là endpoint của một kết nối — mỗi kết nối TCP có 2 socket (client và server).",
+    "explanationEn": "Socket = IP Address + Port + Protocol. For example: (192.168.1.1, 80, TCP). A socket is the endpoint of a connection — each TCP connection has 2 sockets (client and server)."
+  },
+  {
+    "id": "q8",
+    "question": "WebSocket khác HTTP ở điểm gì cơ bản nhất?",
+    "questionEn": "What is the most fundamental difference between WebSocket and HTTP?",
+    "options": ["WebSocket nhanh hơn HTTP", "WebSocket cho phép kết nối hai chiều liên tục, HTTP chỉ request-response một chiều", "WebSocket mã hóa tốt hơn HTTP", "WebSocket chỉ dùng cho mobile"],
+    "optionsEn": ["WebSocket is faster than HTTP", "WebSocket allows a persistent two-way connection, while HTTP is only one-way request-response", "WebSocket encrypts better than HTTP", "WebSocket is only used for mobile"],
+    "answer": 1,
+    "explanation": "HTTP: client gửi request → server trả response → kết thúc. WebSocket: kết nối được duy trì, cả hai bên có thể gửi dữ liệu bất cứ lúc nào — cần thiết cho chat, notification real-time.",
+    "explanationEn": "HTTP: the client sends a request → the server returns a response → done. WebSocket: the connection stays open and either side can send data at any time — essential for chat and real-time notifications."
+  },
+  {
+    "id": "q9",
+    "question": "Khi deploy ứng dụng web trên AWS, bạn cần làm gì để người dùng truy cập được?",
+    "questionEn": "When deploying a web application on AWS, what do you need to do so users can access it?",
+    "options": ["Không cần làm gì thêm", "Mở port 80 và 443 trong Security Group/Firewall rules", "Cài đặt DNS server riêng", "Mua thêm địa chỉ IP tĩnh"],
+    "optionsEn": ["Nothing extra is needed", "Open ports 80 and 443 in the Security Group/Firewall rules", "Install a dedicated DNS server", "Buy an additional static IP address"],
+    "answer": 1,
+    "explanation": "Cloud providers mặc định chặn tất cả port. Bạn phải cấu hình Security Group (AWS) hoặc Firewall rules để mở port 80 (HTTP) và 443 (HTTPS) thì người dùng mới vào được.",
+    "explanationEn": "Cloud providers block all ports by default. You must configure the Security Group (AWS) or firewall rules to open port 80 (HTTP) and 443 (HTTPS) so that users can reach the application."
+  },
+  {
+    "id": "q10",
+    "question": "Port 53 được sử dụng bởi dịch vụ nào?",
+    "questionEn": "Which service uses port 53?",
+    "options": ["FTP", "SMTP", "DNS", "SSH"],
+    "optionsEn": ["FTP", "SMTP", "DNS", "SSH"],
+    "answer": 2,
+    "explanation": "Port 53 là DNS. Mọi yêu cầu phân giải tên miền đều đi qua port 53 của DNS server (thường dùng UDP, đôi khi TCP cho response lớn).",
+    "explanationEn": "Port 53 is DNS. Every domain name resolution request goes through port 53 of the DNS server (usually over UDP, sometimes TCP for large responses)."
+  },
+  {
+    "id": "q11",
+    "question": "Ứng dụng nào phù hợp nhất để dùng WebSocket?",
+    "questionEn": "Which application is the best fit for using WebSocket?",
+    "options": ["Trang web tin tức tĩnh", "Hệ thống chat real-time và live notification", "Form đăng ký tài khoản", "Trang hiển thị catalog sản phẩm"],
+    "optionsEn": ["A static news website", "A real-time chat system and live notifications", "An account registration form", "A product catalog display page"],
+    "answer": 1,
+    "explanation": "WebSocket lý tưởng khi cần đẩy dữ liệu từ server xuống client ngay khi có cập nhật (push) — chat, game, live stock ticker, thông báo real-time.",
+    "explanationEn": "WebSocket is ideal when you need to push data from the server to the client the moment there is an update — chat, games, live stock tickers, and real-time notifications."
+  },
+  {
+    "id": "q12",
+    "question": "Port 8080 thường dùng để làm gì?",
+    "questionEn": "What is port 8080 typically used for?",
+    "options": ["Thay thế HTTPS", "Alternative cho port 80 trong môi trường phát triển", "Kết nối database PostgreSQL", "SSH với mã hóa cao hơn"],
+    "optionsEn": ["A replacement for HTTPS", "An alternative to port 80 in development environments", "Connecting to a PostgreSQL database", "SSH with stronger encryption"],
+    "answer": 1,
+    "explanation": "Port 8080 thường dùng làm alternative cho port 80 (HTTP) khi dev hoặc khi port 80 bị chiếm. Không cần quyền root để mở port > 1024.",
+    "explanationEn": "Port 8080 is commonly used as an alternative to port 80 (HTTP) during development or when port 80 is already taken. Opening ports above 1024 does not require root privileges."
+  },
+  {
+    "id": "q13",
+    "question": "Dải port 0-1023 có đặc điểm gì?",
+    "questionEn": "What is characteristic of the port range 0-1023?",
+    "options": ["Dành cho client sử dụng tạm thời", "Well-known ports - dành riêng cho các dịch vụ chuẩn như HTTP, SSH, FTP", "Chỉ dùng được trên Windows", "Dành cho database server"],
+    "optionsEn": ["Reserved for temporary client use", "Well-known ports — reserved for standard services such as HTTP, SSH, FTP", "Usable only on Windows", "Reserved for database servers"],
+    "answer": 1,
+    "explanation": "Ports 0-1023 là well-known ports, được IANA gán cho các giao thức/dịch vụ chuẩn. Cần quyền root/admin để mở các port này trên Linux/Mac.",
+    "explanationEn": "Ports 0-1023 are well-known ports, assigned by IANA to standard protocols/services. Opening these ports on Linux/Mac requires root/admin privileges."
+  },
+  {
+    "id": "q14",
+    "question": "http://localhost:3000 — con số 3000 có ý nghĩa gì?",
+    "questionEn": "http://localhost:3000 — what does the number 3000 mean?",
+    "options": ["Số phiên bản phần mềm", "Cổng (port) mà ứng dụng đang lắng nghe trên máy tính cá nhân", "Số lượng kết nối tối đa", "Tốc độ kết nối Mbps"],
+    "optionsEn": ["The software version number", "The port the application is listening on locally", "The maximum number of connections", "The connection speed in Mbps"],
+    "answer": 1,
+    "explanation": "3000 là số port. localhost là địa chỉ IP của chính máy bạn (127.0.0.1). Nghĩa là: kết nối đến ứng dụng đang chạy và lắng nghe trên cổng 3000 của máy bạn.",
+    "explanationEn": "3000 is the port number. localhost is your own machine's IP address (127.0.0.1). It means: connect to the application running and listening on port 3000 of your machine."
+  },
+  {
+    "id": "q15",
+    "question": "Redis thường chạy trên port nào?",
+    "questionEn": "Which port does Redis typically run on?",
+    "options": ["3306", "5432", "6379", "27017"],
+    "optionsEn": ["3306", "5432", "6379", "27017"],
+    "answer": 2,
+    "explanation": "Redis (in-memory cache/message queue) chạy mặc định trên port 6379. MySQL: 3306, PostgreSQL: 5432, MongoDB: 27017.",
+    "explanationEn": "Redis (an in-memory cache/message queue) runs on port 6379 by default. MySQL: 3306, PostgreSQL: 5432, MongoDB: 27017."
+  }
 ]

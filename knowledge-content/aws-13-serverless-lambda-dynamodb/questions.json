@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "Thời gian chạy tối đa của một lần gọi (invocation) AWS Lambda là bao nhiêu?",
+    "questionEn": "What is the maximum execution time for a single AWS Lambda invocation?",
+    "options": [
+      "5 phút",
+      "15 phút",
+      "30 phút",
+      "60 phút"
+    ],
+    "optionsEn": [
+      "5 minutes",
+      "15 minutes",
+      "30 minutes",
+      "60 minutes"
+    ],
+    "answer": 1,
+    "explanation": "Lambda có giới hạn cứng 15 phút cho mỗi lần gọi; tác vụ dài hơn cần dùng Step Functions, Fargate hoặc EC2.",
+    "explanationEn": "Lambda has a hard limit of 15 minutes per invocation; longer tasks require Step Functions, Fargate, or EC2."
+  },
+  {
+    "id": "q2",
+    "question": "Một ứng dụng có lưu lượng truy cập khó dự đoán và đột biến (spiky). Chế độ dung lượng DynamoDB nào phù hợp nhất để tránh throttling mà không cần cấu hình trước?",
+    "questionEn": "An application has unpredictable, spiky traffic. Which DynamoDB capacity mode is MOST suitable to avoid throttling without pre-provisioning?",
+    "options": [
+      "Provisioned với RCU/WCU cố định",
+      "Provisioned không bật auto-scaling",
+      "On-Demand",
+      "Reserved capacity"
+    ],
+    "optionsEn": [
+      "Provisioned with fixed RCU/WCU",
+      "Provisioned without auto-scaling",
+      "On-Demand",
+      "Reserved capacity"
+    ],
+    "answer": 2,
+    "explanation": "On-Demand tự động co giãn theo lưu lượng thực tế, lý tưởng cho tải bất định/đột biến mà không cần dự đoán capacity.",
+    "explanationEn": "On-Demand scales automatically with actual traffic, ideal for unpredictable/spiky loads without capacity planning."
+  },
+  {
+    "id": "q3",
+    "question": "Ứng dụng đọc DynamoDB rất nhiều lần với cùng dữ liệu và cần độ trễ micro-giây. Giải pháp nào phù hợp nhất?",
+    "questionEn": "An application reads the same DynamoDB data very frequently and needs microsecond latency. Which solution fits best?",
+    "options": [
+      "Amazon ElastiCache for Redis",
+      "DynamoDB Accelerator (DAX)",
+      "Bật DynamoDB Streams",
+      "Tăng RCU đã cấp phát"
+    ],
+    "optionsEn": [
+      "Amazon ElastiCache for Redis",
+      "DynamoDB Accelerator (DAX)",
+      "Enable DynamoDB Streams",
+      "Increase provisioned RCU"
+    ],
+    "answer": 1,
+    "explanation": "DAX là cache in-memory được tích hợp sẵn cho DynamoDB, đưa độ trễ đọc từ mili-giây xuống micro-giây cho workload đọc nhiều.",
+    "explanationEn": "DAX is a purpose-built in-memory cache for DynamoDB that reduces read latency from milliseconds to microseconds for read-heavy workloads."
+  },
+  {
+    "id": "q4",
+    "question": "Tính năng nào của DynamoDB nên dùng để kích hoạt một Lambda function mỗi khi có item được thêm, sửa hoặc xóa?",
+    "questionEn": "Which DynamoDB feature should be used to trigger a Lambda function whenever an item is added, modified, or deleted?",
+    "options": [
+      "DynamoDB Streams",
+      "Global Tables",
+      "TTL",
+      "Point-In-Time Recovery"
+    ],
+    "optionsEn": [
+      "DynamoDB Streams",
+      "Global Tables",
+      "TTL",
+      "Point-In-Time Recovery"
+    ],
+    "answer": 0,
+    "explanation": "DynamoDB Streams ghi lại thay đổi item theo thứ tự thời gian và có thể kích hoạt Lambda để xử lý theo sự kiện.",
+    "explanationEn": "DynamoDB Streams captures item changes in time order and can trigger Lambda for event-driven processing."
+  },
+  {
+    "id": "q5",
+    "question": "Một công ty cần bảng DynamoDB đọc/ghi độ trễ thấp cho người dùng ở nhiều khu vực (region) trên toàn cầu, với đồng bộ tự động. Giải pháp nào?",
+    "questionEn": "A company needs a low-latency read/write DynamoDB table for users across multiple regions worldwide, with automatic sync. Which solution?",
+    "options": [
+      "Tạo read replica ở mỗi region",
+      "DynamoDB Global Tables",
+      "Sao lưu PITR sang region khác",
+      "Dùng DAX ở mỗi region"
+    ],
+    "optionsEn": [
+      "Create a read replica in each region",
+      "DynamoDB Global Tables",
+      "Copy PITR backups to another region",
+      "Use DAX in each region"
+    ],
+    "answer": 1,
+    "explanation": "Global Tables cung cấp bản sao multi-region active-active được đồng bộ tự động, cho phép đọc/ghi độ trễ thấp ở mọi region.",
+    "explanationEn": "Global Tables provide multi-region active-active replicas synced automatically, enabling low-latency reads/writes in every region."
+  },
+  {
+    "id": "q6",
+    "question": "Điểm khác biệt CHÍNH giữa Global Secondary Index (GSI) và Local Secondary Index (LSI) trong DynamoDB là gì?",
+    "questionEn": "What is the KEY difference between a Global Secondary Index (GSI) and a Local Secondary Index (LSI) in DynamoDB?",
+    "options": [
+      "GSI phải có cùng partition key với bảng gốc, LSI thì không",
+      "GSI có thể có partition key khác và tạo bất kỳ lúc nào; LSI cùng partition key và chỉ tạo khi tạo bảng",
+      "LSI có RCU/WCU riêng, GSI dùng chung với bảng",
+      "GSI chỉ hỗ trợ strong consistency, LSI thì eventually consistent"
+    ],
+    "optionsEn": [
+      "GSI must share the base table's partition key, LSI does not",
+      "GSI can have a different partition key and be created any time; LSI shares the partition key and is created only at table creation",
+      "LSI has its own RCU/WCU, GSI shares capacity with the table",
+      "GSI supports only strong consistency, LSI is eventually consistent"
+    ],
+    "answer": 1,
+    "explanation": "GSI dùng partition key bất kỳ, tạo được bất cứ lúc nào, có capacity riêng, eventually consistent; LSI dùng cùng partition key, chỉ tạo lúc tạo bảng và hỗ trợ strong consistency.",
+    "explanationEn": "A GSI uses any partition key, can be created any time, has its own capacity, and is eventually consistent; an LSI shares the partition key, is created only at table creation, and supports strong consistency."
+  },
+  {
+    "id": "q7",
+    "question": "Bạn cần tự động xóa các bản ghi session hết hạn trong DynamoDB mà không tốn thêm chi phí ghi. Tính năng nào?",
+    "questionEn": "You need to automatically delete expired session records in DynamoDB at no extra write cost. Which feature?",
+    "options": [
+      "DynamoDB Streams",
+      "TTL (Time To Live)",
+      "Point-In-Time Recovery",
+      "Auto-scaling"
+    ],
+    "optionsEn": [
+      "DynamoDB Streams",
+      "TTL (Time To Live)",
+      "Point-In-Time Recovery",
+      "Auto-scaling"
+    ],
+    "answer": 1,
+    "explanation": "TTL tự động xóa các item hết hạn dựa trên thuộc tính timestamp, không tính phí WCU cho việc xóa — lý tưởng cho dữ liệu tạm như session.",
+    "explanationEn": "TTL automatically deletes expired items based on a timestamp attribute at no WCU cost for the deletion — ideal for transient data like sessions."
+  },
+  {
+    "id": "q8",
+    "question": "Một team cần API Gateway rẻ nhất và độ trễ thấp làm cửa ngõ đơn giản cho backend Lambda, không cần API keys hay caching. Loại API nào?",
+    "questionEn": "A team needs the cheapest, low-latency API Gateway as a simple front door for a Lambda backend, without needing API keys or caching. Which API type?",
+    "options": [
+      "REST API",
+      "HTTP API",
+      "WebSocket API",
+      "GraphQL API"
+    ],
+    "optionsEn": [
+      "REST API",
+      "HTTP API",
+      "WebSocket API",
+      "GraphQL API"
+    ],
+    "answer": 1,
+    "explanation": "HTTP API rẻ hơn (~70%) và độ trễ thấp hơn REST API, phù hợp làm proxy đơn giản tới Lambda khi không cần các tính năng nâng cao.",
+    "explanationEn": "HTTP API is cheaper (~70%) and lower-latency than REST API, ideal as a simple proxy to Lambda when advanced features are not required."
+  },
+  {
+    "id": "q9",
+    "question": "Ứng dụng chat cần giao tiếp hai chiều, real-time giữa client và server qua API Gateway. Loại API nào phù hợp?",
+    "questionEn": "A chat application needs bidirectional, real-time communication between client and server through API Gateway. Which API type fits?",
+    "options": [
+      "REST API",
+      "HTTP API",
+      "WebSocket API",
+      "Edge-optimized REST API"
+    ],
+    "optionsEn": [
+      "REST API",
+      "HTTP API",
+      "WebSocket API",
+      "Edge-optimized REST API"
+    ],
+    "answer": 2,
+    "explanation": "WebSocket API hỗ trợ kết nối hai chiều bền vững, cho phép server chủ động đẩy tin nhắn tới client — phù hợp cho chat, streaming và notification real-time.",
+    "explanationEn": "WebSocket API supports persistent bidirectional connections, letting the server push messages to clients — ideal for chat, streaming, and real-time notifications."
+  },
+  {
+    "id": "q10",
+    "question": "Bạn muốn xác thực request tới API Gateway bằng logic tùy chỉnh kiểm tra token của một nhà cung cấp danh tính bên thứ ba. Cơ chế nào?",
+    "questionEn": "You want to authorize requests to API Gateway using custom logic that validates a token from a third-party identity provider. Which mechanism?",
+    "options": [
+      "Lambda authorizer",
+      "IAM policy trên bảng DynamoDB",
+      "Security group",
+      "S3 bucket policy"
+    ],
+    "optionsEn": [
+      "Lambda authorizer",
+      "IAM policy on the DynamoDB table",
+      "Security group",
+      "S3 bucket policy"
+    ],
+    "answer": 0,
+    "explanation": "Lambda authorizer chạy code tùy chỉnh để xác thực token và quyết định cho phép/từ chối request, phù hợp khi tích hợp identity provider bên thứ ba.",
+    "explanationEn": "A Lambda authorizer runs custom code to validate a token and allow/deny the request, ideal for integrating third-party identity providers."
+  },
+  {
+    "id": "q11",
+    "question": "Yêu cầu: mỗi khi có ảnh được upload lên S3, tự động tạo thumbnail mà không quản lý server. Kiến trúc nào phù hợp nhất?",
+    "questionEn": "Requirement: whenever an image is uploaded to S3, automatically generate a thumbnail without managing servers. Which architecture fits best?",
+    "options": [
+      "EC2 Auto Scaling group poll S3 mỗi phút",
+      "Sự kiện S3 (s3:ObjectCreated) kích hoạt Lambda",
+      "Cron job trên một EC2 instance",
+      "DynamoDB Streams kích hoạt Lambda"
+    ],
+    "optionsEn": [
+      "An EC2 Auto Scaling group polling S3 every minute",
+      "An S3 event (s3:ObjectCreated) triggering Lambda",
+      "A cron job on an EC2 instance",
+      "DynamoDB Streams triggering Lambda"
+    ],
+    "answer": 1,
+    "explanation": "Sự kiện s3:ObjectCreated kích hoạt Lambda là mẫu event-driven kinh điển: không cần server, tự co giãn, chỉ trả tiền khi có file được xử lý.",
+    "explanationEn": "An s3:ObjectCreated event triggering Lambda is the classic event-driven pattern: no servers, auto-scaling, and pay only when a file is processed."
+  },
+  {
+    "id": "q12",
+    "question": "Một Lambda function bị cold start làm tăng độ trễ ở các request đầu tiên. Cách tốt nhất để loại bỏ cold start là gì?",
+    "questionEn": "A Lambda function suffers cold starts that increase latency on the first requests. What is the best way to eliminate cold starts?",
+    "options": [
+      "Tăng bộ nhớ lên 10 GB",
+      "Bật Provisioned concurrency",
+      "Giảm Reserved concurrency về 0",
+      "Chuyển sang runtime Python"
+    ],
+    "optionsEn": [
+      "Increase memory to 10 GB",
+      "Enable Provisioned concurrency",
+      "Reduce Reserved concurrency to 0",
+      "Switch to the Python runtime"
+    ],
+    "answer": 1,
+    "explanation": "Provisioned concurrency giữ sẵn các instance đã khởi tạo (warm), loại bỏ cold start và đảm bảo độ trễ ổn định cho request đầu tiên.",
+    "explanationEn": "Provisioned concurrency keeps pre-initialized (warm) instances ready, eliminating cold starts and ensuring consistent latency on initial requests."
+  },
+  {
+    "id": "q13",
+    "question": "Nhiều Lambda function dùng chung một bộ thư viện lớn. Cách nào giảm trùng lặp và kích thước gói triển khai?",
+    "questionEn": "Multiple Lambda functions share a large common set of libraries. What reduces duplication and deployment package size?",
+    "options": [
+      "Lambda Layers",
+      "Tăng dung lượng /tmp",
+      "Dùng nhiều env vars",
+      "Bật Provisioned concurrency"
+    ],
+    "optionsEn": [
+      "Lambda Layers",
+      "Increase /tmp storage",
+      "Use more env vars",
+      "Enable Provisioned concurrency"
+    ],
+    "answer": 0,
+    "explanation": "Lambda Layers cho phép đóng gói thư viện/dependency dùng chung và chia sẻ giữa nhiều function, giảm trùng lặp và kích thước gói.",
+    "explanationEn": "Lambda Layers let you package shared libraries/dependencies once and reuse them across functions, reducing duplication and package size."
+  },
+  {
+    "id": "q14",
+    "question": "Phát biểu nào ĐÚNG về bộ nhớ và tính toán của AWS Lambda?",
+    "questionEn": "Which statement is TRUE about AWS Lambda memory and compute?",
+    "options": [
+      "Bộ nhớ cố định 512 MB, không thay đổi được",
+      "Bộ nhớ từ 128 MB đến 10 GB, và CPU tăng theo bộ nhớ",
+      "CPU cấu hình độc lập với bộ nhớ",
+      "/tmp luôn cố định 10 GB và bền vững giữa các lần gọi"
+    ],
+    "optionsEn": [
+      "Memory is fixed at 512 MB and cannot be changed",
+      "Memory ranges from 128 MB to 10 GB, and CPU scales with memory",
+      "CPU is configured independently of memory",
+      "/tmp is always fixed at 10 GB and durable across invocations"
+    ],
+    "answer": 1,
+    "explanation": "Lambda cho cấu hình bộ nhớ 128 MB–10 GB; CPU được cấp tỉ lệ theo bộ nhớ. /tmp mặc định 512 MB (tối đa 10 GB) và không bền vững giữa các lần gọi.",
+    "explanationEn": "Lambda memory is configurable from 128 MB to 10 GB, and CPU is allocated proportionally to memory. /tmp defaults to 512 MB (up to 10 GB) and is not durable across invocations."
+  }
+]

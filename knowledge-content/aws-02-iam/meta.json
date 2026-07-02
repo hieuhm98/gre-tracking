@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "AWS IAM – Quản lý định danh & truy cập",
+  "titleEn": "AWS IAM – Identity & Access Management",
+  "description": "Users, Groups, Policies, Roles, logic đánh giá quyền, MFA, least privilege và bảo vệ tài khoản root trong AWS IAM.",
+  "descriptionEn": "Users, Groups, Policies, Roles, permission evaluation logic, MFA, least privilege, and root account protection in AWS IAM."
+}

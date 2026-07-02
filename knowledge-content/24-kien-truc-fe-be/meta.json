@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "Kiến Trúc Frontend & Backend",
-  "description": "FE và BE làm gì, giao tiếp ra sao, và BA cần hiểu gì để phối hợp hiệu quả với team kỹ thuật."
+  "titleEn": "Frontend & Backend Architecture",
+  "description": "FE và BE làm gì, giao tiếp ra sao, và BA cần hiểu gì để phối hợp hiệu quả với team kỹ thuật.",
+  "descriptionEn": "What the FE and BE do, how they communicate, and what a BA needs to understand to collaborate effectively with the technical team."
 }

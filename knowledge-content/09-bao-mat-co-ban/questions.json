@@ -1,17 +1,152 @@
 [
-  {"id":"q1","question":"Authentication và Authorization khác nhau thế nào?","options":["Chúng hoàn toàn giống nhau","Authentication xác thực danh tính, Authorization xác định quyền hạn","Authorization xác thực danh tính, Authentication xác định quyền hạn","Authentication chỉ dùng cho API"],"answer":1,"explanation":"Authentication: 'Bạn là ai?' — đăng nhập, xác minh danh tính. Authorization: 'Bạn được làm gì?' — kiểm tra quyền sau khi xác thực xong. Phải authentication trước rồi mới authorization."},
-  {"id":"q2","question":"SQL Injection tấn công bằng cách nào?","options":["Gửi quá nhiều request làm quá tải server","Nhúng code SQL vào input để can thiệp vào câu lệnh SQL của server","Giả mạo địa chỉ IP người dùng","Đánh cắp cookie của session"],"answer":1,"explanation":"SQL Injection: nhập SQL code vào form (username, search...). Nếu server ghép thẳng vào query mà không sanitize → attacker kiểm soát database query."},
-  {"id":"q3","question":"HTTPS bảo vệ dữ liệu như thế nào?","options":["Ngăn người dùng truy cập trang web độc hại","Mã hóa dữ liệu truyền tải giữa browser và server","Xác thực mật khẩu người dùng","Chặn SQL Injection tự động"],"answer":1,"explanation":"HTTPS dùng TLS/SSL để mã hóa traffic. Kẻ nghe lén (man-in-the-middle) chỉ thấy dữ liệu mã hóa — không đọc được nội dung thực."},
-  {"id":"q4","question":"2FA (Two-Factor Authentication) hoạt động như thế nào?","options":["Yêu cầu nhập mật khẩu hai lần","Yêu cầu hai bằng chứng khác nhau: mật khẩu + OTP/token","Gửi email xác nhận mỗi lần đăng nhập","Tự động reset mật khẩu sau 30 ngày"],"answer":1,"explanation":"2FA: factor 1 = mật khẩu (thứ bạn biết), factor 2 = OTP app/SMS (thứ bạn có). Ngay cả khi mật khẩu bị lộ, hacker vẫn không vào được nếu không có factor 2."},
-  {"id":"q5","question":"Nguyên tắc Least Privilege có nghĩa là gì?","options":["Admin được quyền làm mọi thứ","Chỉ cấp quyền tối thiểu cần thiết để thực hiện công việc","User không cần đăng nhập","Mọi người đều có quyền như nhau"],"answer":1,"explanation":"Least Privilege giảm thiểu rủi ro: nếu tài khoản bị compromise, kẻ tấn công chỉ có quyền hạn chế. Developer không cần quyền production DB, marketing không cần quyền xóa user..."},
-  {"id":"q6","question":"XSS (Cross-Site Scripting) là gì?","options":["Tấn công bằng cách thêm code SQL vào input","Nhúng JavaScript độc hại vào trang web chạy trong browser nạn nhân","Tấn công từ chối dịch vụ bằng nhiều request","Giả mạo email từ domain hợp lệ"],"answer":1,"explanation":"XSS: attacker inject JavaScript vào trang (qua comment, input...). Khi nạn nhân xem trang, JS chạy trong browser của họ — có thể đánh cắp cookie, token, redirect..."},
-  {"id":"q7","question":"Mật khẩu phải được lưu trong database như thế nào?","options":["Plain text để dễ so sánh","Mã hóa base64","Hash một chiều bằng thuật toán như bcrypt","Mã hóa AES có thể giải mã được"],"answer":2,"explanation":"Mật khẩu phải hash một chiều (bcrypt, Argon2). Không thể reverse hash → dù DB bị lộ, attacker không biết mật khẩu gốc. KHÔNG bao giờ lưu plain text."},
-  {"id":"q8","question":"Phishing tấn công người dùng bằng cách nào?","options":["Khai thác lỗ hổng trong code","Giả mạo website/email hợp lệ để lừa người dùng nhập thông tin nhạy cảm","Gửi quá nhiều request đến server","Chèn code vào JavaScript của trang web"],"answer":1,"explanation":"Phishing tấn công vào con người, không phải hệ thống. Email giả làm ngân hàng, website clone giống hệt — lừa user nhập mật khẩu, OTP vào tay hacker."},
-  {"id":"q9","question":"Khi viết yêu cầu cho tính năng xem đơn hàng, BA cần xét vấn đề gì về bảo mật?","options":["Màu sắc giao diện có phù hợp không","Chỉ user được xem đơn hàng của chính họ, không xem của người khác (authorization)","Tốc độ load trang","Số lượng đơn hàng hiển thị mỗi trang"],"answer":1,"explanation":"IDOR (Insecure Direct Object Reference) là lỗi phổ biến: user A có thể xem đơn hàng của user B bằng cách thay đổi ID trong URL. BA phải yêu cầu kiểm tra quyền sở hữu rõ ràng."},
-  {"id":"q10","question":"CSRF (Cross-Site Request Forgery) là gì?","options":["Tấn công bằng SQL trong form input","Trick người dùng thực hiện hành động không mong muốn trên website họ đang đăng nhập","Đánh cắp mật khẩu bằng keylogger","Tấn công vào DNS server"],"answer":1,"explanation":"CSRF: user đang đăng nhập Shopee, click link bẫy → trang bẫy gửi request đến Shopee với cookie của user → Shopee thực hiện hành động (mua hàng, đổi email...) mà user không hay biết."},
-  {"id":"q11","question":"PII (Personally Identifiable Information) bao gồm những loại dữ liệu nào?","options":["Chỉ mật khẩu","Tên, email, số điện thoại, CCCD, địa chỉ — thông tin có thể định danh cá nhân","Chỉ thông tin thẻ tín dụng","ID người dùng trong database"],"answer":1,"explanation":"PII là thông tin có thể dùng để định danh một người. Cần được bảo vệ đặc biệt — mã hóa, hạn chế truy cập, không log ra file plain text."},
-  {"id":"q12","question":"Tại sao developer không nên có quyền truy cập database production?","options":["Developer không đủ kỹ năng dùng database","Giảm rủi ro: nếu tài khoản developer bị compromise, attacker không thể truy cập dữ liệu thật của người dùng","Database production quá tải nếu nhiều người truy cập","Developer cần dùng database riêng để test"],"answer":1,"explanation":"Principle of Least Privilege. Developer dùng database staging/dev. Production chỉ application server và DBA có quyền. Nếu máy developer bị hack, thiệt hại được giới hạn."},
-  {"id":"q13","question":"Audit log trong hệ thống phần mềm ghi lại gì?","options":["Hiệu năng server mỗi giây","Ai làm gì, trên dữ liệu nào, vào lúc mấy giờ","Số lượng request mỗi ngày","Lỗi JavaScript trong browser"],"answer":1,"explanation":"Audit log = lịch sử hành động. Quan trọng cho compliance, điều tra sự cố, và phát hiện hành vi bất thường. Ví dụ: 'User A đã xóa đơn hàng #123 lúc 14:32 ngày 8/4'."},
-  {"id":"q14","question":"Prepared Statements giúp phòng chống loại tấn công nào?","options":["XSS","CSRF","SQL Injection","Phishing"],"answer":2,"explanation":"Prepared Statements tách biệt code SQL và dữ liệu người dùng — database xử lý chúng riêng. User input không bao giờ được interpret là SQL code → không thể inject."},
-  {"id":"q15","question":"Khi BA viết yêu cầu cho tính năng 'reset mật khẩu qua email', yêu cầu bảo mật nào là quan trọng nhất?","options":["Email reset trông đẹp và professional","Link reset phải có thời hạn ngắn (ví dụ 15-30 phút) và chỉ dùng được một lần","Email gửi trong vòng 1 giây","Người dùng có thể dùng cùng mật khẩu cũ"],"answer":1,"explanation":"Link reset mật khẩu phải: có TTL ngắn (không để hacker dùng link cũ), single-use (dùng 1 lần rồi vô hiệu), và token đủ ngẫu nhiên. Đây là yêu cầu bảo mật cơ bản không được bỏ qua."}
+  {
+    "id": "q1",
+    "question": "Authentication và Authorization khác nhau thế nào?",
+    "questionEn": "How do authentication and authorization differ?",
+    "options": ["Chúng hoàn toàn giống nhau", "Authentication xác thực danh tính, Authorization xác định quyền hạn", "Authorization xác thực danh tính, Authentication xác định quyền hạn", "Authentication chỉ dùng cho API"],
+    "optionsEn": ["They are completely the same", "Authentication verifies identity; Authorization determines permissions", "Authorization verifies identity; Authentication determines permissions", "Authentication is only used for APIs"],
+    "answer": 1,
+    "explanation": "Authentication: 'Bạn là ai?' — đăng nhập, xác minh danh tính. Authorization: 'Bạn được làm gì?' — kiểm tra quyền sau khi xác thực xong. Phải authentication trước rồi mới authorization.",
+    "explanationEn": "Authentication: 'Who are you?' — logging in and verifying identity. Authorization: 'What are you allowed to do?' — checking permissions after authentication. Authentication must come first, then authorization."
+  },
+  {
+    "id": "q2",
+    "question": "SQL Injection tấn công bằng cách nào?",
+    "questionEn": "How does a SQL Injection attack work?",
+    "options": ["Gửi quá nhiều request làm quá tải server", "Nhúng code SQL vào input để can thiệp vào câu lệnh SQL của server", "Giả mạo địa chỉ IP người dùng", "Đánh cắp cookie của session"],
+    "optionsEn": ["Sending too many requests to overload the server", "Injecting SQL code into input to tamper with the server's SQL statements", "Spoofing the user's IP address", "Stealing the session cookie"],
+    "answer": 1,
+    "explanation": "SQL Injection: nhập SQL code vào form (username, search...). Nếu server ghép thẳng vào query mà không sanitize → attacker kiểm soát database query.",
+    "explanationEn": "SQL Injection: entering SQL code into a form (username, search...). If the server concatenates it directly into the query without sanitizing → the attacker controls the database query."
+  },
+  {
+    "id": "q3",
+    "question": "HTTPS bảo vệ dữ liệu như thế nào?",
+    "questionEn": "How does HTTPS protect data?",
+    "options": ["Ngăn người dùng truy cập trang web độc hại", "Mã hóa dữ liệu truyền tải giữa browser và server", "Xác thực mật khẩu người dùng", "Chặn SQL Injection tự động"],
+    "optionsEn": ["Prevents users from visiting malicious websites", "Encrypts data transmitted between the browser and the server", "Verifies the user's password", "Automatically blocks SQL Injection"],
+    "answer": 1,
+    "explanation": "HTTPS dùng TLS/SSL để mã hóa traffic. Kẻ nghe lén (man-in-the-middle) chỉ thấy dữ liệu mã hóa — không đọc được nội dung thực.",
+    "explanationEn": "HTTPS uses TLS/SSL to encrypt traffic. An eavesdropper (man-in-the-middle) only sees encrypted data — they cannot read the actual content."
+  },
+  {
+    "id": "q4",
+    "question": "2FA (Two-Factor Authentication) hoạt động như thế nào?",
+    "questionEn": "How does 2FA (Two-Factor Authentication) work?",
+    "options": ["Yêu cầu nhập mật khẩu hai lần", "Yêu cầu hai bằng chứng khác nhau: mật khẩu + OTP/token", "Gửi email xác nhận mỗi lần đăng nhập", "Tự động reset mật khẩu sau 30 ngày"],
+    "optionsEn": ["Requires entering the password twice", "Requires two different pieces of evidence: password + OTP/token", "Sends a confirmation email on every login", "Automatically resets the password after 30 days"],
+    "answer": 1,
+    "explanation": "2FA: factor 1 = mật khẩu (thứ bạn biết), factor 2 = OTP app/SMS (thứ bạn có). Ngay cả khi mật khẩu bị lộ, hacker vẫn không vào được nếu không có factor 2.",
+    "explanationEn": "2FA: factor 1 = the password (something you know), factor 2 = an OTP app/SMS (something you have). Even if the password is leaked, a hacker still can't get in without the second factor."
+  },
+  {
+    "id": "q5",
+    "question": "Nguyên tắc Least Privilege có nghĩa là gì?",
+    "questionEn": "What does the Principle of Least Privilege mean?",
+    "options": ["Admin được quyền làm mọi thứ", "Chỉ cấp quyền tối thiểu cần thiết để thực hiện công việc", "User không cần đăng nhập", "Mọi người đều có quyền như nhau"],
+    "optionsEn": ["Admins get permission to do everything", "Grant only the minimum privileges necessary to do the job", "Users don't need to log in", "Everyone has the same permissions"],
+    "answer": 1,
+    "explanation": "Least Privilege giảm thiểu rủi ro: nếu tài khoản bị compromise, kẻ tấn công chỉ có quyền hạn chế. Developer không cần quyền production DB, marketing không cần quyền xóa user...",
+    "explanationEn": "Least Privilege minimizes risk: if an account is compromised, the attacker only has limited permissions. Developers don't need production DB access, marketing doesn't need permission to delete users, and so on."
+  },
+  {
+    "id": "q6",
+    "question": "XSS (Cross-Site Scripting) là gì?",
+    "questionEn": "What is XSS (Cross-Site Scripting)?",
+    "options": ["Tấn công bằng cách thêm code SQL vào input", "Nhúng JavaScript độc hại vào trang web chạy trong browser nạn nhân", "Tấn công từ chối dịch vụ bằng nhiều request", "Giả mạo email từ domain hợp lệ"],
+    "optionsEn": ["An attack that adds SQL code into input", "Injecting malicious JavaScript into a web page that runs in the victim's browser", "A denial-of-service attack using many requests", "Spoofing email from a legitimate domain"],
+    "answer": 1,
+    "explanation": "XSS: attacker inject JavaScript vào trang (qua comment, input...). Khi nạn nhân xem trang, JS chạy trong browser của họ — có thể đánh cắp cookie, token, redirect...",
+    "explanationEn": "XSS: the attacker injects JavaScript into the page (via comments, input...). When the victim views the page, the JS runs in their browser — potentially stealing cookies, tokens, or redirecting them."
+  },
+  {
+    "id": "q7",
+    "question": "Mật khẩu phải được lưu trong database như thế nào?",
+    "questionEn": "How should passwords be stored in the database?",
+    "options": ["Plain text để dễ so sánh", "Mã hóa base64", "Hash một chiều bằng thuật toán như bcrypt", "Mã hóa AES có thể giải mã được"],
+    "optionsEn": ["Plain text for easy comparison", "base64 encoding", "One-way hashing with an algorithm such as bcrypt", "Reversible AES encryption"],
+    "answer": 2,
+    "explanation": "Mật khẩu phải hash một chiều (bcrypt, Argon2). Không thể reverse hash → dù DB bị lộ, attacker không biết mật khẩu gốc. KHÔNG bao giờ lưu plain text.",
+    "explanationEn": "Passwords must be hashed one-way (bcrypt, Argon2). A hash cannot be reversed → even if the DB is leaked, the attacker doesn't know the original password. NEVER store plain text."
+  },
+  {
+    "id": "q8",
+    "question": "Phishing tấn công người dùng bằng cách nào?",
+    "questionEn": "How does phishing attack users?",
+    "options": ["Khai thác lỗ hổng trong code", "Giả mạo website/email hợp lệ để lừa người dùng nhập thông tin nhạy cảm", "Gửi quá nhiều request đến server", "Chèn code vào JavaScript của trang web"],
+    "optionsEn": ["Exploiting a vulnerability in the code", "Impersonating a legitimate website/email to trick users into entering sensitive information", "Sending too many requests to the server", "Injecting code into the page's JavaScript"],
+    "answer": 1,
+    "explanation": "Phishing tấn công vào con người, không phải hệ thống. Email giả làm ngân hàng, website clone giống hệt — lừa user nhập mật khẩu, OTP vào tay hacker.",
+    "explanationEn": "Phishing targets people, not systems. Fake emails impersonating a bank, cloned websites that look identical — tricking users into handing their password or OTP to the hacker."
+  },
+  {
+    "id": "q9",
+    "question": "Khi viết yêu cầu cho tính năng xem đơn hàng, BA cần xét vấn đề gì về bảo mật?",
+    "questionEn": "When writing requirements for an order-viewing feature, what security issue should a BA consider?",
+    "options": ["Màu sắc giao diện có phù hợp không", "Chỉ user được xem đơn hàng của chính họ, không xem của người khác (authorization)", "Tốc độ load trang", "Số lượng đơn hàng hiển thị mỗi trang"],
+    "optionsEn": ["Whether the interface colors are appropriate", "That users can only view their own orders, not others' (authorization)", "Page load speed", "The number of orders displayed per page"],
+    "answer": 1,
+    "explanation": "IDOR (Insecure Direct Object Reference) là lỗi phổ biến: user A có thể xem đơn hàng của user B bằng cách thay đổi ID trong URL. BA phải yêu cầu kiểm tra quyền sở hữu rõ ràng.",
+    "explanationEn": "IDOR (Insecure Direct Object Reference) is a common flaw: user A can view user B's orders by changing the ID in the URL. The BA must require an explicit ownership check."
+  },
+  {
+    "id": "q10",
+    "question": "CSRF (Cross-Site Request Forgery) là gì?",
+    "questionEn": "What is CSRF (Cross-Site Request Forgery)?",
+    "options": ["Tấn công bằng SQL trong form input", "Trick người dùng thực hiện hành động không mong muốn trên website họ đang đăng nhập", "Đánh cắp mật khẩu bằng keylogger", "Tấn công vào DNS server"],
+    "optionsEn": ["An attack using SQL in form input", "Tricking a user into performing an unwanted action on a website where they are logged in", "Stealing passwords with a keylogger", "An attack on a DNS server"],
+    "answer": 1,
+    "explanation": "CSRF: user đang đăng nhập Shopee, click link bẫy → trang bẫy gửi request đến Shopee với cookie của user → Shopee thực hiện hành động (mua hàng, đổi email...) mà user không hay biết.",
+    "explanationEn": "CSRF: a user is logged in to Shopee and clicks a trap link → the trap page sends a request to Shopee using the user's cookie → Shopee performs an action (buying something, changing the email...) without the user knowing."
+  },
+  {
+    "id": "q11",
+    "question": "PII (Personally Identifiable Information) bao gồm những loại dữ liệu nào?",
+    "questionEn": "What types of data does PII (Personally Identifiable Information) include?",
+    "options": ["Chỉ mật khẩu", "Tên, email, số điện thoại, CCCD, địa chỉ — thông tin có thể định danh cá nhân", "Chỉ thông tin thẻ tín dụng", "ID người dùng trong database"],
+    "optionsEn": ["Only passwords", "Name, email, phone number, national ID, address — information that can identify a person", "Only credit card information", "The user's ID in the database"],
+    "answer": 1,
+    "explanation": "PII là thông tin có thể dùng để định danh một người. Cần được bảo vệ đặc biệt — mã hóa, hạn chế truy cập, không log ra file plain text.",
+    "explanationEn": "PII is information that can be used to identify a person. It needs special protection — encryption, restricted access, and never logging it to files in plain text."
+  },
+  {
+    "id": "q12",
+    "question": "Tại sao developer không nên có quyền truy cập database production?",
+    "questionEn": "Why shouldn't developers have access to the production database?",
+    "options": ["Developer không đủ kỹ năng dùng database", "Giảm rủi ro: nếu tài khoản developer bị compromise, attacker không thể truy cập dữ liệu thật của người dùng", "Database production quá tải nếu nhiều người truy cập", "Developer cần dùng database riêng để test"],
+    "optionsEn": ["Developers don't have the skills to use the database", "To reduce risk: if a developer's account is compromised, the attacker cannot access real user data", "The production database gets overloaded if too many people access it", "Developers need their own database for testing"],
+    "answer": 1,
+    "explanation": "Principle of Least Privilege. Developer dùng database staging/dev. Production chỉ application server và DBA có quyền. Nếu máy developer bị hack, thiệt hại được giới hạn.",
+    "explanationEn": "The Principle of Least Privilege. Developers use the staging/dev database. Only the application server and DBAs have access to production. If a developer's machine is hacked, the damage is limited."
+  },
+  {
+    "id": "q13",
+    "question": "Audit log trong hệ thống phần mềm ghi lại gì?",
+    "questionEn": "What does an audit log record in a software system?",
+    "options": ["Hiệu năng server mỗi giây", "Ai làm gì, trên dữ liệu nào, vào lúc mấy giờ", "Số lượng request mỗi ngày", "Lỗi JavaScript trong browser"],
+    "optionsEn": ["Server performance every second", "Who did what, on which data, and at what time", "The number of requests per day", "JavaScript errors in the browser"],
+    "answer": 1,
+    "explanation": "Audit log = lịch sử hành động. Quan trọng cho compliance, điều tra sự cố, và phát hiện hành vi bất thường. Ví dụ: 'User A đã xóa đơn hàng #123 lúc 14:32 ngày 8/4'.",
+    "explanationEn": "An audit log = a history of actions. It is important for compliance, incident investigation, and detecting abnormal behavior. For example: 'User A deleted order #123 at 14:32 on April 8'."
+  },
+  {
+    "id": "q14",
+    "question": "Prepared Statements giúp phòng chống loại tấn công nào?",
+    "questionEn": "Which type of attack do Prepared Statements help prevent?",
+    "options": ["XSS", "CSRF", "SQL Injection", "Phishing"],
+    "optionsEn": ["XSS", "CSRF", "SQL Injection", "Phishing"],
+    "answer": 2,
+    "explanation": "Prepared Statements tách biệt code SQL và dữ liệu người dùng — database xử lý chúng riêng. User input không bao giờ được interpret là SQL code → không thể inject.",
+    "explanationEn": "Prepared Statements separate SQL code from user data — the database handles them separately. User input is never interpreted as SQL code → injection is impossible."
+  },
+  {
+    "id": "q15",
+    "question": "Khi BA viết yêu cầu cho tính năng 'reset mật khẩu qua email', yêu cầu bảo mật nào là quan trọng nhất?",
+    "questionEn": "When a BA writes requirements for a 'reset password via email' feature, which security requirement is most important?",
+    "options": ["Email reset trông đẹp và professional", "Link reset phải có thời hạn ngắn (ví dụ 15-30 phút) và chỉ dùng được một lần", "Email gửi trong vòng 1 giây", "Người dùng có thể dùng cùng mật khẩu cũ"],
+    "optionsEn": ["The reset email looks nice and professional", "The reset link must have a short expiry (e.g. 15-30 minutes) and be usable only once", "The email is sent within 1 second", "The user can reuse their old password"],
+    "answer": 1,
+    "explanation": "Link reset mật khẩu phải: có TTL ngắn (không để hacker dùng link cũ), single-use (dùng 1 lần rồi vô hiệu), và token đủ ngẫu nhiên. Đây là yêu cầu bảo mật cơ bản không được bỏ qua.",
+    "explanationEn": "A password reset link must: have a short TTL (so a hacker can't use an old link), be single-use (invalidated after one use), and have a sufficiently random token. This is a basic security requirement that must not be skipped."
+  }
 ]

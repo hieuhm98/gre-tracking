@@ -1,1 +1,7 @@
-{"title": "Web hoạt động thế nào?", "description": "URL, request/response, browser rendering, frontend vs backend và CDN."}
+{
+  "group": "ba-po-pm",
+  "title": "Web hoạt động thế nào?",
+  "titleEn": "How Does the Web Work?",
+  "description": "URL, request/response, browser rendering, frontend vs backend và CDN.",
+  "descriptionEn": "URLs, request/response, browser rendering, frontend vs backend, and CDNs."
+}

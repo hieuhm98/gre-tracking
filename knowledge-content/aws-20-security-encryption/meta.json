@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "AWS Security & Encryption – KMS, Secrets Manager, Shield, WAF, GuardDuty",
+  "titleEn": "AWS Security & Encryption – KMS, Secrets Manager, Shield, WAF, GuardDuty",
+  "description": "Các dịch vụ mã hóa và bảo mật AWS (KMS, ACM, Secrets Manager, Shield, WAF, GuardDuty, Inspector, Macie) cho kỳ thi SAA-C03.",
+  "descriptionEn": "AWS encryption and security services (KMS, ACM, Secrets Manager, Shield, WAF, GuardDuty, Inspector, Macie) for the SAA-C03 exam."
+}

@@ -2,106 +2,151 @@
   {
     "id": "q1",
     "question": "Mạng LAN (Local Area Network) thường được sử dụng ở đâu?",
+    "questionEn": "Where is a LAN (Local Area Network) typically used?",
     "options": ["Kết nối giữa hai quốc gia", "Trong một khu vực nhỏ như văn phòng hoặc nhà ở", "Kết nối toàn bộ Internet", "Chỉ kết nối điện thoại di động"],
+    "optionsEn": ["Connecting two countries together", "Within a small area such as an office or a home", "Connecting the entire Internet", "Only connecting mobile phones"],
     "answer": 1,
-    "explanation": "LAN là mạng cục bộ, kết nối thiết bị trong phạm vi nhỏ như một tòa nhà, văn phòng, hoặc nhà ở."
+    "explanation": "LAN là mạng cục bộ, kết nối thiết bị trong phạm vi nhỏ như một tòa nhà, văn phòng, hoặc nhà ở.",
+    "explanationEn": "A LAN is a local network that connects devices within a small area such as a building, office, or home."
   },
   {
     "id": "q2",
     "question": "Internet được phân loại là loại mạng nào?",
+    "questionEn": "What type of network is the Internet classified as?",
     "options": ["LAN", "MAN", "WAN", "PAN"],
+    "optionsEn": ["LAN", "MAN", "WAN", "PAN"],
     "answer": 2,
-    "explanation": "Internet là WAN (Wide Area Network) lớn nhất thế giới, kết nối hàng tỷ thiết bị trên toàn cầu qua nhiều khoảng cách địa lý."
+    "explanation": "Internet là WAN (Wide Area Network) lớn nhất thế giới, kết nối hàng tỷ thiết bị trên toàn cầu qua nhiều khoảng cách địa lý.",
+    "explanationEn": "The Internet is the largest WAN (Wide Area Network) in the world, connecting billions of devices globally across many geographic distances."
   },
   {
     "id": "q3",
     "question": "Chức năng chính của Router là gì?",
+    "questionEn": "What is the main function of a router?",
     "options": ["Phát sóng WiFi trong nhà", "Kết nối mạng LAN với Internet và định tuyến gói tin", "Kết nối nhiều thiết bị trong cùng một LAN", "Chuyển đổi tín hiệu analog sang digital"],
+    "optionsEn": ["Broadcasting WiFi in the home", "Connecting a LAN to the Internet and routing packets", "Connecting multiple devices within the same LAN", "Converting analog signals to digital"],
     "answer": 1,
-    "explanation": "Router định tuyến gói tin giữa các mạng khác nhau — điển hình là kết nối mạng LAN nội bộ với Internet (WAN)."
+    "explanation": "Router định tuyến gói tin giữa các mạng khác nhau — điển hình là kết nối mạng LAN nội bộ với Internet (WAN).",
+    "explanationEn": "A router routes packets between different networks — typically connecting an internal LAN to the Internet (WAN)."
   },
   {
     "id": "q4",
     "question": "Switch khác Router ở điểm nào?",
+    "questionEn": "How does a switch differ from a router?",
     "options": ["Switch kết nối ra Internet, Router không kết nối được Internet", "Switch kết nối thiết bị trong cùng LAN, Router kết nối các mạng với nhau", "Switch và Router hoàn toàn giống nhau", "Switch chỉ dùng cho WiFi"],
+    "optionsEn": ["A switch connects to the Internet, while a router cannot connect to the Internet", "A switch connects devices within the same LAN, while a router connects different networks together", "A switch and a router are exactly the same", "A switch is only used for WiFi"],
     "answer": 1,
-    "explanation": "Switch hoạt động trong nội bộ LAN, chuyển dữ liệu trực tiếp giữa các thiết bị. Router kết nối các mạng khác nhau (LAN ↔ Internet)."
+    "explanation": "Switch hoạt động trong nội bộ LAN, chuyển dữ liệu trực tiếp giữa các thiết bị. Router kết nối các mạng khác nhau (LAN ↔ Internet).",
+    "explanationEn": "A switch operates within the LAN, transferring data directly between devices. A router connects different networks (LAN ↔ Internet)."
   },
   {
     "id": "q5",
     "question": "Gói tin (packet) trong mạng máy tính là gì?",
+    "questionEn": "What is a packet in a computer network?",
     "options": ["Một file được nén lại trước khi gửi", "Đơn vị dữ liệu nhỏ được chia ra từ dữ liệu lớn để truyền qua mạng", "Kết nối vật lý giữa hai máy tính", "Địa chỉ IP của thiết bị đích"],
+    "optionsEn": ["A file compressed before sending", "A small unit of data split off from larger data to be transmitted over the network", "The physical connection between two computers", "The IP address of the destination device"],
     "answer": 1,
-    "explanation": "Dữ liệu lớn được chia thành nhiều gói tin nhỏ, mỗi gói mang địa chỉ nguồn/đích và một phần dữ liệu. Chúng được lắp ráp lại khi đến nơi."
+    "explanation": "Dữ liệu lớn được chia thành nhiều gói tin nhỏ, mỗi gói mang địa chỉ nguồn/đích và một phần dữ liệu. Chúng được lắp ráp lại khi đến nơi.",
+    "explanationEn": "Large data is split into many small packets, each carrying the source/destination addresses and a portion of the data. They are reassembled upon arrival."
   },
   {
     "id": "q6",
     "question": "Băng thông (bandwidth) 100 Mbps có nghĩa là gì?",
+    "questionEn": "What does 100 Mbps of bandwidth mean?",
     "options": ["Tải được 100 MB mỗi giây", "Truyền tối đa 100 triệu bit mỗi giây", "Ping là 100 millisecond", "Kết nối được 100 thiết bị cùng lúc"],
+    "optionsEn": ["Downloading 100 MB per second", "Transmitting up to 100 million bits per second", "A ping of 100 milliseconds", "Connecting 100 devices at once"],
     "answer": 1,
-    "explanation": "Mbps = Megabit per second. 100 Mbps = 100 triệu bit/giây. Lưu ý: 8 bit = 1 byte, nên tốc độ tải thực tế là khoảng 12.5 MB/s."
+    "explanation": "Mbps = Megabit per second. 100 Mbps = 100 triệu bit/giây. Lưu ý: 8 bit = 1 byte, nên tốc độ tải thực tế là khoảng 12.5 MB/s.",
+    "explanationEn": "Mbps = Megabit per second. 100 Mbps = 100 million bits/second. Note: 8 bits = 1 byte, so the actual download speed is about 12.5 MB/s."
   },
   {
     "id": "q7",
     "question": "Độ trễ (latency/ping) thấp quan trọng nhất với ứng dụng nào?",
+    "questionEn": "For which type of application is low latency (ping) most important?",
     "options": ["Tải file lớn qua đêm", "Game online thời gian thực, họp video, giao dịch tài chính", "Xem phim streaming độ phân giải thấp", "Gửi email"],
+    "optionsEn": ["Downloading large files overnight", "Real-time online gaming, video conferencing, financial trading", "Streaming low-resolution video", "Sending email"],
     "answer": 1,
-    "explanation": "Ping thấp nghĩa là phản hồi nhanh — quan trọng với các ứng dụng tương tác thời gian thực. Tải file cần bandwidth cao, không cần ping thấp."
+    "explanation": "Ping thấp nghĩa là phản hồi nhanh — quan trọng với các ứng dụng tương tác thời gian thực. Tải file cần bandwidth cao, không cần ping thấp.",
+    "explanationEn": "Low ping means fast responsiveness — important for real-time interactive applications. Downloading files needs high bandwidth, not low ping."
   },
   {
     "id": "q8",
     "question": "Địa chỉ IP nội bộ (Private IP) 192.168.1.100 thuộc về phạm vi nào?",
+    "questionEn": "What scope does the private IP address 192.168.1.100 belong to?",
     "options": ["Địa chỉ IP công khai trên Internet", "Địa chỉ IP trong mạng LAN nội bộ", "Địa chỉ IP của DNS server", "Địa chỉ IP của ISP"],
+    "optionsEn": ["A public IP address on the Internet", "An IP address within the internal LAN", "The IP address of a DNS server", "The IP address of the ISP"],
     "answer": 1,
-    "explanation": "Dải 192.168.x.x là private IP, chỉ dùng trong mạng LAN nội bộ, không định tuyến trực tiếp trên Internet."
+    "explanation": "Dải 192.168.x.x là private IP, chỉ dùng trong mạng LAN nội bộ, không định tuyến trực tiếp trên Internet.",
+    "explanationEn": "The 192.168.x.x range is private IP, used only within the internal LAN and not routed directly on the Internet."
   },
   {
     "id": "q9",
     "question": "So với WiFi, kết nối mạng có dây (Ethernet) có ưu điểm gì?",
+    "questionEn": "Compared to WiFi, what are the advantages of a wired (Ethernet) connection?",
     "options": ["Tiện lợi hơn vì không cần dây", "Tốc độ ổn định hơn, độ trễ thấp hơn và bảo mật hơn", "Rẻ hơn khi lắp đặt", "Hỗ trợ nhiều thiết bị hơn"],
+    "optionsEn": ["More convenient because no cable is needed", "More stable speed, lower latency, and better security", "Cheaper to install", "Supports more devices"],
     "answer": 1,
-    "explanation": "Ethernet không bị nhiễu sóng, không chia sẻ băng thông với thiết bị khác, khó bị nghe lén hơn — nhưng bất tiện vì phải dùng cáp vật lý."
+    "explanation": "Ethernet không bị nhiễu sóng, không chia sẻ băng thông với thiết bị khác, khó bị nghe lén hơn — nhưng bất tiện vì phải dùng cáp vật lý.",
+    "explanationEn": "Ethernet is not affected by wireless interference, does not share bandwidth with other devices, and is harder to eavesdrop on — but it is inconvenient because it requires a physical cable."
   },
   {
     "id": "q10",
     "question": "Modem có chức năng gì trong hệ thống mạng gia đình?",
+    "questionEn": "What is the function of a modem in a home network?",
     "options": ["Định tuyến gói tin đến đúng thiết bị", "Chuyển đổi tín hiệu từ ISP thành tín hiệu số để router sử dụng", "Tăng cường sóng WiFi trong nhà", "Lưu trữ cài đặt mạng nội bộ"],
+    "optionsEn": ["Routing packets to the correct device", "Converting the signal from the ISP into a digital signal for the router to use", "Boosting the WiFi signal in the home", "Storing the internal network settings"],
     "answer": 1,
-    "explanation": "Modem (modulator-demodulator) chuyển tín hiệu từ đường dây (cáp đồng, cáp quang...) của ISP thành tín hiệu số mà router và máy tính có thể xử lý."
+    "explanation": "Modem (modulator-demodulator) chuyển tín hiệu từ đường dây (cáp đồng, cáp quang...) của ISP thành tín hiệu số mà router và máy tính có thể xử lý.",
+    "explanationEn": "A modem (modulator-demodulator) converts the signal from the ISP's line (copper cable, fiber optic, etc.) into a digital signal that the router and computer can process."
   },
   {
     "id": "q11",
     "question": "Khi bạn gửi một file 10MB qua email, dữ liệu được truyền như thế nào?",
+    "questionEn": "When you send a 10MB file by email, how is the data transmitted?",
     "options": ["File được gửi nguyên vẹn một lần duy nhất", "File được chia thành nhiều gói tin nhỏ, gửi qua nhiều tuyến đường rồi lắp ráp lại", "File được nén thành 1 gói duy nhất rồi giải nén ở đầu nhận", "File chỉ được truyền khi cả hai máy cùng online"],
+    "optionsEn": ["The file is sent whole in a single transmission", "The file is split into many small packets, sent over multiple routes, and then reassembled", "The file is compressed into a single packet and then decompressed at the receiving end", "The file is only transmitted when both machines are online at the same time"],
     "answer": 1,
-    "explanation": "Mọi dữ liệu truyền qua mạng đều được chia thành packet. Các packet có thể đi theo nhiều tuyến đường khác nhau và được lắp ráp theo đúng thứ tự ở đầu nhận."
+    "explanation": "Mọi dữ liệu truyền qua mạng đều được chia thành packet. Các packet có thể đi theo nhiều tuyến đường khác nhau và được lắp ráp theo đúng thứ tự ở đầu nhận.",
+    "explanationEn": "All data transmitted over a network is split into packets. The packets can travel over different routes and are reassembled in the correct order at the receiving end."
   },
   {
     "id": "q12",
     "question": "MAN (Metropolitan Area Network) có phạm vi bao nhiêu?",
+    "questionEn": "What is the scope of a MAN (Metropolitan Area Network)?",
     "options": ["Trong một phòng máy tính", "Một tòa nhà văn phòng", "Một thành phố hoặc khu vực đô thị", "Toàn cầu"],
+    "optionsEn": ["Within a single computer room", "A single office building", "A city or metropolitan area", "Global"],
     "answer": 2,
-    "explanation": "MAN có phạm vi trung gian, lớn hơn LAN (một tòa nhà) nhưng nhỏ hơn WAN (toàn cầu). Điển hình là mạng kết nối nhiều campus của một trường đại học."
+    "explanation": "MAN có phạm vi trung gian, lớn hơn LAN (một tòa nhà) nhưng nhỏ hơn WAN (toàn cầu). Điển hình là mạng kết nối nhiều campus của một trường đại học.",
+    "explanationEn": "A MAN has an intermediate scope, larger than a LAN (a single building) but smaller than a WAN (global). A typical example is a network connecting multiple campuses of a university."
   },
   {
     "id": "q13",
     "question": "Khi bạn truy cập google.com từ nhà, gói tin đi theo thứ tự nào?",
+    "questionEn": "When you access google.com from home, in what order does the packet travel?",
     "options": ["Máy tính → Google → Router → ISP", "Máy tính → Router → ISP → Internet → Google", "Router → Máy tính → ISP → Google", "ISP → Router → Google → Máy tính"],
+    "optionsEn": ["Computer → Google → Router → ISP", "Computer → Router → ISP → Internet → Google", "Router → Computer → ISP → Google", "ISP → Router → Google → Computer"],
     "answer": 1,
-    "explanation": "Gói tin từ máy bạn → router (chuyển ra ngoài LAN) → ISP (nhà mạng) → qua nhiều router trên Internet → đến server Google."
+    "explanation": "Gói tin từ máy bạn → router (chuyển ra ngoài LAN) → ISP (nhà mạng) → qua nhiều router trên Internet → đến server Google.",
+    "explanationEn": "The packet goes from your machine → router (forwarding it out of the LAN) → ISP → through many routers on the Internet → to Google's server."
   },
   {
     "id": "q14",
     "question": "Băng thông cao nhưng ping cao (ví dụ kết nối vệ tinh) phù hợp với tác vụ nào?",
+    "questionEn": "High bandwidth but high ping (for example, a satellite connection) is suitable for which task?",
     "options": ["Game online thời gian thực", "Video call chất lượng cao", "Tải file lớn hoặc cập nhật phần mềm", "Giao dịch chứng khoán tự động"],
+    "optionsEn": ["Real-time online gaming", "High-quality video calls", "Downloading large files or software updates", "Automated stock trading"],
     "answer": 2,
-    "explanation": "Bandwidth cao = tải nhiều dữ liệu nhanh. Ping cao chỉ gây vấn đề khi cần tương tác thời gian thực. Tải file không cần phản hồi nhanh nên ping không quan trọng."
+    "explanation": "Bandwidth cao = tải nhiều dữ liệu nhanh. Ping cao chỉ gây vấn đề khi cần tương tác thời gian thực. Tải file không cần phản hồi nhanh nên ping không quan trọng.",
+    "explanationEn": "High bandwidth = downloading a lot of data quickly. High ping only causes problems when real-time interaction is needed. Downloading files does not require fast responsiveness, so ping is not important."
   },
   {
     "id": "q15",
     "question": "Thiết bị nào sau đây giúp mở rộng vùng phủ sóng WiFi trong một tòa nhà lớn?",
+    "questionEn": "Which of the following devices helps extend WiFi coverage in a large building?",
     "options": ["Modem", "Switch", "Access Point (Điểm truy cập WiFi)", "Firewall"],
+    "optionsEn": ["Modem", "Switch", "Access Point (WiFi access point)", "Firewall"],
     "answer": 2,
-    "explanation": "Access Point phát sóng WiFi để thiết bị kết nối không dây. Trong tòa nhà lớn, nhiều Access Point được đặt ở các vị trí khác nhau để đảm bảo phủ sóng toàn bộ."
+    "explanation": "Access Point phát sóng WiFi để thiết bị kết nối không dây. Trong tòa nhà lớn, nhiều Access Point được đặt ở các vị trí khác nhau để đảm bảo phủ sóng toàn bộ.",
+    "explanationEn": "An access point broadcasts WiFi so devices can connect wirelessly. In a large building, multiple access points are placed in different locations to ensure full coverage."
   }
 ]

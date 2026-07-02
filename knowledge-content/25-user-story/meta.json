@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "User Story & Acceptance Criteria",
-  "description": "Cách viết user story đúng chuẩn, định nghĩa acceptance criteria rõ ràng và tránh các lỗi thường gặp."
+  "titleEn": "User Story & Acceptance Criteria",
+  "description": "Cách viết user story đúng chuẩn, định nghĩa acceptance criteria rõ ràng và tránh các lỗi thường gặp.",
+  "descriptionEn": "How to write user stories properly, define clear acceptance criteria, and avoid common mistakes."
 }

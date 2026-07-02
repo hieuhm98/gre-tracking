@@ -1,0 +1,142 @@
+[
+  {
+    "id": "q1",
+    "question": "Một ứng dụng cần mã hóa các tệp lớn (500 MB) bằng KMS trước khi lưu. Gọi API Encrypt trực tiếp bị lỗi vì vượt giới hạn. Cách đúng là gì?",
+    "questionEn": "An application needs to encrypt large files (500 MB) with KMS before storing them. Calling the direct Encrypt API fails due to a size limit. What is the correct approach?",
+    "options": ["Chia tệp thành nhiều phần 4KB rồi gọi Encrypt cho từng phần", "Dùng envelope encryption: gọi GenerateDataKey rồi mã hóa dữ liệu cục bộ", "Tăng giới hạn KMS lên 500 MB qua support ticket", "Chuyển sang lưu tệp không mã hóa và bật S3 versioning"],
+    "optionsEn": ["Split the file into 4KB chunks and call Encrypt for each chunk", "Use envelope encryption: call GenerateDataKey then encrypt the data locally", "Raise the KMS limit to 500 MB via a support ticket", "Store the file unencrypted and enable S3 versioning instead"],
+    "answer": 1,
+    "explanation": "KMS chỉ mã hóa trực tiếp tối đa 4KB. Với dữ liệu lớn, dùng envelope encryption qua GenerateDataKey: KMS trả về một data key, bạn dùng nó mã hóa dữ liệu cục bộ và lưu kèm encrypted data key.",
+    "explanationEn": "KMS encrypts only up to 4KB directly. For large data, use envelope encryption via GenerateDataKey: KMS returns a data key, you encrypt the data locally with it, and store the encrypted data key alongside."
+  },
+  {
+    "id": "q2",
+    "question": "Đội DevOps cần tự động xoay vòng (rotate) mật khẩu database RDS mỗi 30 ngày mà không viết code phức tạp. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "A DevOps team needs to automatically rotate an RDS database password every 30 days without writing complex code. Which service fits best?",
+    "options": ["SSM Parameter Store SecureString", "AWS Secrets Manager", "AWS KMS", "AWS CloudHSM"],
+    "optionsEn": ["SSM Parameter Store SecureString", "AWS Secrets Manager", "AWS KMS", "AWS CloudHSM"],
+    "answer": 1,
+    "explanation": "Secrets Manager hỗ trợ xoay vòng tự động qua Lambda và tích hợp native với RDS. Parameter Store không có rotation sẵn; KMS chỉ quản lý khóa, không lưu/xoay mật khẩu ứng dụng.",
+    "explanationEn": "Secrets Manager supports automatic rotation via Lambda and integrates natively with RDS. Parameter Store has no built-in rotation; KMS only manages keys, it does not store/rotate application passwords."
+  },
+  {
+    "id": "q3",
+    "question": "Nhóm cần lưu vài trăm tham số cấu hình (không nhạy cảm) với chi phí thấp nhất, không cần xoay vòng tự động. Lựa chọn nào tối ưu?",
+    "questionEn": "A team needs to store a few hundred (non-sensitive) configuration parameters at the lowest cost, with no need for automatic rotation. Which is the optimal choice?",
+    "options": ["AWS Secrets Manager vì bảo mật cao hơn", "SSM Parameter Store tier standard", "AWS CloudHSM", "Mã hóa từng tham số bằng asymmetric KMS key"],
+    "optionsEn": ["AWS Secrets Manager because it is more secure", "SSM Parameter Store standard tier", "AWS CloudHSM", "Encrypt each parameter with an asymmetric KMS key"],
+    "answer": 1,
+    "explanation": "Parameter Store rẻ hơn (standard tier miễn phí) và phù hợp cho config. Secrets Manager đắt hơn và chỉ đáng dùng khi cần rotation tự động hoặc tích hợp DB native.",
+    "explanationEn": "Parameter Store is cheaper (standard tier is free) and fits configuration. Secrets Manager is more expensive and only worth it when you need automatic rotation or native DB integration."
+  },
+  {
+    "id": "q4",
+    "question": "Một Application Load Balancer cần chứng chỉ TLS miễn phí tự động gia hạn để phục vụ HTTPS. Giải pháp đúng là gì?",
+    "questionEn": "An Application Load Balancer needs a free, auto-renewing TLS certificate to serve HTTPS. What is the correct solution?",
+    "options": ["Cài chứng chỉ tự ký trực tiếp lên các EC2 phía sau ALB", "Yêu cầu chứng chỉ public từ AWS Certificate Manager (ACM) và gắn vào ALB", "Mua chứng chỉ bên thứ ba, import vào ACM và dựa vào ACM tự gia hạn", "Dùng KMS để cấp chứng chỉ SSL"],
+    "optionsEn": ["Install a self-signed certificate directly on the EC2 instances behind the ALB", "Request a public certificate from AWS Certificate Manager (ACM) and attach it to the ALB", "Buy a third-party certificate, import it into ACM, and rely on ACM to auto-renew it", "Use KMS to issue the SSL certificate"],
+    "answer": 1,
+    "explanation": "ACM cấp chứng chỉ public miễn phí, tự gia hạn và tích hợp trực tiếp với ELB. Chứng chỉ import KHÔNG tự gia hạn. KMS quản lý khóa mã hóa, không cấp chứng chỉ TLS.",
+    "explanationEn": "ACM issues free public certificates that auto-renew and integrate directly with ELB. Imported certificates do NOT auto-renew. KMS manages encryption keys, not TLS certificates."
+  },
+  {
+    "id": "q5",
+    "question": "Kiến trúc sư muốn bật HTTPS trực tiếp trên một EC2 instance dùng chứng chỉ do ACM cấp và gắn thẳng vào instance. Vì sao cách này KHÔNG khả thi?",
+    "questionEn": "An architect wants to enable HTTPS directly on an EC2 instance using an ACM-issued certificate attached straight to the instance. Why is this NOT feasible?",
+    "options": ["ACM chỉ hoạt động ở region us-east-1", "ACM không đẩy private key ra EC2; nên đặt ELB/CloudFront phía trước", "EC2 không hỗ trợ TLS", "ACM chỉ cấp chứng chỉ cho tên miền .com"],
+    "optionsEn": ["ACM only works in the us-east-1 region", "ACM does not expose the private key to EC2; front it with an ELB/CloudFront instead", "EC2 does not support TLS", "ACM only issues certificates for .com domains"],
+    "answer": 1,
+    "explanation": "ACM không cho phép xuất private key ra EC2, nên không gắn trực tiếp chứng chỉ ACM lên EC2. Giải pháp là đưa ELB hoặc CloudFront (tích hợp ACM) ra phía trước EC2.",
+    "explanationEn": "ACM does not allow exporting the private key to EC2, so you cannot attach an ACM certificate directly to EC2. The solution is to front EC2 with an ELB or CloudFront (which integrate with ACM)."
+  },
+  {
+    "id": "q6",
+    "question": "Website đang bị tấn công SYN flood và UDP reflection ở tầng mạng (L3/L4). Dịch vụ AWS nào bảo vệ tự động và miễn phí cho tình huống này?",
+    "questionEn": "A website is under a SYN flood and UDP reflection attack at the network layer (L3/L4). Which AWS service protects against this automatically and for free?",
+    "options": ["AWS WAF", "AWS Shield Standard", "Amazon GuardDuty", "AWS Firewall Manager"],
+    "optionsEn": ["AWS WAF", "AWS Shield Standard", "Amazon GuardDuty", "AWS Firewall Manager"],
+    "answer": 1,
+    "explanation": "Shield Standard bật sẵn miễn phí cho mọi tài khoản, bảo vệ DDoS ở L3/L4. WAF chỉ lọc L7; GuardDuty phát hiện mối đe dọa nhưng không chống DDoS; Firewall Manager chỉ quản lý tập trung.",
+    "explanationEn": "Shield Standard is enabled for free on every account and protects against L3/L4 DDoS. WAF only filters L7; GuardDuty detects threats but does not mitigate DDoS; Firewall Manager only centralizes management."
+  },
+  {
+    "id": "q7",
+    "question": "Bạn cần chặn tấn công SQL injection và giới hạn số request từ một IP (rate limiting) tới một API Gateway. Dịch vụ nào phù hợp?",
+    "questionEn": "You need to block SQL injection attacks and rate-limit requests from an IP to an API Gateway. Which service fits?",
+    "options": ["AWS Shield Standard", "AWS WAF với Web ACL (rule SQLi + rate-based)", "Amazon Inspector", "AWS KMS"],
+    "optionsEn": ["AWS Shield Standard", "AWS WAF with a Web ACL (SQLi + rate-based rules)", "Amazon Inspector", "AWS KMS"],
+    "answer": 1,
+    "explanation": "WAF lọc ở Layer 7 và hỗ trợ rule chống SQL injection, XSS, geo-match và rate-based, gắn được vào API Gateway/ALB/CloudFront. Shield chỉ chống DDoS L3/L4; Inspector quét lỗ hổng.",
+    "explanationEn": "WAF filters at Layer 7 and supports SQL injection, XSS, geo-match, and rate-based rules, attachable to API Gateway/ALB/CloudFront. Shield only mitigates L3/L4 DDoS; Inspector scans for vulnerabilities."
+  },
+  {
+    "id": "q8",
+    "question": "Công ty muốn chặn truy cập từ một số quốc gia cụ thể tới ứng dụng web qua CloudFront. Loại rule WAF nào dùng?",
+    "questionEn": "A company wants to block access from specific countries to a web application via CloudFront. Which WAF rule type is used?",
+    "options": ["Rate-based rule", "Geo-match rule", "SQL injection rule", "IP reputation của Shield"],
+    "optionsEn": ["Rate-based rule", "Geo-match rule", "SQL injection rule", "Shield IP reputation"],
+    "answer": 1,
+    "explanation": "Geo-match rule trong WAF cho phép chặn hoặc cho phép lưu lượng theo quốc gia. Rate-based giới hạn theo tần suất, SQLi chặn tấn công injection.",
+    "explanationEn": "A geo-match rule in WAF lets you block or allow traffic by country. Rate-based limits by frequency, and SQLi blocks injection attacks."
+  },
+  {
+    "id": "q9",
+    "question": "Đội bảo mật muốn phát hiện hành vi bất thường như instance giao tiếp với IP độc hại hoặc đào tiền mã hóa, phân tích từ VPC Flow Logs, DNS logs và CloudTrail, không cần cài agent. Dịch vụ nào?",
+    "questionEn": "A security team wants to detect anomalous behavior such as an instance communicating with malicious IPs or crypto-mining, analyzing VPC Flow Logs, DNS logs, and CloudTrail, with no agent to install. Which service?",
+    "options": ["Amazon Inspector", "Amazon GuardDuty", "Amazon Macie", "AWS WAF"],
+    "optionsEn": ["Amazon Inspector", "Amazon GuardDuty", "Amazon Macie", "AWS WAF"],
+    "answer": 1,
+    "explanation": "GuardDuty dùng ML trên VPC Flow Logs, DNS logs và CloudTrail để phát hiện mối đe dọa, không cần agent, sinh ra findings. Inspector quét lỗ hổng, Macie tìm PII trong S3.",
+    "explanationEn": "GuardDuty uses ML on VPC Flow Logs, DNS logs, and CloudTrail to detect threats with no agent, producing findings. Inspector scans for vulnerabilities; Macie discovers PII in S3."
+  },
+  {
+    "id": "q10",
+    "question": "Đội cần tự động quét các EC2 instance và container image trong ECR để tìm CVE (lỗ hổng phần mềm đã biết) và cổng mở ra Internet. Dịch vụ nào?",
+    "questionEn": "A team needs to automatically scan EC2 instances and ECR container images for CVEs (known software vulnerabilities) and ports exposed to the Internet. Which service?",
+    "options": ["Amazon GuardDuty", "Amazon Inspector", "Amazon Macie", "AWS Shield Advanced"],
+    "optionsEn": ["Amazon GuardDuty", "Amazon Inspector", "Amazon Macie", "AWS Shield Advanced"],
+    "answer": 1,
+    "explanation": "Inspector quét lỗ hổng tự động cho EC2, container image ECR và Lambda, tìm CVE và network exposure. GuardDuty phát hiện mối đe dọa đang diễn ra, không quét CVE.",
+    "explanationEn": "Inspector automatically scans EC2, ECR container images, and Lambda for vulnerabilities, finding CVEs and network exposure. GuardDuty detects active threats, it does not scan for CVEs."
+  },
+  {
+    "id": "q11",
+    "question": "Tổ chức lo ngại thông tin cá nhân (PII) như số thẻ tín dụng có thể bị lưu nhầm trong các bucket S3. Dịch vụ nào tự động phát hiện và phân loại dữ liệu nhạy cảm này?",
+    "questionEn": "An organization worries that PII such as credit card numbers may be accidentally stored in S3 buckets. Which service automatically discovers and classifies this sensitive data?",
+    "options": ["Amazon Macie", "Amazon GuardDuty", "AWS KMS", "Amazon Inspector"],
+    "optionsEn": ["Amazon Macie", "Amazon GuardDuty", "AWS KMS", "Amazon Inspector"],
+    "answer": 0,
+    "explanation": "Macie dùng ML để phát hiện và phân loại dữ liệu nhạy cảm/PII trong S3 (số thẻ, số định danh...). GuardDuty tập trung threat detection, Inspector quét lỗ hổng compute.",
+    "explanationEn": "Macie uses ML to discover and classify sensitive data/PII in S3 (card numbers, ID numbers, etc.). GuardDuty focuses on threat detection, and Inspector scans compute for vulnerabilities."
+  },
+  {
+    "id": "q12",
+    "question": "Yêu cầu tuân thủ bắt buộc một Hardware Security Module chuyên dụng, single-tenant, đạt FIPS 140-2 Level 3, và khách hàng phải kiểm soát hoàn toàn khóa. Dịch vụ nào?",
+    "questionEn": "A compliance requirement mandates a dedicated, single-tenant Hardware Security Module at FIPS 140-2 Level 3, where the customer must fully control the keys. Which service?",
+    "options": ["AWS KMS với customer-managed key", "AWS CloudHSM", "AWS Secrets Manager", "SSM Parameter Store"],
+    "optionsEn": ["AWS KMS with a customer-managed key", "AWS CloudHSM", "AWS Secrets Manager", "SSM Parameter Store"],
+    "answer": 1,
+    "explanation": "CloudHSM cung cấp HSM chuyên dụng single-tenant, FIPS 140-2 Level 3, khách hàng tự kiểm soát khóa hoàn toàn. KMS là multi-tenant và AWS quản lý hạ tầng khóa.",
+    "explanationEn": "CloudHSM provides a dedicated single-tenant HSM at FIPS 140-2 Level 3 where the customer fully controls the keys. KMS is multi-tenant and AWS manages the key infrastructure."
+  },
+  {
+    "id": "q13",
+    "question": "Một doanh nghiệp có hàng chục tài khoản trong AWS Organizations và muốn áp dụng nhất quán các quy tắc WAF cùng Security Groups trên tất cả tài khoản. Dịch vụ nào?",
+    "questionEn": "An enterprise has dozens of accounts in AWS Organizations and wants to consistently apply WAF rules and Security Groups across all accounts. Which service?",
+    "options": ["AWS WAF trực tiếp trên từng tài khoản", "AWS Firewall Manager", "Amazon GuardDuty", "AWS Shield Standard"],
+    "optionsEn": ["AWS WAF directly on each account", "AWS Firewall Manager", "Amazon GuardDuty", "AWS Shield Standard"],
+    "answer": 1,
+    "explanation": "Firewall Manager quản lý tập trung WAF, Shield Advanced và Security Groups trên nhiều tài khoản trong Organizations, tự áp cho tài nguyên mới. Cấu hình WAF thủ công từng tài khoản không nhất quán và tốn công.",
+    "explanationEn": "Firewall Manager centrally manages WAF, Shield Advanced, and Security Groups across multiple accounts in Organizations, auto-applying to new resources. Configuring WAF per account manually is inconsistent and labor-intensive."
+  },
+  {
+    "id": "q14",
+    "question": "Ứng dụng chạy đa region cần cùng một khóa mã hóa (cùng key ID) để giải mã dữ liệu được sao chép giữa us-east-1 và eu-west-1. KMS xử lý điều này thế nào?",
+    "questionEn": "A multi-region application needs the same encryption key (same key ID) to decrypt data replicated between us-east-1 and eu-west-1. How does KMS handle this?",
+    "options": ["Khóa KMS tự động dùng chung toàn cầu mặc định", "Dùng KMS Multi-Region Keys (bản sao khóa qua các region)", "Export khóa và copy thủ công sang region khác", "Chuyển sang CloudHSM vì KMS không hỗ trợ đa region"],
+    "optionsEn": ["KMS keys are automatically global by default", "Use KMS Multi-Region Keys (key replicas across regions)", "Export the key and manually copy it to the other region", "Switch to CloudHSM because KMS does not support multi-region"],
+    "answer": 1,
+    "explanation": "Khóa KMS mặc định là per-region. Multi-Region Keys tạo bản sao khóa với cùng key ID ở nhiều region, cho phép mã hóa ở vùng này và giải mã ở vùng khác — phù hợp DR và dữ liệu sao chép xuyên vùng.",
+    "explanationEn": "KMS keys are per-region by default. Multi-Region Keys create key replicas with the same key ID across regions, allowing encryption in one region and decryption in another — ideal for DR and cross-region replicated data."
+  }
+]

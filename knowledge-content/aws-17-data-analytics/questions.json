@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "Một công ty dùng Athena truy vấn log lưu dạng CSV không nén trong S3 và thấy chi phí rất cao. Cách nào giảm chi phí HIỆU QUẢ NHẤT?",
+    "questionEn": "A company uses Athena to query uncompressed CSV logs in S3 and finds costs very high. Which approach reduces cost MOST effectively?",
+    "options": [
+      "Chuyển dữ liệu sang định dạng cột Parquet, nén và partition",
+      "Tăng số truy vấn đồng thời",
+      "Chuyển toàn bộ dữ liệu sang EBS",
+      "Đổi sang dùng RDS để truy vấn"
+    ],
+    "optionsEn": [
+      "Convert data to columnar Parquet, compress it, and partition it",
+      "Increase the number of concurrent queries",
+      "Move all data to EBS",
+      "Switch to using RDS for queries"
+    ],
+    "answer": 0,
+    "explanation": "Athena tính tiền theo lượng dữ liệu QUÉT. Dùng Parquet (columnar) + nén + partition giúp quét ít byte hơn nhiều → giảm chi phí và tăng tốc.",
+    "explanationEn": "Athena is billed by data SCANNED. Using Parquet (columnar) + compression + partitioning scans far fewer bytes, cutting cost and speeding up queries."
+  },
+  {
+    "id": "q2",
+    "question": "Nhóm phân tích cần chạy các truy vấn SQL phức tạp, lặp lại thường xuyên trên hàng petabyte cho dashboard BI với hiệu năng cao. Dịch vụ nào phù hợp NHẤT?",
+    "questionEn": "An analytics team needs to run complex SQL queries repeatedly over petabytes for BI dashboards with high performance. Which service is MOST suitable?",
+    "options": [
+      "Amazon Athena",
+      "Amazon Redshift",
+      "Amazon OpenSearch Service",
+      "AWS Glue DataBrew"
+    ],
+    "optionsEn": [
+      "Amazon Athena",
+      "Amazon Redshift",
+      "Amazon OpenSearch Service",
+      "AWS Glue DataBrew"
+    ],
+    "answer": 1,
+    "explanation": "Redshift là data warehouse OLAP columnar, tối ưu cho phân tích phức tạp lặp lại thường xuyên ở quy mô petabyte. Athena hợp truy vấn thi thoảng/ad-hoc hơn.",
+    "explanationEn": "Redshift is a columnar OLAP data warehouse optimized for complex, frequently repeated analytics at petabyte scale. Athena is better for occasional/ad-hoc queries."
+  },
+  {
+    "id": "q3",
+    "question": "Công ty đã có cluster Redshift nhưng muốn truy vấn thêm dữ liệu lịch sử nằm trong S3 mà KHÔNG phải load vào cluster. Nên dùng gì?",
+    "questionEn": "A company already has a Redshift cluster but wants to query additional historical data in S3 WITHOUT loading it into the cluster. What should they use?",
+    "options": [
+      "Redshift Spectrum",
+      "Redshift Concurrency Scaling",
+      "Redshift Snapshots",
+      "Athena Federated Query"
+    ],
+    "optionsEn": [
+      "Redshift Spectrum",
+      "Redshift Concurrency Scaling",
+      "Redshift Snapshots",
+      "Athena Federated Query"
+    ],
+    "answer": 0,
+    "explanation": "Redshift Spectrum cho phép truy vấn dữ liệu trực tiếp trong S3 mà không cần load vào cluster, mở rộng warehouse ra data lake.",
+    "explanationEn": "Redshift Spectrum lets you query data directly in S3 without loading it into the cluster, extending the warehouse to the data lake."
+  },
+  {
+    "id": "q4",
+    "question": "Thành phần nào của AWS Glue đóng vai trò kho metadata/schema trung tâm, được dùng chung bởi Athena, Redshift Spectrum và EMR?",
+    "questionEn": "Which AWS Glue component acts as the central metadata/schema store shared by Athena, Redshift Spectrum, and EMR?",
+    "options": [
+      "Glue Crawler",
+      "Glue DataBrew",
+      "Glue Data Catalog",
+      "Glue Studio"
+    ],
+    "optionsEn": [
+      "Glue Crawler",
+      "Glue DataBrew",
+      "Glue Data Catalog",
+      "Glue Studio"
+    ],
+    "answer": 2,
+    "explanation": "Glue Data Catalog là kho metadata/schema trung tâm dùng chung bởi Athena, Redshift Spectrum và EMR. Crawler là công cụ suy ra schema và cập nhật catalog.",
+    "explanationEn": "The Glue Data Catalog is the central metadata/schema store shared by Athena, Redshift Spectrum, and EMR. The Crawler is the tool that infers schema and updates the catalog."
+  },
+  {
+    "id": "q5",
+    "question": "Bạn có dữ liệu mới liên tục đổ vào S3 với cấu trúc chưa biết. Cần tự động phát hiện schema và cập nhật Glue Data Catalog. Nên dùng gì?",
+    "questionEn": "You have new data continuously landing in S3 with an unknown structure. You need to automatically detect schema and update the Glue Data Catalog. What should you use?",
+    "options": [
+      "Glue Studio",
+      "Glue Crawler",
+      "QuickSight SPICE",
+      "Lake Formation"
+    ],
+    "optionsEn": [
+      "Glue Studio",
+      "Glue Crawler",
+      "QuickSight SPICE",
+      "Lake Formation"
+    ],
+    "answer": 1,
+    "explanation": "Glue Crawler tự động quét dữ liệu trong S3, suy ra schema và cập nhật Glue Data Catalog, kể cả khi cấu trúc thay đổi.",
+    "explanationEn": "A Glue Crawler automatically scans data in S3, infers the schema, and updates the Glue Data Catalog, even as the structure changes."
+  },
+  {
+    "id": "q6",
+    "question": "Business user cần dashboard trực quan hóa nhanh với engine trong bộ nhớ, trả tiền theo phiên và không quản lý server. Dịch vụ nào?",
+    "questionEn": "Business users need fast visualization dashboards with an in-memory engine, per-session billing, and no server management. Which service?",
+    "options": [
+      "Amazon Athena",
+      "Amazon QuickSight",
+      "Amazon EMR",
+      "AWS Glue"
+    ],
+    "optionsEn": [
+      "Amazon Athena",
+      "Amazon QuickSight",
+      "Amazon EMR",
+      "AWS Glue"
+    ],
+    "answer": 1,
+    "explanation": "QuickSight là dịch vụ BI serverless, dùng engine trong bộ nhớ SPICE, tính tiền per-session, phù hợp làm dashboard cho business user.",
+    "explanationEn": "QuickSight is a serverless BI service using the in-memory SPICE engine with per-session billing, ideal for business-user dashboards."
+  },
+  {
+    "id": "q7",
+    "question": "Đội dữ liệu cần chạy job Apache Spark tùy biến sâu trên khối lượng rất lớn và muốn tiết kiệm chi phí compute cho phần việc chịu được gián đoạn. Lựa chọn TỐT NHẤT?",
+    "questionEn": "A data team needs to run deeply customized Apache Spark jobs on very large volumes and wants to save compute cost for interruption-tolerant work. BEST choice?",
+    "options": [
+      "Amazon Athena",
+      "Amazon EMR trên EC2 Spot Instances",
+      "Amazon QuickSight",
+      "Amazon OpenSearch Service"
+    ],
+    "optionsEn": [
+      "Amazon Athena",
+      "Amazon EMR on EC2 Spot Instances",
+      "Amazon QuickSight",
+      "Amazon OpenSearch Service"
+    ],
+    "answer": 1,
+    "explanation": "EMR là cluster big data được quản lý cho Hadoop/Spark, cho phép tùy biến sâu; dùng EC2 Spot Instances giúp giảm mạnh chi phí cho công việc chịu được gián đoạn.",
+    "explanationEn": "EMR is a managed big data cluster for Hadoop/Spark allowing deep customization; using EC2 Spot Instances greatly reduces cost for interruption-tolerant work."
+  },
+  {
+    "id": "q8",
+    "question": "Công ty muốn xây data lake trên S3 và áp dụng quyền truy cập chi tiết ở mức cột và hàng một cách tập trung. Dịch vụ nào phù hợp NHẤT?",
+    "questionEn": "A company wants to build a data lake on S3 and apply fine-grained access control at the column and row level, centrally. Which service is MOST suitable?",
+    "options": [
+      "AWS Lake Formation",
+      "Amazon Athena",
+      "AWS Glue Studio",
+      "Amazon Redshift"
+    ],
+    "optionsEn": [
+      "AWS Lake Formation",
+      "Amazon Athena",
+      "AWS Glue Studio",
+      "Amazon Redshift"
+    ],
+    "answer": 0,
+    "explanation": "Lake Formation xây và bảo mật data lake trên S3, cung cấp kiểm soát truy cập chi tiết tới mức cột/hàng/bảng, nằm trên nền Glue.",
+    "explanationEn": "Lake Formation builds and secures a data lake on S3, providing fine-grained access control down to column/row/table level, sitting on top of Glue."
+  },
+  {
+    "id": "q9",
+    "question": "Ứng dụng cần phân tích luồng sự kiện clickstream theo thời gian thực bằng SQL/Apache Flink ngay khi dữ liệu tới. Dịch vụ nào?",
+    "questionEn": "An application needs to analyze a clickstream event stream in real time using SQL/Apache Flink as data arrives. Which service?",
+    "options": [
+      "Amazon Athena",
+      "Amazon Kinesis Data Analytics (Managed Service for Apache Flink)",
+      "Amazon Redshift",
+      "AWS Glue"
+    ],
+    "optionsEn": [
+      "Amazon Athena",
+      "Amazon Kinesis Data Analytics (Managed Service for Apache Flink)",
+      "Amazon Redshift",
+      "AWS Glue"
+    ],
+    "answer": 1,
+    "explanation": "Kinesis Data Analytics (nay là Managed Service for Apache Flink) phân tích dữ liệu streaming real-time bằng SQL/Flink ngay khi dữ liệu tới, không cần batch.",
+    "explanationEn": "Kinesis Data Analytics (now Managed Service for Apache Flink) analyzes streaming data in real time with SQL/Flink as data arrives, with no batching."
+  },
+  {
+    "id": "q10",
+    "question": "Một tổ chức đã vận hành hệ thống Apache Kafka on-premises và muốn chuyển lên AWS nhưng giữ nguyên tương thích Kafka API. Nên dùng gì?",
+    "questionEn": "An organization already runs Apache Kafka on-premises and wants to move to AWS while keeping Kafka API compatibility. What should they use?",
+    "options": [
+      "Amazon Kinesis Data Streams",
+      "Amazon MSK",
+      "Amazon SQS",
+      "Amazon OpenSearch Service"
+    ],
+    "optionsEn": [
+      "Amazon Kinesis Data Streams",
+      "Amazon MSK",
+      "Amazon SQS",
+      "Amazon OpenSearch Service"
+    ],
+    "answer": 1,
+    "explanation": "MSK là Apache Kafka được quản lý, tương thích Kafka gốc, phù hợp khi tổ chức đã dùng Kafka và cần giữ tương thích API.",
+    "explanationEn": "MSK is managed Apache Kafka, compatible with native Kafka, ideal when an organization already uses Kafka and needs API compatibility."
+  },
+  {
+    "id": "q11",
+    "question": "Đội vận hành cần thu thập và phân tích log ứng dụng gần thời gian thực với khả năng full-text search và dashboard kiểu Kibana. Dịch vụ nào?",
+    "questionEn": "An ops team needs to collect and analyze application logs near real time with full-text search and Kibana-style dashboards. Which service?",
+    "options": [
+      "Amazon Redshift",
+      "Amazon Athena",
+      "Amazon OpenSearch Service",
+      "Amazon QuickSight"
+    ],
+    "optionsEn": [
+      "Amazon Redshift",
+      "Amazon Athena",
+      "Amazon OpenSearch Service",
+      "Amazon QuickSight"
+    ],
+    "answer": 2,
+    "explanation": "OpenSearch Service (trước là Elasticsearch) mạnh cho full-text search và phân tích log theo mô hình ELK, với dashboard kiểu Kibana. Không phải công cụ SQL analytics.",
+    "explanationEn": "OpenSearch Service (formerly Elasticsearch) is strong for full-text search and ELK-style log analytics with Kibana-like dashboards. It is not a SQL analytics tool."
+  },
+  {
+    "id": "q12",
+    "question": "Nhà phân tích chỉ thi thoảng cần chạy vài truy vấn SQL ad-hoc trên dữ liệu trong S3 và KHÔNG muốn dựng/duy trì bất kỳ hạ tầng nào. Lựa chọn TIẾT KIỆM NHẤT?",
+    "questionEn": "An analyst only occasionally needs to run a few ad-hoc SQL queries on data in S3 and does NOT want to provision/maintain any infrastructure. MOST cost-effective choice?",
+    "options": [
+      "Dựng cluster Redshift luôn bật",
+      "Amazon Athena",
+      "Chạy cluster EMR 24/7",
+      "Amazon RDS PostgreSQL"
+    ],
+    "optionsEn": [
+      "Provision an always-on Redshift cluster",
+      "Amazon Athena",
+      "Run an EMR cluster 24/7",
+      "Amazon RDS PostgreSQL"
+    ],
+    "answer": 1,
+    "explanation": "Athena là serverless, chỉ tính tiền theo lượng dữ liệu quét cho các truy vấn thi thoảng — không phải trả cho cluster luôn bật, nên tiết kiệm nhất cho ad-hoc.",
+    "explanationEn": "Athena is serverless and charges only for data scanned on occasional queries — no cost for an always-on cluster, making it the most cost-effective for ad-hoc use."
+  },
+  {
+    "id": "q13",
+    "question": "Đội cần dịch vụ ETL serverless để làm sạch và biến đổi dữ liệu mà KHÔNG phải quản lý cluster nào. Dịch vụ nào phù hợp NHẤT?",
+    "questionEn": "A team needs a serverless ETL service to clean and transform data WITHOUT managing any cluster. Which service is MOST suitable?",
+    "options": [
+      "Amazon EMR",
+      "AWS Glue",
+      "Amazon Redshift",
+      "Amazon MSK"
+    ],
+    "optionsEn": [
+      "Amazon EMR",
+      "AWS Glue",
+      "Amazon Redshift",
+      "Amazon MSK"
+    ],
+    "answer": 1,
+    "explanation": "Glue là ETL serverless, tự chạy job Spark mà không cần quản lý hạ tầng. EMR mạnh nhưng phải quản lý cluster và tùy biến nhiều hơn.",
+    "explanationEn": "Glue is serverless ETL, running Spark jobs without managing infrastructure. EMR is powerful but requires managing a cluster and more customization."
+  },
+  {
+    "id": "q14",
+    "question": "Phát biểu nào ĐÚNG về Amazon Redshift?",
+    "questionEn": "Which statement is TRUE about Amazon Redshift?",
+    "options": [
+      "Là database OLTP tối ưu cho giao dịch ghi nhỏ tần suất cao",
+      "Là data warehouse OLAP columnar dựa trên PostgreSQL, không dùng cho OLTP",
+      "Là dịch vụ tìm kiếm full-text thay thế cho OpenSearch",
+      "Là dịch vụ ETL serverless thay thế cho Glue"
+    ],
+    "optionsEn": [
+      "It is an OLTP database optimized for high-frequency small write transactions",
+      "It is a columnar OLAP data warehouse based on PostgreSQL, not used for OLTP",
+      "It is a full-text search service replacing OpenSearch",
+      "It is a serverless ETL service replacing Glue"
+    ],
+    "answer": 1,
+    "explanation": "Redshift là data warehouse OLAP lưu trữ theo cột, dựa trên PostgreSQL nhưng KHÔNG dùng cho OLTP (giao dịch). Nó tối ưu cho phân tích quy mô lớn.",
+    "explanationEn": "Redshift is a columnar OLAP data warehouse based on PostgreSQL but NOT used for OLTP (transactions). It is optimized for large-scale analytics."
+  }
+]

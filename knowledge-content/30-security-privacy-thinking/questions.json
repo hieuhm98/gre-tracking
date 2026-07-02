@@ -2,181 +2,301 @@
   {
     "id": "sec-01",
     "question": "Tại sao BA cần có tư duy security, không chỉ để cho dev lo?",
+    "questionEn": "Why does a BA need a security mindset, rather than just leaving it to the devs?",
     "options": [
       "Vì BA phải viết code bảo mật thay dev",
       "Vì BA là người nắm requirement — nếu BA không hỏi, security gap sẽ không được specify và dev cũng không tự thêm vào",
       "Vì security là trách nhiệm của BA theo quy định pháp luật",
       "Vì dev không biết về security"
     ],
+    "optionsEn": [
+      "Because the BA has to write secure code instead of the dev",
+      "Because the BA owns the requirements — if the BA doesn't ask, the security gap won't be specified and the dev won't add it on their own",
+      "Because security is the BA's legal responsibility by regulation",
+      "Because devs don't know anything about security"
+    ],
     "answer": 1,
-    "explanation": "Dev implement những gì được specify. Nếu BA không hỏi 'ai được xem đơn hàng của người khác không?' thì không ai nghĩ đến lỗ hổng IDOR. Security gap thường đến từ assumption — 'chắc dev tự biết' — nhưng dev không có context business để biết rule đó."
+    "explanation": "Dev implement những gì được specify. Nếu BA không hỏi 'ai được xem đơn hàng của người khác không?' thì không ai nghĩ đến lỗ hổng IDOR. Security gap thường đến từ assumption — 'chắc dev tự biết' — nhưng dev không có context business để biết rule đó.",
+    "explanationEn": "Devs implement what is specified. If the BA never asks 'can anyone view someone else's orders?', nobody thinks about the IDOR flaw. Security gaps usually come from an assumption — 'the dev surely knows' — but the dev lacks the business context to know that rule."
   },
   {
     "id": "sec-02",
     "question": "IDOR (Insecure Direct Object Reference) là lỗ hổng gì?",
+    "questionEn": "What kind of vulnerability is IDOR (Insecure Direct Object Reference)?",
     "options": [
       "Mật khẩu quá ngắn, dễ đoán",
       "Hệ thống không mã hóa dữ liệu truyền đi",
       "User có thể truy cập tài nguyên của người khác bằng cách thay đổi ID trên URL/request",
       "Tấn công bằng cách gửi nhiều request cùng lúc"
     ],
+    "optionsEn": [
+      "A password that is too short and easy to guess",
+      "The system does not encrypt data in transit",
+      "A user can access someone else's resources by changing the ID in the URL/request",
+      "An attack that sends many requests at once"
+    ],
     "answer": 2,
-    "explanation": "Ví dụ: /api/orders/1234 trả về đơn hàng. Nếu không kiểm tra ownership, user B chỉ cần đổi thành /api/orders/1235 là xem được đơn hàng của user A. BA cần specify: 'User chỉ được xem đơn hàng của chính mình' — câu này nghe hiển nhiên nhưng nếu không viết ra, không ai verify."
+    "explanation": "Ví dụ: /api/orders/1234 trả về đơn hàng. Nếu không kiểm tra ownership, user B chỉ cần đổi thành /api/orders/1235 là xem được đơn hàng của user A. BA cần specify: 'User chỉ được xem đơn hàng của chính mình' — câu này nghe hiển nhiên nhưng nếu không viết ra, không ai verify.",
+    "explanationEn": "Example: /api/orders/1234 returns an order. Without an ownership check, user B just changes it to /api/orders/1235 and sees user A's order. The BA needs to specify: 'A user can only view their own orders' — this sounds obvious, but if it isn't written down, nobody verifies it."
   },
   {
     "id": "sec-03",
     "question": "Dữ liệu nào thuộc loại 'Restricted' (nhạy cảm nhất) cần bảo vệ cao nhất?",
+    "questionEn": "Which data belongs to the 'Restricted' class (the most sensitive) that needs the highest protection?",
     "options": [
       "Tên sản phẩm, giá bán công khai",
       "Báo cáo doanh thu nội bộ, chiến lược kinh doanh",
       "Mật khẩu, CCCD/CMND, thông tin thẻ tín dụng, dữ liệu y tế",
       "Tên công ty, địa chỉ văn phòng"
     ],
+    "optionsEn": [
+      "Product names and public sale prices",
+      "Internal revenue reports and business strategy",
+      "Passwords, national ID cards, credit card information, medical data",
+      "Company name and office address"
+    ],
     "answer": 2,
-    "explanation": "4 cấp độ dữ liệu: Public (ai xem cũng được), Internal (nội bộ công ty), Confidential (báo cáo, chiến lược — cần auth), Restricted (mật khẩu, CCCD, thẻ tín dụng, y tế — cần encrypt + audit trail + access tối thiểu). BA cần classify để spec đúng biện pháp bảo vệ."
+    "explanation": "4 cấp độ dữ liệu: Public (ai xem cũng được), Internal (nội bộ công ty), Confidential (báo cáo, chiến lược — cần auth), Restricted (mật khẩu, CCCD, thẻ tín dụng, y tế — cần encrypt + audit trail + access tối thiểu). BA cần classify để spec đúng biện pháp bảo vệ.",
+    "explanationEn": "The 4 data levels: Public (anyone can view), Internal (company-internal), Confidential (reports, strategy — requires auth), Restricted (passwords, national ID, credit cards, medical — requires encryption + audit trail + minimal access). The BA needs to classify data to specify the right protection measures."
   },
   {
     "id": "sec-04",
     "question": "Authentication và Authorization khác nhau thế nào?",
+    "questionEn": "How do Authentication and Authorization differ?",
     "options": [
       "Chúng giống nhau, chỉ khác tên gọi",
       "Authentication: bạn là ai; Authorization: bạn được làm gì",
       "Authorization: bạn là ai; Authentication: bạn được làm gì",
       "Authentication dùng cho web, Authorization dùng cho mobile"
     ],
+    "optionsEn": [
+      "They are the same thing, just different names",
+      "Authentication: who you are; Authorization: what you are allowed to do",
+      "Authorization: who you are; Authentication: what you are allowed to do",
+      "Authentication is for web, Authorization is for mobile"
+    ],
     "answer": 1,
-    "explanation": "Authentication (AuthN): xác nhận danh tính — login bằng email/password, Google, Face ID. Authorization (AuthZ): xác nhận quyền hạn — manager được approve đơn, nhân viên chỉ được xem. Lỗi hay gặp: hệ thống có login (AuthN) nhưng không check quyền (AuthZ) → mọi user đều làm được mọi thứ."
+    "explanation": "Authentication (AuthN): xác nhận danh tính — login bằng email/password, Google, Face ID. Authorization (AuthZ): xác nhận quyền hạn — manager được approve đơn, nhân viên chỉ được xem. Lỗi hay gặp: hệ thống có login (AuthN) nhưng không check quyền (AuthZ) → mọi user đều làm được mọi thứ.",
+    "explanationEn": "Authentication (AuthN): confirming identity — logging in with email/password, Google, Face ID. Authorization (AuthZ): confirming permissions — a manager can approve an order, an employee can only view. Common mistake: the system has login (AuthN) but never checks permissions (AuthZ) → every user can do everything."
   },
   {
     "id": "sec-05",
     "question": "Điều gì là 'red line' tuyệt đối không được làm trong hệ thống?",
+    "questionEn": "Which of these is a 'red line' that must absolutely never be done in a system?",
     "options": [
       "Không được dùng HTTPS cho API nội bộ",
       "Lưu password dạng plaintext trong database",
       "Không được log lỗi ra console",
       "Không được dùng JWT token"
     ],
+    "optionsEn": [
+      "Not using HTTPS for internal APIs",
+      "Storing passwords as plaintext in the database",
+      "Not logging errors to the console",
+      "Not using JWT tokens"
+    ],
     "answer": 1,
-    "explanation": "5 red lines: (1) Lưu password plaintext — hash bằng bcrypt/argon2. (2) Log dữ liệu nhạy cảm — CCCD, password không được xuất hiện trong log. (3) Sensitive data trong URL — /reset?token=abc123 bị lưu vào server log. (4) Tin client input tuyệt đối — luôn validate server-side. (5) Lộ thông tin hệ thống trong error message."
+    "explanation": "5 red lines: (1) Lưu password plaintext — hash bằng bcrypt/argon2. (2) Log dữ liệu nhạy cảm — CCCD, password không được xuất hiện trong log. (3) Sensitive data trong URL — /reset?token=abc123 bị lưu vào server log. (4) Tin client input tuyệt đối — luôn validate server-side. (5) Lộ thông tin hệ thống trong error message.",
+    "explanationEn": "The 5 red lines: (1) Storing plaintext passwords — hash with bcrypt/argon2. (2) Logging sensitive data — national IDs and passwords must not appear in logs. (3) Sensitive data in the URL — /reset?token=abc123 ends up in server logs. (4) Blindly trusting client input — always validate server-side. (5) Exposing system information in error messages."
   },
   {
     "id": "sec-06",
     "question": "Privacy by Design có nghĩa là gì?",
+    "questionEn": "What does Privacy by Design mean?",
     "options": [
       "Thiết kế UI cho người dùng cao tuổi",
       "Chỉ thu thập dữ liệu tối thiểu cần thiết và tích hợp privacy vào hệ thống từ đầu, không phải thêm vào sau",
       "Yêu cầu user đọc và ký Privacy Policy",
       "Mã hóa toàn bộ database"
     ],
+    "optionsEn": [
+      "Designing the UI for elderly users",
+      "Collecting only the minimum data needed and building privacy into the system from the start, not adding it later",
+      "Requiring users to read and sign a Privacy Policy",
+      "Encrypting the entire database"
+    ],
     "answer": 1,
-    "explanation": "Privacy by Design: xây privacy vào kiến trúc từ đầu, không phải patch sau. 7 nguyên tắc: proactive (phòng ngừa), privacy by default, embedded (tích hợp vào thiết kế), full functionality (không đánh đổi), end-to-end security, visibility, respect user. Câu hỏi BA cần hỏi: 'Chúng ta có thực sự cần thu thập field này không?'"
+    "explanation": "Privacy by Design: xây privacy vào kiến trúc từ đầu, không phải patch sau. 7 nguyên tắc: proactive (phòng ngừa), privacy by default, embedded (tích hợp vào thiết kế), full functionality (không đánh đổi), end-to-end security, visibility, respect user. Câu hỏi BA cần hỏi: 'Chúng ta có thực sự cần thu thập field này không?'",
+    "explanationEn": "Privacy by Design: building privacy into the architecture from the start, not patching it later. The 7 principles: proactive (prevention), privacy by default, embedded (built into the design), full functionality (no trade-off), end-to-end security, visibility, and respect for the user. The question a BA should ask: 'Do we really need to collect this field?'"
   },
   {
     "id": "sec-07",
     "question": "Khi BA viết requirement cho tính năng upload file, câu hỏi security nào QUAN TRỌNG NHẤT?",
+    "questionEn": "When a BA writes the requirement for a file upload feature, which security question is MOST IMPORTANT?",
     "options": [
       "File sẽ được lưu trên server hay cloud?",
       "Loại file nào được phép upload? Kích thước tối đa? File có được scan malware không?",
       "Dev sẽ dùng thư viện gì để xử lý file?",
       "User upload bao nhiêu file mỗi ngày?"
     ],
+    "optionsEn": [
+      "Will the file be stored on a server or in the cloud?",
+      "Which file types are allowed? What is the maximum size? Is the file scanned for malware?",
+      "Which library will the dev use to handle the file?",
+      "How many files does a user upload each day?"
+    ],
     "answer": 1,
-    "explanation": "Upload file là attack surface nguy hiểm: (1) Whitelist extension — chỉ allow .jpg/.png/.pdf, reject .exe/.sh/.php. (2) Giới hạn kích thước để tránh DoS. (3) Scan malware trước khi lưu. (4) Không lưu theo tên user đặt — tránh path traversal. (5) Kiểm tra content-type thật, không chỉ dựa vào extension."
+    "explanation": "Upload file là attack surface nguy hiểm: (1) Whitelist extension — chỉ allow .jpg/.png/.pdf, reject .exe/.sh/.php. (2) Giới hạn kích thước để tránh DoS. (3) Scan malware trước khi lưu. (4) Không lưu theo tên user đặt — tránh path traversal. (5) Kiểm tra content-type thật, không chỉ dựa vào extension.",
+    "explanationEn": "File upload is a dangerous attack surface: (1) Whitelist extensions — only allow .jpg/.png/.pdf, reject .exe/.sh/.php. (2) Limit the size to avoid DoS. (3) Scan for malware before storing. (4) Don't store under the user-supplied name — avoids path traversal. (5) Check the real content-type, not just the extension."
   },
   {
     "id": "sec-08",
     "question": "Audit Trail trong hệ thống ghi lại những gì?",
+    "questionEn": "What does an Audit Trail in a system record?",
     "options": [
       "Chỉ ghi lại lỗi hệ thống (error log)",
       "Ghi lại WHO làm gì (WHAT), khi nào (WHEN), từ đâu (WHERE) — đặc biệt cho các action nhạy cảm",
       "Chỉ ghi lại transaction tài chính",
       "Ghi lại toàn bộ nội dung request/response của mọi API"
     ],
+    "optionsEn": [
+      "Only records system errors (the error log)",
+      "Records WHO did WHAT, WHEN, and from WHERE — especially for sensitive actions",
+      "Only records financial transactions",
+      "Records the full request/response content of every API"
+    ],
     "answer": 1,
-    "explanation": "Audit trail = lịch sử hành động cho mục đích kiểm tra và truy cứu: user_id (WHO), action (WHAT: created/updated/deleted), timestamp (WHEN), ip_address (WHERE), affected_record (cái gì bị thay đổi). Cần thiết cho: compliance, điều tra incident, resolve tranh chấp. BA cần specify tính năng nào cần audit trail."
+    "explanation": "Audit trail = lịch sử hành động cho mục đích kiểm tra và truy cứu: user_id (WHO), action (WHAT: created/updated/deleted), timestamp (WHEN), ip_address (WHERE), affected_record (cái gì bị thay đổi). Cần thiết cho: compliance, điều tra incident, resolve tranh chấp. BA cần specify tính năng nào cần audit trail.",
+    "explanationEn": "An audit trail = a history of actions for auditing and accountability: user_id (WHO), action (WHAT: created/updated/deleted), timestamp (WHEN), ip_address (WHERE), affected_record (what was changed). It is needed for compliance, incident investigation, and dispute resolution. The BA needs to specify which features require an audit trail."
   },
   {
     "id": "sec-09",
     "question": "GDPR 'Right to Erasure' (Right to be Forgotten) yêu cầu điều gì?",
+    "questionEn": "What does the GDPR 'Right to Erasure' (Right to be Forgotten) require?",
     "options": [
       "User có quyền xem toàn bộ dữ liệu của mình",
       "User có quyền yêu cầu xóa dữ liệu cá nhân của mình khỏi hệ thống",
       "Hệ thống phải tự động xóa dữ liệu sau 2 năm",
       "User có quyền chỉnh sửa dữ liệu cá nhân"
     ],
+    "optionsEn": [
+      "The user has the right to view all of their data",
+      "The user has the right to request deletion of their personal data from the system",
+      "The system must automatically delete data after 2 years",
+      "The user has the right to edit their personal data"
+    ],
     "answer": 1,
-    "explanation": "GDPR 6 quyền: (1) Access — xem dữ liệu của mình. (2) Erasure — yêu cầu xóa. (3) Rectification — sửa dữ liệu sai. (4) Portability — export dữ liệu. (5) Object — từ chối một số xử lý. (6) Restriction. BA cần hỏi: 'Nếu user yêu cầu xóa account, chúng ta xử lý thế nào?' — có exception cho dữ liệu tài chính phải giữ theo luật."
+    "explanation": "GDPR 6 quyền: (1) Access — xem dữ liệu của mình. (2) Erasure — yêu cầu xóa. (3) Rectification — sửa dữ liệu sai. (4) Portability — export dữ liệu. (5) Object — từ chối một số xử lý. (6) Restriction. BA cần hỏi: 'Nếu user yêu cầu xóa account, chúng ta xử lý thế nào?' — có exception cho dữ liệu tài chính phải giữ theo luật.",
+    "explanationEn": "The 6 GDPR rights: (1) Access — view your own data. (2) Erasure — request deletion. (3) Rectification — correct wrong data. (4) Portability — export data. (5) Object — refuse certain processing. (6) Restriction. The BA needs to ask: 'If a user requests account deletion, how do we handle it?' — there is an exception for financial data that must be kept by law."
   },
   {
     "id": "sec-10",
     "question": "Tại sao không nên đặt token reset password vào URL query string?",
+    "questionEn": "Why should you not put a password reset token in the URL query string?",
     "options": [
       "URL quá dài sẽ khó nhớ",
       "URL được lưu vào server log, browser history, và có thể bị leak qua Referer header — lộ token = ai cũng reset được password đó",
       "Query string không được hỗ trợ trên mobile",
       "Token trong URL sẽ bị expire nhanh hơn"
     ],
+    "optionsEn": [
+      "A URL that is too long is hard to remember",
+      "The URL gets stored in server logs and browser history and can leak via the Referer header — an exposed token means anyone can reset that password",
+      "Query strings are not supported on mobile",
+      "A token in the URL expires faster"
+    ],
     "answer": 1,
-    "explanation": "URL /reset-password?token=abc123 xuất hiện trong: server access log, browser history, proxy log, Referer header khi click link tiếp theo. Token = key để reset password → nếu leak = account takeover. Best practice: token lưu trong POST body hoặc header, không bao giờ trong URL cho dữ liệu nhạy cảm."
+    "explanation": "URL /reset-password?token=abc123 xuất hiện trong: server access log, browser history, proxy log, Referer header khi click link tiếp theo. Token = key để reset password → nếu leak = account takeover. Best practice: token lưu trong POST body hoặc header, không bao giờ trong URL cho dữ liệu nhạy cảm.",
+    "explanationEn": "The URL /reset-password?token=abc123 appears in: the server access log, browser history, proxy logs, and the Referer header when the user clicks the next link. The token is the key to reset the password → if it leaks = account takeover. Best practice: keep the token in the POST body or a header, never in the URL for sensitive data."
   },
   {
     "id": "sec-11",
     "question": "Khi hệ thống có lỗi, error message nào là ĐÚNG về mặt security?",
+    "questionEn": "When the system has an error, which error message is CORRECT from a security standpoint?",
     "options": [
       "\"SQLException: column 'password' not found in table 'users' at line 47\"",
       "\"Error: Connection to 192.168.1.50:5432 failed\"",
       "\"Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.\"",
       "\"User not found in database: user@email.com\""
     ],
+    "optionsEn": [
+      "\"SQLException: column 'password' not found in table 'users' at line 47\"",
+      "\"Error: Connection to 192.168.1.50:5432 failed\"",
+      "\"Login failed. Please check your information and try again.\"",
+      "\"User not found in database: user@email.com\""
+    ],
     "answer": 2,
-    "explanation": "Error message không được lộ: tên bảng/cột trong DB, stack trace, IP/port nội bộ, thông tin có hay không email/user trong hệ thống (vì hacker dùng để enumerate users). Thông báo chung chung vừa an toàn vừa đủ để user hiểu cần làm gì. Log chi tiết ở server-side, user chỉ thấy thông báo generic."
+    "explanation": "Error message không được lộ: tên bảng/cột trong DB, stack trace, IP/port nội bộ, thông tin có hay không email/user trong hệ thống (vì hacker dùng để enumerate users). Thông báo chung chung vừa an toàn vừa đủ để user hiểu cần làm gì. Log chi tiết ở server-side, user chỉ thấy thông báo generic.",
+    "explanationEn": "An error message must not reveal: DB table/column names, stack traces, internal IP/port, or whether an email/user exists in the system (hackers use this to enumerate users). A generic message is both safe and enough for the user to know what to do. Log the details server-side; the user only sees the generic message."
   },
   {
     "id": "sec-12",
     "question": "Coupon 'SALE50' chỉ dùng được 1 lần/user. BA cần specify điều gì để tránh lỗ hổng?",
+    "questionEn": "The 'SALE50' coupon can only be used once per user. What does the BA need to specify to avoid a vulnerability?",
     "options": [
       "Chỉ cần validate coupon còn hiệu lực về ngày tháng",
       "Validate: coupon hợp lệ + chưa quá hạn + user này chưa dùng coupon này + đơn đủ điều kiện + áp dụng 1 coupon/đơn",
       "Chỉ cần check tổng số lần coupon được dùng toàn hệ thống",
       "Chỉ cần validate ở phía client (JavaScript) để giảm tải server"
     ],
+    "optionsEn": [
+      "Just validate that the coupon is still valid by date",
+      "Validate: coupon is valid + not expired + this user hasn't used this coupon before + the order is eligible + only one coupon applied per order",
+      "Just check the total number of times the coupon has been used system-wide",
+      "Just validate on the client side (JavaScript) to reduce server load"
+    ],
     "answer": 1,
-    "explanation": "Coupon validation đầy đủ: (1) Coupon tồn tại và chưa hết hạn. (2) User này chưa dùng coupon này (check bảng used_coupons). (3) Đơn hàng đủ điều kiện áp dụng. (4) Mỗi đơn chỉ 1 coupon. (5) Validate server-side — không tin client. Bỏ sót bất kỳ điều kiện nào = lỗ hổng để abuse. BA cần specify tất cả edge cases này."
+    "explanation": "Coupon validation đầy đủ: (1) Coupon tồn tại và chưa hết hạn. (2) User này chưa dùng coupon này (check bảng used_coupons). (3) Đơn hàng đủ điều kiện áp dụng. (4) Mỗi đơn chỉ 1 coupon. (5) Validate server-side — không tin client. Bỏ sót bất kỳ điều kiện nào = lỗ hổng để abuse. BA cần specify tất cả edge cases này.",
+    "explanationEn": "Full coupon validation: (1) The coupon exists and hasn't expired. (2) This user hasn't used this coupon before (check the used_coupons table). (3) The order is eligible. (4) Only one coupon per order. (5) Validate server-side — don't trust the client. Missing any condition = a vulnerability to abuse. The BA needs to specify all of these edge cases."
   },
   {
     "id": "sec-13",
     "question": "Nguyên tắc 'Principle of Least Privilege' có nghĩa là gì?",
+    "questionEn": "What does the 'Principle of Least Privilege' mean?",
     "options": [
       "User nên có ít quyền nhất có thể để thực hiện công việc của họ",
       "Hệ thống nên có ít tính năng nhất có thể",
       "Dev nên viết code ít nhất có thể",
       "Database nên có ít bảng nhất có thể"
     ],
+    "optionsEn": [
+      "A user should have the least privilege possible to do their job",
+      "The system should have as few features as possible",
+      "Devs should write as little code as possible",
+      "The database should have as few tables as possible"
+    ],
     "answer": 0,
-    "explanation": "Least Privilege: mỗi actor (user, service, process) chỉ được quyền tối thiểu cần thiết để làm việc của mình. Nhân viên sale không cần xem bảng lương. Service gửi email không cần quyền đọc database user. Admin A không cần xem dữ liệu của team B. BA cần spec role/permission matrix rõ ràng thay vì 'admin thì xem được tất cả'."
+    "explanation": "Least Privilege: mỗi actor (user, service, process) chỉ được quyền tối thiểu cần thiết để làm việc của mình. Nhân viên sale không cần xem bảng lương. Service gửi email không cần quyền đọc database user. Admin A không cần xem dữ liệu của team B. BA cần spec role/permission matrix rõ ràng thay vì 'admin thì xem được tất cả'.",
+    "explanationEn": "Least Privilege: each actor (user, service, process) gets only the minimum permissions needed to do their job. A salesperson doesn't need to see the payroll. An email-sending service doesn't need read access to the user database. Admin A doesn't need to see team B's data. The BA needs to spec a clear role/permission matrix instead of 'admins can see everything'."
   },
   {
     "id": "sec-14",
     "question": "'Assume Breach' mindset trong security có nghĩa là gì?",
+    "questionEn": "What does the 'Assume Breach' mindset in security mean?",
     "options": [
       "Giả định hệ thống sẽ bị hack và thiết kế để minimize damage, detect nhanh, recover nhanh",
       "Giả định tất cả dev đều có thể phá hoại hệ thống",
       "Không cần build defense vì breach không thể tránh được",
       "Chỉ cần backup thường xuyên là đủ"
     ],
+    "optionsEn": [
+      "Assume the system will be hacked and design to minimize damage, detect quickly, and recover quickly",
+      "Assume all devs might sabotage the system",
+      "No need to build defenses because a breach is unavoidable",
+      "Frequent backups are all you need"
+    ],
     "answer": 0,
-    "explanation": "Assume Breach: không hỏi 'nếu bị hack thì sao' mà hỏi 'khi bị hack, chúng ta detect được không? Damage có bị giới hạn không? Recover được bao lâu?' Dẫn đến: defense in depth (nhiều lớp bảo vệ), anomaly detection (alert bất thường), blast radius reduction (breach 1 service không lây toàn bộ), incident response plan."
+    "explanation": "Assume Breach: không hỏi 'nếu bị hack thì sao' mà hỏi 'khi bị hack, chúng ta detect được không? Damage có bị giới hạn không? Recover được bao lâu?' Dẫn đến: defense in depth (nhiều lớp bảo vệ), anomaly detection (alert bất thường), blast radius reduction (breach 1 service không lây toàn bộ), incident response plan.",
+    "explanationEn": "Assume Breach: don't ask 'what if we get hacked' but 'when we get hacked, can we detect it? Is the damage limited? How fast can we recover?' This leads to: defense in depth (multiple layers), anomaly detection (alerts on abnormal behavior), blast radius reduction (a breach of one service doesn't spread to everything), and an incident response plan."
   },
   {
     "id": "sec-15",
     "question": "Khi BA nhận yêu cầu 'Admin có thể xem báo cáo doanh thu theo từng nhân viên', câu hỏi security nào cần hỏi?",
+    "questionEn": "When a BA receives the requirement 'Admins can view revenue reports per employee', which security question should they ask?",
     "options": [
       "Báo cáo sẽ export ra file PDF hay Excel?",
       "Admin nào được xem? Có phân cấp không (CEO xem tất cả, Manager chỉ xem team mình)? Có log ai xem báo cáo không?",
       "Dữ liệu sẽ được lấy từ bảng nào trong database?",
       "Báo cáo cần realtime hay end-of-day là đủ?"
     ],
+    "optionsEn": [
+      "Will the report be exported as a PDF or Excel file?",
+      "Which admins can view it? Is there a hierarchy (CEO sees everything, a Manager only sees their own team)? Is it logged who viewed the report?",
+      "Which database table will the data come from?",
+      "Does the report need to be real-time, or is end-of-day enough?"
+    ],
     "answer": 1,
-    "explanation": "Câu hỏi security cho báo cáo nhạy cảm: (1) Phân cấp quyền — không phải mọi admin đều xem được mọi thứ. (2) Audit trail — ai xem báo cáo gì, lúc nào (quan trọng cho dữ liệu lương/hiệu suất). (3) Data masking — có cần ẩn bớt số không? (4) Export — xuất ra file có watermark không? Dữ liệu nhân viên = nhạy cảm, BA không nên assume 'admin xem được tất cả'."
+    "explanation": "Câu hỏi security cho báo cáo nhạy cảm: (1) Phân cấp quyền — không phải mọi admin đều xem được mọi thứ. (2) Audit trail — ai xem báo cáo gì, lúc nào (quan trọng cho dữ liệu lương/hiệu suất). (3) Data masking — có cần ẩn bớt số không? (4) Export — xuất ra file có watermark không? Dữ liệu nhân viên = nhạy cảm, BA không nên assume 'admin xem được tất cả'.",
+    "explanationEn": "Security questions for a sensitive report: (1) Permission hierarchy — not every admin can see everything. (2) Audit trail — who viewed which report and when (important for salary/performance data). (3) Data masking — do some figures need to be hidden? (4) Export — does the exported file have a watermark? Employee data is sensitive, so the BA should not assume 'admins can see everything'."
   }
 ]

@@ -2,171 +2,281 @@
   {
     "id": "css-01",
     "question": "CSS là viết tắt của từ gì?",
+    "questionEn": "What does CSS stand for?",
     "options": [
       "Creative Style Sheets",
       "Cascading Style Sheets",
       "Computer Style Sheets",
       "Colorful Style Sheets"
     ],
+    "optionsEn": [
+      "Creative Style Sheets",
+      "Cascading Style Sheets",
+      "Computer Style Sheets",
+      "Colorful Style Sheets"
+    ],
     "answer": 1,
-    "explanation": "CSS là Cascading Style Sheets — 'Cascading' (thác nước) đề cập đến cơ chế ưu tiên khi nhiều rule cùng áp dụng cho một phần tử."
+    "explanation": "CSS là Cascading Style Sheets — 'Cascading' (thác nước) đề cập đến cơ chế ưu tiên khi nhiều rule cùng áp dụng cho một phần tử.",
+    "explanationEn": "CSS stands for Cascading Style Sheets — 'Cascading' refers to the priority mechanism that applies when multiple rules target the same element."
   },
   {
     "id": "css-02",
     "question": "Trong CSS Box Model, thứ tự từ trong ra ngoài là gì?",
+    "questionEn": "In the CSS Box Model, what is the order from the inside out?",
     "options": [
       "Content → Border → Padding → Margin",
       "Content → Margin → Padding → Border",
       "Content → Padding → Border → Margin",
       "Padding → Content → Border → Margin"
     ],
+    "optionsEn": [
+      "Content → Border → Padding → Margin",
+      "Content → Margin → Padding → Border",
+      "Content → Padding → Border → Margin",
+      "Padding → Content → Border → Margin"
+    ],
     "answer": 2,
-    "explanation": "Từ trong ra ngoài: Content (nội dung) → Padding (khoảng đệm bên trong) → Border (đường viền) → Margin (khoảng cách bên ngoài)."
+    "explanation": "Từ trong ra ngoài: Content (nội dung) → Padding (khoảng đệm bên trong) → Border (đường viền) → Margin (khoảng cách bên ngoài).",
+    "explanationEn": "From the inside out: Content → Padding (inner spacing) → Border → Margin (outer spacing)."
   },
   {
     "id": "css-03",
     "question": "Với box-sizing: border-box, khi bạn đặt width: 300px và padding: 20px, tổng chiều rộng thực tế của element là bao nhiêu?",
+    "questionEn": "With box-sizing: border-box, when you set width: 300px and padding: 20px, what is the actual total width of the element?",
     "options": ["340px", "360px", "300px", "280px"],
+    "optionsEn": ["340px", "360px", "300px", "280px"],
     "answer": 2,
-    "explanation": "Với border-box, width: 300px bao gồm cả padding và border. Vì vậy tổng chiều rộng vẫn là 300px. Đây là lý do * { box-sizing: border-box } được dùng phổ biến — dễ dự đoán kích thước hơn."
+    "explanation": "Với border-box, width: 300px bao gồm cả padding và border. Vì vậy tổng chiều rộng vẫn là 300px. Đây là lý do * { box-sizing: border-box } được dùng phổ biến — dễ dự đoán kích thước hơn.",
+    "explanationEn": "With border-box, width: 300px already includes padding and border. So the total width remains 300px. This is why * { box-sizing: border-box } is so commonly used — sizes are easier to predict."
   },
   {
     "id": "css-04",
     "question": "Selector nào có độ ưu tiên (specificity) cao nhất?",
+    "questionEn": "Which selector has the highest specificity?",
     "options": [
       "p { color: red; }",
       ".text { color: blue; }",
       "#title { color: green; }",
       "p.text { color: purple; }"
     ],
+    "optionsEn": [
+      "p { color: red; }",
+      ".text { color: blue; }",
+      "#title { color: green; }",
+      "p.text { color: purple; }"
+    ],
     "answer": 2,
-    "explanation": "ID selector (#id) có specificity 100, cao hơn class selector (10) và tag selector (1). Thứ tự: inline style (1000) > ID (100) > class/pseudo-class (10) > tag (1)."
+    "explanation": "ID selector (#id) có specificity 100, cao hơn class selector (10) và tag selector (1). Thứ tự: inline style (1000) > ID (100) > class/pseudo-class (10) > tag (1).",
+    "explanationEn": "An ID selector (#id) has a specificity of 100, higher than a class selector (10) and a tag selector (1). The order is: inline style (1000) > ID (100) > class/pseudo-class (10) > tag (1)."
   },
   {
     "id": "css-05",
     "question": "Trong Flexbox, thuộc tính nào dùng để căn chỉnh items theo trục vuông góc (cross axis)?",
+    "questionEn": "In Flexbox, which property aligns items along the perpendicular axis (cross axis)?",
     "options": ["justify-content", "align-items", "flex-direction", "flex-wrap"],
+    "optionsEn": ["justify-content", "align-items", "flex-direction", "flex-wrap"],
     "answer": 1,
-    "explanation": "align-items căn chỉnh theo cross axis (trục phụ, vuông góc với trục chính). justify-content căn chỉnh theo main axis (trục chính). Với flex-direction: row, main axis là ngang, cross axis là dọc."
+    "explanation": "align-items căn chỉnh theo cross axis (trục phụ, vuông góc với trục chính). justify-content căn chỉnh theo main axis (trục chính). Với flex-direction: row, main axis là ngang, cross axis là dọc.",
+    "explanationEn": "align-items aligns along the cross axis (perpendicular to the main axis). justify-content aligns along the main axis. With flex-direction: row, the main axis is horizontal and the cross axis is vertical."
   },
   {
     "id": "css-06",
     "question": "Để căn giữa một div theo cả chiều ngang lẫn chiều dọc trong viewport, cách đơn giản nhất với Flexbox là gì?",
+    "questionEn": "To center a div both horizontally and vertically within the viewport, what is the simplest approach with Flexbox?",
     "options": [
       "margin: auto trên div đó",
       "text-align: center và vertical-align: middle",
       "display: flex; justify-content: center; align-items: center trên container",
       "position: absolute; top: 50%; left: 50%"
     ],
+    "optionsEn": [
+      "margin: auto on that div",
+      "text-align: center and vertical-align: middle",
+      "display: flex; justify-content: center; align-items: center on the container",
+      "position: absolute; top: 50%; left: 50%"
+    ],
     "answer": 2,
-    "explanation": "Áp dụng display: flex; justify-content: center; align-items: center lên container là cách đơn giản và phổ biến nhất để căn giữa hoàn hảo. Nhiều dev dùng body { display: flex; min-height: 100vh; }."
+    "explanation": "Áp dụng display: flex; justify-content: center; align-items: center lên container là cách đơn giản và phổ biến nhất để căn giữa hoàn hảo. Nhiều dev dùng body { display: flex; min-height: 100vh; }.",
+    "explanationEn": "Applying display: flex; justify-content: center; align-items: center to the container is the simplest and most common way to achieve perfect centering. Many developers use body { display: flex; min-height: 100vh; }."
   },
   {
     "id": "css-07",
     "question": "Media query nào áp dụng style khi màn hình rộng từ 768px trở lên (mobile-first)?",
+    "questionEn": "Which media query applies styles when the screen is 768px wide or larger (mobile-first)?",
     "options": [
       "@media (max-width: 768px)",
       "@media screen and (width: 768px)",
       "@media (min-width: 768px)",
       "@media (device-width: 768px)"
     ],
+    "optionsEn": [
+      "@media (max-width: 768px)",
+      "@media screen and (width: 768px)",
+      "@media (min-width: 768px)",
+      "@media (device-width: 768px)"
+    ],
     "answer": 2,
-    "explanation": "Mobile-first dùng min-width: viết CSS cho mobile trước, rồi dùng min-width để mở rộng lên màn hình lớn. @media (min-width: 768px) nghĩa là 'áp dụng khi màn hình từ 768px trở lên' — thường là tablet."
+    "explanation": "Mobile-first dùng min-width: viết CSS cho mobile trước, rồi dùng min-width để mở rộng lên màn hình lớn. @media (min-width: 768px) nghĩa là 'áp dụng khi màn hình từ 768px trở lên' — thường là tablet.",
+    "explanationEn": "Mobile-first uses min-width: write CSS for mobile first, then use min-width to scale up to larger screens. @media (min-width: 768px) means 'apply when the screen is 768px or wider' — typically a tablet."
   },
   {
     "id": "css-08",
     "question": "Sự khác biệt giữa display: none và visibility: hidden là gì?",
+    "questionEn": "What is the difference between display: none and visibility: hidden?",
     "options": [
       "Không có sự khác biệt",
       "display: none ẩn nhưng vẫn chiếm không gian, visibility: hidden không chiếm không gian",
       "display: none ẩn hoàn toàn và không chiếm không gian, visibility: hidden ẩn nhưng vẫn chiếm không gian",
       "display: none chỉ ẩn nội dung, visibility: hidden ẩn cả element"
     ],
+    "optionsEn": [
+      "There is no difference",
+      "display: none hides but still takes up space, visibility: hidden takes up no space",
+      "display: none hides completely and takes up no space, visibility: hidden hides but still takes up space",
+      "display: none only hides the content, visibility: hidden hides the whole element"
+    ],
     "answer": 2,
-    "explanation": "display: none loại bỏ element khỏi layout — không còn chiếm không gian. visibility: hidden ẩn element nhưng vẫn giữ chỗ trong layout. Quan trọng cho animation và transitions."
+    "explanation": "display: none loại bỏ element khỏi layout — không còn chiếm không gian. visibility: hidden ẩn element nhưng vẫn giữ chỗ trong layout. Quan trọng cho animation và transitions.",
+    "explanationEn": "display: none removes the element from the layout — it no longer takes up space. visibility: hidden hides the element but keeps its space in the layout. This distinction matters for animations and transitions."
   },
   {
     "id": "css-09",
     "question": "CSS Variable (Custom Property) được khai báo như thế nào?",
+    "questionEn": "How is a CSS Variable (Custom Property) declared?",
     "options": [
       "$primary-color: #3b82f6;",
       "@primary-color: #3b82f6;",
       "--primary-color: #3b82f6;",
       "var(primary-color): #3b82f6;"
     ],
+    "optionsEn": [
+      "$primary-color: #3b82f6;",
+      "@primary-color: #3b82f6;",
+      "--primary-color: #3b82f6;",
+      "var(primary-color): #3b82f6;"
+    ],
     "answer": 2,
-    "explanation": "CSS Variables khai báo với hai dấu gạch đầu: --tên-biến: giá trị; (thường trong :root). Sử dụng bằng var(--tên-biến). Ví dụ: :root { --primary: blue; } .btn { color: var(--primary); }"
+    "explanation": "CSS Variables khai báo với hai dấu gạch đầu: --tên-biến: giá trị; (thường trong :root). Sử dụng bằng var(--tên-biến). Ví dụ: :root { --primary: blue; } .btn { color: var(--primary); }",
+    "explanationEn": "CSS Variables are declared with two leading dashes: --variable-name: value; (usually inside :root). They are used with var(--variable-name). Example: :root { --primary: blue; } .btn { color: var(--primary); }"
   },
   {
     "id": "css-10",
     "question": "Trong CSS Grid, fr là đơn vị gì?",
+    "questionEn": "In CSS Grid, what unit is fr?",
     "options": [
       "Frame — đơn vị chiều rộng cố định",
       "Fraction — phần chia của không gian còn lại",
       "Flex ratio — tỷ lệ flex",
       "Full — 100% của container"
     ],
+    "optionsEn": [
+      "Frame — a fixed width unit",
+      "Fraction — a share of the remaining space",
+      "Flex ratio — a flex proportion",
+      "Full — 100% of the container"
+    ],
     "answer": 1,
-    "explanation": "fr (fraction) là đơn vị chia phần không gian còn lại. grid-template-columns: 1fr 2fr 1fr tạo 3 cột với tỷ lệ 1:2:1 — cột giữa rộng gấp đôi hai cột còn lại."
+    "explanation": "fr (fraction) là đơn vị chia phần không gian còn lại. grid-template-columns: 1fr 2fr 1fr tạo 3 cột với tỷ lệ 1:2:1 — cột giữa rộng gấp đôi hai cột còn lại.",
+    "explanationEn": "fr (fraction) is a unit that divides up the remaining space. grid-template-columns: 1fr 2fr 1fr creates 3 columns in a 1:2:1 ratio — the middle column is twice as wide as the others."
   },
   {
     "id": "css-11",
     "question": "position: sticky hoạt động như thế nào?",
+    "questionEn": "How does position: sticky work?",
     "options": [
       "Giống position: fixed — luôn cố định theo viewport",
       "Giống position: relative — theo luồng bình thường",
       "Hoạt động như relative cho đến khi scroll đến ngưỡng, sau đó thành fixed",
       "Dán phần tử vào góc trên bên trái màn hình"
     ],
+    "optionsEn": [
+      "Like position: fixed — always fixed to the viewport",
+      "Like position: relative — follows the normal flow",
+      "Behaves like relative until scrolling reaches a threshold, then becomes fixed",
+      "Sticks the element to the top-left corner of the screen"
+    ],
     "answer": 2,
-    "explanation": "sticky kết hợp relative và fixed. Element theo luồng bình thường, nhưng khi user scroll đến ngưỡng (ví dụ top: 0), nó dính vào vị trí đó. Thường dùng cho sticky header của table hoặc navbar."
+    "explanation": "sticky kết hợp relative và fixed. Element theo luồng bình thường, nhưng khi user scroll đến ngưỡng (ví dụ top: 0), nó dính vào vị trí đó. Thường dùng cho sticky header của table hoặc navbar.",
+    "explanationEn": "sticky combines relative and fixed. The element follows the normal flow, but when the user scrolls to a threshold (e.g. top: 0), it sticks to that position. Commonly used for sticky table headers or navbars."
   },
   {
     "id": "css-12",
     "question": "Đơn vị rem trong CSS tương đối với cái gì?",
+    "questionEn": "What is the rem unit in CSS relative to?",
     "options": [
       "Kích thước font của phần tử cha (parent)",
       "Kích thước font của phần tử gốc (root — thường là <html>)",
       "Chiều rộng của viewport",
       "Chiều rộng của phần tử hiện tại"
     ],
+    "optionsEn": [
+      "The font size of the parent element",
+      "The font size of the root element (root — usually <html>)",
+      "The width of the viewport",
+      "The width of the current element"
+    ],
     "answer": 1,
-    "explanation": "rem (root em) tương đối với font-size của phần tử :root (html). Mặc định là 16px, nên 1rem = 16px, 1.5rem = 24px. Khác với em tương đối với parent, rem ổn định hơn và không bị nhân lũy thừa."
+    "explanation": "rem (root em) tương đối với font-size của phần tử :root (html). Mặc định là 16px, nên 1rem = 16px, 1.5rem = 24px. Khác với em tương đối với parent, rem ổn định hơn và không bị nhân lũy thừa.",
+    "explanationEn": "rem (root em) is relative to the font-size of the :root (html) element. The default is 16px, so 1rem = 16px and 1.5rem = 24px. Unlike em, which is relative to the parent, rem is more stable and does not compound."
   },
   {
     "id": "css-13",
     "question": "Pseudo-class :nth-child(2n+1) chọn những phần tử nào?",
+    "questionEn": "Which elements does the pseudo-class :nth-child(2n+1) select?",
     "options": [
       "Phần tử thứ 2 và thứ 3",
       "Phần tử ở vị trí lẻ (1, 3, 5, 7...)",
       "Phần tử ở vị trí chẵn (2, 4, 6, 8...)",
       "Chỉ phần tử thứ nhất"
     ],
+    "optionsEn": [
+      "The 2nd and 3rd elements",
+      "Elements at odd positions (1, 3, 5, 7...)",
+      "Elements at even positions (2, 4, 6, 8...)",
+      "Only the first element"
+    ],
     "answer": 1,
-    "explanation": "2n+1 với n=0,1,2... cho 1,3,5,7... — tức là các phần tử lẻ. Viết gọn hơn là :nth-child(odd). Tương tự, :nth-child(2n) hoặc :nth-child(even) chọn phần tử chẵn."
+    "explanation": "2n+1 với n=0,1,2... cho 1,3,5,7... — tức là các phần tử lẻ. Viết gọn hơn là :nth-child(odd). Tương tự, :nth-child(2n) hoặc :nth-child(even) chọn phần tử chẵn.",
+    "explanationEn": "2n+1 with n=0,1,2... gives 1,3,5,7... — i.e. the odd-positioned elements. A shorter form is :nth-child(odd). Similarly, :nth-child(2n) or :nth-child(even) selects even-positioned elements."
   },
   {
     "id": "css-14",
     "question": "Thuộc tính transition: all 0.3s ease dùng để làm gì?",
+    "questionEn": "What is the property transition: all 0.3s ease used for?",
     "options": [
       "Tạo animation lặp lại vô hạn",
       "Tạo chuyển đổi mượt mà khi CSS properties thay đổi",
       "Di chuyển phần tử đến vị trí khác",
       "Thay đổi thứ tự hiển thị của phần tử"
     ],
+    "optionsEn": [
+      "Creates an infinitely repeating animation",
+      "Creates a smooth transition when CSS properties change",
+      "Moves the element to a different position",
+      "Changes the display order of the element"
+    ],
     "answer": 1,
-    "explanation": "transition tạo chuyển đổi mượt mà khi giá trị CSS thay đổi (thường do :hover, :focus, hoặc JS thêm class). all = tất cả properties, 0.3s = thời gian, ease = timing function (bắt đầu chậm, nhanh dần, chậm lại)."
+    "explanation": "transition tạo chuyển đổi mượt mà khi giá trị CSS thay đổi (thường do :hover, :focus, hoặc JS thêm class). all = tất cả properties, 0.3s = thời gian, ease = timing function (bắt đầu chậm, nhanh dần, chậm lại).",
+    "explanationEn": "transition creates a smooth change when a CSS value changes (often triggered by :hover, :focus, or JS adding a class). all = all properties, 0.3s = duration, ease = timing function (starts slow, speeds up, then slows down)."
   },
   {
     "id": "css-15",
     "question": "Khi nào nên dùng CSS Grid thay vì Flexbox?",
+    "questionEn": "When should you use CSS Grid instead of Flexbox?",
     "options": [
       "Grid luôn tốt hơn Flexbox trong mọi trường hợp",
       "Grid khi cần layout 2 chiều (hàng VÀ cột), Flexbox khi 1 chiều",
       "Flexbox luôn tốt hơn Grid",
       "Grid chỉ dùng được trên desktop, Flexbox dùng được trên mobile"
     ],
+    "optionsEn": [
+      "Grid is always better than Flexbox in every case",
+      "Grid when you need a two-dimensional layout (rows AND columns), Flexbox when one-dimensional",
+      "Flexbox is always better than Grid",
+      "Grid only works on desktop, Flexbox only works on mobile"
+    ],
     "answer": 1,
-    "explanation": "Flexbox tối ưu cho layout 1 chiều — sắp xếp items theo hàng hoặc cột. Grid tối ưu cho layout 2 chiều — kiểm soát cả hàng lẫn cột đồng thời. Ví dụ: navbar dùng Flex, page layout dùng Grid."
+    "explanation": "Flexbox tối ưu cho layout 1 chiều — sắp xếp items theo hàng hoặc cột. Grid tối ưu cho layout 2 chiều — kiểm soát cả hàng lẫn cột đồng thời. Ví dụ: navbar dùng Flex, page layout dùng Grid.",
+    "explanationEn": "Flexbox is optimized for one-dimensional layouts — arranging items in a row or a column. Grid is optimized for two-dimensional layouts — controlling both rows and columns at once. For example: use Flex for a navbar, use Grid for a page layout."
   }
 ]

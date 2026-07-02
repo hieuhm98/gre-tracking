@@ -2,161 +2,261 @@
   {
     "id": "html-01",
     "question": "HTML là viết tắt của từ gì?",
+    "questionEn": "What does HTML stand for?",
     "options": [
       "HyperText Markup Language",
       "High Transfer Markup Language",
       "HyperText Management Language",
       "Hyper Tool Markup Language"
     ],
+    "optionsEn": [
+      "HyperText Markup Language",
+      "High Transfer Markup Language",
+      "HyperText Management Language",
+      "Hyper Tool Markup Language"
+    ],
     "answer": 0,
-    "explanation": "HTML là HyperText Markup Language — ngôn ngữ đánh dấu siêu văn bản, là nền tảng cấu trúc của mọi trang web."
+    "explanation": "HTML là HyperText Markup Language — ngôn ngữ đánh dấu siêu văn bản, là nền tảng cấu trúc của mọi trang web.",
+    "explanationEn": "HTML stands for HyperText Markup Language — the markup language that forms the structural foundation of every web page."
   },
   {
     "id": "html-02",
     "question": "Thẻ nào dùng để tạo liên kết (hyperlink) trong HTML?",
+    "questionEn": "Which tag is used to create a link (hyperlink) in HTML?",
     "options": ["<link>", "<a>", "<href>", "<url>"],
+    "optionsEn": ["<link>", "<a>", "<href>", "<url>"],
     "answer": 1,
-    "explanation": "Thẻ <a> (anchor) dùng để tạo liên kết, với thuộc tính href chỉ định đích đến. Ví dụ: <a href='https://example.com'>Click here</a>"
+    "explanation": "Thẻ <a> (anchor) dùng để tạo liên kết, với thuộc tính href chỉ định đích đến. Ví dụ: <a href='https://example.com'>Click here</a>",
+    "explanationEn": "The <a> (anchor) tag is used to create links, with the href attribute specifying the destination. Example: <a href='https://example.com'>Click here</a>"
   },
   {
     "id": "html-03",
     "question": "Thẻ nào dưới đây là thẻ tự đóng (self-closing)?",
+    "questionEn": "Which of the following tags is self-closing?",
     "options": ["<p>", "<div>", "<img>", "<span>"],
+    "optionsEn": ["<p>", "<div>", "<img>", "<span>"],
     "answer": 2,
-    "explanation": "Thẻ <img> là self-closing vì không có nội dung bên trong. Viết: <img src='photo.jpg' alt='Mô tả' />. Tương tự: <br />, <hr />, <input />, <meta />."
+    "explanation": "Thẻ <img> là self-closing vì không có nội dung bên trong. Viết: <img src='photo.jpg' alt='Mô tả' />. Tương tự: <br />, <hr />, <input />, <meta />.",
+    "explanationEn": "The <img> tag is self-closing because it has no content inside. Written as: <img src='photo.jpg' alt='Description' />. Similar tags: <br />, <hr />, <input />, <meta />."
   },
   {
     "id": "html-04",
     "question": "Thuộc tính 'alt' trong thẻ <img> có tác dụng gì?",
+    "questionEn": "What is the purpose of the 'alt' attribute in the <img> tag?",
     "options": [
       "Xác định kích thước ảnh",
       "Hiển thị văn bản thay thế khi ảnh không tải được và hỗ trợ accessibility",
       "Căn chỉnh ảnh trên trang",
       "Đặt tiêu đề tooltip khi hover vào ảnh"
     ],
+    "optionsEn": [
+      "Defines the image dimensions",
+      "Displays alternative text when the image fails to load and supports accessibility",
+      "Aligns the image on the page",
+      "Sets a tooltip title when hovering over the image"
+    ],
     "answer": 1,
-    "explanation": "alt text hiển thị khi ảnh không load được và được screen reader đọc cho người khiếm thị. Đây là yêu cầu accessibility quan trọng và giúp SEO."
+    "explanation": "alt text hiển thị khi ảnh không load được và được screen reader đọc cho người khiếm thị. Đây là yêu cầu accessibility quan trọng và giúp SEO.",
+    "explanationEn": "The alt text is displayed when the image fails to load and is read by screen readers for visually impaired users. It is an important accessibility requirement and also helps SEO."
   },
   {
     "id": "html-05",
     "question": "Sự khác biệt giữa <strong> và <b> trong HTML là gì?",
+    "questionEn": "What is the difference between <strong> and <b> in HTML?",
     "options": [
       "Không có sự khác biệt, hoàn toàn giống nhau",
       "<strong> có ý nghĩa ngữ nghĩa (quan trọng), <b> chỉ là kiểu chữ in đậm",
       "<b> có ý nghĩa ngữ nghĩa hơn <strong>",
       "<strong> chỉ dùng cho tiêu đề, <b> dùng cho nội dung thường"
     ],
+    "optionsEn": [
+      "There is no difference, they are exactly the same",
+      "<strong> carries semantic meaning (importance), while <b> is purely bold styling",
+      "<b> carries more semantic meaning than <strong>",
+      "<strong> is only for headings, <b> is for regular content"
+    ],
     "answer": 1,
-    "explanation": "<strong> có ý nghĩa ngữ nghĩa — báo cho trình duyệt và screen reader biết nội dung này quan trọng. <b> chỉ là kiểu in đậm thuần túy về mặt hiển thị."
+    "explanation": "<strong> có ý nghĩa ngữ nghĩa — báo cho trình duyệt và screen reader biết nội dung này quan trọng. <b> chỉ là kiểu in đậm thuần túy về mặt hiển thị.",
+    "explanationEn": "<strong> has semantic meaning — it tells the browser and screen readers that this content is important. <b> is purely visual bold styling with no semantic meaning."
   },
   {
     "id": "html-06",
     "question": "Phần tử nào trong HTML được dùng để nhóm các lựa chọn radio button lại với nhau?",
+    "questionEn": "Which HTML element is used to group radio button options together?",
     "options": ["<group>", "<section>", "<fieldset>", "<div>"],
+    "optionsEn": ["<group>", "<section>", "<fieldset>", "<div>"],
     "answer": 2,
-    "explanation": "<fieldset> nhóm các input liên quan, thường kết hợp với <legend> để đặt tiêu đề. Đây là cách semantic và accessible để nhóm radio buttons hoặc checkboxes."
+    "explanation": "<fieldset> nhóm các input liên quan, thường kết hợp với <legend> để đặt tiêu đề. Đây là cách semantic và accessible để nhóm radio buttons hoặc checkboxes.",
+    "explanationEn": "<fieldset> groups related inputs, usually combined with <legend> to give the group a title. It is the semantic and accessible way to group radio buttons or checkboxes."
   },
   {
     "id": "html-07",
     "question": "Thẻ HTML nào dùng để đánh dấu nội dung điều hướng chính (navigation menu)?",
+    "questionEn": "Which HTML tag is used to mark up the main navigation content (navigation menu)?",
     "options": ["<menu>", "<nav>", "<header>", "<ul>"],
+    "optionsEn": ["<menu>", "<nav>", "<header>", "<ul>"],
     "answer": 1,
-    "explanation": "<nav> là semantic tag dùng cho menu điều hướng chính. Giúp screen reader nhận biết đây là navigation, cải thiện SEO và accessibility."
+    "explanation": "<nav> là semantic tag dùng cho menu điều hướng chính. Giúp screen reader nhận biết đây là navigation, cải thiện SEO và accessibility.",
+    "explanationEn": "<nav> is the semantic tag for the main navigation menu. It helps screen readers recognize this as navigation, improving SEO and accessibility."
   },
   {
     "id": "html-08",
     "question": "Trong form HTML, sự khác biệt giữa method='GET' và method='POST' là gì?",
+    "questionEn": "In an HTML form, what is the difference between method='GET' and method='POST'?",
     "options": [
       "GET nhanh hơn POST",
       "POST gửi dữ liệu trong URL, GET gửi trong request body",
       "GET gửi dữ liệu qua URL (visible), POST gửi trong request body (ẩn hơn)",
       "Không có sự khác biệt, chỉ là tên khác nhau"
     ],
+    "optionsEn": [
+      "GET is faster than POST",
+      "POST sends data in the URL, GET sends it in the request body",
+      "GET sends data via the URL (visible), POST sends it in the request body (more hidden)",
+      "There is no difference, just different names"
+    ],
     "answer": 2,
-    "explanation": "GET đính dữ liệu vào URL (?key=value) — thấy được, lưu trong history. POST gửi trong body — ẩn khỏi URL. Dùng POST cho dữ liệu nhạy cảm (password, thông tin cá nhân) và tạo/cập nhật dữ liệu."
+    "explanation": "GET đính dữ liệu vào URL (?key=value) — thấy được, lưu trong history. POST gửi trong body — ẩn khỏi URL. Dùng POST cho dữ liệu nhạy cảm (password, thông tin cá nhân) và tạo/cập nhật dữ liệu.",
+    "explanationEn": "GET appends data to the URL (?key=value) — visible and stored in history. POST sends data in the body — hidden from the URL. Use POST for sensitive data (passwords, personal information) and for creating/updating data."
   },
   {
     "id": "html-09",
     "question": "Thẻ <meta name='viewport'> có tác dụng gì?",
+    "questionEn": "What does the <meta name='viewport'> tag do?",
     "options": [
       "Đặt màu nền cho trang",
       "Kiểm soát cách trình duyệt mobile hiển thị trang web (responsive)",
       "Khai báo encoding ký tự",
       "Khai báo tác giả của trang"
     ],
+    "optionsEn": [
+      "Sets the background color of the page",
+      "Controls how mobile browsers display the web page (responsive)",
+      "Declares the character encoding",
+      "Declares the author of the page"
+    ],
     "answer": 1,
-    "explanation": "<meta name='viewport' content='width=device-width, initial-scale=1.0'> cho phép trình duyệt mobile hiển thị đúng tỷ lệ. Nếu thiếu thẻ này, mobile sẽ zoom out hiển thị như desktop thu nhỏ."
+    "explanation": "<meta name='viewport' content='width=device-width, initial-scale=1.0'> cho phép trình duyệt mobile hiển thị đúng tỷ lệ. Nếu thiếu thẻ này, mobile sẽ zoom out hiển thị như desktop thu nhỏ.",
+    "explanationEn": "<meta name='viewport' content='width=device-width, initial-scale=1.0'> lets mobile browsers render the page at the correct scale. Without this tag, mobile devices zoom out and display the page like a shrunken desktop version."
   },
   {
     "id": "html-10",
     "question": "Đâu là cách đúng để tạo ordered list (danh sách có đánh số) trong HTML?",
+    "questionEn": "What is the correct way to create an ordered list (numbered list) in HTML?",
     "options": [
       "<ul><li>Item</li></ul>",
       "<ol><li>Item</li></ol>",
       "<list><item>Item</item></list>",
       "<dl><dt>Item</dt></dl>"
     ],
+    "optionsEn": [
+      "<ul><li>Item</li></ul>",
+      "<ol><li>Item</li></ol>",
+      "<list><item>Item</item></list>",
+      "<dl><dt>Item</dt></dl>"
+    ],
     "answer": 1,
-    "explanation": "<ol> (Ordered List) tạo danh sách có đánh số. <ul> (Unordered List) tạo danh sách với dấu chấm đầu dòng. <dl> là description list dùng cho thuật ngữ và định nghĩa."
+    "explanation": "<ol> (Ordered List) tạo danh sách có đánh số. <ul> (Unordered List) tạo danh sách với dấu chấm đầu dòng. <dl> là description list dùng cho thuật ngữ và định nghĩa.",
+    "explanationEn": "<ol> (Ordered List) creates a numbered list. <ul> (Unordered List) creates a bulleted list. <dl> is a description list used for terms and their definitions."
   },
   {
     "id": "html-11",
     "question": "Thuộc tính 'data-*' trong HTML dùng để làm gì?",
+    "questionEn": "What is the 'data-*' attribute in HTML used for?",
     "options": [
       "Lưu dữ liệu CSS tùy chỉnh",
       "Lưu dữ liệu tùy chỉnh trên phần tử HTML để JavaScript có thể đọc",
       "Xác định loại dữ liệu của input",
       "Liên kết đến database"
     ],
+    "optionsEn": [
+      "Stores custom CSS data",
+      "Stores custom data on an HTML element that JavaScript can read",
+      "Defines the data type of an input",
+      "Links to a database"
+    ],
     "answer": 1,
-    "explanation": "data-* attributes cho phép lưu thông tin tùy chỉnh trên element. Ví dụ: <button data-user-id='42' data-action='delete'>. JS đọc bằng element.dataset.userId. Rất hữu ích để truyền dữ liệu mà không cần biến JS global."
+    "explanation": "data-* attributes cho phép lưu thông tin tùy chỉnh trên element. Ví dụ: <button data-user-id='42' data-action='delete'>. JS đọc bằng element.dataset.userId. Rất hữu ích để truyền dữ liệu mà không cần biến JS global.",
+    "explanationEn": "data-* attributes let you store custom information on an element. Example: <button data-user-id='42' data-action='delete'>. JS reads it via element.dataset.userId. Very useful for passing data without needing global JS variables."
   },
   {
     "id": "html-12",
     "question": "Sự khác biệt giữa id và class trong HTML là gì?",
+    "questionEn": "What is the difference between id and class in HTML?",
     "options": [
       "id dùng cho CSS, class dùng cho JavaScript",
       "id phải là duy nhất trong trang, class có thể dùng cho nhiều phần tử",
       "id và class hoàn toàn giống nhau",
       "class phải là duy nhất trong trang, id có thể dùng nhiều lần"
     ],
+    "optionsEn": [
+      "id is for CSS, class is for JavaScript",
+      "id must be unique within a page, while class can be used on multiple elements",
+      "id and class are exactly the same",
+      "class must be unique within a page, while id can be reused"
+    ],
     "answer": 1,
-    "explanation": "id phải unique (duy nhất) trong một trang HTML — dùng để định danh một phần tử cụ thể. class có thể áp dụng cho nhiều phần tử — dùng để nhóm và áp dụng style/behavior chung."
+    "explanation": "id phải unique (duy nhất) trong một trang HTML — dùng để định danh một phần tử cụ thể. class có thể áp dụng cho nhiều phần tử — dùng để nhóm và áp dụng style/behavior chung.",
+    "explanationEn": "An id must be unique within an HTML page — used to identify one specific element. A class can be applied to many elements — used to group elements and apply shared styles/behavior."
   },
   {
     "id": "html-13",
     "question": "Thẻ <article> trong semantic HTML dùng cho nội dung gì?",
+    "questionEn": "What kind of content is the <article> tag in semantic HTML used for?",
     "options": [
       "Bất kỳ nội dung văn bản nào",
       "Chỉ dùng cho trang blog",
       "Nội dung độc lập, có thể đứng riêng (bài viết, card, comment, widget)",
       "Chỉ dùng cho trang tin tức"
     ],
+    "optionsEn": [
+      "Any text content",
+      "Only for blog pages",
+      "Self-contained, standalone content (articles, cards, comments, widgets)",
+      "Only for news pages"
+    ],
     "answer": 2,
-    "explanation": "<article> dùng cho nội dung độc lập, tự đủ ý nghĩa khi tách ra khỏi trang. Ví dụ: bài blog, review sản phẩm, comment, card tin tức. Không phải chỉ dành riêng cho trang báo."
+    "explanation": "<article> dùng cho nội dung độc lập, tự đủ ý nghĩa khi tách ra khỏi trang. Ví dụ: bài blog, review sản phẩm, comment, card tin tức. Không phải chỉ dành riêng cho trang báo.",
+    "explanationEn": "<article> is used for independent content that makes sense on its own when removed from the page. Examples: a blog post, a product review, a comment, a news card. It is not reserved only for news sites."
   },
   {
     "id": "html-14",
     "question": "Trong input type='file', thuộc tính 'accept' dùng để làm gì?",
+    "questionEn": "In an input type='file', what is the 'accept' attribute used for?",
     "options": [
       "Giới hạn kích thước file được upload",
       "Chỉ định loại file được chấp nhận (MIME type hoặc extension)",
       "Tự động upload file sau khi chọn",
       "Cho phép upload nhiều file cùng lúc"
     ],
+    "optionsEn": [
+      "Limits the size of the uploaded file",
+      "Specifies the accepted file types (MIME type or extension)",
+      "Automatically uploads the file once selected",
+      "Allows uploading multiple files at once"
+    ],
     "answer": 1,
-    "explanation": "accept chỉ định loại file được phép chọn. Ví dụ: accept='image/*' (mọi ảnh), accept='.pdf,.doc' (PDF và Word), accept='video/mp4'. Lưu ý: đây chỉ là filter UI, vẫn cần validate ở BE."
+    "explanation": "accept chỉ định loại file được phép chọn. Ví dụ: accept='image/*' (mọi ảnh), accept='.pdf,.doc' (PDF và Word), accept='video/mp4'. Lưu ý: đây chỉ là filter UI, vẫn cần validate ở BE.",
+    "explanationEn": "accept specifies which file types can be selected. Example: accept='image/*' (any image), accept='.pdf,.doc' (PDF and Word), accept='video/mp4'. Note: this is only a UI filter — you still need to validate on the BE."
   },
   {
     "id": "html-15",
     "question": "Thẻ nào trong HTML dùng để hiển thị nội dung tóm tắt có thể mở rộng/thu gọn mà không cần JavaScript?",
+    "questionEn": "Which HTML tags display collapsible/expandable summary content without needing JavaScript?",
     "options": [
       "<collapse> và <expand>",
       "<details> và <summary>",
       "<accordion> và <panel>",
       "<toggle> và <content>"
     ],
+    "optionsEn": [
+      "<collapse> and <expand>",
+      "<details> and <summary>",
+      "<accordion> and <panel>",
+      "<toggle> and <content>"
+    ],
     "answer": 1,
-    "explanation": "<details> và <summary> là native HTML accordion. <summary> là phần tiêu đề hiển thị luôn, click vào sẽ toggle hiển thị nội dung bên trong <details>. Không cần JavaScript!"
+    "explanation": "<details> và <summary> là native HTML accordion. <summary> là phần tiêu đề hiển thị luôn, click vào sẽ toggle hiển thị nội dung bên trong <details>. Không cần JavaScript!",
+    "explanationEn": "<details> and <summary> form a native HTML accordion. <summary> is the always-visible title; clicking it toggles the content inside <details>. No JavaScript required!"
   }
 ]

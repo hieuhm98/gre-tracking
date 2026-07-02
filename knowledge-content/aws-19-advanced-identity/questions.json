@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "Một IAM user trong tài khoản thành viên có IAM policy cho phép s3:* nhưng SCP gắn ở OU chỉ cho phép các hành động EC2. User có thể gọi API S3 không?",
+    "questionEn": "An IAM user in a member account has an IAM policy allowing s3:* but the SCP attached at the OU only allows EC2 actions. Can the user call S3 APIs?",
+    "options": [
+      "Có, vì IAM policy đã cấp quyền s3:*",
+      "Không, vì quyền hiệu dụng là giao của SCP và IAM; SCP không cho phép S3",
+      "Có, vì SCP tự động cấp thêm quyền S3",
+      "Không, vì SCP luôn ghi đè và xóa mọi IAM policy"
+    ],
+    "optionsEn": [
+      "Yes, because the IAM policy granted s3:*",
+      "No, because effective permissions are the intersection of SCP and IAM; the SCP doesn't allow S3",
+      "Yes, because the SCP automatically grants extra S3 permissions",
+      "No, because an SCP always overrides and deletes any IAM policy"
+    ],
+    "answer": 1,
+    "explanation": "Quyền hiệu dụng = SCP ∩ IAM. IAM cho phép S3 nhưng SCP (rào chắn) không liệt kê S3, nên hành động S3 bị chặn. SCP không cấp quyền và cũng không xóa IAM policy — nó chỉ giới hạn trần.",
+    "explanationEn": "Effective permissions = SCP ∩ IAM. IAM allows S3 but the SCP (guardrail) doesn't list S3, so S3 actions are blocked. An SCP does not grant permissions nor delete IAM policies — it only caps the maximum."
+  },
+  {
+    "id": "q2",
+    "question": "Phát biểu nào ĐÚNG về Service Control Policies (SCP)?",
+    "questionEn": "Which statement is TRUE about Service Control Policies (SCP)?",
+    "options": [
+      "SCP cấp quyền trực tiếp cho principal mà không cần IAM policy",
+      "SCP đặt trần quyền tối đa nhưng không tự cấp quyền, và không áp dụng cho management account",
+      "SCP thay thế hoàn toàn IAM và làm IAM không còn cần thiết",
+      "SCP chỉ áp dụng cho management account chứ không cho member account"
+    ],
+    "optionsEn": [
+      "An SCP grants permissions directly to a principal without needing an IAM policy",
+      "An SCP sets a maximum permission ceiling but grants nothing itself, and does not apply to the management account",
+      "An SCP fully replaces IAM and makes IAM unnecessary",
+      "An SCP only applies to the management account, not member accounts"
+    ],
+    "answer": 1,
+    "explanation": "SCP là guardrail đặt quyền tối đa; nó không cấp quyền (vẫn cần IAM policy) và không áp dụng cho management account. Vì thế không nên đặt tài nguyên quan trọng trong management account.",
+    "explanationEn": "An SCP is a guardrail setting the maximum permissions; it grants nothing (IAM is still required) and does not apply to the management account. Hence critical resources shouldn't live in the management account."
+  },
+  {
+    "id": "q3",
+    "question": "Một công ty vận hành 20 tài khoản AWS riêng lẻ và muốn giảm chi phí tổng thể. Lợi ích chi phí chính khi gom chúng vào một AWS Organization với consolidated billing là gì?",
+    "questionEn": "A company runs 20 separate AWS accounts and wants to reduce overall cost. What is the main cost benefit of combining them into an AWS Organization with consolidated billing?",
+    "options": [
+      "AWS tự động giảm 50% mọi hóa đơn khi dùng Organizations",
+      "Mức sử dụng được gộp để đạt volume discounts, và RI/Savings Plans được chia sẻ giữa các tài khoản",
+      "Mỗi tài khoản được một máy EC2 miễn phí vĩnh viễn",
+      "Consolidated billing tắt toàn bộ chi phí data transfer"
+    ],
+    "optionsEn": [
+      "AWS automatically cuts every bill by 50% when using Organizations",
+      "Usage is aggregated to reach volume discounts, and RIs/Savings Plans are shared across accounts",
+      "Each account gets one permanently free EC2 instance",
+      "Consolidated billing turns off all data transfer charges"
+    ],
+    "answer": 1,
+    "explanation": "Consolidated billing gộp mức sử dụng của tất cả tài khoản để tính bậc giá (volume discounts) và cho phép chia sẻ Reserved Instances/Savings Plans giữa các tài khoản, giúp tối ưu chi phí.",
+    "explanationEn": "Consolidated billing aggregates usage across all accounts for pricing tiers (volume discounts) and allows Reserved Instances/Savings Plans to be shared across accounts, optimizing cost."
+  },
+  {
+    "id": "q4",
+    "question": "Tài khoản A cần cho phép các ứng dụng trong tài khoản B đọc một bảng DynamoDB thuộc tài khoản A. Cách làm theo best practice là gì?",
+    "questionEn": "Account A needs to let applications in account B read a DynamoDB table that belongs to account A. What is the best-practice approach?",
+    "options": [
+      "Tạo IAM user trong tài khoản A và chia sẻ access key dài hạn cho tài khoản B",
+      "Tạo IAM role trong tài khoản A với trust policy cho phép tài khoản B; principal ở B gọi sts:AssumeRole để lấy credentials tạm thời",
+      "Bật public access cho bảng DynamoDB",
+      "Gắn SCP ở tài khoản B để tự động cấp quyền đọc DynamoDB của A"
+    ],
+    "optionsEn": [
+      "Create an IAM user in account A and share long-term access keys with account B",
+      "Create an IAM role in account A with a trust policy allowing account B; a principal in B calls sts:AssumeRole to get temporary credentials",
+      "Enable public access on the DynamoDB table",
+      "Attach an SCP in account B to automatically grant read access to A's DynamoDB"
+    ],
+    "answer": 1,
+    "explanation": "Cross-account chuẩn: tài khoản sở hữu tài nguyên (A) tạo IAM role với trust policy cho phép tài khoản B assume; principal ở B gọi STS AssumeRole nhận credentials tạm thời. Tránh chia sẻ long-term keys; SCP không cấp quyền.",
+    "explanationEn": "Standard cross-account: the resource-owning account (A) creates an IAM role with a trust policy allowing account B to assume it; a principal in B calls STS AssumeRole for temporary credentials. Avoid sharing long-term keys; SCPs don't grant permissions."
+  },
+  {
+    "id": "q5",
+    "question": "Một tổ chức muốn nhân viên đăng nhập một lần (SSO) để truy cập nhiều tài khoản AWS trong Organizations và một vài ứng dụng SaaS hỗ trợ SAML. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "An organization wants employees to sign in once (SSO) to access multiple AWS accounts in Organizations and a few SAML business apps. Which service fits best?",
+    "options": [
+      "Amazon Cognito User Pools",
+      "IAM Identity Center với permission sets",
+      "AWS Simple AD standalone",
+      "AWS RAM"
+    ],
+    "optionsEn": [
+      "Amazon Cognito User Pools",
+      "IAM Identity Center with permission sets",
+      "AWS Simple AD standalone",
+      "AWS RAM"
+    ],
+    "answer": 1,
+    "explanation": "IAM Identity Center (trước là AWS SSO) cung cấp SSO cho nhân viên vào nhiều tài khoản AWS và ứng dụng doanh nghiệp (SAML 2.0), dùng permission sets để cấp quyền theo tài khoản. Cognito dành cho người dùng cuối của ứng dụng.",
+    "explanationEn": "IAM Identity Center (formerly AWS SSO) provides workforce SSO into multiple AWS accounts and business apps (SAML 2.0), using permission sets to grant per-account access. Cognito is for an application's end users."
+  },
+  {
+    "id": "q6",
+    "question": "Một ứng dụng mobile cần cho phép người dùng đã đăng nhập upload ảnh trực tiếp lên S3. Sau khi xác thực bằng Cognito User Pool, thành phần nào cấp AWS credentials tạm thời để gọi S3?",
+    "questionEn": "A mobile app needs to let signed-in users upload photos directly to S3. After authenticating with a Cognito User Pool, which component issues temporary AWS credentials to call S3?",
+    "options": [
+      "Cognito User Pool trực tiếp trả về AWS credentials",
+      "Cognito Identity Pool đổi danh tính lấy AWS credentials tạm thời qua STS",
+      "IAM Identity Center permission set",
+      "AD Connector"
+    ],
+    "optionsEn": [
+      "The Cognito User Pool directly returns AWS credentials",
+      "A Cognito Identity Pool exchanges the identity for temporary AWS credentials via STS",
+      "An IAM Identity Center permission set",
+      "AD Connector"
+    ],
+    "answer": 1,
+    "explanation": "User Pool xử lý xác thực và trả JWT token. Identity Pool (Federated Identities) đổi token đó lấy AWS credentials tạm thời (qua STS) để app truy cập trực tiếp dịch vụ AWS như S3.",
+    "explanationEn": "The User Pool handles authentication and returns JWT tokens. The Identity Pool (Federated Identities) exchanges that token for temporary AWS credentials (via STS) so the app can directly access AWS services like S3."
+  },
+  {
+    "id": "q7",
+    "question": "Phát biểu nào mô tả đúng nhất sự khác biệt giữa Cognito User Pool và Identity Pool?",
+    "questionEn": "Which statement best describes the difference between a Cognito User Pool and an Identity Pool?",
+    "options": [
+      "User Pool cấp AWS credentials; Identity Pool chỉ lưu mật khẩu",
+      "User Pool dùng để xác thực/đăng nhập (trả JWT); Identity Pool đổi danh tính lấy AWS credentials tạm thời",
+      "Cả hai đều giống nhau, chỉ khác tên gọi",
+      "User Pool dành cho nhân viên nội bộ; Identity Pool dành cho tài khoản AWS management"
+    ],
+    "optionsEn": [
+      "The User Pool issues AWS credentials; the Identity Pool only stores passwords",
+      "The User Pool is for authentication/sign-in (returns JWT); the Identity Pool exchanges an identity for temporary AWS credentials",
+      "They are identical, only the names differ",
+      "The User Pool is for internal employees; the Identity Pool is for the AWS management account"
+    ],
+    "answer": 1,
+    "explanation": "User Pool = authentication (sign-in/sign-up, trả JWT, có thể làm authorizer API Gateway). Identity Pool = authorization vào AWS (đổi danh tính lấy AWS credentials tạm thời). Hai vai trò khác nhau.",
+    "explanationEn": "User Pool = authentication (sign-in/sign-up, returns JWT, can be an API Gateway authorizer). Identity Pool = authorization into AWS (exchanges an identity for temporary AWS credentials). Two distinct roles."
+  },
+  {
+    "id": "q8",
+    "question": "Một công ty đã có Active Directory on-premises và muốn nhân viên xác thực vào các workload AWS bằng tài khoản AD hiện có, KHÔNG muốn nhân bản/đồng bộ người dùng lên AWS. Lựa chọn nào phù hợp?",
+    "questionEn": "A company has on-premises Active Directory and wants employees to authenticate to AWS workloads using existing AD accounts, WITHOUT replicating/syncing users to AWS. Which option fits?",
+    "options": [
+      "Simple AD",
+      "AWS Managed Microsoft AD làm directory chính trên cloud",
+      "AD Connector làm proxy chuyển tiếp xác thực về AD on-prem",
+      "Cognito User Pool"
+    ],
+    "optionsEn": [
+      "Simple AD",
+      "AWS Managed Microsoft AD as the primary directory in the cloud",
+      "AD Connector as a proxy forwarding authentication to on-prem AD",
+      "Cognito User Pool"
+    ],
+    "answer": 2,
+    "explanation": "AD Connector là proxy/gateway chuyển tiếp yêu cầu xác thực về AD on-prem, không lưu dữ liệu người dùng trên AWS. Đây là lựa chọn khi muốn dùng lại AD hiện có mà không nhân bản.",
+    "explanationEn": "AD Connector is a proxy/gateway forwarding authentication requests to on-prem AD and stores no user data on AWS. It's the choice when you want to reuse existing AD without replication."
+  },
+  {
+    "id": "q9",
+    "question": "Nhu cầu: một AD nhỏ, chi phí thấp, độc lập trên AWS cho khoảng vài trăm user, không cần trust với AD on-prem và chỉ cần tính năng cơ bản. Nên chọn gì?",
+    "questionEn": "Requirement: a small, low-cost, standalone AD on AWS for a few hundred users, no trust with on-prem AD, only basic features needed. What should you choose?",
+    "options": [
+      "AWS Managed Microsoft AD",
+      "AD Connector",
+      "Simple AD",
+      "IAM Identity Center built-in directory duy nhất"
+    ],
+    "optionsEn": [
+      "AWS Managed Microsoft AD",
+      "AD Connector",
+      "Simple AD",
+      "IAM Identity Center built-in directory only"
+    ],
+    "answer": 2,
+    "explanation": "Simple AD là directory độc lập, rẻ, tương thích Samba với tính năng giới hạn — phù hợp nhu cầu cơ bản, số user nhỏ, không cần trust với on-prem. Managed Microsoft AD là AD đầy đủ tính năng (đắt hơn); AD Connector là proxy tới on-prem.",
+    "explanationEn": "Simple AD is a standalone, cheap, Samba-compatible directory with limited features — fitting basic needs, small user counts, no on-prem trust. Managed Microsoft AD is full-featured (pricier); AD Connector is a proxy to on-prem."
+  },
+  {
+    "id": "q10",
+    "question": "Đội mạng trung tâm tạo một VPC với các subnet và muốn nhiều tài khoản ứng dụng khác khởi tạo tài nguyên vào chính các subnet đó mà không tạo lại VPC. Dịch vụ nào giải quyết?",
+    "questionEn": "A central networking team creates a VPC with subnets and wants several other application accounts to launch resources into those same subnets without recreating the VPC. Which service solves this?",
+    "options": [
+      "AWS Resource Access Manager (RAM) để chia sẻ subnet giữa các tài khoản",
+      "AWS Organizations SCP",
+      "Cognito Identity Pool",
+      "VPC Peering cho từng cặp tài khoản là cách duy nhất"
+    ],
+    "optionsEn": [
+      "AWS Resource Access Manager (RAM) to share subnets across accounts",
+      "AWS Organizations SCP",
+      "Cognito Identity Pool",
+      "VPC Peering per account pair is the only way"
+    ],
+    "answer": 0,
+    "explanation": "AWS RAM chia sẻ tài nguyên (VPC subnets, Transit Gateway, Route 53 Resolver rules...) giữa các tài khoản mà không nhân bản. Các tài khoản có thể khởi tạo tài nguyên trong subnet được chia sẻ.",
+    "explanationEn": "AWS RAM shares resources (VPC subnets, Transit Gateway, Route 53 Resolver rules...) across accounts without duplication. Accounts can launch resources into the shared subnets."
+  },
+  {
+    "id": "q11",
+    "question": "Một tổ chức muốn nhanh chóng dựng môi trường multi-account tuân thủ best practice, có guardrail preventive (SCP) và detective (Config) áp tự động, kèm Account Factory. Dịch vụ nào?",
+    "questionEn": "An organization wants to quickly stand up a best-practice multi-account environment with preventive (SCP) and detective (Config) guardrails applied automatically, plus an Account Factory. Which service?",
+    "options": [
+      "AWS Control Tower",
+      "AWS STS",
+      "AWS RAM",
+      "Amazon Cognito"
+    ],
+    "optionsEn": [
+      "AWS Control Tower",
+      "AWS STS",
+      "AWS RAM",
+      "Amazon Cognito"
+    ],
+    "answer": 0,
+    "explanation": "AWS Control Tower tự động dựng landing zone multi-account trên nền Organizations, áp guardrails preventive (SCP) và detective (AWS Config), và cung cấp Account Factory để cấp phát tài khoản chuẩn hóa.",
+    "explanationEn": "AWS Control Tower automatically builds a multi-account landing zone on top of Organizations, applies preventive (SCP) and detective (AWS Config) guardrails, and provides an Account Factory to provision standardized accounts."
+  },
+  {
+    "id": "q12",
+    "question": "Nhân viên cần đăng nhập AWS Console bằng tài khoản doanh nghiệp qua IdP hỗ trợ SAML 2.0 (ví dụ ADFS/Okta), không tạo IAM user riêng. STS API nào được dùng để cấp credentials tạm thời cho luồng này?",
+    "questionEn": "Employees need to sign into the AWS Console using corporate credentials via a SAML 2.0 IdP (e.g., ADFS/Okta), without individual IAM users. Which STS API issues temporary credentials for this flow?",
+    "options": [
+      "GetSessionToken",
+      "AssumeRoleWithSAML",
+      "AssumeRoleWithWebIdentity",
+      "GetFederationToken"
+    ],
+    "optionsEn": [
+      "GetSessionToken",
+      "AssumeRoleWithSAML",
+      "AssumeRoleWithWebIdentity",
+      "GetFederationToken"
+    ],
+    "answer": 1,
+    "explanation": "AssumeRoleWithSAML cấp credentials tạm thời cho user đã xác thực qua SAML 2.0 với IdP doanh nghiệp. AssumeRoleWithWebIdentity dành cho OIDC (web identity), GetSessionToken dùng cho MFA.",
+    "explanationEn": "AssumeRoleWithSAML issues temporary credentials for a user authenticated via SAML 2.0 with a corporate IdP. AssumeRoleWithWebIdentity is for OIDC (web identity); GetSessionToken is for MFA."
+  },
+  {
+    "id": "q13",
+    "question": "Khi cấp quyền cross-account cho một nhà cung cấp SaaS bên thứ ba assume role trong tài khoản của bạn, thực hành nào giúp chống tấn công 'confused deputy'?",
+    "questionEn": "When granting a third-party SaaS vendor cross-account access to assume a role in your account, which practice helps prevent the 'confused deputy' attack?",
+    "options": [
+      "Cho phép Principal là * trong trust policy để đơn giản hóa",
+      "Yêu cầu một External ID trong trust policy của role",
+      "Chia sẻ access key dài hạn của tài khoản bạn",
+      "Tắt CloudTrail để giảm log"
+    ],
+    "optionsEn": [
+      "Set Principal to * in the trust policy to simplify",
+      "Require an External ID in the role's trust policy",
+      "Share your account's long-term access keys",
+      "Disable CloudTrail to reduce logs"
+    ],
+    "answer": 1,
+    "explanation": "External ID là chuỗi bí mật thêm vào trust policy khi cấp quyền cho bên thứ ba; nó chống tấn công confused deputy vì bên thứ ba phải cung cấp đúng External ID khi AssumeRole.",
+    "explanationEn": "The External ID is a secret string added to the trust policy when granting third-party access; it prevents the confused deputy attack because the third party must supply the correct External ID when calling AssumeRole."
+  },
+  {
+    "id": "q14",
+    "question": "Trong AWS Organizations, một tài khoản thành viên có thể thuộc bao nhiêu organization, và SCP có áp dụng cho management account không?",
+    "questionEn": "In AWS Organizations, how many organizations can a member account belong to, and do SCPs apply to the management account?",
+    "options": [
+      "Nhiều organization; SCP áp dụng cho tất cả tài khoản kể cả management",
+      "Đúng một organization; SCP KHÔNG áp dụng cho management account",
+      "Đúng một organization; SCP áp dụng cho management account",
+      "Nhiều organization; SCP không áp dụng cho bất kỳ tài khoản nào"
+    ],
+    "optionsEn": [
+      "Multiple organizations; SCPs apply to all accounts including management",
+      "Exactly one organization; SCPs do NOT apply to the management account",
+      "Exactly one organization; SCPs apply to the management account",
+      "Multiple organizations; SCPs apply to no account"
+    ],
+    "answer": 1,
+    "explanation": "Mỗi tài khoản thành viên thuộc đúng một organization. SCP không áp dụng cho management account (kể cả root của nó), nên không nên đặt tài nguyên quan trọng trong management account.",
+    "explanationEn": "Each member account belongs to exactly one organization. SCPs do not apply to the management account (including its root), so critical resources shouldn't be placed in the management account."
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "Amazon Route 53 – Dịch vụ DNS",
+  "titleEn": "Amazon Route 53 – DNS Service",
+  "description": "DNS được quản lý của AWS: hosted zone, bản ghi A/CNAME/Alias, các routing policy và health check cho SAA-C03.",
+  "descriptionEn": "AWS managed DNS: hosted zones, A/CNAME/Alias records, routing policies and health checks for SAA-C03."
+}

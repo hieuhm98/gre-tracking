@@ -1,1 +1,7 @@
-{"title": "Domain, URL & DNS", "description": "Domain, cấu trúc URL/URI, path và sitemap; cách DNS phân giải tên miền thành IP và các loại DNS record."}
+{
+  "group": "ba-po-pm",
+  "title": "Domain, URL & DNS",
+  "titleEn": "Domain, URL & DNS",
+  "description": "Domain, cấu trúc URL/URI, path và sitemap; cách DNS phân giải tên miền thành IP và các loại DNS record.",
+  "descriptionEn": "Domains, URL/URI structure, paths and sitemaps; how DNS resolves domain names into IPs and the types of DNS records."
+}

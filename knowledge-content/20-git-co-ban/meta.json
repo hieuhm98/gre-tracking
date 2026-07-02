@@ -1,1 +1,7 @@
-{"title": "Git & Version Control", "description": "Commit, branch, merge, pull request và những gì BA/PM cần biết về version control."}
+{
+  "group": "ba-po-pm",
+  "title": "Git & Version Control",
+  "titleEn": "Git & Version Control",
+  "description": "Commit, branch, merge, pull request và những gì BA/PM cần biết về version control.",
+  "descriptionEn": "Commits, branches, merges, pull requests, and what a BA/PM needs to know about version control."
+}

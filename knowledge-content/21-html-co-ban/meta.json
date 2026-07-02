@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "HTML Cơ Bản",
-  "description": "Ngôn ngữ đánh dấu nền tảng của web — cấu trúc trang, thẻ, thuộc tính, form và semantic HTML."
+  "titleEn": "HTML Basics",
+  "description": "Ngôn ngữ đánh dấu nền tảng của web — cấu trúc trang, thẻ, thuộc tính, form và semantic HTML.",
+  "descriptionEn": "The foundational markup language of the web — page structure, tags, attributes, forms, and semantic HTML."
 }

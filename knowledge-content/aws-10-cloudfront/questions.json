@@ -1,0 +1,262 @@
+[
+  {
+    "id": "q1",
+    "question": "Một công ty phân phối file tĩnh từ S3 qua CloudFront và muốn đảm bảo người dùng KHÔNG thể truy cập trực tiếp vào S3 bucket, chỉ qua CloudFront. Giải pháp phù hợp nhất là gì?",
+    "questionEn": "A company serves static files from S3 via CloudFront and wants to ensure users CANNOT access the S3 bucket directly, only through CloudFront. What is the MOST suitable solution?",
+    "options": [
+      "Bật Origin Access Control (OAC) và cấu hình bucket policy chỉ cho phép CloudFront",
+      "Đặt bucket ở chế độ public-read",
+      "Bật S3 Cross-Region Replication",
+      "Dùng Global Accelerator trước S3 bucket"
+    ],
+    "optionsEn": [
+      "Enable Origin Access Control (OAC) and configure a bucket policy allowing only CloudFront",
+      "Set the bucket to public-read",
+      "Enable S3 Cross-Region Replication",
+      "Use Global Accelerator in front of the S3 bucket"
+    ],
+    "answer": 0,
+    "explanation": "OAC (thay thế OAI legacy) cho phép CloudFront truy cập S3 và bucket policy chặn mọi truy cập trực tiếp, đảm bảo nội dung chỉ đến qua CloudFront.",
+    "explanationEn": "OAC (replacing legacy OAI) lets CloudFront access S3 while the bucket policy blocks all direct access, ensuring content is only served through CloudFront."
+  },
+  {
+    "id": "q2",
+    "question": "Một dịch vụ video trả phí cần cấp quyền truy cập cho MỘT file video cụ thể mỗi lần người dùng mua. Cơ chế CloudFront nào phù hợp nhất?",
+    "questionEn": "A paid video service needs to grant access to ONE specific video file each time a user purchases it. Which CloudFront mechanism is MOST suitable?",
+    "options": [
+      "Signed Cookies",
+      "Signed URLs",
+      "Geo Restriction",
+      "Origin Access Control"
+    ],
+    "optionsEn": [
+      "Signed Cookies",
+      "Signed URLs",
+      "Geo Restriction",
+      "Origin Access Control"
+    ],
+    "answer": 1,
+    "explanation": "Signed URLs cấp quyền cho một file duy nhất, phù hợp khi cần bảo vệ truy cập từng object riêng lẻ.",
+    "explanationEn": "Signed URLs grant access to a single file, which fits protecting access to individual objects one at a time."
+  },
+  {
+    "id": "q3",
+    "question": "Một nền tảng streaming muốn cấp quyền cho người dùng đăng nhập truy cập TOÀN BỘ thư viện nội dung gồm hàng nghìn file mà không phải tạo URL cho từng file. Nên dùng gì?",
+    "questionEn": "A streaming platform wants to grant logged-in users access to an ENTIRE content library of thousands of files without generating a URL per file. What should it use?",
+    "options": [
+      "Signed URLs",
+      "Presigned S3 URLs cho từng file",
+      "Signed Cookies",
+      "WAF rules"
+    ],
+    "optionsEn": [
+      "Signed URLs",
+      "Presigned S3 URLs for each file",
+      "Signed Cookies",
+      "WAF rules"
+    ],
+    "answer": 2,
+    "explanation": "Signed Cookies cấp quyền truy cập nhiều file / toàn bộ nội dung mà không cần ký từng URL riêng, lý tưởng cho thư viện nhiều file.",
+    "explanationEn": "Signed Cookies grant access to multiple files / whole content without signing each URL, ideal for multi-file libraries."
+  },
+  {
+    "id": "q4",
+    "question": "Một studio cần chặn người dùng ở một số quốc gia cụ thể xem nội dung vì lý do bản quyền. Tính năng CloudFront nào giải quyết điều này?",
+    "questionEn": "A studio needs to block users in certain specific countries from viewing content for copyright reasons. Which CloudFront feature addresses this?",
+    "options": [
+      "Cache Policy",
+      "Geo Restriction",
+      "Origin Request Policy",
+      "Lambda@Edge caching"
+    ],
+    "optionsEn": [
+      "Cache Policy",
+      "Geo Restriction",
+      "Origin Request Policy",
+      "Lambda@Edge caching"
+    ],
+    "answer": 1,
+    "explanation": "Geo Restriction cho phép allow/deny truy cập theo quốc gia dựa trên geo-IP, phù hợp cho tuân thủ bản quyền theo khu vực.",
+    "explanationEn": "Geo Restriction allows/denies access by country based on geo-IP, fitting regional copyright compliance."
+  },
+  {
+    "id": "q5",
+    "question": "Đội ngũ deploy phiên bản mới của trang web nhưng người dùng vẫn thấy nội dung cũ do CloudFront cache. Cách MOST cost-effective để tránh vấn đề này trong tương lai là gì?",
+    "questionEn": "A team deploys a new version of a website but users still see old content because of CloudFront cache. What is the MOST cost-effective way to avoid this issue in the future?",
+    "options": [
+      "Dùng versioned filenames (ví dụ app.v2.js) để bust cache",
+      "Chạy invalidation /* sau mỗi lần deploy",
+      "Đặt TTL = 0 cho toàn bộ nội dung",
+      "Tắt caching hoàn toàn"
+    ],
+    "optionsEn": [
+      "Use versioned filenames (e.g., app.v2.js) to bust cache",
+      "Run an invalidation /* after every deploy",
+      "Set TTL = 0 for all content",
+      "Disable caching entirely"
+    ],
+    "answer": 0,
+    "explanation": "Versioned filenames buộc trình duyệt/CloudFront tải object mới mà không tốn phí invalidation, còn TTL=0 hay tắt cache làm mất lợi ích CDN.",
+    "explanationEn": "Versioned filenames force a fresh object without invalidation costs, while TTL=0 or disabling caching removes the CDN benefit."
+  },
+  {
+    "id": "q6",
+    "question": "Một game online nhiều người chơi dùng giao thức UDP cần độ trễ thấp và failover khu vực nhanh, đồng thời cần địa chỉ IP tĩnh để người chơi allowlist. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "A multiplayer online game using UDP needs low latency and fast regional failover, plus static IP addresses for players to allowlist. Which service is MOST suitable?",
+    "options": [
+      "CloudFront",
+      "S3 Transfer Acceleration",
+      "AWS Global Accelerator",
+      "Route 53 latency routing"
+    ],
+    "optionsEn": [
+      "CloudFront",
+      "S3 Transfer Acceleration",
+      "AWS Global Accelerator",
+      "Route 53 latency routing"
+    ],
+    "answer": 2,
+    "explanation": "Global Accelerator hỗ trợ TCP/UDP, cấp 2 static anycast IPs, định tuyến qua AWS backbone tới endpoint healthy gần nhất với failover nhanh — lý tưởng cho gaming non-HTTP.",
+    "explanationEn": "Global Accelerator supports TCP/UDP, provides 2 static anycast IPs, and routes over the AWS backbone to the nearest healthy endpoint with fast failover, ideal for non-HTTP gaming."
+  },
+  {
+    "id": "q7",
+    "question": "AWS Global Accelerator cung cấp cho bạn bao nhiêu địa chỉ IP và loại gì để làm điểm vào cho ứng dụng?",
+    "questionEn": "How many IP addresses does AWS Global Accelerator provide, and of what type, as the entry point for your application?",
+    "options": [
+      "1 elastic IP động",
+      "4 static unicast IPs",
+      "2 static anycast IPs",
+      "Một dải CIDR /24"
+    ],
+    "optionsEn": [
+      "1 dynamic elastic IP",
+      "4 static unicast IPs",
+      "2 static anycast IPs",
+      "A /24 CIDR range"
+    ],
+    "answer": 2,
+    "explanation": "Global Accelerator cấp 2 static anycast IPs; traffic vào các IP này được đưa lên AWS backbone tại edge gần nhất rồi tới endpoint healthy.",
+    "explanationEn": "Global Accelerator provides 2 static anycast IPs; traffic to these IPs enters the AWS backbone at the nearest edge and reaches a healthy endpoint."
+  },
+  {
+    "id": "q8",
+    "question": "Một công ty cấu hình CloudFront với custom domain và HTTPS. Họ tạo chứng chỉ ACM ở region eu-west-1 (nơi origin ALB đặt) nhưng CloudFront không nhận. Nguyên nhân là gì?",
+    "questionEn": "A company configures CloudFront with a custom domain and HTTPS. They created the ACM certificate in eu-west-1 (where the origin ALB lives) but CloudFront won't accept it. What is the cause?",
+    "options": [
+      "Chứng chỉ ACM cho CloudFront phải nằm ở us-east-1",
+      "ACM không hỗ trợ CloudFront",
+      "Cần dùng chứng chỉ self-signed",
+      "Phải bật OAC trước khi gắn chứng chỉ"
+    ],
+    "optionsEn": [
+      "The ACM certificate for CloudFront must be in us-east-1",
+      "ACM does not support CloudFront",
+      "A self-signed certificate is required",
+      "OAC must be enabled before attaching the certificate"
+    ],
+    "answer": 0,
+    "explanation": "CloudFront yêu cầu chứng chỉ ACM ở region us-east-1 (N. Virginia), bất kể origin nằm ở region nào.",
+    "explanationEn": "CloudFront requires the ACM certificate to be in us-east-1 (N. Virginia), regardless of the origin's region."
+  },
+  {
+    "id": "q9",
+    "question": "Một ứng dụng web đọc-nhiều cần phục vụ nội dung với độ trễ thấp cho người dùng TOÀN CẦU và tận dụng caching. Giải pháp nào phù hợp nhất so với S3 Cross-Region Replication?",
+    "questionEn": "A read-heavy web application needs to serve content with low latency to GLOBAL users and benefit from caching. Which solution is MOST suitable compared to S3 Cross-Region Replication?",
+    "options": [
+      "S3 CRR tới tất cả region",
+      "CloudFront cache tại edge locations",
+      "Global Accelerator không cache",
+      "EC2 Auto Scaling ở mỗi region"
+    ],
+    "optionsEn": [
+      "S3 CRR to all regions",
+      "CloudFront caching at edge locations",
+      "Global Accelerator without caching",
+      "EC2 Auto Scaling in every region"
+    ],
+    "answer": 1,
+    "explanation": "CloudFront cache nội dung tại 400+ edge toàn cầu với TTL, tối ưu cho phân phối read-heavy toàn cầu; CRR chỉ sao chép sang vài region cụ thể, không cache tại edge.",
+    "explanationEn": "CloudFront caches content at 400+ edges globally with TTL, ideal for global read-heavy delivery; CRR only replicates to a few specific regions and does not cache at the edge."
+  },
+  {
+    "id": "q10",
+    "question": "Một tổ chức cần dữ liệu S3 LUÔN cập nhật (near real-time) và độ trễ thấp cho người dùng ở đúng hai region cụ thể, đồng thời phục vụ mục đích tuân thủ lưu trú dữ liệu. Nên dùng gì?",
+    "questionEn": "An organization needs S3 data that is ALWAYS current (near real-time) with low latency for users in exactly two specific regions, also serving a data-residency compliance purpose. What should it use?",
+    "options": [
+      "CloudFront với TTL dài",
+      "Global Accelerator",
+      "S3 Cross-Region Replication (CRR)",
+      "CloudFront Signed Cookies"
+    ],
+    "optionsEn": [
+      "CloudFront with a long TTL",
+      "Global Accelerator",
+      "S3 Cross-Region Replication (CRR)",
+      "CloudFront Signed Cookies"
+    ],
+    "answer": 2,
+    "explanation": "CRR sao chép object sang các region cụ thể và luôn cập nhật, phù hợp cho độ trễ thấp ở vài region và yêu cầu tuân thủ; CloudFront có thể phục vụ dữ liệu cũ tới hết TTL.",
+    "explanationEn": "CRR replicates objects to specific regions and stays current, fitting low latency in a few regions and compliance; CloudFront may serve stale data until TTL expires."
+  },
+  {
+    "id": "q11",
+    "question": "Một kiến trúc dùng CloudFront đứng trước một Application Load Balancer (ALB) phục vụ ứng dụng động. Trong CloudFront, ALB đóng vai trò gì?",
+    "questionEn": "An architecture uses CloudFront in front of an Application Load Balancer (ALB) serving a dynamic application. In CloudFront, what role does the ALB play?",
+    "options": [
+      "S3 origin với OAC",
+      "Signed cookie provider",
+      "Edge location",
+      "Custom origin (HTTP)"
+    ],
+    "optionsEn": [
+      "S3 origin with OAC",
+      "Signed cookie provider",
+      "Edge location",
+      "Custom origin (HTTP)"
+    ],
+    "answer": 3,
+    "explanation": "ALB (giống EC2, S3 static website, hay bất kỳ HTTP server nào) là một custom origin HTTP của CloudFront; OAC chỉ áp dụng cho S3 bucket origin.",
+    "explanationEn": "An ALB (like EC2, an S3 static website, or any HTTP server) is a CloudFront custom HTTP origin; OAC only applies to S3 bucket origins."
+  },
+  {
+    "id": "q12",
+    "question": "Một trang web muốn BẮT BUỘC mọi viewer phải dùng HTTPS, tự động chuyển hướng các request HTTP. Cấu hình CloudFront nào đạt được điều này?",
+    "questionEn": "A website wants to FORCE every viewer to use HTTPS, automatically redirecting HTTP requests. Which CloudFront configuration achieves this?",
+    "options": [
+      "Origin protocol policy = HTTP Only",
+      "Viewer protocol policy = Redirect HTTP to HTTPS (hoặc HTTPS Only)",
+      "Bật Geo Restriction",
+      "Đặt min TTL = 0"
+    ],
+    "optionsEn": [
+      "Origin protocol policy = HTTP Only",
+      "Viewer protocol policy = Redirect HTTP to HTTPS (or HTTPS Only)",
+      "Enable Geo Restriction",
+      "Set min TTL = 0"
+    ],
+    "answer": 1,
+    "explanation": "Viewer protocol policy đặt Redirect HTTP to HTTPS (hoặc HTTPS Only) bắt buộc mã hóa giữa viewer và CloudFront; origin protocol policy chỉ áp dụng cho chặng CloudFront–origin.",
+    "explanationEn": "The viewer protocol policy set to Redirect HTTP to HTTPS (or HTTPS Only) enforces encryption between viewer and CloudFront; the origin protocol policy only covers the CloudFront–origin hop."
+  },
+  {
+    "id": "q13",
+    "question": "Một ứng dụng HTTP đa region cần cải thiện tính sẵn sàng với failover khu vực gần như tức thì và một địa chỉ IP tĩnh cố định, nhưng KHÔNG cần cache nội dung. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "A multi-region HTTP application needs improved availability with near-instant regional failover and a fixed static IP address, but does NOT need content caching. Which service is MOST suitable?",
+    "options": [
+      "CloudFront",
+      "S3 Cross-Region Replication",
+      "CloudFront Functions",
+      "AWS Global Accelerator"
+    ],
+    "optionsEn": [
+      "CloudFront",
+      "S3 Cross-Region Replication",
+      "CloudFront Functions",
+      "AWS Global Accelerator"
+    ],
+    "answer": 3,
+    "explanation": "Global Accelerator cung cấp static anycast IPs và failover khu vực nhanh tới endpoint healthy mà không cache; CloudFront thiên về cache nội dung và không cấp static IP.",
+    "explanationEn": "Global Accelerator provides static anycast IPs and fast regional failover to healthy endpoints without caching; CloudFront focuses on caching content and does not provide a static IP."
+  }
+]

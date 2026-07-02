@@ -1,22 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useAuth } from "@/context/auth";
+import { useLang } from "@/context/lang";
+import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
-import { type Question } from "./QuizBlock";
+import { type Question, localizeQuestion } from "./QuizBlock";
 
 interface StaticTopic {
   slug: string;
+  group: string;
   title: string;
-  description: string;
+  titleEn?: string;
+  description?: string;
 }
 
 interface CommunityQuestion extends Question {
   topic_slug: string;
 }
 
-const COUNTS = [10, 20, 50, 0] as const;
-const COUNT_LABELS: Record<number, string> = { 10: "10 qs", 20: "20 qs", 50: "50 qs", 0: "All" };
+type SessionQuestion = Question & { topic_slug: string };
+
+const COUNTS = [5, 10, 20, 50, 0] as const;
+const QUICK_COUNT = 5;
 
 type AnswerMap = Record<number, number | null>;
 
@@ -30,64 +36,110 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function ReviewSession() {
-  const { user, supabase } = useAuth();
+  const { supabase, devMode } = useAuth();
+  const { t, pick, lang } = useLang();
   const [topics, setTopics] = useState<StaticTopic[]>([]);
+  const [selectedGroups, setSelectedGroups] = useState<Set<string>>(new Set());
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [count, setCount] = useState<number>(10);
-  const [allQuestions, setAllQuestions] = useState<(Question & { topic_slug: string })[]>([]);
-  const [sessionQ, setSessionQ] = useState<(Question & { topic_slug: string })[]>([]);
+  const [sessionQ, setSessionQ] = useState<SessionQuestion[]>([]);
   const [started, setStarted] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [showResults, setShowResults] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [building, setBuilding] = useState(false);
+  const [autoQuick, setAutoQuick] = useState(false);
 
+  // Load topics + detect ?quick=1 (without useSearchParams, to avoid Suspense).
   useEffect(() => {
+    const quick =
+      typeof window !== "undefined" &&
+      new URLSearchParams(window.location.search).get("quick") === "1";
+    setAutoQuick(quick);
+
     fetch("/api/knowledge")
       .then((r) => r.json())
-      .then((data) => {
+      .then((data: StaticTopic[]) => {
         setTopics(data);
-        setSelected(new Set(data.map((t: StaticTopic) => t.slug)));
+        setSelectedGroups(new Set(GROUPS.map((g) => g.id)));
+        setSelected(new Set(data.map((tp) => tp.slug)));
         setLoading(false);
       });
   }, []);
 
-  async function handleStart() {
-    const staticQs: (Question & { topic_slug: string })[] = [];
+  // Groups that actually have topics.
+  const activeGroups = useMemo(
+    () => GROUPS.filter((g) => topics.some((tp) => (tp.group ?? DEFAULT_GROUP) === g.id)),
+    [topics]
+  );
+
+  // Topics visible given the selected groups.
+  const visibleTopics = useMemo(
+    () => topics.filter((tp) => selectedGroups.has(tp.group ?? DEFAULT_GROUP)),
+    [topics, selectedGroups]
+  );
+
+  async function buildSession(slugs: string[], n: number) {
+    setBuilding(true);
+    const staticQs: SessionQuestion[] = [];
     await Promise.all(
-      Array.from(selected).map(async (slug) => {
+      slugs.map(async (slug) => {
         const res = await fetch(`/api/knowledge/${slug}`);
         if (!res.ok) return;
         const data = await res.json();
-        (data.questions ?? []).forEach((q: Question) =>
-          staticQs.push({ ...q, topic_slug: slug })
-        );
+        (data.questions ?? []).forEach((q: Question) => staticQs.push({ ...q, topic_slug: slug }));
       })
     );
 
-    // Also fetch community questions for selected topics
-    const { data: communityQs } = await supabase
-      .from("knowledge_questions")
-      .select("*")
-      .in("topic_slug", Array.from(selected));
-
-    const communityMapped: (Question & { topic_slug: string })[] = (communityQs ?? []).map((q: CommunityQuestion) => ({
-      id: q.id,
-      question: q.question,
-      options: q.options,
-      answer: q.answer,
-      explanation: q.explanation,
-      topic_slug: q.topic_slug,
-    }));
+    let communityMapped: SessionQuestion[] = [];
+    if (!devMode && slugs.length > 0) {
+      const { data: communityQs } = await supabase
+        .from("knowledge_questions")
+        .select("*")
+        .in("topic_slug", slugs);
+      communityMapped = (communityQs ?? []).map((q: CommunityQuestion) => ({
+        id: q.id,
+        question: q.question,
+        questionEn: (q as any).questionEn,
+        options: q.options,
+        optionsEn: (q as any).optionsEn,
+        answer: q.answer,
+        explanation: q.explanation,
+        explanationEn: (q as any).explanationEn,
+        topic_slug: q.topic_slug,
+      }));
+    }
 
     const combined = shuffle([...staticQs, ...communityMapped]);
-    const final = count === 0 ? combined : combined.slice(0, count);
-    setAllQuestions(combined);
+    const final = n === 0 ? combined : combined.slice(0, n);
     setSessionQ(final);
     setAnswers({});
     setCurrentIdx(0);
     setShowResults(false);
     setStarted(true);
+    setBuilding(false);
+  }
+
+  // Auto-start the quick test when arriving via ?quick=1.
+  useEffect(() => {
+    if (autoQuick && !loading && !started && topics.length > 0) {
+      setAutoQuick(false);
+      buildSession(topics.map((tp) => tp.slug), QUICK_COUNT);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoQuick, loading, topics]);
+
+  function handleStart() {
+    buildSession(Array.from(selected).filter((s) => visibleTopics.some((tp) => tp.slug === s)), count);
+  }
+
+  function toggleGroup(id: string) {
+    setSelectedGroups((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
   }
 
   function toggleTopic(slug: string) {
@@ -99,55 +151,118 @@ export default function ReviewSession() {
   }
 
   function toggleAll() {
-    if (selected.size === topics.length) {
-      setSelected(new Set());
-    } else {
-      setSelected(new Set(topics.map((t) => t.slug)));
-    }
+    const visibleSlugs = visibleTopics.map((tp) => tp.slug);
+    const allSelected = visibleSlugs.every((s) => selected.has(s));
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (allSelected) visibleSlugs.forEach((s) => next.delete(s));
+      else visibleSlugs.forEach((s) => next.add(s));
+      return next;
+    });
   }
 
   const optionLabels = ["A", "B", "C", "D", "E"];
-  const correctCount = sessionQ.filter((q, i) => answers[i] === q.answer).length;
+  const localized = sessionQ.map((q) => localizeQuestion(q, lang));
+  const correctCount = localized.filter((q, i) => answers[i] === q.answer).length;
+  const selectedVisibleCount = visibleTopics.filter((tp) => selected.has(tp.slug)).length;
 
-  if (loading) return <div className="text-zinc-500 text-sm">Loading...</div>;
+  if (loading || building) return <div className="text-zinc-500 text-sm">{t("common.loading")}</div>;
 
+  // ---- Setup screen ----
   if (!started) {
     return (
       <div className="max-w-2xl space-y-6">
         <div>
-          <h1 className="text-2xl font-bold">Random Review</h1>
-          <p className="text-zinc-400 text-sm mt-1">Select topics and question count to start.</p>
+          <h1 className="text-2xl font-bold">{t("review.title")}</h1>
+          <p className="text-zinc-400 text-sm mt-1">{t("review.subtitle")}</p>
         </div>
 
+        {/* Daily Quick Test */}
+        <div className="card bg-blue-950/30 border-blue-900/60 space-y-3">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">⚡</span>
+              <h2 className="font-semibold text-blue-200">{t("review.quickTitle")}</h2>
+            </div>
+            <p className="text-xs text-blue-300/70 mt-1">{t("review.quickSubtitle")}</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => buildSession(topics.map((tp) => tp.slug), QUICK_COUNT)}
+              className="btn-primary text-sm px-4 py-2"
+            >
+              {t("review.quickStart")}
+            </button>
+            {activeGroups.map((g) => (
+              <button
+                key={g.id}
+                onClick={() => buildSession(topics.filter((tp) => (tp.group ?? DEFAULT_GROUP) === g.id).map((tp) => tp.slug), QUICK_COUNT)}
+                className="btn-secondary text-sm px-3 py-2"
+              >
+                {g.icon} {pick(g.label, g.labelEn)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Track filter */}
+        {activeGroups.length > 1 && (
+          <div className="card space-y-3">
+            <span className="text-sm font-medium text-zinc-300">{t("review.groups")}</span>
+            <div className="flex flex-wrap gap-2">
+              {activeGroups.map((g) => {
+                const on = selectedGroups.has(g.id);
+                const accent = GROUP_ACCENT[g.accent];
+                return (
+                  <button
+                    key={g.id}
+                    onClick={() => toggleGroup(g.id)}
+                    className={cn(
+                      "px-3 py-1.5 rounded-lg text-sm border transition-colors",
+                      on ? accent.badge : "bg-zinc-800 border-zinc-700 text-zinc-500 hover:bg-zinc-700"
+                    )}
+                  >
+                    {g.icon} {pick(g.label, g.labelEn)}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Topic selection */}
         <div className="card space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-zinc-300">Topics ({selected.size}/{topics.length})</span>
+            <span className="text-sm font-medium text-zinc-300">
+              {t("review.topics")} ({selectedVisibleCount}/{visibleTopics.length})
+            </span>
             <button onClick={toggleAll} className="text-xs text-blue-400 hover:text-blue-300">
-              {selected.size === topics.length ? "Deselect all" : "Select all"}
+              {visibleTopics.every((tp) => selected.has(tp.slug)) ? t("review.deselectAll") : t("review.selectAll")}
             </button>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            {topics.map((t) => (
-              <label key={t.slug} className={cn(
+            {visibleTopics.map((tp) => (
+              <label key={tp.slug} className={cn(
                 "flex items-center gap-2 px-3 py-2 rounded-lg cursor-pointer border transition-colors text-sm",
-                selected.has(t.slug)
+                selected.has(tp.slug)
                   ? "bg-blue-900/30 border-blue-700 text-blue-200"
                   : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600"
               )}>
                 <input
                   type="checkbox"
-                  checked={selected.has(t.slug)}
-                  onChange={() => toggleTopic(t.slug)}
+                  checked={selected.has(tp.slug)}
+                  onChange={() => toggleTopic(tp.slug)}
                   className="accent-blue-500"
                 />
-                <span className="truncate">{t.title}</span>
+                <span className="truncate">{pick(tp.title, tp.titleEn)}</span>
               </label>
             ))}
           </div>
         </div>
 
+        {/* Count */}
         <div className="card space-y-3">
-          <span className="text-sm font-medium text-zinc-300">Number of questions</span>
+          <span className="text-sm font-medium text-zinc-300">{t("review.numQuestions")}</span>
           <div className="flex gap-2">
             {COUNTS.map((c) => (
               <button
@@ -160,7 +275,7 @@ export default function ReviewSession() {
                     : "bg-zinc-800 border-zinc-700 text-zinc-400 hover:bg-zinc-700"
                 )}
               >
-                {COUNT_LABELS[c]}
+                {c === 0 ? t("review.all") : c}
               </button>
             ))}
           </div>
@@ -168,34 +283,35 @@ export default function ReviewSession() {
 
         <button
           onClick={handleStart}
-          disabled={selected.size === 0}
+          disabled={selectedVisibleCount === 0}
           className="btn-primary disabled:opacity-50"
         >
-          Start Review →
+          {t("review.start")}
         </button>
       </div>
     );
   }
 
+  // ---- Results screen ----
   if (showResults) {
     return (
       <div className="max-w-2xl space-y-6">
         <div className="card">
           <div className="flex items-center justify-between">
             <div>
-              <div className="text-3xl font-bold">{correctCount}/{sessionQ.length}</div>
+              <div className="text-3xl font-bold">{correctCount}/{localized.length}</div>
               <div className="text-zinc-400 text-sm mt-1">
-                {Math.round((correctCount / sessionQ.length) * 100)}% correct
+                {localized.length > 0 ? Math.round((correctCount / localized.length) * 100) : 0}% {t("quiz.correct")}
               </div>
             </div>
             <button onClick={() => setStarted(false)} className="btn-secondary">
-              Review Again
+              {t("review.reviewAgain")}
             </button>
           </div>
         </div>
 
         <div className="space-y-4">
-          {sessionQ.map((q, i) => {
+          {localized.map((q, i) => {
             const userAnswer = answers[i];
             const isCorrect = userAnswer === q.answer;
             const skipped = userAnswer === undefined || userAnswer === null;
@@ -228,14 +344,14 @@ export default function ReviewSession() {
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
                         <span>{opt}</span>
                         {isCorrectOpt && <span className="ml-auto shrink-0">✓</span>}
-                        {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">← Your answer</span>}
+                        {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.yourAnswer")}</span>}
                       </div>
                     );
                   })}
                 </div>
                 {q.explanation && (
                   <div className="bg-zinc-800 rounded px-3 py-2 text-xs text-zinc-400">
-                    <span className="text-zinc-500 font-medium">Explanation: </span>{q.explanation}
+                    <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>{q.explanation}
                   </div>
                 )}
               </div>
@@ -246,31 +362,41 @@ export default function ReviewSession() {
     );
   }
 
-  const currentQ = sessionQ[currentIdx];
+  // ---- Question screen ----
+  if (localized.length === 0) {
+    return (
+      <div className="max-w-2xl space-y-4">
+        <p className="text-zinc-400 text-sm">{t("review.noQuestions")}</p>
+        <button onClick={() => setStarted(false)} className="btn-secondary text-sm">{t("review.exit")}</button>
+      </div>
+    );
+  }
+
+  const currentQ = localized[currentIdx];
   return (
     <div className="max-w-2xl space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold">Random Review</h1>
-        <button onClick={() => setStarted(false)} className="text-xs text-zinc-500 hover:text-zinc-300">← Exit</button>
+        <h1 className="text-xl font-bold">{t("review.title")}</h1>
+        <button onClick={() => setStarted(false)} className="text-xs text-zinc-500 hover:text-zinc-300">{t("review.exit")}</button>
       </div>
 
       {/* Progress */}
       <div className="space-y-1">
         <div className="flex justify-between text-xs text-zinc-500">
-          <span>Question {currentIdx + 1}/{sessionQ.length}</span>
-          <span>Answered: {Object.keys(answers).length}</span>
+          <span>{t("review.question")} {currentIdx + 1}/{localized.length}</span>
+          <span>{t("review.answered")}: {Object.keys(answers).length}</span>
         </div>
         <div className="h-1.5 bg-zinc-800 rounded-full">
           <div
             className="h-full bg-blue-500 rounded-full transition-all"
-            style={{ width: `${((currentIdx + 1) / sessionQ.length) * 100}%` }}
+            style={{ width: `${((currentIdx + 1) / localized.length) * 100}%` }}
           />
         </div>
       </div>
 
       {/* Palette */}
       <div className="flex flex-wrap gap-1.5">
-        {sessionQ.map((_, i) => (
+        {localized.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentIdx(i)}
@@ -290,21 +416,21 @@ export default function ReviewSession() {
         <p className="text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
         <div className="space-y-2">
           {currentQ.options.map((opt, i) => {
-            const selected = answers[currentIdx] === i;
+            const isSel = answers[currentIdx] === i;
             return (
               <button
                 key={i}
                 onClick={() => setAnswers((prev) => ({ ...prev, [currentIdx]: i }))}
                 className={cn(
                   "w-full text-left flex items-start gap-3 px-4 py-3 rounded-lg border text-sm transition-colors",
-                  selected
+                  isSel
                     ? "bg-blue-900/50 border-blue-600 text-blue-100"
                     : "bg-zinc-800/50 border-zinc-700 text-zinc-300 hover:bg-zinc-800"
                 )}
               >
                 <span className={cn(
                   "w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0",
-                  selected ? "bg-blue-600 border-blue-500 text-white" : "border-zinc-600 text-zinc-500"
+                  isSel ? "bg-blue-600 border-blue-500 text-white" : "border-zinc-600 text-zinc-500"
                 )}>
                   {optionLabels[i]}
                 </span>
@@ -315,10 +441,10 @@ export default function ReviewSession() {
         </div>
         <div className="flex items-center justify-between pt-1">
           <div className="flex gap-2">
-            <button onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))} disabled={currentIdx === 0} className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40">← Prev</button>
-            <button onClick={() => setCurrentIdx((i) => Math.min(sessionQ.length - 1, i + 1))} disabled={currentIdx === sessionQ.length - 1} className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40">Next →</button>
+            <button onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))} disabled={currentIdx === 0} className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40">{t("quiz.prev")}</button>
+            <button onClick={() => setCurrentIdx((i) => Math.min(localized.length - 1, i + 1))} disabled={currentIdx === localized.length - 1} className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40">{t("quiz.next")}</button>
           </div>
-          <button onClick={() => setShowResults(true)} className="btn-primary text-sm px-4 py-1.5">View Results</button>
+          <button onClick={() => setShowResults(true)} className="btn-primary text-sm px-4 py-1.5">{t("quiz.viewResults")}</button>
         </div>
       </div>
     </div>

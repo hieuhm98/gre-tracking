@@ -1,1 +1,7 @@
-{"title": "Bảo mật cơ bản", "description": "HTTPS, authentication, authorization, các mối đe dọa phổ biến và best practices bảo mật."}
+{
+  "group": "ba-po-pm",
+  "title": "Bảo mật cơ bản",
+  "titleEn": "Security Basics",
+  "description": "HTTPS, authentication, authorization, các mối đe dọa phổ biến và best practices bảo mật.",
+  "descriptionEn": "HTTPS, authentication, authorization, common threats, and security best practices."
+}

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "RPO (Recovery Point Objective) đo lường điều gì?",
+    "questionEn": "What does RPO (Recovery Point Objective) measure?",
+    "options": [
+      "Thời gian tối đa hệ thống được phép ngừng hoạt động",
+      "Lượng dữ liệu tối đa có thể bị mất, tính bằng thời gian lùi về quá khứ",
+      "Chi phí tối đa cho hạ tầng dự phòng",
+      "Số lượng Region tối thiểu cần dùng"
+    ],
+    "optionsEn": [
+      "The maximum time the system is allowed to be down",
+      "The maximum data that can be lost, measured as how far back in time",
+      "The maximum cost for standby infrastructure",
+      "The minimum number of Regions required"
+    ],
+    "answer": 1,
+    "explanation": "RPO = mức mất mát dữ liệu tối đa chấp nhận được, đo bằng khoảng thời gian lùi về quá khứ. RTO mới là chỉ số đo downtime. Đề thi hay đảo hai định nghĩa này để đánh lừa.",
+    "explanationEn": "RPO = the maximum acceptable data loss, measured as how far back in time you go. RTO is the one that measures downtime. Exams often swap these two definitions to trick you."
+  },
+  {
+    "id": "q2",
+    "question": "Một công ty yêu cầu RTO khoảng vài phút và có ngân sách trung bình, chấp nhận duy trì sẵn một bản sao thu nhỏ đầy đủ của môi trường production. Chiến lược DR nào phù hợp nhất?",
+    "questionEn": "A company needs an RTO of a few minutes with a medium budget and is willing to keep a full scaled-down copy of production running. Which DR strategy fits best?",
+    "options": [
+      "Backup & Restore",
+      "Pilot Light",
+      "Warm Standby",
+      "Multi-Site Active-Active"
+    ],
+    "optionsEn": [
+      "Backup & Restore",
+      "Pilot Light",
+      "Warm Standby",
+      "Multi-Site Active-Active"
+    ],
+    "answer": 2,
+    "explanation": "Warm Standby luôn chạy một bản đầy đủ nhưng thu nhỏ; khi thảm họa chỉ cần scale up, cho RTO tính bằng phút với chi phí trung bình. Pilot Light chỉ giữ lõi (DB) nên RTO cao hơn; Multi-Site cho RTO gần 0 nhưng đắt hơn nhiều.",
+    "explanationEn": "Warm Standby always runs a full but scaled-down copy; on disaster you just scale up, giving an RTO in minutes at medium cost. Pilot Light only keeps the core (DB) so its RTO is higher; Multi-Site gives near-zero RTO but costs much more."
+  },
+  {
+    "id": "q3",
+    "question": "Đâu là thứ tự đúng của 4 chiến lược DR theo chi phí tăng dần (và RTO/RPO giảm dần)?",
+    "questionEn": "What is the correct order of the four DR strategies by increasing cost (and decreasing RTO/RPO)?",
+    "options": [
+      "Multi-Site < Warm Standby < Pilot Light < Backup & Restore",
+      "Pilot Light < Backup & Restore < Warm Standby < Multi-Site",
+      "Backup & Restore < Pilot Light < Warm Standby < Multi-Site",
+      "Backup & Restore < Warm Standby < Pilot Light < Multi-Site"
+    ],
+    "optionsEn": [
+      "Multi-Site < Warm Standby < Pilot Light < Backup & Restore",
+      "Pilot Light < Backup & Restore < Warm Standby < Multi-Site",
+      "Backup & Restore < Pilot Light < Warm Standby < Multi-Site",
+      "Backup & Restore < Warm Standby < Pilot Light < Multi-Site"
+    ],
+    "answer": 2,
+    "explanation": "Thứ tự chuẩn: Backup & Restore (rẻ nhất, chậm nhất) < Pilot Light < Warm Standby < Multi-Site/Active-Active (đắt nhất, nhanh nhất). Càng đắt thì RTO/RPO càng nhỏ.",
+    "explanationEn": "The standard order: Backup & Restore (cheapest, slowest) < Pilot Light < Warm Standby < Multi-Site/Active-Active (most expensive, fastest). The more expensive, the smaller the RTO/RPO."
+  },
+  {
+    "id": "q4",
+    "question": "Công ty cần di trú database Oracle on-premises sang Amazon Aurora PostgreSQL. Vì engine thay đổi, họ cần chuyển đổi schema và stored procedure trước. Cần dùng công cụ nào cùng với AWS DMS?",
+    "questionEn": "A company needs to migrate an on-premises Oracle database to Amazon Aurora PostgreSQL. Because the engine changes, they must convert the schema and stored procedures first. Which tool should be used alongside AWS DMS?",
+    "options": [
+      "AWS DataSync",
+      "AWS Schema Conversion Tool (SCT)",
+      "AWS Snowball",
+      "AWS Storage Gateway"
+    ],
+    "optionsEn": [
+      "AWS DataSync",
+      "AWS Schema Conversion Tool (SCT)",
+      "AWS Snowball",
+      "AWS Storage Gateway"
+    ],
+    "answer": 1,
+    "explanation": "Di trú heterogeneous (đổi engine, Oracle → Aurora PostgreSQL) cần AWS SCT để chuyển đổi schema/code trước, sau đó DMS chuyển dữ liệu. DataSync/Snowball/Storage Gateway không xử lý chuyển đổi schema database.",
+    "explanationEn": "A heterogeneous migration (engine change, Oracle → Aurora PostgreSQL) needs AWS SCT to convert the schema/code first, then DMS moves the data. DataSync/Snowball/Storage Gateway do not handle database schema conversion."
+  },
+  {
+    "id": "q5",
+    "question": "Yêu cầu: di trú một database sản xuất lên AWS nhưng database nguồn phải tiếp tục phục vụ ứng dụng trong suốt quá trình, với downtime tối thiểu khi cutover. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "Requirement: migrate a production database to AWS while the source database must keep serving the application throughout, with minimal downtime at cutover. Which service fits best?",
+    "options": [
+      "AWS Application Migration Service (MGN)",
+      "AWS Snowmobile",
+      "AWS Database Migration Service (DMS) với CDC",
+      "AWS Backup"
+    ],
+    "optionsEn": [
+      "AWS Application Migration Service (MGN)",
+      "AWS Snowmobile",
+      "AWS Database Migration Service (DMS) with CDC",
+      "AWS Backup"
+    ],
+    "answer": 2,
+    "explanation": "AWS DMS cho phép nguồn tiếp tục hoạt động trong khi di trú và dùng CDC (Change Data Capture) để đồng bộ các thay đổi phát sinh, giúp cutover với downtime rất nhỏ. MGN dùng cho server (lift-and-shift), không phải công cụ chuyên cho database.",
+    "explanationEn": "AWS DMS lets the source keep running during migration and uses CDC (Change Data Capture) to sync ongoing changes, enabling cutover with very little downtime. MGN is for servers (lift-and-shift), not a database-specific tool."
+  },
+  {
+    "id": "q6",
+    "question": "Đội ngũ muốn chuyển hàng chục máy chủ VM on-premises lên EC2 mà không viết lại ứng dụng (lift-and-shift, rehost). Dịch vụ AWS nào là lựa chọn chuẩn hiện nay?",
+    "questionEn": "A team wants to move dozens of on-premises VM servers to EC2 without rewriting the applications (lift-and-shift, rehost). Which AWS service is the current standard choice?",
+    "options": [
+      "AWS Application Migration Service (MGN)",
+      "AWS Database Migration Service (DMS)",
+      "AWS DataSync",
+      "AWS Schema Conversion Tool"
+    ],
+    "optionsEn": [
+      "AWS Application Migration Service (MGN)",
+      "AWS Database Migration Service (DMS)",
+      "AWS DataSync",
+      "AWS Schema Conversion Tool"
+    ],
+    "answer": 0,
+    "explanation": "AWS Application Migration Service (MGN) là công cụ lift-and-shift (rehost) chuẩn, nhân bản mức block để chuyển nguyên server lên EC2. MGN đã thay thế AWS SMS và CloudEndure. DMS/DataSync/SCT dành cho database và dữ liệu, không phải rehost server.",
+    "explanationEn": "AWS Application Migration Service (MGN) is the standard lift-and-shift (rehost) tool, using block-level replication to move whole servers to EC2. MGN replaced AWS SMS and CloudEndure. DMS/DataSync/SCT are for databases and data, not server rehosting."
+  },
+  {
+    "id": "q7",
+    "question": "Trong chiến lược Pilot Light, thành phần nào thường được giữ luôn chạy ở Region dự phòng?",
+    "questionEn": "In the Pilot Light strategy, which component is typically kept running in the standby Region?",
+    "options": [
+      "Toàn bộ tầng ứng dụng chạy với quy mô đầy đủ",
+      "Chỉ các thành phần lõi như database đang được nhân bản",
+      "Không có gì cả, chỉ có backup",
+      "Một bản sao đầy đủ nhưng thu nhỏ của toàn bộ hệ thống"
+    ],
+    "optionsEn": [
+      "The entire application tier running at full scale",
+      "Only core components such as a database being replicated",
+      "Nothing at all, only backups",
+      "A full but scaled-down copy of the entire system"
+    ],
+    "answer": 1,
+    "explanation": "Pilot Light chỉ giữ lõi tối thiểu (thường là database nhân bản liên tục) luôn chạy; phần compute được bật/scale khi thảm họa. 'Không có gì' là Backup & Restore; 'bản đầy đủ thu nhỏ' là Warm Standby.",
+    "explanationEn": "Pilot Light keeps only the minimal core (usually a continuously replicated database) running; compute is started/scaled on disaster. 'Nothing at all' describes Backup & Restore; 'full but scaled-down copy' describes Warm Standby."
+  },
+  {
+    "id": "q8",
+    "question": "Một hệ thống tài chính yêu cầu RTO và RPO gần bằng 0, ngân sách không phải rào cản. Kiến trúc DR nào đáp ứng?",
+    "questionEn": "A financial system requires near-zero RTO and RPO, and budget is not a constraint. Which DR architecture meets this?",
+    "options": [
+      "Backup & Restore với snapshot mỗi giờ",
+      "Pilot Light với database nhân bản",
+      "Warm Standby thu nhỏ",
+      "Multi-Site / Active-Active trên nhiều Region"
+    ],
+    "optionsEn": [
+      "Backup & Restore with hourly snapshots",
+      "Pilot Light with a replicated database",
+      "A scaled-down Warm Standby",
+      "Multi-Site / Active-Active across multiple Regions"
+    ],
+    "answer": 3,
+    "explanation": "Chỉ Multi-Site / Active-Active (production đầy đủ chạy song song ở 2+ Region) mới cho RTO và RPO gần 0. Đây là phương án đắt nhất, phù hợp khi ngân sách không phải rào cản. Thường dùng Route 53 failover.",
+    "explanationEn": "Only Multi-Site / Active-Active (full production running in parallel across 2+ Regions) delivers near-zero RTO and RPO. It is the most expensive option, appropriate when budget is not a constraint. Route 53 failover is commonly used."
+  },
+  {
+    "id": "q9",
+    "question": "Công ty có 500 TB dữ liệu cần chuyển lên S3 nhưng đường truyền internet chỉ vài chục Mbps, chuyển qua mạng sẽ mất nhiều tháng. Giải pháp nào tối ưu?",
+    "questionEn": "A company has 500 TB of data to move to S3 but its internet link is only a few tens of Mbps, so transferring over the network would take months. What is the optimal solution?",
+    "options": [
+      "AWS DataSync qua internet",
+      "AWS Snow Family (ví dụ Snowball) — di trú offline",
+      "AWS DMS",
+      "AWS Storage Gateway ở chế độ File Gateway"
+    ],
+    "optionsEn": [
+      "AWS DataSync over the internet",
+      "AWS Snow Family (e.g. Snowball) — offline migration",
+      "AWS DMS",
+      "AWS Storage Gateway in File Gateway mode"
+    ],
+    "answer": 1,
+    "explanation": "Khi dữ liệu quá lớn và mạng quá chậm, AWS Snow Family (Snowball/Snowmobile) chuyển dữ liệu offline bằng thiết bị vật lý — nhanh và tiết kiệm hơn nhiều so với chuyển online. DataSync/Storage Gateway đều phụ thuộc vào đường truyền mạng.",
+    "explanationEn": "When data is too large and the network too slow, AWS Snow Family (Snowball/Snowmobile) moves data offline via physical devices — far faster and cheaper than transferring online. DataSync/Storage Gateway both depend on the network link."
+  },
+  {
+    "id": "q10",
+    "question": "Cần chuyển và đồng bộ định kỳ dữ liệu file (NFS/SMB) từ NAS on-premises lên Amazon S3 và Amazon EFS một cách tự động, có mã hóa và kiểm tra toàn vẹn, qua kết nối mạng. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "You need to transfer and periodically sync file data (NFS/SMB) from an on-premises NAS to Amazon S3 and Amazon EFS automatically, with encryption and integrity checks, over the network. Which service fits best?",
+    "options": [
+      "AWS DataSync",
+      "AWS Snowmobile",
+      "AWS DMS",
+      "AWS Backup"
+    ],
+    "optionsEn": [
+      "AWS DataSync",
+      "AWS Snowmobile",
+      "AWS DMS",
+      "AWS Backup"
+    ],
+    "answer": 0,
+    "explanation": "AWS DataSync chuyên chuyển và đồng bộ dữ liệu online giữa on-premises (NFS/SMB/HDFS) và các dịch vụ lưu trữ AWS (S3, EFS, FSx), tự động, mã hóa và kiểm tra toàn vẹn. DMS dành cho database; Snowmobile là offline; AWS Backup là backup tập trung.",
+    "explanationEn": "AWS DataSync specializes in online transfer and sync between on-premises (NFS/SMB/HDFS) and AWS storage services (S3, EFS, FSx), automated, encrypted, and integrity-checked. DMS is for databases; Snowmobile is offline; AWS Backup is for centralized backups."
+  },
+  {
+    "id": "q11",
+    "question": "Sự khác biệt chính giữa Warm Standby và Pilot Light là gì?",
+    "questionEn": "What is the main difference between Warm Standby and Pilot Light?",
+    "options": [
+      "Warm Standby rẻ hơn Pilot Light",
+      "Warm Standby chạy sẵn một bản đầy đủ thu nhỏ, còn Pilot Light chỉ giữ lõi (như database)",
+      "Pilot Light cho RTO thấp hơn Warm Standby",
+      "Warm Standby không cần Region dự phòng"
+    ],
+    "optionsEn": [
+      "Warm Standby is cheaper than Pilot Light",
+      "Warm Standby runs a full scaled-down copy, while Pilot Light keeps only the core (such as a database)",
+      "Pilot Light gives a lower RTO than Warm Standby",
+      "Warm Standby does not need a standby Region"
+    ],
+    "answer": 1,
+    "explanation": "Warm Standby luôn chạy đầy đủ mọi thành phần nhưng ở quy mô nhỏ; Pilot Light chỉ giữ lõi (thường là DB) chạy sẵn, phần còn lại khởi động khi thảm họa. Vì vậy Warm Standby đắt hơn và có RTO thấp hơn Pilot Light.",
+    "explanationEn": "Warm Standby always runs every component but at small scale; Pilot Light keeps only the core (usually the DB) running, with the rest started on disaster. Therefore Warm Standby is more expensive and has a lower RTO than Pilot Light."
+  },
+  {
+    "id": "q12",
+    "question": "Trong khung 7 Rs, chiến lược 'Replatform' được hiểu đúng nhất là gì?",
+    "questionEn": "In the 7 Rs framework, what best describes the 'Replatform' strategy?",
+    "options": [
+      "Bê nguyên ứng dụng lên cloud không thay đổi gì (lift-and-shift)",
+      "Tối ưu nhẹ khi lên cloud, ví dụ chuyển DB tự quản sang RDS, không viết lại lõi",
+      "Viết lại hoàn toàn theo kiến trúc cloud-native",
+      "Loại bỏ ứng dụng không còn cần thiết"
+    ],
+    "optionsEn": [
+      "Move the application to the cloud unchanged (lift-and-shift)",
+      "Light optimization when moving to the cloud, e.g. move a self-managed DB to RDS, without rewriting the core",
+      "Fully rewrite in a cloud-native architecture",
+      "Decommission an application that is no longer needed"
+    ],
+    "answer": 1,
+    "explanation": "Replatform ('lift-tinker-and-shift') là tối ưu nhẹ khi di trú — ví dụ thay database tự quản bằng RDS — mà không viết lại lõi ứng dụng. Lift-and-shift là Rehost; viết lại hoàn toàn là Refactor; bỏ đi là Retire.",
+    "explanationEn": "Replatform ('lift-tinker-and-shift') means light optimization during migration — e.g. replacing a self-managed database with RDS — without rewriting the core application. Lift-and-shift is Rehost; a full rewrite is Refactor; decommissioning is Retire."
+  },
+  {
+    "id": "q13",
+    "question": "Một startup chạy một website nội bộ ít quan trọng, có thể chấp nhận vài giờ downtime và mất tối đa vài giờ dữ liệu để tiết kiệm tối đa chi phí. Chiến lược DR nào phù hợp nhất?",
+    "questionEn": "A startup runs a low-criticality internal website that can tolerate a few hours of downtime and up to a few hours of data loss to minimize cost. Which DR strategy fits best?",
+    "options": [
+      "Multi-Site Active-Active",
+      "Warm Standby",
+      "Pilot Light",
+      "Backup & Restore"
+    ],
+    "optionsEn": [
+      "Multi-Site Active-Active",
+      "Warm Standby",
+      "Pilot Light",
+      "Backup & Restore"
+    ],
+    "answer": 3,
+    "explanation": "Khi RTO/RPO cao (vài giờ) là chấp nhận được và mục tiêu là chi phí thấp nhất, Backup & Restore là lựa chọn đúng: không giữ gì chạy sẵn, chỉ khôi phục từ AMI/snapshot khi cần. Các phương án còn lại đắt hơn mà không cần thiết.",
+    "explanationEn": "When a high RTO/RPO (a few hours) is acceptable and the goal is lowest cost, Backup & Restore is the right choice: nothing kept running, just restore from AMIs/snapshots when needed. The other options are more expensive than necessary."
+  },
+  {
+    "id": "q14",
+    "question": "Tổ chức muốn quản lý và tự động hóa backup tập trung theo chính sách cho nhiều dịch vụ (EBS, RDS, DynamoDB, EFS) và sao chép cross-Region phục vụ DR. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "An organization wants to centrally manage and automate policy-based backups across multiple services (EBS, RDS, DynamoDB, EFS) and copy them cross-Region for DR. Which service fits best?",
+    "options": [
+      "AWS Backup",
+      "AWS DataSync",
+      "AWS Application Migration Service (MGN)",
+      "AWS Storage Gateway"
+    ],
+    "optionsEn": [
+      "AWS Backup",
+      "AWS DataSync",
+      "AWS Application Migration Service (MGN)",
+      "AWS Storage Gateway"
+    ],
+    "answer": 0,
+    "explanation": "AWS Backup cung cấp quản lý backup tập trung theo chính sách cho nhiều dịch vụ và hỗ trợ sao chép cross-Region/cross-account phục vụ DR. DataSync là chuyển dữ liệu, MGN là di trú server, Storage Gateway là lưu trữ hybrid.",
+    "explanationEn": "AWS Backup provides centralized, policy-based backup management across many services and supports cross-Region/cross-account copies for DR. DataSync is data transfer, MGN is server migration, and Storage Gateway is hybrid storage."
+  }
+]

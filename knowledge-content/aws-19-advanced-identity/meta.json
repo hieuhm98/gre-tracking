@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "AWS Advanced Identity – Organizations, SCP, STS, IAM Identity Center",
+  "titleEn": "AWS Advanced Identity – Organizations, SCP, STS, IAM Identity Center",
+  "description": "Quản trị nhận dạng và multi-account trên AWS cho SAA-C03: Organizations, SCP, Control Tower, STS AssumeRole, IAM Identity Center, Cognito, Directory Service và RAM.",
+  "descriptionEn": "AWS advanced identity and multi-account governance for SAA-C03: Organizations, SCP, Control Tower, STS AssumeRole, IAM Identity Center, Cognito, Directory Service, and RAM."
+}

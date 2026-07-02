@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "ELB & Auto Scaling – Tính sẵn sàng cao & Khả năng mở rộng",
+  "titleEn": "ELB & Auto Scaling – High Availability & Scalability",
+  "description": "Các loại Elastic Load Balancer (ALB, NLB, GWLB, CLB) và Auto Scaling Group để đạt tính sẵn sàng cao và khả năng mở rộng cho kỳ thi SAA-C03.",
+  "descriptionEn": "Elastic Load Balancer types (ALB, NLB, GWLB, CLB) and Auto Scaling Groups for high availability and scalability on the SAA-C03 exam."
+}

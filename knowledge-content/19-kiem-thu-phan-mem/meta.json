@@ -1,1 +1,7 @@
-{"title": "Kiểm thử phần mềm", "description": "Unit test, integration test, UAT, bug lifecycle, test case và vai trò của QA trong dự án."}
+{
+  "group": "ba-po-pm",
+  "title": "Kiểm thử phần mềm",
+  "titleEn": "Software Testing",
+  "description": "Unit test, integration test, UAT, bug lifecycle, test case và vai trò của QA trong dự án.",
+  "descriptionEn": "Unit tests, integration tests, UAT, the bug lifecycle, test cases, and the role of QA in a project."
+}

@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "CSS Cơ Bản",
-  "description": "Định dạng giao diện web — selector, box model, flexbox, responsive design và cascade."
+  "titleEn": "CSS Basics",
+  "description": "Định dạng giao diện web — selector, box model, flexbox, responsive design và cascade.",
+  "descriptionEn": "Styling the web interface — selectors, the box model, flexbox, responsive design, and the cascade."
 }

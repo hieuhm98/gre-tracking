@@ -1,14 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 import { useAuth } from "@/context/auth";
-import { cn } from "@/lib/utils";
+import { useLang } from "@/context/lang";
+import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 
 interface StaticTopic {
   slug: string;
+  group: string;
   title: string;
+  titleEn?: string;
   description: string;
+  descriptionEn?: string;
 }
 
 interface UserArticle {
@@ -20,76 +25,144 @@ interface UserArticle {
 }
 
 export default function KnowledgePage() {
-  const { supabase } = useAuth();
+  const { supabase, devMode } = useAuth();
+  const { t, pick, lang } = useLang();
   const [staticTopics, setStaticTopics] = useState<StaticTopic[]>([]);
   const [userArticles, setUserArticles] = useState<UserArticle[]>([]);
   const [loading, setLoading] = useState(true);
+  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
+  const didInitAccordion = useRef(false);
+
+  const toggleGroup = (id: string) =>
+    setOpenGroups((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
 
   useEffect(() => {
-    Promise.all([
-      fetch("/api/knowledge").then((r) => r.json()),
-      supabase.from("knowledge_articles").select("id, slug, title, author_id, created_at").order("created_at", { ascending: false }),
-    ]).then(([topics, { data }]) => {
+    async function load() {
+      const topics: StaticTopic[] = await fetch("/api/knowledge").then((r) => r.json());
       setStaticTopics(topics ?? []);
-      setUserArticles(data ?? []);
-      setLoading(false);
-    });
-  }, []);
 
-  if (loading) return <div className="text-zinc-500 text-sm p-8">Loading...</div>;
+      if (!devMode) {
+        const { data } = await supabase
+          .from("knowledge_articles")
+          .select("id, slug, title, author_id, created_at")
+          .order("created_at", { ascending: false });
+        setUserArticles(data ?? []);
+      }
+      setLoading(false);
+    }
+    load();
+  }, [devMode]);
+
+  // Group topics by their group id, preserving GROUPS order.
+  const grouped = GROUPS.map((g) => ({
+    group: g,
+    topics: staticTopics.filter((tp) => (tp.group ?? DEFAULT_GROUP) === g.id),
+  })).filter((section) => section.topics.length > 0);
+
+  // Open the first group once, so the page isn't empty but nothing is scrolled.
+  useEffect(() => {
+    if (!didInitAccordion.current && grouped.length > 0) {
+      didInitAccordion.current = true;
+      setOpenGroups(new Set([grouped[0].group.id]));
+    }
+  }, [grouped]);
+
+  if (loading) return <div className="text-zinc-500 text-sm p-8">{t("common.loading")}</div>;
 
   return (
-    <div className="max-w-4xl space-y-8">
+    <div className="max-w-4xl space-y-10">
       <div>
-        <h1 className="text-2xl font-bold">IT Knowledge</h1>
-        <p className="text-zinc-400 text-sm mt-1">
-          Essential IT knowledge for BA, PM, PO — from computers to Agile.
-        </p>
+        <h1 className="text-2xl font-bold">{t("knowledge.title")}</h1>
+        <p className="text-zinc-400 text-sm mt-1">{t("knowledge.subtitle")}</p>
       </div>
 
-      {/* Official topics */}
-      <div>
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
-            Official ({staticTopics.length})
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {staticTopics.map((topic, i) => (
-            <Link
-              key={topic.slug}
-              href={`/knowledge/${topic.slug}`}
-              className="card hover:border-zinc-600 hover:bg-zinc-800/80 transition-colors group"
-            >
-              <div className="flex items-start gap-3">
-                <span className="text-xs font-mono text-zinc-600 mt-0.5 shrink-0 w-6">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <div className="font-medium text-zinc-100 group-hover:text-white text-sm">{topic.title}</div>
-                  <div className="text-xs text-zinc-500 mt-1 leading-relaxed">{topic.description}</div>
+      <div className="space-y-3">
+        {grouped.map(({ group, topics }) => {
+          const accent = GROUP_ACCENT[group.accent];
+          const isOpen = openGroups.has(group.id);
+          return (
+            <section key={group.id} className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+              <button
+                type="button"
+                onClick={() => toggleGroup(group.id)}
+                aria-expanded={isOpen}
+                className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-zinc-800/60 transition-colors"
+              >
+                <span className="text-xl shrink-0">{group.icon}</span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-base font-bold text-zinc-100 truncate">
+                      {pick(group.label, group.labelEn)}
+                    </h2>
+                    <span className={`text-xs px-2 py-0.5 rounded border shrink-0 ${accent.badge}`}>
+                      {topics.length} {t("knowledge.topics")}
+                    </span>
+                  </div>
+                  {!isOpen && (
+                    <p className="text-xs text-zinc-500 mt-0.5 truncate">
+                      {pick(group.description, group.descriptionEn)}
+                    </p>
+                  )}
                 </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+                <ChevronDown
+                  className={`w-5 h-5 text-zinc-500 shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {isOpen && (
+                <div className="px-4 pb-4 pt-1 border-t border-zinc-800">
+                  <p className="text-xs text-zinc-500 mb-4 mt-3">
+                    {pick(group.description, group.descriptionEn)}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {topics.map((topic, i) => (
+                      <Link
+                        key={topic.slug}
+                        href={`/knowledge/${topic.slug}`}
+                        className="card hover:border-zinc-600 hover:bg-zinc-800/80 transition-colors group"
+                      >
+                        <div className="flex items-start gap-3">
+                          <span className="text-xs font-mono text-zinc-600 mt-0.5 shrink-0 w-6">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <div>
+                            <div className="font-medium text-zinc-100 group-hover:text-white text-sm">
+                              {pick(topic.title, topic.titleEn)}
+                            </div>
+                            <div className="text-xs text-zinc-500 mt-1 leading-relaxed">
+                              {pick(topic.description, topic.descriptionEn)}
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+          );
+        })}
       </div>
 
       {/* Community articles */}
       <div>
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
-            Community ({userArticles.length})
+            {t("knowledge.community")} ({userArticles.length})
           </h2>
           <Link href="/my-articles/new" className="btn-primary text-xs px-3 py-1.5">
-            + Write Article
+            {t("knowledge.writeArticle")}
           </Link>
         </div>
         {userArticles.length === 0 ? (
           <div className="card text-center py-10">
-            <p className="text-zinc-500 text-sm">No community articles yet.</p>
+            <p className="text-zinc-500 text-sm">{t("knowledge.noCommunity")}</p>
             <Link href="/my-articles/new" className="inline-block mt-3 text-blue-400 text-sm hover:text-blue-300">
-              Write the first article →
+              {t("knowledge.writeFirst")}
             </Link>
           </div>
         ) : (
@@ -103,11 +176,11 @@ export default function KnowledgePage() {
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-zinc-100 group-hover:text-white text-sm">{article.title}</span>
                   <span className="text-xs px-2 py-0.5 bg-violet-900/50 text-violet-300 rounded border border-violet-800 shrink-0 ml-2">
-                    Community
+                    {t("knowledge.community")}
                   </span>
                 </div>
                 <div className="text-xs text-zinc-600 mt-1">
-                  {new Date(article.created_at).toLocaleDateString("en-US")}
+                  {new Date(article.created_at).toLocaleDateString(lang === "vi" ? "vi-VN" : "en-US")}
                 </div>
               </Link>
             ))}

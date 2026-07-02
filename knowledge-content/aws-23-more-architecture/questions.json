@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q1",
+    "question": "Đội bảo mật cần chặn hoàn toàn một địa chỉ IP độc hại cụ thể cho toàn bộ một subnet. Công cụ nào phù hợp nhất?",
+    "questionEn": "A security team needs to completely block a specific malicious IP address for an entire subnet. Which tool is most appropriate?",
+    "options": [
+      "Security Group với một rule deny cho IP đó",
+      "Network ACL (NACL) với một rule deny cho IP đó",
+      "IAM policy chặn IP",
+      "Route table loại bỏ IP đó"
+    ],
+    "optionsEn": [
+      "A Security Group with a deny rule for that IP",
+      "A Network ACL (NACL) with a deny rule for that IP",
+      "An IAM policy that blocks the IP",
+      "A route table that removes that IP"
+    ],
+    "answer": 1,
+    "explanation": "Security Group chỉ có rule ALLOW, không thể deny. NACL hoạt động ở tầng subnet và có cả rule allow lẫn DENY, nên đây là công cụ duy nhất trong danh sách chặn được một IP cụ thể.",
+    "explanationEn": "Security Groups only have ALLOW rules and cannot deny. NACLs operate at the subnet level and support both allow and DENY rules, making them the only tool here that can block a specific IP."
+  },
+  {
+    "id": "q2",
+    "question": "Kỹ sư cần mở một shell tương tác vào các EC2 instance trong private subnet mà không mở port SSH, không dùng bastion host và không quản lý key pair. Giải pháp nào?",
+    "questionEn": "An engineer needs an interactive shell into EC2 instances in a private subnet without opening SSH ports, without a bastion host, and without managing key pairs. Which solution?",
+    "options": [
+      "AWS Systems Manager Session Manager",
+      "Mở port 22 trên Security Group cho toàn Internet",
+      "Tạo một EC2 bastion host public",
+      "AWS Direct Connect"
+    ],
+    "optionsEn": [
+      "AWS Systems Manager Session Manager",
+      "Open port 22 on the Security Group to the whole Internet",
+      "Create a public EC2 bastion host",
+      "AWS Direct Connect"
+    ],
+    "answer": 0,
+    "explanation": "SSM Session Manager cho phép mở shell vào instance qua SSM agent mà không cần SSH, không cần bastion, không cần key pair, và mọi phiên đều được log lại — an toàn hơn nhiều.",
+    "explanationEn": "SSM Session Manager opens a shell into an instance via the SSM agent without SSH, without a bastion, and without key pairs, and every session is logged — much more secure."
+  },
+  {
+    "id": "q3",
+    "question": "Một workload HPC cần giao tiếp node-to-node với độ trễ thấp nhất và băng thông cao nhất cho các job MPI. Kết hợp nào phù hợp nhất?",
+    "questionEn": "An HPC workload needs the lowest-latency, highest-bandwidth node-to-node communication for MPI jobs. Which combination fits best?",
+    "options": [
+      "Spread Placement Group + NAT Gateway",
+      "Cluster Placement Group + Elastic Fabric Adapter (EFA)",
+      "Partition Placement Group + Internet Gateway",
+      "Auto Scaling Group trải trên nhiều Region"
+    ],
+    "optionsEn": [
+      "Spread Placement Group + NAT Gateway",
+      "Cluster Placement Group + Elastic Fabric Adapter (EFA)",
+      "Partition Placement Group + Internet Gateway",
+      "Auto Scaling Group spread across multiple Regions"
+    ],
+    "answer": 1,
+    "explanation": "Cluster Placement Group đặt các instance gần nhau trong cùng AZ để có latency thấp/băng thông cao, còn EFA là network adapter tối ưu cho giao tiếp MPI giữa các node HPC. Đây là kết hợp chuẩn cho HPC.",
+    "explanationEn": "A Cluster Placement Group packs instances close together in one AZ for low latency/high bandwidth, and EFA is a network adapter optimized for MPI communication between HPC nodes. This is the standard HPC combination."
+  },
+  {
+    "id": "q4",
+    "question": "Nhóm cần một file system song song hiệu năng cao cho khối lượng dữ liệu lớn trong workload HPC/ML. Dịch vụ nào?",
+    "questionEn": "A team needs a high-performance parallel file system for large data volumes in an HPC/ML workload. Which service?",
+    "options": [
+      "Amazon EFS Standard",
+      "Amazon S3 Glacier",
+      "Amazon FSx for Lustre",
+      "Amazon EBS gp2"
+    ],
+    "optionsEn": [
+      "Amazon EFS Standard",
+      "Amazon S3 Glacier",
+      "Amazon FSx for Lustre",
+      "Amazon EBS gp2"
+    ],
+    "answer": 2,
+    "explanation": "FSx for Lustre là file system song song hiệu năng cao, được thiết kế cho HPC, machine learning và các workload cần throughput lớn với dữ liệu khổng lồ.",
+    "explanationEn": "FSx for Lustre is a high-performance parallel file system designed for HPC, machine learning, and workloads needing high throughput over massive datasets."
+  },
+  {
+    "id": "q5",
+    "question": "Một sự kiện 'đơn hàng mới' cần được xử lý song song bởi ba hệ thống độc lập (kho, thanh toán, email) mà producer không cần biết về consumer. Mẫu kiến trúc nào?",
+    "questionEn": "A 'new order' event must be processed in parallel by three independent systems (inventory, billing, email) without the producer knowing about the consumers. Which pattern?",
+    "options": [
+      "SNS topic fan-out tới nhiều SQS queue, mỗi queue một consumer",
+      "Ghi trực tiếp vào một EC2 instance duy nhất",
+      "Đồng bộ gọi cả ba hệ thống bằng REST trong cùng một request",
+      "Lưu tất cả vào một file trên EBS"
+    ],
+    "optionsEn": [
+      "SNS topic fan-out to multiple SQS queues, one consumer per queue",
+      "Write directly to a single EC2 instance",
+      "Synchronously call all three systems via REST in the same request",
+      "Store everything in one file on EBS"
+    ],
+    "answer": 0,
+    "explanation": "Mẫu fan-out SNS → nhiều SQS cho phép một sự kiện được gửi tới nhiều queue, mỗi consumer xử lý độc lập và bất đồng bộ. Producer chỉ publish vào SNS mà không biết consumer nào tồn tại — loose coupling.",
+    "explanationEn": "The SNS → multiple SQS fan-out pattern delivers one event to many queues, with each consumer processing independently and asynchronously. The producer only publishes to SNS without knowing which consumers exist — loose coupling."
+  },
+  {
+    "id": "q6",
+    "question": "Ứng dụng gặp tăng đột biến lượng request khiến backend quá tải và mất một số request. Cách tốt nhất để đệm và tránh mất dữ liệu?",
+    "questionEn": "An application faces sudden request spikes that overload the backend and drop some requests. What is the best way to buffer and avoid data loss?",
+    "options": [
+      "Đặt một SQS queue trước backend làm buffer",
+      "Tăng gấp đôi kích thước instance vĩnh viễn",
+      "Bỏ qua các request thừa",
+      "Chuyển toàn bộ sang xử lý đồng bộ"
+    ],
+    "optionsEn": [
+      "Put an SQS queue in front of the backend as a buffer",
+      "Permanently double the instance size",
+      "Drop the excess requests",
+      "Switch everything to synchronous processing"
+    ],
+    "answer": 0,
+    "explanation": "SQS làm buffer: khi có spike, request được đưa vào queue thay vì làm sập backend; consumer/Auto Scaling xử lý theo tốc độ của mình. Message không bị mất khi backend bận — đây là decoupling kinh điển.",
+    "explanationEn": "SQS acts as a buffer: during a spike, requests go into the queue instead of crashing the backend; consumers/Auto Scaling process at their own pace. Messages are not lost while the backend is busy — classic decoupling."
+  },
+  {
+    "id": "q7",
+    "question": "Ứng dụng đọc DynamoDB rất nhiều và cần giảm độ trễ đọc xuống mức micro-giây bằng cache in-memory. Dịch vụ nào phù hợp nhất?",
+    "questionEn": "An application reads DynamoDB heavily and needs to reduce read latency to microseconds using an in-memory cache. Which service fits best?",
+    "options": [
+      "Amazon CloudFront",
+      "DynamoDB Accelerator (DAX)",
+      "Amazon ElastiCache Memcached đặt trước RDS",
+      "API Gateway cache"
+    ],
+    "optionsEn": [
+      "Amazon CloudFront",
+      "DynamoDB Accelerator (DAX)",
+      "Amazon ElastiCache Memcached in front of RDS",
+      "API Gateway cache"
+    ],
+    "answer": 1,
+    "explanation": "DAX là cache in-memory được thiết kế riêng cho DynamoDB, giảm độ trễ đọc từ mili-giây xuống micro-giây mà không cần thay đổi code ứng dụng nhiều.",
+    "explanationEn": "DAX is an in-memory cache purpose-built for DynamoDB, cutting read latency from milliseconds to microseconds with minimal application code changes."
+  },
+  {
+    "id": "q8",
+    "question": "Công ty muốn giảm tải cho database quan hệ bằng cách lưu session và kết quả query hay dùng vào một cache in-memory. Dịch vụ nào?",
+    "questionEn": "A company wants to offload its relational database by storing sessions and frequently used query results in an in-memory cache. Which service?",
+    "options": [
+      "Amazon ElastiCache (Redis/Memcached)",
+      "Amazon S3",
+      "AWS Glue",
+      "Amazon Athena"
+    ],
+    "optionsEn": [
+      "Amazon ElastiCache (Redis/Memcached)",
+      "Amazon S3",
+      "AWS Glue",
+      "Amazon Athena"
+    ],
+    "answer": 0,
+    "explanation": "ElastiCache (Redis hoặc Memcached) là cache in-memory dùng để lưu session và cache kết quả query database, giảm tải đáng kể cho database quan hệ như RDS.",
+    "explanationEn": "ElastiCache (Redis or Memcached) is an in-memory cache used to store sessions and cache database query results, significantly offloading relational databases like RDS."
+  },
+  {
+    "id": "q9",
+    "question": "Nhóm muốn định nghĩa toàn bộ hạ tầng dưới dạng template khai báo (declarative), quản lý theo stack, phát hiện drift và triển khai qua nhiều account/region. Dịch vụ nào?",
+    "questionEn": "A team wants to define all infrastructure as declarative templates, manage them as stacks, detect drift, and deploy across multiple accounts/regions. Which service?",
+    "options": [
+      "AWS Elastic Beanstalk",
+      "AWS CloudFormation (với StackSets)",
+      "AWS CodeDeploy",
+      "AWS OpsWorks"
+    ],
+    "optionsEn": [
+      "AWS Elastic Beanstalk",
+      "AWS CloudFormation (with StackSets)",
+      "AWS CodeDeploy",
+      "AWS OpsWorks"
+    ],
+    "answer": 1,
+    "explanation": "CloudFormation là dịch vụ IaC dùng template khai báo, quản lý tài nguyên theo stack, hỗ trợ drift detection, change sets và StackSets để triển khai qua nhiều account/region.",
+    "explanationEn": "CloudFormation is the IaC service using declarative templates, managing resources as stacks, with drift detection, change sets, and StackSets for multi-account/region deployment."
+  },
+  {
+    "id": "q10",
+    "question": "Một developer muốn deploy nhanh một ứng dụng web mà không phải tự cấu hình EC2, load balancer hay Auto Scaling — muốn AWS quản lý platform bên dưới. Dịch vụ nào?",
+    "questionEn": "A developer wants to quickly deploy a web app without manually configuring EC2, load balancers, or Auto Scaling — letting AWS manage the underlying platform. Which service?",
+    "options": [
+      "AWS CloudFormation",
+      "AWS Elastic Beanstalk",
+      "Amazon EC2 thuần",
+      "AWS Batch"
+    ],
+    "optionsEn": [
+      "AWS CloudFormation",
+      "AWS Elastic Beanstalk",
+      "Plain Amazon EC2",
+      "AWS Batch"
+    ],
+    "answer": 1,
+    "explanation": "Elastic Beanstalk là PaaS: chỉ cần đẩy code lên, AWS tự lo EC2, ELB, Auto Scaling và platform bên dưới. Nó hướng đến developer muốn deploy nhanh mà không quản lý hạ tầng thủ công.",
+    "explanationEn": "Elastic Beanstalk is a PaaS: you just push your code and AWS handles EC2, ELB, Auto Scaling, and the underlying platform. It targets developers who want fast deployment without managing infrastructure manually."
+  },
+  {
+    "id": "q11",
+    "question": "Đội bảo mật lo ngại lỗ hổng SSRF có thể bị dùng để đánh cắp credential IAM tạm thời từ metadata của EC2. Nên làm gì?",
+    "questionEn": "A security team worries an SSRF vulnerability could be used to steal temporary IAM credentials from EC2 metadata. What should they do?",
+    "options": [
+      "Bắt buộc dùng IMDSv2 (yêu cầu session token)",
+      "Chuyển sang IMDSv1 cho đơn giản",
+      "Chặn địa chỉ 169.254.169.254 bằng IAM policy",
+      "Tắt hoàn toàn IAM role trên mọi instance"
+    ],
+    "optionsEn": [
+      "Enforce IMDSv2 (requires a session token)",
+      "Switch to IMDSv1 for simplicity",
+      "Block address 169.254.169.254 with an IAM policy",
+      "Completely disable IAM roles on all instances"
+    ],
+    "answer": 0,
+    "explanation": "IMDSv2 yêu cầu session token theo phiên nên chống được nhiều dạng tấn công SSRF nhắm vào metadata endpoint 169.254.169.254. AWS khuyến nghị bắt buộc dùng IMDSv2 thay cho IMDSv1.",
+    "explanationEn": "IMDSv2 requires a session-based token, defending against many SSRF attacks targeting the metadata endpoint 169.254.169.254. AWS recommends enforcing IMDSv2 instead of IMDSv1."
+  },
+  {
+    "id": "q12",
+    "question": "Công ty cần chặn IP theo tốc độ request và ngăn các tấn công web layer-7 (SQL injection, XSS) trên một Application Load Balancer. Dịch vụ nào?",
+    "questionEn": "A company needs to block IPs by request rate and stop layer-7 web attacks (SQL injection, XSS) on an Application Load Balancer. Which service?",
+    "options": [
+      "AWS WAF",
+      "Network ACL",
+      "AWS Shield Standard",
+      "Security Group"
+    ],
+    "optionsEn": [
+      "AWS WAF",
+      "Network ACL",
+      "AWS Shield Standard",
+      "Security Group"
+    ],
+    "answer": 0,
+    "explanation": "AWS WAF hoạt động ở layer-7 (HTTP), cho phép rule theo IP, rate-limiting và các managed rule chống SQLi/XSS, gắn được vào ALB, CloudFront và API Gateway. NACL/Security Group không hiểu nội dung HTTP.",
+    "explanationEn": "AWS WAF operates at layer-7 (HTTP), supporting IP rules, rate-limiting, and managed rules against SQLi/XSS, and attaches to ALB, CloudFront, and API Gateway. NACLs/Security Groups do not understand HTTP content."
+  },
+  {
+    "id": "q13",
+    "question": "Nhóm muốn định nghĩa hạ tầng bằng TypeScript/Python thay vì viết YAML/JSON thủ công, rồi để công cụ tổng hợp ra template CloudFormation. Dịch vụ nào?",
+    "questionEn": "A team wants to define infrastructure in TypeScript/Python instead of writing YAML/JSON by hand, then have a tool synthesize it into a CloudFormation template. Which service?",
+    "options": [
+      "AWS CDK",
+      "AWS Amplify",
+      "AWS AppSync",
+      "Amazon SWF"
+    ],
+    "optionsEn": [
+      "AWS CDK",
+      "AWS Amplify",
+      "AWS AppSync",
+      "Amazon SWF"
+    ],
+    "answer": 0,
+    "explanation": "AWS CDK (Cloud Development Kit) cho phép định nghĩa hạ tầng bằng ngôn ngữ lập trình (TypeScript, Python, Java...) và synthesize ra template CloudFormation để triển khai.",
+    "explanationEn": "AWS CDK (Cloud Development Kit) lets you define infrastructure in a programming language (TypeScript, Python, Java...) and synthesizes it into a CloudFormation template for deployment."
+  },
+  {
+    "id": "q14",
+    "question": "Nhóm dev muốn dựng pipeline CI/CD tự động: lưu code, build và test, rồi deploy lên ECS. Bộ dịch vụ nào ánh xạ đúng nhất?",
+    "questionEn": "A dev team wants an automated CI/CD pipeline: store code, build and test, then deploy to ECS. Which set of services maps best?",
+    "options": [
+      "CodeCommit (code) → CodeBuild (build/test) → CodeDeploy (deploy) → CodePipeline (điều phối)",
+      "S3 (code) → Lambda (build) → EC2 (deploy) → SNS (điều phối)",
+      "CloudFormation (code) → SES (build) → SQS (deploy) → EventBridge (điều phối)",
+      "CodeArtifact (code) → CodeGuru (build) → Beanstalk (deploy) → SWF (điều phối)"
+    ],
+    "optionsEn": [
+      "CodeCommit (code) → CodeBuild (build/test) → CodeDeploy (deploy) → CodePipeline (orchestrate)",
+      "S3 (code) → Lambda (build) → EC2 (deploy) → SNS (orchestrate)",
+      "CloudFormation (code) → SES (build) → SQS (deploy) → EventBridge (orchestrate)",
+      "CodeArtifact (code) → CodeGuru (build) → Beanstalk (deploy) → SWF (orchestrate)"
+    ],
+    "answer": 0,
+    "explanation": "Bộ Code* chuẩn: CodeCommit chứa Git repo, CodeBuild build/test, CodeDeploy deploy lên EC2/Lambda/ECS, và CodePipeline điều phối toàn bộ pipeline CI/CD tự động.",
+    "explanationEn": "The standard Code* set: CodeCommit holds the Git repo, CodeBuild builds/tests, CodeDeploy deploys to EC2/Lambda/ECS, and CodePipeline orchestrates the whole automated CI/CD pipeline."
+  },
+  {
+    "id": "q15",
+    "question": "Công ty cần một managed GraphQL API để ứng dụng mobile truy vấn dữ liệu từ nhiều nguồn (DynamoDB, Lambda) với real-time. Dịch vụ nào?",
+    "questionEn": "A company needs a managed GraphQL API for a mobile app to query data from multiple sources (DynamoDB, Lambda) with real-time support. Which service?",
+    "options": [
+      "AWS AppSync",
+      "Amazon API Gateway REST API",
+      "AWS Batch",
+      "Amazon Pinpoint"
+    ],
+    "optionsEn": [
+      "AWS AppSync",
+      "Amazon API Gateway REST API",
+      "AWS Batch",
+      "Amazon Pinpoint"
+    ],
+    "answer": 0,
+    "explanation": "AWS AppSync là dịch vụ GraphQL được quản lý, hợp nhất dữ liệu từ nhiều nguồn (DynamoDB, Lambda, HTTP) và hỗ trợ real-time/subscriptions — lý tưởng cho ứng dụng mobile/web hiện đại.",
+    "explanationEn": "AWS AppSync is a managed GraphQL service that unifies data from multiple sources (DynamoDB, Lambda, HTTP) and supports real-time/subscriptions — ideal for modern mobile/web apps."
+  }
+]

@@ -1,4 +1,7 @@
 {
+  "group": "ba-po-pm",
   "title": "Tư Duy IT — Từ Yêu Cầu Đến Hệ Thống",
-  "description": "Cách tư duy như một người làm tech: nghe requirement rồi tưởng tượng ra UI, data model, luồng xử lý và hệ thống — không cần biết code."
+  "titleEn": "IT Thinking — From Requirements to Systems",
+  "description": "Cách tư duy như một người làm tech: nghe requirement rồi tưởng tượng ra UI, data model, luồng xử lý và hệ thống — không cần biết code.",
+  "descriptionEn": "How to think like a tech person: hear a requirement and picture the UI, data model, processing flow, and overall system — without needing to know how to code."
 }

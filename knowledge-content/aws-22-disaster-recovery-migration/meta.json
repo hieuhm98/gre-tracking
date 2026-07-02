@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "Disaster Recovery & Migration trên AWS",
+  "titleEn": "Disaster Recovery & Migration on AWS",
+  "description": "Chiến lược khôi phục sau thảm họa (RPO/RTO, Backup&Restore, Pilot Light, Warm Standby, Multi-Site) và các công cụ di trú AWS DMS, MGN, DataSync, Snow Family.",
+  "descriptionEn": "Disaster recovery strategies (RPO/RTO, Backup & Restore, Pilot Light, Warm Standby, Multi-Site) and AWS migration tools: DMS, MGN, DataSync, and Snow Family."
+}

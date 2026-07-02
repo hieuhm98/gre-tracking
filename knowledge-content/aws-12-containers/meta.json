@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "Containers trên AWS – ECS, Fargate, ECR & EKS",
+  "titleEn": "Containers on AWS – ECS, Fargate, ECR & EKS",
+  "description": "Tổng quan container trên AWS: ECS, launch type EC2 vs Fargate, IAM Task Role, ECR, EKS và App Runner cho kỳ thi SAA-C03.",
+  "descriptionEn": "Overview of containers on AWS: ECS, EC2 vs Fargate launch types, IAM Task Role, ECR, EKS and App Runner for the SAA-C03 exam."
+}

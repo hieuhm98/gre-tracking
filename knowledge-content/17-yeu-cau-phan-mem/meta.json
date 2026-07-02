@@ -1,1 +1,7 @@
-{"title": "Yêu cầu phần mềm", "description": "Functional vs non-functional requirements, user story, acceptance criteria và cách thu thập yêu cầu."}
+{
+  "group": "ba-po-pm",
+  "title": "Yêu cầu phần mềm",
+  "titleEn": "Software Requirements",
+  "description": "Functional vs non-functional requirements, user story, acceptance criteria và cách thu thập yêu cầu.",
+  "descriptionEn": "Functional vs non-functional requirements, user stories, acceptance criteria, and how to gather requirements."
+}

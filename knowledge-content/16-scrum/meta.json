@@ -1,1 +1,7 @@
-{"title": "Scrum Framework", "description": "Sprint, Product Backlog, các ceremonies, 3 roles (PO/SM/Dev team) và cách Scrum hoạt động."}
+{
+  "group": "ba-po-pm",
+  "title": "Scrum Framework",
+  "titleEn": "Scrum Framework",
+  "description": "Sprint, Product Backlog, các ceremonies, 3 roles (PO/SM/Dev team) và cách Scrum hoạt động.",
+  "descriptionEn": "Sprint, Product Backlog, the ceremonies, the 3 roles (PO/SM/Dev team), and how Scrum works."
+}

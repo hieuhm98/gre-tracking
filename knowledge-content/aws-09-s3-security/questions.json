@@ -1,0 +1,262 @@
+[
+  {
+    "id": "q1",
+    "question": "Một công ty cần mã hóa object trong S3 và bắt buộc phải audit được ai đã giải mã dữ liệu, đồng thời tự động xoay khóa. Loại mã hóa nào phù hợp NHẤT?",
+    "questionEn": "A company must encrypt S3 objects and be able to audit who decrypted the data, with automatic key rotation. Which encryption type is the BEST fit?",
+    "options": [
+      "SSE-S3 (AES-256 do AWS quản lý)",
+      "SSE-KMS với khóa KMS",
+      "SSE-C với khóa của khách hàng",
+      "Client-side encryption"
+    ],
+    "optionsEn": [
+      "SSE-S3 (AWS-managed AES-256)",
+      "SSE-KMS with a KMS key",
+      "SSE-C with a customer-provided key",
+      "Client-side encryption"
+    ],
+    "answer": 1,
+    "explanation": "Chỉ SSE-KMS cho phép audit các thao tác giải mã qua CloudTrail và hỗ trợ xoay khóa tự động/thủ công thông qua AWS KMS. SSE-S3 và SSE-C không cung cấp audit trail chi tiết về việc giải mã.",
+    "explanationEn": "Only SSE-KMS lets you audit decryption operations via CloudTrail and supports automatic/manual key rotation through AWS KMS. SSE-S3 and SSE-C don't provide a detailed decryption audit trail."
+  },
+  {
+    "id": "q2",
+    "question": "Ứng dụng dùng SSE-KMS trên một bucket có hàng triệu object và đang bị throttling cùng chi phí KMS cao do quá nhiều lời gọi API. Giải pháp MOST cost-effective là gì?",
+    "questionEn": "An application uses SSE-KMS on a bucket with millions of objects and is hitting throttling and high KMS costs from too many API calls. What is the MOST cost-effective solution?",
+    "options": [
+      "Chuyển toàn bộ sang SSE-C",
+      "Bật S3 Bucket Keys cho bucket",
+      "Tắt mã hóa để giảm chi phí",
+      "Tạo một khóa KMS riêng cho mỗi object"
+    ],
+    "optionsEn": [
+      "Migrate everything to SSE-C",
+      "Enable S3 Bucket Keys for the bucket",
+      "Disable encryption to cut cost",
+      "Create a separate KMS key per object"
+    ],
+    "answer": 1,
+    "explanation": "S3 Bucket Keys tạo một khóa cấp bucket, giảm mạnh số lời gọi tới KMS (tới ~99%), qua đó giảm throttling và chi phí mà vẫn giữ SSE-KMS. Đây là lựa chọn cost-effective nhất.",
+    "explanationEn": "S3 Bucket Keys create a bucket-level key that drastically reduces KMS API calls (up to ~99%), lowering throttling and cost while keeping SSE-KMS. This is the most cost-effective option."
+  },
+  {
+    "id": "q3",
+    "question": "Đội bảo mật muốn đảm bảo mọi request tới bucket S3 chỉ được phép qua HTTPS. Cách nào đúng?",
+    "questionEn": "A security team wants to ensure all requests to an S3 bucket are only allowed over HTTPS. Which approach is correct?",
+    "options": [
+      "Bật versioning trên bucket",
+      "Thêm bucket policy Deny khi aws:SecureTransport = false",
+      "Bật Block Public Access",
+      "Dùng SSE-C cho tất cả object"
+    ],
+    "optionsEn": [
+      "Enable versioning on the bucket",
+      "Add a bucket policy that denies when aws:SecureTransport = false",
+      "Enable Block Public Access",
+      "Use SSE-C for all objects"
+    ],
+    "answer": 1,
+    "explanation": "Điều kiện aws:SecureTransport trong bucket policy (Deny khi giá trị = false) ép mọi truy cập phải dùng TLS/HTTPS. Các lựa chọn khác không liên quan đến mã hóa in transit.",
+    "explanationEn": "The aws:SecureTransport condition in a bucket policy (Deny when the value is false) forces all access to use TLS/HTTPS. The other options don't relate to encryption in transit."
+  },
+  {
+    "id": "q4",
+    "question": "Một object mới được upload lên S3 mà không chỉ định header mã hóa nào. Điều gì xảy ra với object đó (theo mặc định từ 2023)?",
+    "questionEn": "A new object is uploaded to S3 without specifying any encryption header. What happens to that object (per the default since 2023)?",
+    "options": [
+      "Object được lưu dưới dạng plaintext không mã hóa",
+      "Upload bị từ chối vì thiếu mã hóa",
+      "Object tự động được mã hóa bằng SSE-S3",
+      "Object được mã hóa client-side"
+    ],
+    "optionsEn": [
+      "The object is stored as unencrypted plaintext",
+      "The upload is rejected for missing encryption",
+      "The object is automatically encrypted with SSE-S3",
+      "The object is client-side encrypted"
+    ],
+    "answer": 2,
+    "explanation": "Từ tháng 1/2023, S3 áp dụng default encryption: mọi object mới được tự động mã hóa bằng SSE-S3 ngay cả khi client không yêu cầu. Không còn tình huống object được lưu plaintext theo mặc định.",
+    "explanationEn": "Since January 2023, S3 applies default encryption: every new object is automatically encrypted with SSE-S3 even if the client doesn't request it. Objects are no longer stored as plaintext by default."
+  },
+  {
+    "id": "q5",
+    "question": "Account A cần cấp cho Account B quyền đọc object trong một bucket của mình. Cách chuẩn và ít overhead NHẤT là gì?",
+    "questionEn": "Account A needs to grant Account B read access to objects in one of its buckets. What is the standard and LEAST-overhead approach?",
+    "options": [
+      "Chia sẻ access key của Account A cho Account B",
+      "Dùng bucket policy resource-based với Principal là Account B",
+      "Bật public read cho bucket",
+      "Tạo IAM user cho Account B trong Account A"
+    ],
+    "optionsEn": [
+      "Share Account A's access keys with Account B",
+      "Use a resource-based bucket policy with Principal set to Account B",
+      "Enable public read on the bucket",
+      "Create an IAM user for Account B inside Account A"
+    ],
+    "answer": 1,
+    "explanation": "Bucket policy là chính sách resource-based, cho phép chỉ định Principal là account/role bên ngoài để cấp quyền cross-account một cách an toàn và gọn nhẹ. Chia sẻ credential hay public read đều là thực hành xấu.",
+    "explanationEn": "A bucket policy is resource-based and lets you set the Principal to an external account/role to grant cross-account access securely and cleanly. Sharing credentials or enabling public read are bad practices."
+  },
+  {
+    "id": "q6",
+    "question": "Một tổ chức tài chính phải đảm bảo bản ghi không thể bị xóa hay chỉnh sửa trong 7 năm, KỂ CẢ bởi tài khoản root. Cấu hình nào đáp ứng?",
+    "questionEn": "A financial organization must ensure records cannot be deleted or altered for 7 years, EVEN by the root account. Which configuration satisfies this?",
+    "options": [
+      "S3 Object Lock ở Governance mode",
+      "S3 Object Lock ở Compliance mode",
+      "Bật MFA Delete",
+      "Bucket policy Deny s3:DeleteObject"
+    ],
+    "optionsEn": [
+      "S3 Object Lock in Governance mode",
+      "S3 Object Lock in Compliance mode",
+      "Enable MFA Delete",
+      "A bucket policy that denies s3:DeleteObject"
+    ],
+    "answer": 1,
+    "explanation": "Compliance mode của Object Lock không thể bị vô hiệu hóa hay rút ngắn thời gian giữ bởi bất kỳ ai, kể cả root. Governance mode có thể bị bypass với quyền đặc biệt, còn bucket policy có thể bị chỉnh sửa.",
+    "explanationEn": "Object Lock Compliance mode cannot be disabled or its retention shortened by anyone, including root. Governance mode can be bypassed with special permission, and a bucket policy can be edited."
+  },
+  {
+    "id": "q7",
+    "question": "Bạn muốn cho phép một người dùng ẩn danh tải một object riêng tư trong 15 phút mà không làm bucket public. Cơ chế nào phù hợp?",
+    "questionEn": "You want to let an anonymous user download a private object for 15 minutes without making the bucket public. Which mechanism fits?",
+    "options": [
+      "Pre-signed URL",
+      "Bật Block Public Access",
+      "S3 Access Point",
+      "CORS configuration"
+    ],
+    "optionsEn": [
+      "Pre-signed URL",
+      "Enable Block Public Access",
+      "S3 Access Point",
+      "CORS configuration"
+    ],
+    "answer": 0,
+    "explanation": "Pre-signed URL cấp quyền truy cập tạm thời có thời hạn tới một object cụ thể mà không cần bucket public, và URL kế thừa quyền của người tạo. Đây là cơ chế đúng cho truy cập tạm thời.",
+    "explanationEn": "A pre-signed URL grants temporary, time-limited access to a specific object without making the bucket public, and it inherits the creator's permissions. It's the right mechanism for temporary access."
+  },
+  {
+    "id": "q8",
+    "question": "EC2 trong một private subnet cần truy cập S3 mà không đi qua internet và MOST cost-effective. Nên dùng gì?",
+    "questionEn": "An EC2 instance in a private subnet needs to access S3 without going over the internet and MOST cost-effectively. What should be used?",
+    "options": [
+      "NAT Gateway tới internet rồi ra S3",
+      "VPC Gateway Endpoint cho S3",
+      "VPC Interface Endpoint (PrivateLink) cho S3",
+      "Internet Gateway gắn vào subnet"
+    ],
+    "optionsEn": [
+      "A NAT Gateway to the internet then out to S3",
+      "A VPC Gateway Endpoint for S3",
+      "A VPC Interface Endpoint (PrivateLink) for S3",
+      "An Internet Gateway attached to the subnet"
+    ],
+    "answer": 1,
+    "explanation": "VPC Gateway Endpoint cho S3 cho phép truy cập riêng tư qua mạng AWS mà không cần internet và hoàn toàn miễn phí. Interface Endpoint có phí, còn NAT/Internet Gateway đi qua internet và tốn kém hơn.",
+    "explanationEn": "A VPC Gateway Endpoint for S3 allows private access over the AWS network without the internet and is completely free. An Interface Endpoint is charged, while NAT/Internet Gateway go over the internet and cost more."
+  },
+  {
+    "id": "q9",
+    "question": "Công ty muốn tự nắm giữ và quản lý khóa mã hóa, cung cấp khóa trong mỗi request, và không muốn AWS lưu khóa. Loại mã hóa nào?",
+    "questionEn": "A company wants to hold and manage the encryption keys itself, provide the key in each request, and not have AWS store the key. Which encryption type?",
+    "options": [
+      "SSE-S3",
+      "SSE-KMS",
+      "SSE-C",
+      "DSSE-KMS"
+    ],
+    "optionsEn": [
+      "SSE-S3",
+      "SSE-KMS",
+      "SSE-C",
+      "DSSE-KMS"
+    ],
+    "answer": 2,
+    "explanation": "SSE-C (Server-Side Encryption with Customer-provided keys) cho phép khách gửi khóa trong mỗi request qua HTTPS; S3 dùng để mã/giải mã rồi xóa khóa, không lưu. Các loại khác đều dùng khóa do AWS quản lý.",
+    "explanationEn": "SSE-C (Server-Side Encryption with Customer-provided keys) lets the customer send the key in each request over HTTPS; S3 uses it to encrypt/decrypt then discards it, storing nothing. The other types use AWS-managed keys."
+  },
+  {
+    "id": "q10",
+    "question": "Một quản trị viên vô tình tạo bucket policy cấp quyền public. Cấu hình mặc định nào giúp ngăn dữ liệu thực sự trở nên public?",
+    "questionEn": "An administrator accidentally creates a bucket policy granting public access. Which default configuration helps prevent the data from actually becoming public?",
+    "options": [
+      "Versioning",
+      "Block Public Access (bật mặc định)",
+      "SSE-KMS",
+      "MFA Delete"
+    ],
+    "optionsEn": [
+      "Versioning",
+      "Block Public Access (on by default)",
+      "SSE-KMS",
+      "MFA Delete"
+    ],
+    "answer": 1,
+    "explanation": "Block Public Access bật mặc định ở cấp account và bucket, ghi đè và chặn mọi truy cập public dù bucket policy hay ACL có cấp quyền public. Đây là lớp bảo vệ chống cấu hình sai.",
+    "explanationEn": "Block Public Access is on by default at account and bucket level and overrides/blocks any public access even if a bucket policy or ACL grants it. It's the safeguard against misconfiguration."
+  },
+  {
+    "id": "q11",
+    "question": "Một cơ quan chính phủ yêu cầu dữ liệu được mã hóa bằng HAI lớp mã hóa độc lập dùng KMS để đáp ứng tuân thủ nghiêm ngặt. Nên chọn gì?",
+    "questionEn": "A government agency requires data encrypted with TWO independent layers using KMS to meet strict compliance. What should be chosen?",
+    "options": [
+      "SSE-S3",
+      "SSE-C",
+      "DSSE-KMS",
+      "Client-side encryption đơn lớp"
+    ],
+    "optionsEn": [
+      "SSE-S3",
+      "SSE-C",
+      "DSSE-KMS",
+      "Single-layer client-side encryption"
+    ],
+    "answer": 2,
+    "explanation": "DSSE-KMS (Dual-layer Server-Side Encryption with KMS) áp dụng hai lớp mã hóa dùng KMS, được thiết kế cho các yêu cầu tuân thủ nghiêm ngặt như tiêu chuẩn chính phủ. Các loại khác chỉ mã hóa một lớp.",
+    "explanationEn": "DSSE-KMS (Dual-layer Server-Side Encryption with KMS) applies two encryption layers using KMS, designed for strict compliance needs like government standards. The other types encrypt with a single layer."
+  },
+  {
+    "id": "q12",
+    "question": "Bạn cần bật MFA Delete để ngăn xóa vĩnh viễn version của object. Điều kiện tiên quyết và ai được phép bật?",
+    "questionEn": "You need to enable MFA Delete to prevent permanent deletion of object versions. What is the prerequisite and who can enable it?",
+    "options": [
+      "Bất kỳ IAM user nào; không cần versioning",
+      "Chỉ tài khoản root; bucket phải bật versioning",
+      "Bất kỳ IAM role nào; cần Object Lock",
+      "Chỉ IAM admin; cần bật CloudTrail"
+    ],
+    "optionsEn": [
+      "Any IAM user; versioning not required",
+      "Only the root account; the bucket must have versioning enabled",
+      "Any IAM role; requires Object Lock",
+      "Only an IAM admin; requires CloudTrail enabled"
+    ],
+    "answer": 1,
+    "explanation": "MFA Delete chỉ có thể được bật bởi tài khoản root, và bucket bắt buộc phải bật versioning. Khi bật, việc xóa vĩnh viễn version hoặc tắt versioning cần mã MFA.",
+    "explanationEn": "MFA Delete can only be enabled by the root account, and the bucket must have versioning enabled. Once on, permanently deleting a version or disabling versioning requires an MFA code."
+  },
+  {
+    "id": "q13",
+    "question": "Một ứng dụng cần biến đổi (redact thông tin nhạy cảm) dữ liệu object ngay khi được lấy ra qua GET, mà không lưu nhiều bản sao. Dịch vụ nào phù hợp NHẤT?",
+    "questionEn": "An application needs to transform (redact sensitive info from) object data as it is retrieved via GET, without storing multiple copies. Which service is the BEST fit?",
+    "options": [
+      "S3 Object Lambda",
+      "S3 Access Point thường",
+      "CloudFront với OAC",
+      "S3 Server Access Logs"
+    ],
+    "optionsEn": [
+      "S3 Object Lambda",
+      "A standard S3 Access Point",
+      "CloudFront with OAC",
+      "S3 Server Access Logs"
+    ],
+    "answer": 0,
+    "explanation": "S3 Object Lambda cho phép chạy hàm Lambda để biến đổi dữ liệu ngay khi object được lấy ra (GET), ví dụ redact, resize, đổi định dạng, mà giữ nguyên bản gốc và không cần lưu nhiều bản sao.",
+    "explanationEn": "S3 Object Lambda lets a Lambda function transform data as an object is retrieved (GET) — e.g. redact, resize, reformat — while keeping the original intact and avoiding multiple stored copies."
+  }
+]

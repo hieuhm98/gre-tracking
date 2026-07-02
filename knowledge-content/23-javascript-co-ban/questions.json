@@ -2,176 +2,291 @@
   {
     "id": "js-01",
     "question": "Sự khác biệt chính giữa let, const và var trong JavaScript là gì?",
+    "questionEn": "What is the main difference between let, const, and var in JavaScript?",
     "options": [
       "Không có sự khác biệt, chỉ là cú pháp khác nhau",
       "let và const có block scope và được giới thiệu từ ES6; var có function scope và dễ gây lỗi",
       "var nhanh hơn let và const",
       "const không thể dùng trong vòng lặp"
     ],
+    "optionsEn": [
+      "There is no difference, just different syntax",
+      "let and const have block scope and were introduced in ES6; var has function scope and is more error-prone",
+      "var is faster than let and const",
+      "const cannot be used in loops"
+    ],
     "answer": 1,
-    "explanation": "var có function scope và bị hoisted theo cách dễ gây bug. let và const có block scope (an toàn hơn). const không cho gán lại biến, nhưng object/array vẫn có thể thay đổi nội dung. Code hiện đại dùng const là mặc định, let khi cần thay đổi."
+    "explanation": "var có function scope và bị hoisted theo cách dễ gây bug. let và const có block scope (an toàn hơn). const không cho gán lại biến, nhưng object/array vẫn có thể thay đổi nội dung. Code hiện đại dùng const là mặc định, let khi cần thay đổi.",
+    "explanationEn": "var has function scope and is hoisted in a bug-prone way. let and const have block scope (safer). const does not allow reassigning the variable, but the contents of objects/arrays can still change. Modern code uses const by default and let when reassignment is needed."
   },
   {
     "id": "js-02",
     "question": "Kết quả của 5 == '5' và 5 === '5' trong JavaScript là gì?",
+    "questionEn": "What are the results of 5 == '5' and 5 === '5' in JavaScript?",
     "options": [
       "Cả hai đều là true",
       "Cả hai đều là false",
       "5 == '5' là true, 5 === '5' là false",
       "5 == '5' là false, 5 === '5' là true"
     ],
+    "optionsEn": [
+      "Both are true",
+      "Both are false",
+      "5 == '5' is true, 5 === '5' is false",
+      "5 == '5' is false, 5 === '5' is true"
+    ],
     "answer": 2,
-    "explanation": "== (loose equality) tự động chuyển đổi kiểu trước khi so sánh — '5' được chuyển thành 5. === (strict equality) so sánh cả giá trị lẫn kiểu — number và string là khác nhau. Luôn dùng === trong thực tế."
+    "explanation": "== (loose equality) tự động chuyển đổi kiểu trước khi so sánh — '5' được chuyển thành 5. === (strict equality) so sánh cả giá trị lẫn kiểu — number và string là khác nhau. Luôn dùng === trong thực tế.",
+    "explanationEn": "== (loose equality) coerces types before comparing — '5' is converted to 5. === (strict equality) compares both value and type — a number and a string are different. Always use === in practice."
   },
   {
     "id": "js-03",
     "question": "Arrow function khác function thường ở điểm gì quan trọng nhất?",
+    "questionEn": "What is the most important way an arrow function differs from a regular function?",
     "options": [
       "Arrow function nhanh hơn",
       "Arrow function không có this riêng, dùng this từ scope bao quanh",
       "Arrow function không thể có tham số",
       "Arrow function chỉ dùng được trong class"
     ],
+    "optionsEn": [
+      "Arrow functions are faster",
+      "Arrow functions have no own this and use this from the surrounding scope",
+      "Arrow functions cannot have parameters",
+      "Arrow functions can only be used inside a class"
+    ],
     "answer": 1,
-    "explanation": "Arrow function không có this riêng — nó kế thừa this từ scope bao quanh (lexical this). Function thường tạo this riêng phụ thuộc vào cách gọi. Đây là lý do React hay dùng arrow function trong event handlers."
+    "explanation": "Arrow function không có this riêng — nó kế thừa this từ scope bao quanh (lexical this). Function thường tạo this riêng phụ thuộc vào cách gọi. Đây là lý do React hay dùng arrow function trong event handlers.",
+    "explanationEn": "Arrow functions have no own this — they inherit this from the surrounding scope (lexical this). Regular functions create their own this depending on how they are called. This is why React often uses arrow functions in event handlers."
   },
   {
     "id": "js-04",
     "question": "Phương thức Array nào KHÔNG thay đổi mảng gốc?",
+    "questionEn": "Which Array method does NOT modify the original array?",
     "options": [
       "push()",
       "splice()",
       "map()",
       "sort()"
     ],
+    "optionsEn": [
+      "push()",
+      "splice()",
+      "map()",
+      "sort()"
+    ],
     "answer": 2,
-    "explanation": "map() trả về mảng mới, không thay đổi mảng gốc (immutable). push(), splice() thay đổi trực tiếp mảng gốc (mutate). sort() cũng mutate. Các immutable methods: map, filter, reduce, slice, concat, find, findIndex."
+    "explanation": "map() trả về mảng mới, không thay đổi mảng gốc (immutable). push(), splice() thay đổi trực tiếp mảng gốc (mutate). sort() cũng mutate. Các immutable methods: map, filter, reduce, slice, concat, find, findIndex.",
+    "explanationEn": "map() returns a new array without changing the original (immutable). push() and splice() modify the original array directly (mutate). sort() also mutates. Immutable methods include: map, filter, reduce, slice, concat, find, findIndex."
   },
   {
     "id": "js-05",
     "question": "typeof null trong JavaScript trả về gì?",
+    "questionEn": "What does typeof null return in JavaScript?",
     "options": ["'null'", "'undefined'", "'object'", "'boolean'"],
+    "optionsEn": ["'null'", "'undefined'", "'object'", "'boolean'"],
     "answer": 2,
-    "explanation": "typeof null trả về 'object' — đây là một bug lịch sử của JavaScript từ phiên bản đầu tiên và không được sửa để giữ tương thích ngược. Để kiểm tra đúng: value === null."
+    "explanation": "typeof null trả về 'object' — đây là một bug lịch sử của JavaScript từ phiên bản đầu tiên và không được sửa để giữ tương thích ngược. Để kiểm tra đúng: value === null.",
+    "explanationEn": "typeof null returns 'object' — a historical bug in JavaScript dating back to its first version, left unfixed to preserve backward compatibility. To check correctly, use: value === null."
   },
   {
     "id": "js-06",
     "question": "async/await trong JavaScript dùng để làm gì?",
+    "questionEn": "What is async/await used for in JavaScript?",
     "options": [
       "Làm cho code chạy nhanh hơn bằng cách dùng nhiều CPU",
       "Viết code bất đồng bộ theo cú pháp trông như đồng bộ, dễ đọc hơn",
       "Tạo nhiều thread song song",
       "Ngăn JavaScript chạy bất đồng bộ"
     ],
+    "optionsEn": [
+      "Making code run faster by using multiple CPUs",
+      "Writing asynchronous code with a syntax that looks synchronous and is easier to read",
+      "Creating multiple parallel threads",
+      "Preventing JavaScript from running asynchronously"
+    ],
     "answer": 1,
-    "explanation": "async/await là cú pháp sugar trên Promise, giúp viết code async trông như sync. await tạm dừng function (không block thread), chờ Promise resolve. Kết hợp try/catch để xử lý lỗi gọn gàng hơn .then().catch()."
+    "explanation": "async/await là cú pháp sugar trên Promise, giúp viết code async trông như sync. await tạm dừng function (không block thread), chờ Promise resolve. Kết hợp try/catch để xử lý lỗi gọn gàng hơn .then().catch().",
+    "explanationEn": "async/await is syntactic sugar over Promises that lets you write async code that looks synchronous. await pauses the function (without blocking the thread), waiting for the Promise to resolve. Combined with try/catch, it handles errors more cleanly than .then().catch()."
   },
   {
     "id": "js-07",
     "question": "Destructuring trong JavaScript là gì?",
+    "questionEn": "What is destructuring in JavaScript?",
     "options": [
       "Xóa bỏ một biến khỏi bộ nhớ",
       "Cú pháp để trích xuất giá trị từ array hoặc object vào các biến riêng",
       "Chia một function thành nhiều function nhỏ",
       "Chuyển đổi object thành string"
     ],
+    "optionsEn": [
+      "Removing a variable from memory",
+      "Syntax for extracting values from an array or object into separate variables",
+      "Splitting a function into several smaller functions",
+      "Converting an object into a string"
+    ],
     "answer": 1,
-    "explanation": "Destructuring cho phép: const { name, age } = user; hoặc const [first, second] = arr;. Giúp code ngắn gọn hơn. Rất phổ biến trong React: const { data, loading, error } = useFetch('/api');"
+    "explanation": "Destructuring cho phép: const { name, age } = user; hoặc const [first, second] = arr;. Giúp code ngắn gọn hơn. Rất phổ biến trong React: const { data, loading, error } = useFetch('/api');",
+    "explanationEn": "Destructuring allows: const { name, age } = user; or const [first, second] = arr;. It makes code more concise. It is very common in React: const { data, loading, error } = useFetch('/api');"
   },
   {
     "id": "js-08",
     "question": "Spread operator (...) trong JavaScript dùng để làm gì?",
+    "questionEn": "What is the spread operator (...) used for in JavaScript?",
     "options": [
       "Tạo vòng lặp vô hạn",
       "Mở rộng iterable (array, object) thành các phần tử riêng lẻ",
       "Khai báo rest parameters",
       "Tạo function generator"
     ],
+    "optionsEn": [
+      "Creating an infinite loop",
+      "Expanding an iterable (array, object) into individual elements",
+      "Declaring rest parameters",
+      "Creating a generator function"
+    ],
     "answer": 1,
-    "explanation": "Spread (...) mở rộng array/object. Copy array: [...arr], merge: [...arr1, ...arr2]. Copy object: {...obj}, override: {...obj, key: newValue}. Rất hay dùng để tạo bản copy tránh mutation gốc."
+    "explanation": "Spread (...) mở rộng array/object. Copy array: [...arr], merge: [...arr1, ...arr2]. Copy object: {...obj}, override: {...obj, key: newValue}. Rất hay dùng để tạo bản copy tránh mutation gốc.",
+    "explanationEn": "Spread (...) expands arrays/objects. Copy an array: [...arr], merge: [...arr1, ...arr2]. Copy an object: {...obj}, override: {...obj, key: newValue}. It is commonly used to create copies and avoid mutating the original."
   },
   {
     "id": "js-09",
     "question": "Event delegation là gì và tại sao nên dùng?",
+    "questionEn": "What is event delegation and why should you use it?",
     "options": [
       "Gắn event listener vào mỗi phần tử con — chính xác hơn",
       "Gắn event listener vào parent element, xử lý event của tất cả phần tử con",
       "Tự động remove event listener sau khi kích hoạt",
       "Chuyển event từ FE lên BE xử lý"
     ],
+    "optionsEn": [
+      "Attaching an event listener to each child element — more precise",
+      "Attaching an event listener to the parent element to handle events from all child elements",
+      "Automatically removing the event listener after it fires",
+      "Passing the event from the FE to the BE for handling"
+    ],
     "answer": 1,
-    "explanation": "Event delegation gắn 1 listener vào parent thay vì N listener cho N items. Dùng event.target.closest() để xác định element được click. Hiệu quả hơn về memory và tự động hoạt động với items được thêm động (dynamic)."
+    "explanation": "Event delegation gắn 1 listener vào parent thay vì N listener cho N items. Dùng event.target.closest() để xác định element được click. Hiệu quả hơn về memory và tự động hoạt động với items được thêm động (dynamic).",
+    "explanationEn": "Event delegation attaches 1 listener to the parent instead of N listeners for N items. Use event.target.closest() to identify the clicked element. It is more memory-efficient and automatically works with dynamically added items."
   },
   {
     "id": "js-10",
     "question": "Nullish coalescing operator (??) khác với OR operator (||) như thế nào?",
+    "questionEn": "How does the nullish coalescing operator (??) differ from the OR operator (||)?",
     "options": [
       "Chúng hoàn toàn giống nhau",
       "?? chỉ fallback khi giá trị là null hoặc undefined; || fallback với mọi giá trị falsy (0, '', false...)",
       "|| chỉ dùng cho boolean, ?? dùng cho mọi kiểu",
       "?? nhanh hơn ||"
     ],
+    "optionsEn": [
+      "They are exactly the same",
+      "?? only falls back when the value is null or undefined; || falls back on any falsy value (0, '', false...)",
+      "|| is only for booleans, ?? is for all types",
+      "?? is faster than ||"
+    ],
     "answer": 1,
-    "explanation": "const val = 0 || 'default' → 'default' (vì 0 là falsy). const val = 0 ?? 'default' → 0 (vì 0 không phải null/undefined). ?? hữu ích khi 0, '' hoặc false là giá trị hợp lệ cần giữ lại."
+    "explanation": "const val = 0 || 'default' → 'default' (vì 0 là falsy). const val = 0 ?? 'default' → 0 (vì 0 không phải null/undefined). ?? hữu ích khi 0, '' hoặc false là giá trị hợp lệ cần giữ lại.",
+    "explanationEn": "const val = 0 || 'default' → 'default' (because 0 is falsy). const val = 0 ?? 'default' → 0 (because 0 is not null/undefined). ?? is useful when 0, '', or false are valid values you want to keep."
   },
   {
     "id": "js-11",
     "question": "DOM là gì trong ngữ cảnh JavaScript?",
+    "questionEn": "What is the DOM in the context of JavaScript?",
     "options": [
       "Một thư viện JavaScript phổ biến",
       "Database Of Methods — nơi lưu các phương thức JS",
       "Document Object Model — biểu diễn cấu trúc HTML dưới dạng object để JS thao tác",
       "Display Output Manager — quản lý hiển thị trên màn hình"
     ],
+    "optionsEn": [
+      "A popular JavaScript library",
+      "Database Of Methods — where JS methods are stored",
+      "Document Object Model — a representation of the HTML structure as objects for JS to manipulate",
+      "Display Output Manager — manages what is shown on screen"
+    ],
     "answer": 2,
-    "explanation": "DOM (Document Object Model) là representation của HTML document dưới dạng cây object. JS tương tác với DOM để đọc/thay đổi nội dung, style, cấu trúc HTML mà không cần tải lại trang. Ví dụ: document.querySelector(), element.textContent."
+    "explanation": "DOM (Document Object Model) là representation của HTML document dưới dạng cây object. JS tương tác với DOM để đọc/thay đổi nội dung, style, cấu trúc HTML mà không cần tải lại trang. Ví dụ: document.querySelector(), element.textContent.",
+    "explanationEn": "The DOM (Document Object Model) is a representation of the HTML document as a tree of objects. JS interacts with the DOM to read/change content, styles, and HTML structure without reloading the page. Examples: document.querySelector(), element.textContent."
   },
   {
     "id": "js-12",
     "question": "Phương thức Array nào dùng để tìm phần tử ĐẦU TIÊN thỏa mãn điều kiện?",
+    "questionEn": "Which Array method is used to find the FIRST element that satisfies a condition?",
     "options": [
       "filter()",
       "find()",
       "findAll()",
       "search()"
     ],
+    "optionsEn": [
+      "filter()",
+      "find()",
+      "findAll()",
+      "search()"
+    ],
     "answer": 1,
-    "explanation": "find() trả về phần tử đầu tiên thỏa điều kiện (hoặc undefined nếu không có). filter() trả về mảng tất cả phần tử thỏa điều kiện. Ví dụ: users.find(u => u.id === 5) trả về 1 user, không phải mảng."
+    "explanation": "find() trả về phần tử đầu tiên thỏa điều kiện (hoặc undefined nếu không có). filter() trả về mảng tất cả phần tử thỏa điều kiện. Ví dụ: users.find(u => u.id === 5) trả về 1 user, không phải mảng.",
+    "explanationEn": "find() returns the first element that satisfies the condition (or undefined if none). filter() returns an array of all elements that satisfy the condition. Example: users.find(u => u.id === 5) returns a single user, not an array."
   },
   {
     "id": "js-13",
     "question": "Khi BA mô tả requirement 'validate email format ở phía client', dev nên làm gì?",
+    "questionEn": "When a BA specifies the requirement 'validate email format on the client side', what should the developer do?",
     "options": [
       "Chỉ validate ở FE là đủ, không cần BE",
       "Validate ở FE cho UX tốt, nhưng BE bắt buộc phải validate lại",
       "Chỉ validate ở BE, FE không cần",
       "Không cần validate vì trình duyệt tự làm khi dùng input type='email'"
     ],
+    "optionsEn": [
+      "Validating on the FE alone is enough, the BE is not needed",
+      "Validate on the FE for good UX, but the BE must validate again",
+      "Only validate on the BE, the FE does not need to",
+      "No validation needed because the browser handles it with input type='email'"
+    ],
     "answer": 1,
-    "explanation": "FE validation là UX — phản hồi nhanh cho user. Nhưng FE validation có thể bị bypass (Postman, console, modify request). BE PHẢI validate lại mọi dữ liệu đầu vào. Đây là nguyên tắc bảo mật 'never trust client input'."
+    "explanation": "FE validation là UX — phản hồi nhanh cho user. Nhưng FE validation có thể bị bypass (Postman, console, modify request). BE PHẢI validate lại mọi dữ liệu đầu vào. Đây là nguyên tắc bảo mật 'never trust client input'.",
+    "explanationEn": "FE validation is about UX — quick feedback for the user. But FE validation can be bypassed (Postman, the console, modifying the request). The BE MUST re-validate all input data. This is the security principle 'never trust client input'."
   },
   {
     "id": "js-14",
     "question": "localStorage.setItem() và localStorage.getItem() dùng để làm gì?",
+    "questionEn": "What are localStorage.setItem() and localStorage.getItem() used for?",
     "options": [
       "Lưu và đọc dữ liệu trên server",
       "Lưu và đọc dữ liệu trong trình duyệt của user (vĩnh viễn đến khi xóa)",
       "Lưu dữ liệu tạm trong session hiện tại",
       "Cache HTTP response từ server"
     ],
+    "optionsEn": [
+      "Saving and reading data on the server",
+      "Saving and reading data in the user's browser (persistent until cleared)",
+      "Storing temporary data for the current session",
+      "Caching HTTP responses from the server"
+    ],
     "answer": 1,
-    "explanation": "localStorage lưu key-value trong trình duyệt, tồn tại đến khi bị xóa thủ công hoặc clear storage. Dùng để lưu token, preferences, cache nhỏ. Chỉ lưu string — cần JSON.stringify/parse với object."
+    "explanation": "localStorage lưu key-value trong trình duyệt, tồn tại đến khi bị xóa thủ công hoặc clear storage. Dùng để lưu token, preferences, cache nhỏ. Chỉ lưu string — cần JSON.stringify/parse với object.",
+    "explanationEn": "localStorage stores key-value pairs in the browser, persisting until manually removed or the storage is cleared. It is used for tokens, preferences, and small caches. It only stores strings — use JSON.stringify/parse for objects."
   },
   {
     "id": "js-15",
     "question": "Tại sao nên đặt thẻ <script src='app.js'> ở cuối thẻ <body> thay vì trong <head>?",
+    "questionEn": "Why should you place the <script src='app.js'> tag at the end of the <body> rather than in the <head>?",
     "options": [
       "Không có lý do kỹ thuật, chỉ là convention",
       "Để HTML render trước, tránh blocking — user thấy nội dung nhanh hơn",
       "JavaScript không chạy được khi đặt trong <head>",
       "SEO yêu cầu script phải ở cuối body"
     ],
+    "optionsEn": [
+      "There is no technical reason, it is just a convention",
+      "So the HTML renders first, avoiding blocking — the user sees content sooner",
+      "JavaScript cannot run when placed in the <head>",
+      "SEO requires scripts to be at the end of the body"
+    ],
     "answer": 1,
-    "explanation": "Khi trình duyệt gặp <script>, nó dừng parse HTML để tải và chạy JS. Đặt script ở cuối body cho HTML render xong trước, user thấy trang sớm hơn. Cách hiện đại hơn là dùng thuộc tính defer hoặc async trên script tag."
+    "explanation": "Khi trình duyệt gặp <script>, nó dừng parse HTML để tải và chạy JS. Đặt script ở cuối body cho HTML render xong trước, user thấy trang sớm hơn. Cách hiện đại hơn là dùng thuộc tính defer hoặc async trên script tag.",
+    "explanationEn": "When the browser encounters a <script>, it pauses HTML parsing to download and run the JS. Placing the script at the end of the body lets the HTML render first, so the user sees the page sooner. A more modern approach is to use the defer or async attribute on the script tag."
   }
 ]

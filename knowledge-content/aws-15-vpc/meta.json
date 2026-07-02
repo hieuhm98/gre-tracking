@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "Amazon VPC – Mạng ảo riêng trên AWS",
+  "titleEn": "Amazon VPC – Virtual Private Cloud Networking",
+  "description": "Mạng ảo riêng trên AWS: subnet public/private, IGW, NAT Gateway, Security Group vs NACL, VPC Endpoint, Peering và kết nối hybrid (VPN, Direct Connect, Transit Gateway).",
+  "descriptionEn": "AWS virtual private networking: public/private subnets, IGW, NAT Gateway, Security Group vs NACL, VPC Endpoints, peering, and hybrid connectivity (VPN, Direct Connect, Transit Gateway)."
+}

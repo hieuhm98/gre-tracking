@@ -1,0 +1,282 @@
+[
+  {
+    "id": "q1",
+    "question": "Đâu là mô tả ĐÚNG về Cognito User Pool?",
+    "questionEn": "Which is the correct description of a Cognito User Pool?",
+    "options": [
+      "Cấp AWS credentials tạm thời qua STS để truy cập S3/DynamoDB",
+      "Là thư mục người dùng và cơ chế đăng nhập, phát ra JWT token",
+      "Là một hàng đợi message giữa các Lambda",
+      "Là engine deploy hạ tầng thay cho CloudFormation"
+    ],
+    "optionsEn": [
+      "Grants temporary AWS credentials via STS to access S3/DynamoDB",
+      "Is a user directory and sign-in mechanism that issues JWT tokens",
+      "Is a message queue between Lambda functions",
+      "Is an infrastructure deploy engine replacing CloudFormation"
+    ],
+    "answer": 1,
+    "explanation": "User Pool là user directory + cơ chế đăng nhập, trả về JWT (ID/access token). Việc cấp AWS credentials tạm thời là của Identity Pool.",
+    "explanationEn": "A User Pool is a user directory and sign-in mechanism that returns JWTs (ID/access tokens). Granting temporary AWS credentials is the job of an Identity Pool."
+  },
+  {
+    "id": "q2",
+    "question": "Một ứng dụng mobile cần cho người dùng đã đăng nhập truy cập TRỰC TIẾP một bucket S3 bằng credentials tạm thời. Nên dùng thành phần Cognito nào?",
+    "questionEn": "A mobile app needs signed-in users to access an S3 bucket DIRECTLY using temporary credentials. Which Cognito component should you use?",
+    "options": [
+      "Cognito User Pool",
+      "Cognito Identity Pool (Federated Identities)",
+      "Chỉ dùng API Gateway authorizer",
+      "Cognito Sync"
+    ],
+    "optionsEn": [
+      "Cognito User Pool",
+      "Cognito Identity Pool (Federated Identities)",
+      "API Gateway authorizer only",
+      "Cognito Sync"
+    ],
+    "answer": 1,
+    "explanation": "Identity Pool đổi token danh tính lấy AWS credentials tạm thời (qua STS) gắn IAM role, cho phép app gọi trực tiếp S3/DynamoDB.",
+    "explanationEn": "An Identity Pool exchanges an identity token for temporary AWS credentials (via STS) tied to an IAM role, enabling the app to call S3/DynamoDB directly."
+  },
+  {
+    "id": "q3",
+    "question": "Bạn muốn bảo vệ một REST API trên API Gateway bằng cách yêu cầu người dùng đăng nhập và xuất trình JWT. Giải pháp phù hợp nhất là gì?",
+    "questionEn": "You want to protect a REST API on API Gateway by requiring users to sign in and present a JWT. What is the most suitable solution?",
+    "options": [
+      "Dùng Cognito User Pool làm authorizer cho API Gateway",
+      "Dùng Identity Pool để cấp credentials cho mỗi request",
+      "Đặt SQS trước API Gateway",
+      "Bật CloudFront OAC trên API Gateway"
+    ],
+    "optionsEn": [
+      "Use a Cognito User Pool as the authorizer for API Gateway",
+      "Use an Identity Pool to grant credentials per request",
+      "Put SQS in front of API Gateway",
+      "Enable CloudFront OAC on API Gateway"
+    ],
+    "answer": 0,
+    "explanation": "User Pool phát JWT và tích hợp làm Cognito authorizer cho API Gateway để xác thực request — đúng nhu cầu đăng nhập + bảo vệ API.",
+    "explanationEn": "A User Pool issues JWTs and integrates as a Cognito authorizer for API Gateway to authenticate requests — exactly the sign-in + API protection need."
+  },
+  {
+    "id": "q4",
+    "question": "Người dùng muốn đăng nhập app bằng tài khoản Google và Facebook. Federated social login này được cấu hình ở đâu?",
+    "questionEn": "Users want to sign in to the app with their Google and Facebook accounts. Where is this federated social login configured?",
+    "options": [
+      "Trong Step Functions state machine",
+      "Là identity provider bên ngoài trong Cognito User Pool",
+      "Trong template SAM",
+      "Trong quy tắc EventBridge"
+    ],
+    "optionsEn": [
+      "In a Step Functions state machine",
+      "As an external identity provider in a Cognito User Pool",
+      "In the SAM template",
+      "In an EventBridge rule"
+    ],
+    "answer": 1,
+    "explanation": "Social/enterprise IdP (Google, Facebook, SAML, OIDC) được cấu hình như IdP bên ngoài trong User Pool để cho phép đăng nhập liên kết.",
+    "explanationEn": "Social/enterprise IdPs (Google, Facebook, SAML, OIDC) are configured as external IdPs in the User Pool to enable federated sign-in."
+  },
+  {
+    "id": "q5",
+    "question": "Nhiệm vụ chính của AWS Step Functions là gì?",
+    "questionEn": "What is the primary purpose of AWS Step Functions?",
+    "options": [
+      "Lưu trữ file tĩnh với độ bền cao",
+      "Điều phối nhiều bước thành một workflow (state machine) có retry và rẽ nhánh",
+      "Cung cấp cơ sở dữ liệu NoSQL độ trễ mili-giây",
+      "Phân phối nội dung qua CDN toàn cầu"
+    ],
+    "optionsEn": [
+      "Store static files with high durability",
+      "Orchestrate multiple steps into a workflow (state machine) with retries and branching",
+      "Provide a millisecond-latency NoSQL database",
+      "Distribute content via a global CDN"
+    ],
+    "answer": 1,
+    "explanation": "Step Functions điều phối các bước thành state machine, quản lý thứ tự, retry, error handling và rẽ nhánh — không phải nơi chạy business logic thay Lambda.",
+    "explanationEn": "Step Functions orchestrates steps into a state machine, managing ordering, retries, error handling, and branching — not a place to run business logic in place of Lambda."
+  },
+  {
+    "id": "q6",
+    "question": "Một quy trình duyệt đơn nghiệp vụ có thể kéo dài nhiều ngày, cần đảm bảo exactly-once và lưu lịch sử thực thi để audit. Loại workflow Step Functions nào phù hợp nhất?",
+    "questionEn": "A business approval process may run for several days, needs exactly-once guarantees, and must keep execution history for audit. Which Step Functions workflow type fits best?",
+    "options": [
+      "Express Workflow",
+      "Standard Workflow",
+      "Cả hai đều giới hạn 5 phút nên không dùng được",
+      "FIFO Workflow"
+    ],
+    "optionsEn": [
+      "Express Workflow",
+      "Standard Workflow",
+      "Both are limited to 5 minutes so neither works",
+      "FIFO Workflow"
+    ],
+    "answer": 1,
+    "explanation": "Standard chạy tới 1 năm, exactly-once và lưu lịch sử thực thi xem được trong console — hợp với quy trình dài cần audit. Express giới hạn 5 phút.",
+    "explanationEn": "Standard runs up to 1 year, is exactly-once, and stores console-viewable execution history — ideal for long, audit-worthy processes. Express is limited to 5 minutes."
+  },
+  {
+    "id": "q7",
+    "question": "Cần xử lý hàng trăm nghìn sự kiện ngắn mỗi giây từ luồng IoT với chi phí thấp bằng Step Functions. Nên chọn loại workflow nào?",
+    "questionEn": "You need to process hundreds of thousands of short events per second from an IoT stream cheaply with Step Functions. Which workflow type should you choose?",
+    "options": [
+      "Standard Workflow",
+      "Express Workflow",
+      "Không dùng được Step Functions cho khối lượng này",
+      "Standard với chế độ FIFO"
+    ],
+    "optionsEn": [
+      "Standard Workflow",
+      "Express Workflow",
+      "Step Functions cannot handle this volume",
+      "Standard with FIFO mode"
+    ],
+    "answer": 1,
+    "explanation": "Express tối ưu cho khối lượng rất lớn, thực thi ngắn (≤5 phút), throughput cao và chi phí thấp theo số lần chạy/thời lượng — phù hợp streaming/IoT.",
+    "explanationEn": "Express is optimized for very high volume, short executions (≤5 minutes), high throughput, and low cost based on runs/duration — ideal for streaming/IoT."
+  },
+  {
+    "id": "q8",
+    "question": "Phát biểu nào ĐÚNG về mối quan hệ giữa AWS SAM và CloudFormation?",
+    "questionEn": "Which statement is correct about the relationship between AWS SAM and CloudFormation?",
+    "options": [
+      "SAM là dịch vụ tách biệt hoàn toàn, không liên quan CloudFormation",
+      "SAM template được transform thành CloudFormation khi triển khai",
+      "CloudFormation là phần mở rộng của SAM",
+      "SAM chỉ chạy được trên máy cục bộ, không deploy lên AWS"
+    ],
+    "optionsEn": [
+      "SAM is a completely separate service unrelated to CloudFormation",
+      "A SAM template is transformed into CloudFormation at deploy time",
+      "CloudFormation is an extension of SAM",
+      "SAM only runs locally and cannot deploy to AWS"
+    ],
+    "answer": 1,
+    "explanation": "SAM là superset của CloudFormation với cú pháp serverless rút gọn; khi deploy nó được transform thành CloudFormation thuần rồi provision tài nguyên.",
+    "explanationEn": "SAM is a superset of CloudFormation with shorthand serverless syntax; at deploy it is transformed into plain CloudFormation to provision resources."
+  },
+  {
+    "id": "q9",
+    "question": "Đội dev muốn test và chạy hàm Lambda cùng API cục bộ trước khi deploy. Công cụ nào hỗ trợ điều này?",
+    "questionEn": "A dev team wants to test and run Lambda functions and the API locally before deploying. Which tool supports this?",
+    "options": [
+      "SAM CLI (sam local invoke / sam local start-api)",
+      "Cognito Identity Pool",
+      "EventBridge Scheduler",
+      "S3 Transfer Acceleration"
+    ],
+    "optionsEn": [
+      "SAM CLI (sam local invoke / sam local start-api)",
+      "Cognito Identity Pool",
+      "EventBridge Scheduler",
+      "S3 Transfer Acceleration"
+    ],
+    "answer": 0,
+    "explanation": "SAM CLI cho phép build và test cục bộ qua Docker với sam local invoke và sam local start-api, mô phỏng Lambda/API Gateway trên máy dev.",
+    "explanationEn": "SAM CLI enables local build and test via Docker with sam local invoke and sam local start-api, emulating Lambda/API Gateway on the dev machine."
+  },
+  {
+    "id": "q10",
+    "question": "Một hệ thống cần đệm tải đột biến giữa một producer và MỘT nhóm consumer xử lý theo nhịp riêng, đảm bảo không mất message. Dịch vụ phù hợp nhất?",
+    "questionEn": "A system needs to buffer traffic spikes between a producer and ONE group of consumers processing at their own pace, without losing messages. Which service fits best?",
+    "options": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon CloudFront",
+      "AWS Step Functions"
+    ],
+    "optionsEn": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon CloudFront",
+      "AWS Step Functions"
+    ],
+    "answer": 1,
+    "explanation": "SQS là hàng đợi (pull) giúp đệm tải và tách rời producer/consumer; consumer lấy message theo nhịp của mình, chống mất message khi spike.",
+    "explanationEn": "SQS is a pull-based queue that buffers load and decouples producer/consumer; consumers pull at their own pace, preventing message loss during spikes."
+  },
+  {
+    "id": "q11",
+    "question": "Một sự kiện 'đơn hàng đã tạo' cần được gửi đồng thời tới NHIỀU hệ thống độc lập (email, kho, phân tích). Mẫu nào phù hợp nhất?",
+    "questionEn": "An 'order created' event must be delivered simultaneously to MANY independent systems (email, warehouse, analytics). Which pattern fits best?",
+    "options": [
+      "Ghi tuần tự vào một hàng SQS duy nhất",
+      "SNS fan-out (pub/sub) tới nhiều subscriber, thường kèm SQS cho mỗi consumer",
+      "Gọi trực tiếp từng dịch vụ trong một Lambda đồng bộ",
+      "Dùng CloudFront để phát tán sự kiện"
+    ],
+    "optionsEn": [
+      "Write sequentially to a single SQS queue",
+      "SNS fan-out (pub/sub) to multiple subscribers, often with an SQS queue per consumer",
+      "Call each service directly inside one synchronous Lambda",
+      "Use CloudFront to broadcast the event"
+    ],
+    "answer": 1,
+    "explanation": "SNS là pub/sub (push) fan-out một message tới nhiều subscriber. Kèm SQS cho mỗi consumer để có buffer riêng và độ bền — kiến trúc decoupled.",
+    "explanationEn": "SNS is pub/sub (push) that fans out one message to many subscribers. Adding an SQS queue per consumer gives each its own buffer and durability — a decoupled architecture."
+  },
+  {
+    "id": "q12",
+    "question": "Khi người dùng upload ảnh lên S3, hệ thống cần tự động tạo thumbnail mà không cần server luôn chạy. Kiến trúc serverless phù hợp nhất là gì?",
+    "questionEn": "When a user uploads an image to S3, the system must automatically generate a thumbnail without an always-on server. What is the most suitable serverless architecture?",
+    "options": [
+      "S3 Event Notification kích hoạt Lambda tạo thumbnail và ghi trở lại S3",
+      "Chạy EC2 poll S3 mỗi phút để tìm ảnh mới",
+      "Dùng CloudFront để tự động resize khi phân phối",
+      "Step Functions Standard chạy liên tục quét bucket"
+    ],
+    "optionsEn": [
+      "An S3 Event Notification triggers a Lambda that creates the thumbnail and writes it back to S3",
+      "Run an EC2 instance polling S3 every minute for new images",
+      "Use CloudFront to auto-resize during delivery",
+      "A Standard Step Functions workflow continuously scans the bucket"
+    ],
+    "answer": 0,
+    "explanation": "Mẫu chuẩn: S3 Event Notification (ObjectCreated) trigger Lambda xử lý ảnh và ghi thumbnail vào bucket/prefix khác — event-driven, không cần server.",
+    "explanationEn": "The standard pattern: an S3 Event Notification (ObjectCreated) triggers a Lambda that processes the image and writes the thumbnail to another bucket/prefix — event-driven, serverless."
+  },
+  {
+    "id": "q13",
+    "question": "Cần host một website tĩnh (HTML/CSS/JS) với CDN toàn cầu, HTTPS và chi phí thấp. Kiến trúc nào phù hợp nhất?",
+    "questionEn": "You need to host a static website (HTML/CSS/JS) with a global CDN, HTTPS, and low cost. Which architecture fits best?",
+    "options": [
+      "EC2 Auto Scaling sau một Application Load Balancer",
+      "S3 lưu site tĩnh với CloudFront phía trước (dùng OAC)",
+      "Step Functions phục vụ các file HTML",
+      "DynamoDB lưu HTML và trả về qua API Gateway"
+    ],
+    "optionsEn": [
+      "EC2 Auto Scaling behind an Application Load Balancer",
+      "S3 hosting the static site with CloudFront in front (using OAC)",
+      "Step Functions serving the HTML files",
+      "DynamoDB storing HTML returned via API Gateway"
+    ],
+    "answer": 1,
+    "explanation": "Website tĩnh nên lưu trên S3 và đặt CloudFront phía trước để CDN/cache toàn cầu, HTTPS và bảo vệ bucket bằng OAC — rẻ và co giãn tự động.",
+    "explanationEn": "A static website should be stored on S3 with CloudFront in front for global CDN/cache, HTTPS, and bucket protection via OAC — cheap and auto-scaling."
+  },
+  {
+    "id": "q14",
+    "question": "Trong một serverless mobile backend điển hình, thứ tự luồng nào là ĐÚNG?",
+    "questionEn": "In a typical serverless mobile backend, which flow order is correct?",
+    "options": [
+      "Cognito xác thực → API Gateway → Lambda → DynamoDB",
+      "DynamoDB → CloudFront → SQS → Cognito",
+      "Step Functions → S3 → SNS → API Gateway",
+      "SAM → EventBridge → Cognito → S3"
+    ],
+    "optionsEn": [
+      "Cognito authenticates → API Gateway → Lambda → DynamoDB",
+      "DynamoDB → CloudFront → SQS → Cognito",
+      "Step Functions → S3 → SNS → API Gateway",
+      "SAM → EventBridge → Cognito → S3"
+    ],
+    "answer": 0,
+    "explanation": "Luồng chuẩn: app đăng nhập qua Cognito (User Pool + Identity Pool), gọi API Gateway (Cognito authorizer), Lambda xử lý và đọc/ghi DynamoDB.",
+    "explanationEn": "Standard flow: the app signs in via Cognito (User Pool + Identity Pool), calls API Gateway (Cognito authorizer), and Lambda processes and reads/writes DynamoDB."
+  }
+]

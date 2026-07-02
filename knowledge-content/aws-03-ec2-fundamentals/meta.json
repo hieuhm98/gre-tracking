@@ -1,0 +1,7 @@
+{
+  "group": "dev",
+  "title": "Amazon EC2 – Kiến thức nền tảng",
+  "titleEn": "Amazon EC2 – Fundamentals",
+  "description": "Máy chủ ảo EC2, các họ instance, AMI, User Data, Security Group và các hình thức mua cho kỳ thi SAA-C03.",
+  "descriptionEn": "EC2 virtual servers, instance families, AMI, User Data, Security Groups, and purchasing options for the SAA-C03 exam."
+}

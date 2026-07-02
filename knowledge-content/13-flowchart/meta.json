@@ -1,1 +1,7 @@
-{"title": "Flowchart", "description": "Ký hiệu chuẩn, cách vẽ luồng xử lý, decision node và ứng dụng trong phân tích nghiệp vụ."}
+{
+  "group": "ba-po-pm",
+  "title": "Flowchart",
+  "titleEn": "Flowchart",
+  "description": "Ký hiệu chuẩn, cách vẽ luồng xử lý, decision node và ứng dụng trong phân tích nghiệp vụ.",
+  "descriptionEn": "Standard symbols, how to draw process flows, decision nodes, and their use in business analysis."
+}
