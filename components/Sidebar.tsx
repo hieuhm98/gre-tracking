@@ -17,6 +17,7 @@ const NAV = [
 const KNOWLEDGE_NAV = [
   { href: "/knowledge", label: "nav.knowledge", icon: "◉" },
   { href: "/knowledge-review", label: "nav.review", icon: "⟳" },
+  { href: "/sql-practice", label: "nav.sqlPractice", icon: "▤" },
   { href: "/my-articles", label: "nav.myArticles", icon: "✎" },
 ];
 

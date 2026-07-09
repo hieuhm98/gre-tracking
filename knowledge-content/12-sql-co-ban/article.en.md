@@ -166,10 +166,63 @@ HAVING total > 1000000;
 
 ---
 
-## 10. Summary
+## 10. SQL for BAs – Building Reports
+
+Most BAs don't write update/delete statements; the most valuable skill is **reading and writing report queries** so you can pull numbers yourself instead of waiting on a developer.
+
+### Readable column names with `AS`
+```sql
+SELECT
+  user_id      AS "Customer ID",
+  COUNT(*)     AS "Orders",
+  SUM(amount)  AS "Total spend"
+FROM orders
+GROUP BY user_id;
+```
+
+### Count unique values with `DISTINCT`
+```sql
+-- How many customers have ever placed an order?
+SELECT COUNT(DISTINCT user_id) AS customers
+FROM orders;
+```
+
+### A few handy report "recipes"
+
+```sql
+-- 1) Revenue by month
+SELECT
+  strftime('%Y-%m', created_at) AS month,
+  SUM(amount)                   AS revenue
+FROM orders
+GROUP BY month
+ORDER BY month;
+
+-- 2) Order count by status
+SELECT status, COUNT(*) AS orders
+FROM orders
+GROUP BY status;
+
+-- 3) Top 5 highest-spending customers
+SELECT user_id, SUM(amount) AS total
+FROM orders
+GROUP BY user_id
+ORDER BY total DESC
+LIMIT 5;
+```
+
+### Reading an existing query
+Read it in business order: **FROM** (which table) → **JOIN** (which tables to link) → **WHERE** (what to filter) → **GROUP BY** (what to group by) → **SELECT** (which columns to show) → **ORDER BY / LIMIT** (sort, limit). Follow this flow and you can understand most reports.
+
+> 💡 A BA should request **read-only** access on the reporting environment to run SELECTs safely, with no risk of accidentally modifying or deleting real data.
+
+---
+
+## 11. Summary
 
 - **SELECT**: read data.
 - **WHERE**: filter by condition.
 - **INSERT/UPDATE/DELETE**: manipulate data — always be careful with an UPDATE/DELETE that is missing a WHERE!
 - **JOIN**: combine multiple tables.
 - **GROUP BY + Aggregate**: statistics and reporting.
+- **BA**: use `AS`, `DISTINCT`, and `GROUP BY` to write your own reports; request **read-only** access to run them safely.

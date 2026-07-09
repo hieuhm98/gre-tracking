@@ -166,10 +166,63 @@ HAVING total > 1000000;
 
 ---
 
-## 10. Tóm tắt
+## 10. SQL cho BA – Làm báo cáo
+
+Phần lớn BA không viết lệnh sửa/xóa; điều giá trị nhất là **đọc và viết câu truy vấn báo cáo** để tự lấy số liệu thay vì chờ dev.
+
+### Đặt tên cột dễ đọc với `AS`
+```sql
+SELECT
+  user_id      AS "Mã KH",
+  COUNT(*)     AS "Số đơn",
+  SUM(amount)  AS "Tổng chi tiêu"
+FROM orders
+GROUP BY user_id;
+```
+
+### Đếm giá trị không trùng với `DISTINCT`
+```sql
+-- Có bao nhiêu khách hàng đã từng đặt hàng?
+SELECT COUNT(DISTINCT user_id) AS so_khach
+FROM orders;
+```
+
+### Vài "công thức" báo cáo hay dùng
+
+```sql
+-- 1) Doanh thu theo tháng
+SELECT
+  strftime('%Y-%m', created_at) AS thang,
+  SUM(amount)                   AS doanh_thu
+FROM orders
+GROUP BY thang
+ORDER BY thang;
+
+-- 2) Số đơn theo trạng thái
+SELECT status, COUNT(*) AS so_don
+FROM orders
+GROUP BY status;
+
+-- 3) Top 5 khách chi nhiều nhất
+SELECT user_id, SUM(amount) AS tong
+FROM orders
+GROUP BY user_id
+ORDER BY tong DESC
+LIMIT 5;
+```
+
+### Đọc hiểu một câu query có sẵn
+Đọc theo thứ tự nghiệp vụ: **FROM** (lấy từ bảng nào) → **JOIN** (nối bảng nào) → **WHERE** (lọc gì) → **GROUP BY** (gộp theo gì) → **SELECT** (hiển thị cột nào) → **ORDER BY / LIMIT** (sắp xếp, giới hạn). Nắm được mạch này là hiểu được đa số báo cáo.
+
+> 💡 BA nên yêu cầu quyền **chỉ đọc (read-only)** trên môi trường báo cáo để chạy SELECT an toàn, không lo lỡ tay sửa/xóa dữ liệu thật.
+
+---
+
+## 11. Tóm tắt
 
 - **SELECT**: đọc dữ liệu.
 - **WHERE**: lọc theo điều kiện.
 - **INSERT/UPDATE/DELETE**: thao tác dữ liệu — luôn cẩn thận với UPDATE/DELETE thiếu WHERE!
 - **JOIN**: kết hợp nhiều bảng.
 - **GROUP BY + Aggregate**: thống kê, báo cáo.
+- **BA**: dùng `AS`, `DISTINCT`, `GROUP BY` để tự viết báo cáo; xin quyền **read-only** để chạy an toàn.

@@ -2,6 +2,6 @@
   "group": "ba-po-pm",
   "title": "API là gì?",
   "titleEn": "What is an API?",
-  "description": "REST API, JSON, endpoint, request/response và cách các hệ thống giao tiếp với nhau.",
-  "descriptionEn": "REST APIs, JSON, endpoints, request/response, and how systems communicate with each other."
+  "description": "REST API, endpoint, request/response, HTTP status code, phân trang, webhook và cách các hệ thống giao tiếp với nhau.",
+  "descriptionEn": "REST APIs, endpoints, request/response, HTTP status codes, pagination, webhooks, and how systems communicate with each other."
 }

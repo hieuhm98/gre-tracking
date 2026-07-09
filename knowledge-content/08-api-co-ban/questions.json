@@ -148,5 +148,85 @@
     "answer": 1,
     "explanation": "403 Forbidden: đã xác thực (authenticated) nhưng không có quyền (authorized) thực hiện hành động này. Ví dụ: user thường không có quyền xóa sản phẩm — chỉ admin mới được.",
     "explanationEn": "403 Forbidden: authenticated but not authorized to perform this action. For example, a regular user does not have permission to delete products — only an admin does."
+  },
+  {
+    "id": "q16",
+    "question": "Một HTTP request đầy đủ gồm 4 phần nào?",
+    "questionEn": "What are the 4 parts of a complete HTTP request?",
+    "options": [
+      "URL, Method, Headers, Body",
+      "Client, Server, Database, Cache",
+      "GET, POST, PUT, DELETE",
+      "JSON, XML, HTML, CSS"
+    ],
+    "optionsEn": [
+      "URL, Method, Headers, Body",
+      "Client, Server, Database, Cache",
+      "GET, POST, PUT, DELETE",
+      "JSON, XML, HTML, CSS"
+    ],
+    "answer": 0,
+    "explanation": "Một request gồm: URL (địa chỉ tài nguyên), Method (hành động), Headers (thông tin đi kèm như định dạng, xác thực) và Body (dữ liệu gửi lên). Response tương tự nhưng thay Method+URL bằng status code.",
+    "explanationEn": "A request has: URL (resource address), Method (action), Headers (accompanying info like format and auth), and Body (data sent up). A response is similar but replaces Method+URL with a status code."
+  },
+  {
+    "id": "q17",
+    "question": "Nhóm mã trạng thái 5xx (ví dụ 500, 503) cho biết điều gì?",
+    "questionEn": "What does the 5xx status code group (e.g. 500, 503) indicate?",
+    "options": [
+      "Request thành công",
+      "Lỗi do client gửi sai",
+      "Lỗi phía server (server gặp sự cố hoặc quá tải)",
+      "Yêu cầu chuyển hướng"
+    ],
+    "optionsEn": [
+      "The request succeeded",
+      "An error caused by the client sending something wrong",
+      "A server-side error (the server failed or is overloaded)",
+      "A redirection request"
+    ],
+    "answer": 2,
+    "explanation": "5xx = lỗi phía server. Mẹo nhớ: 4xx là 'lỗi do bạn' (client), 5xx là 'lỗi do server hỏng'. 500 = lỗi nội bộ, 503 = server quá tải/bảo trì.",
+    "explanationEn": "5xx = server-side error. Memory aid: 4xx is 'your fault' (client), 5xx is 'the server is broken'. 500 = internal error, 503 = overloaded/maintenance."
+  },
+  {
+    "id": "q18",
+    "question": "Trong URL `/api/products?category=laptop&page=2&size=20`, phần `?category=laptop&page=2&size=20` dùng để làm gì?",
+    "questionEn": "In the URL `/api/products?category=laptop&page=2&size=20`, what is the part `?category=laptop&page=2&size=20` used for?",
+    "options": [
+      "Xác thực người dùng",
+      "Lọc và phân trang dữ liệu (query string)",
+      "Định nghĩa cấu trúc bảng database",
+      "Mã hóa dữ liệu gửi lên"
+    ],
+    "optionsEn": [
+      "Authenticating the user",
+      "Filtering and paginating data (query string)",
+      "Defining the database table structure",
+      "Encrypting the submitted data"
+    ],
+    "answer": 1,
+    "explanation": "Phần sau dấu `?` là query string, gồm các cặp key=value nối bằng `&`. Ở đây: lọc theo category=laptop, lấy trang 2, mỗi trang 20 kết quả (bản ghi 21–40).",
+    "explanationEn": "The part after `?` is the query string, made of key=value pairs joined by `&`. Here: filter by category=laptop, get page 2, 20 results per page (records 21–40)."
+  },
+  {
+    "id": "q19",
+    "question": "Khi BA muốn hệ thống nhận cập nhật trạng thái đơn hàng real-time mà không phải liên tục hỏi server, nên dùng cơ chế nào?",
+    "questionEn": "When a BA wants a system to receive real-time order-status updates without continuously asking the server, which mechanism should be used?",
+    "options": [
+      "Polling mỗi giây",
+      "Webhook (server gọi ngược về Callback URL khi có sự kiện)",
+      "Tăng số lượng request GET",
+      "Xóa cache trình duyệt"
+    ],
+    "optionsEn": [
+      "Polling every second",
+      "A webhook (the server calls back to a Callback URL when an event happens)",
+      "Increasing the number of GET requests",
+      "Clearing the browser cache"
+    ],
+    "answer": 1,
+    "explanation": "Webhook để client cung cấp Callback URL; khi có thay đổi, server chủ động gọi ngược — real-time và hiệu quả. Polling (hỏi liên tục) tốn tài nguyên và có độ trễ.",
+    "explanationEn": "With a webhook, the client provides a Callback URL; when something changes, the server calls back — real-time and efficient. Polling (asking continuously) wastes resources and adds latency."
   }
 ]
