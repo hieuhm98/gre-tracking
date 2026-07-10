@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import { useAuth } from "@/context/auth";
 import { useLang } from "@/context/lang";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 
@@ -16,19 +15,9 @@ interface StaticTopic {
   descriptionEn?: string;
 }
 
-interface UserArticle {
-  id: string;
-  slug: string;
-  title: string;
-  author_id: string;
-  created_at: string;
-}
-
 export default function KnowledgePage() {
-  const { supabase, devMode } = useAuth();
-  const { t, pick, lang } = useLang();
+  const { t, pick } = useLang();
   const [staticTopics, setStaticTopics] = useState<StaticTopic[]>([]);
-  const [userArticles, setUserArticles] = useState<UserArticle[]>([]);
   const [loading, setLoading] = useState(true);
   const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
   const didInitAccordion = useRef(false);
@@ -36,7 +25,8 @@ export default function KnowledgePage() {
   const toggleGroup = (id: string) =>
     setOpenGroups((prev) => {
       const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
       return next;
     });
 
@@ -44,18 +34,10 @@ export default function KnowledgePage() {
     async function load() {
       const topics: StaticTopic[] = await fetch("/api/knowledge").then((r) => r.json());
       setStaticTopics(topics ?? []);
-
-      if (!devMode) {
-        const { data } = await supabase
-          .from("knowledge_articles")
-          .select("id, slug, title, author_id, created_at")
-          .order("created_at", { ascending: false });
-        setUserArticles(data ?? []);
-      }
       setLoading(false);
     }
     load();
-  }, [devMode]);
+  }, []);
 
   // Group topics by their group id, preserving GROUPS order.
   const grouped = GROUPS.map((g) => ({
@@ -146,46 +128,6 @@ export default function KnowledgePage() {
             </section>
           );
         })}
-      </div>
-
-      {/* Community articles */}
-      <div>
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider">
-            {t("knowledge.community")} ({userArticles.length})
-          </h2>
-          <Link href="/my-articles/new" className="btn-primary text-xs px-3 py-1.5">
-            {t("knowledge.writeArticle")}
-          </Link>
-        </div>
-        {userArticles.length === 0 ? (
-          <div className="card text-center py-10">
-            <p className="text-zinc-500 text-sm">{t("knowledge.noCommunity")}</p>
-            <Link href="/my-articles/new" className="inline-block mt-3 text-blue-400 text-sm hover:text-blue-300">
-              {t("knowledge.writeFirst")}
-            </Link>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {userArticles.map((article) => (
-              <Link
-                key={article.id}
-                href={`/knowledge/${article.slug}`}
-                className="card hover:border-zinc-600 hover:bg-zinc-800/80 transition-colors group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-medium text-zinc-100 group-hover:text-white text-sm">{article.title}</span>
-                  <span className="text-xs px-2 py-0.5 bg-violet-900/50 text-violet-300 rounded border border-violet-800 shrink-0 ml-2">
-                    {t("knowledge.community")}
-                  </span>
-                </div>
-                <div className="text-xs text-zinc-600 mt-1">
-                  {new Date(article.created_at).toLocaleDateString(lang === "vi" ? "vi-VN" : "en-US")}
-                </div>
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

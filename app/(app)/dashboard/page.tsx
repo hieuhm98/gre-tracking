@@ -1,75 +1,87 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useAuth } from "@/context/auth";
-import { PLAN, getDaysSinceStart } from "@/lib/constants";
-import { formatDate } from "@/lib/utils";
-import StatCard from "@/components/StatCard";
+import Link from "next/link";
+import { useLang } from "@/context/lang";
 
-export default function DashboardPage() {
-  const { user, supabase } = useAuth();
-  const [logs, setLogs] = useState<any[]>([]);
-  const [mockCount, setMockCount] = useState(0);
-  const [loading, setLoading] = useState(true);
+const CARDS = [
+  {
+    href: "/knowledge",
+    icon: "◉",
+    accent: "text-blue-300",
+    title: { vi: "Kiến thức", en: "Knowledge" },
+    desc: {
+      vi: "Các chủ đề IT cho BA/PO/PM và khóa AWS SAA-C03 — bài viết song ngữ kèm quiz.",
+      en: "IT topics for BA/PO/PM and the AWS SAA-C03 course — bilingual articles with quizzes.",
+    },
+  },
+  {
+    href: "/knowledge-review?quick=1",
+    icon: "⚡",
+    accent: "text-amber-300",
+    title: { vi: "Test nhanh", en: "Quick Test" },
+    desc: {
+      vi: "Bài kiểm tra ngẫu nhiên nhanh từ tất cả chủ đề để ôn tập mỗi ngày.",
+      en: "A fast randomized test across every topic to review each day.",
+    },
+  },
+  {
+    href: "/practice/questions",
+    icon: "✐",
+    accent: "text-sky-300",
+    title: { vi: "Bài tập thiết kế", en: "Design Exercises" },
+    desc: {
+      vi: "Câu hỏi mở về thiết kế CSDL, API và kiến trúc AWS — tự làm rồi mở đáp án chi tiết.",
+      en: "Open-ended database, API and AWS architecture questions — solve, then reveal a detailed answer.",
+    },
+  },
+  {
+    href: "/practice/sql",
+    icon: "▤",
+    accent: "text-emerald-300",
+    title: { vi: "Luyện tập SQL", en: "SQL Practice" },
+    desc: {
+      vi: "Viết và chạy SQL thật trên kho từ vựng tiếng Anh (~23k từ).",
+      en: "Write and run real SQL against the English word bank (~23k words).",
+    },
+  },
+];
 
-  useEffect(() => {
-    if (!user) return;
-    Promise.all([
-      supabase
-        .from("daily_logs")
-        .select("pages_read, vocab_count, date")
-        .eq("user_id", user.id)
-        .order("date", { ascending: false }),
-      supabase
-        .from("mock_exams")
-        .select("id", { count: "exact", head: true })
-        .eq("user_id", user.id),
-    ]).then(([{ data: logsData }, { count }]) => {
-      setLogs(logsData ?? []);
-      setMockCount(count ?? 0);
-      setLoading(false);
-    });
-  }, [user]);
-
-  const totalPages = logs.reduce((s, r) => s + (r.pages_read ?? 0), 0);
-  const totalVocab = logs.reduce((s, r) => s + (r.vocab_count ?? 0), 0);
-  const totalDaysLogged = logs.length;
-
-  const daysSinceStart = getDaysSinceStart();
-
-  if (loading) return <div className="text-zinc-500 text-sm p-8">Loading...</div>;
-
+export default function HomePage() {
+  const { pick } = useLang();
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div>
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="text-2xl font-bold">
+          {pick("Nền tảng học IT & tiếng Anh", "IT & English Learning Platform")}
+        </h1>
         <p className="text-zinc-400 text-sm mt-1">
-          Day {daysSinceStart} &middot; Exam target: mid-Sep 2026
+          {pick(
+            "Học kiến thức IT/AWS song ngữ, luyện quiz, thực hành thiết kế hệ thống và viết SQL — miễn phí, không cần đăng nhập.",
+            "Learn bilingual IT/AWS knowledge, take quizzes, practice system design and write SQL — free, no login required."
+          )}
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <StatCard label="Pages read" value={totalPages} total={PLAN.totals.pages} unit="/ 700" />
-        <StatCard label="Vocab learned" value={totalVocab} total={PLAN.totals.vocab} unit="/ 5000" />
-        <StatCard label="Days logged" value={totalDaysLogged} unit="days" />
-        <StatCard label="Mock exams" value={mockCount} unit="completed" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {CARDS.map((c) => (
+          <Link
+            key={c.href}
+            href={c.href}
+            className="card hover:border-zinc-600 transition-colors group"
+          >
+            <div className={`text-2xl mb-2 ${c.accent}`}>{c.icon}</div>
+            <h2 className="text-lg font-semibold text-zinc-100 group-hover:text-white">
+              {pick(c.title.vi, c.title.en)}
+            </h2>
+            <p className="text-sm text-zinc-400 mt-1.5 leading-relaxed">
+              {pick(c.desc.vi, c.desc.en)}
+            </p>
+            <span className="inline-block mt-3 text-sm text-blue-400 group-hover:text-blue-300">
+              {pick("Mở →", "Open →")}
+            </span>
+          </Link>
+        ))}
       </div>
-
-      {logs.length > 0 && (
-        <div>
-          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">Recent logs</h2>
-          <div className="card divide-y divide-zinc-800">
-            {logs.slice(0, 5).map((log) => (
-              <div key={log.date} className="flex justify-between py-3 first:pt-0 last:pb-0 text-sm">
-                <span className="text-zinc-400">{formatDate(log.date)}</span>
-                <span className="text-zinc-200">
-                  {log.pages_read ?? 0} pages &middot; {log.vocab_count ?? 0} words
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

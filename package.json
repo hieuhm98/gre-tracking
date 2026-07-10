@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.3.0",
-    "@supabase/supabase-js": "^2.44.1",
     "@tailwindcss/typography": "^0.5.19",
     "better-sqlite3": "^12.11.1",
     "class-variance-authority": "^0.7.0",

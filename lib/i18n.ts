@@ -15,45 +15,24 @@ type Dict = Record<string, string>;
 
 const vi: Dict = {
   // Sidebar
-  "nav.dashboard": "Bảng điều khiển",
-  "nav.log": "Nhật ký hằng ngày",
-  "nav.milestones": "Cột mốc",
-  "nav.mockExams": "Thi thử",
+  "nav.home": "Trang chủ",
   "nav.knowledge": "Kiến thức",
   "nav.review": "Ôn tập",
   "nav.sqlPractice": "Luyện tập SQL",
+  "nav.exercises": "Bài tập thiết kế",
   "nav.quickTest": "Test nhanh hằng ngày",
-  "nav.myArticles": "Bài viết của tôi",
   "nav.sectionKnowledge": "Học tập",
-  "nav.signOut": "Đăng xuất",
-  "nav.devMode": "Chế độ dev (bỏ qua đăng nhập)",
+  "nav.sectionPractice": "Luyện tập",
 
   // Knowledge list
   "knowledge.title": "Kiến thức",
   "knowledge.subtitle": "Học theo nhóm — chọn một chủ đề để đọc và làm quiz.",
-  "knowledge.official": "Chính thức",
-  "knowledge.community": "Cộng đồng",
-  "knowledge.writeArticle": "+ Viết bài",
-  "knowledge.noCommunity": "Chưa có bài viết cộng đồng nào.",
-  "knowledge.writeFirst": "Viết bài đầu tiên →",
   "knowledge.topics": "chủ đề",
-  "knowledge.loading": "Đang tải...",
 
   // Article page
   "article.back": "← Kiến thức",
   "article.official": "Chính thức",
-  "article.community": "Cộng đồng",
   "article.notFound": "Không tìm thấy bài viết.",
-  "article.addQuestion": "+ Thêm câu hỏi cho chủ đề này",
-  "article.newQuestion": "Thêm câu hỏi mới",
-  "article.question": "Câu hỏi",
-  "article.questionPlaceholder": "Nhập câu hỏi...",
-  "article.options": "Các lựa chọn (chọn đáp án đúng)",
-  "article.explanation": "Giải thích (không bắt buộc)",
-  "article.explanationPlaceholder": "Giải thích đáp án đúng...",
-  "article.save": "Lưu câu hỏi",
-  "article.saving": "Đang lưu...",
-  "article.cancel": "Hủy",
 
   // Quiz
   "quiz.title": "Kiểm tra kiến thức",
@@ -93,45 +72,24 @@ const vi: Dict = {
 
 const en: Dict = {
   // Sidebar
-  "nav.dashboard": "Dashboard",
-  "nav.log": "Daily Log",
-  "nav.milestones": "Milestones",
-  "nav.mockExams": "Mock Exams",
+  "nav.home": "Home",
   "nav.knowledge": "Knowledge",
   "nav.review": "Review",
   "nav.sqlPractice": "SQL Practice",
+  "nav.exercises": "Design Exercises",
   "nav.quickTest": "Daily Quick Test",
-  "nav.myArticles": "My Articles",
   "nav.sectionKnowledge": "Learning",
-  "nav.signOut": "Sign out",
-  "nav.devMode": "Dev mode (auth skipped)",
+  "nav.sectionPractice": "Practice",
 
   // Knowledge list
   "knowledge.title": "Knowledge",
   "knowledge.subtitle": "Learn by track — pick a topic to read and quiz yourself.",
-  "knowledge.official": "Official",
-  "knowledge.community": "Community",
-  "knowledge.writeArticle": "+ Write Article",
-  "knowledge.noCommunity": "No community articles yet.",
-  "knowledge.writeFirst": "Write the first article →",
   "knowledge.topics": "topics",
-  "knowledge.loading": "Loading...",
 
   // Article page
   "article.back": "← Knowledge",
   "article.official": "Official",
-  "article.community": "Community",
   "article.notFound": "Article not found.",
-  "article.addQuestion": "+ Add question to this topic",
-  "article.newQuestion": "Add new question",
-  "article.question": "Question",
-  "article.questionPlaceholder": "Enter question...",
-  "article.options": "Answer options (select the correct answer)",
-  "article.explanation": "Explanation (optional)",
-  "article.explanationPlaceholder": "Explain the correct answer...",
-  "article.save": "Save question",
-  "article.saving": "Saving...",
-  "article.cancel": "Cancel",
 
   // Quiz
   "quiz.title": "Knowledge Check",

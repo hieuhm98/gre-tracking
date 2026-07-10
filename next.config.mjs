@@ -5,6 +5,12 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["better-sqlite3"],
   },
+  async redirects() {
+    return [
+      // The SQL playground moved under the new /practice parent.
+      { source: "/sql-practice", destination: "/practice/sql", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

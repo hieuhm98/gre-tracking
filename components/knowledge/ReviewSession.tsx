@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { useAuth } from "@/context/auth";
 import { useLang } from "@/context/lang";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
@@ -13,10 +12,6 @@ interface StaticTopic {
   title: string;
   titleEn?: string;
   description?: string;
-}
-
-interface CommunityQuestion extends Question {
-  topic_slug: string;
 }
 
 type SessionQuestion = Question & { topic_slug: string };
@@ -36,7 +31,6 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function ReviewSession() {
-  const { supabase, devMode } = useAuth();
   const { t, pick, lang } = useLang();
   const [topics, setTopics] = useState<StaticTopic[]>([]);
   const [selectedGroups, setSelectedGroups] = useState<Set<string>>(new Set());
@@ -92,26 +86,7 @@ export default function ReviewSession() {
       })
     );
 
-    let communityMapped: SessionQuestion[] = [];
-    if (!devMode && slugs.length > 0) {
-      const { data: communityQs } = await supabase
-        .from("knowledge_questions")
-        .select("*")
-        .in("topic_slug", slugs);
-      communityMapped = (communityQs ?? []).map((q: CommunityQuestion) => ({
-        id: q.id,
-        question: q.question,
-        questionEn: (q as any).questionEn,
-        options: q.options,
-        optionsEn: (q as any).optionsEn,
-        answer: q.answer,
-        explanation: q.explanation,
-        explanationEn: (q as any).explanationEn,
-        topic_slug: q.topic_slug,
-      }));
-    }
-
-    const combined = shuffle([...staticQs, ...communityMapped]);
+    const combined = shuffle(staticQs);
     const final = n === 0 ? combined : combined.slice(0, n);
     setSessionQ(final);
     setAnswers({});

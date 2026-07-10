@@ -1,42 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useAuth } from "@/context/auth";
+import { usePathname } from "next/navigation";
 import { useLang } from "@/context/lang";
 import { LANGS } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-const NAV = [
-  { href: "/dashboard", label: "nav.dashboard", icon: "◈" },
-  { href: "/log", label: "nav.log", icon: "✦" },
-  { href: "/milestones", label: "nav.milestones", icon: "◎" },
-  { href: "/mock-exams", label: "nav.mockExams", icon: "◷" },
-];
+const NAV = [{ href: "/dashboard", label: "nav.home", icon: "◈" }];
 
 const KNOWLEDGE_NAV = [
   { href: "/knowledge", label: "nav.knowledge", icon: "◉" },
   { href: "/knowledge-review", label: "nav.review", icon: "⟳" },
-  { href: "/sql-practice", label: "nav.sqlPractice", icon: "▤" },
-  { href: "/my-articles", label: "nav.myArticles", icon: "✎" },
+];
+
+const PRACTICE_NAV = [
+  { href: "/practice/questions", label: "nav.exercises", icon: "✐" },
+  { href: "/practice/sql", label: "nav.sqlPractice", icon: "▤" },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const router = useRouter();
-  const { supabase, devMode } = useAuth();
   const { lang, setLang, t } = useLang();
-
-  async function handleSignOut() {
-    await supabase.auth.signOut();
-    router.push("/login");
-  }
 
   return (
     <aside className="w-56 shrink-0 border-r border-zinc-800 flex flex-col h-screen sticky top-0">
       <div className="px-5 py-6 border-b border-zinc-800">
         <div className="font-bold text-lg tracking-tight">Milestone Tracking</div>
-        <div className="text-xs text-zinc-500 mt-0.5">25 Mar → 7 Aug 2026</div>
+        <div className="text-xs text-zinc-500 mt-0.5">IT · AWS · English</div>
       </div>
 
       {/* Language toggle */}
@@ -87,7 +77,28 @@ export default function Sidebar() {
             href={item.href}
             className={cn(
               "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
-              pathname === item.href || (item.href === "/my-articles" && pathname.startsWith("/my-articles"))
+              pathname === item.href
+                ? "bg-zinc-800 text-zinc-100 font-medium"
+                : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60"
+            )}
+          >
+            <span className="text-base">{item.icon}</span>
+            {t(item.label)}
+          </Link>
+        ))}
+
+        <div className="pt-3 pb-1">
+          <div className="px-3 text-xs font-semibold text-zinc-600 uppercase tracking-wider mb-1">
+            {t("nav.sectionPractice")}
+          </div>
+        </div>
+        {PRACTICE_NAV.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={cn(
+              "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
+              pathname === item.href
                 ? "bg-zinc-800 text-zinc-100 font-medium"
                 : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60"
             )}
@@ -106,22 +117,6 @@ export default function Sidebar() {
           {t("nav.quickTest")}
         </Link>
       </nav>
-
-      <div className="px-3 py-4 border-t border-zinc-800">
-        {devMode ? (
-          <div className="text-xs text-zinc-600 px-3 py-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 align-middle" />
-            {t("nav.devMode")}
-          </div>
-        ) : (
-          <button
-            onClick={handleSignOut}
-            className="w-full text-left flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/60 transition-colors"
-          >
-            <span>→</span> {t("nav.signOut")}
-          </button>
-        )}
-      </div>
     </aside>
   );
 }
