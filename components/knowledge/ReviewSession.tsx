@@ -149,17 +149,17 @@ export default function ReviewSession() {
       <div className="max-w-2xl space-y-6">
         <div>
           <h1 className="text-2xl font-bold">{t("review.title")}</h1>
-          <p className="text-zinc-400 text-sm mt-1">{t("review.subtitle")}</p>
+          <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">{t("review.subtitle")}</p>
         </div>
 
         {/* Daily Quick Test */}
-        <div className="card bg-blue-950/30 border-blue-900/60 space-y-3">
+        <div className="card bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/60 space-y-3">
           <div>
             <div className="flex items-center gap-2">
               <span className="text-lg">⚡</span>
-              <h2 className="font-semibold text-blue-200">{t("review.quickTitle")}</h2>
+              <h2 className="font-semibold text-blue-800 dark:text-blue-200">{t("review.quickTitle")}</h2>
             </div>
-            <p className="text-xs text-blue-300/70 mt-1">{t("review.quickSubtitle")}</p>
+            <p className="text-xs text-blue-600/80 dark:text-blue-300/70 mt-1">{t("review.quickSubtitle")}</p>
           </div>
           <div className="flex flex-wrap gap-2">
             <button
@@ -183,7 +183,7 @@ export default function ReviewSession() {
         {/* Track filter */}
         {activeGroups.length > 1 && (
           <div className="card space-y-3">
-            <span className="text-sm font-medium text-zinc-300">{t("review.groups")}</span>
+            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t("review.groups")}</span>
             <div className="flex flex-wrap gap-2">
               {activeGroups.map((g) => {
                 const on = selectedGroups.has(g.id);
@@ -194,7 +194,7 @@ export default function ReviewSession() {
                     onClick={() => toggleGroup(g.id)}
                     className={cn(
                       "px-3 py-1.5 rounded-lg text-sm border transition-colors",
-                      on ? accent.badge : "bg-zinc-800 border-zinc-700 text-zinc-500 hover:bg-zinc-700"
+                      on ? accent.badge : "bg-zinc-100 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-700"
                     )}
                   >
                     {g.icon} {pick(g.label, g.labelEn)}
@@ -208,10 +208,10 @@ export default function ReviewSession() {
         {/* Topic selection */}
         <div className="card space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-zinc-300">
+            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
               {t("review.topics")} ({selectedVisibleCount}/{visibleTopics.length})
             </span>
-            <button onClick={toggleAll} className="text-xs text-blue-400 hover:text-blue-300">
+            <button onClick={toggleAll} className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
               {visibleTopics.every((tp) => selected.has(tp.slug)) ? t("review.deselectAll") : t("review.selectAll")}
             </button>
           </div>
@@ -220,8 +220,8 @@ export default function ReviewSession() {
               <label key={tp.slug} className={cn(
                 "flex items-center gap-2 px-3 py-2 rounded-lg cursor-pointer border transition-colors text-sm",
                 selected.has(tp.slug)
-                  ? "bg-blue-900/30 border-blue-700 text-blue-200"
-                  : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600"
+                  ? "bg-blue-50 dark:bg-blue-900/30 border-blue-300 dark:border-blue-700 text-blue-800 dark:text-blue-200"
+                  : "bg-zinc-100 dark:bg-zinc-800/50 border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-400 dark:hover:border-zinc-600"
               )}>
                 <input
                   type="checkbox"
@@ -237,7 +237,7 @@ export default function ReviewSession() {
 
         {/* Count */}
         <div className="card space-y-3">
-          <span className="text-sm font-medium text-zinc-300">{t("review.numQuestions")}</span>
+          <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t("review.numQuestions")}</span>
           <div className="flex gap-2">
             {COUNTS.map((c) => (
               <button
@@ -247,7 +247,7 @@ export default function ReviewSession() {
                   "px-4 py-2 rounded-lg text-sm border transition-colors",
                   count === c
                     ? "bg-blue-600 border-blue-500 text-white"
-                    : "bg-zinc-800 border-zinc-700 text-zinc-400 hover:bg-zinc-700"
+                    : "bg-zinc-100 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700"
                 )}
               >
                 {c === 0 ? t("review.all") : c}
@@ -275,7 +275,7 @@ export default function ReviewSession() {
           <div className="flex items-center justify-between">
             <div>
               <div className="text-3xl font-bold">{correctCount}/{localized.length}</div>
-              <div className="text-zinc-400 text-sm mt-1">
+              <div className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">
                 {localized.length > 0 ? Math.round((correctCount / localized.length) * 100) : 0}% {t("quiz.correct")}
               </div>
             </div>
@@ -293,16 +293,16 @@ export default function ReviewSession() {
             return (
               <div key={`${q.id}-${i}`} className={cn(
                 "card border-l-4",
-                isCorrect ? "border-l-green-500" : skipped ? "border-l-zinc-600" : "border-l-red-500"
+                isCorrect ? "border-l-green-500" : skipped ? "border-l-zinc-400 dark:border-l-zinc-600" : "border-l-red-500"
               )}>
                 <div className="flex items-start gap-2 mb-3">
                   <span className={cn(
                     "text-xs font-bold px-2 py-0.5 rounded shrink-0",
-                    isCorrect ? "bg-green-900 text-green-300" : skipped ? "bg-zinc-700 text-zinc-400" : "bg-red-900 text-red-300"
+                    isCorrect ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300" : skipped ? "bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400" : "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
                   )}>
                     {isCorrect ? "✓" : skipped ? "—" : "✗"}
                   </span>
-                  <p className="text-sm font-medium text-zinc-200">
+                  <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
                     <span className="text-zinc-500 mr-1">{i + 1}.</span>{q.question}
                   </p>
                 </div>
@@ -313,8 +313,8 @@ export default function ReviewSession() {
                     return (
                       <div key={oi} className={cn(
                         "flex gap-2 px-3 py-1.5 rounded text-xs",
-                        isCorrectOpt ? "bg-green-900/40 text-green-300" :
-                        isUserOpt ? "bg-red-900/40 text-red-300" : "text-zinc-500"
+                        isCorrectOpt ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300" :
+                        isUserOpt ? "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300" : "text-zinc-500"
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
                         <span>{opt}</span>
@@ -325,7 +325,7 @@ export default function ReviewSession() {
                   })}
                 </div>
                 {q.explanation && (
-                  <div className="bg-zinc-800 rounded px-3 py-2 text-xs text-zinc-400">
+                  <div className="bg-zinc-100 dark:bg-zinc-800 rounded px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400">
                     <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>{q.explanation}
                   </div>
                 )}
@@ -341,7 +341,7 @@ export default function ReviewSession() {
   if (localized.length === 0) {
     return (
       <div className="max-w-2xl space-y-4">
-        <p className="text-zinc-400 text-sm">{t("review.noQuestions")}</p>
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm">{t("review.noQuestions")}</p>
         <button onClick={() => setStarted(false)} className="btn-secondary text-sm">{t("review.exit")}</button>
       </div>
     );
@@ -352,7 +352,7 @@ export default function ReviewSession() {
     <div className="max-w-2xl space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">{t("review.title")}</h1>
-        <button onClick={() => setStarted(false)} className="text-xs text-zinc-500 hover:text-zinc-300">{t("review.exit")}</button>
+        <button onClick={() => setStarted(false)} className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">{t("review.exit")}</button>
       </div>
 
       {/* Progress */}
@@ -361,7 +361,7 @@ export default function ReviewSession() {
           <span>{t("review.question")} {currentIdx + 1}/{localized.length}</span>
           <span>{t("review.answered")}: {Object.keys(answers).length}</span>
         </div>
-        <div className="h-1.5 bg-zinc-800 rounded-full">
+        <div className="h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full">
           <div
             className="h-full bg-blue-500 rounded-full transition-all"
             style={{ width: `${((currentIdx + 1) / localized.length) * 100}%` }}
@@ -378,7 +378,7 @@ export default function ReviewSession() {
             className={cn(
               "w-8 h-8 rounded text-xs font-medium border transition-colors",
               i === currentIdx && "ring-2 ring-blue-500",
-              answers[i] !== undefined ? "bg-blue-900 border-blue-700 text-blue-200" : "bg-zinc-800 border-zinc-700 text-zinc-500 hover:bg-zinc-700"
+              answers[i] !== undefined ? "bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-800 dark:text-blue-200" : "bg-zinc-100 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-700"
             )}
           >
             {i + 1}
@@ -388,7 +388,7 @@ export default function ReviewSession() {
 
       {/* Question */}
       <div className="card space-y-4">
-        <p className="text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+        <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
         <div className="space-y-2">
           {currentQ.options.map((opt, i) => {
             const isSel = answers[currentIdx] === i;
@@ -399,13 +399,13 @@ export default function ReviewSession() {
                 className={cn(
                   "w-full text-left flex items-start gap-3 px-4 py-3 rounded-lg border text-sm transition-colors",
                   isSel
-                    ? "bg-blue-900/50 border-blue-600 text-blue-100"
-                    : "bg-zinc-800/50 border-zinc-700 text-zinc-300 hover:bg-zinc-800"
+                    ? "bg-blue-50 dark:bg-blue-900/50 border-blue-400 dark:border-blue-600 text-blue-800 dark:text-blue-100"
+                    : "bg-zinc-100 dark:bg-zinc-800/50 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800"
                 )}
               >
                 <span className={cn(
                   "w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0",
-                  isSel ? "bg-blue-600 border-blue-500 text-white" : "border-zinc-600 text-zinc-500"
+                  isSel ? "bg-blue-600 border-blue-500 text-white" : "border-zinc-400 dark:border-zinc-600 text-zinc-500"
                 )}>
                   {optionLabels[i]}
                 </span>

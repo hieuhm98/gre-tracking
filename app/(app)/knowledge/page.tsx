@@ -59,7 +59,7 @@ export default function KnowledgePage() {
     <div className="max-w-4xl space-y-10">
       <div>
         <h1 className="text-2xl font-bold">{t("knowledge.title")}</h1>
-        <p className="text-zinc-400 text-sm mt-1">{t("knowledge.subtitle")}</p>
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">{t("knowledge.subtitle")}</p>
       </div>
 
       <div className="space-y-3">
@@ -67,17 +67,17 @@ export default function KnowledgePage() {
           const accent = GROUP_ACCENT[group.accent];
           const isOpen = openGroups.has(group.id);
           return (
-            <section key={group.id} className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+            <section key={group.id} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
               <button
                 type="button"
                 onClick={() => toggleGroup(group.id)}
                 aria-expanded={isOpen}
-                className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-zinc-800/60 transition-colors"
+                className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-zinc-200 dark:hover:bg-zinc-800/60 transition-colors"
               >
                 <span className="text-xl shrink-0">{group.icon}</span>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
-                    <h2 className="text-base font-bold text-zinc-100 truncate">
+                    <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100 truncate">
                       {pick(group.label, group.labelEn)}
                     </h2>
                     <span className={`text-xs px-2 py-0.5 rounded border shrink-0 ${accent.badge}`}>
@@ -96,7 +96,7 @@ export default function KnowledgePage() {
               </button>
 
               {isOpen && (
-                <div className="px-4 pb-4 pt-1 border-t border-zinc-800">
+                <div className="px-4 pb-4 pt-1 border-t border-zinc-200 dark:border-zinc-800">
                   <p className="text-xs text-zinc-500 mb-4 mt-3">
                     {pick(group.description, group.descriptionEn)}
                   </p>
@@ -105,14 +105,14 @@ export default function KnowledgePage() {
                       <Link
                         key={topic.slug}
                         href={`/knowledge/${topic.slug}`}
-                        className="card hover:border-zinc-600 hover:bg-zinc-800/80 transition-colors group"
+                        className="card hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800/80 transition-colors group"
                       >
                         <div className="flex items-start gap-3">
-                          <span className="text-xs font-mono text-zinc-600 mt-0.5 shrink-0 w-6">
+                          <span className="text-xs font-mono text-zinc-400 dark:text-zinc-600 mt-0.5 shrink-0 w-6">
                             {String(i + 1).padStart(2, "0")}
                           </span>
                           <div>
-                            <div className="font-medium text-zinc-100 group-hover:text-white text-sm">
+                            <div className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-900 dark:group-hover:text-white text-sm">
                               {pick(topic.title, topic.titleEn)}
                             </div>
                             <div className="text-xs text-zinc-500 mt-1 leading-relaxed">

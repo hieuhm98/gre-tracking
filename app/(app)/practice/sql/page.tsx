@@ -117,7 +117,7 @@ export default function SqlPracticePage() {
     <div className="max-w-[1400px] mx-auto">
       <div className="mb-5">
         <h1 className="text-2xl font-bold">{pick("Luyện tập SQL", "SQL Practice")}</h1>
-        <p className="text-zinc-400 text-sm mt-1">
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">
           {pick(
             "Viết truy vấn SQL và chạy trên kho từ vựng tiếng Anh. Mọi truy vấn chạy trên bản sao trong bộ nhớ — dữ liệu gốc không bị thay đổi.",
             "Write SQL and run it against the English word bank. Every query runs on an in-memory copy — the stored data is never changed."
@@ -136,13 +136,13 @@ export default function SqlPracticePage() {
               onKeyDown={onKeyDown}
               spellCheck={false}
               rows={8}
-              className="w-full bg-zinc-950 text-zinc-100 font-mono text-sm p-4 resize-y focus:outline-none border-b border-zinc-800"
+              className="w-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-mono text-sm p-4 resize-y focus:outline-none border-b border-zinc-200 dark:border-zinc-800"
               placeholder="SELECT * FROM words LIMIT 10;"
             />
-            <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-900">
+            <div className="flex items-center justify-between px-4 py-2.5 bg-white dark:bg-zinc-900">
               <span className="text-xs text-zinc-500">
                 {pick("Nhấn", "Press")}{" "}
-                <kbd className="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-zinc-300">
+                <kbd className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded text-zinc-700 dark:text-zinc-300">
                   Ctrl+Enter
                 </kbd>{" "}
                 {pick("để chạy", "to run")}
@@ -159,7 +159,7 @@ export default function SqlPracticePage() {
               <button
                 key={ex.en}
                 onClick={() => insertSnippet(ex.sql)}
-                className="text-xs px-2.5 py-1.5 rounded-lg bg-zinc-800/70 text-zinc-300 hover:bg-zinc-700 border border-zinc-700/60 transition-colors"
+                className="text-xs px-2.5 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/70 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-700 border border-zinc-300 dark:border-zinc-700/60 transition-colors"
               >
                 {pick(ex.vi, ex.en)}
               </button>
@@ -176,7 +176,7 @@ export default function SqlPracticePage() {
             {pick("Cấu trúc bảng", "Table structures")}
           </div>
           {schemaError && (
-            <div className="text-xs text-red-400 card">{schemaError}</div>
+            <div className="text-xs text-red-600 dark:text-red-400 card">{schemaError}</div>
           )}
           {schema.map((t) => (
             <div key={t.name} className="card p-3">
@@ -184,7 +184,7 @@ export default function SqlPracticePage() {
                 onClick={() => insertSnippet(`SELECT * FROM ${t.name} LIMIT 20;`)}
                 className="flex items-baseline justify-between w-full text-left group"
               >
-                <span className="font-mono text-sm text-blue-300 group-hover:text-blue-200">
+                <span className="font-mono text-sm text-blue-700 dark:text-blue-300 group-hover:text-blue-800 dark:group-hover:text-blue-200">
                   {t.name}
                 </span>
                 <span className="text-[11px] text-zinc-500">
@@ -197,11 +197,11 @@ export default function SqlPracticePage() {
                     key={c.name}
                     className="flex items-baseline justify-between text-xs font-mono"
                   >
-                    <span className="text-zinc-300">
+                    <span className="text-zinc-700 dark:text-zinc-300">
                       {c.name}
-                      {c.pk && <span className="text-amber-400/80 ml-1">PK</span>}
+                      {c.pk && <span className="text-amber-600 dark:text-amber-400/80 ml-1">PK</span>}
                     </span>
-                    <span className="text-zinc-600">{c.type || "—"}</span>
+                    <span className="text-zinc-400 dark:text-zinc-600">{c.type || "—"}</span>
                   </div>
                 ))}
               </div>
@@ -222,11 +222,11 @@ function ResultView({
 }) {
   if (result.error) {
     return (
-      <div className="card border-red-900/60 bg-red-950/20">
-        <div className="text-xs font-semibold text-red-400 uppercase tracking-wider mb-1">
+      <div className="card border-red-200 dark:border-red-900/60 bg-red-50 dark:bg-red-950/20">
+        <div className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider mb-1">
           {pick("Lỗi", "Error")}
         </div>
-        <pre className="text-sm text-red-300 whitespace-pre-wrap font-mono">
+        <pre className="text-sm text-red-700 dark:text-red-300 whitespace-pre-wrap font-mono">
           {result.error}
         </pre>
       </div>
@@ -236,14 +236,14 @@ function ResultView({
   // Non-SELECT statement (INSERT/UPDATE/CREATE/...)
   if (result.columns.length === 0) {
     return (
-      <div className="card text-sm text-zinc-300">
+      <div className="card text-sm text-zinc-700 dark:text-zinc-300">
         {result.changes !== null
           ? pick(
               `Thực thi thành công · ${result.changes} dòng bị ảnh hưởng`,
               `Statement executed · ${result.changes} row(s) affected`
             )
           : pick("Thực thi thành công.", "Statement executed.")}
-        <span className="text-zinc-600 ml-2">
+        <span className="text-zinc-400 dark:text-zinc-600 ml-2">
           ({result.elapsedMs.toFixed(1)} ms)
         </span>
       </div>
@@ -252,7 +252,7 @@ function ResultView({
 
   return (
     <div className="card p-0 overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-zinc-800 text-xs text-zinc-500">
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-zinc-200 dark:border-zinc-800 text-xs text-zinc-500">
         <span>
           {result.rowCount.toLocaleString()} {pick("dòng", "rows")}
           {result.truncated &&
@@ -262,12 +262,12 @@ function ResultView({
       </div>
       <div className="overflow-auto max-h-[60vh]">
         <table className="w-full text-sm border-collapse">
-          <thead className="sticky top-0 bg-zinc-900">
+          <thead className="sticky top-0 bg-white dark:bg-zinc-900">
             <tr>
               {result.columns.map((c, i) => (
                 <th
                   key={i}
-                  className="text-left font-semibold text-zinc-300 px-3 py-2 border-b border-zinc-800 whitespace-nowrap"
+                  className="text-left font-semibold text-zinc-700 dark:text-zinc-300 px-3 py-2 border-b border-zinc-200 dark:border-zinc-800 whitespace-nowrap"
                 >
                   {c}
                 </th>
@@ -276,13 +276,13 @@ function ResultView({
           </thead>
           <tbody>
             {result.rows.map((row, ri) => (
-              <tr key={ri} className="hover:bg-zinc-800/40">
+              <tr key={ri} className="hover:bg-zinc-200 dark:hover:bg-zinc-800/40">
                 {row.map((cell, ci) => (
                   <td
                     key={ci}
                     className={cn(
-                      "px-3 py-1.5 border-b border-zinc-800/60 font-mono text-xs align-top",
-                      cell === null ? "text-zinc-600 italic" : "text-zinc-200"
+                      "px-3 py-1.5 border-b border-zinc-200 dark:border-zinc-800/60 font-mono text-xs align-top",
+                      cell === null ? "text-zinc-400 dark:text-zinc-600 italic" : "text-zinc-800 dark:text-zinc-200"
                     )}
                   >
                     {cell === null ? "NULL" : String(cell)}

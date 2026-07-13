@@ -45,7 +45,7 @@ export default function QuizBlock({ questions, title }: Props) {
 
   if (questions.length === 0) {
     return (
-      <div className="mt-10 border-t border-zinc-700 pt-8 text-sm text-zinc-500">
+      <div className="mt-10 border-t border-zinc-300 dark:border-zinc-700 pt-8 text-sm text-zinc-500">
         {t("quiz.empty")}
       </div>
     );
@@ -70,9 +70,9 @@ export default function QuizBlock({ questions, title }: Props) {
   const optionLabels = ["A", "B", "C", "D", "E"];
 
   return (
-    <div className="mt-10 border-t border-zinc-700 pt-8">
+    <div className="mt-10 border-t border-zinc-300 dark:border-zinc-700 pt-8">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-semibold text-zinc-100">{title ?? t("quiz.title")}</h2>
+        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">{title ?? t("quiz.title")}</h2>
         <span className="text-xs text-zinc-500">{questions.length} {t("quiz.questions")}</span>
       </div>
 
@@ -89,10 +89,10 @@ export default function QuizBlock({ questions, title }: Props) {
               className={cn(
                 "w-9 h-9 rounded-lg text-sm font-medium transition-colors border",
                 i === currentIdx && "ring-2 ring-blue-500",
-                isCorrect && "bg-green-800 border-green-600 text-green-200",
-                isWrong && "bg-red-900 border-red-700 text-red-200",
-                answered && !showResults && "bg-blue-900 border-blue-700 text-blue-200",
-                !answered && "bg-zinc-800 border-zinc-700 text-zinc-400 hover:bg-zinc-700"
+                isCorrect && "bg-green-100 dark:bg-green-800 border-green-400 dark:border-green-600 text-green-800 dark:text-green-200",
+                isWrong && "bg-red-100 dark:bg-red-900 border-red-400 dark:border-red-700 text-red-800 dark:text-red-200",
+                answered && !showResults && "bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 text-blue-800 dark:text-blue-200",
+                !answered && "bg-zinc-100 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-300 dark:hover:bg-zinc-700"
               )}
             >
               {i + 1}
@@ -108,7 +108,7 @@ export default function QuizBlock({ questions, title }: Props) {
             <span className="text-xs font-mono text-zinc-500 mt-0.5 shrink-0">
               {currentIdx + 1}/{localized.length}
             </span>
-            <p className="text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+            <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
           </div>
 
           <div className="space-y-2">
@@ -121,13 +121,13 @@ export default function QuizBlock({ questions, title }: Props) {
                   className={cn(
                     "w-full text-left flex items-start gap-3 px-4 py-3 rounded-lg border transition-colors text-sm",
                     selected
-                      ? "bg-blue-900/50 border-blue-600 text-blue-100"
-                      : "bg-zinc-800/50 border-zinc-700 text-zinc-300 hover:bg-zinc-800 hover:border-zinc-600"
+                      ? "bg-blue-50 dark:bg-blue-900/50 border-blue-400 dark:border-blue-600 text-blue-800 dark:text-blue-100"
+                      : "bg-zinc-100 dark:bg-zinc-800/50 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600"
                   )}
                 >
                   <span className={cn(
                     "w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0 mt-0.5",
-                    selected ? "bg-blue-600 border-blue-500 text-white" : "border-zinc-600 text-zinc-500"
+                    selected ? "bg-blue-600 border-blue-500 text-white" : "border-zinc-400 dark:border-zinc-600 text-zinc-500"
                   )}>
                     {optionLabels[i]}
                   </span>
@@ -170,13 +170,13 @@ export default function QuizBlock({ questions, title }: Props) {
       {/* Results */}
       {showResults && (
         <div className="space-y-4">
-          <div className="card bg-zinc-800/80">
+          <div className="card bg-zinc-100 dark:bg-zinc-800/80">
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-2xl font-bold text-zinc-100">
+                <div className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
                   {correctCount}/{localized.length}
                 </div>
-                <div className="text-sm text-zinc-400 mt-0.5">
+                <div className="text-sm text-zinc-600 dark:text-zinc-400 mt-0.5">
                   {Math.round((correctCount / localized.length) * 100)}% {t("quiz.correct")}
                 </div>
               </div>
@@ -194,16 +194,16 @@ export default function QuizBlock({ questions, title }: Props) {
             return (
               <div key={q.id} className={cn(
                 "card border-l-4",
-                isCorrect ? "border-l-green-500" : skipped ? "border-l-zinc-600" : "border-l-red-500"
+                isCorrect ? "border-l-green-500" : skipped ? "border-l-zinc-400 dark:border-l-zinc-600" : "border-l-red-500"
               )}>
                 <div className="flex items-start gap-2 mb-3">
                   <span className={cn(
                     "text-xs font-bold px-2 py-0.5 rounded shrink-0",
-                    isCorrect ? "bg-green-900 text-green-300" : skipped ? "bg-zinc-700 text-zinc-400" : "bg-red-900 text-red-300"
+                    isCorrect ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300" : skipped ? "bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400" : "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
                   )}>
                     {isCorrect ? "✓" : skipped ? "—" : "✗"}
                   </span>
-                  <p className="text-sm font-medium text-zinc-200">
+                  <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
                     <span className="text-zinc-500 mr-1">{i + 1}.</span> {q.question}
                   </p>
                 </div>
@@ -215,8 +215,8 @@ export default function QuizBlock({ questions, title }: Props) {
                     return (
                       <div key={oi} className={cn(
                         "flex items-start gap-2 px-3 py-2 rounded-lg text-xs",
-                        isCorrectOpt ? "bg-green-900/40 text-green-300" :
-                        isUserOpt && !isCorrectOpt ? "bg-red-900/40 text-red-300" :
+                        isCorrectOpt ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300" :
+                        isUserOpt && !isCorrectOpt ? "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300" :
                         "text-zinc-500"
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
@@ -229,7 +229,7 @@ export default function QuizBlock({ questions, title }: Props) {
                 </div>
 
                 {q.explanation && (
-                  <div className="bg-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-400 leading-relaxed">
+                  <div className="bg-zinc-100 dark:bg-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
                     <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
                     {q.explanation}
                   </div>

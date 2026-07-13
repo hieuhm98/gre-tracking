@@ -46,13 +46,13 @@ export function getGroup(id: string | undefined): Group | undefined {
 // Accent class maps (kept explicit so Tailwind's JIT keeps these classes).
 export const GROUP_ACCENT: Record<Group["accent"], { badge: string; bar: string; text: string }> = {
   blue: {
-    badge: "bg-blue-900/40 text-blue-300 border-blue-800",
+    badge: "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800",
     bar: "bg-blue-500",
-    text: "text-blue-400",
+    text: "text-blue-600 dark:text-blue-400",
   },
   orange: {
-    badge: "bg-orange-900/40 text-orange-300 border-orange-800",
+    badge: "bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
     bar: "bg-orange-500",
-    text: "text-orange-400",
+    text: "text-orange-600 dark:text-orange-400",
   },
 };

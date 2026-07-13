@@ -24,6 +24,10 @@ const vi: Dict = {
   "nav.sectionKnowledge": "Học tập",
   "nav.sectionPractice": "Luyện tập",
 
+  // Theme
+  "theme.toDark": "Chế độ tối",
+  "theme.toLight": "Chế độ sáng",
+
   // Knowledge list
   "knowledge.title": "Kiến thức",
   "knowledge.subtitle": "Học theo nhóm — chọn một chủ đề để đọc và làm quiz.",
