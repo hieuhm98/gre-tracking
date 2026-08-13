@@ -278,5 +278,85 @@
     "answer": 1,
     "explanation": "Để giữ thứ tự và khử trùng trong fan-out, kết hợp SNS FIFO với SQS FIFO. Phiên bản Standard chỉ best-effort ordering và có thể trùng lặp.",
     "explanationEn": "To preserve ordering and deduplication in fan-out, combine SNS FIFO with SQS FIFO. The Standard versions only offer best-effort ordering and may duplicate."
+  },
+  {
+    "id": "q15",
+    "question": "Đặc điểm về thông lượng và đảm bảo của SQS Standard queue là gì?",
+    "questionEn": "What are the throughput and delivery characteristics of an SQS Standard queue?",
+    "options": [
+      "Tối đa 300 message/giây, thứ tự nghiêm ngặt",
+      "Thứ tự nghiêm ngặt và giao đúng một lần",
+      "Thông lượng không giới hạn và giao đúng một lần",
+      "Thông lượng gần như không giới hạn, nhưng giao ít nhất một lần (at-least-once) và thứ tự chỉ ở mức best-effort"
+    ],
+    "optionsEn": [
+      "Up to 300 messages/second with strict ordering",
+      "Strict ordering with exactly-once delivery",
+      "Unlimited throughput with exactly-once delivery",
+      "Effectively unlimited throughput, but at-least-once delivery and best-effort ordering"
+    ],
+    "answer": 3,
+    "explanation": "Standard đánh đổi thứ tự lấy quy mô: có thể có bản sao và message đến không đúng thứ tự, nên consumer phải idempotent. FIFO mới đảm bảo thứ tự + không trùng, nhưng thông lượng bị giới hạn.",
+    "explanationEn": "Standard trades ordering for scale: duplicates and out-of-order delivery are possible, so consumers must be idempotent. FIFO guarantees ordering and de-duplication but caps throughput."
+  },
+  {
+    "id": "q16",
+    "question": "Một message có thể nằm trong SQS queue tối đa bao lâu?",
+    "questionEn": "What is the maximum length of time a message can stay in an SQS queue?",
+    "options": [
+      "14 ngày",
+      "4 ngày",
+      "1 ngày",
+      "30 ngày"
+    ],
+    "optionsEn": [
+      "14 days",
+      "4 days",
+      "1 day",
+      "30 days"
+    ],
+    "answer": 0,
+    "explanation": "Message retention period mặc định là 4 ngày và có thể chỉnh từ 60 giây tới tối đa 14 ngày. Quá hạn, message bị xóa dù đã được xử lý hay chưa.",
+    "explanationEn": "The message retention period defaults to 4 days and is configurable from 60 seconds up to a maximum of 14 days. After that the message is deleted whether or not it was processed."
+  },
+  {
+    "id": "q17",
+    "question": "Vì sao chọn Amazon MQ thay vì SQS/SNS?",
+    "questionEn": "Why would you choose Amazon MQ over SQS/SNS?",
+    "options": [
+      "Vì MQ rẻ hơn ở mọi quy mô",
+      "Vì cần các giao thức messaging tiêu chuẩn (AMQP, MQTT, STOMP, JMS) để migrate ứng dụng cũ mà không viết lại code",
+      "Vì cần thông lượng cao hơn SQS",
+      "Vì MQ là dịch vụ serverless còn SQS thì không"
+    ],
+    "optionsEn": [
+      "Because MQ is cheaper at every scale",
+      "Because you need standard messaging protocols (AMQP, MQTT, STOMP, JMS) to migrate a legacy app without rewriting it",
+      "Because you need higher throughput than SQS",
+      "Because MQ is serverless and SQS is not"
+    ],
+    "answer": 1,
+    "explanation": "SQS/SNS dùng API riêng của AWS. Amazon MQ chạy broker ActiveMQ/RabbitMQ được quản lý, nói đúng giao thức chuẩn — đây là lựa chọn lift-and-shift.",
+    "explanationEn": "SQS and SNS use AWS-proprietary APIs. Amazon MQ runs managed ActiveMQ/RabbitMQ brokers that speak the standard protocols — it is the lift-and-shift choice."
+  },
+  {
+    "id": "q18",
+    "question": "Phát biểu nào ĐÚNG về Amazon MQ?",
+    "questionEn": "Which statement about Amazon MQ is CORRECT?",
+    "options": [
+      "MQ có thông lượng không giới hạn giống SQS Standard",
+      "MQ là lựa chọn mặc định được khuyến nghị cho ứng dụng mới trên AWS",
+      "Broker chạy trên instance trong VPC của bạn và không co giãn linh hoạt như SQS",
+      "MQ hoàn toàn serverless, không cần chọn kích thước broker"
+    ],
+    "optionsEn": [
+      "MQ offers unlimited throughput just like SQS Standard",
+      "MQ is the recommended default for new applications on AWS",
+      "Its brokers run on instances inside your VPC and it does not scale as elastically as SQS",
+      "MQ is fully serverless with no broker sizing to choose"
+    ],
+    "answer": 2,
+    "explanation": "MQ là broker được quản lý nhưng vẫn có kích thước instance và nằm trong VPC — bạn phải tự chọn size và cấu hình HA (active/standby). Ứng dụng MỚI trên AWS nên dùng SQS/SNS.",
+    "explanationEn": "MQ is a managed broker but still has instance sizing and lives in your VPC — you pick the size and configure HA (active/standby) yourself. NEW applications on AWS should use SQS/SNS."
   }
 ]

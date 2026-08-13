@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Buckets & Objects",
+      "titleEn": "Buckets & Objects",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q14",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Storage Classes",
+      "titleEn": "Storage Classes",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q13"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Versioning & Lifecycle Rules",
+      "titleEn": "Versioning & Lifecycle Rules",
+      "sections": [
+        4,
+        5
+      ],
+      "questionIds": [
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "S3 Replication (CRR / SRR)",
+      "titleEn": "S3 Replication (CRR / SRR)",
+      "sections": [
+        6
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Static hosting, hiệu năng & công cụ",
+      "titleEn": "Static hosting, performance & tooling",
+      "sections": [
+        7,
+        8,
+        9
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q15"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        10,
+        11
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

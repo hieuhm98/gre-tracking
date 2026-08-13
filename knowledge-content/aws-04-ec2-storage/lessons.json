@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "EBS là gì",
+      "titleEn": "What EBS is",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Các loại volume EBS",
+      "titleEn": "EBS volume types",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q3",
+        "q4",
+        "q17"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Snapshots, Multi-Attach & mã hóa",
+      "titleEn": "Snapshots, Multi-Attach & encryption",
+      "sections": [
+        4,
+        5,
+        6
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "AMI & Instance Store",
+      "titleEn": "AMI & Instance Store",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "EFS, so sánh & FSx",
+      "titleEn": "EFS, comparison & FSx",
+      "sections": [
+        9,
+        10,
+        11
+      ],
+      "questionIds": [
+        "q2",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        12,
+        13
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

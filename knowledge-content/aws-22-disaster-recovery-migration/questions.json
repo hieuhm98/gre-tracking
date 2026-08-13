@@ -278,5 +278,85 @@
     "answer": 0,
     "explanation": "AWS Backup cung cấp quản lý backup tập trung theo chính sách cho nhiều dịch vụ và hỗ trợ sao chép cross-Region/cross-account phục vụ DR. DataSync là chuyển dữ liệu, MGN là di trú server, Storage Gateway là lưu trữ hybrid.",
     "explanationEn": "AWS Backup provides centralized, policy-based backup management across many services and supports cross-Region/cross-account copies for DR. DataSync is data transfer, MGN is server migration, and Storage Gateway is hybrid storage."
+  },
+  {
+    "id": "q15",
+    "question": "RTO (Recovery Time Objective) đo lường điều gì?",
+    "questionEn": "What does RTO (Recovery Time Objective) measure?",
+    "options": [
+      "Tần suất chạy job backup",
+      "Hệ thống được phép ngừng hoạt động bao lâu trước khi buộc phải khôi phục xong",
+      "Được phép mất bao nhiêu dữ liệu tính theo thời gian",
+      "Tổng chi phí của giải pháp DR"
+    ],
+    "optionsEn": [
+      "How often backup jobs run",
+      "How long the system may be down before it must be restored",
+      "How much data, measured in time, may be lost",
+      "The total cost of the DR solution"
+    ],
+    "answer": 1,
+    "explanation": "RTO = thời gian DOWNTIME chấp nhận được. RPO = lượng DỮ LIỆU chấp nhận mất. Nhớ mẹo: RTO nhìn về phía trước (bao giờ chạy lại), RPO nhìn về phía sau (mất tới mốc nào).",
+    "explanationEn": "RTO is acceptable DOWNTIME. RPO is acceptable DATA loss. A useful mnemonic: RTO looks forward (when will we be back), RPO looks backward (how far back do we lose)."
+  },
+  {
+    "id": "q16",
+    "question": "Một doanh nghiệp đặt RPO = 15 phút. Điều đó hàm ý gì về backup/replication?",
+    "questionEn": "A business sets RPO = 15 minutes. What does that imply about backups/replication?",
+    "options": [
+      "Backup chạy mỗi ngày một lần là đủ",
+      "RPO không nói gì về tần suất backup",
+      "Dữ liệu phải được ghi lại ít nhất mỗi 15 phút, vì tối đa chỉ được mất 15 phút dữ liệu",
+      "Việc khôi phục phải hoàn tất trong vòng 15 phút"
+    ],
+    "optionsEn": [
+      "A once-daily backup is sufficient",
+      "RPO says nothing about backup frequency",
+      "Data must be captured at least every 15 minutes, since at most 15 minutes of data may be lost",
+      "Recovery must complete within 15 minutes"
+    ],
+    "answer": 2,
+    "explanation": "RPO đặt trần cho khoảng cách giữa hai lần ghi lại dữ liệu. RPO càng nhỏ càng cần replication liên tục thay vì snapshot định kỳ — và chi phí tăng theo.",
+    "explanationEn": "RPO caps the gap between data capture points. The smaller the RPO, the more you need continuous replication rather than periodic snapshots — and cost rises accordingly."
+  },
+  {
+    "id": "q17",
+    "question": "Trong khung 7 Rs, \"Rehost\" nghĩa là gì?",
+    "questionEn": "In the 7 Rs framework, what does \"Rehost\" mean?",
+    "options": [
+      "Viết lại ứng dụng từ đầu theo kiến trúc cloud-native",
+      "Thay ứng dụng bằng một sản phẩm SaaS",
+      "Ngừng sử dụng và loại bỏ ứng dụng",
+      "Lift-and-shift: chuyển ứng dụng lên AWS gần như nguyên trạng, không sửa code"
+    ],
+    "optionsEn": [
+      "Rewrite the application from scratch as cloud-native",
+      "Replace the application with a SaaS product",
+      "Decommission and drop the application",
+      "Lift-and-shift: move the application to AWS essentially unchanged, with no code rewrite"
+    ],
+    "answer": 3,
+    "explanation": "Rehost là đường nhanh nhất, ít rủi ro nhất (thường dùng AWS Application Migration Service). Replatform là chỉnh nhẹ (ví dụ chuyển DB sang RDS), Refactor mới là viết lại.",
+    "explanationEn": "Rehost is the fastest, lowest-risk path (usually via AWS Application Migration Service). Replatform makes small changes (moving the DB to RDS, say), and Refactor is the full rewrite."
+  },
+  {
+    "id": "q18",
+    "question": "Trong khung 7 Rs, \"Retire\" nghĩa là gì?",
+    "questionEn": "In the 7 Rs framework, what does \"Retire\" mean?",
+    "options": [
+      "Loại bỏ ứng dụng không còn cần thiết thay vì tốn công migrate nó",
+      "Tạm giữ ứng dụng ở on-premises và xét lại sau",
+      "Xây dựng lại ứng dụng bằng dịch vụ AWS",
+      "Thay ứng dụng bằng sản phẩm thương mại"
+    ],
+    "optionsEn": [
+      "Decommission an application that is no longer needed instead of spending effort migrating it",
+      "Keep the application on-premises and revisit later",
+      "Rebuild the application using AWS services",
+      "Replace the application with a commercial product"
+    ],
+    "answer": 0,
+    "explanation": "Khảo sát trước khi migrate thường phát hiện một phần đáng kể ứng dụng đã chết. Retire = bỏ hẳn (rẻ nhất); Retain = giữ nguyên tại chỗ, xét lại sau.",
+    "explanationEn": "A pre-migration survey usually finds that a meaningful share of applications are already dead. Retire means dropping them entirely (the cheapest outcome); Retain means leaving them in place for now."
   }
 ]

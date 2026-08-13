@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "EC2 là gì",
+      "titleEn": "What EC2 is",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Instance types & các họ instance",
+      "titleEn": "Instance types & families",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q17"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "AMI & User Data",
+      "titleEn": "AMI & User Data",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q6",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Security Groups & Key pairs",
+      "titleEn": "Security Groups & Key pairs",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q4",
+        "q5",
+        "q13"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Các hình thức mua EC2",
+      "titleEn": "EC2 purchasing options",
+      "sections": [
+        9
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q14"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        10,
+        11
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

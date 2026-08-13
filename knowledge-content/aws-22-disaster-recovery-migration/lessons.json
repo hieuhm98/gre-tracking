@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "RPO vs RTO",
+      "titleEn": "RPO vs RTO",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Bốn chiến lược Disaster Recovery",
+      "titleEn": "The four Disaster Recovery strategies",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q7",
+        "q8",
+        "q11",
+        "q13"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Công cụ Migration của AWS",
+      "titleEn": "AWS migration tooling",
+      "sections": [
+        4
+      ],
+      "questionIds": [
+        "q4",
+        "q5",
+        "q6",
+        "q9",
+        "q10",
+        "q14"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "7 chiến lược migration (7 Rs)",
+      "titleEn": "The 7 migration strategies (7 Rs)",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q12",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        6,
+        7
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

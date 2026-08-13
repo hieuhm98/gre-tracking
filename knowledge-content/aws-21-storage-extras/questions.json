@@ -298,5 +298,25 @@
     "answer": 1,
     "explanation": "Có mạng nhanh và cần đồng bộ định kỳ, giữ nguyên ACL/metadata → DataSync là lựa chọn đúng; nó hỗ trợ nguồn SMB và ghi trực tiếp vào FSx for Windows. Snowball là offline (không phù hợp khi đã có mạng nhanh và cần đồng bộ liên tục).",
     "explanationEn": "With a fast network and a need for scheduled sync preserving ACLs/metadata → DataSync is the correct choice; it supports SMB sources and writes directly to FSx for Windows. Snowball is offline and unsuitable when a fast network exists and continuous sync is required."
+  },
+  {
+    "id": "q16",
+    "question": "Trong AWS Backup, một Backup Plan là gì?",
+    "questionEn": "In AWS Backup, what is a Backup Plan?",
+    "options": [
+      "Chính sách định nghĩa tần suất sao lưu, vòng đời/thời gian giữ và vault đích, áp dụng cho tài nguyên theo tag hoặc ARN",
+      "Một bản snapshot đơn lẻ tại một thời điểm",
+      "Kho lưu trữ nơi các bản sao lưu được đặt vào",
+      "Một IAM role cấp quyền sao lưu"
+    ],
+    "optionsEn": [
+      "A policy defining backup frequency, lifecycle/retention and the destination vault, applied to resources by tag or ARN",
+      "A single point-in-time snapshot",
+      "The store where backups are placed",
+      "An IAM role that grants backup permissions"
+    ],
+    "answer": 0,
+    "explanation": "Phân biệt: Backup Plan là CHÍNH SÁCH, Backup Vault là NƠI CHỨA, và Vault Lock làm cho bản sao lưu không thể bị xóa trong thời gian giữ. Gán tài nguyên vào plan bằng tag là cách mở rộng dễ nhất.",
+    "explanationEn": "Keep them apart: the Backup Plan is the POLICY, the Backup Vault is the STORE, and Vault Lock makes backups undeletable for the retention period. Assigning resources by tag is the easiest way to scale a plan."
   }
 ]

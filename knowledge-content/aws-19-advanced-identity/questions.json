@@ -278,5 +278,85 @@
     "answer": 1,
     "explanation": "Mỗi tài khoản thành viên thuộc đúng một organization. SCP không áp dụng cho management account (kể cả root của nó), nên không nên đặt tài nguyên quan trọng trong management account.",
     "explanationEn": "Each member account belongs to exactly one organization. SCPs do not apply to the management account (including its root), so critical resources shouldn't be placed in the management account."
+  },
+  {
+    "id": "q15",
+    "question": "Trong AWS Organizations, \"root\" là gì?",
+    "questionEn": "In AWS Organizations, what is the \"root\"?",
+    "options": [
+      "Container cấp cao nhất chứa toàn bộ OU và account của tổ chức",
+      "Root user của management account",
+      "Account đứng ra trả tiền cho cả tổ chức",
+      "Một IAM role đặc quyền"
+    ],
+    "optionsEn": [
+      "The top-level container that holds all the organization's OUs and accounts",
+      "The root user of the management account",
+      "The account that pays the bill for the organization",
+      "A privileged IAM role"
+    ],
+    "answer": 0,
+    "explanation": "Cẩn thận với từ đồng âm: \"root\" của Organizations là node gốc trong cây OU (nơi gắn SCP ở cấp cao nhất), khác hoàn toàn với \"root user\" của một account.",
+    "explanationEn": "Watch the overloaded word: the Organizations \"root\" is the top node of the OU tree (where the highest-level SCPs attach), which is a completely different thing from an account's \"root user\"."
+  },
+  {
+    "id": "q16",
+    "question": "Lời gọi `sts:AssumeRole` trả về cái gì?",
+    "questionEn": "What does an `sts:AssumeRole` call return?",
+    "options": [
+      "Một IAM user mới được tạo",
+      "Credentials tạm thời: access key, secret key và session token, kèm thời điểm hết hạn",
+      "Một cặp access key vĩnh viễn",
+      "Mật khẩu đăng nhập Console"
+    ],
+    "optionsEn": [
+      "A newly created IAM user",
+      "Temporary credentials: an access key, a secret key and a session token, with an expiry",
+      "A permanent pair of access keys",
+      "A Console sign-in password"
+    ],
+    "answer": 1,
+    "explanation": "Điểm mấu chốt là TẠM THỜI: credentials tự hết hạn (15 phút tới 12 giờ) nên không có bí mật lâu dài để rò rỉ. Đây là nền tảng của cross-account access và IAM Role cho EC2.",
+    "explanationEn": "The key property is that they are TEMPORARY: the credentials expire on their own (15 minutes to 12 hours), so there is no long-lived secret to leak. This underpins cross-account access and IAM Roles for EC2."
+  },
+  {
+    "id": "q17",
+    "question": "Trong federation dùng SAML tới AWS, bên nào khẳng định danh tính người dùng?",
+    "questionEn": "In SAML federation to AWS, which party asserts the user's identity?",
+    "options": [
+      "Amazon Cognito User Pool",
+      "EC2 instance mà người dùng kết nối tới",
+      "Identity Provider bên ngoài (ADFS, Okta...) mà AWS tin cậy qua một IAM identity provider entity",
+      "Chính IAM, dựa trên IAM user tương ứng"
+    ],
+    "optionsEn": [
+      "An Amazon Cognito User Pool",
+      "The EC2 instance the user connects to",
+      "The external Identity Provider (ADFS, Okta…), which AWS trusts via an IAM identity provider entity",
+      "IAM itself, based on a matching IAM user"
+    ],
+    "answer": 2,
+    "explanation": "Federation nghĩa là AWS KHÔNG lưu người dùng. IdP xác thực rồi phát SAML assertion; AWS đổi nó lấy credentials tạm thời cho một role — nên không cần tạo IAM user cho từng nhân viên.",
+    "explanationEn": "Federation means AWS does NOT store the users. The IdP authenticates and issues a SAML assertion; AWS exchanges it for temporary credentials for a role — so no IAM user is needed per employee."
+  },
+  {
+    "id": "q18",
+    "question": "Sau khi đăng nhập thành công, Cognito User Pool cấp cho ứng dụng thứ gì?",
+    "questionEn": "After a successful sign-in, what does a Cognito User Pool issue?",
+    "options": [
+      "Cặp IAM access key và secret key",
+      "Chỉ một session cookie",
+      "ARN của một IAM role",
+      "Các JWT token (ID token, access token, refresh token)"
+    ],
+    "optionsEn": [
+      "An IAM access key and secret key pair",
+      "Only a session cookie",
+      "The ARN of an IAM role",
+      "JWT tokens (an ID token, an access token and a refresh token)"
+    ],
+    "answer": 3,
+    "explanation": "User Pool = xác thực, trả về JWT (dùng trực tiếp cho API Gateway authorizer). Identity Pool mới là thứ đổi token đó lấy credentials AWS tạm thời để gọi thẳng S3, DynamoDB...",
+    "explanationEn": "A User Pool handles authentication and returns JWTs (which an API Gateway authorizer can consume directly). It is the Identity Pool that exchanges those tokens for temporary AWS credentials to call S3, DynamoDB and so on."
   }
 ]

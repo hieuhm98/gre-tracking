@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { useLang } from "@/context/lang";
+import { useProgress } from "@/context/progress";
+import BilingualPair from "@/components/BilingualPair";
+import { recordReview } from "@/lib/progress";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
 import { type Question, localizeQuestion } from "./QuizBlock";
@@ -31,7 +34,8 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function ReviewSession() {
-  const { t, pick, lang } = useLang();
+  const { t, pick, lang, dual } = useLang();
+  const { update } = useProgress();
   const [topics, setTopics] = useState<StaticTopic[]>([]);
   const [selectedGroups, setSelectedGroups] = useState<Set<string>>(new Set());
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -138,8 +142,25 @@ export default function ReviewSession() {
 
   const optionLabels = ["A", "B", "C", "D", "E"];
   const localized = sessionQ.map((q) => localizeQuestion(q, lang));
+  // Display-only alternates for side-by-side mode; `answer` is a shared index.
+  const enQs = sessionQ.map((q) => localizeQuestion(q, "en"));
+  const viQs = sessionQ.map((q) => localizeQuestion(q, "vi"));
   const correctCount = localized.filter((q, i) => answers[i] === q.answer).length;
   const selectedVisibleCount = visibleTopics.filter((tp) => selected.has(tp.slug)).length;
+
+  // Finishing a session is what the progress store logs — it feeds the daily
+  // streak and the review accuracy on /progress.
+  function finishSession() {
+    setShowResults(true);
+
+    if (sessionQ.length === 0) return;
+
+    const groups = Array.from(
+      new Set(sessionQ.map((q) => topics.find((tp) => tp.slug === q.topic_slug)?.group ?? DEFAULT_GROUP))
+    );
+
+    update((prev) => recordReview(prev, { total: sessionQ.length, correct: correctCount, groups }));
+  }
 
   if (loading || building) return <div className="text-zinc-500 text-sm">{t("common.loading")}</div>;
 
@@ -270,7 +291,7 @@ export default function ReviewSession() {
   // ---- Results screen ----
   if (showResults) {
     return (
-      <div className="max-w-2xl space-y-6">
+      <div className={cn("space-y-6", dual ? "max-w-5xl" : "max-w-2xl")}>
         <div className="card">
           <div className="flex items-center justify-between">
             <div>
@@ -302,9 +323,21 @@ export default function ReviewSession() {
                   )}>
                     {isCorrect ? "✓" : skipped ? "—" : "✗"}
                   </span>
-                  <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                    <span className="text-zinc-500 mr-1">{i + 1}.</span>{q.question}
-                  </p>
+                  {dual ? (
+                    <BilingualPair
+                      className="flex-1"
+                      en={
+                        <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                          <span className="text-zinc-500 mr-1">{i + 1}.</span>{enQs[i].question}
+                        </p>
+                      }
+                      vi={<p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">{viQs[i].question}</p>}
+                    />
+                  ) : (
+                    <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                      <span className="text-zinc-500 mr-1">{i + 1}.</span>{q.question}
+                    </p>
+                  )}
                 </div>
                 <div className="space-y-1 mb-3">
                   {q.options.map((opt, oi) => {
@@ -317,16 +350,45 @@ export default function ReviewSession() {
                         isUserOpt ? "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300" : "text-zinc-500"
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
-                        <span>{opt}</span>
+                        {dual ? (
+                          <BilingualPair
+                            className="flex-1 gap-y-0.5"
+                            divider={false}
+                            en={<span>{enQs[i].options[oi]}</span>}
+                            vi={<span className="opacity-80">{viQs[i].options[oi]}</span>}
+                          />
+                        ) : (
+                          <span>{opt}</span>
+                        )}
                         {isCorrectOpt && <span className="ml-auto shrink-0">✓</span>}
                         {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.yourAnswer")}</span>}
                       </div>
                     );
                   })}
                 </div>
-                {q.explanation && (
+                {(q.explanation || (dual && (enQs[i].explanation || viQs[i].explanation))) && (
                   <div className="bg-zinc-100 dark:bg-zinc-800 rounded px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400">
-                    <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>{q.explanation}
+                    {dual ? (
+                      <BilingualPair
+                        en={
+                          <>
+                            <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
+                            {enQs[i].explanation}
+                          </>
+                        }
+                        vi={
+                          <>
+                            <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
+                            {viQs[i].explanation}
+                          </>
+                        }
+                      />
+                    ) : (
+                      <>
+                        <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
+                        {q.explanation}
+                      </>
+                    )}
                   </div>
                 )}
               </div>
@@ -349,7 +411,7 @@ export default function ReviewSession() {
 
   const currentQ = localized[currentIdx];
   return (
-    <div className="max-w-2xl space-y-4">
+    <div className={cn("space-y-4", dual ? "max-w-5xl" : "max-w-2xl")}>
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">{t("review.title")}</h1>
         <button onClick={() => setStarted(false)} className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">{t("review.exit")}</button>
@@ -388,7 +450,23 @@ export default function ReviewSession() {
 
       {/* Question */}
       <div className="card space-y-4">
-        <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+        {dual ? (
+          <BilingualPair
+            labels
+            en={
+              <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">
+                {enQs[currentIdx].question}
+              </p>
+            }
+            vi={
+              <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">
+                {viQs[currentIdx].question}
+              </p>
+            }
+          />
+        ) : (
+          <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+        )}
         <div className="space-y-2">
           {currentQ.options.map((opt, i) => {
             const isSel = answers[currentIdx] === i;
@@ -409,7 +487,15 @@ export default function ReviewSession() {
                 )}>
                   {optionLabels[i]}
                 </span>
-                {opt}
+                {dual ? (
+                  <BilingualPair
+                    className="flex-1 gap-y-1"
+                    en={<span>{enQs[currentIdx].options[i]}</span>}
+                    vi={<span className="text-zinc-600 dark:text-zinc-400">{viQs[currentIdx].options[i]}</span>}
+                  />
+                ) : (
+                  opt
+                )}
               </button>
             );
           })}
@@ -419,7 +505,7 @@ export default function ReviewSession() {
             <button onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))} disabled={currentIdx === 0} className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40">{t("quiz.prev")}</button>
             <button onClick={() => setCurrentIdx((i) => Math.min(localized.length - 1, i + 1))} disabled={currentIdx === localized.length - 1} className="btn-secondary text-sm px-3 py-1.5 disabled:opacity-40">{t("quiz.next")}</button>
           </div>
-          <button onClick={() => setShowResults(true)} className="btn-primary text-sm px-4 py-1.5">{t("quiz.viewResults")}</button>
+          <button onClick={finishSession} className="btn-primary text-sm px-4 py-1.5">{t("quiz.viewResults")}</button>
         </div>
       </div>
     </div>

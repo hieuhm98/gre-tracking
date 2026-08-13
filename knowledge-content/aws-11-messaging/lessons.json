@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "SQS: Standard vs FIFO",
+      "titleEn": "SQS: Standard vs FIFO",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "SQS: visibility timeout, DLQ & long polling",
+      "titleEn": "SQS: visibility timeout, DLQ & long polling",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q4",
+        "q13"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "SQS + Auto Scaling, SNS & fan-out",
+      "titleEn": "SQS + Auto Scaling, SNS & fan-out",
+      "sections": [
+        4,
+        5,
+        6
+      ],
+      "questionIds": [
+        "q8",
+        "q7",
+        "q5",
+        "q6",
+        "q14"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Kinesis Data Streams & Firehose",
+      "titleEn": "Kinesis Data Streams & Firehose",
+      "sections": [
+        7,
+        8,
+        9
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Amazon MQ & bảng so sánh",
+      "titleEn": "Amazon MQ & comparison table",
+      "sections": [
+        10,
+        11
+      ],
+      "questionIds": [
+        "q12",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        12,
+        13
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

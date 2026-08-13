@@ -278,5 +278,45 @@
     "answer": 2,
     "explanation": "Group chỉ dùng để gán quyền: nó chỉ chứa user (không lồng group), không có credentials, và một user có thể thuộc nhiều group cùng lúc.",
     "explanationEn": "A group is only for assigning permissions: it contains only users (no nested groups), has no credentials, and a user can belong to multiple groups at once."
+  },
+  {
+    "id": "q15",
+    "question": "Trong JSON của một IAM policy, phần tử nào liệt kê các API action cụ thể được cho phép hoặc bị từ chối?",
+    "questionEn": "In an IAM policy JSON, which element lists the specific API actions being allowed or denied?",
+    "options": [
+      "`Version`",
+      "`Action`",
+      "`Resource`",
+      "`Sid`"
+    ],
+    "optionsEn": [
+      "`Version`",
+      "`Action`",
+      "`Resource`",
+      "`Sid`"
+    ],
+    "answer": 1,
+    "explanation": "`Action` liệt kê các thao tác (ví dụ `s3:GetObject`). `Resource` chỉ ra ARN bị tác động, `Sid` chỉ là nhãn mô tả, `Version` là phiên bản ngôn ngữ policy.",
+    "explanationEn": "`Action` lists the operations (e.g. `s3:GetObject`). `Resource` names the ARNs affected, `Sid` is just a label, and `Version` is the policy language version."
+  },
+  {
+    "id": "q16",
+    "question": "Một EC2 instance cần gọi API của AWS bằng IAM Role. Thứ gì được gắn vào instance để chuyển credentials tạm thời của role vào máy?",
+    "questionEn": "An EC2 instance needs to call AWS APIs using an IAM Role. What is attached to the instance to deliver the role's temporary credentials?",
+    "options": [
+      "Một bucket policy",
+      "Một security group",
+      "Một instance profile (chứa role)",
+      "Một access key đặt trong User Data"
+    ],
+    "optionsEn": [
+      "A bucket policy",
+      "A security group",
+      "An instance profile (which wraps the role)",
+      "An access key placed in User Data"
+    ],
+    "answer": 2,
+    "explanation": "EC2 nhận role thông qua instance profile; credentials tạm thời được cấp và tự động xoay vòng qua metadata service. Không bao giờ nhúng access key vào User Data.",
+    "explanationEn": "EC2 receives the role through an instance profile; temporary credentials are delivered and rotated automatically via the metadata service. Never embed access keys in User Data."
   }
 ]

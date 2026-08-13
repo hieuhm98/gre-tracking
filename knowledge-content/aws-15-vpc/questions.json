@@ -298,5 +298,65 @@
     "answer": 1,
     "explanation": "NACL là stateless nên không nhớ kết nối; lưu lượng phản hồi dùng cổng ephemeral phải được mở tường minh. Đây là khác biệt then chốt so với Security Group stateful.",
     "explanationEn": "NACLs are stateless and do not remember connections; response traffic uses ephemeral ports that must be explicitly allowed. This is the key difference from stateful Security Groups."
+  },
+  {
+    "id": "q16",
+    "question": "AWS dành riêng bao nhiêu địa chỉ IP trong MỖI subnet?",
+    "questionEn": "How many IP addresses does AWS reserve in EVERY subnet?",
+    "options": [
+      "0",
+      "10",
+      "5",
+      "2"
+    ],
+    "optionsEn": [
+      "0",
+      "10",
+      "5",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "5 địa chỉ bị giữ: địa chỉ mạng, VPC router, DNS, dự phòng cho tương lai, và broadcast. Nên subnet /24 chỉ còn 251 IP dùng được.",
+    "explanationEn": "Five addresses are reserved: the network address, the VPC router, DNS, one reserved for future use, and broadcast. So a /24 subnet only yields 251 usable IPs."
+  },
+  {
+    "id": "q17",
+    "question": "Dải kích thước CIDR hợp lệ cho một VPC là gì?",
+    "questionEn": "What is the allowed CIDR block size range for a VPC?",
+    "options": [
+      "Từ /8 tới /32",
+      "Từ /16 tới /24",
+      "Chỉ /24",
+      "Từ /16 tới /28"
+    ],
+    "optionsEn": [
+      "/8 through /32",
+      "/16 through /24",
+      "/24 only",
+      "/16 through /28"
+    ],
+    "answer": 3,
+    "explanation": "VPC CIDR nằm trong khoảng /16 (65 536 IP) tới /28 (16 IP). Nên dùng dải private RFC 1918 và tránh chồng lấn với mạng on-premises hoặc VPC khác sẽ peering.",
+    "explanationEn": "A VPC CIDR ranges from /16 (65,536 IPs) down to /28 (16 IPs). Use RFC 1918 private ranges and avoid overlapping with on-premises networks or VPCs you may later peer with."
+  },
+  {
+    "id": "q18",
+    "question": "Trong kiến trúc VPC 3 tầng điển hình, tầng database nằm ở đâu?",
+    "questionEn": "In a typical 3-tier VPC architecture, where does the database tier sit?",
+    "options": [
+      "Trong private subnet, không có route ra Internet Gateway",
+      "Trong public subnet để dễ quản trị",
+      "Trên chính bastion host",
+      "Cùng subnet với Application Load Balancer"
+    ],
+    "optionsEn": [
+      "In private subnets with no route to an Internet Gateway",
+      "In public subnets for easier administration",
+      "On the bastion host itself",
+      "In the same subnet as the Application Load Balancer"
+    ],
+    "answer": 0,
+    "explanation": "3 tầng: ALB ở public subnet, app server ở private subnet, database ở private subnet (thường tách riêng, chỉ nhận traffic từ security group của tầng app).",
+    "explanationEn": "The three tiers: ALB in public subnets, application servers in private subnets, and the database in private subnets (usually separate ones, accepting traffic only from the app tier's security group)."
   }
 ]

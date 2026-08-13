@@ -298,5 +298,65 @@
     "answer": 0,
     "explanation": "AWS AppSync là dịch vụ GraphQL được quản lý, hợp nhất dữ liệu từ nhiều nguồn (DynamoDB, Lambda, HTTP) và hỗ trợ real-time/subscriptions — lý tưởng cho ứng dụng mobile/web hiện đại.",
     "explanationEn": "AWS AppSync is a managed GraphQL service that unifies data from multiple sources (DynamoDB, Lambda, HTTP) and supports real-time/subscriptions — ideal for modern mobile/web apps."
+  },
+  {
+    "id": "q16",
+    "question": "Lợi ích cốt lõi của kiến trúc hướng sự kiện (event-driven) là gì?",
+    "questionEn": "What is the core benefit of an event-driven architecture?",
+    "options": [
+      "Đảm bảo tính nhất quán mạnh giữa các thành phần",
+      "Producer và consumer được tách rời — mở rộng và hỏng hóc độc lập với nhau",
+      "Luôn cho độ trễ thấp hơn kiến trúc đồng bộ",
+      "Cần ít dịch vụ AWS hơn"
+    ],
+    "optionsEn": [
+      "It guarantees strong consistency between components",
+      "Producers and consumers are decoupled — they scale and fail independently",
+      "It always gives lower latency than a synchronous design",
+      "It requires fewer AWS services"
+    ],
+    "answer": 1,
+    "explanation": "Tách rời là mục đích chính: producer không cần biết ai tiêu thụ, consumer chậm không kéo sập producer. Đánh đổi là tính nhất quán trở thành eventual và việc debug khó hơn.",
+    "explanationEn": "Decoupling is the point: the producer need not know who consumes, and a slow consumer cannot drag the producer down. The trade-off is eventual consistency and harder debugging."
+  },
+  {
+    "id": "q17",
+    "question": "Dịch vụ nào là event bus tự nhiên để định tuyến sự kiện từ nhiều dịch vụ AWS tới nhiều target, kèm luật lọc?",
+    "questionEn": "Which service is the natural event bus for routing events from many AWS services to many targets, with filtering rules?",
+    "options": [
+      "AWS Step Functions",
+      "Amazon MQ",
+      "Amazon EventBridge",
+      "Amazon SQS"
+    ],
+    "optionsEn": [
+      "AWS Step Functions",
+      "Amazon MQ",
+      "Amazon EventBridge",
+      "Amazon SQS"
+    ],
+    "answer": 2,
+    "explanation": "EventBridge nhận sự kiện từ dịch vụ AWS, ứng dụng của bạn và cả SaaS bên thứ ba, rồi định tuyến theo rule. SQS là hàng đợi điểm-tới-điểm, Step Functions điều phối workflow.",
+    "explanationEn": "EventBridge ingests events from AWS services, your own applications and third-party SaaS, then routes them by rule. SQS is a point-to-point queue and Step Functions orchestrates workflows."
+  },
+  {
+    "id": "q18",
+    "question": "Phát biểu nào mô tả ĐÚNG phạm vi áp dụng của từng biện pháp chặn?",
+    "questionEn": "Which statement correctly describes where each blocking control applies?",
+    "options": [
+      "Security Group ở mức subnet còn NACL ở mức instance",
+      "WAF hoạt động ở tầng 4 còn NACL ở tầng 7",
+      "Shield chỉ bảo vệ ở tầng 7 còn WAF ở tầng 3/4",
+      "Security Group ở mức instance/ENI (stateful, chỉ allow); NACL ở mức subnet (stateless, allow + deny); WAF ở tầng 7 trên ALB/CloudFront/API Gateway"
+    ],
+    "optionsEn": [
+      "Security Groups at the subnet level and NACLs at the instance level",
+      "WAF operates at layer 4 and NACLs at layer 7",
+      "Shield protects only at layer 7 and WAF at layers 3/4",
+      "Security Group at the instance/ENI level (stateful, allow-only); NACL at the subnet level (stateless, allow + deny); WAF at layer 7 on ALB/CloudFront/API Gateway"
+    ],
+    "answer": 3,
+    "explanation": "Vì Security Group KHÔNG có luật deny, muốn chặn một IP cụ thể ở mức subnet thì phải dùng NACL. Muốn chặn theo nội dung request (SQLi, XSS) hay rate-limit thì dùng WAF.",
+    "explanationEn": "Because Security Groups have no deny rules, blocking a specific IP at the subnet level requires a NACL. Blocking by request content (SQLi, XSS) or rate-limiting requires WAF."
   }
 ]

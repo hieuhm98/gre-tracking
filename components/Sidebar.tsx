@@ -10,8 +10,10 @@ import { cn } from "@/lib/utils";
 const NAV = [{ href: "/dashboard", label: "nav.home", icon: "◈" }];
 
 const KNOWLEDGE_NAV = [
+  { href: "/learn", label: "nav.learn", icon: "◐" },
   { href: "/knowledge", label: "nav.knowledge", icon: "◉" },
   { href: "/knowledge-review", label: "nav.review", icon: "⟳" },
+  { href: "/progress", label: "nav.progress", icon: "◑" },
 ];
 
 const PRACTICE_NAV = [
@@ -21,7 +23,7 @@ const PRACTICE_NAV = [
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const { lang, setLang, t } = useLang();
+  const { lang, setLang, dual, toggleDual, t } = useLang();
   const { theme, toggle: toggleTheme } = useTheme();
 
   return (
@@ -49,6 +51,24 @@ export default function Sidebar() {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Side-by-side bilingual reading */}
+      <div className="px-3 pt-2">
+        <button
+          onClick={toggleDual}
+          aria-pressed={dual}
+          title={t("lang.dualHint")}
+          className={cn(
+            "w-full flex items-center justify-center gap-2 text-xs font-medium py-1.5 rounded-lg border transition-colors",
+            dual
+              ? "bg-blue-100 dark:bg-blue-600/20 border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300"
+              : "bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800"
+          )}
+        >
+          <span className="text-sm">⇹</span>
+          {t("lang.dual")}
+        </button>
       </div>
 
       {/* Theme toggle */}

@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Amazon FSx",
+      "titleEn": "Amazon FSx",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q8",
+        "q11"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "AWS Storage Gateway",
+      "titleEn": "AWS Storage Gateway",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "AWS Snow Family",
+      "titleEn": "AWS Snow Family",
+      "sections": [
+        4
+      ],
+      "questionIds": [
+        "q3",
+        "q9",
+        "q13"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "AWS Transfer Family & DataSync",
+      "titleEn": "AWS Transfer Family & DataSync",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q5",
+        "q4",
+        "q15"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "AWS Backup",
+      "titleEn": "AWS Backup",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q10",
+        "q14",
+        "q16"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

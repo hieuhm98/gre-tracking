@@ -2,8 +2,20 @@
 
 import Link from "next/link";
 import { useLang } from "@/context/lang";
+import { useProgress } from "@/context/progress";
+import { overallStats } from "@/lib/progress";
 
 const CARDS = [
+  {
+    href: "/learn",
+    icon: "◐",
+    accent: "text-indigo-700 dark:text-indigo-300",
+    title: { vi: "Lộ trình học", en: "Study path" },
+    desc: {
+      vi: "Từng bài nhỏ 5–10 phút: kiểm tra khởi động → đọc → kiểm tra lại, có ôn tập kiến thức cũ xen kẽ.",
+      en: "5–10 minute mini-lessons: warm-up test → read → check test, with earlier material mixed back in.",
+    },
+  },
   {
     href: "/knowledge",
     icon: "◉",
@@ -44,10 +56,25 @@ const CARDS = [
       en: "Write and run real SQL against the English word bank (~23k words).",
     },
   },
+  {
+    href: "/progress",
+    icon: "◑",
+    accent: "text-violet-700 dark:text-violet-300",
+    title: { vi: "Tiến độ", en: "Progress" },
+    desc: {
+      vi: "Xem chuỗi ngày học, điểm từng chủ đề và lịch sử ôn tập — kèm xuất/nhập file sao lưu.",
+      en: "Your study streak, per-topic scores and review history — with file export/import.",
+    },
+  },
 ];
 
 export default function HomePage() {
   const { pick } = useLang();
+  const { progress, ready } = useProgress();
+  const stats = overallStats(progress);
+  const hasProgress =
+    ready && (stats.questionsAnswered > 0 || stats.reviewSessions > 0 || stats.lessonsStarted > 0);
+
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div>
@@ -61,6 +88,35 @@ export default function HomePage() {
           )}
         </p>
       </div>
+
+      {hasProgress && (
+        <Link
+          href="/progress"
+          className="card flex flex-wrap items-center gap-x-8 gap-y-3 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+        >
+          <div>
+            <div className="text-xs text-zinc-500">{pick("Chuỗi ngày học", "Study streak")}</div>
+            <div className="text-xl font-bold">
+              {stats.streak} <span className="text-sm font-normal text-zinc-500">{pick("ngày", "days")}</span>
+            </div>
+          </div>
+          <div>
+            <div className="text-xs text-zinc-500">{pick("Bài nhỏ hoàn thành", "Mini-lessons done")}</div>
+            <div className="text-xl font-bold">{stats.lessonsCompleted}</div>
+          </div>
+          <div>
+            <div className="text-xs text-zinc-500">{pick("Câu đã trả lời", "Questions answered")}</div>
+            <div className="text-xl font-bold">{stats.questionsAnswered}</div>
+          </div>
+          <div>
+            <div className="text-xs text-zinc-500">{pick("Điểm trung bình", "Average score")}</div>
+            <div className="text-xl font-bold">{stats.avgBestPct}%</div>
+          </div>
+          <span className="ml-auto text-sm text-blue-600 dark:text-blue-400">
+            {pick("Xem tiến độ →", "View progress →")}
+          </span>
+        </Link>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {CARDS.map((c) => (

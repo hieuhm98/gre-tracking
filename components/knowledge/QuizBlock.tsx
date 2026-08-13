@@ -1,7 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useLang } from "@/context/lang";
+import { useProgress } from "@/context/progress";
+import BilingualPair from "@/components/BilingualPair";
+import { clearTopic, recordQuiz } from "@/lib/progress";
 import { type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
@@ -33,15 +36,57 @@ export function localizeQuestion(q: Question, lang: Lang) {
 interface Props {
   questions: Question[];
   title?: string;
+  /** Topic slug — when given, answers are saved to the progress store. */
+  slug?: string;
 }
 
 type AnswerMap = Record<string, number | null>;
 
-export default function QuizBlock({ questions, title }: Props) {
-  const { lang, t } = useLang();
+export default function QuizBlock({ questions, title, slug }: Props) {
+  const { lang, t, dual } = useLang();
+  const { progress, ready, update } = useProgress();
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [showResults, setShowResults] = useState(false);
+  const [restored, setRestored] = useState(false);
+  const hydratedFor = useRef<string | null>(null);
+
+  // Restore saved answers once, as soon as stored progress is reconciled.
+  useEffect(() => {
+    if (!slug || !ready || hydratedFor.current === slug) return;
+
+    hydratedFor.current = slug;
+    const saved = progress.topics[slug]?.answers;
+
+    if (saved && Object.keys(saved).length > 0) {
+      setAnswers(saved);
+      setRestored(true);
+    }
+  }, [slug, ready, progress]);
+
+  const persist = useCallback(
+    (next: AnswerMap, attempted: boolean) => {
+      if (!slug) return;
+
+      const saved: Record<string, number> = {};
+
+      questions.forEach((q) => {
+        const choice = next[q.id];
+
+        if (typeof choice === "number") saved[q.id] = choice;
+      });
+
+      const correct = questions.filter((q) => saved[q.id] === q.answer).length;
+
+      update((prev) =>
+        recordQuiz(prev, slug, { answers: saved, correct, total: questions.length, attempted })
+      );
+    },
+    [slug, questions, update]
+  );
+
+  const bestPct = slug ? progress.topics[slug]?.bestPct ?? 0 : 0;
+  const attempts = slug ? progress.topics[slug]?.attempts ?? 0 : 0;
 
   if (questions.length === 0) {
     return (
@@ -52,28 +97,57 @@ export default function QuizBlock({ questions, title }: Props) {
   }
 
   const localized = questions.map((q) => localizeQuestion(q, lang));
+  // `answer` is a shared index across languages, so these are display-only.
+  // Column order is fixed (EN left, VI right) regardless of the active language.
+  const enQs = questions.map((q) => localizeQuestion(q, "en"));
+  const viQs = questions.map((q) => localizeQuestion(q, "vi"));
   const currentQ = localized[currentIdx];
   const totalAnswered = Object.values(answers).filter((v) => v !== null && v !== undefined).length;
   const correctCount = localized.filter((q) => answers[q.id] === q.answer).length;
 
   function handleSelect(qId: string, optionIdx: number) {
     if (showResults) return;
-    setAnswers((prev) => ({ ...prev, [qId]: optionIdx }));
+
+    const next = { ...answers, [qId]: optionIdx };
+
+    setAnswers(next);
+    setRestored(false);
+    persist(next, false);
+  }
+
+  function handleViewResults() {
+    setShowResults(true);
+    persist(answers, true);
   }
 
   function handleReset() {
     setAnswers({});
     setShowResults(false);
     setCurrentIdx(0);
+    setRestored(false);
+
+    // Keep the best score and attempt count; only the answers are cleared.
+    if (slug) update((prev) => clearTopic(prev, slug));
   }
 
   const optionLabels = ["A", "B", "C", "D", "E"];
 
   return (
     <div className="mt-10 border-t border-zinc-300 dark:border-zinc-700 pt-8">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between gap-3 mb-2">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">{title ?? t("quiz.title")}</h2>
-        <span className="text-xs text-zinc-500">{questions.length} {t("quiz.questions")}</span>
+        <span className="text-xs text-zinc-500 shrink-0">{questions.length} {t("quiz.questions")}</span>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2 mb-6 min-h-[1.25rem]">
+        {attempts > 0 && (
+          <span className="text-xs px-2 py-0.5 rounded border bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800">
+            {t("progress.best")}: {bestPct}%
+          </span>
+        )}
+        {restored && (
+          <span className="text-xs text-zinc-500">↩ {t("progress.restored")}</span>
+        )}
       </div>
 
       {/* Question palette */}
@@ -108,7 +182,24 @@ export default function QuizBlock({ questions, title }: Props) {
             <span className="text-xs font-mono text-zinc-500 mt-0.5 shrink-0">
               {currentIdx + 1}/{localized.length}
             </span>
-            <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+            {dual ? (
+              <BilingualPair
+                labels
+                className="flex-1"
+                en={
+                  <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">
+                    {enQs[currentIdx].question}
+                  </p>
+                }
+                vi={
+                  <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">
+                    {viQs[currentIdx].question}
+                  </p>
+                }
+              />
+            ) : (
+              <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -131,7 +222,15 @@ export default function QuizBlock({ questions, title }: Props) {
                   )}>
                     {optionLabels[i]}
                   </span>
-                  <span>{opt}</span>
+                  {dual ? (
+                    <BilingualPair
+                      className="flex-1 gap-y-1"
+                      en={<span>{enQs[currentIdx].options[i]}</span>}
+                      vi={<span className="text-zinc-600 dark:text-zinc-400">{viQs[currentIdx].options[i]}</span>}
+                    />
+                  ) : (
+                    <span>{opt}</span>
+                  )}
                 </button>
               );
             })}
@@ -157,7 +256,7 @@ export default function QuizBlock({ questions, title }: Props) {
             <div className="flex items-center gap-3">
               <span className="text-xs text-zinc-500">{t("quiz.answered")}: {totalAnswered}/{localized.length}</span>
               <button
-                onClick={() => setShowResults(true)}
+                onClick={handleViewResults}
                 className="btn-primary text-sm px-4 py-1.5"
               >
                 {t("quiz.viewResults")}
@@ -203,9 +302,23 @@ export default function QuizBlock({ questions, title }: Props) {
                   )}>
                     {isCorrect ? "✓" : skipped ? "—" : "✗"}
                   </span>
-                  <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                    <span className="text-zinc-500 mr-1">{i + 1}.</span> {q.question}
-                  </p>
+                  {dual ? (
+                    <BilingualPair
+                      className="flex-1"
+                      en={
+                        <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                          <span className="text-zinc-500 mr-1">{i + 1}.</span> {enQs[i].question}
+                        </p>
+                      }
+                      vi={
+                        <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">{viQs[i].question}</p>
+                      }
+                    />
+                  ) : (
+                    <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                      <span className="text-zinc-500 mr-1">{i + 1}.</span> {q.question}
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-1.5 mb-3">
@@ -220,7 +333,16 @@ export default function QuizBlock({ questions, title }: Props) {
                         "text-zinc-500"
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
-                        <span>{opt}</span>
+                        {dual ? (
+                          <BilingualPair
+                            className="flex-1 gap-y-0.5"
+                            divider={false}
+                            en={<span>{enQs[i].options[oi]}</span>}
+                            vi={<span className="opacity-80">{viQs[i].options[oi]}</span>}
+                          />
+                        ) : (
+                          <span>{opt}</span>
+                        )}
                         {isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.correctLabel")}</span>}
                         {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.yourAnswer")}</span>}
                       </div>
@@ -228,10 +350,29 @@ export default function QuizBlock({ questions, title }: Props) {
                   })}
                 </div>
 
-                {q.explanation && (
+                {(q.explanation || (dual && (enQs[i].explanation || viQs[i].explanation))) && (
                   <div className="bg-zinc-100 dark:bg-zinc-800 rounded-lg px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                    <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
-                    {q.explanation}
+                    {dual ? (
+                      <BilingualPair
+                        en={
+                          <>
+                            <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
+                            {enQs[i].explanation}
+                          </>
+                        }
+                        vi={
+                          <>
+                            <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
+                            {viQs[i].explanation}
+                          </>
+                        }
+                      />
+                    ) : (
+                      <>
+                        <span className="text-zinc-500 font-medium">{t("quiz.explanation")}</span>
+                        {q.explanation}
+                      </>
+                    )}
                   </div>
                 )}
               </div>

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "RDS & Read Replicas",
+      "titleEn": "RDS & Read Replicas",
+      "sections": [
+        1,
+        2,
+        3
+      ],
+      "questionIds": [
+        "q1",
+        "q3",
+        "q16"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "RDS Multi-AZ",
+      "titleEn": "RDS Multi-AZ",
+      "sections": [
+        4
+      ],
+      "questionIds": [
+        "q2",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "RDS Proxy & RDS Custom",
+      "titleEn": "RDS Proxy & RDS Custom",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Amazon Aurora",
+      "titleEn": "Amazon Aurora",
+      "sections": [
+        6
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "ElastiCache & caching patterns",
+      "titleEn": "ElastiCache & caching patterns",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q12",
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

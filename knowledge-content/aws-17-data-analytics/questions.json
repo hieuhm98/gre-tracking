@@ -278,5 +278,45 @@
     "answer": 1,
     "explanation": "Redshift là data warehouse OLAP lưu trữ theo cột, dựa trên PostgreSQL nhưng KHÔNG dùng cho OLTP (giao dịch). Nó tối ưu cho phân tích quy mô lớn.",
     "explanationEn": "Redshift is a columnar OLAP data warehouse based on PostgreSQL but NOT used for OLTP (transactions). It is optimized for large-scale analytics."
+  },
+  {
+    "id": "q15",
+    "question": "Amazon Athena tính phí như thế nào?",
+    "questionEn": "How is Amazon Athena billed?",
+    "options": [
+      "Theo giờ chạy của cluster",
+      "Theo số GB dữ liệu lưu trữ",
+      "Theo số người dùng",
+      "Theo số TB dữ liệu mà mỗi truy vấn QUÉT"
+    ],
+    "optionsEn": [
+      "Per hour of cluster uptime",
+      "Per GB of data stored",
+      "Per user",
+      "Per TB of data SCANNED by each query"
+    ],
+    "answer": 3,
+    "explanation": "Vì tính theo lượng dữ liệu quét, nên nén dữ liệu, dùng định dạng cột (Parquet/ORC) và partition sẽ giảm chi phí trực tiếp — đây là điểm thi rất hay gặp.",
+    "explanationEn": "Because billing follows bytes scanned, compressing data, using columnar formats (Parquet/ORC) and partitioning cut costs directly — a very common exam point."
+  },
+  {
+    "id": "q16",
+    "question": "Khác biệt vận hành chính giữa Amazon MSK và Kinesis Data Streams là gì?",
+    "questionEn": "What is the main operational difference between Amazon MSK and Kinesis Data Streams?",
+    "options": [
+      "MSK là Apache Kafka được quản lý (dùng Kafka API, bạn quản lý topic/partition); KDS là dịch vụ stream gốc của AWS với API riêng",
+      "Hai dịch vụ giống hệt nhau, chỉ khác tên",
+      "MSK chỉ có chế độ serverless còn KDS thì không",
+      "KDS hỗ trợ đầy đủ Kafka API còn MSK thì không"
+    ],
+    "optionsEn": [
+      "MSK is managed Apache Kafka (Kafka APIs, you manage topics/partitions); KDS is an AWS-native stream with its own API",
+      "They are identical apart from the name",
+      "MSK is serverless-only while KDS is not",
+      "KDS speaks the full Kafka API while MSK does not"
+    ],
+    "answer": 0,
+    "explanation": "Chọn MSK khi đã có code/công cụ Kafka và muốn giữ nguyên. Chọn KDS khi làm mới trên AWS và muốn tích hợp sẵn với Lambda, Firehose, Data Analytics.",
+    "explanationEn": "Choose MSK when you already have Kafka code and tooling you want to keep. Choose KDS when building fresh on AWS and you want the native integrations with Lambda, Firehose and Data Analytics."
   }
 ]

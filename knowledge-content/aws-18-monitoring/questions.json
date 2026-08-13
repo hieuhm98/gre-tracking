@@ -278,5 +278,145 @@
     "answer": 1,
     "explanation": "Config là công cụ detective (phát hiện) — nó ghi lại và đánh giá cấu hình SAU KHI thay đổi đã xảy ra, và có thể remediation, nhưng KHÔNG ngăn chặn hành động như IAM/SCP (preventive). Config cũng hoạt động theo từng region.",
     "explanationEn": "Config is a detective control — it records and evaluates configuration AFTER a change occurs and can remediate, but it does NOT prevent actions the way IAM/SCP (preventive controls) do. Config also operates per-region."
+  },
+  {
+    "id": "q15",
+    "question": "Với CloudWatch custom metrics, những mức độ phân giải (resolution) nào khả dụng?",
+    "questionEn": "For CloudWatch custom metrics, which resolutions are available?",
+    "options": [
+      "Chỉ 1 giây",
+      "Standard resolution 1 phút, hoặc high resolution xuống tới 1 giây",
+      "5 phút hoặc 1 phút",
+      "Chỉ 1 giờ"
+    ],
+    "optionsEn": [
+      "1 second only",
+      "Standard resolution of 1 minute, or high resolution down to 1 second",
+      "5 minutes or 1 minute",
+      "1 hour only"
+    ],
+    "answer": 1,
+    "explanation": "Custom metric mặc định là 1 phút; đặt `StorageResolution=1` để có high-resolution 1 giây (đắt hơn). Đừng nhầm với EC2: basic monitoring 5 phút, detailed monitoring 1 phút.",
+    "explanationEn": "Custom metrics default to 1 minute; set `StorageResolution=1` for 1-second high resolution (at higher cost). Don't confuse this with EC2, where basic monitoring is 5 minutes and detailed monitoring is 1 minute."
+  },
+  {
+    "id": "q16",
+    "question": "Thứ bậc đúng trong CloudWatch Logs là gì?",
+    "questionEn": "What is the correct hierarchy in CloudWatch Logs?",
+    "options": [
+      "Log events → log group → log stream",
+      "Namespace → metric → dimension",
+      "Log group → log stream → log events",
+      "Log stream → log group → log events"
+    ],
+    "optionsEn": [
+      "Log events → log group → log stream",
+      "Namespace → metric → dimension",
+      "Log group → log stream → log events",
+      "Log stream → log group → log events"
+    ],
+    "answer": 2,
+    "explanation": "Log group thường tương ứng một ứng dụng (ví dụ `/aws/lambda/my-func`) và là nơi đặt retention. Trong đó mỗi log stream là một nguồn cụ thể (một instance, một container).",
+    "explanationEn": "A log group usually maps to one application (e.g. `/aws/lambda/my-func`) and is where retention is set. Within it, each log stream is one specific source (an instance, a container)."
+  },
+  {
+    "id": "q17",
+    "question": "Làm sao đưa log ở mức hệ điều hành từ EC2 lên CloudWatch Logs?",
+    "questionEn": "How do you get OS-level logs from an EC2 instance into CloudWatch Logs?",
+    "options": [
+      "Không cần làm gì, EC2 tự đẩy log lên",
+      "Bật detailed monitoring cho instance",
+      "Bật AWS CloudTrail cho Region đó",
+      "Cài và cấu hình CloudWatch agent trên instance, kèm IAM role cho phép `logs:PutLogEvents`"
+    ],
+    "optionsEn": [
+      "Nothing — EC2 pushes them automatically",
+      "Enable detailed monitoring on the instance",
+      "Turn on AWS CloudTrail for the Region",
+      "Install and configure the CloudWatch agent on the instance, with an IAM role allowing `logs:PutLogEvents`"
+    ],
+    "answer": 3,
+    "explanation": "Cùng một lý do với metric RAM/disk: mọi thứ BÊN TRONG hệ điều hành đều cần agent, vì hypervisor không nhìn thấy. Đây là mẫu câu hỏi rất phổ biến.",
+    "explanationEn": "Same reason as RAM and disk metrics: anything INSIDE the operating system needs the agent, because the hypervisor cannot see it. This is a very common question pattern."
+  },
+  {
+    "id": "q18",
+    "question": "Một CloudWatch alarm có những trạng thái nào?",
+    "questionEn": "What are the possible states of a CloudWatch alarm?",
+    "options": [
+      "OK, ALARM, INSUFFICIENT_DATA",
+      "GREEN, YELLOW, RED",
+      "UP, DOWN, PENDING",
+      "ACTIVE, INACTIVE, ERROR"
+    ],
+    "optionsEn": [
+      "OK, ALARM, INSUFFICIENT_DATA",
+      "GREEN, YELLOW, RED",
+      "UP, DOWN, PENDING",
+      "ACTIVE, INACTIVE, ERROR"
+    ],
+    "answer": 0,
+    "explanation": "INSUFFICIENT_DATA nghĩa là chưa đủ điểm dữ liệu để kết luận (metric mới, hoặc nguồn ngừng gửi) — không phải lỗi. Bạn cấu hình được hành động cho từng trạng thái.",
+    "explanationEn": "INSUFFICIENT_DATA means there aren't enough data points to decide yet (a new metric, or a source that stopped reporting) — it is not an error. You can configure actions for each state."
+  },
+  {
+    "id": "q19",
+    "question": "Một rule trong EventBridge gồm những thành phần nào?",
+    "questionEn": "What is an EventBridge rule made of?",
+    "options": [
+      "Một queue và một consumer",
+      "Một event pattern (hoặc lịch schedule) cộng với một hay nhiều target để gọi",
+      "Một metric và một ngưỡng cảnh báo",
+      "Một bộ lọc trên log group"
+    ],
+    "optionsEn": [
+      "A queue and a consumer",
+      "An event pattern (or a schedule) plus one or more targets to invoke",
+      "A metric and an alarm threshold",
+      "A filter over a log group"
+    ],
+    "answer": 1,
+    "explanation": "EventBridge so khớp event đến với pattern, rồi chuyển tới target (Lambda, SQS, SNS, Step Functions...). Một rule có thể có nhiều target — đây chính là cách fan-out theo sự kiện.",
+    "explanationEn": "EventBridge matches incoming events against the pattern and routes them to targets (Lambda, SQS, SNS, Step Functions…). One rule can have several targets — that is how event fan-out works."
+  },
+  {
+    "id": "q20",
+    "question": "AWS X-Ray tạo ra thứ gì để giúp tìm điểm nghẽn?",
+    "questionEn": "What does AWS X-Ray produce to help you find a bottleneck?",
+    "options": [
+      "Ảnh chụp cấu hình tài nguyên theo thời gian",
+      "Báo cáo chi phí theo dịch vụ",
+      "Service map và các trace, kèm độ trễ của từng segment trong đường đi của request",
+      "Các file log thô của ứng dụng"
+    ],
+    "optionsEn": [
+      "Point-in-time snapshots of resource configuration",
+      "Cost reports broken down by service",
+      "A service map and traces showing per-segment latency along the request path",
+      "Raw application log files"
+    ],
+    "answer": 2,
+    "explanation": "X-Ray theo dấu một request qua nhiều service và cho biết chặng nào tốn thời gian. CloudWatch Logs cho log, Config cho lịch sử cấu hình, CloudTrail cho ai-làm-gì.",
+    "explanationEn": "X-Ray follows one request across services and shows which hop consumed the time. CloudWatch Logs gives you logs, Config gives configuration history, and CloudTrail gives who-did-what."
+  },
+  {
+    "id": "q21",
+    "question": "Cần gì để trace một hàm Lambda bằng X-Ray?",
+    "questionEn": "What is required to trace a Lambda function with X-Ray?",
+    "options": [
+      "Không cần gì, Lambda luôn được trace sẵn",
+      "Bật CloudTrail data events cho hàm",
+      "Cài agent X-Ray lên máy chủ chạy hàm",
+      "Bật active tracing cho hàm và cấp cho execution role quyền ghi lên X-Ray"
+    ],
+    "optionsEn": [
+      "Nothing — Lambda is always traced",
+      "Enable CloudTrail data events for the function",
+      "Install the X-Ray agent on the host running the function",
+      "Enable active tracing on the function and grant its execution role permission to write to X-Ray"
+    ],
+    "answer": 3,
+    "explanation": "Với Lambda bạn chỉ cần bật active tracing (một checkbox) và thêm quyền; runtime lo phần daemon. Trên EC2/ECS thì bạn mới phải tự chạy X-Ray daemon.",
+    "explanationEn": "For Lambda you only enable active tracing (a single checkbox) and add the permission; the runtime handles the daemon. On EC2/ECS you have to run the X-Ray daemon yourself."
   }
 ]

@@ -298,5 +298,65 @@
     "answer": 1,
     "explanation": "min = số instance tối thiểu luôn duy trì; desired = số mong muốn hiện tại mà ASG cố giữ; max = giới hạn trên khi scale-out. Scaling policy điều chỉnh desired trong khoảng [min, max].",
     "explanationEn": "min = the minimum always maintained; desired = the current target count ASG tries to hold; max = the upper limit when scaling out. Scaling policies adjust desired within the [min, max] range."
+  },
+  {
+    "id": "q16",
+    "question": "Scaling dọc (vertical scaling) nghĩa là gì?",
+    "questionEn": "What does vertical scaling mean?",
+    "options": [
+      "Thêm read replica cho database",
+      "Tăng kích thước/sức mạnh của MỘT instance (ví dụ t3.medium → t3.2xlarge)",
+      "Thêm nhiều instance vào phía sau load balancer",
+      "Trải instance ra nhiều Availability Zone"
+    ],
+    "optionsEn": [
+      "Adding read replicas to a database",
+      "Increasing the size/power of a SINGLE instance (e.g. t3.medium → t3.2xlarge)",
+      "Adding more instances behind a load balancer",
+      "Spreading instances across multiple Availability Zones"
+    ],
+    "answer": 1,
+    "explanation": "Vertical = to hơn (scale up), bị giới hạn bởi instance type lớn nhất. Horizontal = nhiều hơn (scale out), là cách chính để đạt HA và mở rộng trên cloud.",
+    "explanationEn": "Vertical means bigger (scale up) and is capped by the largest instance type. Horizontal means more (scale out) and is the main route to HA and elasticity in the cloud."
+  },
+  {
+    "id": "q17",
+    "question": "Điều gì làm cho bản thân Elastic Load Balancer có tính sẵn sàng cao?",
+    "questionEn": "What makes the Elastic Load Balancer itself highly available?",
+    "options": [
+      "ELB có một địa chỉ IP tĩnh duy nhất",
+      "ELB phải được đặt trong một Auto Scaling Group",
+      "ELB là dịch vụ được quản lý, triển khai node ở mọi AZ bạn bật và tự mở rộng theo tải",
+      "ELB chạy trên một EC2 instance duy nhất do bạn quản lý"
+    ],
+    "optionsEn": [
+      "It has one single static IP address",
+      "It must be placed inside an Auto Scaling Group",
+      "It is a managed service that deploys nodes in every AZ you enable and scales itself with load",
+      "It runs on a single EC2 instance that you manage"
+    ],
+    "answer": 2,
+    "explanation": "ELB do AWS vận hành, đặt node ở từng AZ được bật và tự scale — bạn không phải quản lý hay scale nó. Bạn chỉ cần bật đủ AZ để có HA.",
+    "explanationEn": "AWS operates the ELB, placing nodes in each enabled AZ and scaling it for you — there is nothing to manage or scale yourself. You just need to enable enough AZs for HA."
+  },
+  {
+    "id": "q18",
+    "question": "Một ASG có min=2, desired=4, max=8. Hai instance trượt health check và bị terminate. ASG làm gì?",
+    "questionEn": "An ASG has min=2, desired=4, max=8. Two instances fail their health checks and are terminated. What does the ASG do?",
+    "options": [
+      "Không làm gì vì vẫn còn ≥ min",
+      "Scale thẳng lên max là 8",
+      "Hạ desired capacity xuống 2",
+      "Launch 2 instance mới để quay lại đúng desired capacity là 4"
+    ],
+    "optionsEn": [
+      "Nothing, because it is still at or above min",
+      "Scales straight up to max, 8",
+      "Lowers the desired capacity to 2",
+      "Launches 2 replacements to return to the desired capacity of 4"
+    ],
+    "answer": 3,
+    "explanation": "ASG luôn cố duy trì ĐÚNG desired capacity. Instance không khỏe sẽ bị thay thế; min/max chỉ là biên cho các scaling policy.",
+    "explanationEn": "An ASG always works to maintain exactly the desired capacity. Unhealthy instances get replaced; min and max are only the bounds that scaling policies operate within."
   }
 ]

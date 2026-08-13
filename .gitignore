@@ -5,3 +5,5 @@ node_modules/
 requirements.txt
 .claude/
 .dev-data/
+# Generated from data/progress.json by scripts/sync-progress.mjs at build time.
+public/progress.json

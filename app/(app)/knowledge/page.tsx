@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useLang } from "@/context/lang";
+import { useProgress } from "@/context/progress";
+import { topicStats } from "@/lib/progress";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 
 interface StaticTopic {
@@ -13,10 +15,12 @@ interface StaticTopic {
   titleEn?: string;
   description: string;
   descriptionEn?: string;
+  questionCount?: number;
 }
 
 export default function KnowledgePage() {
   const { t, pick } = useLang();
+  const { progress } = useProgress();
   const [staticTopics, setStaticTopics] = useState<StaticTopic[]>([]);
   const [loading, setLoading] = useState(true);
   const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
@@ -101,27 +105,42 @@ export default function KnowledgePage() {
                     {pick(group.description, group.descriptionEn)}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {topics.map((topic, i) => (
-                      <Link
-                        key={topic.slug}
-                        href={`/knowledge/${topic.slug}`}
-                        className="card hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800/80 transition-colors group"
-                      >
-                        <div className="flex items-start gap-3">
-                          <span className="text-xs font-mono text-zinc-400 dark:text-zinc-600 mt-0.5 shrink-0 w-6">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <div>
-                            <div className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-900 dark:group-hover:text-white text-sm">
-                              {pick(topic.title, topic.titleEn)}
+                    {topics.map((topic, i) => {
+                      const stat = topicStats(progress, topic.slug, topic.questionCount);
+
+                      return (
+                        <Link
+                          key={topic.slug}
+                          href={`/knowledge/${topic.slug}`}
+                          className="card hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-200 dark:hover:bg-zinc-800/80 transition-colors group"
+                        >
+                          <div className="flex items-start gap-3">
+                            <span className="text-xs font-mono text-zinc-400 dark:text-zinc-600 mt-0.5 shrink-0 w-6">
+                              {String(i + 1).padStart(2, "0")}
+                            </span>
+                            <div className="min-w-0 flex-1">
+                              <div className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-900 dark:group-hover:text-white text-sm">
+                                {pick(topic.title, topic.titleEn)}
+                              </div>
+                              <div className="text-xs text-zinc-500 mt-1 leading-relaxed">
+                                {pick(topic.description, topic.descriptionEn)}
+                              </div>
                             </div>
-                            <div className="text-xs text-zinc-500 mt-1 leading-relaxed">
-                              {pick(topic.description, topic.descriptionEn)}
-                            </div>
+                            {stat.started && (
+                              <span
+                                className={`text-xs px-2 py-0.5 rounded border shrink-0 ${
+                                  stat.completed
+                                    ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800"
+                                    : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700"
+                                }`}
+                              >
+                                {stat.completed ? `✓ ${stat.bestPct}%` : `${stat.answered}/${stat.total || "?"}`}
+                              </span>
+                            )}
                           </div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               )}

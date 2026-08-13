@@ -298,5 +298,85 @@
     "answer": 2,
     "explanation": "Route 53 là dịch vụ AWS duy nhất cam kết SLA availability 100%. Đây là chi tiết hay được hỏi trong đề SAA-C03 để phân biệt Route 53 với các dịch vụ khác.",
     "explanationEn": "Route 53 is the only AWS service that commits to a 100% availability SLA. This detail is frequently tested in SAA-C03 to distinguish Route 53 from other services."
+  },
+  {
+    "id": "q16",
+    "question": "Loại bản ghi DNS nào ánh xạ một hostname sang địa chỉ IPv6?",
+    "questionEn": "Which DNS record type maps a hostname to an IPv6 address?",
+    "options": [
+      "A",
+      "CNAME",
+      "MX",
+      "AAAA"
+    ],
+    "optionsEn": [
+      "A",
+      "CNAME",
+      "MX",
+      "AAAA"
+    ],
+    "answer": 3,
+    "explanation": "A trỏ tới IPv4, AAAA trỏ tới IPv6. CNAME trỏ tên này sang tên khác, MX dùng cho mail server.",
+    "explanationEn": "A points to an IPv4 address and AAAA to an IPv6 address. CNAME points one name at another name, and MX is for mail servers."
+  },
+  {
+    "id": "q17",
+    "question": "Bản ghi NS trong một hosted zone dùng để làm gì?",
+    "questionEn": "What does an NS record in a hosted zone do?",
+    "options": [
+      "Chỉ ra các name server có thẩm quyền (authoritative) cho zone đó",
+      "Ánh xạ tên miền sang địa chỉ IP",
+      "Tạo bí danh cho một tên khác",
+      "Định tuyến email cho tên miền"
+    ],
+    "optionsEn": [
+      "Identifies the name servers that are authoritative for that zone",
+      "Maps a domain name to an IP address",
+      "Creates an alias for another name",
+      "Routes email for the domain"
+    ],
+    "answer": 0,
+    "explanation": "NS cho phần còn lại của Internet biết máy chủ nào trả lời cho zone. Khi tạo public hosted zone, Route 53 sinh sẵn bản ghi NS mà bạn phải khai báo ở nhà đăng ký tên miền.",
+    "explanationEn": "NS records tell the rest of the internet which servers answer for the zone. When you create a public hosted zone, Route 53 generates NS records that you must register with your domain registrar."
+  },
+  {
+    "id": "q18",
+    "question": "Đặt TTL cao cho một bản ghi DNS dẫn đến hệ quả gì?",
+    "questionEn": "What is the consequence of setting a high TTL on a DNS record?",
+    "options": [
+      "Không ảnh hưởng gì tới chi phí hay tốc độ lan truyền",
+      "Ít truy vấn tới Route 53 hơn (rẻ hơn) nhưng thay đổi bản ghi lan truyền chậm hơn",
+      "Thay đổi lan truyền nhanh hơn nhưng tốn tiền hơn",
+      "Nhiều truy vấn hơn và lan truyền chậm hơn"
+    ],
+    "optionsEn": [
+      "No effect on either cost or propagation speed",
+      "Fewer queries reach Route 53 (lower cost) but record changes propagate more slowly",
+      "Changes propagate faster but cost more",
+      "More queries and slower propagation"
+    ],
+    "answer": 1,
+    "explanation": "TTL là thời gian resolver được phép cache câu trả lời. TTL cao = ít truy vấn, rẻ hơn, nhưng client giữ giá trị cũ lâu hơn — nên hạ TTL trước khi có thay đổi lớn.",
+    "explanationEn": "TTL is how long resolvers may cache an answer. A high TTL means fewer queries and lower cost, but clients hold the old value longer — so lower the TTL ahead of a planned change."
+  },
+  {
+    "id": "q19",
+    "question": "Phát biểu nào ĐÚNG về chi phí truy vấn của bản ghi Alias trong Route 53?",
+    "questionEn": "Which statement is TRUE about query cost for Route 53 Alias records?",
+    "options": [
+      "Alias tính phí theo hosted zone chứ không theo truy vấn",
+      "Alias và CNAME có chi phí truy vấn giống hệt nhau",
+      "Truy vấn Alias trỏ tới tài nguyên AWS là MIỄN PHÍ",
+      "Truy vấn Alias tốn gấp đôi bản ghi thường"
+    ],
+    "optionsEn": [
+      "Alias is charged per hosted zone rather than per query",
+      "Alias and CNAME cost exactly the same per query",
+      "Alias queries that resolve to AWS resources are FREE",
+      "Alias queries cost twice as much as a normal record"
+    ],
+    "answer": 2,
+    "explanation": "Alias là bản ghi riêng của Route 53: miễn phí truy vấn khi trỏ tới tài nguyên AWS, dùng được ở zone apex, và tự cập nhật khi IP của tài nguyên đích thay đổi. CNAME thì bị tính phí và không dùng được ở apex.",
+    "explanationEn": "Alias is a Route 53-specific record: free to query when it points at an AWS resource, usable at the zone apex, and it tracks the target's changing IPs automatically. CNAMEs are billed and cannot be used at the apex."
   }
 ]

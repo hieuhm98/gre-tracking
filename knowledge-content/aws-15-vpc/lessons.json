@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "VPC, CIDR & Subnets",
+      "titleEn": "VPC, CIDR & Subnets",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Internet Gateway, Route Tables & NAT",
+      "titleEn": "Internet Gateway, Route Tables & NAT",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q2",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Security Groups vs NACL",
+      "titleEn": "Security Groups vs NACL",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q3",
+        "q4",
+        "q15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "VPC Peering & VPC Endpoints",
+      "titleEn": "VPC Peering & VPC Endpoints",
+      "sections": [
+        6,
+        7
+      ],
+      "questionIds": [
+        "q9",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Kết nối hybrid: VPN, Direct Connect & Transit Gateway",
+      "titleEn": "Hybrid connectivity: VPN, Direct Connect & Transit Gateway",
+      "sections": [
+        8
+      ],
+      "questionIds": [
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Flow Logs, Bastion Host & kiến trúc 3 tầng",
+      "titleEn": "Flow Logs, Bastion Host & the 3-tier architecture",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q18"
+      ]
+    },
+    {
+      "id": "l7",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        11,
+        12
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

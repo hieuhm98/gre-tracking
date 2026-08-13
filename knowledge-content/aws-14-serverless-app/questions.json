@@ -278,5 +278,45 @@
     "answer": 0,
     "explanation": "Luồng chuẩn: app đăng nhập qua Cognito (User Pool + Identity Pool), gọi API Gateway (Cognito authorizer), Lambda xử lý và đọc/ghi DynamoDB.",
     "explanationEn": "Standard flow: the app signs in via Cognito (User Pool + Identity Pool), calls API Gateway (Cognito authorizer), and Lambda processes and reads/writes DynamoDB."
+  },
+  {
+    "id": "q15",
+    "question": "File nào định nghĩa một ứng dụng AWS SAM?",
+    "questionEn": "Which file defines an AWS SAM application?",
+    "options": [
+      "`template.yaml` dùng transform `AWS::Serverless-2016-10-31`",
+      "`package.json` ở thư mục gốc",
+      "`Dockerfile`",
+      "`serverless.tf`"
+    ],
+    "optionsEn": [
+      "`template.yaml` using the `AWS::Serverless-2016-10-31` transform",
+      "`package.json` in the project root",
+      "`Dockerfile`",
+      "`serverless.tf`"
+    ],
+    "answer": 0,
+    "explanation": "SAM template là CloudFormation template có thêm dòng `Transform`. Nhờ đó bạn khai báo `AWS::Serverless::Function` ngắn gọn, và CloudFormation sẽ mở rộng thành các resource đầy đủ.",
+    "explanationEn": "A SAM template is a CloudFormation template with an added `Transform` line. That lets you declare a compact `AWS::Serverless::Function`, which CloudFormation expands into the full set of resources."
+  },
+  {
+    "id": "q16",
+    "question": "Một consumer serverless cần xử lý message từ SQS. Cách tích hợp chuẩn là gì?",
+    "questionEn": "A serverless consumer needs to process messages from SQS. What is the standard integration?",
+    "options": [
+      "Chuyển sang SNS vì Lambda không đọc được SQS",
+      "Cấu hình queue SQS làm event source mapping cho một hàm Lambda",
+      "Để Lambda tự poll queue theo lịch mỗi phút",
+      "Đặt API Gateway ở giữa queue và Lambda"
+    ],
+    "optionsEn": [
+      "Switch to SNS, since Lambda cannot read from SQS",
+      "Configure the SQS queue as an event source mapping for a Lambda function",
+      "Have Lambda poll the queue on a one-minute schedule",
+      "Put API Gateway between the queue and Lambda"
+    ],
+    "answer": 1,
+    "explanation": "Event source mapping là dịch vụ do Lambda quản lý: nó tự long-poll queue, gom message thành batch, gọi hàm, và tự xóa message khi hàm chạy thành công.",
+    "explanationEn": "An event source mapping is a Lambda-managed poller: it long-polls the queue, batches messages, invokes the function, and deletes the messages automatically when the invocation succeeds."
   }
 ]

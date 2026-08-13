@@ -11,6 +11,7 @@ export async function GET(_req: Request, { params }: { params: { slug: string } 
     const articlePath = path.join(dir, "article.md");
     const articleEnPath = path.join(dir, "article.en.md");
     const questionsPath = path.join(dir, "questions.json");
+    const lessonsPath = path.join(dir, "lessons.json");
     const metaPath = path.join(dir, "meta.json");
 
     if (!fs.existsSync(articlePath)) {
@@ -25,6 +26,10 @@ export async function GET(_req: Request, { params }: { params: { slug: string } 
     const questions = fs.existsSync(questionsPath)
       ? JSON.parse(fs.readFileSync(questionsPath, "utf-8"))
       : [];
+    // Mini-lesson breakdown — absent for topics that haven't been split yet.
+    const lessons = fs.existsSync(lessonsPath)
+      ? JSON.parse(fs.readFileSync(lessonsPath, "utf-8")).lessons ?? []
+      : [];
 
     return NextResponse.json({
       slug: params.slug,
@@ -32,6 +37,7 @@ export async function GET(_req: Request, { params }: { params: { slug: string } 
       content,
       contentEn,
       questions,
+      lessons,
       ...meta,
     });
   } catch {

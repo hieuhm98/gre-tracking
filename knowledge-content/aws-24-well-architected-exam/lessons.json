@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Sáu trụ cột của Well-Architected",
+      "titleEn": "The six Well-Architected pillars",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Nguyên tắc thiết kế & công cụ hỗ trợ",
+      "titleEn": "Design principles & supporting tools",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Chiến lược làm bài thi",
+      "titleEn": "Exam strategy",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q4",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Kịch bản tổng hợp",
+      "titleEn": "Scenario recap",
+      "sections": [
+        6
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

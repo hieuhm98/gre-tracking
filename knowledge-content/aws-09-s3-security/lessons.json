@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Mã hóa dữ liệu at rest",
+      "titleEn": "Encrypting data at rest",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q9",
+        "q11"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "In transit, default encryption & Bucket Keys",
+      "titleEn": "In transit, default encryption & Bucket Keys",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Bucket Policy, Block Public Access & Pre-signed URL",
+      "titleEn": "Bucket Policy, Block Public Access & Pre-signed URLs",
+      "sections": [
+        4,
+        5,
+        6
+      ],
+      "questionIds": [
+        "q5",
+        "q10",
+        "q7"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Access Points, Object Lambda, CORS & MFA Delete",
+      "titleEn": "Access Points, Object Lambda, CORS & MFA Delete",
+      "sections": [
+        7,
+        8,
+        9
+      ],
+      "questionIds": [
+        "q13",
+        "q12",
+        "q14"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Object Lock, logging & VPC Endpoint",
+      "titleEn": "Object Lock, logging & VPC Endpoint",
+      "sections": [
+        10,
+        11,
+        12
+      ],
+      "questionIds": [
+        "q6",
+        "q8",
+        "q15"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        13,
+        14
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

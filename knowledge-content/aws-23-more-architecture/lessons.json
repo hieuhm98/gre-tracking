@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Kiến trúc hướng sự kiện",
+      "titleEn": "Event-driven architecture",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q5",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Chiến lược caching & tách rời hệ thống",
+      "titleEn": "Caching strategies & decoupling",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q6"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Chặn IP: SG vs NACL vs WAF vs Shield",
+      "titleEn": "Blocking IPs: SG vs NACL vs WAF vs Shield",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q1",
+        "q12",
+        "q18"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "HPC & EC2 Instance Metadata Service",
+      "titleEn": "HPC & the EC2 Instance Metadata Service",
+      "sections": [
+        6,
+        7
+      ],
+      "questionIds": [
+        "q3",
+        "q4",
+        "q11",
+        "q2"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Các dịch vụ AWS khác cần nhớ",
+      "titleEn": "Other AWS services worth remembering",
+      "sections": [
+        8
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

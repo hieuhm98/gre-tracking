@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Khung quyết định chọn database",
+      "titleEn": "The database decision framework",
+      "sections": [
+        1
+      ],
+      "questionIds": [
+        "q15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Relational & Key-value",
+      "titleEn": "Relational & Key-value",
+      "sections": [
+        2,
+        3
+      ],
+      "questionIds": [
+        "q10",
+        "q11",
+        "q12",
+        "q2"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "In-memory & Data warehouse",
+      "titleEn": "In-memory & Data warehouse",
+      "sections": [
+        4,
+        5
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q14",
+        "q3"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Các database chuyên biệt",
+      "titleEn": "Specialized databases",
+      "sections": [
+        6
+      ],
+      "questionIds": [
+        "q1",
+        "q4",
+        "q5",
+        "q6",
+        "q9",
+        "q13"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Tham chiếu nhanh, so sánh & điểm thi",
+      "titleEn": "Quick reference, comparison & exam points",
+      "sections": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

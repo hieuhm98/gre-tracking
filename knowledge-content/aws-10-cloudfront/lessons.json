@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "CloudFront, edge locations & Origins/OAC",
+      "titleEn": "CloudFront, edge locations & Origins/OAC",
+      "sections": [
+        1,
+        2,
+        3
+      ],
+      "questionIds": [
+        "q1",
+        "q9",
+        "q14"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Caching & Invalidation",
+      "titleEn": "Caching & Invalidation",
+      "sections": [
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Signed URLs, Signed Cookies & Geo Restriction",
+      "titleEn": "Signed URLs, Signed Cookies & Geo Restriction",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "HTTPS/TLS & edge functions",
+      "titleEn": "HTTPS/TLS & edge functions",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q8",
+        "q12",
+        "q17"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "CloudFront vs CRR vs Global Accelerator",
+      "titleEn": "CloudFront vs CRR vs Global Accelerator",
+      "sections": [
+        9,
+        10,
+        11
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q10",
+        "q11",
+        "q13"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        12,
+        13
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -258,5 +258,45 @@
     "answer": 0,
     "explanation": "S3 Object Lambda cho phép chạy hàm Lambda để biến đổi dữ liệu ngay khi object được lấy ra (GET), ví dụ redact, resize, đổi định dạng, mà giữ nguyên bản gốc và không cần lưu nhiều bản sao.",
     "explanationEn": "S3 Object Lambda lets a Lambda function transform data as an object is retrieved (GET) — e.g. redact, resize, reformat — while keeping the original intact and avoiding multiple stored copies."
+  },
+  {
+    "id": "q14",
+    "question": "Một trang web tại `https://app.example.com` dùng JavaScript tải ảnh từ một S3 bucket, nhưng trình duyệt chặn request. Cần cấu hình gì?",
+    "questionEn": "A page at `https://app.example.com` loads images from an S3 bucket via JavaScript, but the browser blocks the request. What must be configured?",
+    "options": [
+      "Tạo một S3 Access Point cho ứng dụng",
+      "Cấu hình CORS trên bucket, cho phép origin `https://app.example.com`",
+      "Một bucket policy từ chối truy cập ẩn danh",
+      "Bật MFA Delete trên bucket"
+    ],
+    "optionsEn": [
+      "An S3 Access Point for the application",
+      "A CORS configuration on the bucket allowing the `https://app.example.com` origin",
+      "A bucket policy denying anonymous access",
+      "MFA Delete enabled on the bucket"
+    ],
+    "answer": 1,
+    "explanation": "Trình duyệt chặn request cross-origin trừ khi máy chủ đích cho phép. Cấu hình CORS trên bucket khai báo origin, method và header nào được chấp nhận.",
+    "explanationEn": "Browsers block cross-origin requests unless the target server permits them. A CORS configuration on the bucket declares which origins, methods and headers are accepted."
+  },
+  {
+    "id": "q15",
+    "question": "Khác biệt giữa S3 Object Lock chế độ Governance và chế độ Compliance là gì?",
+    "questionEn": "What is the difference between S3 Object Lock in Governance mode and Compliance mode?",
+    "options": [
+      "Cả hai đều không thể bị ghi đè bởi bất kỳ ai",
+      "Compliance chỉ khác ở chỗ thời gian giữ ngắn hơn",
+      "Governance có thể bị ghi đè bởi user có quyền đặc biệt; Compliance thì KHÔNG AI ghi đè được, kể cả root",
+      "Cả hai đều có thể bị ghi đè bởi root"
+    ],
+    "optionsEn": [
+      "Neither can be overridden by anyone",
+      "Compliance simply has a shorter retention period",
+      "Governance can be overridden by users with a special permission; Compliance can be overridden by NO ONE, not even root",
+      "Both can be overridden by the root user"
+    ],
+    "answer": 2,
+    "explanation": "Governance = bảo vệ có cửa thoát (quyền `s3:BypassGovernanceRetention`). Compliance = WORM tuyệt đối cho tới hết hạn giữ — dùng cho yêu cầu pháp lý nghiêm ngặt.",
+    "explanationEn": "Governance is protection with an escape hatch (the `s3:BypassGovernanceRetention` permission). Compliance is absolute WORM until the retention period expires — used for strict regulatory requirements."
   }
 ]

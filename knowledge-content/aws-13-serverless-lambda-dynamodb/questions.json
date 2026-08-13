@@ -278,5 +278,45 @@
     "answer": 1,
     "explanation": "Lambda cho cấu hình bộ nhớ 128 MB–10 GB; CPU được cấp tỉ lệ theo bộ nhớ. /tmp mặc định 512 MB (tối đa 10 GB) và không bền vững giữa các lần gọi.",
     "explanationEn": "Lambda memory is configurable from 128 MB to 10 GB, and CPU is allocated proportionally to memory. /tmp defaults to 512 MB (up to 10 GB) and is not durable across invocations."
+  },
+  {
+    "id": "q15",
+    "question": "Trong mẫu S3 → Lambda, S3 được cấp quyền gọi hàm Lambda bằng cách nào?",
+    "questionEn": "In the S3 → Lambda pattern, how is S3 permitted to invoke the Lambda function?",
+    "options": [
+      "Bằng một ACL trên bucket",
+      "Bằng một security group cho phép S3",
+      "Bằng resource-based policy trên chính hàm Lambda, cho phép service principal của S3",
+      "Bằng access key của một IAM user lưu trong cấu hình bucket"
+    ],
+    "optionsEn": [
+      "By an ACL on the bucket",
+      "By a security group that permits S3",
+      "By a resource-based policy on the Lambda function itself allowing the S3 service principal",
+      "By an IAM user's access key stored in the bucket configuration"
+    ],
+    "answer": 2,
+    "explanation": "Lambda có resource-based policy (khác với execution role). Khi bạn tạo S3 event notification, AWS tự thêm permission cho `s3.amazonaws.com` gọi hàm. Execution role là quyền để hàm gọi ra ngoài.",
+    "explanationEn": "Lambda has a resource-based policy (distinct from its execution role). Creating the S3 event notification adds a permission for `s3.amazonaws.com` to invoke the function. The execution role is what the function uses to call out."
+  },
+  {
+    "id": "q16",
+    "question": "Một Lambda được kích hoạt khi upload lên S3 và ghi kết quả trở lại S3. Làm sao tránh vòng lặp vô hạn?",
+    "questionEn": "A Lambda is triggered by an S3 upload and writes its output back to S3. How do you avoid an infinite loop?",
+    "options": [
+      "Tăng timeout của hàm Lambda",
+      "Cấp thêm memory cho hàm",
+      "Bật versioning trên bucket",
+      "Ghi kết quả sang bucket khác hoặc prefix khác không nằm trong phạm vi trigger"
+    ],
+    "optionsEn": [
+      "Increase the Lambda function's timeout",
+      "Give the function more memory",
+      "Enable versioning on the bucket",
+      "Write the output to a different bucket, or a prefix that the trigger does not cover"
+    ],
+    "answer": 3,
+    "explanation": "Đây là bẫy kinh điển: hàm ghi vào chính nơi nó đang lắng nghe → tự kích hoạt lại mãi mãi. Tách bucket đích, hoặc giới hạn trigger bằng prefix/suffix filter.",
+    "explanationEn": "This is the classic trap: the function writes into the very location it listens on, re-triggering itself forever. Separate the destination bucket, or scope the trigger with a prefix/suffix filter."
   }
 ]

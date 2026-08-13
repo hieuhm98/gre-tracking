@@ -278,5 +278,25 @@
     "answer": 1,
     "explanation": "Tên S3 bucket phải duy nhất trên TOÀN CẦU, nhưng dữ liệu thực tế được lưu trong Region bạn chọn khi tạo bucket. Đây là điểm dễ nhầm giữa 'global namespace' và 'Region-scoped data'.",
     "explanationEn": "An S3 bucket name must be GLOBALLY unique, but the actual data is stored in the Region you choose at creation. This is a common point of confusion between a 'global namespace' and 'Region-scoped data'."
+  },
+  {
+    "id": "q15",
+    "question": "Trong mô hình SaaS, khách hàng chịu trách nhiệm quản lý phần nào?",
+    "questionEn": "In the SaaS model, what is the customer responsible for managing?",
+    "options": [
+      "Chỉ dữ liệu của mình và cấu hình người dùng bên trong ứng dụng",
+      "Hệ điều hành và runtime của ứng dụng",
+      "Tầng ảo hóa và máy chủ vật lý",
+      "Hạ tầng mạng và storage"
+    ],
+    "optionsEn": [
+      "Only their own data and user configuration inside the application",
+      "The operating system and the application runtime",
+      "The virtualization layer and physical servers",
+      "Networking and storage infrastructure"
+    ],
+    "answer": 0,
+    "explanation": "SaaS: nhà cung cấp quản lý toàn bộ từ hạ tầng lên tới ứng dụng. Khách hàng chỉ quản lý dữ liệu và cách sử dụng (ví dụ Gmail, Salesforce).",
+    "explanationEn": "With SaaS the provider manages everything up to and including the application. The customer only manages their data and how they use it (e.g. Gmail, Salesforce)."
   }
 ]

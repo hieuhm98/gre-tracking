@@ -258,5 +258,65 @@
     "answer": 1,
     "explanation": "ECS Service duy trì số task mong muốn (desired count), tự thay thế task chết và tích hợp với ALB (target group). Task Definition chỉ là bản thiết kế, không tự duy trì số lượng task.",
     "explanationEn": "The ECS Service maintains the desired task count, replaces failed tasks, and integrates with the ALB (target group). The Task Definition is only a blueprint and does not maintain running task counts."
+  },
+  {
+    "id": "q14",
+    "question": "Trong ECS, một Task Definition mô tả điều gì?",
+    "questionEn": "In ECS, what does a Task Definition describe?",
+    "options": [
+      "Một container đang chạy thực tế",
+      "Nhóm hạ tầng compute nơi container chạy",
+      "Cấu hình của load balancer phía trước",
+      "Bản thiết kế: image nào chạy, CPU/memory, port mapping, volume và IAM role"
+    ],
+    "optionsEn": [
+      "An actually running container",
+      "The pool of compute where containers run",
+      "The configuration of the load balancer in front",
+      "The blueprint: which images to run, CPU/memory, port mappings, volumes and IAM role"
+    ],
+    "answer": 3,
+    "explanation": "Task Definition là bản thiết kế (như Dockerfile ở mức deployment). Task là một lần chạy cụ thể của bản thiết kế đó; Service giữ cho N task luôn chạy.",
+    "explanationEn": "The Task Definition is the blueprint (a deployment-level analogue of a Dockerfile). A Task is one running instantiation of it, and a Service keeps N tasks running."
+  },
+  {
+    "id": "q15",
+    "question": "ECS Cluster là gì?",
+    "questionEn": "What is an ECS Cluster?",
+    "options": [
+      "Một nhóm logic của hạ tầng compute (EC2 instance hoặc Fargate) nơi các task được chạy",
+      "Một registry lưu Docker image",
+      "Một container đơn lẻ đang chạy",
+      "Một phiên bản của task definition"
+    ],
+    "optionsEn": [
+      "A logical grouping of compute capacity (EC2 instances or Fargate) where tasks are placed",
+      "A registry that stores Docker images",
+      "A single running container",
+      "A version of a task definition"
+    ],
+    "answer": 0,
+    "explanation": "Cluster là nơi task chạy. Với launch type EC2 bạn quản lý các instance trong cluster; với Fargate thì AWS lo phần compute, cluster chỉ còn là ranh giới logic.",
+    "explanationEn": "The cluster is where tasks run. With the EC2 launch type you manage the instances in it; with Fargate AWS provides the compute and the cluster is just a logical boundary."
+  },
+  {
+    "id": "q16",
+    "question": "ECS *task execution role* dùng để làm gì?",
+    "questionEn": "What is the ECS *task execution role* used for?",
+    "options": [
+      "Cho phép service tự động scale số task",
+      "Cho phép ECS agent kéo image từ ECR và ghi log lên CloudWatch thay mặt task",
+      "Cho phép code trong container gọi S3, DynamoDB...",
+      "Cho phép EC2 instance đăng ký vào cluster"
+    ],
+    "optionsEn": [
+      "Letting the service scale the number of tasks",
+      "Letting the ECS agent pull images from ECR and write logs to CloudWatch on the task's behalf",
+      "Letting the code inside the container call S3, DynamoDB, and so on",
+      "Letting an EC2 instance register itself with the cluster"
+    ],
+    "answer": 1,
+    "explanation": "Đừng nhầm ba role: *execution role* để khởi động task (kéo image, ghi log), *task role* cho code trong container gọi AWS service, *instance role* cho host EC2 đăng ký vào cluster.",
+    "explanationEn": "Don't conflate the three roles: the *execution role* starts the task (pull image, write logs), the *task role* lets the container's code call AWS services, and the *instance role* lets the EC2 host register with the cluster."
   }
 ]

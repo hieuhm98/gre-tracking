@@ -3,8 +3,18 @@
     "id": "q1",
     "question": "AWS Well-Architected Framework hiện có bao nhiêu trụ cột (pillar)?",
     "questionEn": "How many pillars does the AWS Well-Architected Framework currently have?",
-    "options": ["4", "5", "6", "7"],
-    "optionsEn": ["4", "5", "6", "7"],
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "optionsEn": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
     "answer": 2,
     "explanation": "Ban đầu khung có 5 trụ cột; năm 2021 AWS bổ sung trụ cột thứ 6 là Sustainability, nâng tổng số lên 6.",
     "explanationEn": "The framework originally had 5 pillars; in 2021 AWS added a 6th pillar, Sustainability, bringing the total to 6."
@@ -13,8 +23,18 @@
     "id": "q2",
     "question": "Một câu hỏi yêu cầu giải pháp 'MOST cost-effective' (tối ưu chi phí nhất). Trụ cột nào đang được ưu tiên?",
     "questionEn": "A question asks for the 'MOST cost-effective' solution. Which pillar is being prioritized?",
-    "options": ["Reliability", "Cost Optimization", "Security", "Operational Excellence"],
-    "optionsEn": ["Reliability", "Cost Optimization", "Security", "Operational Excellence"],
+    "options": [
+      "Reliability",
+      "Cost Optimization",
+      "Security",
+      "Operational Excellence"
+    ],
+    "optionsEn": [
+      "Reliability",
+      "Cost Optimization",
+      "Security",
+      "Operational Excellence"
+    ],
     "answer": 1,
     "explanation": "Từ khóa 'cost-effective' ánh xạ trực tiếp tới trụ cột Cost Optimization; hãy ưu tiên serverless, Spot, S3 tiering, dịch vụ managed.",
     "explanationEn": "The keyword 'cost-effective' maps directly to the Cost Optimization pillar; favor serverless, Spot, S3 tiering, and managed services."
@@ -63,8 +83,18 @@
     "id": "q5",
     "question": "Trusted Advisor cung cấp các khuyến nghị theo bao nhiêu nhóm kiểm tra (check categories)?",
     "questionEn": "Trusted Advisor provides recommendations across how many check categories?",
-    "options": ["3", "5", "6", "10"],
-    "optionsEn": ["3", "5", "6", "10"],
+    "options": [
+      "3",
+      "5",
+      "6",
+      "10"
+    ],
+    "optionsEn": [
+      "3",
+      "5",
+      "6",
+      "10"
+    ],
     "answer": 1,
     "explanation": "Trusted Advisor có 5 nhóm: Cost Optimization, Security, Fault Tolerance, Performance và Service Limits.",
     "explanationEn": "Trusted Advisor has 5 categories: Cost Optimization, Security, Fault Tolerance, Performance, and Service Limits."
@@ -93,8 +123,18 @@
     "id": "q7",
     "question": "Bạn muốn ĐÁNH GIÁ (review) một workload theo từng trụ cột và nhận danh sách rủi ro kèm khuyến nghị. Dùng công cụ nào?",
     "questionEn": "You want to REVIEW a workload against each pillar and get a list of risks with recommendations. Which tool do you use?",
-    "options": ["AWS Well-Architected Tool", "Amazon CloudWatch", "AWS Config", "AWS CloudFormation"],
-    "optionsEn": ["AWS Well-Architected Tool", "Amazon CloudWatch", "AWS Config", "AWS CloudFormation"],
+    "options": [
+      "AWS Well-Architected Tool",
+      "Amazon CloudWatch",
+      "AWS Config",
+      "AWS CloudFormation"
+    ],
+    "optionsEn": [
+      "AWS Well-Architected Tool",
+      "Amazon CloudWatch",
+      "AWS Config",
+      "AWS CloudFormation"
+    ],
     "answer": 0,
     "explanation": "AWS Well-Architected Tool (miễn phí) hướng dẫn bạn trả lời câu hỏi theo trụ cột và xuất ra danh sách rủi ro high/medium kèm khuyến nghị cải thiện.",
     "explanationEn": "The AWS Well-Architected Tool (free) guides you through per-pillar questions and produces a list of high/medium risks with improvement recommendations."
@@ -103,8 +143,18 @@
     "id": "q8",
     "question": "Đề bài: 'cần TÁCH RỜI (decouple) tầng nhận đơn và tầng xử lý để chịu tải đột biến'. Dịch vụ nào?",
     "questionEn": "Prompt: 'need to DECOUPLE the order-intake tier from the processing tier to absorb traffic spikes.' Which service?",
-    "options": ["Amazon SNS", "Amazon SQS", "Amazon Kinesis Data Streams", "AWS Step Functions"],
-    "optionsEn": ["Amazon SNS", "Amazon SQS", "Amazon Kinesis Data Streams", "AWS Step Functions"],
+    "options": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon Kinesis Data Streams",
+      "AWS Step Functions"
+    ],
+    "optionsEn": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon Kinesis Data Streams",
+      "AWS Step Functions"
+    ],
     "answer": 1,
     "explanation": "Từ khóa 'decouple' + hàng đợi công việc bất đồng bộ ánh xạ tới SQS, giúp đệm tải và tách rời producer/consumer.",
     "explanationEn": "The keyword 'decouple' plus an asynchronous work queue maps to SQS, which buffers load and separates producers from consumers."
@@ -133,8 +183,18 @@
     "id": "q10",
     "question": "Đề bài yêu cầu 'truy vấn SQL không cần máy chủ (serverless) trực tiếp trên dữ liệu trong S3'. Dịch vụ nào?",
     "questionEn": "The prompt asks for 'serverless SQL queries directly over data in S3.' Which service?",
-    "options": ["Amazon Redshift", "Amazon Athena", "Amazon RDS", "Amazon EMR"],
-    "optionsEn": ["Amazon Redshift", "Amazon Athena", "Amazon RDS", "Amazon EMR"],
+    "options": [
+      "Amazon Redshift",
+      "Amazon Athena",
+      "Amazon RDS",
+      "Amazon EMR"
+    ],
+    "optionsEn": [
+      "Amazon Redshift",
+      "Amazon Athena",
+      "Amazon RDS",
+      "Amazon EMR"
+    ],
     "answer": 1,
     "explanation": "Athena là dịch vụ truy vấn SQL serverless chạy trực tiếp trên dữ liệu trong S3, tính phí theo lượng dữ liệu quét.",
     "explanationEn": "Athena is a serverless SQL query service that runs directly on data in S3, billed by the amount of data scanned."
@@ -203,8 +263,18 @@
     "id": "q14",
     "question": "Công ty lo ngại có dữ liệu nhạy cảm (PII) nằm rải rác trong các bucket S3. Dịch vụ nào tự động phát hiện và phân loại?",
     "questionEn": "A company worries that sensitive data (PII) is scattered across S3 buckets. Which service automatically discovers and classifies it?",
-    "options": ["Amazon Macie", "Amazon GuardDuty", "AWS WAF", "Amazon Inspector"],
-    "optionsEn": ["Amazon Macie", "Amazon GuardDuty", "AWS WAF", "Amazon Inspector"],
+    "options": [
+      "Amazon Macie",
+      "Amazon GuardDuty",
+      "AWS WAF",
+      "Amazon Inspector"
+    ],
+    "optionsEn": [
+      "Amazon Macie",
+      "Amazon GuardDuty",
+      "AWS WAF",
+      "Amazon Inspector"
+    ],
     "answer": 0,
     "explanation": "Macie dùng machine learning để phát hiện và phân loại dữ liệu nhạy cảm (PII) trong S3. GuardDuty phát hiện mối đe dọa, WAF lọc lưu lượng web, Inspector quét lỗ hổng.",
     "explanationEn": "Macie uses machine learning to discover and classify sensitive data (PII) in S3. GuardDuty detects threats, WAF filters web traffic, and Inspector scans for vulnerabilities."
@@ -228,5 +298,25 @@
     "answer": 1,
     "explanation": "Distractor điển hình là giải pháp tự quản lý nhiều thao tác và dùng công nghệ lỗi thời (CLB) — trái với yêu cầu 'least operational overhead'. Ưu tiên managed/serverless và ALB/NLB thay cho CLB.",
     "explanationEn": "The typical distractor is a high-touch self-managed solution using deprecated tech (CLB) — contrary to 'least operational overhead'. Prefer managed/serverless and ALB/NLB over CLB."
+  },
+  {
+    "id": "q16",
+    "question": "Đề bài hỏi phương án \"TIẾT KIỆM CHI PHÍ NHẤT\" nhưng có hai đáp án đều khả thi về mặt kỹ thuật. Nên xử lý thế nào?",
+    "questionEn": "A question asks for the \"MOST cost-effective\" option but two answers both work technically. How should you decide?",
+    "options": [
+      "Loại phương án có chi phí thường trực cao hơn (ví dụ server chạy 24/7 so với serverless/on-demand), miễn là vẫn thỏa MỌI yêu cầu đã nêu",
+      "Chọn dịch vụ mới nhất của AWS",
+      "Chọn đáp án ngắn nhất",
+      "Luôn chọn phương án dùng dịch vụ được quản lý"
+    ],
+    "optionsEn": [
+      "Eliminate the one with higher steady-state cost (e.g. always-on servers vs serverless/on-demand), provided it still meets EVERY stated requirement",
+      "Pick the newest AWS service",
+      "Pick the shortest answer",
+      "Always pick the option using a managed service"
+    ],
+    "answer": 0,
+    "explanation": "Quy trình hai bước: loại hết phương án KHÔNG thỏa yêu cầu bắt buộc, rồi trong số còn lại mới so chi phí. Đừng chọn phương án rẻ hơn nhưng vi phạm một ràng buộc đã nêu.",
+    "explanationEn": "Work in two passes: first eliminate anything that fails a hard requirement, then compare cost among the survivors. Never pick the cheaper option if it violates a stated constraint."
   }
 ]

@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Cloud là gì & mô hình dịch vụ",
+      "titleEn": "What cloud is & service models",
+      "sections": [
+        1,
+        2,
+        3
+      ],
+      "questionIds": [
+        "q1",
+        "q13",
+        "q15"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Hạ tầng toàn cầu: Region, AZ, Edge",
+      "titleEn": "Global infrastructure: Region, AZ, Edge",
+      "sections": [
+        4,
+        5,
+        6
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q5",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Chọn Region & dịch vụ Global vs Region",
+      "titleEn": "Choosing a Region & Global vs Region-scoped",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q4",
+        "q6",
+        "q11",
+        "q14"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Trách nhiệm chung & cách truy cập AWS",
+      "titleEn": "Shared responsibility & accessing AWS",
+      "sections": [
+        9,
+        10,
+        11
+      ],
+      "questionIds": [
+        "q7",
+        "q9",
+        "q10",
+        "q12"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        12,
+        13
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

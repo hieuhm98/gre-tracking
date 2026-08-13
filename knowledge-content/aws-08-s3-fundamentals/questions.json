@@ -1,17 +1,342 @@
 [
-  {"id":"q1","question":"Một công ty lưu bản backup chỉ được truy cập khoảng một lần mỗi năm và muốn chi phí lưu trữ thấp NHẤT, chấp nhận thời gian lấy tới 12–48 giờ. Nên chọn storage class nào?","questionEn":"A company stores backups accessed about once a year and wants the LOWEST storage cost, accepting retrieval times of 12–48 hours. Which storage class should they choose?","options":["S3 Standard-IA","S3 Glacier Instant Retrieval","S3 Glacier Deep Archive","S3 One Zone-IA"],"optionsEn":["S3 Standard-IA","S3 Glacier Instant Retrieval","S3 Glacier Deep Archive","S3 One Zone-IA"],"answer":2,"explanation":"Glacier Deep Archive là lớp RẺ NHẤT, thiết kế cho lưu trữ dài hạn (7–10 năm) với thời gian lấy 12 giờ (Standard) hoặc 48 giờ (Bulk). Vì bài chấp nhận độ trễ lấy dữ liệu lớn và ưu tiên chi phí thấp nhất, đây là lựa chọn đúng.","explanationEn":"Glacier Deep Archive is the CHEAPEST class, designed for long-term retention (7–10 years) with retrieval times of 12 hours (Standard) or 48 hours (Bulk). Since the scenario tolerates long retrieval latency and prioritizes lowest cost, this is the correct choice."},
-  {"id":"q2","question":"Dữ liệu lưu trữ (archive) được truy cập khoảng một lần mỗi quý nhưng KHI cần thì phải lấy được ngay lập tức (mili-giây). Lớp nào phù hợp và tiết kiệm nhất?","questionEn":"Archive data is accessed about once per quarter but WHEN needed must be retrieved instantly (milliseconds). Which class fits and is most cost-effective?","options":["S3 Glacier Deep Archive","S3 Glacier Instant Retrieval","S3 Glacier Flexible Retrieval","S3 Standard"],"optionsEn":["S3 Glacier Deep Archive","S3 Glacier Instant Retrieval","S3 Glacier Flexible Retrieval","S3 Standard"],"answer":1,"explanation":"Glacier Instant Retrieval dành cho dữ liệu archive truy cập hiếm (khoảng 1 lần/quý) nhưng cần truy xuất TỨC THÌ (ms). Deep Archive và Flexible Retrieval mất phút đến giờ nên không đáp ứng yêu cầu 'ngay lập tức'; Standard đắt hơn cho dữ liệu ít truy cập.","explanationEn":"Glacier Instant Retrieval is for archive data accessed rarely (about once per quarter) but requiring INSTANT (ms) retrieval. Deep Archive and Flexible Retrieval take minutes to hours and cannot meet the 'instant' requirement; Standard is more expensive for rarely accessed data."},
-  {"id":"q3","question":"Một nhóm lưu ảnh thumbnail có thể TÁI TẠO lại từ ảnh gốc, ít truy cập, và muốn giảm chi phí tối đa, chấp nhận rủi ro nếu một AZ hỏng. Lớp nào phù hợp?","questionEn":"A team stores thumbnail images that can be RE-CREATED from originals, are infrequently accessed, and wants maximum cost savings, tolerating risk if one AZ fails. Which class fits?","options":["S3 Standard-IA","S3 One Zone-IA","S3 Standard","S3 Intelligent-Tiering"],"optionsEn":["S3 Standard-IA","S3 One Zone-IA","S3 Standard","S3 Intelligent-Tiering"],"answer":1,"explanation":"One Zone-IA lưu dữ liệu chỉ trong MỘT AZ nên rẻ hơn Standard-IA (~20%) nhưng sẽ mất dữ liệu nếu AZ đó bị phá hủy. Vì thumbnail có thể tái tạo được, việc chấp nhận rủi ro AZ để tiết kiệm là hợp lý.","explanationEn":"One Zone-IA stores data in a SINGLE AZ, making it cheaper than Standard-IA (~20%) but data is lost if that AZ is destroyed. Since thumbnails can be re-created, accepting AZ risk for savings is reasonable."},
-  {"id":"q4","question":"Access pattern của dữ liệu KHÓ ĐOÁN và nhóm không muốn tự quản lý lifecycle hay chịu phí retrieval khi tier thay đổi. Lựa chọn tốt nhất là gì?","questionEn":"The data's access pattern is UNPREDICTABLE and the team does not want to manage lifecycle manually or pay retrieval fees when tiers change. What is the best choice?","options":["S3 Standard rồi tự viết lifecycle rules","S3 Intelligent-Tiering","S3 One Zone-IA","S3 Glacier Flexible Retrieval"],"optionsEn":["S3 Standard with self-written lifecycle rules","S3 Intelligent-Tiering","S3 One Zone-IA","S3 Glacier Flexible Retrieval"],"answer":1,"explanation":"Intelligent-Tiering tự động di chuyển object giữa các access tier theo access pattern thực tế, KHÔNG có phí retrieval, chỉ mất một phí giám sát nhỏ trên mỗi object. Đây là lựa chọn lý tưởng khi access pattern không thể dự đoán.","explanationEn":"Intelligent-Tiering automatically moves objects between access tiers based on real access patterns, with NO retrieval fees, incurring only a small per-object monitoring fee. It is ideal when access patterns cannot be predicted."},
-  {"id":"q5","question":"Đội DevOps muốn thiết lập replication cross-region (CRR) cho một bucket. Điều kiện tiên quyết bắt buộc là gì?","questionEn":"A DevOps team wants to set up cross-region replication (CRR) for a bucket. What is the mandatory prerequisite?","options":["Bật Transfer Acceleration trên cả hai bucket","Bật versioning trên CẢ bucket nguồn và bucket đích","Hai bucket phải cùng một Region","Bật static website hosting"],"optionsEn":["Enable Transfer Acceleration on both buckets","Enable versioning on BOTH the source and destination buckets","Both buckets must be in the same Region","Enable static website hosting"],"answer":1,"explanation":"S3 Replication (cả CRR và SRR) YÊU CẦU versioning được bật trên cả bucket nguồn VÀ bucket đích. CRR còn yêu cầu hai bucket ở Region KHÁC nhau (nên đáp án 'cùng Region' sai). Replication là async.","explanationEn":"S3 Replication (both CRR and SRR) REQUIRES versioning enabled on both the source AND destination buckets. CRR additionally requires the buckets to be in DIFFERENT Regions (so the 'same Region' option is wrong). Replication is async."},
-  {"id":"q6","question":"Sau khi bật replication, đội nhận ra các object ĐÃ TỒN TẠI trước đó không được sao chép sang bucket đích. Cách nào để sao chép chúng?","questionEn":"After enabling replication, the team realizes that objects that ALREADY EXISTED were not copied to the destination bucket. How can they copy them?","options":["Tắt rồi bật lại versioning","Dùng S3 Batch Replication","Bật Transfer Acceleration","Tạo lifecycle rule transition"],"optionsEn":["Disable then re-enable versioning","Use S3 Batch Replication","Enable Transfer Acceleration","Create a lifecycle transition rule"],"answer":1,"explanation":"Replication chỉ tự động sao chép các object được tạo/cập nhật SAU KHI bật. Để sao chép các object đã có sẵn (existing objects), phải dùng S3 Batch Replication. Versioning không thể tắt (chỉ suspend), và làm vậy cũng không sao chép object cũ.","explanationEn":"Replication only automatically copies objects created/updated AFTER it is enabled. To copy existing objects, you must use S3 Batch Replication. Versioning cannot be disabled (only suspended), and doing so would not copy old objects anyway."},
-  {"id":"q7","question":"Kiến trúc có bucket A → bucket B (replication) và bucket B → bucket C (replication). Object mới ghi vào bucket A sẽ xuất hiện ở đâu?","questionEn":"An architecture has bucket A → bucket B (replication) and bucket B → bucket C (replication). Where will a new object written to bucket A appear?","options":["Ở cả bucket B và bucket C","Chỉ ở bucket B, KHÔNG tự động tới bucket C","Chỉ ở bucket C","Không ở đâu cho tới khi chạy Batch Operations"],"optionsEn":["In both bucket B and bucket C","Only in bucket B, NOT automatically in bucket C","Only in bucket C","Nowhere until Batch Operations runs"],"answer":1,"explanation":"Replication KHÔNG dây chuyền (no chaining / không transitive). Object của bucket A được replicate sang bucket B, nhưng KHÔNG tự động replicate tiếp từ B sang C. Muốn tới C phải cấu hình replication trực tiếp A → C.","explanationEn":"Replication is NOT chained (not transitive). Bucket A's object is replicated to bucket B, but is NOT automatically replicated onward from B to C. To reach C you must configure replication directly A → C."},
-  {"id":"q8","question":"Một ứng dụng cần upload file 8 GB lên S3. Điều nào ĐÚNG về việc upload này?","questionEn":"An application needs to upload an 8 GB file to S3. Which statement is TRUE about this upload?","options":["Không thể upload vì vượt giới hạn object 5 GB","Multipart upload là BẮT BUỘC vì object lớn hơn 5 GB","Phải nén file xuống dưới 5 GB trước","Chỉ upload được qua Transfer Acceleration"],"optionsEn":["It cannot be uploaded because it exceeds the 5 GB object limit","Multipart upload is REQUIRED because the object is larger than 5 GB","The file must be compressed below 5 GB first","It can only be uploaded via Transfer Acceleration"],"answer":1,"explanation":"Kích thước tối đa của một object là 5 TB, nên 8 GB hoàn toàn hợp lệ. Tuy nhiên multipart upload là BẮT BUỘC với object lớn hơn 5 GB (và được khuyến nghị khi > 100 MB). Không cần nén hay bắt buộc dùng Transfer Acceleration.","explanationEn":"The maximum object size is 5 TB, so 8 GB is perfectly valid. However, multipart upload is REQUIRED for objects larger than 5 GB (and recommended above 100 MB). No compression or mandatory Transfer Acceleration is needed."},
-  {"id":"q9","question":"Users trên toàn cầu upload file lớn lên một bucket đặt ở us-east-1 và gặp tốc độ chậm do khoảng cách địa lý. Tính năng nào giúp tăng tốc upload?","questionEn":"Users worldwide upload large files to a bucket in us-east-1 and experience slowness due to geographic distance. Which feature speeds up the uploads?","options":["S3 Transfer Acceleration","S3 Byte-Range Fetch","S3 Requester Pays","S3 Inventory"],"optionsEn":["S3 Transfer Acceleration","S3 Byte-Range Fetch","S3 Requester Pays","S3 Inventory"],"answer":0,"explanation":"S3 Transfer Acceleration tăng tốc upload/download bằng cách định tuyến qua CloudFront edge locations gần user, rồi truyền nội bộ qua mạng lưới AWS tới Region đích. Rất hữu ích cho upload xuyên lục địa. Byte-range fetch là để tải một phần object.","explanationEn":"S3 Transfer Acceleration speeds up uploads/downloads by routing through CloudFront edge locations near the user, then transferring over the AWS internal network to the target Region. It is very useful for cross-continental uploads. Byte-range fetch is for downloading a portion of an object."},
-  {"id":"q10","question":"Đội muốn tự động chuyển object sang Standard-IA sau 30 ngày, sang Glacier sau 90 ngày, và XÓA object sau 365 ngày. Nên dùng gì?","questionEn":"A team wants to automatically move objects to Standard-IA after 30 days, to Glacier after 90 days, and DELETE objects after 365 days. What should they use?","options":["S3 Replication","Lifecycle rules với transition và expiration actions","S3 Batch Operations thủ công mỗi ngày","Versioning"],"optionsEn":["S3 Replication","Lifecycle rules with transition and expiration actions","Manual S3 Batch Operations every day","Versioning"],"answer":1,"explanation":"Lifecycle rules tự động hóa vòng đời object: transition actions chuyển sang lớp rẻ hơn theo thời gian, và expiration actions xóa object sau N ngày. Đây chính xác là kịch bản chuyển tier rồi xóa mà không cần thao tác thủ công.","explanationEn":"Lifecycle rules automate an object's lifecycle: transition actions move it to cheaper classes over time, and expiration actions delete it after N days. This is exactly the tier-then-delete scenario, with no manual work required."},
-  {"id":"q11","question":"Sau khi bật versioning, người dùng vô tình 'xóa' một object quan trọng. Điều gì thực sự xảy ra và làm sao khôi phục?","questionEn":"After versioning is enabled, a user accidentally 'deletes' an important object. What actually happens and how can it be recovered?","options":["Object bị xóa vĩnh viễn, không khôi phục được","S3 thêm một delete marker; xóa delete marker đó để khôi phục","Phải khôi phục từ backup bên ngoài","Object tự động chuyển sang Glacier"],"optionsEn":["The object is permanently deleted and cannot be recovered","S3 adds a delete marker; remove that delete marker to recover it","It must be restored from an external backup","The object automatically moves to Glacier"],"answer":1,"explanation":"Với versioning bật, một lệnh xóa thông thường KHÔNG xóa dữ liệu mà chỉ thêm một delete marker lên trên. Object cũ vẫn còn dưới dạng version trước đó; xóa delete marker sẽ khôi phục lại object. Đây là lý do versioning bảo vệ khỏi xóa nhầm.","explanationEn":"With versioning enabled, a normal delete does NOT remove the data but adds a delete marker on top. The old object still exists as a prior version; removing the delete marker restores it. This is why versioning protects against accidental deletes."},
-  {"id":"q12","question":"Một tổ chức đã bật versioning nhưng nay muốn NGỪNG tạo version mới. Điều nào đúng?","questionEn":"An organization has versioning enabled but now wants to STOP creating new versions. Which is correct?","options":["Có thể disable (tắt hẳn) versioning về trạng thái ban đầu","Chỉ có thể suspend versioning; các version cũ vẫn được giữ","Phải xóa bucket và tạo lại","Versioning tự tắt sau 30 ngày"],"optionsEn":["Versioning can be disabled entirely, back to its original state","Versioning can only be suspended; existing versions are retained","The bucket must be deleted and recreated","Versioning turns off automatically after 30 days"],"answer":1,"explanation":"Sau khi đã bật, versioning KHÔNG thể disable (tắt hẳn) — chỉ có thể suspend. Suspend dừng việc tạo version ID mới cho các lần ghi tiếp theo, nhưng tất cả version đã tồn tại trước đó vẫn được giữ nguyên.","explanationEn":"Once enabled, versioning CANNOT be disabled — it can only be suspended. Suspending stops assigning new version IDs to subsequent writes, but all previously existing versions are retained."},
-  {"id":"q13","question":"Điều nào ĐÚNG về độ bền (durability) và tính khả dụng (availability) của các S3 storage class?","questionEn":"Which statement is TRUE about the durability and availability of S3 storage classes?","options":["Mỗi lớp có durability khác nhau, One Zone-IA thấp nhất","Tất cả lớp có 11 số 9 durability; availability và số AZ mới khác nhau","Standard có durability cao hơn Glacier","Availability của mọi lớp đều là 99.99%"],"optionsEn":["Each class has different durability, with One Zone-IA the lowest","All classes have 11 nines durability; only availability and AZ count differ","Standard has higher durability than Glacier","Every class has 99.99% availability"],"answer":1,"explanation":"Mọi S3 storage class đều có cùng độ bền 11 số 9 (99.999999999%). Cái khác nhau là AVAILABILITY và số AZ: ví dụ Standard 99.99%, Standard-IA 99.9%, One Zone-IA 99.5% (chỉ 1 AZ). Durability không thay đổi giữa các lớp.","explanationEn":"Every S3 storage class has the same 11 nines durability (99.999999999%). What differs is AVAILABILITY and AZ count: e.g., Standard 99.99%, Standard-IA 99.9%, One Zone-IA 99.5% (single AZ). Durability does not change across classes."},
-  {"id":"q14","question":"Một công ty chia sẻ một dataset rất lớn cho nhiều bên thứ ba và muốn CHÍNH BÊN TẢI chịu phí request và data transfer. Nên bật tính năng nào?","questionEn":"A company shares a very large dataset with several third parties and wants THE DOWNLOADERS to pay for request and data transfer costs. Which feature should they enable?","options":["S3 Requester Pays","S3 Transfer Acceleration","S3 Static Website Hosting","S3 Intelligent-Tiering"],"optionsEn":["S3 Requester Pays","S3 Transfer Acceleration","S3 Static Website Hosting","S3 Intelligent-Tiering"],"answer":0,"explanation":"Với Requester Pays, người TẢI dữ liệu (requester) chịu phí request và data transfer thay vì chủ bucket. Đây là lựa chọn lý tưởng khi chia sẻ dataset lớn cho bên thứ ba. Lưu ý: requester phải được xác thực (không ẩn danh).","explanationEn":"With Requester Pays, the DOWNLOADER (requester) pays for request and data transfer costs instead of the bucket owner. This is ideal when sharing large datasets with third parties. Note: the requester must be authenticated (not anonymous)."},
-  {"id":"q15","question":"Một ứng dụng chỉ cần đọc phần header (vài KB đầu) của các file lớn trong S3 để kiểm tra định dạng, thay vì tải cả file. Kỹ thuật nào phù hợp nhất?","questionEn":"An application only needs to read the header (first few KB) of large files in S3 to check their format, rather than downloading the whole file. Which technique fits best?","options":["Multipart Upload","Byte-Range Fetch","Transfer Acceleration","S3 Inventory"],"optionsEn":["Multipart Upload","Byte-Range Fetch","Transfer Acceleration","S3 Inventory"],"answer":1,"explanation":"Byte-Range Fetch cho phép yêu cầu chỉ một DẢI BYTE cụ thể của object (ví dụ vài KB đầu) mà không cần tải toàn bộ file → tiết kiệm băng thông và thời gian. Cũng có thể dùng để tải song song nhiều phần nhằm tăng tốc.","explanationEn":"Byte-Range Fetch lets you request only a specific BYTE RANGE of an object (e.g., the first few KB) without downloading the entire file → saving bandwidth and time. It can also be used to fetch multiple parts in parallel to speed up downloads."}
+  {
+    "id": "q1",
+    "question": "Một công ty lưu bản backup chỉ được truy cập khoảng một lần mỗi năm và muốn chi phí lưu trữ thấp NHẤT, chấp nhận thời gian lấy tới 12–48 giờ. Nên chọn storage class nào?",
+    "questionEn": "A company stores backups accessed about once a year and wants the LOWEST storage cost, accepting retrieval times of 12–48 hours. Which storage class should they choose?",
+    "options": [
+      "S3 Standard-IA",
+      "S3 Glacier Instant Retrieval",
+      "S3 Glacier Deep Archive",
+      "S3 One Zone-IA"
+    ],
+    "optionsEn": [
+      "S3 Standard-IA",
+      "S3 Glacier Instant Retrieval",
+      "S3 Glacier Deep Archive",
+      "S3 One Zone-IA"
+    ],
+    "answer": 2,
+    "explanation": "Glacier Deep Archive là lớp RẺ NHẤT, thiết kế cho lưu trữ dài hạn (7–10 năm) với thời gian lấy 12 giờ (Standard) hoặc 48 giờ (Bulk). Vì bài chấp nhận độ trễ lấy dữ liệu lớn và ưu tiên chi phí thấp nhất, đây là lựa chọn đúng.",
+    "explanationEn": "Glacier Deep Archive is the CHEAPEST class, designed for long-term retention (7–10 years) with retrieval times of 12 hours (Standard) or 48 hours (Bulk). Since the scenario tolerates long retrieval latency and prioritizes lowest cost, this is the correct choice."
+  },
+  {
+    "id": "q2",
+    "question": "Dữ liệu lưu trữ (archive) được truy cập khoảng một lần mỗi quý nhưng KHI cần thì phải lấy được ngay lập tức (mili-giây). Lớp nào phù hợp và tiết kiệm nhất?",
+    "questionEn": "Archive data is accessed about once per quarter but WHEN needed must be retrieved instantly (milliseconds). Which class fits and is most cost-effective?",
+    "options": [
+      "S3 Glacier Deep Archive",
+      "S3 Glacier Instant Retrieval",
+      "S3 Glacier Flexible Retrieval",
+      "S3 Standard"
+    ],
+    "optionsEn": [
+      "S3 Glacier Deep Archive",
+      "S3 Glacier Instant Retrieval",
+      "S3 Glacier Flexible Retrieval",
+      "S3 Standard"
+    ],
+    "answer": 1,
+    "explanation": "Glacier Instant Retrieval dành cho dữ liệu archive truy cập hiếm (khoảng 1 lần/quý) nhưng cần truy xuất TỨC THÌ (ms). Deep Archive và Flexible Retrieval mất phút đến giờ nên không đáp ứng yêu cầu 'ngay lập tức'; Standard đắt hơn cho dữ liệu ít truy cập.",
+    "explanationEn": "Glacier Instant Retrieval is for archive data accessed rarely (about once per quarter) but requiring INSTANT (ms) retrieval. Deep Archive and Flexible Retrieval take minutes to hours and cannot meet the 'instant' requirement; Standard is more expensive for rarely accessed data."
+  },
+  {
+    "id": "q3",
+    "question": "Một nhóm lưu ảnh thumbnail có thể TÁI TẠO lại từ ảnh gốc, ít truy cập, và muốn giảm chi phí tối đa, chấp nhận rủi ro nếu một AZ hỏng. Lớp nào phù hợp?",
+    "questionEn": "A team stores thumbnail images that can be RE-CREATED from originals, are infrequently accessed, and wants maximum cost savings, tolerating risk if one AZ fails. Which class fits?",
+    "options": [
+      "S3 Standard-IA",
+      "S3 One Zone-IA",
+      "S3 Standard",
+      "S3 Intelligent-Tiering"
+    ],
+    "optionsEn": [
+      "S3 Standard-IA",
+      "S3 One Zone-IA",
+      "S3 Standard",
+      "S3 Intelligent-Tiering"
+    ],
+    "answer": 1,
+    "explanation": "One Zone-IA lưu dữ liệu chỉ trong MỘT AZ nên rẻ hơn Standard-IA (~20%) nhưng sẽ mất dữ liệu nếu AZ đó bị phá hủy. Vì thumbnail có thể tái tạo được, việc chấp nhận rủi ro AZ để tiết kiệm là hợp lý.",
+    "explanationEn": "One Zone-IA stores data in a SINGLE AZ, making it cheaper than Standard-IA (~20%) but data is lost if that AZ is destroyed. Since thumbnails can be re-created, accepting AZ risk for savings is reasonable."
+  },
+  {
+    "id": "q4",
+    "question": "Access pattern của dữ liệu KHÓ ĐOÁN và nhóm không muốn tự quản lý lifecycle hay chịu phí retrieval khi tier thay đổi. Lựa chọn tốt nhất là gì?",
+    "questionEn": "The data's access pattern is UNPREDICTABLE and the team does not want to manage lifecycle manually or pay retrieval fees when tiers change. What is the best choice?",
+    "options": [
+      "S3 Standard rồi tự viết lifecycle rules",
+      "S3 Intelligent-Tiering",
+      "S3 One Zone-IA",
+      "S3 Glacier Flexible Retrieval"
+    ],
+    "optionsEn": [
+      "S3 Standard with self-written lifecycle rules",
+      "S3 Intelligent-Tiering",
+      "S3 One Zone-IA",
+      "S3 Glacier Flexible Retrieval"
+    ],
+    "answer": 1,
+    "explanation": "Intelligent-Tiering tự động di chuyển object giữa các access tier theo access pattern thực tế, KHÔNG có phí retrieval, chỉ mất một phí giám sát nhỏ trên mỗi object. Đây là lựa chọn lý tưởng khi access pattern không thể dự đoán.",
+    "explanationEn": "Intelligent-Tiering automatically moves objects between access tiers based on real access patterns, with NO retrieval fees, incurring only a small per-object monitoring fee. It is ideal when access patterns cannot be predicted."
+  },
+  {
+    "id": "q5",
+    "question": "Đội DevOps muốn thiết lập replication cross-region (CRR) cho một bucket. Điều kiện tiên quyết bắt buộc là gì?",
+    "questionEn": "A DevOps team wants to set up cross-region replication (CRR) for a bucket. What is the mandatory prerequisite?",
+    "options": [
+      "Bật Transfer Acceleration trên cả hai bucket",
+      "Bật versioning trên CẢ bucket nguồn và bucket đích",
+      "Hai bucket phải cùng một Region",
+      "Bật static website hosting"
+    ],
+    "optionsEn": [
+      "Enable Transfer Acceleration on both buckets",
+      "Enable versioning on BOTH the source and destination buckets",
+      "Both buckets must be in the same Region",
+      "Enable static website hosting"
+    ],
+    "answer": 1,
+    "explanation": "S3 Replication (cả CRR và SRR) YÊU CẦU versioning được bật trên cả bucket nguồn VÀ bucket đích. CRR còn yêu cầu hai bucket ở Region KHÁC nhau (nên đáp án 'cùng Region' sai). Replication là async.",
+    "explanationEn": "S3 Replication (both CRR and SRR) REQUIRES versioning enabled on both the source AND destination buckets. CRR additionally requires the buckets to be in DIFFERENT Regions (so the 'same Region' option is wrong). Replication is async."
+  },
+  {
+    "id": "q6",
+    "question": "Sau khi bật replication, đội nhận ra các object ĐÃ TỒN TẠI trước đó không được sao chép sang bucket đích. Cách nào để sao chép chúng?",
+    "questionEn": "After enabling replication, the team realizes that objects that ALREADY EXISTED were not copied to the destination bucket. How can they copy them?",
+    "options": [
+      "Tắt rồi bật lại versioning",
+      "Dùng S3 Batch Replication",
+      "Bật Transfer Acceleration",
+      "Tạo lifecycle rule transition"
+    ],
+    "optionsEn": [
+      "Disable then re-enable versioning",
+      "Use S3 Batch Replication",
+      "Enable Transfer Acceleration",
+      "Create a lifecycle transition rule"
+    ],
+    "answer": 1,
+    "explanation": "Replication chỉ tự động sao chép các object được tạo/cập nhật SAU KHI bật. Để sao chép các object đã có sẵn (existing objects), phải dùng S3 Batch Replication. Versioning không thể tắt (chỉ suspend), và làm vậy cũng không sao chép object cũ.",
+    "explanationEn": "Replication only automatically copies objects created/updated AFTER it is enabled. To copy existing objects, you must use S3 Batch Replication. Versioning cannot be disabled (only suspended), and doing so would not copy old objects anyway."
+  },
+  {
+    "id": "q7",
+    "question": "Kiến trúc có bucket A → bucket B (replication) và bucket B → bucket C (replication). Object mới ghi vào bucket A sẽ xuất hiện ở đâu?",
+    "questionEn": "An architecture has bucket A → bucket B (replication) and bucket B → bucket C (replication). Where will a new object written to bucket A appear?",
+    "options": [
+      "Ở cả bucket B và bucket C",
+      "Chỉ ở bucket B, KHÔNG tự động tới bucket C",
+      "Chỉ ở bucket C",
+      "Không ở đâu cho tới khi chạy Batch Operations"
+    ],
+    "optionsEn": [
+      "In both bucket B and bucket C",
+      "Only in bucket B, NOT automatically in bucket C",
+      "Only in bucket C",
+      "Nowhere until Batch Operations runs"
+    ],
+    "answer": 1,
+    "explanation": "Replication KHÔNG dây chuyền (no chaining / không transitive). Object của bucket A được replicate sang bucket B, nhưng KHÔNG tự động replicate tiếp từ B sang C. Muốn tới C phải cấu hình replication trực tiếp A → C.",
+    "explanationEn": "Replication is NOT chained (not transitive). Bucket A's object is replicated to bucket B, but is NOT automatically replicated onward from B to C. To reach C you must configure replication directly A → C."
+  },
+  {
+    "id": "q8",
+    "question": "Một ứng dụng cần upload file 8 GB lên S3. Điều nào ĐÚNG về việc upload này?",
+    "questionEn": "An application needs to upload an 8 GB file to S3. Which statement is TRUE about this upload?",
+    "options": [
+      "Không thể upload vì vượt giới hạn object 5 GB",
+      "Multipart upload là BẮT BUỘC vì object lớn hơn 5 GB",
+      "Phải nén file xuống dưới 5 GB trước",
+      "Chỉ upload được qua Transfer Acceleration"
+    ],
+    "optionsEn": [
+      "It cannot be uploaded because it exceeds the 5 GB object limit",
+      "Multipart upload is REQUIRED because the object is larger than 5 GB",
+      "The file must be compressed below 5 GB first",
+      "It can only be uploaded via Transfer Acceleration"
+    ],
+    "answer": 1,
+    "explanation": "Kích thước tối đa của một object là 5 TB, nên 8 GB hoàn toàn hợp lệ. Tuy nhiên multipart upload là BẮT BUỘC với object lớn hơn 5 GB (và được khuyến nghị khi > 100 MB). Không cần nén hay bắt buộc dùng Transfer Acceleration.",
+    "explanationEn": "The maximum object size is 5 TB, so 8 GB is perfectly valid. However, multipart upload is REQUIRED for objects larger than 5 GB (and recommended above 100 MB). No compression or mandatory Transfer Acceleration is needed."
+  },
+  {
+    "id": "q9",
+    "question": "Users trên toàn cầu upload file lớn lên một bucket đặt ở us-east-1 và gặp tốc độ chậm do khoảng cách địa lý. Tính năng nào giúp tăng tốc upload?",
+    "questionEn": "Users worldwide upload large files to a bucket in us-east-1 and experience slowness due to geographic distance. Which feature speeds up the uploads?",
+    "options": [
+      "S3 Transfer Acceleration",
+      "S3 Byte-Range Fetch",
+      "S3 Requester Pays",
+      "S3 Inventory"
+    ],
+    "optionsEn": [
+      "S3 Transfer Acceleration",
+      "S3 Byte-Range Fetch",
+      "S3 Requester Pays",
+      "S3 Inventory"
+    ],
+    "answer": 0,
+    "explanation": "S3 Transfer Acceleration tăng tốc upload/download bằng cách định tuyến qua CloudFront edge locations gần user, rồi truyền nội bộ qua mạng lưới AWS tới Region đích. Rất hữu ích cho upload xuyên lục địa. Byte-range fetch là để tải một phần object.",
+    "explanationEn": "S3 Transfer Acceleration speeds up uploads/downloads by routing through CloudFront edge locations near the user, then transferring over the AWS internal network to the target Region. It is very useful for cross-continental uploads. Byte-range fetch is for downloading a portion of an object."
+  },
+  {
+    "id": "q10",
+    "question": "Đội muốn tự động chuyển object sang Standard-IA sau 30 ngày, sang Glacier sau 90 ngày, và XÓA object sau 365 ngày. Nên dùng gì?",
+    "questionEn": "A team wants to automatically move objects to Standard-IA after 30 days, to Glacier after 90 days, and DELETE objects after 365 days. What should they use?",
+    "options": [
+      "S3 Replication",
+      "Lifecycle rules với transition và expiration actions",
+      "S3 Batch Operations thủ công mỗi ngày",
+      "Versioning"
+    ],
+    "optionsEn": [
+      "S3 Replication",
+      "Lifecycle rules with transition and expiration actions",
+      "Manual S3 Batch Operations every day",
+      "Versioning"
+    ],
+    "answer": 1,
+    "explanation": "Lifecycle rules tự động hóa vòng đời object: transition actions chuyển sang lớp rẻ hơn theo thời gian, và expiration actions xóa object sau N ngày. Đây chính xác là kịch bản chuyển tier rồi xóa mà không cần thao tác thủ công.",
+    "explanationEn": "Lifecycle rules automate an object's lifecycle: transition actions move it to cheaper classes over time, and expiration actions delete it after N days. This is exactly the tier-then-delete scenario, with no manual work required."
+  },
+  {
+    "id": "q11",
+    "question": "Sau khi bật versioning, người dùng vô tình 'xóa' một object quan trọng. Điều gì thực sự xảy ra và làm sao khôi phục?",
+    "questionEn": "After versioning is enabled, a user accidentally 'deletes' an important object. What actually happens and how can it be recovered?",
+    "options": [
+      "Object bị xóa vĩnh viễn, không khôi phục được",
+      "S3 thêm một delete marker; xóa delete marker đó để khôi phục",
+      "Phải khôi phục từ backup bên ngoài",
+      "Object tự động chuyển sang Glacier"
+    ],
+    "optionsEn": [
+      "The object is permanently deleted and cannot be recovered",
+      "S3 adds a delete marker; remove that delete marker to recover it",
+      "It must be restored from an external backup",
+      "The object automatically moves to Glacier"
+    ],
+    "answer": 1,
+    "explanation": "Với versioning bật, một lệnh xóa thông thường KHÔNG xóa dữ liệu mà chỉ thêm một delete marker lên trên. Object cũ vẫn còn dưới dạng version trước đó; xóa delete marker sẽ khôi phục lại object. Đây là lý do versioning bảo vệ khỏi xóa nhầm.",
+    "explanationEn": "With versioning enabled, a normal delete does NOT remove the data but adds a delete marker on top. The old object still exists as a prior version; removing the delete marker restores it. This is why versioning protects against accidental deletes."
+  },
+  {
+    "id": "q12",
+    "question": "Một tổ chức đã bật versioning nhưng nay muốn NGỪNG tạo version mới. Điều nào đúng?",
+    "questionEn": "An organization has versioning enabled but now wants to STOP creating new versions. Which is correct?",
+    "options": [
+      "Có thể disable (tắt hẳn) versioning về trạng thái ban đầu",
+      "Chỉ có thể suspend versioning; các version cũ vẫn được giữ",
+      "Phải xóa bucket và tạo lại",
+      "Versioning tự tắt sau 30 ngày"
+    ],
+    "optionsEn": [
+      "Versioning can be disabled entirely, back to its original state",
+      "Versioning can only be suspended; existing versions are retained",
+      "The bucket must be deleted and recreated",
+      "Versioning turns off automatically after 30 days"
+    ],
+    "answer": 1,
+    "explanation": "Sau khi đã bật, versioning KHÔNG thể disable (tắt hẳn) — chỉ có thể suspend. Suspend dừng việc tạo version ID mới cho các lần ghi tiếp theo, nhưng tất cả version đã tồn tại trước đó vẫn được giữ nguyên.",
+    "explanationEn": "Once enabled, versioning CANNOT be disabled — it can only be suspended. Suspending stops assigning new version IDs to subsequent writes, but all previously existing versions are retained."
+  },
+  {
+    "id": "q13",
+    "question": "Điều nào ĐÚNG về độ bền (durability) và tính khả dụng (availability) của các S3 storage class?",
+    "questionEn": "Which statement is TRUE about the durability and availability of S3 storage classes?",
+    "options": [
+      "Mỗi lớp có durability khác nhau, One Zone-IA thấp nhất",
+      "Tất cả lớp có 11 số 9 durability; availability và số AZ mới khác nhau",
+      "Standard có durability cao hơn Glacier",
+      "Availability của mọi lớp đều là 99.99%"
+    ],
+    "optionsEn": [
+      "Each class has different durability, with One Zone-IA the lowest",
+      "All classes have 11 nines durability; only availability and AZ count differ",
+      "Standard has higher durability than Glacier",
+      "Every class has 99.99% availability"
+    ],
+    "answer": 1,
+    "explanation": "Mọi S3 storage class đều có cùng độ bền 11 số 9 (99.999999999%). Cái khác nhau là AVAILABILITY và số AZ: ví dụ Standard 99.99%, Standard-IA 99.9%, One Zone-IA 99.5% (chỉ 1 AZ). Durability không thay đổi giữa các lớp.",
+    "explanationEn": "Every S3 storage class has the same 11 nines durability (99.999999999%). What differs is AVAILABILITY and AZ count: e.g., Standard 99.99%, Standard-IA 99.9%, One Zone-IA 99.5% (single AZ). Durability does not change across classes."
+  },
+  {
+    "id": "q14",
+    "question": "Một công ty chia sẻ một dataset rất lớn cho nhiều bên thứ ba và muốn CHÍNH BÊN TẢI chịu phí request và data transfer. Nên bật tính năng nào?",
+    "questionEn": "A company shares a very large dataset with several third parties and wants THE DOWNLOADERS to pay for request and data transfer costs. Which feature should they enable?",
+    "options": [
+      "S3 Requester Pays",
+      "S3 Transfer Acceleration",
+      "S3 Static Website Hosting",
+      "S3 Intelligent-Tiering"
+    ],
+    "optionsEn": [
+      "S3 Requester Pays",
+      "S3 Transfer Acceleration",
+      "S3 Static Website Hosting",
+      "S3 Intelligent-Tiering"
+    ],
+    "answer": 0,
+    "explanation": "Với Requester Pays, người TẢI dữ liệu (requester) chịu phí request và data transfer thay vì chủ bucket. Đây là lựa chọn lý tưởng khi chia sẻ dataset lớn cho bên thứ ba. Lưu ý: requester phải được xác thực (không ẩn danh).",
+    "explanationEn": "With Requester Pays, the DOWNLOADER (requester) pays for request and data transfer costs instead of the bucket owner. This is ideal when sharing large datasets with third parties. Note: the requester must be authenticated (not anonymous)."
+  },
+  {
+    "id": "q15",
+    "question": "Một ứng dụng chỉ cần đọc phần header (vài KB đầu) của các file lớn trong S3 để kiểm tra định dạng, thay vì tải cả file. Kỹ thuật nào phù hợp nhất?",
+    "questionEn": "An application only needs to read the header (first few KB) of large files in S3 to check their format, rather than downloading the whole file. Which technique fits best?",
+    "options": [
+      "Multipart Upload",
+      "Byte-Range Fetch",
+      "Transfer Acceleration",
+      "S3 Inventory"
+    ],
+    "optionsEn": [
+      "Multipart Upload",
+      "Byte-Range Fetch",
+      "Transfer Acceleration",
+      "S3 Inventory"
+    ],
+    "answer": 1,
+    "explanation": "Byte-Range Fetch cho phép yêu cầu chỉ một DẢI BYTE cụ thể của object (ví dụ vài KB đầu) mà không cần tải toàn bộ file → tiết kiệm băng thông và thời gian. Cũng có thể dùng để tải song song nhiều phần nhằm tăng tốc.",
+    "explanationEn": "Byte-Range Fetch lets you request only a specific BYTE RANGE of an object (e.g., the first few KB) without downloading the entire file → saving bandwidth and time. It can also be used to fetch multiple parts in parallel to speed up downloads."
+  },
+  {
+    "id": "q16",
+    "question": "Kích thước tối đa của MỘT object trong S3 là bao nhiêu?",
+    "questionEn": "What is the maximum size of a single object in Amazon S3?",
+    "options": [
+      "5 GB",
+      "500 GB",
+      "Không giới hạn",
+      "5 TB"
+    ],
+    "optionsEn": [
+      "5 GB",
+      "500 GB",
+      "Unlimited",
+      "5 TB"
+    ],
+    "answer": 3,
+    "explanation": "Một object tối đa 5 TB. Riêng một lần PUT chỉ tải lên được tối đa 5 GB — vượt mức đó phải dùng multipart upload (AWS khuyến nghị dùng multipart từ 100 MB trở lên).",
+    "explanationEn": "A single object can be up to 5 TB. One PUT can only upload 5 GB, so anything larger requires multipart upload (AWS recommends multipart from 100 MB upwards)."
+  },
+  {
+    "id": "q17",
+    "question": "Quy tắc đặt tên bucket S3 là gì?",
+    "questionEn": "What is the rule for S3 bucket names?",
+    "options": [
+      "Phải là duy nhất TOÀN CẦU, trên tất cả tài khoản AWS",
+      "Duy nhất trong tài khoản của bạn",
+      "Duy nhất trong mỗi Region",
+      "Duy nhất trong mỗi VPC"
+    ],
+    "optionsEn": [
+      "They must be GLOBALLY unique across every AWS account",
+      "Unique within your own account",
+      "Unique within each Region",
+      "Unique within each VPC"
+    ],
+    "answer": 0,
+    "explanation": "Tên bucket nằm trong một không gian tên toàn cầu — nếu tài khoản khác đã lấy tên đó, bạn không dùng được. Bản thân bucket vẫn nằm trong một Region cụ thể.",
+    "explanationEn": "Bucket names live in a single global namespace — if another account has taken the name, you cannot use it. The bucket itself still lives in one specific Region."
+  }
 ]

@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useLang } from "@/context/lang";
 import ArticleRenderer from "@/components/knowledge/ArticleRenderer";
+import BilingualArticle from "@/components/knowledge/BilingualArticle";
 import QuizBlock, { type Question } from "@/components/knowledge/QuizBlock";
 
 interface Article {
@@ -18,7 +19,7 @@ interface Article {
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
-  const { t, pick, lang } = useLang();
+  const { t, pick, lang, dual } = useLang();
   const [article, setArticle] = useState<Article | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
@@ -50,10 +51,11 @@ export default function ArticlePage() {
   const title = pick(article.title, article.titleEn);
   // Show English body when in EN mode and a translation exists; otherwise VI.
   const body = lang === "en" && article.contentEn ? article.contentEn : article.content;
-  const missingTranslation = lang === "en" && !article.contentEn;
+  const bilingual = dual && Boolean(article.contentEn);
+  const missingTranslation = !article.contentEn && (lang === "en" || dual);
 
   return (
-    <div className="max-w-3xl">
+    <div className={bilingual ? "max-w-6xl" : "max-w-3xl"}>
       <div className="mb-6">
         <Link href="/knowledge" className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
           {t("article.back")}
@@ -72,9 +74,13 @@ export default function ArticlePage() {
         </div>
       )}
 
-      <ArticleRenderer content={body} />
+      {bilingual ? (
+        <BilingualArticle vi={article.content} en={article.contentEn!} />
+      ) : (
+        <ArticleRenderer content={body} />
+      )}
 
-      <QuizBlock questions={questions} title={`${t("quiz.title")} — ${title}`} />
+      <QuizBlock questions={questions} title={`${t("quiz.title")} — ${title}`} slug={slug} />
     </div>
   );
 }

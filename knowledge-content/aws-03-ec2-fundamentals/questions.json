@@ -278,5 +278,65 @@
     "answer": 1,
     "explanation": "Spot Instances tận dụng capacity dư thừa với giá rẻ nhất (tới ~90%), nhưng AWS có thể thu hồi khi cần capacity, chỉ báo trước 2 phút. Spot Fleet giúp kết hợp nhiều loại để đạt dung lượng mục tiêu.",
     "explanationEn": "Spot Instances use spare capacity at the cheapest price (up to ~90%), but AWS can reclaim them when it needs capacity, with only a 2-minute notice. A Spot Fleet combines pools to reach a target capacity."
+  },
+  {
+    "id": "q15",
+    "question": "Bạn stop một EC2 instance rồi start lại. Thứ gì thường thay đổi?",
+    "questionEn": "You stop an EC2 instance and then start it again. What typically changes?",
+    "options": [
+      "Instance ID",
+      "Dữ liệu trên EBS root volume",
+      "Security group đang gắn",
+      "Public IPv4 của instance (trừ khi có Elastic IP)"
+    ],
+    "optionsEn": [
+      "The instance ID",
+      "The data on the EBS root volume",
+      "The attached security group",
+      "The instance's public IPv4 address (unless an Elastic IP is attached)"
+    ],
+    "answer": 3,
+    "explanation": "Public IPv4 được cấp lại mỗi lần start, nên hãy dùng Elastic IP nếu cần địa chỉ cố định. Instance ID, dữ liệu EBS và security group đều giữ nguyên.",
+    "explanationEn": "The public IPv4 is re-assigned on each start, so use an Elastic IP if you need a fixed address. The instance ID, EBS data and security group all stay the same."
+  },
+  {
+    "id": "q16",
+    "question": "Phát biểu nào ĐÚNG về chi phí của một EC2 instance đang ở trạng thái stopped?",
+    "questionEn": "Which statement is TRUE about the cost of an EC2 instance in the stopped state?",
+    "options": [
+      "Bạn ngừng trả tiền giờ chạy instance nhưng vẫn trả cho EBS volume đang gắn",
+      "Bạn không phải trả bất kỳ khoản nào",
+      "Bạn vẫn trả đủ tiền giờ chạy instance",
+      "Bạn chỉ trả cho Elastic IP"
+    ],
+    "optionsEn": [
+      "You stop paying for instance hours but still pay for the attached EBS volumes",
+      "You pay nothing at all",
+      "You keep paying full instance hours",
+      "You only pay for the Elastic IP"
+    ],
+    "answer": 0,
+    "explanation": "Stop = ngừng tính giờ compute, nhưng EBS volume vẫn tồn tại và vẫn bị tính tiền lưu trữ. Muốn hết sạch chi phí thì phải terminate và xóa volume.",
+    "explanationEn": "Stopping halts compute billing, but the EBS volumes still exist and are still charged for storage. To stop paying entirely you must terminate and delete the volumes."
+  },
+  {
+    "id": "q17",
+    "question": "Một workload xử lý batch nặng về CPU, tỉ lệ compute/memory cao. Nên chọn họ instance nào?",
+    "questionEn": "A batch workload is CPU-bound with a high compute-to-memory ratio. Which instance family should you choose?",
+    "options": [
+      "Họ T (burstable)",
+      "Họ C (compute optimized)",
+      "Họ R (memory optimized)",
+      "Họ D (dense storage)"
+    ],
+    "optionsEn": [
+      "The T family (burstable)",
+      "The C family (compute optimized)",
+      "The R family (memory optimized)",
+      "The D family (dense storage)"
+    ],
+    "answer": 1,
+    "explanation": "C = compute optimized, tỉ lệ vCPU/RAM cao nhất, hợp cho batch processing, media transcoding, HPC. R dành cho in-memory, D cho dung lượng đĩa lớn, T cho tải nhẹ có burst.",
+    "explanationEn": "C = compute optimized, the highest vCPU-to-RAM ratio, ideal for batch processing, media transcoding and HPC. R is for in-memory work, D for dense disk, T for light bursty loads."
   }
 ]

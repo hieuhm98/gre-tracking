@@ -278,5 +278,65 @@
     "answer": 1,
     "explanation": "FSx for Windows File Server cung cấp file share cho Windows với SMB và Active Directory. EFS chỉ hỗ trợ Linux (NFS), còn FSx for Lustre dành cho HPC.",
     "explanationEn": "FSx for Windows File Server provides a Windows file share with SMB and Active Directory. EFS supports only Linux (NFS), while FSx for Lustre is for HPC."
+  },
+  {
+    "id": "q15",
+    "question": "Mặc định, điều gì xảy ra với EBS root volume khi instance bị terminate?",
+    "questionEn": "By default, what happens to the EBS root volume when its instance is terminated?",
+    "options": [
+      "Được tự động snapshot rồi xóa",
+      "Được tự động gắn sang instance khác",
+      "Bị xóa — thuộc tính DeleteOnTermination mặc định là true cho root volume",
+      "Được giữ lại và chuyển sang trạng thái available"
+    ],
+    "optionsEn": [
+      "It is snapshotted automatically, then deleted",
+      "It is automatically attached to another instance",
+      "It is deleted — DeleteOnTermination defaults to true for the root volume",
+      "It is kept and moves to the available state"
+    ],
+    "answer": 2,
+    "explanation": "Root volume mặc định bị xóa cùng instance; các volume gắn thêm mặc định được giữ lại. Bạn có thể đổi cờ DeleteOnTermination khi launch.",
+    "explanationEn": "The root volume is deleted with the instance by default; additional attached volumes are kept by default. You can change the DeleteOnTermination flag at launch time."
+  },
+  {
+    "id": "q16",
+    "question": "Bạn cần tăng dung lượng một EBS volume đang được sử dụng. Điều gì là đúng?",
+    "questionEn": "You need to increase the size of an EBS volume that is currently in use. What is true?",
+    "options": [
+      "Phải tạo volume mới rồi copy dữ liệu sang",
+      "Chỉ tăng được sau khi detach volume",
+      "Không thể tăng dung lượng của một EBS volume",
+      "Có thể tăng dung lượng ngay khi đang chạy, sau đó mở rộng file system trong OS"
+    ],
+    "optionsEn": [
+      "You must create a new volume and copy the data across",
+      "You can only grow it after detaching the volume",
+      "An EBS volume's size can never be increased",
+      "You can grow it in place while in use, then extend the file system inside the OS"
+    ],
+    "answer": 3,
+    "explanation": "EBS Elastic Volumes cho phép tăng size (và đổi type/IOPS) khi volume đang gắn và đang chạy — nhưng bạn vẫn phải chạy lệnh mở rộng file system trong OS. Không thể giảm size.",
+    "explanationEn": "EBS Elastic Volumes let you grow the size (and change type/IOPS) while the volume is attached and live — but you must still extend the file system inside the OS. Shrinking is not supported."
+  },
+  {
+    "id": "q17",
+    "question": "Dữ liệu lạnh, ít truy cập, thiên về throughput tuần tự và cần chi phí thấp nhất. Loại EBS volume nào phù hợp nhất?",
+    "questionEn": "For cold, infrequently accessed data with sequential throughput needs and the lowest cost, which EBS volume type fits best?",
+    "options": [
+      "sc1 (Cold HDD)",
+      "st1 (Throughput Optimized HDD)",
+      "gp3 (General Purpose SSD)",
+      "io2 (Provisioned IOPS SSD)"
+    ],
+    "optionsEn": [
+      "sc1 (Cold HDD)",
+      "st1 (Throughput Optimized HDD)",
+      "gp3 (General Purpose SSD)",
+      "io2 (Provisioned IOPS SSD)"
+    ],
+    "answer": 0,
+    "explanation": "sc1 là loại HDD rẻ nhất, dành cho dữ liệu ít truy cập. st1 đắt hơn nhưng throughput cao hơn (big data, log processing). Cả hai đều KHÔNG dùng làm boot volume.",
+    "explanationEn": "sc1 is the cheapest HDD tier, meant for infrequently accessed data. st1 costs more but delivers higher throughput (big data, log processing). Neither can be used as a boot volume."
   }
 ]

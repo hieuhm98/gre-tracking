@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Docker & ECS cơ bản",
+      "titleEn": "Docker & ECS basics",
+      "sections": [
+        1,
+        2,
+        3
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "EC2 vs Fargate launch type",
+      "titleEn": "EC2 vs Fargate launch type",
+      "sections": [
+        4
+      ],
+      "questionIds": [
+        "q1",
+        "q9",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "IAM: Instance Role vs Task Role",
+      "titleEn": "IAM: Instance Role vs Task Role",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q2",
+        "q11",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Auto Scaling, ALB, task placement & EFS",
+      "titleEn": "Auto Scaling, ALB, task placement & EFS",
+      "sections": [
+        6,
+        7,
+        8
+      ],
+      "questionIds": [
+        "q7",
+        "q10",
+        "q8",
+        "q6"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "ECR, EKS, App Runner & so sánh",
+      "titleEn": "ECR, EKS, App Runner & comparison",
+      "sections": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "questionIds": [
+        "q4",
+        "q3",
+        "q5"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        13,
+        14
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

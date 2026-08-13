@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Serverless & AWS Lambda",
+      "titleEn": "Serverless & AWS Lambda",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q12",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Amazon DynamoDB",
+      "titleEn": "Amazon DynamoDB",
+      "sections": [
+        3
+      ],
+      "questionIds": [
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Amazon API Gateway",
+      "titleEn": "Amazon API Gateway",
+      "sections": [
+        4
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Mẫu kiến trúc sự kiện: S3 → Lambda",
+      "titleEn": "Event pattern: S3 → Lambda",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q11",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Ôn tập & điểm thi",
+      "titleEn": "Recap & exam points",
+      "sections": [
+        6,
+        7
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

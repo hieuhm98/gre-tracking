@@ -258,5 +258,85 @@
     "answer": 3,
     "explanation": "Global Accelerator cung cấp static anycast IPs và failover khu vực nhanh tới endpoint healthy mà không cache; CloudFront thiên về cache nội dung và không cấp static IP.",
     "explanationEn": "Global Accelerator provides static anycast IPs and fast regional failover to healthy endpoints without caching; CloudFront focuses on caching content and does not provide a static IP."
+  },
+  {
+    "id": "q14",
+    "question": "Trong CloudFront, \"origin\" là gì?",
+    "questionEn": "In CloudFront, what is an \"origin\"?",
+    "options": [
+      "Edge location gần người dùng nhất",
+      "Địa chỉ IP của người xem",
+      "Bản ghi DNS trỏ tới distribution",
+      "Nguồn mà CloudFront lấy nội dung về khi cache miss (S3 bucket, ALB, web server...)"
+    ],
+    "optionsEn": [
+      "The edge location nearest the viewer",
+      "The viewer's IP address",
+      "The DNS record pointing at the distribution",
+      "The source CloudFront fetches content from on a cache miss (an S3 bucket, ALB, web server…)"
+    ],
+    "answer": 3,
+    "explanation": "Origin là nguồn sự thật. Edge location cache bản sao; khi miss hoặc hết TTL, CloudFront về origin lấy lại qua mạng backbone của AWS.",
+    "explanationEn": "The origin is the source of truth. Edge locations cache copies; on a miss or after the TTL expires, CloudFront fetches from the origin over the AWS backbone."
+  },
+  {
+    "id": "q15",
+    "question": "Cấu hình nào quyết định mặc định một object được cache bao lâu ở edge location?",
+    "questionEn": "Which setting determines how long an object stays cached at an edge location by default?",
+    "options": [
+      "Default TTL trong cache policy (hoặc header `Cache-Control` do origin trả về)",
+      "Cấu hình Geo Restriction",
+      "Price class của distribution",
+      "Origin protocol policy"
+    ],
+    "optionsEn": [
+      "The Default TTL in the cache policy (or the `Cache-Control` header returned by the origin)",
+      "The Geo Restriction configuration",
+      "The distribution's price class",
+      "The origin protocol policy"
+    ],
+    "answer": 0,
+    "explanation": "TTL quyết định thời gian sống của bản cache. Origin có thể tự điều khiển bằng header `Cache-Control`/`Expires`; cache policy đặt giá trị Min/Default/Max TTL bao quanh.",
+    "explanationEn": "The TTL controls how long a cached copy lives. The origin can drive it with `Cache-Control`/`Expires` headers, while the cache policy sets the Min/Default/Max TTL bounds around it."
+  },
+  {
+    "id": "q16",
+    "question": "Một cache policy được cấu hình đưa query string vào cache key. Hệ quả là gì?",
+    "questionEn": "A cache policy is configured to include the query string in the cache key. What is the effect?",
+    "options": [
+      "Mọi request dùng chung một bản cache duy nhất",
+      "Mỗi giá trị query string khác nhau được cache thành một object riêng",
+      "Query string bị loại bỏ trước khi chuyển tới origin",
+      "Caching bị tắt hoàn toàn"
+    ],
+    "optionsEn": [
+      "All requests share one single cached object",
+      "Each distinct query-string value is cached as a separate object",
+      "The query string is stripped before the request reaches the origin",
+      "Caching is disabled entirely"
+    ],
+    "answer": 1,
+    "explanation": "Cache key quyết định thứ gì tạo ra một bản cache riêng. Đưa query string vào giúp phân biệt `?size=small` với `?size=large`, nhưng làm giảm cache hit ratio nếu query string có quá nhiều giá trị.",
+    "explanationEn": "The cache key defines what counts as a distinct cached object. Including the query string separates `?size=small` from `?size=large`, but it lowers the cache hit ratio if the query string is highly variable."
+  },
+  {
+    "id": "q17",
+    "question": "Bạn cần một hàm siêu nhẹ để viết lại header của request tại edge, khởi động dưới một mili-giây và chịu được lưu lượng rất lớn. Chọn gì?",
+    "questionEn": "You need a very lightweight function to rewrite a request header at the edge, with sub-millisecond startup and very high volume. What do you choose?",
+    "options": [
+      "AWS Lambda chạy ở Region của origin",
+      "AWS Step Functions",
+      "CloudFront Functions",
+      "Lambda@Edge"
+    ],
+    "optionsEn": [
+      "An AWS Lambda function in the origin Region",
+      "AWS Step Functions",
+      "CloudFront Functions",
+      "Lambda@Edge"
+    ],
+    "answer": 2,
+    "explanation": "CloudFront Functions (JavaScript) chạy ngay tại edge location, startup dưới 1ms, rất rẻ — hợp cho thao tác header/URL đơn giản. Lambda@Edge mạnh hơn (chạy được lâu hơn, gọi được service khác) nhưng chậm và đắt hơn.",
+    "explanationEn": "CloudFront Functions (JavaScript) run right at the edge location with sub-millisecond startup and very low cost — ideal for simple header/URL manipulation. Lambda@Edge is more capable (longer runtime, can call other services) but slower and pricier."
   }
 ]

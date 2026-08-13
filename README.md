@@ -106,7 +106,7 @@ Each `knowledge-content/<slug>/` folder holds exactly four files:
 Conventions:
 - **Bilingual is mandatory.** Vietnamese is the base; every field/file has an English counterpart. `answer` is a **0-based index** shared by `options` and `optionsEn` (same length and order).
 - **Ordering** is by folder name (`localeCompare`), so keep the `NN-` / `aws-NN-` numeric prefixes. To insert between two topics without renumbering, use the `NNb-` trick (e.g. `08b-json-co-ban` sits between `08-` and `09-`).
-- **Groups:** `ba-po-pm` (31 topics, `01-…30-` + `08b-`) and `dev` (24 topics, `aws-01-…aws-24-`). Defined in `lib/groups.ts`; `DEFAULT_GROUP = "ba-po-pm"`.
+- **Groups:** `ba-po-pm` (31 topics, `01-…30-` + `08b-`) and `dev` (24 topics, `aws-01-…aws-24-`). Defined in `lib/groups.ts`; `DEFAULT_GROUP = "ba-po-pm"`. **887 questions total**, 411 of them across the AWS track.
 - Pages are client components (`"use client"`) that fetch from the file-based `/api/knowledge` API.
 - Language switching is global: `useLang().pick(vi, en)` for content, `t("key")` for UI chrome. Persisted to `localStorage` key `lang`, default **vi**.
 
@@ -114,6 +114,33 @@ Conventions:
 - Data is a **committed** SQLite file at **`data/word-bank.db`** (~23k English words + mock review history). Tables: `words`, `parts_of_speech`, `word_reviews`.
 - `lib/server/wordBankDb.ts` opens the file **read-only**, serialises it to a cached Buffer, and builds a **fresh in-memory clone per query** — so *any* SQL (SELECT/INSERT/UPDATE/CREATE/DELETE) is safe and the committed file is never mutated. Results cap at 1000 rows.
 - Rebuilding the word bank (needs Node 22): `node scripts/seed-word-bank.mjs` rebuilds from scratch, then `python scripts/import_dictionary.py` re-appends ~18k bulk words from free open datasets (token-free — no LLM). **Re-run the importer after any re-seed.**
+
+### Side-by-side bilingual reading
+The **⇹ Side-by-side EN | VI** button in the sidebar shows learning content in both languages at once — **English on the left, Vietnamese on the right** — across articles, mini-lessons and every quiz (question, options and explanation). The preference is remembered in `localStorage` under `lang:dual`.
+
+Articles are aligned **per `##` section** rather than as two long columns, so each heading's English and Vietnamese always start on the same line however differently they wrap. On narrow screens the two columns stack. The single-language VI/EN switch still controls the interface chrome, and the column order never changes with it.
+
+### Mini-lessons (`/learn`)
+The 24 AWS topics are split into **143 mini-lessons** of 5–10 minutes, for studying in small daily batches. Each one runs **warm-up → read → check**:
+
+1. **Warm-up** — a couple of recall questions from mini-lessons you've already finished, plus a preview of the one you're about to read. Diagnostic only; it never fails you.
+2. **Read** — just that lesson's slice of the article (median ~300 words).
+3. **Check** — the lesson's own questions plus more review from earlier. Score **70%** to complete it.
+
+Both tests deliberately mix the current lesson with everything before it, so older material keeps resurfacing. Review questions are chosen by per-question recall: never-tested first, then weakest, then stalest.
+
+The split lives in **`knowledge-content/<slug>/lessons.json`** — a list of mini-lessons, each mapping a contiguous run of the article's `## ` sections plus the question ids that belong to it. **The articles are never modified**; they are sliced at render time. Constraints: section ranges must tile `1..N` exactly, every question id must be used exactly once, and the VI and EN articles must keep identical `## ` counts (they do in all 24 topics). Any topic without a `lessons.json` simply has no study mode — the BA/PO/PM track still works as a full article + quiz, and can be split later by adding the file.
+
+### Learning progress
+There are no accounts, so progress is stored in three cooperating layers:
+
+1. **`localStorage` (key `progress:v1`)** — the live source of truth in the browser. Quiz answers are saved as you click and restored when you reopen a topic; finished review sessions feed the daily streak.
+2. **`data/progress.json`** — a **committed snapshot**. `scripts/sync-progress.mjs` copies it to `public/progress.json` on every `yarn dev` / `yarn build`, so the file travels into each new build and seeds a browser that has no stored progress. `public/progress.json` is generated and git-ignored; `data/progress.json` is the one you commit.
+3. **`PUT /api/progress`** — write-back to `data/progress.json`, debounced 1.5s. **Enabled only where the filesystem is writable**: local dev, Railway/Render/Fly, a VPS, Docker. It is automatically off on Vercel (read-only runtime FS) and can be forced off anywhere with `PROGRESS_FILE_WRITES=off`.
+
+On mount the three sources are merged — newest `updatedAt` wins per topic, best scores are never lowered, and review sessions are unioned by timestamp. `/progress` shows the streak, per-topic scores and session history, plus **Export / Import JSON** for moving progress between browsers or devices.
+
+> **Deploying to Vercel:** progress stays in each visitor's browser. To carry your own progress forward, run locally (which writes `data/progress.json`), commit that file, and push — the next build ships it as the seed. For real server-side persistence, deploy somewhere with a disk, or swap `/api/progress` for a hosted store (Turso, Vercel KV, Postgres).
 
 ### Commands
 | Task | Command |
@@ -124,6 +151,7 @@ Conventions:
 | Run production | `yarn start` |
 | Lint | `yarn lint` |
 | Typecheck | `node_modules/.bin/tsc --noEmit` |
+| Refresh the progress seed | `yarn progress:sync` |
 
 ### Gotchas
 - **Node 22 is required** for `better-sqlite3` (the native module fails to load on older Node). `next.config.mjs` lists it in `experimental.serverComponentsExternalPackages` so it isn't bundled.
