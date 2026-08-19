@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 12,
   "title": "Database là gì?",
   "titleEn": "What Is a Database?",
   "description": "RDBMS, bảng, hàng, cột, khóa chính, khóa ngoại và các loại database phổ biến.",

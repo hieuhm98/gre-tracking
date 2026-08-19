@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Domain (Tên miền) là gì? · Cấu trúc của một domain",
+      "titleEn": "What Is a Domain? · The Structure of a Domain",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "URI vs URL vs URN · Cấu trúc đầy đủ của URL",
+      "titleEn": "URI vs. URL vs. URN · The Full Structure of a URL",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Path — đường dẫn của một URL · Sitemap — bản đồ URL của website",
+      "titleEn": "Path — the Path of a URL · Sitemap — the URL Map of a Website",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "DNS hoạt động như thế nào? · TTL (Time To Live)",
+      "titleEn": "How Does DNS Work? · TTL (Time To Live)",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q14",
+        "q15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Đăng ký domain",
+      "titleEn": "Registering a Domain",
+      "sections": [
+        9
+      ],
+      "questionIds": [
+        "q18",
+        "q19",
+        "q20",
+        "q21"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        10
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

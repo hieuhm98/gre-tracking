@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Stakeholder là ai? · Cách tìm ra stakeholder bị bỏ sót",
+      "titleEn": "Who is a stakeholder? · How to find the stakeholders you missed",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Phân loại theo ảnh hưởng và quan tâm · Product champion — người đại diện cho user class",
+      "titleEn": "Mapping by influence and interest · Product champions — representing a user class",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Xử lý khi stakeholder bất đồng · Duy trì quan hệ trong suốt dự án",
+      "titleEn": "Handling stakeholder disagreement · Sustaining relationships through the project",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

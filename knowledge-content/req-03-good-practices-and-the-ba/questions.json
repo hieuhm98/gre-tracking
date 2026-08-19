@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Cụm từ progressive refinement of detail mô tả điều gì trong requirements development?",
+    "questionEn": "What does the phrase progressive refinement of detail describe in requirements development?",
+    "options": [
+      "Việc chia yêu cầu thành các iteration có độ dài bằng nhau",
+      "Việc đi dần từ khái niệm ban đầu tới mức chính xác và cụ thể cao hơn qua nhiều vòng lặp",
+      "Việc chỉ viết yêu cầu sau khi thiết kế xong",
+      "Việc tăng dần số lượng người tham gia workshop"
+    ],
+    "optionsEn": [
+      "Splitting requirements into equal-length iterations",
+      "Moving from initial concepts toward greater precision and detail across repeated cycles",
+      "Writing requirements only after the design is finished",
+      "Gradually increasing the number of workshop participants"
+    ],
+    "answer": 1,
+    "explanation": "Elicitation, analysis, specification và validation đan xen nhau. Mỗi vòng lặp làm rõ thêm, và việc viết hay thẩm định thường đẩy bạn quay lại khai thác thêm.",
+    "explanationEn": "Elicitation, analysis, specification, and validation interleave. Each cycle adds clarity, and writing or validating often sends you back to elicit more."
+  },
+  {
+    "id": "q2",
+    "question": "Khác biệt cốt lõi giữa product champion và focus group là gì?",
+    "questionEn": "What is the core difference between a product champion and a focus group?",
+    "options": [
+      "Product champion là người ngoài công ty, focus group là nhân viên nội bộ",
+      "Product champion ra quyết định thay mặt một user class; focus group chỉ cung cấp ý kiến và thường không có quyền quyết định",
+      "Focus group chỉ dùng cho dự án agile",
+      "Product champion chỉ tham gia giai đoạn kiểm thử"
+    ],
+    "optionsEn": [
+      "Product champions are external, focus groups are internal employees",
+      "A product champion makes decisions on behalf of a user class; a focus group only supplies input and generally has no decision authority",
+      "Focus groups are only used on agile projects",
+      "Product champions only participate during testing"
+    ],
+    "answer": 1,
+    "explanation": "Product champion là tiếng nói theo nghĩa đen của user class và được trao quyền quyết định. Focus group hữu ích cho sản phẩm thương mại có tập khách hàng lớn.",
+    "explanationEn": "The product champion is the literal voice of a user class and is empowered to decide. Focus groups are valuable for commercial products with a large customer base."
+  },
+  {
+    "id": "q3",
+    "question": "Ba loại system event mà BA cần xác định là gì?",
+    "questionEn": "What are the three classes of system event a BA should identify?",
+    "options": [
+      "Lỗi, cảnh báo, thông tin",
+      "Signal event, temporal event, business event",
+      "Tạo, sửa, xoá",
+      "Đồng bộ, bất đồng bộ, định kỳ"
+    ],
+    "optionsEn": [
+      "Error, warning, information",
+      "Signal events, temporal events, business events",
+      "Create, update, delete",
+      "Synchronous, asynchronous, periodic"
+    ],
+    "answer": 1,
+    "explanation": "Signal event là tín hiệu hoặc dữ liệu từ thiết bị bên ngoài; temporal event kích hoạt theo thời gian; business event là hành động người dùng làm khởi động một use case.",
+    "explanationEn": "Signal events are control signals or data from external devices; temporal events are time-triggered; business events are user actions that trigger a use case."
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao nên biểu diễn yêu cầu bằng NHIỀU cách khác nhau, ví dụ vừa văn bản vừa mô hình?",
+    "questionEn": "Why represent requirements in MULTIPLE ways, for example both text and models?",
+    "options": [
+      "Để tài liệu trông chuyên nghiệp hơn khi trình bày với lãnh đạo",
+      "Mỗi góc nhìn bộc lộ những vấn đề mà góc nhìn kia không thấy, và giúp mọi người đạt tầm nhìn chung",
+      "Vì tiêu chuẩn ISO bắt buộc phải có sơ đồ",
+      "Để tester có thể bỏ qua bước viết test case"
+    ],
+    "optionsEn": [
+      "So the document looks more professional to management",
+      "Each view reveals problems the other view hides, and helps everyone reach a shared vision",
+      "Because an ISO standard mandates diagrams",
+      "So testers can skip writing test cases"
+    ],
+    "answer": 1,
+    "explanation": "Nếu chỉ tạo một góc nhìn duy nhất, bạn buộc phải tin nó là đúng vì không có gì để đối chiếu. Nhiều góc nhìn tạo cơ chế kiểm tra chéo.",
+    "explanationEn": "With only a single representation you must simply trust it, since there is nothing to compare against. Multiple views create a cross-check."
+  },
+  {
+    "id": "q5",
+    "question": "Vì sao business rule nên được lưu TÁCH RIÊNG khỏi tài liệu yêu cầu của dự án?",
+    "questionEn": "Why should business rules be stored SEPARATELY from a project requirements documents?",
+    "options": [
+      "Vì chúng thường là thông tin mật",
+      "Vì chúng là tài sản cấp doanh nghiệp, tồn tại vượt ra ngoài phạm vi bất kỳ dự án nào và có thể tái dùng nhiều nơi",
+      "Vì lập trình viên không cần biết business rule",
+      "Vì chúng thay đổi quá hiếm nên không cần nằm gần yêu cầu"
+    ],
+    "optionsEn": [
+      "Because they are usually confidential",
+      "Because they are an enterprise-level asset that outlives any single project and can be reused across many",
+      "Because developers do not need to know business rules",
+      "Because they change so rarely that proximity does not matter"
+    ],
+    "answer": 1,
+    "explanation": "Business rule tồn tại độc lập với ứng dụng. Hãy dùng traceability link để nối yêu cầu với rule tương ứng thay vì sao chép nội dung rule vào SRS.",
+    "explanationEn": "Business rules exist beyond the boundaries of any specific application. Use traceability links from requirements to the rules rather than duplicating rule text in the SRS."
+  },
+  {
+    "id": "q6",
+    "question": "Thực hành chất lượng nào được sách mô tả là một trong những thực hành có GIÁ TRỊ CAO NHẤT?",
+    "questionEn": "Which quality practice does the book describe as one of the HIGHEST-VALUE available?",
+    "options": [
+      "Kiểm thử tự động toàn bộ giao diện",
+      "Peer review của yêu cầu, đặc biệt là inspection",
+      "Đo lường số dòng mã trên mỗi lập trình viên",
+      "Viết tài liệu thiết kế chi tiết trước khi code"
+    ],
+    "optionsEn": [
+      "Fully automated UI testing",
+      "Peer review of requirements, particularly inspection",
+      "Measuring lines of code per developer",
+      "Writing a detailed design document before coding"
+    ],
+    "answer": 1,
+    "explanation": "Nhóm nhỏ đại diện nhiều góc nhìn khác nhau — BA, khách hàng, lập trình viên, tester — cùng soi tài liệu sẽ tìm ra lỗi mà review cá nhân bỏ qua.",
+    "explanationEn": "A small team representing different perspectives — analyst, customer, developer, tester — finds defects that an individual review will miss."
+  },
+  {
+    "id": "q7",
+    "question": "Khi theo dõi issue về yêu cầu, nguyên tắc nào giúp issue không bị rơi vào khoảng trống?",
+    "questionEn": "When tracking requirements issues, which principle keeps issues from falling through the cracks?",
+    "options": [
+      "Gán một chủ sở hữu duy nhất cho mỗi issue",
+      "Chỉ ghi lại các issue được đánh giá là nghiêm trọng",
+      "Để cả nhóm cùng chịu trách nhiệm chung",
+      "Đóng mọi issue chưa giải quyết khi baseline"
+    ],
+    "optionsEn": [
+      "Assign a single owner to each issue",
+      "Only record issues judged to be severe",
+      "Make the whole team collectively responsible",
+      "Close every unresolved issue at baseline time"
+    ],
+    "answer": 0,
+    "explanation": "Nếu ai cũng chịu trách nhiệm thì mỗi người sẽ tưởng người khác đang lo. Mỗi issue cần một chủ sở hữu duy nhất và được theo dõi tới khi đóng.",
+    "explanationEn": "If everyone is responsible, each person assumes someone else has it covered. Every issue needs one owner and must be tracked to closure."
+  },
+  {
+    "id": "q8",
+    "question": "Khi bắt đầu cải tiến thực hành yêu cầu, nên ưu tiên nhóm thực hành nào trước?",
+    "questionEn": "When starting to improve requirements practices, which group should you tackle first?",
+    "options": [
+      "Nhóm khó nhất, để giải quyết vấn đề gốc rễ ngay",
+      "Nhóm có giá trị cao và tương đối dễ triển khai",
+      "Nhóm nào công cụ hiện có hỗ trợ sẵn",
+      "Nhóm nào ít gây tranh cãi nhất với lãnh đạo"
+    ],
+    "optionsEn": [
+      "The hardest ones, to tackle root causes immediately",
+      "The ones with high impact that are relatively easy to implement",
+      "Whichever your current tools already support",
+      "Whichever is least controversial with management"
+    ],
+    "answer": 1,
+    "explanation": "Ví dụ nhóm này gồm đào tạo lập trình viên về nghiệp vụ, áp dụng template, xác định user class, mô hình hoá môi trường ứng dụng và xác định nguồn gốc yêu cầu.",
+    "explanationEn": "That group includes educating developers about the domain, adopting templates, identifying user classes, modelling the application environment, and identifying requirement origins."
+  },
+  {
+    "id": "q9",
+    "question": "Vì sao lớp đào tạo về yêu cầu hiệu quả nhất khi có NHIỀU nhóm chức năng cùng tham dự?",
+    "questionEn": "Why is a requirements training class most effective when it spans MULTIPLE project functions?",
+    "options": [
+      "Vì chi phí đào tạo trên mỗi người thấp hơn",
+      "Vì các bên hiểu được thách thức của nhau và biết mình cần gì từ nhau, tạo hiệu ứng gắn kết đội",
+      "Vì giảng viên chỉ cần dạy một lần",
+      "Vì nó giúp giảm số lượng tài liệu cần viết"
+    ],
+    "optionsEn": [
+      "Because the cost per person is lower",
+      "Because each side appreciates the challenges the others face and what they need from each other, which builds the team",
+      "Because the trainer only has to teach once",
+      "Because it reduces the amount of documentation needed"
+    ],
+    "answer": 1,
+    "explanation": "Người dùng tham dự các lớp này thường nói rằng họ ra về với nhiều sự cảm thông hơn dành cho lập trình viên. Lớp học tạo ra vốn từ vựng chung cho cả đội.",
+    "explanationEn": "Users who attend such classes often say they leave with more sympathy for the developers. Training gives the whole team a common vocabulary."
+  },
+  {
+    "id": "q10",
+    "question": "Phát biểu nào ĐÚNG về vai trò business analyst?",
+    "questionEn": "Which statement about the business analyst role is CORRECT?",
+    "options": [
+      "BA luôn phải là một chức danh công việc riêng biệt trong tổ chức",
+      "BA là một vai trò dự án; một người kiêm cả PM lẫn BA đang làm hai công việc với hai bộ kỹ năng khác nhau",
+      "Chỉ lập trình viên có kinh nghiệm mới làm được BA",
+      "Trong dự án agile, vai trò BA không còn cần thiết"
+    ],
+    "optionsEn": [
+      "The BA must always be a separate job title in the organization",
+      "BA is a project role; someone acting as both PM and BA is doing two jobs with two different skill sets",
+      "Only experienced developers can be BAs",
+      "On agile projects the BA role is no longer needed"
+    ],
+    "answer": 1,
+    "explanation": "Vai trò này có nhiều tên gọi khác nhau và có thể do product manager, subject matter expert, developer hay chính project manager đảm nhận.",
+    "explanationEn": "The role goes by many names and may be filled by a product manager, subject matter expert, developer, or the project manager themselves."
+  },
+  {
+    "id": "q11",
+    "question": "Derived requirement và implicit requirement khác nhau thế nào?",
+    "questionEn": "How do derived requirements differ from implicit requirements?",
+    "options": [
+      "Derived là hệ quả logic của điều khách hàng đã nói; implicit là điều khách hàng mặc nhiên kỳ vọng nhưng không nói ra",
+      "Derived do lập trình viên nghĩ ra; implicit do tester nghĩ ra",
+      "Derived luôn là yêu cầu phi chức năng; implicit luôn là yêu cầu chức năng",
+      "Hai khái niệm này giống nhau"
+    ],
+    "optionsEn": [
+      "Derived requirements are logical consequences of what the customer said; implicit ones are what the customer expects without saying so",
+      "Derived come from developers; implicit come from testers",
+      "Derived are always nonfunctional; implicit are always functional",
+      "They mean the same thing"
+    ],
+    "answer": 0,
+    "explanation": "Việc phát hiện cả hai loại là phần công việc phân tích tạo ra giá trị lớn nhất của BA, vì cả hai đều không xuất hiện trực tiếp trong lời khách hàng nói.",
+    "explanationEn": "Finding both is where BA analysis adds the most value, since neither appears directly in what the customer actually said."
+  },
+  {
+    "id": "q12",
+    "question": "Truyền đạt yêu cầu (communicate requirements) có nghĩa là gì theo mô tả nhiệm vụ của BA?",
+    "questionEn": "What does communicating requirements mean in the BA task description?",
+    "options": [
+      "Gửi tài liệu SRS qua email cho toàn đội rồi chờ phản hồi",
+      "Cộng tác liên tục để bảo đảm đội hiểu đúng, và chọn cách biểu diễn phù hợp nhất cho từng thông tin",
+      "Trình bày yêu cầu trong một buổi họp kickoff duy nhất",
+      "Chuyển yêu cầu thành tài liệu thiết kế kỹ thuật"
+    ],
+    "optionsEn": [
+      "Emailing the SRS to the whole team and waiting for feedback",
+      "Ongoing collaboration to ensure the team understands, choosing the most effective representation for each piece of information",
+      "Presenting the requirements once at a kickoff meeting",
+      "Converting requirements into a technical design document"
+    ],
+    "answer": 1,
+    "explanation": "Truyền đạt không phải là đưa giấy rồi ném qua tường. BA phải quyết định khi nào dùng mô hình trực quan, bảng, công thức hay prototype thay cho văn bản.",
+    "explanationEn": "Communication is not a matter of putting requirements on paper and tossing them over a wall. The BA decides when a visual model, table, formula, or prototype beats prose."
+  },
+  {
+    "id": "q13",
+    "question": "Vì sao kỹ năng đặt câu hỏi của BA lại đặc biệt quan trọng với các điều kiện LỖI và ngoại lệ?",
+    "questionEn": "Why is a BA questioning skill especially important for ERROR conditions and exceptions?",
+    "options": [
+      "Vì tester yêu cầu phải có danh sách lỗi đầy đủ",
+      "Vì người dùng tự nhiên chỉ tập trung vào hành vi bình thường, trong khi phần lớn mã nguồn được viết để xử lý ngoại lệ",
+      "Vì lỗi luôn là yêu cầu ưu tiên cao nhất",
+      "Vì tài liệu SRS bắt buộc phải có mục xử lý lỗi"
+    ],
+    "optionsEn": [
+      "Because testers demand a complete list of errors",
+      "Because users naturally focus on normal expected behaviour, while much of the code gets written to handle exceptions",
+      "Because errors are always the highest-priority requirements",
+      "Because the SRS template requires an error-handling section"
+    ],
+    "answer": 1,
+    "explanation": "Nếu không hỏi về ngoại lệ, lập trình viên sẽ tự đoán cách xử lý, dẫn tới hành vi không nhất quán khắp ứng dụng hoặc hệ thống sập khi gặp điều kiện lỗi.",
+    "explanationEn": "If exceptions are not explored, each developer guesses at handling, producing inconsistent behaviour across the application or crashes when the condition occurs."
+  },
+  {
+    "id": "q14",
+    "question": "Một BA xuất thân là subject matter expert (chuyên gia nghiệp vụ) cần cảnh giác với rủi ro nào?",
+    "questionEn": "Which risk should a BA who came from a subject matter expert background watch for?",
+    "options": [
+      "Không hiểu thuật ngữ nghiệp vụ",
+      "Đặc tả theo sở thích cá nhân thay vì nhu cầu hợp lệ của các user class, và giỏi hệ thống as-is nhưng khó hình dung to-be",
+      "Không biết cách viết tài liệu",
+      "Quá tập trung vào lịch trình và ngân sách"
+    ],
+    "optionsEn": [
+      "Not understanding business terminology",
+      "Specifying to personal preference rather than the legitimate needs of the user classes, and being expert in the as-is system while struggling to imagine the to-be",
+      "Not knowing how to write documentation",
+      "Focusing too much on schedule and budget"
+    ],
+    "answer": 1,
+    "explanation": "Một cách xử lý tốt là để BA của đội phát triển làm việc cùng SME, khi đó SME đóng vai trò đại diện người dùng hoặc product champion.",
+    "explanationEn": "A good arrangement is to have a BA from the development team work with the SME, who then serves as a key user representative or product champion."
+  },
+  {
+    "id": "q15",
+    "question": "Trong ví dụ về script xử lý email, sai lầm mà người yêu cầu mắc phải là gì?",
+    "questionEn": "In the email-script anecdote, what mistake did the requester make?",
+    "options": [
+      "Không cung cấp đủ chi tiết kỹ thuật",
+      "Trình bày một giải pháp như thể đó là yêu cầu, thay vì nói ra nhu cầu nền tảng",
+      "Không đặt độ ưu tiên cho yêu cầu",
+      "Bỏ qua bước phân tích tính khả thi"
+    ],
+    "optionsEn": [
+      "Not supplying enough technical detail",
+      "Presenting a solution as though it were the requirement, instead of stating the underlying need",
+      "Not assigning a priority to the requirement",
+      "Skipping the feasibility analysis step"
+    ],
+    "answer": 1,
+    "explanation": "Khi lùi lại tới nhu cầu nền tảng, gần như luôn có nhiều cách giải quyết, và một số tốt hơn cách đầu tiên bật ra trong đầu.",
+    "explanationEn": "When you step back to the underlying need you almost always find multiple ways to solve it, some better than the first one that popped into your head."
+  },
+  {
+    "id": "q16",
+    "question": "Theo sách, mức tài liệu yêu cầu phù hợp trong dự án agile là gì?",
+    "questionEn": "According to the book, what is the right level of requirements documentation on an agile project?",
+    "options": [
+      "Không viết tài liệu nào, chỉ dùng hội thoại",
+      "Đặc tả mọi thứ tới từng chi tiết như dự án waterfall",
+      "Vừa đủ: không quá ít và không quá nhiều; cả hai thái cực đều không lý tưởng",
+      "Chỉ viết tài liệu sau khi iteration kết thúc"
+    ],
+    "optionsEn": [
+      "No documentation at all, only conversation",
+      "Specify everything to the nth degree as on a waterfall project",
+      "Just enough: not too little and not too much, since neither extreme is ideal",
+      "Only write documentation after the iteration ends"
+    ],
+    "answer": 2,
+    "explanation": "Nhiều BA có xu hướng đặc tả mọi thứ tới từng chi tiết, còn một số người theo trường phái agile thuần tuý lại cho rằng không cần tài liệu nào. Cả hai đều là thái cực.",
+    "explanationEn": "Many BAs tend to document everything to the nth degree, while agile purists suggest little or no documentation. Neither extreme is ideal."
+  }
+]

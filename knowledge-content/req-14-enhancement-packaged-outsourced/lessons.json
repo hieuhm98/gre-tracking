@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Dự án nâng cấp & khai thác từ hệ thống kế thừa",
+      "titleEn": "Enhancement projects & eliciting from a legacy system",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Dữ liệu kế thừa & quyết định mua hay xây",
+      "titleEn": "Legacy data & the buy versus build decision",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Lựa chọn gói & xử lý khoảng cách",
+      "titleEn": "Selecting a package & handling gaps",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Dự án thuê ngoài & yêu cầu trong hợp đồng",
+      "titleEn": "Outsourced projects & requirements in the contract",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Quản lý nhà cung cấp & bài học chung",
+      "titleEn": "Managing the vendor & shared lessons",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

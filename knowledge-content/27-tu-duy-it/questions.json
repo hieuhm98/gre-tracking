@@ -298,5 +298,105 @@
     "answer": 1,
     "explanation": "Tư duy IT là skill, không phải kiến thức — cần luyện tập hằng ngày. Mỗi lần dùng Grab, Shopee, Jira, hãy tự hỏi: entities là gì, tính năng build từ đâu, state machine của order/ticket trông ra sao. Sau vài tháng, tư duy này trở thành phản xạ tự nhiên.",
     "explanationEn": "IT thinking is a skill, not knowledge — it needs daily practice. Every time you use Grab, Shopee, or Jira, ask yourself: what are the entities, where are the features built from, what does the order/ticket state machine look like. After a few months, this way of thinking becomes a natural reflex."
+  },
+  {
+    "question": "Framework NOUN-VERB-STATE giúp BA làm gì khi đọc một requirement?",
+    "questionEn": "What does the NOUN-VERB-STATE framework help a BA do when reading a requirement?",
+    "options": [
+      "Rút ra thực thể dữ liệu từ danh từ, chức năng từ động từ và vòng đời trạng thái từ tính từ mô tả tình trạng",
+      "Ước tính công sức chính xác hơn",
+      "Chọn công nghệ phù hợp",
+      "Viết mã nhanh hơn"
+    ],
+    "optionsEn": [
+      "Extract data entities from nouns, functionality from verbs, and state life cycles from status words",
+      "Estimate effort more accurately",
+      "Choose the right technology",
+      "Write code faster"
+    ],
+    "answer": 0,
+    "explanation": "Danh từ dẫn tới bảng dữ liệu, động từ dẫn tới use case và API, còn trạng thái dẫn tới sơ đồ chuyển trạng thái — ba mô hình bổ trợ nhau.",
+    "explanationEn": "Nouns lead to data tables, verbs to use cases and APIs, and statuses to state-transition diagrams — three complementary models.",
+    "id": "q16"
+  },
+  {
+    "question": "Khi requirement nói người quản lý duyệt đơn nghỉ phép, BA nên nghĩ tới trạng thái nào?",
+    "questionEn": "When a requirement says a manager approves a leave request, which states should the BA consider?",
+    "options": [
+      "Nháp, chờ duyệt, đã duyệt, bị từ chối, đã huỷ — và mọi chuyển tiếp hợp lệ giữa chúng",
+      "Chỉ cần hai trạng thái đúng và sai",
+      "Không cần trạng thái vì đây là hành động đơn giản",
+      "Chỉ cần trạng thái đã duyệt"
+    ],
+    "optionsEn": [
+      "Draft, pending, approved, rejected, cancelled — and every valid transition between them",
+      "Just two states, true and false",
+      "No states needed since it is a simple action",
+      "Only the approved state"
+    ],
+    "answer": 0,
+    "explanation": "Mô tả tập chuyển trạng thái phức tạp bằng văn bản rất dễ bỏ sót. Bảng trạng thái buộc BA phân tích từng ô của ma trận.",
+    "explanationEn": "Describing complex state changes in prose easily misses cases. A state table forces the BA to analyse every cell of the matrix.",
+    "id": "q17"
+  },
+  {
+    "question": "Bẫy tư duy nào phổ biến nhất khi BA nhận một requirement?",
+    "questionEn": "Which thinking trap is most common when a BA receives a requirement?",
+    "options": [
+      "Nhận nguyên giải pháp mà người dùng đề xuất thay vì tìm nhu cầu thật đằng sau",
+      "Vẽ quá nhiều sơ đồ",
+      "Hỏi quá nhiều câu hỏi",
+      "Viết acceptance criteria quá chi tiết"
+    ],
+    "optionsEn": [
+      "Accepting the solution the user proposed instead of finding the real need behind it",
+      "Drawing too many diagrams",
+      "Asking too many questions",
+      "Writing overly detailed acceptance criteria"
+    ],
+    "answer": 0,
+    "explanation": "Người dùng mô tả cái họ biết chứ không mô tả vấn đề. Hỏi vì sao vài lần thường dẫn tới cách đáp ứng tốt hơn và rẻ hơn nhiều.",
+    "explanationEn": "Users describe what they know rather than the problem. Asking why a few times usually leads to a much better and cheaper solution.",
+    "id": "q18"
+  },
+  {
+    "question": "Áp dụng 5W1H vào một requirement giúp phát hiện điều gì?",
+    "questionEn": "What does applying 5W1H to a requirement uncover?",
+    "options": [
+      "Những khoảng trống về ai dùng, khi nào chạy, ở đâu, tại sao cần và xử lý ra sao trong trường hợp bất thường",
+      "Ngôn ngữ lập trình phù hợp nhất",
+      "Ngân sách cần thiết",
+      "Số lượng thành viên đội"
+    ],
+    "optionsEn": [
+      "Gaps about who uses it, when it runs, where, why it is needed, and how abnormal cases are handled",
+      "The most suitable programming language",
+      "The required budget",
+      "The team size"
+    ],
+    "answer": 0,
+    "explanation": "5W1H là checklist chống bỏ sót. Câu hỏi khi nào và trong trường hợp nào thường lộ ra các yêu cầu ngoại lệ chưa ai nghĩ tới.",
+    "explanationEn": "5W1H is an omission checklist. The when and under what circumstances questions usually surface exception requirements nobody considered.",
+    "id": "q19"
+  },
+  {
+    "question": "Từ requirement quản lý danh sách khách hàng, BA hình dung cơ sở dữ liệu nên hỏi gì trước tiên?",
+    "questionEn": "From a manage customer list requirement, what should the BA ask first when picturing the database?",
+    "options": [
+      "Một khách hàng gồm những thuộc tính nào, thuộc tính nào bắt buộc, và khách hàng liên hệ với thực thể nào khác",
+      "Cơ sở dữ liệu nào rẻ nhất",
+      "Bảng sẽ được đặt tên là gì",
+      "Ai sẽ viết câu truy vấn"
+    ],
+    "optionsEn": [
+      "Which attributes a customer has, which are mandatory, and which other entities a customer relates to",
+      "Which database is cheapest",
+      "What the table will be named",
+      "Who will write the queries"
+    ],
+    "answer": 0,
+    "explanation": "Thuộc tính và quan hệ là hai thứ quyết định mô hình dữ liệu. Quan hệ giữa các thực thể thường bộc lộ luôn chức năng còn thiếu.",
+    "explanationEn": "Attributes and relationships determine the data model. The relationships between entities usually reveal missing functionality too.",
+    "id": "q20"
   }
 ]

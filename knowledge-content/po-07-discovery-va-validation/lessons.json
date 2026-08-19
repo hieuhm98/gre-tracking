@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vấn đề lớn nhất của phát triển sản phẩm · Bốn loại rủi ro cần kiểm chứng",
+      "titleEn": "The biggest problem in product development · Four risks to validate",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Phỏng vấn khách hàng cho đúng · Giả định và cách thử nghiệm rẻ",
+      "titleEn": "Interviewing customers properly · Assumptions and cheap experiments",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "MVP bị hiểu sai như thế nào · Đọc phản hồi một cách trung thực",
+      "titleEn": "How the MVP is misunderstood · Reading feedback honestly",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

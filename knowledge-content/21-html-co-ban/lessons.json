@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "HTML là gì? · Cấu trúc cơ bản của một trang HTML",
+      "titleEn": "What is HTML? · Basic structure of an HTML page",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "html-01",
+        "html-02",
+        "html-03",
+        "html-04"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Thẻ HTML (Tags) · Thẻ văn bản và tiêu đề",
+      "titleEn": "HTML Tags · Text and heading tags",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "html-05",
+        "html-06",
+        "html-07",
+        "html-08"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Danh sách · Liên kết và Hình ảnh",
+      "titleEn": "Lists · Links and Images",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "html-09",
+        "html-10",
+        "html-11"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Thuộc tính (Attributes) · Thẻ phân chia layout",
+      "titleEn": "Attributes · Layout division tags",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "html-12",
+        "html-13",
+        "html-14"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Semantic HTML · Form HTML — Chi tiết",
+      "titleEn": "Semantic HTML · HTML Forms — In Detail",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "html-15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Bảng (Table) · Media: Video và Audio",
+      "titleEn": "Tables · Media: Video and Audio",
+      "sections": [
+        11,
+        12
+      ],
+      "questionIds": [
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l7",
+      "title": "HTML và BA — Ứng dụng thực tế",
+      "titleEn": "HTML and the BA — Practical Applications",
+      "sections": [
+        13
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

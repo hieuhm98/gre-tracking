@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 6,
   "title": "RDS, Aurora & ElastiCache – Cơ sở dữ liệu quản lý",
   "titleEn": "RDS, Aurora & ElastiCache – Managed Databases",
   "description": "Cơ sở dữ liệu quản lý trên AWS: RDS với Read Replica và Multi-AZ, Amazon Aurora và caching bằng ElastiCache cho kỳ thi SAA-C03.",

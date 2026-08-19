@@ -3,8 +3,18 @@
     "id": "q1",
     "question": "Thành phần nào được gọi là 'bộ não' của máy tính?",
     "questionEn": "Which component is called the 'brain' of the computer?",
-    "options": ["RAM", "CPU", "Ổ cứng SSD", "Mainboard"],
-    "optionsEn": ["RAM", "CPU", "SSD storage", "Motherboard"],
+    "options": [
+      "RAM",
+      "CPU",
+      "Ổ cứng SSD",
+      "Mainboard"
+    ],
+    "optionsEn": [
+      "RAM",
+      "CPU",
+      "SSD storage",
+      "Motherboard"
+    ],
     "answer": 1,
     "explanation": "CPU (Central Processing Unit) là bộ xử lý trung tâm, thực thi mọi lệnh tính toán và điều phối các thành phần khác.",
     "explanationEn": "The CPU (Central Processing Unit) is the central processor that executes all computational instructions and coordinates the other components."
@@ -13,8 +23,18 @@
     "id": "q2",
     "question": "Điều gì xảy ra với dữ liệu trong RAM khi bạn tắt máy tính?",
     "questionEn": "What happens to the data in RAM when you turn off the computer?",
-    "options": ["Dữ liệu được lưu vào ổ cứng tự động", "Dữ liệu bị xóa hoàn toàn", "Dữ liệu được nén lại", "Dữ liệu chuyển sang CPU"],
-    "optionsEn": ["The data is automatically saved to storage", "The data is completely erased", "The data is compressed", "The data is moved to the CPU"],
+    "options": [
+      "Dữ liệu được lưu vào ổ cứng tự động",
+      "Dữ liệu bị xóa hoàn toàn",
+      "Dữ liệu được nén lại",
+      "Dữ liệu chuyển sang CPU"
+    ],
+    "optionsEn": [
+      "The data is automatically saved to storage",
+      "The data is completely erased",
+      "The data is compressed",
+      "The data is moved to the CPU"
+    ],
     "answer": 1,
     "explanation": "RAM là bộ nhớ tạm thời (volatile). Khi mất điện hoặc tắt máy, toàn bộ dữ liệu trong RAM bị xóa.",
     "explanationEn": "RAM is volatile (temporary) memory. When power is lost or the machine is turned off, all data in RAM is erased."
@@ -23,8 +43,18 @@
     "id": "q3",
     "question": "Sự khác biệt chính giữa SSD và HDD là gì?",
     "questionEn": "What is the main difference between an SSD and an HDD?",
-    "options": ["SSD lưu được nhiều dữ liệu hơn HDD", "SSD nhanh hơn và bền hơn HDD nhưng giá đắt hơn", "HDD nhanh hơn SSD", "SSD và HDD hoàn toàn giống nhau về tốc độ"],
-    "optionsEn": ["An SSD can store more data than an HDD", "An SSD is faster and more durable than an HDD but more expensive", "An HDD is faster than an SSD", "SSDs and HDDs are identical in speed"],
+    "options": [
+      "SSD lưu được nhiều dữ liệu hơn HDD",
+      "SSD nhanh hơn và bền hơn HDD nhưng giá đắt hơn",
+      "HDD nhanh hơn SSD",
+      "SSD và HDD hoàn toàn giống nhau về tốc độ"
+    ],
+    "optionsEn": [
+      "An SSD can store more data than an HDD",
+      "An SSD is faster and more durable than an HDD but more expensive",
+      "An HDD is faster than an SSD",
+      "SSDs and HDDs are identical in speed"
+    ],
     "answer": 1,
     "explanation": "SSD (Solid State Drive) dùng chip flash, không có bộ phận cơ học nên nhanh hơn và ít hỏng hơn HDD, nhưng giá thành cao hơn trên mỗi GB.",
     "explanationEn": "An SSD (Solid State Drive) uses flash chips and has no moving parts, so it is faster and less prone to failure than an HDD, but it costs more per GB."
@@ -33,8 +63,18 @@
     "id": "q4",
     "question": "1 Terabyte (TB) bằng bao nhiêu Gigabyte (GB)?",
     "questionEn": "How many Gigabytes (GB) are there in 1 Terabyte (TB)?",
-    "options": ["100 GB", "512 GB", "1,024 GB", "2,048 GB"],
-    "optionsEn": ["100 GB", "512 GB", "1,024 GB", "2,048 GB"],
+    "options": [
+      "100 GB",
+      "512 GB",
+      "1,024 GB",
+      "2,048 GB"
+    ],
+    "optionsEn": [
+      "100 GB",
+      "512 GB",
+      "1,024 GB",
+      "2,048 GB"
+    ],
     "answer": 2,
     "explanation": "1 TB = 1,024 GB theo quy đổi nhị phân. Trong thực tế thương mại, các nhà sản xuất thường tính 1 TB = 1,000 GB.",
     "explanationEn": "1 TB = 1,024 GB using binary conversion. In commercial practice, manufacturers often count 1 TB as 1,000 GB."
@@ -43,8 +83,18 @@
     "id": "q5",
     "question": "Hệ điều hành (Operating System) có vai trò gì?",
     "questionEn": "What is the role of the operating system (OS)?",
-    "options": ["Chỉ để chạy trò chơi điện tử", "Quản lý tài nguyên phần cứng và cung cấp môi trường cho phần mềm chạy", "Thay thế CPU khi CPU bị lỗi", "Lưu trữ dữ liệu dài hạn"],
-    "optionsEn": ["Only to run video games", "To manage hardware resources and provide an environment for software to run", "To replace the CPU when it fails", "To store data long-term"],
+    "options": [
+      "Chỉ để chạy trò chơi điện tử",
+      "Quản lý tài nguyên phần cứng và cung cấp môi trường cho phần mềm chạy",
+      "Thay thế CPU khi CPU bị lỗi",
+      "Lưu trữ dữ liệu dài hạn"
+    ],
+    "optionsEn": [
+      "Only to run video games",
+      "To manage hardware resources and provide an environment for software to run",
+      "To replace the CPU when it fails",
+      "To store data long-term"
+    ],
     "answer": 1,
     "explanation": "OS là phần mềm nền tảng, đóng vai trò cầu nối giữa phần cứng và phần mềm ứng dụng, quản lý bộ nhớ, CPU, thiết bị ngoại vi...",
     "explanationEn": "The OS is the foundational software that acts as the bridge between hardware and application software, managing memory, the CPU, peripheral devices, and more."
@@ -53,8 +103,18 @@
     "id": "q6",
     "question": "Khi bạn mở nhiều ứng dụng cùng lúc và máy bắt đầu chậm lại, nguyên nhân phổ biến nhất là gì?",
     "questionEn": "When you open many applications at once and the machine starts to slow down, what is the most common cause?",
-    "options": ["CPU quá nóng", "RAM không đủ để chứa tất cả ứng dụng đang chạy", "Ổ cứng bị đầy", "Mainboard bị lỗi"],
-    "optionsEn": ["The CPU is overheating", "There is not enough RAM to hold all the running applications", "The storage drive is full", "The motherboard is faulty"],
+    "options": [
+      "CPU quá nóng",
+      "RAM không đủ để chứa tất cả ứng dụng đang chạy",
+      "Ổ cứng bị đầy",
+      "Mainboard bị lỗi"
+    ],
+    "optionsEn": [
+      "The CPU is overheating",
+      "There is not enough RAM to hold all the running applications",
+      "The storage drive is full",
+      "The motherboard is faulty"
+    ],
     "answer": 1,
     "explanation": "RAM lưu trữ dữ liệu của các ứng dụng đang chạy. Khi RAM đầy, OS phải dùng ổ cứng làm bộ nhớ ảo (virtual memory), gây ra tình trạng chậm đáng kể.",
     "explanationEn": "RAM holds the data of running applications. When RAM is full, the OS has to use storage as virtual memory, which causes significant slowdowns."
@@ -63,8 +123,18 @@
     "id": "q7",
     "question": "Thiết bị nào sau đây là thiết bị ĐẦU RA (output)?",
     "questionEn": "Which of the following is an OUTPUT device?",
-    "options": ["Bàn phím", "Chuột", "Màn hình", "Webcam"],
-    "optionsEn": ["Keyboard", "Mouse", "Monitor", "Webcam"],
+    "options": [
+      "Bàn phím",
+      "Chuột",
+      "Màn hình",
+      "Webcam"
+    ],
+    "optionsEn": [
+      "Keyboard",
+      "Mouse",
+      "Monitor",
+      "Webcam"
+    ],
     "answer": 2,
     "explanation": "Thiết bị đầu ra hiển thị kết quả từ máy tính đến người dùng. Màn hình là thiết bị đầu ra phổ biến nhất. Bàn phím, chuột, webcam là thiết bị đầu vào.",
     "explanationEn": "Output devices present the computer's results to the user. The monitor is the most common output device. Keyboard, mouse, and webcam are input devices."
@@ -73,8 +143,18 @@
     "id": "q8",
     "question": "Linux thường được sử dụng phổ biến nhất ở đâu?",
     "questionEn": "Where is Linux most commonly used?",
-    "options": ["Trên máy tính cá nhân của người dùng thông thường", "Trên server và hệ thống đám mây", "Chỉ trên điện thoại Android", "Trên máy Mac của Apple"],
-    "optionsEn": ["On the personal computers of ordinary users", "On servers and cloud systems", "Only on Android phones", "On Apple Mac computers"],
+    "options": [
+      "Trên máy tính cá nhân của người dùng thông thường",
+      "Trên server và hệ thống đám mây",
+      "Chỉ trên điện thoại Android",
+      "Trên máy Mac của Apple"
+    ],
+    "optionsEn": [
+      "On the personal computers of ordinary users",
+      "On servers and cloud systems",
+      "Only on Android phones",
+      "On Apple Mac computers"
+    ],
     "answer": 1,
     "explanation": "Linux là hệ điều hành mã nguồn mở, ổn định, bảo mật cao và miễn phí, nên được dùng rộng rãi trên server, cloud, và các hệ thống nhúng.",
     "explanationEn": "Linux is an open-source operating system that is stable, highly secure, and free, so it is widely used on servers, cloud platforms, and embedded systems."
@@ -83,8 +163,18 @@
     "id": "q9",
     "question": "Đơn vị nhỏ nhất của dữ liệu trong máy tính là gì?",
     "questionEn": "What is the smallest unit of data in a computer?",
-    "options": ["Byte", "Kilobyte", "Bit", "Nibble"],
-    "optionsEn": ["Byte", "Kilobyte", "Bit", "Nibble"],
+    "options": [
+      "Byte",
+      "Kilobyte",
+      "Bit",
+      "Nibble"
+    ],
+    "optionsEn": [
+      "Byte",
+      "Kilobyte",
+      "Bit",
+      "Nibble"
+    ],
     "answer": 2,
     "explanation": "Bit (binary digit) là đơn vị nhỏ nhất, chỉ mang giá trị 0 hoặc 1. 8 bit tạo thành 1 Byte.",
     "explanationEn": "A bit (binary digit) is the smallest unit and holds only a value of 0 or 1. Eight bits make up 1 Byte."
@@ -93,8 +183,18 @@
     "id": "q10",
     "question": "Tốc độ CPU được đo bằng đơn vị gì?",
     "questionEn": "In what unit is CPU speed measured?",
-    "options": ["GB (Gigabyte)", "GHz (Gigahertz)", "Mbps (Megabit per second)", "W (Watt)"],
-    "optionsEn": ["GB (Gigabyte)", "GHz (Gigahertz)", "Mbps (Megabit per second)", "W (Watt)"],
+    "options": [
+      "GB (Gigabyte)",
+      "GHz (Gigahertz)",
+      "Mbps (Megabit per second)",
+      "W (Watt)"
+    ],
+    "optionsEn": [
+      "GB (Gigabyte)",
+      "GHz (Gigahertz)",
+      "Mbps (Megabit per second)",
+      "W (Watt)"
+    ],
     "answer": 1,
     "explanation": "GHz (Gigahertz) đo số tỷ chu kỳ xử lý mỗi giây. CPU 3.5 GHz thực hiện 3.5 tỷ chu kỳ mỗi giây.",
     "explanationEn": "GHz (Gigahertz) measures billions of processing cycles per second. A 3.5 GHz CPU performs 3.5 billion cycles per second."
@@ -103,8 +203,18 @@
     "id": "q11",
     "question": "Mainboard (bo mạch chủ) có chức năng gì?",
     "questionEn": "What is the function of the motherboard?",
-    "options": ["Xử lý đồ họa chuyên dụng", "Kết nối và cho phép các linh kiện phần cứng giao tiếp với nhau", "Lưu trữ dữ liệu dài hạn", "Quản lý nguồn điện cho máy tính"],
-    "optionsEn": ["Dedicated graphics processing", "Connecting the hardware components and letting them communicate with each other", "Long-term data storage", "Managing the computer's power supply"],
+    "options": [
+      "Xử lý đồ họa chuyên dụng",
+      "Kết nối và cho phép các linh kiện phần cứng giao tiếp với nhau",
+      "Lưu trữ dữ liệu dài hạn",
+      "Quản lý nguồn điện cho máy tính"
+    ],
+    "optionsEn": [
+      "Dedicated graphics processing",
+      "Connecting the hardware components and letting them communicate with each other",
+      "Long-term data storage",
+      "Managing the computer's power supply"
+    ],
     "answer": 1,
     "explanation": "Mainboard là bảng mạch chính kết nối CPU, RAM, ổ cứng, GPU và tất cả các linh kiện khác, tạo thành hệ thống hoàn chỉnh.",
     "explanationEn": "The motherboard is the main circuit board that connects the CPU, RAM, storage, GPU, and all other components into a complete system."
@@ -113,8 +223,18 @@
     "id": "q12",
     "question": "Phần mềm nào sau đây là phần mềm HỆ THỐNG (system software)?",
     "questionEn": "Which of the following is SYSTEM software?",
-    "options": ["Microsoft Word", "Google Chrome", "Driver card màn hình", "Adobe Photoshop"],
-    "optionsEn": ["Microsoft Word", "Google Chrome", "A graphics card driver", "Adobe Photoshop"],
+    "options": [
+      "Microsoft Word",
+      "Google Chrome",
+      "Driver card màn hình",
+      "Adobe Photoshop"
+    ],
+    "optionsEn": [
+      "Microsoft Word",
+      "Google Chrome",
+      "A graphics card driver",
+      "Adobe Photoshop"
+    ],
     "answer": 2,
     "explanation": "Driver thiết bị là phần mềm hệ thống, giúp OS giao tiếp với phần cứng cụ thể. Word, Chrome, Photoshop đều là phần mềm ứng dụng.",
     "explanationEn": "A device driver is system software that helps the OS communicate with specific hardware. Word, Chrome, and Photoshop are all application software."
@@ -123,8 +243,18 @@
     "id": "q13",
     "question": "Nếu một file ảnh có dung lượng 5 MB, đó là bao nhiêu KB?",
     "questionEn": "If an image file is 5 MB in size, how many KB is that?",
-    "options": ["500 KB", "5,000 KB", "5,120 KB", "512 KB"],
-    "optionsEn": ["500 KB", "5,000 KB", "5,120 KB", "512 KB"],
+    "options": [
+      "500 KB",
+      "5,000 KB",
+      "5,120 KB",
+      "512 KB"
+    ],
+    "optionsEn": [
+      "500 KB",
+      "5,000 KB",
+      "5,120 KB",
+      "512 KB"
+    ],
     "answer": 2,
     "explanation": "1 MB = 1,024 KB. Vậy 5 MB = 5 × 1,024 = 5,120 KB.",
     "explanationEn": "1 MB = 1,024 KB. So 5 MB = 5 × 1,024 = 5,120 KB."
@@ -133,8 +263,18 @@
     "id": "q14",
     "question": "CPU có nhiều nhân (multi-core) mang lại lợi ích gì?",
     "questionEn": "What benefit does a multi-core CPU provide?",
-    "options": ["Tiết kiệm điện hơn đáng kể", "Xử lý nhiều tác vụ song song cùng lúc, tăng hiệu năng tổng thể", "Tăng dung lượng lưu trữ", "Giảm nhiệt độ CPU"],
-    "optionsEn": ["Significantly better power efficiency", "Processing multiple tasks in parallel at the same time, boosting overall performance", "Increased storage capacity", "Lower CPU temperature"],
+    "options": [
+      "Tiết kiệm điện hơn đáng kể",
+      "Xử lý nhiều tác vụ song song cùng lúc, tăng hiệu năng tổng thể",
+      "Tăng dung lượng lưu trữ",
+      "Giảm nhiệt độ CPU"
+    ],
+    "optionsEn": [
+      "Significantly better power efficiency",
+      "Processing multiple tasks in parallel at the same time, boosting overall performance",
+      "Increased storage capacity",
+      "Lower CPU temperature"
+    ],
     "answer": 1,
     "explanation": "Mỗi nhân CPU có thể xử lý một luồng tác vụ độc lập. CPU 8 nhân có thể xử lý 8 tác vụ song song, cải thiện đáng kể hiệu năng đa nhiệm.",
     "explanationEn": "Each CPU core can handle an independent thread of work. An 8-core CPU can process 8 tasks in parallel, significantly improving multitasking performance."
@@ -143,10 +283,120 @@
     "id": "q15",
     "question": "Thứ tự đúng khi mô tả luồng xử lý cơ bản của máy tính là gì?",
     "questionEn": "What is the correct order describing the basic processing flow of a computer?",
-    "options": ["Output → CPU → Input → Storage", "Input → CPU (dùng RAM) → Output, lưu vào Storage khi cần", "Storage → RAM → CPU → Input", "CPU → Input → RAM → Output"],
-    "optionsEn": ["Output → CPU → Input → Storage", "Input → CPU (using RAM) → Output, saving to Storage when needed", "Storage → RAM → CPU → Input", "CPU → Input → RAM → Output"],
+    "options": [
+      "Output → CPU → Input → Storage",
+      "Input → CPU (dùng RAM) → Output, lưu vào Storage khi cần",
+      "Storage → RAM → CPU → Input",
+      "CPU → Input → RAM → Output"
+    ],
+    "optionsEn": [
+      "Output → CPU → Input → Storage",
+      "Input → CPU (using RAM) → Output, saving to Storage when needed",
+      "Storage → RAM → CPU → Input",
+      "CPU → Input → RAM → Output"
+    ],
     "answer": 1,
     "explanation": "Luồng cơ bản: nhận đầu vào (Input) → CPU xử lý với sự hỗ trợ của RAM → xuất kết quả (Output). Dữ liệu được lưu dài hạn xuống ổ cứng (Storage) khi cần.",
     "explanationEn": "The basic flow: receive input → the CPU processes it with the help of RAM → produce output. Data is saved long-term to storage when needed."
+  },
+  {
+    "question": "Một người dùng phàn nàn rằng máy tính mở được nhiều tab trình duyệt nhưng bắt đầu giật lag khi mở thêm. Thành phần nào nhiều khả năng là nút thắt cổ chai?",
+    "questionEn": "A user complains their computer opens many browser tabs but starts stuttering when they open more. Which component is most likely the bottleneck?",
+    "options": [
+      "Ổ cứng SSD",
+      "RAM",
+      "Card mạng",
+      "Nguồn điện"
+    ],
+    "optionsEn": [
+      "SSD storage",
+      "RAM",
+      "Network card",
+      "Power supply"
+    ],
+    "answer": 1,
+    "explanation": "Mỗi tab chiếm một phần RAM. Khi RAM đầy, hệ điều hành phải đẩy dữ liệu xuống ổ cứng (swap) — chậm hơn RAM hàng trăm lần — nên máy giật lag.",
+    "explanationEn": "Each tab consumes RAM. When RAM fills up, the OS swaps data to disk, which is hundreds of times slower than RAM, so the machine stutters.",
+    "id": "q16"
+  },
+  {
+    "question": "Vì sao BA cần phân biệt được RAM và ổ cứng khi viết yêu cầu phi chức năng?",
+    "questionEn": "Why does a BA need to distinguish RAM from disk storage when writing nonfunctional requirements?",
+    "options": [
+      "Vì cả hai đều đo bằng GB nên dễ nhầm và viết sai ngưỡng tài nguyên",
+      "Vì RAM rẻ hơn ổ cứng",
+      "Vì ổ cứng không ảnh hưởng tới hiệu năng",
+      "Vì RAM lưu dữ liệu vĩnh viễn"
+    ],
+    "optionsEn": [
+      "Because both are measured in GB, so it is easy to confuse them and specify the wrong resource threshold",
+      "Because RAM is cheaper than disk",
+      "Because disk does not affect performance",
+      "Because RAM stores data permanently"
+    ],
+    "answer": 0,
+    "explanation": "Yêu cầu như ứng dụng không được dùng quá 2 GB phải nói rõ là RAM hay dung lượng lưu trữ — hai con số này hoàn toàn khác nhau về chi phí và tác động.",
+    "explanationEn": "A requirement like the app must not use more than 2 GB has to say whether that is RAM or storage — the two differ completely in cost and impact.",
+    "id": "q17"
+  },
+  {
+    "question": "Khi tắt máy đột ngột, dữ liệu ở đâu bị mất và vì sao?",
+    "questionEn": "When a machine loses power suddenly, which data is lost and why?",
+    "options": [
+      "Dữ liệu trong RAM, vì RAM là bộ nhớ tạm và cần điện để duy trì nội dung",
+      "Dữ liệu trên ổ cứng, vì ổ cứng cần điện để ghi",
+      "Cả RAM lẫn ổ cứng đều mất sạch",
+      "Không mất gì vì mọi thứ đã được lưu tự động"
+    ],
+    "optionsEn": [
+      "Data in RAM, because RAM is volatile and needs power to retain its contents",
+      "Data on disk, because disks need power to write",
+      "Both RAM and disk are wiped",
+      "Nothing is lost because everything is autosaved"
+    ],
+    "answer": 0,
+    "explanation": "RAM là bộ nhớ khả biến (volatile): mất điện là mất nội dung. Ổ cứng là bộ nhớ bền vững nên giữ được dữ liệu đã ghi.",
+    "explanationEn": "RAM is volatile: cut the power and its contents vanish. Disk is non-volatile, so data already written survives.",
+    "id": "q18"
+  },
+  {
+    "question": "Phần mềm nào KHÔNG thuộc nhóm phần mềm hệ thống?",
+    "questionEn": "Which of these is NOT system software?",
+    "options": [
+      "Trình điều khiển máy in (driver)",
+      "Tiện ích dọn đĩa",
+      "Phần mềm kế toán của doanh nghiệp",
+      "Hệ điều hành"
+    ],
+    "optionsEn": [
+      "A printer driver",
+      "A disk cleanup utility",
+      "A company accounting application",
+      "The operating system"
+    ],
+    "answer": 2,
+    "explanation": "Phần mềm kế toán là phần mềm ứng dụng — phục vụ trực tiếp công việc của người dùng. Driver, tiện ích hệ thống và hệ điều hành phục vụ chính máy tính.",
+    "explanationEn": "Accounting software is an application — it serves the user's work directly. Drivers, utilities, and the OS serve the machine itself.",
+    "id": "q19"
+  },
+  {
+    "question": "Một yêu cầu nói tệp xuất khẩu không được vượt quá 500 MB. Nếu mỗi bản ghi khoảng 1 KB, hệ thống xuất được tối đa khoảng bao nhiêu bản ghi?",
+    "questionEn": "A requirement says an export file must not exceed 500 MB. If each record is about 1 KB, roughly how many records can the system export?",
+    "options": [
+      "Khoảng 500 nghìn bản ghi",
+      "Khoảng 5 nghìn bản ghi",
+      "Khoảng 50 triệu bản ghi",
+      "Khoảng 500 bản ghi"
+    ],
+    "optionsEn": [
+      "About 500 thousand records",
+      "About 5 thousand records",
+      "About 50 million records",
+      "About 500 records"
+    ],
+    "answer": 0,
+    "explanation": "1 MB xấp xỉ 1.000 KB, nên 500 MB chứa khoảng 500.000 bản ghi 1 KB. Nắm đơn vị dữ liệu giúp BA kiểm tra tính hợp lý của yêu cầu ngay khi viết.",
+    "explanationEn": "1 MB is roughly 1,000 KB, so 500 MB holds about 500,000 one-kilobyte records. Knowing data units lets a BA sanity-check a requirement as they write it.",
+    "id": "q20"
   }
 ]

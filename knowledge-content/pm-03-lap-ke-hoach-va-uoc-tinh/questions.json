@@ -1,0 +1,402 @@
+[
+  {
+    "id": "q1",
+    "question": "Giá trị thật của một kế hoạch dự án là gì?",
+    "questionEn": "What is a project plan's real value?",
+    "options": [
+      "Cho bạn biết SỚM khi nào mình đang sai, vì không có kế hoạch thì bạn không có gì để so sánh",
+      "Chứng minh với khách hàng rằng dự án được quản lý chuyên nghiệp",
+      "Dự đoán chính xác ngày kết thúc và chi phí cuối cùng",
+      "Ràng buộc đội phải hoàn thành đúng như đã cam kết"
+    ],
+    "optionsEn": [
+      "Telling you EARLY when you are wrong, since without a plan you have nothing to compare against",
+      "Proving to customers that the project is professionally managed",
+      "Predicting the end date and final cost accurately",
+      "Binding the team to what they committed to"
+    ],
+    "answer": 0,
+    "explanation": "Mọi kế hoạch rồi cũng sai, nhưng chính đường tham chiếu đó cho bạn biết mình đã lệch bao nhiêu và khi nào.",
+    "explanationEn": "Every plan turns out wrong, but that baseline is exactly what tells you how far off you are and when."
+  },
+  {
+    "id": "q2",
+    "question": "PM giữ nguyên kế hoạch cũ dù thực tế đã đổi để khỏi mất mặt. Vấn đề là gì?",
+    "questionEn": "A PM preserves an outdated plan to save face. What is wrong?",
+    "options": [
+      "Kế hoạch là mô hình tốt nhất của hiểu biết hiện tại, nên giữ nguyên nó biến công cụ điều hướng thành đồ trang trí",
+      "Kế hoạch cũ vẫn hợp lệ vì nó đã được phê duyệt",
+      "Vấn đề chỉ là hình thức, không ảnh hưởng tới kết quả",
+      "Khách hàng sẽ không phát hiện ra sự khác biệt"
+    ],
+    "optionsEn": [
+      "A plan is the best model of current understanding, so freezing it turns a navigation instrument into decoration",
+      "The old plan remains valid because it was approved",
+      "It is a formality with no effect on outcomes",
+      "The customer will not notice the difference"
+    ],
+    "answer": 0,
+    "explanation": "Kế hoạch không phải lời hứa; nó phải được cập nhật khi hiểu biết thay đổi.",
+    "explanationEn": "A plan is not a promise; it must be updated as understanding changes."
+  },
+  {
+    "id": "q3",
+    "question": "Nút của WBS nên được viết như thế nào?",
+    "questionEn": "How should a WBS node be written?",
+    "options": [
+      "Theo sản phẩm bàn giao, ví dụ module thanh toán đã kiểm thử — vì sản phẩm bàn giao kiểm tra được là xong hay chưa",
+      "Theo hoạt động, ví dụ lập trình, vì nó bao trùm nhiều việc",
+      "Theo người thực hiện, để dễ gán trách nhiệm",
+      "Theo tuần lịch, để dễ theo dõi tiến độ"
+    ],
+    "optionsEn": [
+      "By deliverable, such as payment module tested — because a deliverable can be checked as done or not",
+      "By activity, such as programming, since it covers more work",
+      "By assignee, to make accountability easy",
+      "By calendar week, to make tracking easy"
+    ],
+    "answer": 0,
+    "explanation": "Hoạt động không kiểm tra được là đã xong hay chưa, nên nó không thể dùng làm cơ sở theo dõi.",
+    "explanationEn": "An activity cannot be checked as done, so it cannot serve as a tracking basis."
+  },
+  {
+    "id": "q4",
+    "question": "Quy tắc 100 phần trăm trong WBS nói gì và vì sao nó quan trọng?",
+    "questionEn": "What is the WBS 100 percent rule and why does it matter?",
+    "options": [
+      "Tổng các nút con phải bằng đúng nút cha, không thiếu và không thêm — đây là cơ chế duy nhất giúp phát hiện phạm vi bị bỏ sót",
+      "Toàn bộ WBS phải được hoàn thành 100 phần trăm trước khi ước tính",
+      "100 phần trăm thành viên đội phải tham gia xây dựng WBS",
+      "Mỗi gói công việc phải được phân bổ 100 phần trăm thời gian của một người"
+    ],
+    "optionsEn": [
+      "Child nodes must sum exactly to the parent, nothing missing or added — the only mechanism that reveals forgotten scope",
+      "The whole WBS must be 100 percent complete before estimating",
+      "100 percent of team members must help build the WBS",
+      "Each work package must be allocated 100 percent of one person's time"
+    ],
+    "answer": 0,
+    "explanation": "Không có quy tắc này, phạm vi bị bỏ sót chỉ lộ ra khi đã ở giữa giai đoạn thực thi.",
+    "explanationEn": "Without this rule, forgotten scope only surfaces in the middle of execution."
+  },
+  {
+    "id": "q5",
+    "question": "Khoảng kích cỡ hợp lý cho một gói công việc ở mức thấp nhất của WBS là bao nhiêu?",
+    "questionEn": "What is a sensible size range for a lowest-level WBS work package?",
+    "options": [
+      "Khoảng 8 tới 80 giờ — nhỏ hơn thì quản lý tốn hơn giá trị, lớn hơn thì bạn không biết nó đang trôi",
+      "Khoảng 1 tới 4 giờ để dễ theo dõi hàng ngày",
+      "Khoảng 200 tới 400 giờ để giảm số nút phải quản lý",
+      "Không có giới hạn, miễn là có người phụ trách"
+    ],
+    "optionsEn": [
+      "About 8 to 80 hours — smaller and management costs more than it is worth, larger and you cannot tell it is drifting",
+      "About 1 to 4 hours for easy daily tracking",
+      "About 200 to 400 hours to reduce the number of nodes",
+      "No limit, as long as someone owns it"
+    ],
+    "answer": 0,
+    "explanation": "Đây là quy tắc thực dụng cân bằng giữa chi phí quản lý và khả năng phát hiện chậm trễ.",
+    "explanationEn": "This is a practical rule balancing management overhead against the ability to detect slippage."
+  },
+  {
+    "id": "q6",
+    "question": "Nhóm công việc nào thường bị bỏ sót khỏi WBS dù chiếm phần đáng kể ngân sách?",
+    "questionEn": "Which work is routinely left out of a WBS despite consuming real budget?",
+    "options": [
+      "Di trú dữ liệu, tích hợp bên thứ ba, kiểm thử hiệu năng và bảo mật, đào tạo, hỗ trợ sau phát hành, và thời gian chờ phê duyệt",
+      "Lập trình các tính năng chính và kiểm thử chức năng",
+      "Họp hàng ngày và họp lập kế hoạch sprint",
+      "Viết mã nguồn và review code"
+    ],
+    "optionsEn": [
+      "Data migration, third-party integration, performance and security testing, training, post-release support, and approval wait time",
+      "Coding the main features and functional testing",
+      "Daily standups and sprint planning",
+      "Writing code and code review"
+    ],
+    "answer": 0,
+    "explanation": "Một cách kiểm tra hiệu quả là đưa WBS cho người sẽ thực hiện và hỏi thiếu gì không.",
+    "explanationEn": "An effective check is handing the WBS to the people who will do the work and asking what is missing."
+  },
+  {
+    "question": "Phụ thuộc do lựa chọn khác phụ thuộc bắt buộc ở điểm nào có ý nghĩa thực tế?",
+    "questionEn": "How does a discretionary dependency differ from a mandatory one in practice?",
+    "options": [
+      "Phụ thuộc do lựa chọn thường tháo được để chạy song song, và đó là cách rút ngắn lịch trình rẻ nhất",
+      "Phụ thuộc do lựa chọn luôn có rủi ro cao hơn",
+      "Phụ thuộc bắt buộc chỉ xuất hiện trong dự án phần mềm",
+      "Phụ thuộc do lựa chọn không cần ghi vào kế hoạch"
+    ],
+    "optionsEn": [
+      "Discretionary dependencies can often be unpicked to run in parallel, the cheapest way to shorten a schedule",
+      "Discretionary dependencies always carry higher risk",
+      "Mandatory dependencies only appear in software projects",
+      "Discretionary dependencies need not be recorded in the plan"
+    ],
+    "answer": 0,
+    "explanation": "Phụ thuộc bắt buộc do bản chất công việc và không thể phá vỡ, ví dụ không kiểm thử trước khi có bản build.",
+    "explanationEn": "Mandatory dependencies are inherent to the work and unbreakable, such as not testing before a build exists.",
+    "id": "q7"
+  },
+  {
+    "question": "Vì sao PM chỉ theo dõi đường găng ban đầu sẽ bị bất ngờ?",
+    "questionEn": "Why is a PM who only watches the original critical path caught by surprise?",
+    "options": [
+      "Vì khi một công việc ngoài đường găng chậm quá thời gian nổi, nó trở thành đường găng mới",
+      "Vì đường găng luôn được tính lại tự động bởi công cụ",
+      "Vì đường găng ban đầu thường được tính sai",
+      "Vì công việc trên đường găng thường bị đổi người phụ trách"
+    ],
+    "optionsEn": [
+      "Because when off-path work slips beyond its float, it becomes the new critical path",
+      "Because tools always recalculate it automatically",
+      "Because the original path is usually calculated wrongly",
+      "Because critical-path work often changes owner"
+    ],
+    "answer": 0,
+    "explanation": "Công việc ngoài đường găng có thời gian nổi, và chậm trong khoảng đó thì không ảnh hưởng, nhưng vượt quá thì thành đường găng.",
+    "explanationEn": "Off-path work has float, and slipping within it costs nothing, but slipping beyond it makes that chain critical.",
+    "id": "q8"
+  },
+  {
+    "question": "Hai cách hợp lệ để rút ngắn lịch trình dự án là gì?",
+    "questionEn": "What are the two legitimate ways to shorten a project schedule?",
+    "options": [
+      "Crashing là thêm nguồn lực vào công việc trên đường găng và tốn tiền, fast tracking là chạy song song những việc lẽ ra nối tiếp và tăng rủi ro",
+      "Yêu cầu đội cố gắng hơn và giảm thời gian họp",
+      "Cắt bớt kiểm thử và giảm tài liệu",
+      "Tăng số giờ làm việc mỗi tuần và bỏ thời gian dự phòng"
+    ],
+    "optionsEn": [
+      "Crashing means adding resources to critical-path work and costs money; fast tracking means parallelising sequential work and adds risk",
+      "Asking the team to try harder and cutting meetings",
+      "Trimming testing and reducing documentation",
+      "Raising weekly hours and removing contingency"
+    ],
+    "answer": 0,
+    "explanation": "Không có cách thứ ba, và đặc biệt không có cách nào tên là yêu cầu đội cố gắng hơn.",
+    "explanationEn": "There is no third way, and in particular none called asking the team to try harder.",
+    "id": "q9"
+  },
+  {
+    "question": "Kỹ thuật ước tính nào dùng được khi bạn gần như chưa biết gì về dự án?",
+    "questionEn": "Which estimation technique works when you know almost nothing yet?",
+    "options": [
+      "Ước tính tương tự, so với một dự án tương tự đã làm — nhanh nhất và kém chính xác nhất",
+      "Ước tính từ dưới lên dựa trên WBS",
+      "Ước tính tham số dùng hệ số từ dữ liệu quá khứ",
+      "Ước tính ba điểm PERT"
+    ],
+    "optionsEn": [
+      "Analogous estimation, comparing with a similar past project — fastest and least accurate",
+      "Bottom-up estimation from the WBS",
+      "Parametric estimation using historical factors",
+      "Three-point PERT estimation"
+    ],
+    "answer": 0,
+    "explanation": "Ước tính từ dưới lên chính xác nhất nhưng chỉ làm được sau khi đã có WBS.",
+    "explanationEn": "Bottom-up is most accurate but only possible once a WBS exists.",
+    "id": "q10"
+  },
+  {
+    "question": "Giá trị thật của ước tính ba điểm PERT nằm ở đâu?",
+    "questionEn": "Where does the real value of three-point PERT estimation lie?",
+    "options": [
+      "Ở khoảng cách giữa con số lạc quan và bi quan, vì đó chính là mức độ bất định của bạn",
+      "Ở con số trung bình cuối cùng vì nó chính xác hơn ước tính đơn",
+      "Ở việc nó giảm thời gian cần để ước tính",
+      "Ở việc nó cho phép so sánh giữa các đội khác nhau"
+    ],
+    "optionsEn": [
+      "In the distance between the optimistic and pessimistic numbers, since that is your uncertainty",
+      "In the final average, since it is more accurate than a single estimate",
+      "In reducing the time needed to estimate",
+      "In allowing comparison between different teams"
+    ],
+    "answer": 0,
+    "explanation": "Công thức là ước tính bằng O cộng 4M cộng P rồi chia 6, nhưng khoảng O tới P là thông tin quan trọng hơn.",
+    "explanationEn": "The formula is O plus 4M plus P divided by 6, but the O-to-P range is the more important information.",
+    "id": "q11"
+  },
+  {
+    "question": "Vì sao so sánh story point giữa hai đội là vô nghĩa?",
+    "questionEn": "Why is comparing story points across two teams meaningless?",
+    "options": [
+      "Vì point đo kích cỡ tương đối và chỉ có ý nghĩa khi đi kèm velocity của chính đội đó",
+      "Vì mỗi đội dùng thang điểm khác nhau về mặt kỹ thuật",
+      "Vì point không thể chuyển đổi thành giờ",
+      "Vì các đội thường thổi phồng point của mình"
+    ],
+    "optionsEn": [
+      "Because points measure relative size and only mean something alongside that team's own velocity",
+      "Because each team uses a technically different scale",
+      "Because points cannot be converted to hours",
+      "Because teams usually inflate their own points"
+    ],
+    "answer": 0,
+    "explanation": "Point hoạt động vì con người so sánh giỏi hơn là đo tuyệt đối, nên chúng chỉ có nghĩa trong nội bộ một đội.",
+    "explanationEn": "Points work because people compare better than they measure absolutely, so they only mean something within one team.",
+    "id": "q12"
+  },
+  {
+    "question": "Giá trị của planning poker nằm ở đâu?",
+    "questionEn": "Where does the value of planning poker lie?",
+    "options": [
+      "Khi hai người ước tính lệch nhau ba bậc, cuộc thảo luận sau đó luôn phát hiện ra một hiểu lầm về phạm vi",
+      "Nó cho con số ước tính chính xác hơn các kỹ thuật khác",
+      "Nó giúp buổi ước tính diễn ra nhanh hơn",
+      "Nó cho phép PM biết ai trong đội ước tính giỏi nhất"
+    ],
+    "optionsEn": [
+      "When two people estimate three steps apart, the ensuing conversation always uncovers a scope misunderstanding",
+      "It produces more accurate numbers than other techniques",
+      "It makes estimation sessions faster",
+      "It shows the PM who estimates best"
+    ],
+    "answer": 0,
+    "explanation": "Giá trị nằm ở cuộc thảo luận chứ không ở con số, vì sự lệch lớn luôn là tín hiệu của hiểu biết khác nhau.",
+    "explanationEn": "The value is in the discussion rather than the number, since a large gap always signals differing understanding.",
+    "id": "q13"
+  },
+  {
+    "question": "Hình nón bất định dẫn tới hệ quả thực tế quan trọng nhất nào?",
+    "questionEn": "What is the most important practical consequence of the cone of uncertainty?",
+    "options": [
+      "Một ước tính đưa ra ở ngày đầu không thể chính xác dù bạn cố gắng thế nào, nên hãy ước tính theo khoảng và cam kết lại khi biết thêm",
+      "PM cần được đào tạo thêm về kỹ thuật ước tính",
+      "Nên trì hoãn mọi ước tính tới khi thiết kế hoàn tất",
+      "Nên nhân mọi ước tính ban đầu với hệ số 2 để an toàn"
+    ],
+    "optionsEn": [
+      "A day-one estimate cannot be accurate however hard you try, so estimate in ranges and recommit as you learn",
+      "PMs need more estimation training",
+      "Defer all estimates until design is complete",
+      "Multiply every initial estimate by 2 for safety"
+    ],
+    "answer": 0,
+    "explanation": "Sau khi phạm vi rõ, sai số còn cỡ cộng trừ 50 phần trăm; sau khi thiết kế xong thì cỡ cộng trừ 25 phần trăm.",
+    "explanationEn": "Once scope is clear the error is roughly plus or minus 50 percent, and after design roughly plus or minus 25 percent.",
+    "id": "q14"
+  },
+  {
+    "question": "Cách trình bày một ước tính trung thực gồm những gì?",
+    "questionEn": "What does presenting an estimate honestly involve?",
+    "options": [
+      "Đưa khoảng thay vì một số, nói rõ mức tin cậy, liệt kê giả định, và nêu điều kiện làm ước tính hẹp lại",
+      "Đưa một con số duy nhất để tránh gây nhầm lẫn",
+      "Đưa con số bi quan nhất để luôn về đích sớm",
+      "Đưa con số khách hàng mong đợi rồi tìm cách đạt được"
+    ],
+    "optionsEn": [
+      "Give a range rather than a number, state confidence, list assumptions, and say what would narrow it",
+      "Give one number to avoid confusion",
+      "Give the most pessimistic number to always finish early",
+      "Give the number the customer expects and then find a way"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ: tôi tin 80 phần trăm rằng nó nằm trong 12 tới 16 tuần, giả định API của đối tác sẵn sàng trước ngày 1 tháng Ba.",
+    "explanationEn": "For example: I am 80 percent confident it falls in 12 to 16 weeks, assuming the partner API is ready before March 1.",
+    "id": "q15"
+  },
+  {
+    "question": "Khách hàng nói 14 tuần là quá dài, làm trong 10 tuần được không. PM nên hiểu điều gì?",
+    "questionEn": "A customer says 14 weeks is too long, can you do 10. What must the PM understand?",
+    "options": [
+      "Thời gian cần để làm một việc không thay đổi vì người ta muốn nó ngắn hơn — chỉ phạm vi, nguồn lực hoặc chất lượng thay đổi được",
+      "Nếu đội tập trung hơn thì 10 tuần là khả thi",
+      "Nên nhận 10 tuần rồi báo trễ sau vì khách hàng sẽ hiểu",
+      "Nên chia thành hai giai đoạn và chỉ cam kết giai đoạn đầu"
+    ],
+    "optionsEn": [
+      "The time work takes does not change because someone wants it shorter — only scope, resources or quality can change",
+      "With more focus 10 weeks is feasible",
+      "Accept 10 weeks and report the slip later since customers understand",
+      "Split into two phases and commit only to the first"
+    ],
+    "answer": 0,
+    "explanation": "Chấp nhận rút ước tính mà không đổi gì khác là hứa một điều bạn biết là không thật.",
+    "explanationEn": "Accepting a shortened estimate with nothing else changed is promising something you know is untrue.",
+    "id": "q16"
+  },
+  {
+    "question": "Cách xử lý đúng vấn đề đệm ẩn trong ước tính là gì?",
+    "questionEn": "What is the right way to handle hidden padding in estimates?",
+    "options": [
+      "Ước tính trung thực rồi để khoản dự phòng ở một chỗ công khai do PM quản lý — đệm minh bạch quản lý được, đệm ẩn bị tiêu hết mà không ai nhận ra",
+      "Cấm mọi người cộng thêm thời gian an toàn vào ước tính",
+      "Cắt 20 phần trăm mọi ước tính để trừ đệm",
+      "Yêu cầu mỗi người khai báo đệm của mình rồi cộng dồn lại"
+    ],
+    "optionsEn": [
+      "Estimate honestly then hold contingency in one visible place managed by the PM — transparent buffer can be managed, hidden buffer disappears unnoticed",
+      "Forbid anyone from adding safety time",
+      "Cut every estimate by 20 percent to remove padding",
+      "Ask each person to declare their padding and sum it"
+    ],
+    "answer": 0,
+    "explanation": "Khi mỗi người tự cộng 30 phần trăm và PM cộng thêm 20 phần trăm, không ai biết tổng đệm là bao nhiêu.",
+    "explanationEn": "When each person adds 30 percent and the PM adds 20 more, nobody knows the total buffer.",
+    "id": "q17"
+  },
+  {
+    "question": "Đã chi 60 phần trăm ngân sách nhưng chỉ xong 40 phần trăm phạm vi, dù lịch trình vẫn đúng hạn. Kết luận đúng là gì?",
+    "questionEn": "60 percent of budget spent for 40 percent of scope, while the schedule looks on time. What is the right conclusion?",
+    "options": [
+      "Đây là tín hiệu đỏ cần xử lý ngay, vì tốc độ tiêu ngân sách đang vượt tốc độ hoàn thành phạm vi",
+      "Không có vấn đề gì vì lịch trình vẫn đúng hạn",
+      "Nên chờ thêm một tháng để xác nhận xu hướng",
+      "Nên xin thêm ngân sách vì phạm vi đã tăng"
+    ],
+    "optionsEn": [
+      "A red flag needing action now, since budget burn is outpacing scope completion",
+      "No problem, since the schedule is on time",
+      "Wait another month to confirm the trend",
+      "Request more budget since scope has grown"
+    ],
+    "answer": 0,
+    "explanation": "Lịch trình đúng hạn có thể đang được duy trì bằng cách chi vượt mức, và điều đó sẽ lộ ra khi ngân sách cạn.",
+    "explanationEn": "An on-time schedule may be being bought with overspend, which surfaces only when the budget runs out.",
+    "id": "q18"
+  },
+  {
+    "question": "Khi phát hiện dự án đã lệch, thứ tự nên xét các phương án là gì?",
+    "questionEn": "Once a project has diverged, in what order should options be considered?",
+    "options": [
+      "Cắt phạm vi trước, rồi fast tracking, rồi crashing, và dời hạn khi ba cách trên không đủ",
+      "Dời hạn trước vì đó là cách an toàn nhất cho chất lượng",
+      "Crashing trước vì nó không ảnh hưởng tới phạm vi",
+      "Yêu cầu đội làm thêm giờ trước khi tính tới các phương án khác"
+    ],
+    "optionsEn": [
+      "Cut scope first, then fast tracking, then crashing, and move the date when those are not enough",
+      "Move the date first as safest for quality",
+      "Crash first since it does not affect scope",
+      "Ask for overtime before considering other options"
+    ],
+    "answer": 0,
+    "explanation": "Cắt phạm vi gần như luôn là lựa chọn ít thiệt hại nhất nếu backlog đã có thứ tự.",
+    "explanationEn": "Cutting scope is almost always least damaging provided the backlog is ordered.",
+    "id": "q19"
+  },
+  {
+    "question": "Vì sao báo trễ sớm sáu tuần khác hoàn toàn với báo trễ trước ba ngày?",
+    "questionEn": "Why is flagging a slip six weeks ahead completely different from three days ahead?",
+    "options": [
+      "Mốc trễ báo trước sáu tuần là một vấn đề cần quản lý; cùng mốc đó báo trước ba ngày là một cuộc khủng hoảng và là một sự mất lòng tin",
+      "Vì báo sớm cho phép PM tránh được trách nhiệm",
+      "Vì khách hàng thường bỏ qua các vấn đề được báo sớm",
+      "Vì báo sớm giúp đội có thêm thời gian làm việc"
+    ],
+    "optionsEn": [
+      "A slip flagged six weeks ahead is a problem to manage; the same slip three days ahead is a crisis and a loss of trust",
+      "Because early warning lets the PM avoid blame",
+      "Because customers ignore problems raised early",
+      "Because early warning gives the team more working time"
+    ],
+    "answer": 0,
+    "explanation": "Điều tệ nhất PM có thể làm là im lặng và hy vọng, vì nó lấy đi thời gian phản ứng của mọi người khác.",
+    "explanationEn": "The worst thing a PM can do is stay quiet and hope, since it removes everyone else the time to react.",
+    "id": "q20"
+  }
+]

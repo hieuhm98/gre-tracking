@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "ba",
+  "order": 12,
   "title": "Non-Functional Requirements (NFR)",
   "titleEn": "Non-Functional Requirements (NFR)",
   "description": "Performance, scalability, availability, reliability — những yêu cầu phi chức năng mà BA hay bỏ sót nhưng quyết định hệ thống có dùng được trong thực tế không.",

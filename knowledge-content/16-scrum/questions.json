@@ -1,17 +1,402 @@
 [
-  {"id":"q1","question":"Product Owner trong Scrum có trách nhiệm gì?","questionEn":"What is the Product Owner responsible for in Scrum?","options":["Giao task hàng ngày cho developer","Loại bỏ impediment cho team","Sở hữu Product Backlog và quyết định ưu tiên, đại diện cho khách hàng","Tổ chức các ceremonies Scrum"],"optionsEn":["Assigning daily tasks to developers","Removing impediments for the team","Owning the Product Backlog, deciding priorities, and representing the customer","Organizing the Scrum ceremonies"],"answer":2,"explanation":"PO là 'voice of customer': ưu tiên backlog, xác định what (cái gì cần build), tối đa hóa giá trị sản phẩm. PO không quyết định how (làm thế nào) — đó là Dev Team.","explanationEn":"The PO is the 'voice of the customer': prioritizing the backlog, defining what to build, and maximizing product value. The PO does not decide how it is built — that is the Dev Team's job."},
-  {"id":"q2","question":"Scrum Master có vai trò gì?","questionEn":"What is the role of the Scrum Master?","options":["Project Manager điều hành team","Người viết code giỏi nhất trong team","Servant leader - đảm bảo team hiểu Scrum, loại bỏ trở ngại, facilitate ceremonies","Người quyết định ưu tiên tính năng"],"optionsEn":["A Project Manager who runs the team","The best coder on the team","A servant leader who ensures the team understands Scrum, removes impediments, and facilitates ceremonies","The person who decides feature priorities"],"answer":2,"explanation":"Scrum Master ≠ Project Manager. SM phục vụ team: coach Scrum, loại bỏ impediment (rào cản), facilitate ceremonies, bảo vệ team khỏi external interruption.","explanationEn":"Scrum Master ≠ Project Manager. The SM serves the team: coaching Scrum, removing impediments, facilitating ceremonies, and protecting the team from external interruptions."},
-  {"id":"q3","question":"Sprint Review diễn ra vào lúc nào và mục đích là gì?","questionEn":"When does the Sprint Review take place and what is its purpose?","options":["Đầu sprint để plan công việc","Mỗi ngày để sync tiến độ","Cuối sprint để demo Increment và thu feedback từ stakeholder","Sau mỗi tháng để review toàn bộ dự án"],"optionsEn":["At the start of the sprint to plan the work","Every day to sync progress","At the end of the sprint to demo the Increment and gather stakeholder feedback","Once a month to review the whole project"],"answer":2,"explanation":"Sprint Review: cuối sprint, team demo Increment cho PO/stakeholder. Mục đích: kiểm tra Increment có đáp ứng Sprint Goal không, thu phản hồi để adjust Product Backlog.","explanationEn":"Sprint Review: at the end of the sprint, the team demos the Increment to the PO/stakeholders. Its purpose is to check whether the Increment meets the Sprint Goal and to gather feedback to adjust the Product Backlog."},
-  {"id":"q4","question":"Sprint Retrospective khác Sprint Review ở điểm gì?","questionEn":"How does the Sprint Retrospective differ from the Sprint Review?","options":["Chúng hoàn toàn giống nhau","Sprint Review: review sản phẩm với stakeholder. Retro: team review quy trình làm việc của chính mình để cải tiến","Retro dành cho khách hàng, Review dành cho team","Review trước, Retro sau khi Sprint bắt đầu"],"optionsEn":["They are exactly the same","Sprint Review: reviewing the product with stakeholders. Retro: the team reviewing its own working process to improve","The Retro is for customers, the Review is for the team","The Review comes first, the Retro comes after the Sprint starts"],"answer":1,"explanation":"Review: inspect product (với stakeholder). Retro: inspect process (chỉ Scrum team). Retro hỏi: Làm tốt gì? Cần cải thiện gì? → Action items cho sprint tiếp.","explanationEn":"Review: inspect the product (with stakeholders). Retro: inspect the process (Scrum team only). The Retro asks: What went well? What needs improvement? → Action items for the next sprint."},
-  {"id":"q5","question":"Daily Scrum (Daily Standup) có thời gian tối đa là bao lâu?","questionEn":"What is the maximum length of the Daily Scrum (Daily Standup)?","options":["5 phút","15 phút","30 phút","1 giờ"],"optionsEn":["5 minutes","15 minutes","30 minutes","1 hour"],"answer":1,"explanation":"Daily Scrum tối đa 15 phút — đứng (standup) để không ai ngồi thoải mái quá → đúng giờ. 3 câu hỏi nhanh: hôm qua, hôm nay, trở ngại. Không phải status report cho manager.","explanationEn":"The Daily Scrum is capped at 15 minutes — held standing up so no one gets too comfortable and it stays on time. Three quick questions: yesterday, today, impediments. It is not a status report to a manager."},
-  {"id":"q6","question":"Product Backlog là gì?","questionEn":"What is the Product Backlog?","options":["Danh sách bugs cần fix","Kế hoạch sprint chi tiết","Danh sách tất cả yêu cầu của sản phẩm, được ưu tiên, liên tục được refinement","Tài liệu thiết kế kỹ thuật"],"optionsEn":["A list of bugs to fix","A detailed sprint plan","A prioritized list of all the product's requirements, continuously refined","A technical design document"],"answer":2,"explanation":"Product Backlog là 'single source of truth' của mọi thứ cần build. PBI (item) được sắp xếp theo priority. Luôn sống — PO liên tục add, remove, re-prioritize dựa trên feedback và thay đổi.","explanationEn":"The Product Backlog is the 'single source of truth' for everything to be built. PBIs (items) are ordered by priority. It is always alive — the PO continuously adds, removes, and re-prioritizes based on feedback and change."},
-  {"id":"q7","question":"Definition of Done (DoD) giải quyết vấn đề gì?","questionEn":"What problem does the Definition of Done (DoD) solve?","options":["Xác định ai là người review code","Đảm bảo mọi người đồng thuận về tiêu chí 'hoàn thành', tránh 'almost done'","Xác định số giờ làm việc mỗi ngày","Phân chia task giữa các developer"],"optionsEn":["Determining who reviews the code","Ensuring everyone agrees on the criteria for 'complete', avoiding 'almost done'","Determining the number of work hours per day","Splitting tasks among developers"],"answer":1,"explanation":"Không có DoD rõ ràng → mỗi người hiểu 'done' khác nhau → quality không đồng đều → debt kỹ thuật tích lũy. DoD (code review + test pass + deploy staging...) là cam kết về chất lượng.","explanationEn":"Without a clear DoD → everyone understands 'done' differently → inconsistent quality → accumulating technical debt. The DoD (code review + tests pass + deploy to staging...) is a commitment to quality."},
-  {"id":"q8","question":"Kích thước lý tưởng của Development Team trong Scrum là bao nhiêu?","questionEn":"What is the ideal size of a Development Team in Scrum?","options":["1-2 người","3-9 người","10-20 người","Không có giới hạn"],"optionsEn":["1-2 people","3-9 people","10-20 people","No limit"],"answer":1,"explanation":"3-9 người: nhỏ đủ để linh hoạt và giao tiếp hiệu quả; lớn đủ để complete sprint mà không cần bên ngoài. Team lớn hơn → coordination overhead tăng theo bình phương.","explanationEn":"3-9 people: small enough to stay flexible and communicate effectively; large enough to complete the sprint without outside help. Larger teams → coordination overhead grows quadratically."},
-  {"id":"q9","question":"Ai được quyền thay đổi Sprint Backlog sau khi Sprint bắt đầu?","questionEn":"Who is allowed to change the Sprint Backlog after the Sprint has started?","options":["Product Owner","Scrum Master","Development Team","Tất cả Scrum Team"],"optionsEn":["The Product Owner","The Scrum Master","The Development Team","The entire Scrum Team"],"answer":2,"explanation":"Sprint Backlog thuộc về Dev Team. PO không được push thêm item vào giữa sprint (trừ trường hợp đặc biệt cần cancel sprint). Điều này bảo vệ team khỏi scope creep.","explanationEn":"The Sprint Backlog belongs to the Dev Team. The PO cannot push additional items in mid-sprint (except in exceptional cases requiring the sprint to be cancelled). This protects the team from scope creep."},
-  {"id":"q10","question":"Sprint thường kéo dài bao lâu và có đặc điểm gì?","questionEn":"How long does a Sprint usually last and what are its characteristics?","options":["3 tháng, có thể thêm scope","1-4 tuần (phổ biến 2 tuần), scope cố định sau Sprint Planning","Không cố định, kéo dài đến khi xong","1 ngày, review hàng ngày"],"optionsEn":["3 months, with scope that can be added","1-4 weeks (commonly 2 weeks), with scope fixed after Sprint Planning","Not fixed, lasting until it is finished","1 day, reviewed daily"],"answer":1,"explanation":"Sprint: timebox cố định 1-4 tuần. Không kéo dài và không thêm scope giữa chừng. Kết thúc sprint → ngay lập tức bắt đầu sprint mới. Nhịp đều đặn tạo predictability.","explanationEn":"Sprint: a fixed timebox of 1-4 weeks. It is not extended and no scope is added midway. When a sprint ends → a new sprint starts immediately. A steady cadence creates predictability."},
-  {"id":"q11","question":"Impediment trong Scrum là gì và ai xử lý?","questionEn":"What is an impediment in Scrum and who handles it?","options":["Bug trong code, developer tự xử lý","Bất kỳ trở ngại nào làm chậm team; Scrum Master có nhiệm vụ loại bỏ","Yêu cầu không rõ ràng, PO xử lý","Sprint backlog item tồn đọng"],"optionsEn":["A bug in the code, which the developer handles themselves","Any obstacle that slows the team down; the Scrum Master is responsible for removing it","An unclear requirement, which the PO handles","A leftover Sprint Backlog item"],"answer":1,"explanation":"Impediment = mọi thứ cản trở team: tool bị lỗi, quy trình phê duyệt chậm, dependency không rõ... Scrum Master có nhiệm vụ identify và remove impediment, kể cả leo thang lên management.","explanationEn":"An impediment is anything that blocks the team: a broken tool, a slow approval process, an unclear dependency... The Scrum Master is responsible for identifying and removing impediments, including escalating to management."},
-  {"id":"q12","question":"Backlog Refinement (Grooming) được thực hiện để làm gì?","questionEn":"What is Backlog Refinement (Grooming) done for?","options":["Review code sau mỗi sprint","Chuẩn bị PBI cho sprint tới: làm rõ, chia nhỏ, ước tính","Phân tích root cause của bugs","Họp với stakeholder về roadmap dài hạn"],"optionsEn":["Reviewing code after each sprint","Preparing PBIs for the next sprint: clarifying, breaking down, and estimating them","Analyzing the root cause of bugs","Meeting with stakeholders about the long-term roadmap"],"answer":1,"explanation":"Refinement: PO + Dev Team review backlog items sắp được pick: làm rõ acceptance criteria, chia nhỏ stories quá lớn, ước tính effort. Không phải ceremony chính thức của Scrum nhưng rất quan trọng.","explanationEn":"Refinement: the PO + Dev Team review backlog items about to be picked up: clarifying acceptance criteria, breaking down stories that are too large, and estimating effort. It is not an official Scrum ceremony but is very important."},
-  {"id":"q13","question":"Sprint Planning diễn ra khi nào và kết quả là gì?","questionEn":"When does Sprint Planning take place and what is its outcome?","options":["Giữa sprint để re-plan","Cuối sprint để xem đã làm được gì","Đầu sprint để chọn PBI và tạo Sprint Backlog + Sprint Goal","Sau Retro để lên kế hoạch cải tiến"],"optionsEn":["In the middle of the sprint to re-plan","At the end of the sprint to see what was accomplished","At the start of the sprint to select PBIs and create the Sprint Backlog + Sprint Goal","After the Retro to plan improvements"],"answer":2,"explanation":"Sprint Planning = buổi đầu tiên của sprint. Team và PO ngồi lại: PO trình bày top priority, team chọn PBI họ cam kết complete, thỏa thuận Sprint Goal, tạo Sprint Backlog.","explanationEn":"Sprint Planning = the first meeting of the sprint. The Team and PO sit down together: the PO presents the top priorities, the team selects the PBIs they commit to completing, agrees on the Sprint Goal, and creates the Sprint Backlog."},
-  {"id":"q14","question":"PO (Product Owner) và PM (Project Manager) khác nhau thế nào?","questionEn":"How do a PO (Product Owner) and a PM (Project Manager) differ?","options":["Chúng hoàn toàn giống nhau","PO focus vào product value và backlog; PM truyền thống focus vào scope/time/cost/resource","PO có quyền cao hơn PM","PM trong Scrum thay thế Scrum Master"],"optionsEn":["They are exactly the same","The PO focuses on product value and the backlog; a traditional PM focuses on scope/time/cost/resources","The PO has more authority than the PM","The PM in Scrum replaces the Scrum Master"],"answer":1,"explanation":"PM truyền thống: manage project constraints (triple constraint). PO: maximize product value, represent users, own backlog. Trong Scrum, không có PM — trách nhiệm được phân chia giữa PO, SM, và Dev Team.","explanationEn":"A traditional PM manages project constraints (the triple constraint). The PO maximizes product value, represents users, and owns the backlog. In Scrum there is no PM — the responsibilities are split among the PO, SM, and Dev Team."},
-  {"id":"q15","question":"'Increment' trong Scrum là gì?","questionEn":"What is an 'Increment' in Scrum?","options":["Số sprint đã hoàn thành","Tổng tất cả PBI được hoàn thành trong sprint, đạt DoD, usable","Danh sách yêu cầu cho sprint tiếp theo","Bản demo chỉ để show, chưa dùng được"],"optionsEn":["The number of completed sprints","The sum of all PBIs completed in the sprint, meeting the DoD and usable","The list of requirements for the next sprint","A demo just for show, not yet usable"],"answer":1,"explanation":"Increment: tất cả work done trong sprint + tất cả sprint trước. Phải đạt DoD, phải usable (có thể deploy/release). PO quyết định có release không, nhưng Increment phải sẵn sàng cho điều đó.","explanationEn":"Increment: all the work done in the sprint plus all previous sprints. It must meet the DoD and be usable (deployable/releasable). The PO decides whether to release it, but the Increment must be ready for that."}
+  {
+    "id": "q1",
+    "question": "Product Owner trong Scrum có trách nhiệm gì?",
+    "questionEn": "What is the Product Owner responsible for in Scrum?",
+    "options": [
+      "Giao task hàng ngày cho developer",
+      "Loại bỏ impediment cho team",
+      "Sở hữu Product Backlog và quyết định ưu tiên, đại diện cho khách hàng",
+      "Tổ chức các ceremonies Scrum"
+    ],
+    "optionsEn": [
+      "Assigning daily tasks to developers",
+      "Removing impediments for the team",
+      "Owning the Product Backlog, deciding priorities, and representing the customer",
+      "Organizing the Scrum ceremonies"
+    ],
+    "answer": 2,
+    "explanation": "PO là 'voice of customer': ưu tiên backlog, xác định what (cái gì cần build), tối đa hóa giá trị sản phẩm. PO không quyết định how (làm thế nào) — đó là Dev Team.",
+    "explanationEn": "The PO is the 'voice of the customer': prioritizing the backlog, defining what to build, and maximizing product value. The PO does not decide how it is built — that is the Dev Team's job."
+  },
+  {
+    "id": "q2",
+    "question": "Scrum Master có vai trò gì?",
+    "questionEn": "What is the role of the Scrum Master?",
+    "options": [
+      "Project Manager điều hành team",
+      "Người viết code giỏi nhất trong team",
+      "Servant leader - đảm bảo team hiểu Scrum, loại bỏ trở ngại, facilitate ceremonies",
+      "Người quyết định ưu tiên tính năng"
+    ],
+    "optionsEn": [
+      "A Project Manager who runs the team",
+      "The best coder on the team",
+      "A servant leader who ensures the team understands Scrum, removes impediments, and facilitates ceremonies",
+      "The person who decides feature priorities"
+    ],
+    "answer": 2,
+    "explanation": "Scrum Master ≠ Project Manager. SM phục vụ team: coach Scrum, loại bỏ impediment (rào cản), facilitate ceremonies, bảo vệ team khỏi external interruption.",
+    "explanationEn": "Scrum Master ≠ Project Manager. The SM serves the team: coaching Scrum, removing impediments, facilitating ceremonies, and protecting the team from external interruptions."
+  },
+  {
+    "id": "q3",
+    "question": "Sprint Review diễn ra vào lúc nào và mục đích là gì?",
+    "questionEn": "When does the Sprint Review take place and what is its purpose?",
+    "options": [
+      "Đầu sprint để plan công việc",
+      "Mỗi ngày để sync tiến độ",
+      "Cuối sprint để demo Increment và thu feedback từ stakeholder",
+      "Sau mỗi tháng để review toàn bộ dự án"
+    ],
+    "optionsEn": [
+      "At the start of the sprint to plan the work",
+      "Every day to sync progress",
+      "At the end of the sprint to demo the Increment and gather stakeholder feedback",
+      "Once a month to review the whole project"
+    ],
+    "answer": 2,
+    "explanation": "Sprint Review: cuối sprint, team demo Increment cho PO/stakeholder. Mục đích: kiểm tra Increment có đáp ứng Sprint Goal không, thu phản hồi để adjust Product Backlog.",
+    "explanationEn": "Sprint Review: at the end of the sprint, the team demos the Increment to the PO/stakeholders. Its purpose is to check whether the Increment meets the Sprint Goal and to gather feedback to adjust the Product Backlog."
+  },
+  {
+    "id": "q4",
+    "question": "Sprint Retrospective khác Sprint Review ở điểm gì?",
+    "questionEn": "How does the Sprint Retrospective differ from the Sprint Review?",
+    "options": [
+      "Chúng hoàn toàn giống nhau",
+      "Sprint Review: review sản phẩm với stakeholder. Retro: team review quy trình làm việc của chính mình để cải tiến",
+      "Retro dành cho khách hàng, Review dành cho team",
+      "Review trước, Retro sau khi Sprint bắt đầu"
+    ],
+    "optionsEn": [
+      "They are exactly the same",
+      "Sprint Review: reviewing the product with stakeholders. Retro: the team reviewing its own working process to improve",
+      "The Retro is for customers, the Review is for the team",
+      "The Review comes first, the Retro comes after the Sprint starts"
+    ],
+    "answer": 1,
+    "explanation": "Review: inspect product (với stakeholder). Retro: inspect process (chỉ Scrum team). Retro hỏi: Làm tốt gì? Cần cải thiện gì? → Action items cho sprint tiếp.",
+    "explanationEn": "Review: inspect the product (with stakeholders). Retro: inspect the process (Scrum team only). The Retro asks: What went well? What needs improvement? → Action items for the next sprint."
+  },
+  {
+    "id": "q5",
+    "question": "Daily Scrum (Daily Standup) có thời gian tối đa là bao lâu?",
+    "questionEn": "What is the maximum length of the Daily Scrum (Daily Standup)?",
+    "options": [
+      "5 phút",
+      "15 phút",
+      "30 phút",
+      "1 giờ"
+    ],
+    "optionsEn": [
+      "5 minutes",
+      "15 minutes",
+      "30 minutes",
+      "1 hour"
+    ],
+    "answer": 1,
+    "explanation": "Daily Scrum tối đa 15 phút — đứng (standup) để không ai ngồi thoải mái quá → đúng giờ. 3 câu hỏi nhanh: hôm qua, hôm nay, trở ngại. Không phải status report cho manager.",
+    "explanationEn": "The Daily Scrum is capped at 15 minutes — held standing up so no one gets too comfortable and it stays on time. Three quick questions: yesterday, today, impediments. It is not a status report to a manager."
+  },
+  {
+    "id": "q6",
+    "question": "Product Backlog là gì?",
+    "questionEn": "What is the Product Backlog?",
+    "options": [
+      "Danh sách bugs cần fix",
+      "Kế hoạch sprint chi tiết",
+      "Danh sách tất cả yêu cầu của sản phẩm, được ưu tiên, liên tục được refinement",
+      "Tài liệu thiết kế kỹ thuật"
+    ],
+    "optionsEn": [
+      "A list of bugs to fix",
+      "A detailed sprint plan",
+      "A prioritized list of all the product's requirements, continuously refined",
+      "A technical design document"
+    ],
+    "answer": 2,
+    "explanation": "Product Backlog là 'single source of truth' của mọi thứ cần build. PBI (item) được sắp xếp theo priority. Luôn sống — PO liên tục add, remove, re-prioritize dựa trên feedback và thay đổi.",
+    "explanationEn": "The Product Backlog is the 'single source of truth' for everything to be built. PBIs (items) are ordered by priority. It is always alive — the PO continuously adds, removes, and re-prioritizes based on feedback and change."
+  },
+  {
+    "id": "q7",
+    "question": "Definition of Done (DoD) giải quyết vấn đề gì?",
+    "questionEn": "What problem does the Definition of Done (DoD) solve?",
+    "options": [
+      "Xác định ai là người review code",
+      "Đảm bảo mọi người đồng thuận về tiêu chí 'hoàn thành', tránh 'almost done'",
+      "Xác định số giờ làm việc mỗi ngày",
+      "Phân chia task giữa các developer"
+    ],
+    "optionsEn": [
+      "Determining who reviews the code",
+      "Ensuring everyone agrees on the criteria for 'complete', avoiding 'almost done'",
+      "Determining the number of work hours per day",
+      "Splitting tasks among developers"
+    ],
+    "answer": 1,
+    "explanation": "Không có DoD rõ ràng → mỗi người hiểu 'done' khác nhau → quality không đồng đều → debt kỹ thuật tích lũy. DoD (code review + test pass + deploy staging...) là cam kết về chất lượng.",
+    "explanationEn": "Without a clear DoD → everyone understands 'done' differently → inconsistent quality → accumulating technical debt. The DoD (code review + tests pass + deploy to staging...) is a commitment to quality."
+  },
+  {
+    "id": "q8",
+    "question": "Kích thước lý tưởng của Development Team trong Scrum là bao nhiêu?",
+    "questionEn": "What is the ideal size of a Development Team in Scrum?",
+    "options": [
+      "1-2 người",
+      "3-9 người",
+      "10-20 người",
+      "Không có giới hạn"
+    ],
+    "optionsEn": [
+      "1-2 people",
+      "3-9 people",
+      "10-20 people",
+      "No limit"
+    ],
+    "answer": 1,
+    "explanation": "3-9 người: nhỏ đủ để linh hoạt và giao tiếp hiệu quả; lớn đủ để complete sprint mà không cần bên ngoài. Team lớn hơn → coordination overhead tăng theo bình phương.",
+    "explanationEn": "3-9 people: small enough to stay flexible and communicate effectively; large enough to complete the sprint without outside help. Larger teams → coordination overhead grows quadratically."
+  },
+  {
+    "id": "q9",
+    "question": "Ai được quyền thay đổi Sprint Backlog sau khi Sprint bắt đầu?",
+    "questionEn": "Who is allowed to change the Sprint Backlog after the Sprint has started?",
+    "options": [
+      "Product Owner",
+      "Scrum Master",
+      "Development Team",
+      "Tất cả Scrum Team"
+    ],
+    "optionsEn": [
+      "The Product Owner",
+      "The Scrum Master",
+      "The Development Team",
+      "The entire Scrum Team"
+    ],
+    "answer": 2,
+    "explanation": "Sprint Backlog thuộc về Dev Team. PO không được push thêm item vào giữa sprint (trừ trường hợp đặc biệt cần cancel sprint). Điều này bảo vệ team khỏi scope creep.",
+    "explanationEn": "The Sprint Backlog belongs to the Dev Team. The PO cannot push additional items in mid-sprint (except in exceptional cases requiring the sprint to be cancelled). This protects the team from scope creep."
+  },
+  {
+    "id": "q10",
+    "question": "Sprint thường kéo dài bao lâu và có đặc điểm gì?",
+    "questionEn": "How long does a Sprint usually last and what are its characteristics?",
+    "options": [
+      "3 tháng, có thể thêm scope",
+      "1-4 tuần (phổ biến 2 tuần), scope cố định sau Sprint Planning",
+      "Không cố định, kéo dài đến khi xong",
+      "1 ngày, review hàng ngày"
+    ],
+    "optionsEn": [
+      "3 months, with scope that can be added",
+      "1-4 weeks (commonly 2 weeks), with scope fixed after Sprint Planning",
+      "Not fixed, lasting until it is finished",
+      "1 day, reviewed daily"
+    ],
+    "answer": 1,
+    "explanation": "Sprint: timebox cố định 1-4 tuần. Không kéo dài và không thêm scope giữa chừng. Kết thúc sprint → ngay lập tức bắt đầu sprint mới. Nhịp đều đặn tạo predictability.",
+    "explanationEn": "Sprint: a fixed timebox of 1-4 weeks. It is not extended and no scope is added midway. When a sprint ends → a new sprint starts immediately. A steady cadence creates predictability."
+  },
+  {
+    "id": "q11",
+    "question": "Impediment trong Scrum là gì và ai xử lý?",
+    "questionEn": "What is an impediment in Scrum and who handles it?",
+    "options": [
+      "Bug trong code, developer tự xử lý",
+      "Bất kỳ trở ngại nào làm chậm team; Scrum Master có nhiệm vụ loại bỏ",
+      "Yêu cầu không rõ ràng, PO xử lý",
+      "Sprint backlog item tồn đọng"
+    ],
+    "optionsEn": [
+      "A bug in the code, which the developer handles themselves",
+      "Any obstacle that slows the team down; the Scrum Master is responsible for removing it",
+      "An unclear requirement, which the PO handles",
+      "A leftover Sprint Backlog item"
+    ],
+    "answer": 1,
+    "explanation": "Impediment = mọi thứ cản trở team: tool bị lỗi, quy trình phê duyệt chậm, dependency không rõ... Scrum Master có nhiệm vụ identify và remove impediment, kể cả leo thang lên management.",
+    "explanationEn": "An impediment is anything that blocks the team: a broken tool, a slow approval process, an unclear dependency... The Scrum Master is responsible for identifying and removing impediments, including escalating to management."
+  },
+  {
+    "id": "q12",
+    "question": "Backlog Refinement (Grooming) được thực hiện để làm gì?",
+    "questionEn": "What is Backlog Refinement (Grooming) done for?",
+    "options": [
+      "Review code sau mỗi sprint",
+      "Chuẩn bị PBI cho sprint tới: làm rõ, chia nhỏ, ước tính",
+      "Phân tích root cause của bugs",
+      "Họp với stakeholder về roadmap dài hạn"
+    ],
+    "optionsEn": [
+      "Reviewing code after each sprint",
+      "Preparing PBIs for the next sprint: clarifying, breaking down, and estimating them",
+      "Analyzing the root cause of bugs",
+      "Meeting with stakeholders about the long-term roadmap"
+    ],
+    "answer": 1,
+    "explanation": "Refinement: PO + Dev Team review backlog items sắp được pick: làm rõ acceptance criteria, chia nhỏ stories quá lớn, ước tính effort. Không phải ceremony chính thức của Scrum nhưng rất quan trọng.",
+    "explanationEn": "Refinement: the PO + Dev Team review backlog items about to be picked up: clarifying acceptance criteria, breaking down stories that are too large, and estimating effort. It is not an official Scrum ceremony but is very important."
+  },
+  {
+    "id": "q13",
+    "question": "Sprint Planning diễn ra khi nào và kết quả là gì?",
+    "questionEn": "When does Sprint Planning take place and what is its outcome?",
+    "options": [
+      "Giữa sprint để re-plan",
+      "Cuối sprint để xem đã làm được gì",
+      "Đầu sprint để chọn PBI và tạo Sprint Backlog + Sprint Goal",
+      "Sau Retro để lên kế hoạch cải tiến"
+    ],
+    "optionsEn": [
+      "In the middle of the sprint to re-plan",
+      "At the end of the sprint to see what was accomplished",
+      "At the start of the sprint to select PBIs and create the Sprint Backlog + Sprint Goal",
+      "After the Retro to plan improvements"
+    ],
+    "answer": 2,
+    "explanation": "Sprint Planning = buổi đầu tiên của sprint. Team và PO ngồi lại: PO trình bày top priority, team chọn PBI họ cam kết complete, thỏa thuận Sprint Goal, tạo Sprint Backlog.",
+    "explanationEn": "Sprint Planning = the first meeting of the sprint. The Team and PO sit down together: the PO presents the top priorities, the team selects the PBIs they commit to completing, agrees on the Sprint Goal, and creates the Sprint Backlog."
+  },
+  {
+    "id": "q14",
+    "question": "PO (Product Owner) và PM (Project Manager) khác nhau thế nào?",
+    "questionEn": "How do a PO (Product Owner) and a PM (Project Manager) differ?",
+    "options": [
+      "Chúng hoàn toàn giống nhau",
+      "PO focus vào product value và backlog; PM truyền thống focus vào scope/time/cost/resource",
+      "PO có quyền cao hơn PM",
+      "PM trong Scrum thay thế Scrum Master"
+    ],
+    "optionsEn": [
+      "They are exactly the same",
+      "The PO focuses on product value and the backlog; a traditional PM focuses on scope/time/cost/resources",
+      "The PO has more authority than the PM",
+      "The PM in Scrum replaces the Scrum Master"
+    ],
+    "answer": 1,
+    "explanation": "PM truyền thống: manage project constraints (triple constraint). PO: maximize product value, represent users, own backlog. Trong Scrum, không có PM — trách nhiệm được phân chia giữa PO, SM, và Dev Team.",
+    "explanationEn": "A traditional PM manages project constraints (the triple constraint). The PO maximizes product value, represents users, and owns the backlog. In Scrum there is no PM — the responsibilities are split among the PO, SM, and Dev Team."
+  },
+  {
+    "id": "q15",
+    "question": "'Increment' trong Scrum là gì?",
+    "questionEn": "What is an 'Increment' in Scrum?",
+    "options": [
+      "Số sprint đã hoàn thành",
+      "Tổng tất cả PBI được hoàn thành trong sprint, đạt DoD, usable",
+      "Danh sách yêu cầu cho sprint tiếp theo",
+      "Bản demo chỉ để show, chưa dùng được"
+    ],
+    "optionsEn": [
+      "The number of completed sprints",
+      "The sum of all PBIs completed in the sprint, meeting the DoD and usable",
+      "The list of requirements for the next sprint",
+      "A demo just for show, not yet usable"
+    ],
+    "answer": 1,
+    "explanation": "Increment: tất cả work done trong sprint + tất cả sprint trước. Phải đạt DoD, phải usable (có thể deploy/release). PO quyết định có release không, nhưng Increment phải sẵn sàng cho điều đó.",
+    "explanationEn": "Increment: all the work done in the sprint plus all previous sprints. It must meet the DoD and be usable (deployable/releasable). The PO decides whether to release it, but the Increment must be ready for that."
+  },
+  {
+    "question": "Trong Scrum, ai là người quyết định THỨ TỰ các mục trong Product Backlog?",
+    "questionEn": "In Scrum, who decides the ORDER of items in the product backlog?",
+    "options": [
+      "Product Owner",
+      "Scrum Master",
+      "Development Team",
+      "Toàn bộ stakeholder biểu quyết"
+    ],
+    "optionsEn": [
+      "The Product Owner",
+      "The Scrum Master",
+      "The development team",
+      "All stakeholders by vote"
+    ],
+    "answer": 0,
+    "explanation": "Đội cung cấp ước tính công sức; Product Owner quyết định thứ tự. Một người chịu trách nhiệm giúp giải quyết xung đột giữa các stakeholder.",
+    "explanationEn": "The team supplies effort estimates; the Product Owner decides the order. A single accountable person resolves stakeholder conflict.",
+    "id": "q16"
+  },
+  {
+    "question": "Sprint Review và Sprint Retrospective khác nhau ở mục đích như thế nào?",
+    "questionEn": "How do the sprint review and the sprint retrospective differ in purpose?",
+    "options": [
+      "Review kiểm tra SẢN PHẨM với stakeholder; Retrospective cải thiện CÁCH LÀM VIỆC của đội",
+      "Review dành cho đội, Retrospective dành cho khách hàng",
+      "Cả hai đều để báo cáo tiến độ cho lãnh đạo",
+      "Review diễn ra hằng ngày, Retrospective diễn ra hằng tháng"
+    ],
+    "optionsEn": [
+      "The review inspects the PRODUCT with stakeholders; the retrospective improves how the TEAM works",
+      "The review is for the team, the retrospective for customers",
+      "Both report progress to management",
+      "The review is daily and the retrospective monthly"
+    ],
+    "answer": 0,
+    "explanation": "Nhầm hai sự kiện này khiến đội hoặc bỏ qua phản hồi sản phẩm, hoặc không bao giờ cải tiến quy trình của chính mình.",
+    "explanationEn": "Confusing the two means the team either skips product feedback or never improves its own process.",
+    "id": "q17"
+  },
+  {
+    "question": "Definition of Done khác Acceptance Criteria ở điểm nào?",
+    "questionEn": "How does the definition of done differ from acceptance criteria?",
+    "options": [
+      "DoD là chuẩn chất lượng áp dụng cho MỌI item; AC là điều kiện riêng của TỪNG item",
+      "DoD do khách hàng viết, AC do đội viết",
+      "DoD chỉ áp dụng cho bug, AC chỉ áp dụng cho story",
+      "Hai khái niệm hoàn toàn giống nhau"
+    ],
+    "optionsEn": [
+      "DoD is the quality standard applying to EVERY item; AC are the conditions specific to ONE item",
+      "DoD is written by customers and AC by the team",
+      "DoD applies only to bugs, AC only to stories",
+      "They are identical concepts"
+    ],
+    "answer": 0,
+    "explanation": "Thiếu DoD, chữ xong trở nên co giãn: lập trình viên hiểu là đã viết mã, tester hiểu là đã kiểm thử, PO hiểu là sẵn sàng dùng.",
+    "explanationEn": "Without a DoD, done becomes elastic: developers mean coded, testers mean tested, and the PO means ready to use.",
+    "id": "q18"
+  },
+  {
+    "question": "Daily Scrum kéo dài 15 phút nhằm mục đích chính nào?",
+    "questionEn": "What is the main purpose of the 15-minute daily scrum?",
+    "options": [
+      "Để đội tự đồng bộ kế hoạch trong ngày và nêu vật cản, không phải để báo cáo cho quản lý",
+      "Để Scrum Master giao việc cho từng người",
+      "Để stakeholder duyệt công việc đã làm",
+      "Để ước tính lại toàn bộ backlog"
+    ],
+    "optionsEn": [
+      "For the team to sync the day's plan and raise impediments, not to report to management",
+      "For the Scrum Master to assign work to each person",
+      "For stakeholders to approve completed work",
+      "To re-estimate the whole backlog"
+    ],
+    "answer": 0,
+    "explanation": "Daily Scrum là sự kiện của đội phát triển, do đội tổ chức cho chính mình. Biến nó thành buổi báo cáo là sai lệch phổ biến nhất.",
+    "explanationEn": "The daily scrum belongs to the development team, run by them for themselves. Turning it into a status report is the most common distortion.",
+    "id": "q19"
+  },
+  {
+    "question": "Giữa Sprint, một stakeholder muốn thêm một tính năng gấp. Cách xử lý phù hợp với Scrum nhất?",
+    "questionEn": "Mid-sprint a stakeholder wants an urgent feature added. What is the most Scrum-appropriate response?",
+    "options": [
+      "Đưa vào backlog để Product Owner sắp xếp cho Sprint sau, trừ khi PO chấp nhận đánh đổi bỏ bớt việc khác trong Sprint hiện tại",
+      "Đội tự nhận thêm và làm ngoài giờ",
+      "Từ chối mọi thay đổi cho tới hết dự án",
+      "Huỷ Sprint hiện tại ngay lập tức"
+    ],
+    "optionsEn": [
+      "Put it in the backlog for the PO to order into a later sprint, unless the PO accepts trading something out of the current sprint",
+      "The team absorbs it and works overtime",
+      "Refuse all changes until the project ends",
+      "Cancel the current sprint immediately"
+    ],
+    "answer": 0,
+    "explanation": "Phạm vi Sprint được bảo vệ để đội có thể cam kết. Thay đổi vẫn được chào đón, nhưng phải trả giá bằng việc đẩy thứ khác ra.",
+    "explanationEn": "The sprint scope is protected so the team can commit. Change is still welcome, but it costs by pushing something else out.",
+    "id": "q20"
+  }
 ]

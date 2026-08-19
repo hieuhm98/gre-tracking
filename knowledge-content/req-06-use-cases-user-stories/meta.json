@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 6,
+  "title": "Use Case & User Story",
+  "titleEn": "Use Cases & User Stories",
+  "description": "Hai cách nắm bắt user requirement: use case với normal flow, alternative flow, exception, precondition, postcondition — và user story với acceptance test.",
+  "descriptionEn": "Two ways to capture user requirements: use cases with normal flows, alternative flows, exceptions, preconditions and postconditions, and user stories with acceptance tests."
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Các cấp bậc trong nghề BA · Mức lương BA tại Việt Nam",
+      "titleEn": "The levels in a BA career · BA compensation in Vietnam",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Các hướng rẽ nghề nghiệp từ BA · Học gì để làm BA?",
+      "titleEn": "Where a BA career can go next · What to study to become a BA",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Tiếng Anh quan trọng tới mức nào? · Vì sao bạn muốn trở thành BA?",
+      "titleEn": "How much does English matter? · Why do you want to be a BA?",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Lộ trình học cho người mới trong 6 tháng",
+      "titleEn": "A six-month learning path for beginners",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

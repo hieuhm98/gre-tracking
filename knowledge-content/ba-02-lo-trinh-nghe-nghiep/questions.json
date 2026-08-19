@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Điều gì thực sự phân biệt một Senior BA với một Junior BA?",
+    "questionEn": "What really separates a senior BA from a junior BA?",
+    "options": [
+      "Mức độ mơ hồ mà họ xử lý được: Senior nhận một câu mơ hồ và tự biến nó thành tập yêu cầu có cơ sở",
+      "Số năm kinh nghiệm ghi trên hồ sơ",
+      "Số trang tài liệu viết được mỗi tuần",
+      "Số công cụ phần mềm họ biết dùng"
+    ],
+    "optionsEn": [
+      "How much ambiguity they can absorb: a senior takes a vague statement and turns it into a grounded requirement set",
+      "The years of experience on their CV",
+      "How many document pages they produce weekly",
+      "How many software tools they can operate"
+    ],
+    "answer": 0,
+    "explanation": "Fresher cần yêu cầu rõ ràng để bắt đầu. Senior nhận được doanh thu quý này giảm, xem hệ thống làm gì được không và tự tạo ra trật tự từ đó.",
+    "explanationEn": "A fresher needs clear requirements to start. A senior receives revenue dropped, see if the system can help, and creates order from it."
+  },
+  {
+    "id": "q2",
+    "question": "Bốn yếu tố nào làm lệch mức lương BA tại Việt Nam mạnh nhất?",
+    "questionEn": "Which four factors move BA compensation in Vietnam the most?",
+    "options": [
+      "Tiếng Anh, domain knowledge, loại công ty và thành phố làm việc",
+      "Số chứng chỉ, tuổi tác, ngành học đại học và giới tính",
+      "Số dự án đã tham gia, số công cụ biết dùng, tốc độ gõ phím và chiều cao",
+      "Thời gian làm việc mỗi ngày và số cuộc họp tham dự"
+    ],
+    "optionsEn": [
+      "English, domain knowledge, company type, and city",
+      "Certificate count, age, university major, and gender",
+      "Projects joined, tools known, typing speed, and height",
+      "Daily working hours and meetings attended"
+    ],
+    "answer": 0,
+    "explanation": "Tiếng Anh mở ra thị trường khách hàng nước ngoài; domain knowledge sâu ở tài chính hay y tế được trả cao hơn BA phổ thông.",
+    "explanationEn": "English opens the overseas customer market; deep domain knowledge in finance or healthcare pays above generalist work."
+  },
+  {
+    "id": "q3",
+    "question": "Vì sao không nên chọn nghề BA chỉ vì mức lương?",
+    "questionEn": "Why should you not choose the BA career for the salary alone?",
+    "options": [
+      "Vì lương phản ánh độ khó của vấn đề bạn giải quyết được; nhảy việc tăng lương mà không tăng năng lực xử lý mơ hồ sẽ chạm trần rất nhanh",
+      "Vì lương BA luôn thấp hơn lập trình viên",
+      "Vì công ty không cho phép đàm phán lương",
+      "Vì lương BA không tăng theo thời gian"
+    ],
+    "optionsEn": [
+      "Because pay reflects the difficulty of problems you can solve; job-hopping without growing your ambiguity tolerance hits a ceiling fast",
+      "Because BA pay is always below developer pay",
+      "Because companies do not allow salary negotiation",
+      "Because BA pay does not rise over time"
+    ],
+    "answer": 0,
+    "explanation": "Năng lực xử lý vấn đề mơ hồ, domain knowledge và tiếng Anh đều cần thời gian tích luỹ, không thể rút ngắn bằng cách đổi công ty.",
+    "explanationEn": "Ambiguity tolerance, domain knowledge, and English all take time to build and cannot be shortcut by switching employers."
+  },
+  {
+    "id": "q4",
+    "question": "Hướng rẽ nghề nghiệp nào từ BA là phổ biến nhất, và trọng tâm thay đổi thế nào?",
+    "questionEn": "Which onward path from BA is most common, and how does the focus shift?",
+    "options": [
+      "Sang Product Owner rồi Product Manager; trọng tâm chuyển từ giải pháp phải làm gì sang chúng ta nên làm gì và vì sao",
+      "Sang lập trình viên; trọng tâm chuyển sang viết mã",
+      "Sang kiểm thử; trọng tâm chuyển sang tìm lỗi",
+      "Sang nhân sự; trọng tâm chuyển sang tuyển dụng"
+    ],
+    "optionsEn": [
+      "To Product Owner then Product Manager; the focus shifts from what the solution must do to what we should build and why",
+      "To developer; the focus shifts to writing code",
+      "To testing; the focus shifts to finding defects",
+      "To HR; the focus shifts to recruiting"
+    ],
+    "answer": 0,
+    "explanation": "Năm hướng rẽ chính là đi sâu phân tích, sang sản phẩm, sang quản lý dự án, sang tư vấn và sang chuyên môn kỹ thuật.",
+    "explanationEn": "The five main paths are deeper analysis, product, project management, consulting, and technical specialisation."
+  },
+  {
+    "id": "q5",
+    "question": "Người từ ngành kế toán chuyển sang làm BA có lợi thế gì?",
+    "questionEn": "What advantage does an accountant moving into BA work bring?",
+    "options": [
+      "Domain knowledge tài chính — thứ khó dạy nhất, trong khi kỹ thuật phân tích học được trong vài tháng",
+      "Khả năng lập trình tốt hơn",
+      "Kinh nghiệm quản lý dự án",
+      "Vốn tiếng Anh sẵn có"
+    ],
+    "optionsEn": [
+      "Financial domain knowledge — the hardest thing to teach, while analysis technique takes only months to learn",
+      "Better coding ability",
+      "Project management experience",
+      "Existing English proficiency"
+    ],
+    "answer": 0,
+    "explanation": "Tester mang theo tư duy tìm ngoại lệ, lập trình viên mang hiểu biết kỹ thuật, còn người làm chăm sóc khách hàng hiểu điểm đau thật của người dùng.",
+    "explanationEn": "Testers bring exception-hunting instincts, developers bring technical depth, and support staff understand real user pain."
+  },
+  {
+    "id": "q6",
+    "question": "Phát biểu nào ĐÚNG về vai trò của tiếng Anh trong nghề BA?",
+    "questionEn": "Which statement about English in a BA career is correct?",
+    "options": [
+      "Không phải điều kiện để bắt đầu nhưng là điều kiện để đi xa; đọc hiểu tài liệu là bắt buộc ở mọi cấp",
+      "Phải thành thạo bốn kỹ năng mới được ứng tuyển vị trí fresher",
+      "Chỉ cần thiết nếu làm việc ở nước ngoài",
+      "Không ảnh hưởng tới mức lương"
+    ],
+    "optionsEn": [
+      "Not required to start but required to go far; reading documentation is mandatory at every level",
+      "You must master all four skills before applying as a fresher",
+      "Only needed if working abroad",
+      "It does not affect compensation"
+    ],
+    "answer": 0,
+    "explanation": "Đừng chờ giỏi tiếng Anh rồi mới ứng tuyển. Hãy bắt đầu ở môi trường nội địa và luyện đọc tài liệu tiếng Anh mỗi ngày.",
+    "explanationEn": "Do not wait for fluency before applying. Start domestically and read English documentation daily."
+  },
+  {
+    "id": "q7",
+    "question": "Lý do nào dễ dẫn tới thất vọng khi chọn nghề BA?",
+    "questionEn": "Which reason for choosing the BA career leads to disappointment?",
+    "options": [
+      "Vì tôi không muốn lập trình nhưng vẫn muốn làm IT — BA không phải lối thoát khỏi kỹ thuật",
+      "Vì tôi thích hiểu vấn đề hơn viết mã",
+      "Vì tôi hào hứng khi kết nối những người không hiểu nhau",
+      "Vì tôi có xu hướng hỏi vì sao nhiều lần"
+    ],
+    "optionsEn": [
+      "Because I do not want to code but still want IT work — BA is not an escape from technology",
+      "Because I enjoy understanding problems more than coding",
+      "Because I find energy in connecting people who do not understand each other",
+      "Because I instinctively ask why repeatedly"
+    ],
+    "answer": 0,
+    "explanation": "BA vẫn phải hiểu kỹ thuật sâu để đặt câu hỏi đúng và nhận ra công việc ẩn. Ba lý do còn lại đều là động lực bền vững.",
+    "explanationEn": "A BA still needs deep technical understanding to ask the right questions and spot hidden work. The other three are durable motivations."
+  },
+  {
+    "id": "q8",
+    "question": "Cách tự kiểm tra xem mình có hợp với nghề BA không là gì?",
+    "questionEn": "What is a good self-test for whether the BA role suits you?",
+    "options": [
+      "Lấy một ứng dụng bạn dùng hằng ngày và viết ra 10 câu hỏi mà BA sẽ hỏi về một tính năng của nó",
+      "Làm bài trắc nghiệm tính cách trực tuyến",
+      "Đếm số chứng chỉ IT bạn đang có",
+      "Thử viết một chương trình đơn giản"
+    ],
+    "optionsEn": [
+      "Take an app you use daily and write 10 questions a BA would ask about one of its features",
+      "Take an online personality quiz",
+      "Count how many IT certificates you hold",
+      "Try writing a simple program"
+    ],
+    "answer": 0,
+    "explanation": "Nếu bạn thấy việc đó thú vị thay vì mệt mỏi, đó là dấu hiệu tốt — vì đây chính là bản chất công việc hằng ngày của BA.",
+    "explanationEn": "If that feels interesting rather than tiring, it is a good sign — because it is precisely what the daily work is."
+  },
+  {
+    "id": "q9",
+    "question": "Trong lộ trình học 6 tháng, giai đoạn tháng 1 và 2 nên tập trung vào gì?",
+    "questionEn": "In the six-month learning path, what should months one and two focus on?",
+    "options": [
+      "Nền tảng IT cơ bản, quy trình phát triển phần mềm, Agile và Scrum — mục tiêu là đọc được tài liệu kỹ thuật mà không hoang mang",
+      "Luyện phỏng vấn và viết CV",
+      "Học sâu về BABOK và thi chứng chỉ",
+      "Làm dự án cá nhân ngay lập tức"
+    ],
+    "optionsEn": [
+      "Core IT foundations, the development process, Agile and Scrum — the goal is reading technical docs without feeling lost",
+      "Interview practice and CV writing",
+      "Deep BABOK study and certification",
+      "Starting a personal project immediately"
+    ],
+    "answer": 0,
+    "explanation": "Không có nền tảng IT, bạn sẽ không đặt được câu hỏi đúng cho lập trình viên và không nhận ra được công việc ẩn trong một yêu cầu.",
+    "explanationEn": "Without IT foundations you cannot ask developers the right questions or spot the hidden work inside a requirement."
+  },
+  {
+    "id": "q10",
+    "question": "Thứ gì tạo khác biệt lớn nhất khi đi phỏng vấn vị trí fresher BA?",
+    "questionEn": "What makes the biggest difference in a fresher BA interview?",
+    "options": [
+      "Một dự án cá nhân bạn tự làm và có thể nói về nó suốt 20 phút",
+      "Số lượng chứng chỉ quốc tế đang sở hữu",
+      "Bằng đại học đúng chuyên ngành",
+      "Điểm trung bình học tập cao"
+    ],
+    "optionsEn": [
+      "A personal project you built and can discuss for twenty minutes",
+      "The number of international certificates held",
+      "A matching university degree",
+      "A high grade point average"
+    ],
+    "answer": 0,
+    "explanation": "Một bộ tài liệu phân tích cho một ứng dụng thật, kể cả là bài tập tự đặt ra, chứng minh bạn làm được việc chứ không chỉ học được lý thuyết.",
+    "explanationEn": "A set of analysis documents for a real application, even as a self-set exercise, proves you can do the work rather than just study theory."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao SQL cơ bản được coi là nền tảng phải có với BA?",
+    "questionEn": "Why is basic SQL considered essential for a BA?",
+    "options": [
+      "Để tự truy vấn dữ liệu, kiểm chứng giả định và làm báo cáo mà không phải chờ ai",
+      "Để tự viết được backend cho hệ thống",
+      "Để thay thế vai trò của quản trị cơ sở dữ liệu",
+      "Vì mọi công ty đều bắt buộc thi SQL khi tuyển dụng"
+    ],
+    "optionsEn": [
+      "To query data yourself, test assumptions, and build reports without waiting on anyone",
+      "To write the system backend yourself",
+      "To replace the database administrator",
+      "Because every company tests SQL when hiring"
+    ],
+    "answer": 0,
+    "explanation": "Khả năng tự kiểm chứng bằng dữ liệu thật giúp BA phát hiện giả định sai rất sớm, thay vì viết yêu cầu dựa trên phỏng đoán.",
+    "explanationEn": "Verifying against real data lets a BA catch false assumptions early rather than writing requirements on guesswork."
+  },
+  {
+    "id": "q12",
+    "question": "Cách chọn hướng rẽ nghề nghiệp phù hợp nhất sau khi làm BA là gì?",
+    "questionEn": "How should you choose your onward path after working as a BA?",
+    "options": [
+      "Hỏi bạn hào hứng nhất khi giải quyết loại vấn đề nào — vấn đề của người dùng, của thị trường, hay của hệ thống",
+      "Chọn hướng có mức lương cao nhất trên thị trường",
+      "Chọn hướng mà nhiều đồng nghiệp đang đi",
+      "Chọn hướng cần ít thời gian học nhất"
+    ],
+    "optionsEn": [
+      "Ask which kind of problem energises you most — the user's, the market's, or the system's",
+      "Pick whichever path pays most",
+      "Pick whichever path most colleagues take",
+      "Pick whichever path needs the least study"
+    ],
+    "answer": 0,
+    "explanation": "Không hướng nào đúng đắn hơn hướng nào. Hướng sản phẩm hợp với người quan tâm thị trường; hướng kỹ thuật hợp với người thích thiết kế hệ thống.",
+    "explanationEn": "No path is more correct. The product path suits those drawn to markets; the technical path suits those drawn to system design."
+  },
+  {
+    "id": "q13",
+    "question": "Mức tiếng Anh nào cần thiết để làm việc trực tiếp với khách hàng nước ngoài?",
+    "questionEn": "What English level is needed to work directly with overseas customers?",
+    "options": [
+      "Nghe nói được trong họp, thường cần từ cấp Middle trở lên",
+      "Chỉ cần đọc hiểu tài liệu",
+      "Phải đạt chứng chỉ IELTS 8.0",
+      "Không cần vì đã có phiên dịch"
+    ],
+    "optionsEn": [
+      "Listening and speaking in meetings, typically needed from middle level upward",
+      "Reading documentation is enough",
+      "An IELTS 8.0 certificate is required",
+      "Not needed, since interpreters are provided"
+    ],
+    "answer": 0,
+    "explanation": "Đọc hiểu tài liệu là bắt buộc ở mọi cấp; viết tài liệu cần từ Junior; đàm phán và thuyết trình cần ở Senior.",
+    "explanationEn": "Reading is mandatory at all levels; writing from junior upward; negotiating and presenting at senior level."
+  },
+  {
+    "id": "q14",
+    "question": "Vì sao người làm chăm sóc khách hàng hoặc vận hành có lợi thế khi chuyển sang BA?",
+    "questionEn": "Why do support or operations people have an edge moving into BA work?",
+    "options": [
+      "Vì họ hiểu điểm đau thật của người dùng và quy trình thực tế đang chạy, khác với quy trình trên giấy tờ",
+      "Vì họ đã biết viết user story",
+      "Vì họ quen dùng Jira và Confluence",
+      "Vì họ có sẵn quan hệ với đội phát triển"
+    ],
+    "optionsEn": [
+      "Because they know real user pain and how the process actually runs, as opposed to how it is documented",
+      "Because they already write user stories",
+      "Because they are used to Jira and Confluence",
+      "Because they already know the development team"
+    ],
+    "answer": 0,
+    "explanation": "Khác biệt giữa quy trình trên giấy và quy trình thực tế là nơi ẩn chứa nhiều yêu cầu bị bỏ sót nhất, và người vận hành nhìn thấy nó hằng ngày.",
+    "explanationEn": "The gap between the documented and the actual process hides most missing requirements, and operations staff see it daily."
+  },
+  {
+    "id": "q15",
+    "question": "Tháng thứ 5 trong lộ trình học nên tập trung vào việc gì?",
+    "questionEn": "What should month five of the learning path focus on?",
+    "options": [
+      "Công cụ và một dự án cá nhân: chọn một ứng dụng thật rồi viết tài liệu phân tích như thể bạn là BA của nó",
+      "Ôn thi chứng chỉ CBAP",
+      "Học sâu một ngôn ngữ lập trình",
+      "Nộp hồ sơ ứng tuyển hàng loạt"
+    ],
+    "optionsEn": [
+      "Tools plus a personal project: pick a real app and write the analysis documentation as if you were its BA",
+      "Studying for the CBAP exam",
+      "Deep study of a programming language",
+      "Mass-applying for jobs"
+    ],
+    "answer": 0,
+    "explanation": "Dự án cá nhân vừa là cách luyện tập vừa là portfolio để nói chuyện trong phỏng vấn — hai lợi ích trong cùng một khoản đầu tư thời gian.",
+    "explanationEn": "A personal project is both practice and a portfolio to discuss in interviews — two benefits from one investment of time."
+  },
+  {
+    "id": "q16",
+    "question": "Vì sao nghề BA hiếm khi rơi vào ngõ cụt nghề nghiệp?",
+    "questionEn": "Why does a BA career rarely become a dead end?",
+    "options": [
+      "Vì BA hiểu cả nghiệp vụ lẫn kỹ thuật nên mở ra nhiều hướng rẽ: sản phẩm, quản lý dự án, tư vấn hoặc kiến trúc giải pháp",
+      "Vì nhu cầu tuyển BA luôn vượt cung",
+      "Vì BA không bao giờ bị thay thế bởi công nghệ",
+      "Vì mọi công ty đều có phòng BA riêng"
+    ],
+    "optionsEn": [
+      "Because BAs understand both business and technology, opening paths into product, project management, consulting, or solution architecture",
+      "Because BA demand always exceeds supply",
+      "Because BAs can never be replaced by technology",
+      "Because every company has a dedicated BA department"
+    ],
+    "answer": 0,
+    "explanation": "Góc nhìn xuyên suốt từ vấn đề kinh doanh tới dòng mã cuối cùng là vốn liếng hiếm, và nó chuyển đổi được sang nhiều vai trò khác nhau.",
+    "explanationEn": "The end-to-end view from business problem to final line of code is rare capital, and it transfers to many other roles."
+  }
+]

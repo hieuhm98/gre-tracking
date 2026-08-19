@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Phạm vi là gì và vì sao nó trượt · Viết phạm vi cho không thể tranh chấp",
+      "titleEn": "What scope is and why it slips · Writing scope so it cannot be argued about",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Quy trình kiểm soát thay đổi · Nhận diện scope creep sớm",
+      "titleEn": "The change control process · Spotting scope creep early",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Đàm phán thay đổi trong thực tế · Phạm vi trong môi trường agile",
+      "titleEn": "Negotiating change in practice · Scope in agile environments",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 17,
   "title": "AWS Data & Analytics – Athena, Redshift, Glue, EMR",
   "titleEn": "AWS Data & Analytics – Athena, Redshift, Glue, EMR",
   "description": "Bộ dịch vụ phân tích dữ liệu của AWS cho SAA-C03: Athena truy vấn S3 serverless, Redshift kho dữ liệu OLAP, Glue ETL, EMR big data, QuickSight BI, Lake Formation và streaming analytics.",

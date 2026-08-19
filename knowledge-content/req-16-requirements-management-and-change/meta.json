@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 16,
+  "title": "Quản lý yêu cầu & quản lý thay đổi",
+  "titleEn": "Requirements Management & Change Management",
+  "description": "Baseline và kiểm soát phiên bản, thuộc tính và trạng thái của yêu cầu, quy trình kiểm soát thay đổi, change control board, phân tích tác động và cách nhận diện scope creep.",
+  "descriptionEn": "Baselines and version control, requirement attributes and status, the change control process, the change control board, impact analysis, and how to recognise scope creep."
+}

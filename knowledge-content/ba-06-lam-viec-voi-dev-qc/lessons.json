@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Ba vai trò, ba mục tiêu khác nhau · Làm việc với Developer",
+      "titleEn": "Three roles, three different goals · Working with developers",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Làm việc với QC / Tester · Xử lý bất đồng: đổi yêu cầu",
+      "titleEn": "Working with QC / testers · Handling disagreement: requirement changes",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Xử lý bất đồng: tranh cãi về bug · Ranh giới vai trò — ai quyết định gì",
+      "titleEn": "Handling disagreement: arguing about defects · Role boundaries — who decides what",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Xây dựng quan hệ làm việc tốt",
+      "titleEn": "Building a good working relationship",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

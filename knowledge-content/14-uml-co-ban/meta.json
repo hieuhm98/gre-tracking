@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 15,
   "title": "UML cơ bản",
   "titleEn": "UML Basics",
   "description": "Use case diagram, activity diagram, sequence diagram và cách dùng UML để mô tả hệ thống.",

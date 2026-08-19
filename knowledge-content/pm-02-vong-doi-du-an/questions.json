@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q1",
+    "question": "Ba mục đích của việc chia dự án thành giai đoạn là gì?",
+    "questionEn": "What three purposes does phasing a project serve?",
+    "options": [
+      "Tạo điểm dừng để quyết định, giới hạn thiệt hại nếu sai hướng, và làm rõ ai chịu trách nhiệm gì khi nào",
+      "Giảm chi phí, tăng tốc độ và cải thiện chất lượng",
+      "Chia việc cho nhiều đội, giảm phụ thuộc và tăng tính song song",
+      "Đáp ứng yêu cầu của khách hàng, của kiểm toán và của pháp luật"
+    ],
+    "optionsEn": [
+      "Creating decision points, limiting damage if off course, and clarifying who owns what and when",
+      "Cutting cost, raising speed and improving quality",
+      "Splitting work across teams, reducing dependencies and increasing parallelism",
+      "Satisfying customers, auditors and regulators"
+    ],
+    "answer": 0,
+    "explanation": "Cuối mỗi giai đoạn là một cổng quyết định: tiếp tục, điều chỉnh, hoặc dừng.",
+    "explanationEn": "The end of each phase is a decision gate: continue, adjust, or stop."
+  },
+  {
+    "id": "q2",
+    "question": "Quyền nào được coi là quan trọng nhất nhưng bị dùng ít nhất trong quản lý dự án?",
+    "questionEn": "Which power is the most important yet least used in project management?",
+    "options": [
+      "Quyền dừng dự án",
+      "Quyền phê duyệt ngân sách bổ sung",
+      "Quyền thay đổi thành viên đội",
+      "Quyền gia hạn thời gian dự án"
+    ],
+    "optionsEn": [
+      "The power to stop a project",
+      "The power to approve additional budget",
+      "The power to change team members",
+      "The power to extend the timeline"
+    ],
+    "answer": 0,
+    "explanation": "Cổng quyết định cuối mỗi giai đoạn tồn tại chính để quyền này được sử dụng khi cần, thay vì để dự án chạy tới cùng vì quán tính.",
+    "explanationEn": "Decision gates exist precisely so this power can be used when needed, rather than letting momentum carry a project to the end."
+  },
+  {
+    "id": "q3",
+    "question": "Cách hiểu sai phổ biến nhất về năm giai đoạn dự án là gì?",
+    "questionEn": "What is the most common misreading of the five project phases?",
+    "options": [
+      "Coi theo dõi và kiểm soát là giai đoạn thứ tư đứng sau thực thi, trong khi nó chạy song song với thực thi từ đầu tới cuối",
+      "Coi khởi tạo là giai đoạn dài nhất của dự án",
+      "Coi đóng dự án là giai đoạn tốn ngân sách nhất",
+      "Coi lập kế hoạch là việc chỉ làm một lần duy nhất"
+    ],
+    "optionsEn": [
+      "Treating monitoring and control as a fourth phase after execution, when it runs in parallel with execution throughout",
+      "Treating initiation as the longest phase",
+      "Treating closing as the most expensive phase",
+      "Treating planning as a one-time activity"
+    ],
+    "answer": 0,
+    "explanation": "Vẽ kiểm soát thành một hộp nối tiếp khiến người ta tưởng chỉ kiểm soát sau khi đã làm xong, và đó là lúc quá muộn.",
+    "explanationEn": "Drawing control as a sequential box suggests you only check after building, which is far too late."
+  },
+  {
+    "id": "q4",
+    "question": "Câu nào là một vấn đề nghiệp vụ đúng nghĩa ở giai đoạn khởi tạo?",
+    "questionEn": "Which statement is a genuine business problem at initiation?",
+    "options": [
+      "70 phần trăm khách hàng bỏ giỏ hàng vì không thanh toán được trên điện thoại",
+      "Chúng ta cần một app mobile",
+      "Chúng ta cần chuyển sang kiến trúc microservices",
+      "Chúng ta cần một hệ thống báo cáo mới"
+    ],
+    "optionsEn": [
+      "70 percent of customers abandon their cart because they cannot pay on a phone",
+      "We need a mobile app",
+      "We need to move to microservices",
+      "We need a new reporting system"
+    ],
+    "answer": 0,
+    "explanation": "Ba phương án còn lại đều là giải pháp; nêu giải pháp thay cho vấn đề khiến dự án bị khoá vào một hướng chưa được kiểm chứng.",
+    "explanationEn": "The other three are solutions; stating a solution instead of a problem locks the project into an unvalidated direction."
+  },
+  {
+    "id": "q5",
+    "question": "Hệ quả của việc không viết ra tiêu chí thành công đo được là gì?",
+    "questionEn": "What happens without written, measurable success criteria?",
+    "options": [
+      "Dự án sẽ thành công hoặc thất bại tuỳ theo tâm trạng của người đánh giá",
+      "Đội sẽ tự đặt tiêu chí phù hợp với năng lực của mình",
+      "Khách hàng sẽ đưa ra tiêu chí ở giai đoạn nghiệm thu",
+      "PM sẽ phải dùng ngân sách làm thước đo duy nhất"
+    ],
+    "optionsEn": [
+      "The project succeeds or fails depending on the mood of whoever judges it",
+      "The team sets criteria matching its own capability",
+      "The customer supplies criteria at acceptance",
+      "The PM must use budget as the only measure"
+    ],
+    "answer": 0,
+    "explanation": "Đây là một trong bốn thứ phải rõ ở giai đoạn khởi tạo, cùng với vấn đề nghiệp vụ, nhà tài trợ có thẩm quyền và ràng buộc đã ghi lại.",
+    "explanationEn": "This is one of four things initiation must settle, along with the business problem, an empowered sponsor, and recorded constraints."
+  },
+  {
+    "id": "q6",
+    "question": "Vai trò của project charter là gì?",
+    "questionEn": "What is the project charter for?",
+    "options": [
+      "Cho PM quyền hành động và cho mọi người một điểm tham chiếu chung khi tranh cãi về phạm vi sau này, thường chỉ hai tới ba trang",
+      "Ghi lại toàn bộ yêu cầu chi tiết của dự án",
+      "Thay thế cho hợp đồng với khách hàng",
+      "Mô tả kiến trúc kỹ thuật của giải pháp"
+    ],
+    "optionsEn": [
+      "Giving the PM authority to act and everyone a shared reference for later scope arguments, usually in two to three pages",
+      "Recording every detailed requirement",
+      "Replacing the customer contract",
+      "Describing the solution's technical architecture"
+    ],
+    "answer": 0,
+    "explanation": "Charter tóm gọn vấn đề, tiêu chí thành công, nhà tài trợ và các ràng buộc chứ không đi vào chi tiết yêu cầu.",
+    "explanationEn": "The charter summarises the problem, success criteria, sponsor and constraints rather than detailing requirements."
+  },
+  {
+    "question": "Nguyên tắc lập kế hoạch theo lớp sóng (rolling wave) nói gì?",
+    "questionEn": "What does the rolling wave planning principle say?",
+    "options": [
+      "Chi tiết cho hai tới ba tháng tới, thô hơn cho phần còn lại — lập kế hoạch chi tiết cho tháng thứ mười một là lãng phí",
+      "Lập kế hoạch lại toàn bộ dự án mỗi tháng một lần",
+      "Chỉ lập kế hoạch cho giai đoạn hiện tại, không nhìn xa hơn",
+      "Chi tiết đều nhau cho mọi giai đoạn để đảm bảo công bằng"
+    ],
+    "optionsEn": [
+      "Detailed for the next two to three months, coarser beyond — planning month eleven in detail is waste",
+      "Replan the entire project once a month",
+      "Plan only the current phase and look no further",
+      "Plan every phase at equal detail for fairness"
+    ],
+    "answer": 0,
+    "explanation": "Tới tháng thứ mười một thì mọi giả định đã đổi, nên chi tiết viết ra hôm nay sẽ phải viết lại.",
+    "explanationEn": "By month eleven every assumption has changed, so any detail written today must be rewritten.",
+    "id": "q7"
+  },
+  {
+    "question": "Tỷ lệ thời gian thực tế một người dành cho dự án sau khi trừ họp, hỗ trợ và nghỉ phép thường là bao nhiêu?",
+    "questionEn": "What share of time does a person realistically give a project after meetings, support and leave?",
+    "options": [
+      "Khoảng 60 tới 70 phần trăm",
+      "Khoảng 100 phần trăm nếu được phân bổ toàn thời gian",
+      "Khoảng 85 tới 95 phần trăm",
+      "Khoảng 30 tới 40 phần trăm"
+    ],
+    "optionsEn": [
+      "About 60 to 70 percent",
+      "About 100 percent if allocated full time",
+      "About 85 to 95 percent",
+      "About 30 to 40 percent"
+    ],
+    "answer": 0,
+    "explanation": "Kế hoạch giả định 100 phần trăm là một trong ba sai lầm phổ biến nhất, cùng với thiếu dự phòng và PM viết kế hoạch một mình.",
+    "explanationEn": "Assuming 100 percent is one of the three most common planning mistakes, alongside no contingency and a PM-written plan.",
+    "id": "q8"
+  },
+  {
+    "question": "Vì sao kế hoạch do PM viết một mình lại là vấn đề?",
+    "questionEn": "Why is a plan the PM wrote alone a problem?",
+    "options": [
+      "Vì người thực hiện không cam kết với ước tính họ không đưa ra",
+      "Vì PM không đủ kiến thức kỹ thuật để viết kế hoạch",
+      "Vì kế hoạch sẽ thiếu các mục về ngân sách",
+      "Vì khách hàng sẽ không phê duyệt kế hoạch một chiều"
+    ],
+    "optionsEn": [
+      "Because people do not commit to estimates they did not make",
+      "Because the PM lacks the technical knowledge to write it",
+      "Because the plan will miss budget sections",
+      "Because customers will not approve a one-sided plan"
+    ],
+    "answer": 0,
+    "explanation": "Ước tính do người thực hiện đưa ra vừa chính xác hơn vừa tạo ra cam kết thật.",
+    "explanationEn": "Estimates made by the people doing the work are both more accurate and genuinely owned.",
+    "id": "q9"
+  },
+  {
+    "question": "Vì sao thêm người vào một dự án đang trễ thường làm nó trễ hơn?",
+    "questionEn": "Why does adding people to a late project usually make it later?",
+    "options": [
+      "Vì người mới cần được đào tạo bởi chính những người đang là nút cổ chai, và số kênh giao tiếp tăng theo bình phương số người",
+      "Vì ngân sách bị chia nhỏ cho nhiều người hơn",
+      "Vì người mới thường có năng lực thấp hơn đội hiện tại",
+      "Vì quy trình phê duyệt tuyển dụng mất nhiều thời gian"
+    ],
+    "optionsEn": [
+      "Because newcomers must be trained by the very people who are the bottleneck, and communication channels grow with the square of team size",
+      "Because the budget is split across more people",
+      "Because new hires are usually less capable",
+      "Because hiring approval takes a long time"
+    ],
+    "answer": 0,
+    "explanation": "Chi phí đào tạo và chi phí giao tiếp tăng nhanh hơn phần năng lực được thêm vào trong ngắn hạn.",
+    "explanationEn": "Training and communication costs rise faster than the added capacity in the short term.",
+    "id": "q10"
+  },
+  {
+    "question": "Khi trả lời câu hỏi ta đang ở đâu so với kế hoạch, PM nên đếm gì?",
+    "questionEn": "Answering where are we against plan, what should a PM count?",
+    "options": [
+      "Chỉ công việc đã hoàn thành và được chấp nhận, không đếm việc đang làm",
+      "Tổng số giờ đã ghi nhận trên dự án",
+      "Số phần trăm hoàn thành do từng thành viên tự báo",
+      "Số ticket đã chuyển sang trạng thái đang xử lý"
+    ],
+    "optionsEn": [
+      "Only work completed and accepted, never work in progress",
+      "Total hours logged on the project",
+      "Self-reported completion percentages",
+      "Tickets moved into in-progress status"
+    ],
+    "answer": 0,
+    "explanation": "Việc đang làm có thể ở bất kỳ mức độ nào và thường bị lạc quan hoá, nên nó không phải cơ sở đo lường đáng tin.",
+    "explanationEn": "Work in progress can be at any stage and is usually reported optimistically, so it is not a reliable basis for measurement.",
+    "id": "q11"
+  },
+  {
+    "question": "Cách chống bẫy phần trăm hoàn thành là gì?",
+    "questionEn": "How do you defend against the percent-complete trap?",
+    "options": [
+      "Chia công việc thành đơn vị nhỏ và chỉ tính 0 hoặc 100 cho từng đơn vị, không chấp nhận các con số ở giữa",
+      "Yêu cầu báo cáo phần trăm hai lần mỗi tuần thay vì một lần",
+      "Nhân mọi con số tự báo với hệ số 0,8 để bù lạc quan",
+      "Chỉ cho phép trưởng nhóm báo cáo phần trăm hoàn thành"
+    ],
+    "optionsEn": [
+      "Break work into small units and count only 0 or 100 for each, accepting nothing in between",
+      "Ask for percentage reports twice a week instead of once",
+      "Multiply self-reported numbers by 0.8 to offset optimism",
+      "Let only team leads report percentages"
+    ],
+    "answer": 0,
+    "explanation": "Một công việc được báo cáo 90 phần trăm trong ba tuần liên tiếp thì thực chất chưa xong 90 phần trăm.",
+    "explanationEn": "Work reported at 90 percent for three consecutive weeks is not actually 90 percent done.",
+    "id": "q12"
+  },
+  {
+    "question": "Đường găng (critical path) là gì và vì sao PM phải biết nó?",
+    "questionEn": "What is the critical path and why must a PM know it?",
+    "options": [
+      "Chuỗi công việc dài nhất quyết định ngày kết thúc — chậm một ngày trên đường găng là chậm một ngày cả dự án",
+      "Danh sách các công việc có rủi ro cao nhất trong dự án",
+      "Chuỗi công việc tốn ngân sách nhiều nhất",
+      "Tập hợp các công việc do người giỏi nhất thực hiện"
+    ],
+    "optionsEn": [
+      "The longest chain of work determining the end date — a day lost on it is a day lost for the whole project",
+      "The list of highest-risk activities",
+      "The chain of work consuming the most budget",
+      "The set of tasks done by the strongest people"
+    ],
+    "answer": 0,
+    "explanation": "Chậm một ngày ngoài đường găng có thể không ảnh hưởng gì, nên PM không biết đường găng là đang quản lý bằng cảm giác.",
+    "explanationEn": "A day lost off the critical path may cost nothing, so a PM who does not know it is managing by feel.",
+    "id": "q13"
+  },
+  {
+    "question": "Sáu việc phải làm khi đóng dự án gồm những gì?",
+    "questionEn": "What are the six things closing a project requires?",
+    "options": [
+      "Nghiệm thu chính thức, chuyển giao vận hành, đóng hợp đồng và ngân sách, giải phóng đội, bài học kinh nghiệm, ghi nhận công sức",
+      "Gửi email thông báo, lưu trữ tài liệu, xoá quyền truy cập, trả thiết bị, thanh lý hợp đồng, tổ chức tiệc",
+      "Kiểm thử cuối, sửa lỗi tồn, phát hành, theo dõi sự cố, viết báo cáo, ký biên bản",
+      "Tính lại ngân sách, đánh giá nhân sự, cập nhật quy trình, đào tạo lại, chuyển giao mã nguồn, khoá kho lưu trữ"
+    ],
+    "optionsEn": [
+      "Formal acceptance, handover to operations, closing contracts and budget, releasing the team, lessons learned, recognising effort",
+      "Sending an email, archiving documents, revoking access, returning equipment, settling contracts, throwing a party",
+      "Final testing, fixing remaining defects, releasing, monitoring incidents, writing a report, signing off",
+      "Recalculating budget, appraising staff, updating process, retraining, handing over source code, locking the repository"
+    ],
+    "answer": 0,
+    "explanation": "Chuyển giao vận hành phải trả lời rõ ai chịu trách nhiệm khi có sự cố sau khi đội dự án giải tán.",
+    "explanationEn": "The operations handover must state clearly who owns incidents after the project team disbands.",
+    "id": "q14"
+  },
+  {
+    "question": "Vì sao việc giải phóng đội phải được làm rõ ràng?",
+    "questionEn": "Why must releasing the team be done explicitly?",
+    "options": [
+      "Vì để đội tan rã mà không ai biết mình đi đâu là cách chắc chắn để mất người giỏi",
+      "Vì quy trình nhân sự bắt buộc phải có văn bản",
+      "Vì cần tính lại chi phí nhân sự cho dự án",
+      "Vì đội sẽ đòi thưởng nếu không được thông báo trước"
+    ],
+    "optionsEn": [
+      "Because letting a team dissolve with nobody knowing their destination reliably loses your best people",
+      "Because HR process requires documentation",
+      "Because staffing costs must be recalculated",
+      "Because the team will demand bonuses otherwise"
+    ],
+    "answer": 0,
+    "explanation": "Nói rõ ngày cuối và điểm đến tiếp theo của từng người là phần quan trọng của việc đóng dự án.",
+    "explanationEn": "Stating each person's last day and next destination is an essential part of closing.",
+    "id": "q15"
+  },
+  {
+    "question": "Một buổi bài học kinh nghiệm hữu ích phải trả lời ba câu hỏi nào?",
+    "questionEn": "Which three questions must a useful lessons-learned session answer?",
+    "options": [
+      "Điều gì đã hiệu quả và nên lặp lại, điều gì đã hại và cần đổi, và ta sẽ làm gì KHÁC ĐI ở dự án tới",
+      "Ai làm tốt nhất, ai làm chưa tốt, và ai nên được thưởng",
+      "Dự án trễ bao nhiêu, vượt ngân sách bao nhiêu, và thiếu phạm vi nào",
+      "Khách hàng có hài lòng không, đội có vui không, và lãnh đạo có ủng hộ không"
+    ],
+    "optionsEn": [
+      "What worked and should be repeated, what hurt and must change, and what we will do DIFFERENTLY next project",
+      "Who performed best, who underperformed, and who deserves a bonus",
+      "How late, how over budget, and what scope was missed",
+      "Was the customer happy, was the team happy, did leadership support us"
+    ],
+    "answer": 0,
+    "explanation": "Bài học không phải danh sách lời khen; giá trị của nó nằm ở hành động cụ thể sẽ được làm khác đi.",
+    "explanationEn": "Lessons are not a list of compliments; their value lies in the concrete actions that will be done differently.",
+    "id": "q16"
+  },
+  {
+    "question": "Vì sao giai đoạn đóng dự án hay bị bỏ qua, và hệ quả là gì?",
+    "questionEn": "Why does closing get skipped, and what is the consequence?",
+    "options": [
+      "Vì khi sản phẩm đã chạy thì mọi người đã bị kéo sang dự án mới, nên bài học không được ghi lại và tổ chức lặp lại đúng một sai lầm ở nhiều dự án liên tiếp",
+      "Vì đóng dự án không có sản phẩm bàn giao cụ thể",
+      "Vì khách hàng thường không muốn ký nghiệm thu",
+      "Vì ngân sách đã hết nên không còn nguồn lực"
+    ],
+    "optionsEn": [
+      "Because once the product is live everyone has been pulled onto the next project, so lessons go unrecorded and the organisation repeats the same mistake across consecutive projects",
+      "Because closing has no concrete deliverables",
+      "Because customers avoid signing acceptance",
+      "Because the budget is exhausted"
+    ],
+    "answer": 0,
+    "explanation": "Ngay cả một dự án bị dừng giữa đường cũng cần được đóng đúng cách, vì bài học của nó có giá trị hơn sự im lặng.",
+    "explanationEn": "Even a project cancelled mid-flight needs proper closing, since its lessons are worth more than silence.",
+    "id": "q17"
+  },
+  {
+    "question": "Điều gì KHÔNG thay đổi giữa vòng đời truyền thống và agile?",
+    "questionEn": "What does NOT change between the traditional life cycle and agile?",
+    "options": [
+      "Bạn vẫn cần biết vì sao dự án tồn tại, ai chịu trách nhiệm, rủi ro gì đang treo, và làm sao biết mình đã xong",
+      "Số lượng tài liệu bắt buộc phải tạo ra",
+      "Việc lập kế hoạch chỉ được thực hiện một lần duy nhất",
+      "Việc kiểm soát chỉ diễn ra tại các mốc báo cáo"
+    ],
+    "optionsEn": [
+      "You still need to know why the project exists, who is accountable, what risks hang over it, and how you will know you are done",
+      "The number of mandatory documents",
+      "That planning happens exactly once",
+      "That control happens only at reporting milestones"
+    ],
+    "answer": 0,
+    "explanation": "Agile thay đổi nhịp trả lời những câu hỏi đó, không loại bỏ chúng.",
+    "explanationEn": "Agile changes the cadence of answering those questions, not their necessity.",
+    "id": "q18"
+  }
+]

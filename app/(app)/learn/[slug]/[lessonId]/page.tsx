@@ -120,14 +120,11 @@ export default function LessonPlayerPage() {
         .map((c) => toTestQuestion(c.slug, c.questionId, true))
         .filter((q): q is TestQuestion => q !== null);
 
-      // Warm-up: recall from earlier lessons, then a preview of what's coming.
+      // The warm-up recalls ONLY material already studied — it never previews
+      // the lesson about to be read. A lesson with nothing behind it (mini-lesson
+      // 1 of a fresh study path) therefore has no warm-up at all, so a learner is
+      // never shown a question before reading the content it is drawn from.
       const warmReview = reviewQuestions.slice(0, WARMUP_REVIEW);
-      const previewPool = activeLesson.questionIds.length > 0 ? activeLesson.questionIds : own.map((q) => q.id);
-      const previewCount = warmReview.length > 0 ? 1 : 2;
-      const preview = previewPool
-        .slice(0, previewCount)
-        .map((id) => toTestQuestion(slug, id, false))
-        .filter((q): q is TestQuestion => q !== null);
 
       // Check: this lesson's own questions (or a topic-wide draw for a recap),
       // plus review questions the warm-up did not already use.
@@ -148,8 +145,10 @@ export default function LessonPlayerPage() {
       const usedInWarmup = new Set(warmReview.map((q) => q.key));
       const checkReview = reviewQuestions.filter((q) => !usedInWarmup.has(q.key)).slice(0, CHECK_REVIEW);
 
-      setWarmupQs([...warmReview, ...preview]);
+      setWarmupQs(warmReview);
       setCheckQs([...checkOwn, ...checkReview]);
+      // Nothing to recall yet: open straight on the reading phase.
+      if (warmReview.length === 0) setPhase("read");
       setBuilt(true);
     }
 
@@ -229,15 +228,14 @@ export default function LessonPlayerPage() {
 
       {/* Phase rail */}
       <div className="flex items-center gap-2 text-xs">
-        {(
-          [
-            ["warmup", pick("1 · Khởi động", "1 · Warm-up")],
-            ["read", pick("2 · Đọc", "2 · Read")],
-            ["check", pick("3 · Kiểm tra", "3 · Check")],
-          ] as const
-        ).map(([id, label]) => {
+        {[
+          // The warm-up step only exists when there is earlier material to recall.
+          ...(warmupQs.length > 0 ? [["warmup", pick("Khởi động", "Warm-up")] as [Phase, string]] : []),
+          ["read", pick("Đọc", "Read")] as [Phase, string],
+          ["check", pick("Kiểm tra", "Check")] as [Phase, string],
+        ].map(([id, label], i) => {
           const order: Phase[] = ["warmup", "read", "check", "done"];
-          const done = order.indexOf(phase) > order.indexOf(id as Phase);
+          const done = order.indexOf(phase) > order.indexOf(id);
           const active = phase === id;
 
           return (
@@ -251,7 +249,7 @@ export default function LessonPlayerPage() {
               )}
             >
               {done ? "✓ " : ""}
-              {label}
+              {i + 1} · {label}
             </span>
           );
         })}
@@ -259,28 +257,17 @@ export default function LessonPlayerPage() {
 
       {!built && <div className="text-zinc-500 text-sm">{t("common.loading")}</div>}
 
-      {built && phase === "warmup" && (
-        warmupQs.length > 0 ? (
-          <LessonTest
-            questions={warmupQs}
-            heading={pick("Khởi động", "Warm-up")}
-            blurb={pick(
-              "Ôn nhanh những gì đã học, cộng một câu xem trước bài này. Sai cũng không sao — đây là để đo, không phải để chấm.",
-              "A quick recall of earlier lessons plus a preview of this one. Getting these wrong is fine — it's a gauge, not a grade."
-            )}
-            ctaLabel={pick("Bắt đầu đọc →", "Start reading →")}
-            onFinish={finishWarmup}
-          />
-        ) : (
-          <div className="card space-y-3">
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              {pick("Bài này chưa có câu hỏi khởi động.", "No warm-up questions for this lesson.")}
-            </p>
-            <button onClick={() => setPhase("read")} className="btn-primary text-sm px-4 py-2">
-              {pick("Bắt đầu đọc →", "Start reading →")}
-            </button>
-          </div>
-        )
+      {built && phase === "warmup" && warmupQs.length > 0 && (
+        <LessonTest
+          questions={warmupQs}
+          heading={pick("Khởi động", "Warm-up")}
+          blurb={pick(
+            "Ôn nhanh những gì bạn đã học ở các bài trước. Sai cũng không sao — đây là để đo, không phải để chấm.",
+            "A quick recall of what you learned in earlier lessons. Getting these wrong is fine — it is a gauge, not a grade."
+          )}
+          ctaLabel={pick("Bắt đầu đọc →", "Start reading →")}
+          onFinish={finishWarmup}
+        />
       )}
 
       {built && phase === "read" && (

@@ -298,5 +298,105 @@
     "answer": 2,
     "explanation": "'Out of Scope' rất quan trọng để ngăn dev tự thêm tính năng 'vì tiện' (scope creep). Ví dụ: 'Out of scope: Export PDF (ticket riêng), push notification (phase 2), search auto-complete (sprint sau).' Giúp team focused vào đúng phạm vi đã estimate.",
     "explanationEn": "'Out of Scope' is important to stop developers from adding features 'because it's convenient' (scope creep). For example: 'Out of scope: Export PDF (separate ticket), push notification (phase 2), search auto-complete (later sprint).' It keeps the team focused on exactly the scope that was estimated."
+  },
+  {
+    "question": "Thứ nào cần được thống nhất TRƯỚC TIÊN giữa đội FE và BE khi bắt đầu một feature?",
+    "questionEn": "What must FE and BE teams agree on FIRST when starting a feature?",
+    "options": [
+      "API contract: đường dẫn, tham số, cấu trúc dữ liệu trả về và mã lỗi",
+      "Màu sắc của nút bấm",
+      "Tên nhánh Git",
+      "Thứ tự các cuộc họp"
+    ],
+    "optionsEn": [
+      "The API contract: endpoints, parameters, response shape, and error codes",
+      "Button colours",
+      "Git branch names",
+      "The meeting schedule"
+    ],
+    "answer": 0,
+    "explanation": "Chốt hợp đồng API trước cho phép hai đội làm song song. Thiếu nó, FE phải chờ BE hoặc cả hai đoán và phải sửa lại.",
+    "explanationEn": "Locking the API contract first lets both teams work in parallel. Without it, FE waits for BE or both guess and rework.",
+    "id": "q16"
+  },
+  {
+    "question": "Task hiển thị danh sách đơn hàng có phân trang và lọc theo ngày nên được chia thế nào?",
+    "questionEn": "How should a task to list orders with pagination and date filtering be split?",
+    "options": [
+      "BE cung cấp endpoint hỗ trợ phân trang và tham số lọc; FE dựng giao diện bảng, bộ lọc và trạng thái tải",
+      "Chỉ cần một task FE vì đây là giao diện",
+      "Chỉ cần một task BE vì đây là dữ liệu",
+      "Không chia mà để một người làm cả hai"
+    ],
+    "optionsEn": [
+      "BE provides an endpoint supporting pagination and filter parameters; FE builds the table, filters, and loading states",
+      "One FE task only, since it is a UI",
+      "One BE task only, since it is data",
+      "Do not split; let one person do both"
+    ],
+    "answer": 0,
+    "explanation": "Phân trang phải làm ở phía server với dữ liệu lớn. Nếu FE tải hết rồi cắt, hệ thống sẽ sập khi dữ liệu tăng.",
+    "explanationEn": "Pagination must happen server-side at scale. If the FE loads everything then slices it, the system collapses as data grows.",
+    "id": "q17"
+  },
+  {
+    "question": "Câu hỏi nào BA nên đặt trong buổi grooming để lộ ra công việc ẩn?",
+    "questionEn": "Which question should a BA ask in grooming to surface hidden work?",
+    "options": [
+      "Điều gì xảy ra khi API lỗi, khi dữ liệu rỗng, hoặc khi người dùng không đủ quyền",
+      "Ai sẽ làm task này",
+      "Chúng ta dùng thư viện nào",
+      "Sprint này dài bao nhiêu ngày"
+    ],
+    "optionsEn": [
+      "What happens when the API fails, the data is empty, or the user lacks permission",
+      "Who will take this task",
+      "Which library we will use",
+      "How long this sprint is"
+    ],
+    "answer": 0,
+    "explanation": "Trạng thái rỗng, trạng thái lỗi và phân quyền là ba nguồn công việc ẩn lớn nhất, thường không xuất hiện trong mô tả story ban đầu.",
+    "explanationEn": "Empty states, error states, and permissions are the three biggest sources of hidden work, usually absent from the original story description.",
+    "id": "q18"
+  },
+  {
+    "question": "Dependency giữa task FE và BE ảnh hưởng tới sprint planning thế nào?",
+    "questionEn": "How does an FE-BE dependency affect sprint planning?",
+    "options": [
+      "Nếu FE phụ thuộc endpoint chưa có, nên đưa task BE vào sprint trước hoặc thống nhất mock data để FE không bị chặn",
+      "Không ảnh hưởng gì vì hai đội độc lập",
+      "Phải luôn làm FE trước BE",
+      "Phải gộp cả hai thành một task duy nhất"
+    ],
+    "optionsEn": [
+      "If FE depends on a missing endpoint, schedule the BE task earlier or agree on mock data so FE is not blocked",
+      "No effect, since the teams are independent",
+      "FE must always be done before BE",
+      "Both must be merged into one task"
+    ],
+    "answer": 0,
+    "explanation": "Một số hạng mục ưu tiên thấp vẫn phải làm sớm vì hạng mục ưu tiên cao phụ thuộc vào chúng. Thứ tự kỹ thuật bắt buộc là đầu vào của kế hoạch.",
+    "explanationEn": "Some low-priority items must be built early because high-priority ones depend on them. Mandatory technical sequence is an input to the plan.",
+    "id": "q19"
+  },
+  {
+    "question": "Ticket kỹ thuật tốt nên chứa gì ngoài mô tả chức năng?",
+    "questionEn": "Beyond the functional description, what should a good technical ticket contain?",
+    "options": [
+      "Acceptance criteria, mô tả API liên quan, trạng thái lỗi và rỗng, cùng liên kết tới story cha",
+      "Tên người viết ticket và ngày tạo là đủ",
+      "Ước tính ngân sách chi tiết",
+      "Sơ đồ tổ chức của công ty"
+    ],
+    "optionsEn": [
+      "Acceptance criteria, the related API description, error and empty states, plus a link to the parent story",
+      "The author name and creation date are enough",
+      "A detailed budget estimate",
+      "The company org chart"
+    ],
+    "answer": 0,
+    "explanation": "Liên kết tới story cha giúp truy vết được vì sao task tồn tại — thông tin cần thiết khi phân tích tác động của thay đổi về sau.",
+    "explanationEn": "Linking to the parent story makes it traceable why the task exists — information you need when analysing change impact later.",
+    "id": "q20"
   }
 ]

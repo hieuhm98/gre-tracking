@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 12,
+  "title": "Thẩm định, tái sử dụng & vượt ra ngoài yêu cầu",
+  "titleEn": "Validation, Reuse & Beyond Requirements Development",
+  "description": "Review và inspection yêu cầu, kiểm thử dựa trên yêu cầu, acceptance criteria, tái sử dụng yêu cầu và requirements pattern, cùng cách yêu cầu chi phối ước tính, thiết kế, mã, kiểm thử và quản lý dự án.",
+  "descriptionEn": "Requirements reviews and inspections, requirements-based testing, acceptance criteria, requirements reuse and patterns, and how requirements drive estimation, design, code, testing, and project management."
+}

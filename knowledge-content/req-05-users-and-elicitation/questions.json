@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Một công ty phần mềm ngân hàng định phân nhóm người dùng thành ngân hàng thương mại lớn, ngân hàng nhỏ, quỹ tiết kiệm và quỹ tín dụng. Sai lầm ở đây là gì?",
+    "questionEn": "A banking software company plans to group users into large commercial banks, small banks, savings institutions, and credit unions. What is wrong with that?",
+    "options": [
+      "Chia như vậy quá chi tiết, nên gộp lại thành một nhóm",
+      "Đó là phân khúc thị trường chứ không phải user class; user class nên phân theo TÁC VỤ người dùng thực hiện",
+      "Thiếu nhóm người dùng quản trị hệ thống",
+      "Không tính tới người dùng gián tiếp"
+    ],
+    "optionsEn": [
+      "The split is too granular and should be merged into one group",
+      "Those are market segments, not user classes; user classes should be based on the TASKS users perform",
+      "It omits system administrator users",
+      "It does not account for indirect users"
+    ],
+    "answer": 1,
+    "explanation": "Mọi tổ chức tài chính đó đều có teller, loan officer, business banker và branch manager. Những người làm cùng loại công việc có nhu cầu chức năng tương tự trên toàn bộ các tổ chức.",
+    "explanationEn": "All of those institutions have tellers, loan officers, business bankers, and branch managers. People doing the same kind of work have similar functional needs across every institution."
+  },
+  {
+    "id": "q2",
+    "question": "Favored user class được xác định dựa trên tiêu chí nào?",
+    "questionEn": "On what basis is a favored user class identified?",
+    "options": [
+      "Nhóm trả tiền cho hệ thống",
+      "Nhóm có quyền lực chính trị lớn nhất trong tổ chức",
+      "Nhóm mà sự hài lòng của họ gắn chặt nhất với việc đạt business objectives",
+      "Nhóm có số lượng người dùng đông nhất"
+    ],
+    "optionsEn": [
+      "The group paying for the system",
+      "The group with the most political clout in the organization",
+      "The group whose satisfaction is most closely aligned with achieving the business objectives",
+      "The group with the largest number of users"
+    ],
+    "answer": 2,
+    "explanation": "Khi giải quyết xung đột yêu cầu hoặc quyết định độ ưu tiên, favored user class được ưu tiên. Đây là vấn đề thẳng hàng với mục tiêu kinh doanh, không phải quyền lực hay tiền bạc.",
+    "explanationEn": "Favored user classes receive preferential treatment when resolving conflicts or setting priorities. It is a matter of alignment with business objectives, not power or money."
+  },
+  {
+    "id": "q3",
+    "question": "Tính năng khoá tài khoản sau bốn lần đăng nhập sai tồn tại chủ yếu vì nhóm nào?",
+    "questionEn": "Locking an account after four failed login attempts exists primarily because of which group?",
+    "options": [
+      "Favored user class là quản trị viên hệ thống",
+      "Disfavored user class là những người giả mạo danh tính",
+      "Indirect user class nhận báo cáo bảo mật",
+      "Ignored user class là người dùng thử nghiệm"
+    ],
+    "optionsEn": [
+      "The favored user class of system administrators",
+      "The disfavored user class of user impersonators",
+      "The indirect user class receiving security reports",
+      "The ignored user class of trial users"
+    ],
+    "answer": 1,
+    "explanation": "Với disfavored user class, bạn chủ động xây tính năng gây khó cho họ, dù có thể gây phiền cho người dùng hợp pháp hay quên. CAPTCHA cũng cùng nguyên lý.",
+    "explanationEn": "For disfavored user classes you deliberately build features that make things hard for them, even at the risk of inconveniencing forgetful legitimate users. CAPTCHA follows the same principle."
+  },
+  {
+    "id": "q4",
+    "question": "Trong mô hình product champion, ai chịu trách nhiệm VIẾT tài liệu yêu cầu?",
+    "questionEn": "In the product champion model, who is responsible for WRITING the requirements documents?",
+    "options": [
+      "Product champion, vì họ hiểu nghiệp vụ rõ nhất",
+      "Business analyst, dù việc phát triển yêu cầu là trách nhiệm chung của BA và product champion",
+      "Lập trình viên, dựa trên ghi chép của champion",
+      "Nhà tài trợ dự án"
+    ],
+    "optionsEn": [
+      "The product champion, since they understand the business best",
+      "The business analyst, even though requirements development is a shared responsibility of the BA and the champion",
+      "The developers, based on the champion notes",
+      "The project sponsor"
+    ],
+    "answer": 1,
+    "explanation": "Viết yêu cầu tốt đã khó với người làm nghề. Không thực tế khi kỳ vọng người dùng chưa từng viết yêu cầu làm tốt việc đó.",
+    "explanationEn": "It is hard enough to write good requirements if you do it for a living; it is not realistic to expect users who have never written requirements to do a good job."
+  },
+  {
+    "id": "q5",
+    "question": "Một công ty bảo hiểm lớn thấy không thể có MỘT product owner duy nhất hiểu đủ chi tiết mọi thứ. Giải pháp họ dùng là gì?",
+    "questionEn": "A large insurance company found no SINGLE product owner could understand everything in enough detail. What solution did they use?",
+    "options": [
+      "Bỏ hoàn toàn vai trò product owner và dùng workshop",
+      "Chọn một product owner cho mỗi phòng ban, với CIO làm product owner trưởng để ra quyết định khi xung đột",
+      "Thuê tư vấn bên ngoài làm product owner",
+      "Để đội phát triển tự quyết mọi thứ"
+    ],
+    "optionsEn": [
+      "Drop the product owner role entirely and rely on workshops",
+      "Select a product owner per department, with the CIO as lead product owner deciding when they conflicted",
+      "Hire an external consultant as product owner",
+      "Let the development team decide everything"
+    ],
+    "answer": 1,
+    "explanation": "CIO hiểu toàn bộ vision sản phẩm nên có thể bảo đảm các phòng ban đi đúng hướng, và có trách nhiệm ra quyết định khi các product owner cấp phòng ban bất đồng.",
+    "explanationEn": "The CIO understood the entire product vision, so he could keep departments on track and had responsibility for deciding when department-level product owners disagreed."
+  },
+  {
+    "id": "q6",
+    "question": "Khi hai USER CLASS có yêu cầu xung đột, nguyên tắc giải quyết là gì?",
+    "questionEn": "When two USER CLASSES have conflicting requirements, what is the resolution principle?",
+    "options": [
+      "Chia đôi, mỗi bên được một nửa yêu cầu",
+      "User class được ưu tiên (favored) thắng",
+      "Đội phát triển chọn phương án dễ hiện thực hơn",
+      "Đưa lên nhà tài trợ dự án quyết định"
+    ],
+    "optionsEn": [
+      "Split the difference so each side gets half",
+      "The favored user class gets preference",
+      "The development team picks whichever is easier to build",
+      "Escalate to the project sponsor"
+    ],
+    "answer": 1,
+    "explanation": "Với xung đột giữa các cá nhân thì product champion quyết; giữa các khách hàng doanh nghiệp thì business objectives quyết định hướng đi.",
+    "explanationEn": "Conflicts between individuals are decided by the product champion; conflicts between corporate customers are decided by the business objectives."
+  },
+  {
+    "id": "q7",
+    "question": "Phát biểu nào mô tả ĐÚNG bản chất của elicitation?",
+    "questionEn": "Which statement correctly describes the nature of elicitation?",
+    "options": [
+      "Đó là việc thu thập yêu cầu bằng cách chép lại chính xác lời người dùng nói",
+      "Đó là quá trình cộng tác và phân tích để thu thập, khám phá, bóc tách và định nghĩa yêu cầu",
+      "Đó là bước một lần ở đầu dự án, kết thúc khi SRS được ký duyệt",
+      "Đó là công việc riêng của product owner trong dự án agile"
+    ],
+    "optionsEn": [
+      "It is gathering requirements by transcribing exactly what users say",
+      "It is a collaborative and analytical process to collect, discover, extract, and define requirements",
+      "It is a one-time step at project start that ends when the SRS is signed off",
+      "It is the sole job of the product owner on agile projects"
+    ],
+    "answer": 1,
+    "explanation": "Elicitation có bản chất chu kỳ: khai thác, nghiên cứu điều đã học, viết yêu cầu, phát hiện thiếu thông tin, rồi khai thác thêm.",
+    "explanationEn": "Elicitation is cyclic: elicit, study what you learned, write some requirements, discover missing information, then elicit more."
+  },
+  {
+    "id": "q8",
+    "question": "Vì sao KHÔNG nên bắt đầu một workshop với tờ giấy trắng?",
+    "questionEn": "Why should you NOT start a workshop with a completely blank slate?",
+    "options": [
+      "Vì người tham gia sẽ không biết nói gì",
+      "Vì workshop tốn nhiều nguồn lực; hãy mang straw man model để nhóm review thay vì cùng nhau tạo từ đầu",
+      "Vì quy trình yêu cầu bắt buộc phải có tài liệu trước",
+      "Vì facilitator không được phép đóng góp ý kiến"
+    ],
+    "optionsEn": [
+      "Because participants will not know what to say",
+      "Because workshops are resource intensive; bring straw man models so the group reviews rather than creates from scratch",
+      "Because the requirements process mandates prior documentation",
+      "Because the facilitator is not allowed to contribute ideas"
+    ],
+    "answer": 1,
+    "explanation": "Người ta phê bình dễ hơn sáng tạo. Hãy dùng kỹ thuật khác trước workshop, rồi đưa nhóm lại để giải quyết những vùng thực sự cần thảo luận chung.",
+    "explanationEn": "People critique content more easily than they create it. Use other techniques before the workshop, then bring the group together only for the areas that truly need it."
+  },
+  {
+    "id": "q9",
+    "question": "Số người tham gia tích cực bao nhiêu thường khiến workshop bắt đầu sa lầy?",
+    "questionEn": "Beyond how many active participants do workshops typically become mired?",
+    "options": [
+      "Quá 2 đến 3 người",
+      "Quá 5 đến 6 người",
+      "Quá 15 người",
+      "Quá 25 người"
+    ],
+    "optionsEn": [
+      "More than 2 or 3",
+      "More than 5 or 6",
+      "More than 15",
+      "More than 25"
+    ],
+    "answer": 1,
+    "explanation": "Một workshop use case 12 người tiến triển chậm chạp đầy tranh cãi; giảm xuống khoảng sáu người khiến tiến độ tăng vọt dù mất đi một chút đầu vào.",
+    "explanationEn": "A 12-person use case workshop crawled along contentiously; reducing it to about six accelerated progress dramatically, even though some input was lost."
+  },
+  {
+    "id": "q10",
+    "question": "Ví dụ mô tả các bước làm bánh minh hoạ giá trị của kỹ thuật elicitation nào?",
+    "questionEn": "The cake-baking example illustrates the value of which elicitation technique?",
+    "options": [
+      "Bảng hỏi, vì có thể khảo sát nhiều người làm bánh",
+      "Quan sát, vì người dùng quá quen với tác vụ tới mức không diễn đạt nổi các bước hiển nhiên",
+      "Phân tích tài liệu, vì công thức đã có sẵn",
+      "Focus group, vì cần nhiều ý kiến khác nhau"
+    ],
+    "optionsEn": [
+      "Questionnaires, since you can survey many bakers",
+      "Observation, because users are so familiar with a task that they cannot articulate the obvious steps",
+      "Document analysis, since the recipe already exists",
+      "Focus groups, since many opinions are needed"
+    ],
+    "answer": 1,
+    "explanation": "Bạn nhớ nói thêm nguyên liệu, nhưng có nhớ nói mở túi bột, đập vỏ trứng và bỏ vỏ đi không? Những bước tưởng hiển nhiên lại không hiển nhiên với người chưa từng làm.",
+    "explanationEn": "You remember to say add the ingredients, but do you remember to say open the bag, crack the eggshell, and discard the shell? Seemingly obvious steps are not obvious to a newcomer."
+  },
+  {
+    "id": "q11",
+    "question": "Lợi ích lớn nhất mà system interface analysis mang lại là gì?",
+    "questionEn": "What is the biggest payoff from system interface analysis?",
+    "options": [
+      "Xác định giao diện người dùng đẹp hơn",
+      "Phát hiện chức năng bạn KHÔNG cần xây vì hệ thống khác đã làm rồi",
+      "Giảm số lượng stakeholder cần phỏng vấn",
+      "Tự động sinh ra test case cho các giao diện"
+    ],
+    "optionsEn": [
+      "Designing a better-looking user interface",
+      "Discovering functionality you do NOT need to build because another system already does it",
+      "Reducing the number of stakeholders to interview",
+      "Automatically generating test cases for the interfaces"
+    ],
+    "answer": 1,
+    "explanation": "Ví dụ: bạn tưởng cần kiểm tra tính hợp lệ đơn hàng trước khi đẩy sang hệ thống quản lý đơn hàng, nhưng phát hiện hệ thống kia đã tự kiểm tra cho mọi nguồn đẩy vào.",
+    "explanationEn": "For example, you might think you need order validation before passing to an order-management system, then learn that system already validates orders from every source."
+  },
+  {
+    "id": "q12",
+    "question": "Với phần mềm đại chúng (mass-market), kỹ thuật elicitation nào thường phù hợp hơn workshop?",
+    "questionEn": "For mass-market software, which elicitation technique is usually more appropriate than workshops?",
+    "options": [
+      "Focus group, vì tập người dùng lớn nhưng khó tiếp cận đại diện cụ thể",
+      "Phân tích giao diện hệ thống",
+      "Quan sát tại chỗ làm việc của từng khách hàng",
+      "Phỏng vấn lãnh đạo cấp cao"
+    ],
+    "optionsEn": [
+      "Focus groups, because the user base is large but representatives are hard to reach",
+      "System interface analysis",
+      "On-site observation at every customer workplace",
+      "Interviews with senior executives"
+    ],
+    "answer": 0,
+    "explanation": "Với dự án thay thế hệ thống cũ thì phân tích tài liệu, phân tích giao diện người dùng và quan sát lại là những kỹ thuật hiệu quả nhất.",
+    "explanationEn": "For legacy replacement projects, document analysis, user interface analysis, and observation tend to be the most effective techniques instead."
+  },
+  {
+    "id": "q13",
+    "question": "Câu hỏi nào TỐT NHẤT để mở đầu việc khai thác yêu cầu từ người dùng?",
+    "questionEn": "Which question is the BEST way to open requirements elicitation with a user?",
+    "options": [
+      "Bạn muốn gì ở hệ thống mới?",
+      "Bạn cần LÀM gì?",
+      "Bạn thích giao diện nào hơn?",
+      "Ngân sách của bạn là bao nhiêu?"
+    ],
+    "optionsEn": [
+      "What do you want from the new system?",
+      "What do you need to DO?",
+      "Which interface do you prefer?",
+      "What is your budget?"
+    ],
+    "answer": 1,
+    "explanation": "Hỏi bạn muốn gì tạo ra một mớ thông tin ngẫu nhiên khiến analyst lúng túng. Sau đó hãy hỏi tại sao nhiều lần để chuyển từ giải pháp được trình bày sang vấn đề thật.",
+    "explanationEn": "Asking what people want generates a mass of random information that leaves the analyst floundering. Then ask why several times to move from a presented solution to the real problem."
+  },
+  {
+    "id": "q14",
+    "question": "Người dùng nói: Rồi tôi chọn bang muốn gửi hàng tới từ một drop-down list. BA nên làm gì?",
+    "questionEn": "A user says: Then I select the state where I want to send the package from a drop-down list. What should the BA do?",
+    "options": [
+      "Ghi nguyên văn thành functional requirement",
+      "Hỏi vì sao lại là drop-down list, vì đây có thể là solution idea che khuất nhu cầu thật",
+      "Bỏ qua vì đó là vấn đề thiết kế giao diện",
+      "Chuyển thẳng cho UI designer quyết định"
+    ],
+    "optionsEn": [
+      "Record it verbatim as a functional requirement",
+      "Ask why a drop-down list, since this may be a solution idea masking the real need",
+      "Ignore it because it is a UI design matter",
+      "Pass it straight to the UI designer to decide"
+    ],
+    "answer": 1,
+    "explanation": "Nếu lý do chỉ là thấy hay thì yêu cầu thật là cho phép người dùng chỉ định bang. Nếu lý do là nhất quán với chỗ khác và ngăn nhập sai, thì đó là design constraint chính đáng.",
+    "explanationEn": "If the reason is just that it seemed nice, the real requirement is to let the user specify the state. If the reason is consistency and preventing invalid data, it is a legitimate design constraint."
+  },
+  {
+    "id": "q15",
+    "question": "Assumed requirement khác implied requirement như thế nào?",
+    "questionEn": "How does an assumed requirement differ from an implied requirement?",
+    "options": [
+      "Assumed do khách hàng nêu, implied do lập trình viên nêu",
+      "Assumed là điều người ta kỳ vọng mà không nói ra; implied là điều cần thiết vì một yêu cầu khác nhưng không được nêu tường minh",
+      "Assumed luôn sai, implied luôn đúng",
+      "Hai khái niệm này giống nhau"
+    ],
+    "optionsEn": [
+      "Assumed ones come from customers, implied ones from developers",
+      "Assumed requirements are what people expect without expressing; implied ones are necessary because of another requirement but are never stated",
+      "Assumed ones are always wrong and implied ones always right",
+      "They mean the same thing"
+    ],
+    "answer": 1,
+    "explanation": "Cả hai đều tạo rủi ro giao sai thứ khách hàng kỳ vọng. Hãy hỏi chúng ta đang giả định điều gì trong buổi khai thác, và ghi lại rồi xác nhận mọi giả định gặp phải.",
+    "explanationEn": "Both create the risk of delivering something different from what stakeholders expect. Ask what are we assuming during elicitation, and record and confirm every assumption you meet."
+  },
+  {
+    "id": "q16",
+    "question": "Yêu cầu nói phí ship là 5,95 nếu đơn dưới 100, và 6% giá trị nếu đơn trên 100. Vấn đề là gì?",
+    "questionEn": "One requirement says shipping is 5.95 if the order is under 100, another says 6 percent if the order is over 100. What is the problem?",
+    "options": [
+      "Hai yêu cầu mâu thuẫn nhau hoàn toàn",
+      "Giá trị biên đúng bằng 100 không được đặc tả, nên đang thiếu một yêu cầu",
+      "Công thức tính phần trăm chưa rõ ràng",
+      "Không có vấn đề gì, lập trình viên sẽ tự xử lý"
+    ],
+    "optionsEn": [
+      "The two requirements contradict each other entirely",
+      "The boundary value of exactly 100 is unspecified, so a requirement is missing",
+      "The percentage formula is unclear",
+      "No problem, developers will handle it"
+    ],
+    "answer": 1,
+    "explanation": "Kiểm tra giá trị biên là một trong những cách hệ thống để tìm yêu cầu thiếu, cùng với truy vết, biểu diễn nhiều góc nhìn, decision table và CRUD analysis.",
+    "explanationEn": "Checking boundary values is one systematic way to find missing requirements, along with tracing, multiple representations, decision tables, and CRUD analysis."
+  }
+]

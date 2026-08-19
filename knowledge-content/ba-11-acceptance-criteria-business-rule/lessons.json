@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Acceptance Criteria là gì · Định dạng Given-When-Then",
+      "titleEn": "What acceptance criteria are · The Given-When-Then format",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Bao nhiêu AC là đủ · Business Rule là gì",
+      "titleEn": "How many AC are enough · What a business rule is",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Vì sao phải tách business rule ra riêng · Bốn loại business rule",
+      "titleEn": "Why business rules belong in their own place · Four kinds of business rule",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Business rule trong AC và trong hệ thống",
+      "titleEn": "Business rules in AC and in the system",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

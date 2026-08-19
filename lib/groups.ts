@@ -1,6 +1,12 @@
 // Content groups. Each knowledge topic belongs to a group via its meta.json
 // `group` field. Groups are rendered as sections on the Knowledge page and can
 // be used to scope the Daily Quick Test.
+//
+// The original `ba-po-pm` group mixed foundational IT knowledge with the three
+// business roles, which made the track hard to navigate once it passed ~30
+// topics. It is now split four ways: shared IT groundwork, then one track per
+// role. Topics that are genuinely cross-role (Agile, Scrum, the SDLC models)
+// live in `it-fundamentals`, with role-specific spin-offs in each role track.
 
 export interface Group {
   id: string;
@@ -11,23 +17,73 @@ export interface Group {
   descriptionEn: string;
   icon: string;
   /** Tailwind color name used for accents (must exist in the safelist below). */
-  accent: "blue" | "orange";
+  accent: "blue" | "emerald" | "amber" | "rose" | "violet" | "orange";
 }
 
 export const GROUPS: Group[] = [
   {
-    id: "ba-po-pm",
+    id: "it-fundamentals",
     order: 1,
-    label: "BA · PO · PM",
-    labelEn: "BA · PO · PM",
-    description: "Kiến thức IT nền tảng cho Business Analyst, Product Owner, Project Manager.",
-    descriptionEn: "Foundational IT knowledge for Business Analysts, Product Owners, and Project Managers.",
+    label: "Nền tảng IT",
+    labelEn: "IT Fundamentals",
+    description:
+      "Kiến thức kỹ thuật nền tảng mà mọi vai trò BA, PO, PM đều cần: mạng, web, API, dữ liệu, kiến trúc và quy trình phát triển.",
+    descriptionEn:
+      "The technical groundwork every BA, PO, and PM needs: networking, the web, APIs, data, architecture, and the development process.",
     icon: "◉",
     accent: "blue",
   },
   {
-    id: "dev",
+    id: "ba",
     order: 2,
+    label: "Business Analyst",
+    labelEn: "Business Analyst",
+    description:
+      "Nghề BA từ định hướng nghề nghiệp tới kỹ thuật cốt lõi: khơi gợi yêu cầu, đặc tả, mô hình hoá, tài liệu và công cụ.",
+    descriptionEn:
+      "The BA craft from career orientation to core technique: elicitation, specification, modeling, documentation, and tooling.",
+    icon: "◈",
+    accent: "emerald",
+  },
+  {
+    id: "po",
+    order: 3,
+    label: "Product Owner",
+    labelEn: "Product Owner",
+    description:
+      "Vai trò Product Owner: tầm nhìn sản phẩm, backlog, ưu tiên hoá, khám phá và đo lường giá trị.",
+    descriptionEn:
+      "The Product Owner role: product vision, backlog, prioritization, discovery, and measuring value.",
+    icon: "◐",
+    accent: "amber",
+  },
+  {
+    id: "pm",
+    order: 4,
+    label: "Project Manager",
+    labelEn: "Project Manager",
+    description:
+      "Vai trò Project Manager: vòng đời dự án, lập kế hoạch, ước tính, phạm vi, rủi ro, đội ngũ và giao tiếp.",
+    descriptionEn:
+      "The Project Manager role: project life cycle, planning, estimation, scope, risk, teams, and communication.",
+    icon: "◇",
+    accent: "rose",
+  },
+  {
+    id: "req",
+    order: 5,
+    label: "Software Requirements",
+    labelEn: "Software Requirements",
+    description:
+      "Khoá kỹ nghệ yêu cầu dựa trên sách Software Requirements, 3rd Edition (Karl Wiegers & Joy Beatty).",
+    descriptionEn:
+      "Requirements-engineering track based on Software Requirements, 3rd Edition (Karl Wiegers & Joy Beatty).",
+    icon: "◆",
+    accent: "violet",
+  },
+  {
+    id: "dev",
+    order: 6,
     label: "Developer · AWS",
     labelEn: "Developer · AWS",
     description: "Lộ trình AWS Certified Solutions Architect – Associate (SAA-C03).",
@@ -37,7 +93,7 @@ export const GROUPS: Group[] = [
   },
 ];
 
-export const DEFAULT_GROUP = "ba-po-pm";
+export const DEFAULT_GROUP = "it-fundamentals";
 
 export function getGroup(id: string | undefined): Group | undefined {
   return GROUPS.find((g) => g.id === id);
@@ -49,6 +105,29 @@ export const GROUP_ACCENT: Record<Group["accent"], { badge: string; bar: string;
     badge: "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800",
     bar: "bg-blue-500",
     text: "text-blue-600 dark:text-blue-400",
+  },
+  emerald: {
+    badge:
+      "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800",
+    bar: "bg-emerald-500",
+    text: "text-emerald-600 dark:text-emerald-400",
+  },
+  amber: {
+    badge:
+      "bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800",
+    bar: "bg-amber-500",
+    text: "text-amber-600 dark:text-amber-400",
+  },
+  rose: {
+    badge: "bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-800",
+    bar: "bg-rose-500",
+    text: "text-rose-600 dark:text-rose-400",
+  },
+  violet: {
+    badge:
+      "bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 border-violet-200 dark:border-violet-800",
+    bar: "bg-violet-500",
+    text: "text-violet-600 dark:text-violet-400",
   },
   orange: {
     badge: "bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",

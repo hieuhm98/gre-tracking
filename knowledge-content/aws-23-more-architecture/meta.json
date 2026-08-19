@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 23,
   "title": "Kiến trúc giải pháp nâng cao & Dịch vụ khác – Event-driven, Caching, HPC, IaC, CI/CD",
   "titleEn": "More Solutions Architecture & Other Services – Event-driven, Caching, HPC, IaC, CI/CD",
   "description": "Các mẫu kiến trúc event-driven, caching, decoupling, chặn IP, HPC, IMDS và tổng hợp các dịch vụ AWS khác (CloudFormation, Beanstalk, SSM, CI/CD...) cho kỳ thi SAA-C03.",

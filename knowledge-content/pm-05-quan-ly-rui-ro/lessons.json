@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Rủi ro là gì và vì sao nó bị làm sai · Nhận diện rủi ro: tìm ở đâu",
+      "titleEn": "What a risk is and why it goes wrong · Identifying risk: where to look",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Đánh giá và ưu tiên hoá rủi ro · Bốn chiến lược xử lý rủi ro",
+      "titleEn": "Assessing and prioritising risk · Four risk response strategies",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Chỉ báo cảnh báo sớm · Theo dõi liên tục và văn hoá nói thật",
+      "titleEn": "Early warning indicators · Continuous tracking and a culture of honesty",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q21"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

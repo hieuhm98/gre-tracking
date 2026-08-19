@@ -1,0 +1,8 @@
+{
+  "group": "ba",
+  "order": 16,
+  "title": "BPMN & mô hình hoá quy trình nghiệp vụ",
+  "titleEn": "BPMN & Business Process Modeling",
+  "description": "Ký hiệu BPMN cốt lõi, pool và lane, sự kiện và gateway; mô hình as-is và to-be; BPMN so với flowchart.",
+  "descriptionEn": "Core BPMN notation, pools and lanes, events and gateways; as-is and to-be models; BPMN compared with flowcharts."
+}

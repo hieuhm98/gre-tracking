@@ -1,0 +1,8 @@
+{
+  "group": "ba",
+  "order": 23,
+  "title": "Hỗ trợ kiểm thử & UAT",
+  "titleEn": "Supporting Testing & UAT",
+  "description": "Vai trò BA trong kiểm thử, viết test case và checklist từ acceptance criteria, tổ chức UAT và xử lý kết quả.",
+  "descriptionEn": "The BA's role in testing, writing test cases and checklists from acceptance criteria, running UAT, and handling the results."
+}

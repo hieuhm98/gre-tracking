@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tại sao BA cần tư duy bảo mật? · Threat Thinking — Hỏi \"Nếu bị lạm dụng thì sao?\"",
+      "titleEn": "Why does a BA need a security mindset? · Threat Thinking — Ask \"What if it gets abused?\"",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "sec-01",
+        "sec-02",
+        "sec-03",
+        "sec-04"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Phân loại dữ liệu nhạy cảm · Authentication vs Authorization — Hai lớp bảo vệ",
+      "titleEn": "Classifying sensitive data · Authentication vs Authorization — Two layers of protection",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "sec-05",
+        "sec-06",
+        "sec-07",
+        "sec-08"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Những thứ KHÔNG ĐƯỢC làm — Red Lines · Privacy by Design — Thu thập ít, bảo vệ nhiều",
+      "titleEn": "Things you MUST NOT do — Red Lines · Privacy by Design — Collect little, protect a lot",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "sec-09",
+        "sec-10",
+        "sec-11",
+        "sec-12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Các câu hỏi security BA nên hỏi theo loại tính năng · Audit Trail — Ai làm gì, lúc nào",
+      "titleEn": "Security questions a BA should ask by feature type · Audit Trail — Who did what, when",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "sec-13",
+        "sec-14",
+        "sec-15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "GDPR và Privacy Law — Những gì BA cần biết · Security Checklist cho BA",
+      "titleEn": "GDPR and Privacy Law — What a BA needs to know · Security Checklist for a BA",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Mindset cuối cùng: Assume Breach",
+      "titleEn": "The final mindset: Assume Breach",
+      "sections": [
+        11
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

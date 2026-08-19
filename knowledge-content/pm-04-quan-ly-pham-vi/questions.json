@@ -1,0 +1,382 @@
+[
+  {
+    "id": "q1",
+    "question": "Phần nào của tài liệu phạm vi bị bỏ qua gần như luôn luôn, và hệ quả là gì?",
+    "questionEn": "Which part of a scope document is almost always omitted, and with what consequence?",
+    "options": [
+      "Danh sách những gì sẽ KHÔNG được làm — thiếu nó thì mọi thứ không được nhắc tới đều là vùng tranh chấp",
+      "Danh sách sản phẩm bàn giao chi tiết",
+      "Danh sách người phê duyệt tài liệu",
+      "Danh sách công nghệ sẽ được sử dụng"
+    ],
+    "optionsEn": [
+      "The list of what will NOT be done — without it everything unmentioned becomes contested ground",
+      "The detailed deliverables list",
+      "The list of document approvers",
+      "The list of technologies to be used"
+    ],
+    "answer": 0,
+    "explanation": "Khách hàng cho rằng thứ không được nhắc tới nằm trong phạm vi, còn đội cho rằng không; và cả hai đều tin mình đúng.",
+    "explanationEn": "The customer assumes unmentioned items are included while the team assumes they are not, and both believe they are right."
+  },
+  {
+    "id": "q2",
+    "question": "Gold plating là gì?",
+    "questionEn": "What is gold plating?",
+    "options": [
+      "Đội tự thêm những thứ hay hay mà không ai yêu cầu — dạng trượt phạm vi do chính đội gây ra",
+      "Khách hàng yêu cầu thêm tính năng cao cấp",
+      "PM cộng thêm thời gian dự phòng vào kế hoạch",
+      "Đội dùng công nghệ mới hơn mức cần thiết"
+    ],
+    "optionsEn": [
+      "The team adding nice-to-haves nobody asked for — team-generated scope slip",
+      "Customers requesting premium features",
+      "The PM adding contingency to the plan",
+      "The team using newer technology than needed"
+    ],
+    "answer": 0,
+    "explanation": "Đây là dạng trượt phạm vi ít được nói tới nhất vì nó xuất phát từ ý tốt của chính đội.",
+    "explanationEn": "It is the least discussed form of scope slip because it comes from the team's own good intentions."
+  },
+  {
+    "id": "q3",
+    "question": "Khác biệt cốt lõi giữa scope creep và scope change là gì?",
+    "questionEn": "What is the core difference between scope creep and scope change?",
+    "options": [
+      "Creep là phạm vi tăng không được nhận biết và kế hoạch không được điều chỉnh; change là thay đổi có ý thức, được định giá và kế hoạch được cập nhật",
+      "Creep đến từ khách hàng còn change đến từ đội phát triển",
+      "Creep xảy ra trong agile còn change xảy ra trong waterfall",
+      "Creep là thay đổi nhỏ còn change là thay đổi lớn"
+    ],
+    "optionsEn": [
+      "Creep is unnoticed growth with no plan adjustment; change is conscious, priced, and the plan is updated",
+      "Creep comes from customers while change comes from the team",
+      "Creep happens in agile while change happens in waterfall",
+      "Creep is small changes while change is large ones"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế creep luôn xấu còn change là bình thường và cần thiết, vì nó là dấu hiệu tổ chức đang học.",
+    "explanationEn": "So creep is always bad while change is normal and necessary, being a sign the organisation is learning."
+  },
+  {
+    "id": "q4",
+    "question": "Mục tiêu thật của quản lý phạm vi là gì?",
+    "questionEn": "What is the real goal of scope management?",
+    "options": [
+      "Đảm bảo mọi thay đổi đều được nhìn thấy, được định giá, và được ai đó có thẩm quyền chấp nhận cái giá đó",
+      "Chặn mọi thay đổi sau khi phạm vi đã được ký",
+      "Giảm số lượng yêu cầu thay đổi xuống mức thấp nhất",
+      "Bảo vệ đội khỏi mọi yêu cầu từ khách hàng"
+    ],
+    "optionsEn": [
+      "Ensuring every change is seen, priced, and accepted at that price by someone with the authority to pay",
+      "Blocking all change once scope is signed",
+      "Minimising the number of change requests",
+      "Shielding the team from all customer requests"
+    ],
+    "answer": 0,
+    "explanation": "Thay đổi là dấu hiệu tổ chức đang học, nên chặn nó là mục tiêu sai.",
+    "explanationEn": "Change signals organisational learning, so blocking it is the wrong goal."
+  },
+  {
+    "id": "q5",
+    "question": "Bài kiểm tra hiệu quả nhất cho một tài liệu phạm vi là gì?",
+    "questionEn": "What is the most effective test of a scope document?",
+    "options": [
+      "Đưa cho hai người đọc riêng và hỏi tính năng X có nằm trong đó không — nếu họ trả lời khác nhau thì tài liệu chưa xong",
+      "Đếm số trang để đảm bảo đủ chi tiết",
+      "Kiểm tra xem khách hàng đã ký chưa",
+      "Đối chiếu với tài liệu phạm vi của dự án trước"
+    ],
+    "optionsEn": [
+      "Give it to two people separately and ask whether feature X is included — differing answers mean it is unfinished",
+      "Count pages to confirm enough detail",
+      "Check whether the customer has signed it",
+      "Compare it with the previous project's document"
+    ],
+    "answer": 0,
+    "explanation": "Sản phẩm bàn giao phải cụ thể tới mức kiểm tra được, ví dụ báo cáo doanh thu theo tháng xuất được Excel và lọc theo chi nhánh.",
+    "explanationEn": "Deliverables must be specific enough to verify, such as a monthly revenue report exportable to Excel and filterable by branch."
+  },
+  {
+    "id": "q6",
+    "question": "Vì sao mỗi giả định trong tài liệu phạm vi lại quan trọng?",
+    "questionEn": "Why does each assumption in a scope document matter?",
+    "options": [
+      "Mỗi giả định là một rủi ro đã được đặt tên, và nếu nó không đúng thì phạm vi hoặc lịch trình phải đổi",
+      "Giả định giúp giảm khối lượng tài liệu cần viết",
+      "Giả định là cơ sở để tính ngân sách dự phòng",
+      "Giả định cho phép PM tránh trách nhiệm khi có sự cố"
+    ],
+    "optionsEn": [
+      "Each assumption is a named risk, and if it fails either scope or schedule must change",
+      "Assumptions reduce how much documentation is needed",
+      "Assumptions are the basis for calculating contingency",
+      "Assumptions let the PM avoid blame when things go wrong"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ giả định khách hàng cung cấp môi trường thử nghiệm trước ngày 1 tháng Tư; nếu muộn hơn thì lịch trình phải đổi.",
+    "explanationEn": "For example assuming the customer supplies a test environment before April 1; if it is later, the schedule must change."
+  },
+  {
+    "question": "Vì sao yêu cầu thay đổi phải được ghi nhận bằng văn bản?",
+    "questionEn": "Why must a change request be recorded in writing?",
+    "options": [
+      "Vì yêu cầu chỉ tồn tại bằng lời trong cuộc họp sẽ được nhớ khác đi bởi mỗi người dự",
+      "Vì quy trình ISO yêu cầu như vậy",
+      "Vì cần bằng chứng để tính thêm phí với khách hàng",
+      "Vì đội phát triển không tin lời PM"
+    ],
+    "optionsEn": [
+      "Because a request that exists only as spoken words is remembered differently by every attendee",
+      "Because ISO process requires it",
+      "Because you need evidence to bill the customer",
+      "Because the team does not trust the PM"
+    ],
+    "answer": 0,
+    "explanation": "Bước đầu tiên của quy trình kiểm soát thay đổi là ghi rõ ai yêu cầu, yêu cầu gì và vì sao.",
+    "explanationEn": "The first step of change control is recording who asked, for what, and why.",
+    "id": "q7"
+  },
+  {
+    "question": "Phân tích tác động của một yêu cầu thay đổi phải bao gồm những gì ngoài số ngày lập trình?",
+    "questionEn": "Beyond development days, what must a change impact analysis include?",
+    "options": [
+      "Kiểm thử hồi quy, tài liệu và đào tạo, tác động kiến trúc, vị trí trên đường găng, và rủi ro mới phát sinh",
+      "Chỉ cần thêm chi phí nhân sự và chi phí hạ tầng",
+      "Chỉ cần ý kiến của trưởng nhóm kỹ thuật",
+      "Chỉ cần xác nhận rằng thay đổi khả thi về mặt kỹ thuật"
+    ],
+    "optionsEn": [
+      "Regression testing, documentation and training, architectural impact, critical-path position, and new risks",
+      "Only added staffing and infrastructure cost",
+      "Only the tech lead's opinion",
+      "Only confirmation that it is technically feasible"
+    ],
+    "answer": 0,
+    "explanation": "Công sức phát triển là con số dễ nhớ nhất nhưng thường chỉ là phần nhỏ trong tổng tác động.",
+    "explanationEn": "Development effort is the easiest number to remember but usually the smaller part of the total impact.",
+    "id": "q8"
+  },
+  {
+    "question": "Điều gì xảy ra khi một thay đổi được duyệt nhưng kế hoạch không được cập nhật?",
+    "questionEn": "What happens when a change is approved but the plan is not updated?",
+    "options": [
+      "Dự án sẽ trễ mà không ai hiểu vì sao, vì mọi thứ vẫn đang được đo theo baseline cũ",
+      "Không có vấn đề gì nếu đội biết về thay đổi",
+      "Ngân sách sẽ tự động được điều chỉnh khi quyết toán",
+      "Thay đổi sẽ tự bị hoãn sang giai đoạn sau"
+    ],
+    "optionsEn": [
+      "The project runs late with nobody knowing why, since everything is still measured against the old baseline",
+      "No problem as long as the team knows about the change",
+      "Budget is adjusted automatically at settlement",
+      "The change defers itself to a later phase"
+    ],
+    "answer": 0,
+    "explanation": "Phải cập nhật kế hoạch, ngân sách, WBS, sổ rủi ro và tài liệu phạm vi cùng lúc.",
+    "explanationEn": "The plan, budget, WBS, risk register and scope document must all be updated together.",
+    "id": "q9"
+  },
+  {
+    "question": "Cách nói đúng của PM khi nhận một yêu cầu thay đổi lớn là gì?",
+    "questionEn": "What is a PM saying correctly when receiving a significant change request?",
+    "options": [
+      "Được, và đây là cái giá — anh chị chọn phương án nào? PM làm rõ cái giá và đưa quyết định tới người có thẩm quyền chi trả",
+      "Không được, vì việc này nằm ngoài phạm vi đã ký",
+      "Được, chúng tôi sẽ cố gắng thu xếp trong lịch hiện tại",
+      "Tôi cần hỏi ý kiến đội trước khi trả lời"
+    ],
+    "optionsEn": [
+      "Yes, and here is the price — which option do you want? The PM prices it and routes the decision to whoever can pay",
+      "No, this is outside the signed scope",
+      "Yes, we will try to fit it into the current schedule",
+      "I need to consult the team before answering"
+    ],
+    "answer": 0,
+    "explanation": "PM không phải là người nói không; PM là người làm rõ cái giá và đưa ra phương án cụ thể.",
+    "explanationEn": "The PM is not the person who says no; the PM prices the change and offers concrete options.",
+    "id": "q10"
+  },
+  {
+    "question": "Ước tính của đội luôn đúng nhưng dự án vẫn trễ đều đặn. Dấu hiệu này chỉ ra điều gì?",
+    "questionEn": "The team estimates accurately yet the project is consistently late. What does this signal?",
+    "options": [
+      "Việc phát sinh ngoài phạm vi đang chiếm thời gian, chứ không phải ước tính sai",
+      "Đội cần được đào tạo lại về kỹ thuật ước tính",
+      "Kế hoạch thiếu khoản dự phòng",
+      "Đường găng đã được tính sai từ đầu"
+    ],
+    "optionsEn": [
+      "Emergent out-of-scope work is consuming the time, rather than bad estimation",
+      "The team needs retraining in estimation",
+      "The plan lacks contingency",
+      "The critical path was calculated wrongly"
+    ],
+    "answer": 0,
+    "explanation": "Đây là một trong sáu dấu hiệu cảnh báo scope creep, cùng với việc người dùng liên hệ trực tiếp lập trình viên.",
+    "explanationEn": "This is one of six scope creep warning signs, along with users contacting developers directly.",
+    "id": "q11"
+  },
+  {
+    "question": "Vì sao nên có một kênh yêu cầu duy nhất, kể cả cho yêu cầu nhỏ?",
+    "questionEn": "Why have a single request channel, even for small requests?",
+    "options": [
+      "Không phải để làm chậm, mà để nhìn thấy — mọi yêu cầu đi qua một chỗ thì tổng khối lượng phát sinh trở nên hiển thị",
+      "Để PM có thể từ chối yêu cầu dễ hơn",
+      "Để giảm số lượng yêu cầu mà khách hàng gửi",
+      "Để đội không bị gián đoạn khi đang lập trình"
+    ],
+    "optionsEn": [
+      "Not to slow things down but to make them visible — one channel makes total emergent volume visible",
+      "So the PM can refuse requests more easily",
+      "To reduce how many requests customers send",
+      "So the team is not interrupted while coding"
+    ],
+    "answer": 0,
+    "explanation": "Người dùng liên hệ trực tiếp lập trình viên là dấu hiệu kênh yêu cầu chính thức đã bị vòng qua.",
+    "explanationEn": "Users contacting developers directly is a sign the official channel has been bypassed.",
+    "id": "q12"
+  },
+  {
+    "question": "Đội thường xuyên làm miễn phí những việc nhỏ hai giờ cho khách hàng. PM nên làm gì?",
+    "questionEn": "The team regularly absorbs small two-hour tasks for free. What should the PM do?",
+    "options": [
+      "Ghi lại từng việc, vì cuối tháng tổng của những việc miễn phí đó là dữ liệu cần để đàm phán — nó phải là quyết định có ghi nhận chứ không phải thói quen vô hình",
+      "Cấm đội làm bất kỳ việc nào không có trong phạm vi",
+      "Bỏ qua vì mỗi việc quá nhỏ để đáng ghi chép",
+      "Cộng thêm 20 phần trăm vào mọi ước tính để bù"
+    ],
+    "optionsEn": [
+      "Record each one, since the monthly total is the data needed to negotiate — it must be a recorded decision rather than an invisible habit",
+      "Forbid the team from doing anything out of scope",
+      "Ignore it since each task is too small to record",
+      "Add 20 percent to every estimate to compensate"
+    ],
+    "answer": 0,
+    "explanation": "Đội gánh mười việc nhỏ miễn phí mỗi tháng rồi bị đánh giá là trễ tiến độ là bất công có thể phòng được hoàn toàn bằng ghi chép.",
+    "explanationEn": "A team absorbing ten free tasks a month then judged as behind schedule is an injustice fully preventable by record-keeping.",
+    "id": "q13"
+  },
+  {
+    "question": "Khách hàng nói đây không phải thay đổi, nó vốn phải như vậy. PM nên phản ứng thế nào?",
+    "questionEn": "A customer says this is not a change, it was always meant to work this way. How should the PM respond?",
+    "options": [
+      "Quay về tài liệu phạm vi đã ký và mô tả trong đó, đừng tranh luận về ý định; nếu tài liệu thật sự mơ hồ thì thừa nhận và làm rõ ngay",
+      "Khẳng định rằng đây là thay đổi và yêu cầu ký change request",
+      "Chấp nhận làm để giữ quan hệ với khách hàng",
+      "Đưa vấn đề lên nhà tài trợ để họ quyết định"
+    ],
+    "optionsEn": [
+      "Return to the signed scope document and its wording, not to intent; if the document really is ambiguous, admit it and clarify immediately",
+      "Insist it is a change and demand a signed change request",
+      "Accept the work to preserve the relationship",
+      "Escalate to the sponsor to decide"
+    ],
+    "answer": 0,
+    "explanation": "Cãi để thắng một điểm mơ hồ sẽ mất nhiều hơn được, nhưng điểm mơ hồ đó phải được làm rõ để không lặp lại.",
+    "explanationEn": "Winning an argument over an ambiguity costs more than it gains, but that ambiguity must be clarified so it does not repeat.",
+    "id": "q14"
+  },
+  {
+    "question": "Nhà tài trợ nội bộ ép thêm phạm vi mà không cho thêm nguồn lực. Cách xử lý hiệu quả nhất là gì?",
+    "questionEn": "An internal sponsor pushes extra scope with no extra resources. What works best?",
+    "options": [
+      "Đưa dữ liệu cụ thể như đội còn 6 tuần công việc và 5 tuần thời gian, kèm ba hạng mục đề xuất bỏ — buộc sự đánh đổi trở nên hiển thị",
+      "Giải thích rằng đội đang quá tải và cần được thông cảm",
+      "Nhận thêm phạm vi rồi báo trễ khi tới hạn",
+      "Yêu cầu nhà tài trợ ký cam kết chịu trách nhiệm về việc trễ"
+    ],
+    "optionsEn": [
+      "Bring concrete data such as 6 weeks of work against 5 weeks of time, with three items recommended for removal — making the trade-off visible",
+      "Explain that the team is overloaded and needs sympathy",
+      "Accept the scope and report the slip when the date arrives",
+      "Ask the sponsor to sign accountability for the delay"
+    ],
+    "answer": 0,
+    "explanation": "Người ép thêm phạm vi thường không hình dung được cái gì sẽ mất, nên một danh sách cụ thể đổi hẳn cuộc trò chuyện.",
+    "explanationEn": "Whoever pushes extra scope usually cannot picture what will be lost, so a concrete list changes the conversation.",
+    "id": "q15"
+  },
+  {
+    "question": "Đội đề nghị cần refactor một phần hệ thống trước khi làm tiếp. Câu hỏi đúng để quyết định là gì?",
+    "questionEn": "The team proposes refactoring part of the system first. What is the right question?",
+    "options": [
+      "Nếu không làm bây giờ thì cái giá sau này là bao nhiêu? Không trả lời được thì đó là mong muốn kỹ thuật, chưa phải nhu cầu",
+      "Refactor này mất bao nhiêu ngày?",
+      "Có bao nhiêu người trong đội đồng ý với đề nghị này?",
+      "Khách hàng có chấp nhận trả tiền cho việc này không?"
+    ],
+    "optionsEn": [
+      "If we do not do it now, what does it cost later? If that cannot be answered, it is a technical preference rather than a need",
+      "How many days will the refactor take?",
+      "How many team members agree with the proposal?",
+      "Will the customer pay for this?"
+    ],
+    "answer": 0,
+    "explanation": "Thay đổi từ chính đội cũng là thay đổi hợp lệ và cần được phân tích tác động rồi quyết định dựa trên giá trị.",
+    "explanationEn": "A change from the team is a legitimate change too, needing impact analysis and a value-based decision.",
+    "id": "q16"
+  },
+  {
+    "question": "Trong agile, việc đổi phạm vi được xử lý thế nào?",
+    "questionEn": "How is scope change handled in agile?",
+    "options": [
+      "Đổi phạm vi ở phần chưa vào sprint là miễn phí và được hoan nghênh; cái không miễn phí là đổi phạm vi của sprint đang chạy",
+      "Mọi thay đổi phải đi qua quy trình phê duyệt như trong waterfall",
+      "Phạm vi được cố định ở đầu mỗi release và không đổi",
+      "Thay đổi chỉ được chấp nhận nếu Scrum Master đồng ý"
+    ],
+    "optionsEn": [
+      "Changing scope outside the current sprint is free and welcomed; what is not free is changing a running sprint",
+      "Every change must go through an approval process as in waterfall",
+      "Scope is fixed at the start of each release and does not change",
+      "Change is accepted only if the Scrum Master agrees"
+    ],
+    "answer": 0,
+    "explanation": "Đó chính là lý do sprint được bảo vệ như một ranh giới bất khả xâm phạm.",
+    "explanationEn": "That is exactly why the sprint is protected as an inviolable boundary.",
+    "id": "q17"
+  },
+  {
+    "question": "Dạng scope creep đặc trưng của môi trường agile là gì?",
+    "questionEn": "What form does scope creep take in agile?",
+    "options": [
+      "Backlog phình ra vô tận trong khi ngày phát hành cam kết vẫn không đổi, và không ai theo dõi tổng khối lượng còn lại so với thời gian còn lại",
+      "Sprint backlog bị thêm hạng mục giữa sprint",
+      "Story point của đội tăng dần qua các sprint",
+      "Số lượng sprint bị kéo dài quá kế hoạch"
+    ],
+    "optionsEn": [
+      "An endlessly swelling backlog against an unchanged committed release date, with nobody tracking total remaining work against remaining time",
+      "Items added to the sprint backlog mid-sprint",
+      "The team story points rising across sprints",
+      "The number of sprints extending beyond plan"
+    ],
+    "answer": 0,
+    "explanation": "Thứ tự backlog cho phép cắt từ dưới lên, nhưng chỉ khi ai đó nhìn thấy sớm rằng phải cắt.",
+    "explanationEn": "Backlog order lets you cut from the bottom, but only if somebody sees early that cutting is needed.",
+    "id": "q18"
+  },
+  {
+    "question": "Cách xử lý thực dụng cho hợp đồng giá cố định nhưng làm theo agile là gì?",
+    "questionEn": "What is the pragmatic approach for a fixed-price contract run in agile?",
+    "options": [
+      "Cố định tổng khối lượng như số story point hoặc số sprint, nhưng cho phép đổi nội dung — khách hàng được đổi ý về cái gì, không được đổi về bao nhiêu",
+      "Cố định toàn bộ danh sách tính năng ngay từ đầu",
+      "Cho phép đổi cả nội dung và khối lượng, rồi tính thêm phí cuối dự án",
+      "Chuyển hợp đồng sang mô hình tính theo thời gian và vật liệu"
+    ],
+    "optionsEn": [
+      "Fix the total volume as a story point or sprint count while allowing content to change — the customer may change what, not how much",
+      "Fix the full feature list from the start",
+      "Allow both content and volume to change, then bill extra at the end",
+      "Convert the contract to time and materials"
+    ],
+    "answer": 0,
+    "explanation": "Đây là tình huống rất phổ biến ở Việt Nam, và cách này giữ được tinh thần agile mà không phá vỡ ràng buộc thương mại.",
+    "explanationEn": "This is very common in Vietnam, and it preserves the agile spirit without breaking the commercial constraint.",
+    "id": "q19"
+  }
+]

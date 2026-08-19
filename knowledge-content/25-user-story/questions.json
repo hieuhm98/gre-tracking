@@ -298,5 +298,105 @@
     "answer": 1,
     "explanation": "Planning Poker: mỗi người chọn card estimate ĐỒNG THỜI (không bị ảnh hưởng bởi người khác). Nếu chênh lệch lớn (ví dụ 2 vs 8), team thảo luận để hiểu rõ story hơn. Kết quả: estimate chính xác hơn và cả team hiểu story như nhau.",
     "explanationEn": "Planning Poker: each person picks an estimate card SIMULTANEOUSLY (without being influenced by others). If there is a large gap (e.g. 2 vs 8), the team discusses to understand the story better. The result: more accurate estimates and a shared understanding of the story across the team."
+  },
+  {
+    "question": "Story Là người dùng, tôi muốn hệ thống nhanh hơn vi phạm tiêu chí INVEST nào nặng nhất?",
+    "questionEn": "The story As a user I want the system to be faster most seriously violates which INVEST criterion?",
+    "options": [
+      "Testable — không có cách nào xác minh khi nào thì coi là xong",
+      "Independent",
+      "Negotiable",
+      "Small"
+    ],
+    "optionsEn": [
+      "Testable — there is no way to verify when it is done",
+      "Independent",
+      "Negotiable",
+      "Small"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng không phải story mà là một quality attribute. Nó nên thành ràng buộc hoặc acceptance criteria có ngưỡng đo được.",
+    "explanationEn": "It is also not really a story but a quality attribute. It belongs in a constraint or in acceptance criteria with a measurable threshold.",
+    "id": "q16"
+  },
+  {
+    "question": "Phần để trong mẫu user story quan trọng ở chỗ nào?",
+    "questionEn": "Why does the so that clause of a user story matter?",
+    "options": [
+      "Nó nêu giá trị nghiệp vụ; nếu không viết được thì nên tự hỏi vì sao lại làm story này",
+      "Nó xác định người thực hiện",
+      "Nó thay thế acceptance criteria",
+      "Nó quyết định story point"
+    ],
+    "optionsEn": [
+      "It states the business value; if you cannot write it, ask why you are doing the story at all",
+      "It identifies who does the work",
+      "It replaces acceptance criteria",
+      "It determines the story points"
+    ],
+    "answer": 0,
+    "explanation": "Phần này hay bị bỏ qua nhất nhưng lại là bộ lọc tốt nhất chống lại việc xây tính năng không ai cần.",
+    "explanationEn": "It is the most frequently skipped part yet the best filter against building features nobody needs.",
+    "id": "q17"
+  },
+  {
+    "question": "Cách chia nhỏ story nào là SAI?",
+    "questionEn": "Which way of splitting a story is WRONG?",
+    "options": [
+      "Chia theo tầng kỹ thuật: một story cho giao diện, một story cho API, một story cho cơ sở dữ liệu",
+      "Chia theo bước quy trình nghiệp vụ",
+      "Chia theo loại dữ liệu, hỗ trợ một loại trước",
+      "Chia theo trường hợp đơn giản trước, ngoại lệ sau"
+    ],
+    "optionsEn": [
+      "Split by technical layer: one story for the UI, one for the API, one for the database",
+      "Split by business process step",
+      "Split by data type, supporting one type first",
+      "Split by simple case first, exceptions later"
+    ],
+    "answer": 0,
+    "explanation": "Chia theo tầng khiến không story nào mang giá trị riêng lẻ và không story nào trình diễn được. Hãy xây một lát cắt dọc mỏng đi xuyên mọi tầng.",
+    "explanationEn": "Layer-based splits leave no story delivering value on its own and none demonstrable. Build a thin vertical slice through every layer instead.",
+    "id": "q18"
+  },
+  {
+    "question": "Acceptance criteria tốt phải phủ điều gì mà nhiều người hay bỏ sót?",
+    "questionEn": "Good acceptance criteria must cover what many people forget?",
+    "options": [
+      "Các điều kiện ngoại lệ và trường hợp lỗi, không chỉ đường đi thuận lợi",
+      "Tên biến mà lập trình viên sẽ dùng",
+      "Ước tính công sức",
+      "Công nghệ sẽ được chọn"
+    ],
+    "optionsEn": [
+      "Exception conditions and error cases, not just the happy path",
+      "The variable names developers will use",
+      "The effort estimate",
+      "The technology to be chosen"
+    ],
+    "answer": 0,
+    "explanation": "Một story chỉ thực sự xong khi hệ thống xử lý đúng cả những gì có thể sai. Định dạng Given-When-Then giúp buộc phải nêu rõ điều này.",
+    "explanationEn": "A story is only truly done when the system handles what can go wrong. The Given-When-Then format forces this to be stated.",
+    "id": "q19"
+  },
+  {
+    "question": "Vì sao story point dùng đơn vị tương đối thay vì giờ?",
+    "questionEn": "Why do story points use relative units instead of hours?",
+    "options": [
+      "Vì con người ước tính kích thước tương đối tốt hơn nhiều so với thời gian tuyệt đối, và điểm tách kích thước khỏi tốc độ của đội",
+      "Vì giờ làm việc là thông tin bí mật",
+      "Vì story point luôn chính xác hơn",
+      "Vì công cụ không hỗ trợ nhập số giờ"
+    ],
+    "optionsEn": [
+      "Because people judge relative size far better than absolute duration, and points separate size from the team's speed",
+      "Because working hours are confidential",
+      "Because story points are always more accurate",
+      "Because tools cannot accept hours"
+    ],
+    "answer": 0,
+    "explanation": "Một story 5 điểm vẫn là 5 điểm dù đội mới hay đội có kinh nghiệm làm nó. Tốc độ được nắm bắt riêng bằng velocity.",
+    "explanationEn": "A 5-point story is 5 points whether a new or experienced team does it. Speed is captured separately as velocity.",
+    "id": "q20"
   }
 ]

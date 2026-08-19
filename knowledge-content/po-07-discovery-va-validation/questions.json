@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q1",
+    "question": "Nguyên nhân chính khiến phần lớn tính năng được xây không tạo ra giá trị là gì?",
+    "questionEn": "What mainly causes most built features to create no value?",
+    "options": [
+      "Chúng ta đoán sai về điều người dùng cần rồi biến phỏng đoán thành yêu cầu và code mà không kiểm chứng ở bước nào",
+      "Lập trình viên viết code chất lượng thấp",
+      "Ước tính thời gian không chính xác",
+      "Công cụ quản lý backlog chưa đủ tốt"
+    ],
+    "optionsEn": [
+      "We guess wrong about user needs, turn the guess into requirements and code, and never validate at any step",
+      "Developers write low-quality code",
+      "Time estimates are inaccurate",
+      "Backlog tools are not good enough"
+    ],
+    "answer": 0,
+    "explanation": "Vấn đề là xây đúng cách một thứ sai, nên nó không thể được sửa bằng cách lập trình giỏi hơn.",
+    "explanationEn": "The problem is building the wrong thing correctly, so better programming cannot fix it."
+  },
+  {
+    "id": "q2",
+    "question": "Quan hệ giữa discovery và delivery là gì?",
+    "questionEn": "What is the relationship between discovery and delivery?",
+    "options": [
+      "Chúng chạy song song — trong khi đội delivery cho sprint hiện tại, PO và BA discovery cho các sprint tiếp theo",
+      "Discovery phải hoàn tất trước khi delivery bắt đầu",
+      "Delivery diễn ra trước, discovery dùng để cải tiến sau khi phát hành",
+      "Chúng là hai tên gọi khác nhau của cùng một hoạt động"
+    ],
+    "optionsEn": [
+      "They run in parallel — while the team delivers this sprint, PO and BA discover for the sprints ahead",
+      "Discovery must finish before delivery starts",
+      "Delivery comes first, discovery improves things after release",
+      "They are two names for the same activity"
+    ],
+    "answer": 0,
+    "explanation": "Discovery tạo ra kiến thức và quyết định, còn delivery tạo ra phần mềm chạy được; hai dòng chảy này nuôi nhau liên tục.",
+    "explanationEn": "Discovery produces knowledge and decisions while delivery produces working software; the two streams feed each other continuously."
+  },
+  {
+    "id": "q3",
+    "question": "Bốn loại rủi ro cần kiểm chứng trước khi cam kết xây là gì?",
+    "questionEn": "What four risks should be validated before committing to build?",
+    "options": [
+      "Giá trị, khả dụng, khả thi và kinh doanh",
+      "Tiến độ, chi phí, chất lượng và phạm vi",
+      "Kỹ thuật, bảo mật, hiệu năng và vận hành",
+      "Thị trường, đối thủ, giá bán và kênh phân phối"
+    ],
+    "optionsEn": [
+      "Value, usability, feasibility and business",
+      "Schedule, cost, quality and scope",
+      "Technical, security, performance and operations",
+      "Market, competitors, pricing and channels"
+    ],
+    "answer": 0,
+    "explanation": "Rủi ro giá trị hỏi người dùng có muốn nó không, và đây là loại bị bỏ qua nhiều nhất dù tốn kém nhất.",
+    "explanationEn": "Value risk asks whether users want it, and it is the most-skipped despite being the most expensive."
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao đội thường chỉ kiểm chứng rủi ro khả thi?",
+    "questionEn": "Why do teams usually validate only feasibility risk?",
+    "options": [
+      "Vì đó là câu hỏi duy nhất có người trong phòng trả lời được ngay, còn câu có ai cần không thì không ai trả lời được nên bị lờ đi",
+      "Vì rủi ro khả thi là loại nghiêm trọng nhất",
+      "Vì ba loại rủi ro kia không thể đo lường",
+      "Vì quy trình phát triển yêu cầu đánh giá kỹ thuật trước"
+    ],
+    "optionsEn": [
+      "Because it is the only question someone in the room can answer immediately, while does-anyone-need-this has no answerer and gets ignored",
+      "Because feasibility is the most serious risk",
+      "Because the other three cannot be measured",
+      "Because the process requires technical assessment first"
+    ],
+    "answer": 0,
+    "explanation": "Đội trả lời ngay làm được, mất ba tuần; sự dễ dàng đó khiến rủi ro giá trị bị bỏ quên.",
+    "explanationEn": "The team answers yes, three weeks straight away; that ease is exactly why value risk gets forgotten."
+  },
+  {
+    "id": "q5",
+    "question": "Câu hỏi nào phù hợp với một cuộc phỏng vấn discovery?",
+    "questionEn": "Which question suits a discovery interview?",
+    "options": [
+      "Lần gần nhất anh gặp tình huống này là khi nào, và lúc đó anh làm gì?",
+      "Anh có dùng tính năng này không nếu chúng tôi làm nó?",
+      "Anh thấy thiết kế này thế nào?",
+      "Anh muốn chúng tôi ưu tiên tính năng nào trước?"
+    ],
+    "optionsEn": [
+      "When did you last hit this situation, and what did you do then?",
+      "Would you use this feature if we built it?",
+      "What do you think of this design?",
+      "Which feature would you like us to prioritise?"
+    ],
+    "answer": 0,
+    "explanation": "Hỏi về quá khứ cho ra dữ liệu hành vi thật, còn hỏi về tương lai chỉ nhận được câu trả lời lịch sự.",
+    "explanationEn": "Asking about the past yields real behavioural data, while asking about the future only yields polite answers."
+  },
+  {
+    "id": "q6",
+    "question": "Câu hỏi nào phân biệt vấn đề thật với vấn đề nói cho vui?",
+    "questionEn": "Which question separates a real problem from a conversational one?",
+    "options": [
+      "Anh đã bỏ tiền hoặc bỏ thời gian ra để giải quyết việc này chưa?",
+      "Việc này có làm anh khó chịu không?",
+      "Anh nghĩ bao nhiêu người khác cũng gặp vấn đề này?",
+      "Anh đánh giá mức độ nghiêm trọng từ 1 tới 10 là bao nhiêu?"
+    ],
+    "optionsEn": [
+      "Have you spent money or time solving this?",
+      "Does this annoy you?",
+      "How many others do you think have this problem?",
+      "How severe is it on a scale of 1 to 10?"
+    ],
+    "answer": 0,
+    "explanation": "Ý kiến thì rẻ còn hành vi thì đắt; việc đã bỏ nguồn lực ra là bằng chứng mạnh nhất về nhu cầu thật.",
+    "explanationEn": "Opinions are cheap and behaviour is expensive; having already spent resources is the strongest evidence of real need."
+  },
+  {
+    "question": "Người dùng nói tôi cần nút xuất Excel. Kỹ thuật nào giúp tìm ra vấn đề thật đằng sau?",
+    "questionEn": "A user says I need an Excel export button. Which technique finds the real problem behind it?",
+    "options": [
+      "Hỏi năm lần vì sao — để gửi sếp, vì sếp xem trên máy bay, nên vấn đề thật là xem offline",
+      "Ghi nhận yêu cầu và đưa vào backlog theo đúng lời người dùng",
+      "Hỏi thêm bốn người dùng khác xem họ có cần nút đó không",
+      "Làm prototype nút xuất Excel rồi cho họ thử"
+    ],
+    "optionsEn": [
+      "Ask why five times — to send the boss, because the boss reads on a plane, so the real problem is offline viewing",
+      "Record the request in the backlog exactly as worded",
+      "Ask four other users whether they need the button",
+      "Prototype the export button and let them try it"
+    ],
+    "answer": 0,
+    "explanation": "Người dùng thường nói giải pháp chứ không nói vấn đề, và nút Excel chỉ là một trong nhiều cách giải quyết việc xem offline.",
+    "explanationEn": "Users state solutions rather than problems, and Excel export is only one of several ways to solve offline viewing.",
+    "id": "q7"
+  },
+  {
+    "question": "Vì sao không nên bán ý tưởng trong lúc phỏng vấn discovery?",
+    "questionEn": "Why should you not sell your idea during a discovery interview?",
+    "options": [
+      "Vì ngay khi bạn bắt đầu thuyết phục, người đối diện chuyển sang chế độ lịch sự và bạn mất hết dữ liệu",
+      "Vì việc bán hàng là trách nhiệm của bộ phận kinh doanh",
+      "Vì người dùng sẽ đòi giảm giá",
+      "Vì thông tin sản phẩm chưa được phép công bố"
+    ],
+    "optionsEn": [
+      "Because the moment you persuade, the other person switches to politeness mode and you lose all your data",
+      "Because selling is the sales department's job",
+      "Because users will ask for discounts",
+      "Because product information is not yet public"
+    ],
+    "answer": 0,
+    "explanation": "Mục tiêu của phỏng vấn là thu dữ liệu về vấn đề và hành vi, và thuyết phục làm hỏng chính dữ liệu đó.",
+    "explanationEn": "The interview aims to gather data about problems and behaviour, and persuading contaminates that very data.",
+    "id": "q8"
+  },
+  {
+    "question": "Giả định nào cần được thử nghiệm TRƯỚC?",
+    "questionEn": "Which assumption should be tested FIRST?",
+    "options": [
+      "Giả định vừa quan trọng tới mức nếu sai thì cả ý tưởng sụp, vừa chưa có bằng chứng nào",
+      "Giả định dễ thử nghiệm nhất với chi phí thấp nhất",
+      "Giả định mà stakeholder quan tâm nhiều nhất",
+      "Giả định về kỹ thuật vì đội có thể trả lời ngay"
+    ],
+    "optionsEn": [
+      "The one both important enough that being wrong collapses the idea, and lacking any evidence",
+      "The easiest and cheapest one to test",
+      "The one stakeholders care most about",
+      "The technical one, since the team can answer immediately"
+    ],
+    "answer": 0,
+    "explanation": "Hai câu hỏi cần đặt là nếu sai thì ý tưởng có sụp không, và đã có bằng chứng nào chưa.",
+    "explanationEn": "The two questions are whether the idea collapses if it is wrong, and whether any evidence exists yet.",
+    "id": "q9"
+  },
+  {
+    "question": "Nguyên tắc chọn thử nghiệm trong discovery là gì?",
+    "questionEn": "What is the rule for choosing a discovery experiment?",
+    "options": [
+      "Luôn chọn thử nghiệm rẻ nhất có thể bác bỏ giả định — bạn cần đủ bằng chứng để dám bước tiếp, không cần bằng chứng hoàn hảo",
+      "Luôn chọn thử nghiệm cho kết quả chính xác nhất",
+      "Luôn bắt đầu bằng một MVP thật để có dữ liệu thị trường",
+      "Luôn chọn thử nghiệm mà stakeholder dễ hiểu nhất"
+    ],
+    "optionsEn": [
+      "Always pick the cheapest experiment that could disprove the assumption — you need enough evidence to proceed, not perfect evidence",
+      "Always pick the most accurate experiment",
+      "Always start with a real MVP for market data",
+      "Always pick the experiment stakeholders understand best"
+    ],
+    "answer": 0,
+    "explanation": "Thang thử nghiệm đi từ hỏi dữ liệu sẵn có và phỏng vấn tới prototype, landing page giả, rồi mới tới MVP thật.",
+    "explanationEn": "The ladder runs from querying existing data and interviews to prototypes, fake landing pages, and only then a real MVP.",
+    "id": "q10"
+  },
+  {
+    "question": "Cách thử nghiệm nào rẻ mà vẫn kiểm chứng được rủi ro khả dụng?",
+    "questionEn": "Which cheap experiment still validates usability risk?",
+    "options": [
+      "Prototype giấy hoặc Figma, mất khoảng một tới hai ngày",
+      "Landing page giả để đo tỷ lệ đăng ký",
+      "Spike kỹ thuật do đội phát triển thực hiện",
+      "Truy vấn dữ liệu sử dụng sẵn có trong hệ thống"
+    ],
+    "optionsEn": [
+      "A paper or Figma prototype, about one to two days",
+      "A fake landing page measuring sign-ups",
+      "A technical spike run by the development team",
+      "Querying existing usage data in the system"
+    ],
+    "answer": 0,
+    "explanation": "Landing page giả đo rủi ro giá trị, spike đo rủi ro khả thi, còn prototype là cách rẻ nhất kiểm tra người dùng có hiểu cách dùng không.",
+    "explanationEn": "A fake landing page measures value risk and a spike measures feasibility, while a prototype is the cheapest way to check comprehension.",
+    "id": "q11"
+  },
+  {
+    "question": "Câu nào mô tả đúng về MVP?",
+    "questionEn": "Which statement correctly describes an MVP?",
+    "options": [
+      "MVP nhỏ về phạm vi nhưng không thấp về chất lượng — một MVP đầy lỗi chỉ dạy bạn rằng người dùng ghét lỗi",
+      "MVP là bản rẻ tiền chấp nhận chất lượng thấp để ra thị trường nhanh",
+      "MVP là giai đoạn một của một kế hoạch ba giai đoạn đã chốt",
+      "MVP tồn tại chủ yếu để tiết kiệm ngân sách phát triển"
+    ],
+    "optionsEn": [
+      "An MVP is small in scope but not low in quality — a buggy MVP only teaches you users dislike bugs",
+      "An MVP is a cheap build accepting low quality to reach market fast",
+      "An MVP is phase one of an already-committed three-phase plan",
+      "An MVP exists mainly to save development budget"
+    ],
+    "answer": 0,
+    "explanation": "MVP là phiên bản nhỏ nhất cho phép bạn học được điều quan trọng nhất từ người dùng thật, và tiết kiệm chỉ là hệ quả.",
+    "explanationEn": "An MVP is the smallest version that lets you learn the most important thing from real users; saving is only a side effect.",
+    "id": "q12"
+  },
+  {
+    "question": "Câu hỏi kiểm tra một MVP có đúng nghĩa hay không là gì?",
+    "questionEn": "What question tests whether something is really an MVP?",
+    "options": [
+      "Kết quả nào của MVP này sẽ khiến chúng ta DỪNG lại? Nếu không có câu trả lời thì đó chỉ là giao hàng từng phần",
+      "MVP này mất bao nhiêu tuần để xây?",
+      "MVP này có bao nhiêu tính năng so với bản đầy đủ?",
+      "MVP này có đủ tốt để tính phí người dùng không?"
+    ],
+    "optionsEn": [
+      "What result from this MVP would make us STOP? With no answer it is just incremental delivery",
+      "How many weeks will this MVP take?",
+      "How many features does it have versus the full version?",
+      "Is it good enough to charge users for?"
+    ],
+    "answer": 0,
+    "explanation": "Nếu đã quyết trước sẽ làm cả ba giai đoạn thì không có kết quả nào khiến bạn dừng, nên đó không phải MVP.",
+    "explanationEn": "If all three phases are already committed, no result would make you stop, so it is not an MVP.",
+    "id": "q13"
+  },
+  {
+    "question": "Chi phí ẩn của việc tung một MVP tồi ra cho khách hàng thật là gì?",
+    "questionEn": "What is the hidden cost of releasing a poor MVP to real customers?",
+    "options": [
+      "Làm hỏng lòng tin và mất luôn cơ hội thử lần hai với chính nhóm người dùng đó",
+      "Tốn thêm chi phí hạ tầng để vận hành",
+      "Làm đối thủ biết được hướng đi của sản phẩm",
+      "Khiến đội phát triển mất động lực"
+    ],
+    "optionsEn": [
+      "It damages trust and costs you the chance to try again with those same users",
+      "Extra infrastructure cost to operate it",
+      "Competitors learn your product direction",
+      "The development team loses motivation"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế MVP phải nhỏ về phạm vi nhưng vẫn đạt chất lượng đủ để phản hồi nói về ý tưởng chứ không nói về lỗi.",
+    "explanationEn": "So an MVP must be small in scope yet good enough that feedback is about the idea rather than the bugs.",
+    "id": "q14"
+  },
+  {
+    "question": "Cách hiệu quả nhất để chống thiên kiến xác nhận khi đọc kết quả thử nghiệm là gì?",
+    "questionEn": "What best defends against confirmation bias when reading experiment results?",
+    "options": [
+      "Viết ra tiêu chí thành công TRƯỚC khi chạy thử nghiệm, ví dụ nếu dưới 20 phần trăm đến bước hai thì bỏ hướng này",
+      "Mời thêm nhiều người cùng phân tích kết quả",
+      "Chạy thử nghiệm lần thứ hai để xác nhận",
+      "Tăng kích thước mẫu lên gấp đôi"
+    ],
+    "optionsEn": [
+      "Write success criteria BEFORE running it, such as dropping the direction if under 20 percent reach step two",
+      "Invite more people to analyse the results",
+      "Run the experiment a second time to confirm",
+      "Double the sample size"
+    ],
+    "answer": 0,
+    "explanation": "Không có tiêu chí viết trước, bạn sẽ nhớ ba người khen và quên bảy người thờ ơ.",
+    "explanationEn": "Without criteria written in advance, you remember the three who praised it and forget the seven who shrugged.",
+    "id": "q15"
+  },
+  {
+    "question": "Vì sao câu ý tưởng hay đấy không được coi là dữ liệu?",
+    "questionEn": "Why does nice idea not count as data?",
+    "options": [
+      "Vì đó là sự lịch sự chứ không phải nhu cầu — dữ liệu là hành vi như có đăng ký, có quay lại, có trả tiền không",
+      "Vì người nói không phải là người dùng mục tiêu",
+      "Vì nó không được ghi âm lại",
+      "Vì một người không đủ để kết luận"
+    ],
+    "optionsEn": [
+      "Because it is politeness rather than need — data is behaviour such as signing up, returning, or paying",
+      "Because the speaker is not a target user",
+      "Because it was not recorded",
+      "Because one person is not enough to conclude"
+    ],
+    "answer": 0,
+    "explanation": "Nhầm lịch sự với nhu cầu là một trong bốn cái bẫy khi diễn giải kết quả discovery.",
+    "explanationEn": "Mistaking politeness for need is one of the four traps in interpreting discovery results.",
+    "id": "q16"
+  },
+  {
+    "question": "Khi nào một phản hồi chuyển từ nhiễu thành tín hiệu?",
+    "questionEn": "When does feedback shift from noise to signal?",
+    "options": [
+      "Khi nó lặp lại ở người thứ ba và thứ tư — còn một người gào rất to không đại diện cho một nghìn người im lặng",
+      "Khi nó đến từ khách hàng lớn nhất",
+      "Khi nó được nêu trong một cuộc họp chính thức",
+      "Khi nó trùng với dự đoán ban đầu của đội"
+    ],
+    "optionsEn": [
+      "When it repeats at the third and fourth person — one very loud user does not represent a thousand silent ones",
+      "When it comes from the largest customer",
+      "When it is raised in a formal meeting",
+      "When it matches the team's original prediction"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng năm tới tám cuộc phỏng vấn cho một nhóm người dùng thường đủ để các mẫu hình lặp lại xuất hiện.",
+    "explanationEn": "About five to eight interviews per user group is usually enough for repeating patterns to appear.",
+    "id": "q17"
+  },
+  {
+    "question": "Kết quả có giá trị nhất của discovery là gì?",
+    "questionEn": "What is discovery's most valuable outcome?",
+    "options": [
+      "Một quyết định KHÔNG XÂY — dừng một ý tưởng sau hai ngày thử nghiệm thay vì hai tháng lập trình",
+      "Một danh sách yêu cầu chi tiết cho đội phát triển",
+      "Một bản prototype được stakeholder phê duyệt",
+      "Một MVP được phát hành đúng hạn"
+    ],
+    "optionsEn": [
+      "A decision NOT to build — killing an idea after two days of testing instead of two months of coding",
+      "A detailed requirement list for the team",
+      "A prototype approved by stakeholders",
+      "An MVP released on schedule"
+    ],
+    "answer": 0,
+    "explanation": "Ba kết luận hợp lệ sau một thử nghiệm là tiếp tục, xoay hướng và dừng lại; đội chưa bao giờ chọn dừng thì discovery chỉ là nghi lễ.",
+    "explanationEn": "The three valid conclusions are continue, pivot, and stop; a team that never stops is performing a ritual.",
+    "id": "q18"
+  }
+]

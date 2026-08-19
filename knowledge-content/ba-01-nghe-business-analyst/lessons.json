@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Định nghĩa: BA làm cầu nối giữa hai thế giới · Bốn nhóm công việc chính",
+      "titleEn": "The definition: a bridge between two worlds · Four main groups of work",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Một ngày làm việc điển hình · BA khác gì các vai trò lân cận",
+      "titleEn": "A typical working day · How a BA differs from neighbouring roles",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "BA làm việc ở đâu trong vòng đời sản phẩm · Ba phẩm chất phân biệt BA giỏi với BA trung bình",
+      "titleEn": "Where the BA sits in the product life cycle · Three qualities separating good BAs from average ones",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Những khó khăn thật của nghề",
+      "titleEn": "The real difficulties of the job",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

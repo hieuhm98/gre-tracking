@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 15,
+  "title": "Tự động hoá quy trình, phân tích dữ liệu & hệ thống nhúng",
+  "titleEn": "Process Automation, Analytics & Embedded Systems",
+  "description": "Yêu cầu cho dự án tự động hoá quy trình nghiệp vụ, dự án business analytics và data warehouse, cùng hệ thống nhúng và thời gian thực với ràng buộc phần cứng, an toàn và chứng nhận.",
+  "descriptionEn": "Requirements for business process automation projects, business analytics and data warehouse projects, and embedded and real-time systems with their hardware, safety, and certification constraints."
+}

@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 8,
   "title": "API là gì?",
   "titleEn": "What is an API?",
   "description": "REST API, endpoint, request/response, HTTP status code, phân trang, webhook và cách các hệ thống giao tiếp với nhau.",

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Nguyên tắc quan trọng nhất khi chọn công cụ cho đội là gì?",
+    "questionEn": "What is the most important principle when choosing tools for a team?",
+    "options": [
+      "Ưu tiên công cụ đội sẽ THỰC SỰ dùng — một công cụ đơn giản được dùng nhất quán vượt xa một công cụ mạnh mẽ bị né tránh",
+      "Chọn công cụ có nhiều tính năng nhất",
+      "Chọn công cụ mà đối thủ đang dùng",
+      "Chọn công cụ rẻ nhất trong hạng mục"
+    ],
+    "optionsEn": [
+      "Prefer the tool the team will ACTUALLY use — simple and consistent beats powerful and avoided",
+      "Pick the tool with the most features",
+      "Pick whatever competitors use",
+      "Pick the cheapest in its category"
+    ],
+    "answer": 0,
+    "explanation": "Ba nguyên tắc còn lại là ưu tiên tích hợp hơn tính năng đơn lẻ, giảm thiểu số nơi cùng một thông tin tồn tại, và đừng để công cụ quyết định quy trình.",
+    "explanationEn": "The other three: prefer integration over standalone features, minimise where the same information lives, and do not let the tool dictate the process."
+  },
+  {
+    "id": "q2",
+    "question": "Cảnh báo quan trọng nhất về công cụ quản lý yêu cầu là gì?",
+    "questionEn": "What is the most important warning about requirements tooling?",
+    "options": [
+      "Công cụ không cho bạn yêu cầu tốt — tổ chức có kỹ năng phân tích kém sẽ chỉ có yêu cầu tệ được tổ chức đẹp hơn",
+      "Công cụ quá đắt cho dự án nhỏ",
+      "Công cụ cần thời gian đào tạo dài",
+      "Công cụ không hỗ trợ tiếng Việt"
+    ],
+    "optionsEn": [
+      "A tool does not give you good requirements — weak analysis just yields bad requirements organized attractively",
+      "Tools are too expensive for small projects",
+      "Tools need long training",
+      "Tools lack local language support"
+    ],
+    "answer": 0,
+    "explanation": "Công cụ giúp tổ chức, tìm kiếm, liên kết và theo dõi, nhưng không khai thác, không làm rõ và không giải quyết mâu thuẫn giữa stakeholder.",
+    "explanationEn": "Tools help organize, search, link, and track, but do not elicit, clarify, or resolve stakeholder conflict."
+  },
+  {
+    "id": "q3",
+    "question": "Thực hành nào tạo ra liên kết truy vết yêu cầu tới mã một cách TỰ ĐỘNG?",
+    "questionEn": "Which practice creates requirement-to-code traceability AUTOMATICALLY?",
+    "options": [
+      "Commit mã có tham chiếu ID của issue trong Jira, nên liên kết được tạo như tác dụng phụ của công việc bình thường",
+      "Cập nhật một bảng tính truy vết mỗi cuối sprint",
+      "Yêu cầu lập trình viên báo cáo hằng ngày",
+      "Xuất báo cáo từ công cụ mỗi tháng"
+    ],
+    "optionsEn": [
+      "Commit messages referencing the Jira issue ID, so the link is created as a side effect of normal work",
+      "Updating a traceability spreadsheet at each sprint end",
+      "Asking developers to report daily",
+      "Exporting a monthly report from the tool"
+    ],
+    "answer": 0,
+    "explanation": "Đây là cách truy vết bền vững nhất vì nó không đòi hỏi ai phải nhớ cập nhật một bảng riêng, thứ mà mọi người sẽ quên.",
+    "explanationEn": "This is the most durable form because nobody must remember updating a separate table, which everyone forgets."
+  },
+  {
+    "id": "q4",
+    "question": "Bẫy nào xảy ra khi cấu hình Jira với hai mươi trường bắt buộc?",
+    "questionEn": "What trap arises from configuring Jira with twenty mandatory fields?",
+    "options": [
+      "Mọi người sẽ điền bừa để vượt qua form và dữ liệu trở nên vô giá trị",
+      "Công cụ sẽ chạy chậm hơn",
+      "Giấy phép sẽ tính phí cao hơn",
+      "Đội sẽ tạo ít issue hơn"
+    ],
+    "optionsEn": [
+      "People fill in anything to get past the form and the data becomes worthless",
+      "The tool runs slower",
+      "The licence costs more",
+      "The team creates fewer issues"
+    ],
+    "answer": 0,
+    "explanation": "Chỉ theo dõi những thuộc tính bạn thực sự dùng để ra quyết định. Với mỗi trường, hãy hỏi quyết định nào sẽ được đưa ra dựa trên nó.",
+    "explanationEn": "Track only the attributes you actually use to decide. For each field ask what decision rests on it."
+  },
+  {
+    "id": "q5",
+    "question": "Nguyên tắc phân chia giữa Jira và Confluence là gì?",
+    "questionEn": "What is the dividing principle between Jira and Confluence?",
+    "options": [
+      "Jira cho thứ có vòng đời ngắn và gắn với công việc đang chạy; Confluence cho thứ sống lâu hơn dự án",
+      "Jira cho lập trình viên; Confluence cho khách hàng",
+      "Jira cho dự án agile; Confluence cho dự án waterfall",
+      "Jira cho tài liệu; Confluence cho công việc"
+    ],
+    "optionsEn": [
+      "Jira for short-lived items tied to running work; Confluence for what outlives the project",
+      "Jira for developers; Confluence for customers",
+      "Jira for agile projects; Confluence for waterfall",
+      "Jira for documents; Confluence for work"
+    ],
+    "answer": 0,
+    "explanation": "Business rules catalog, data dictionary, glossary và quyết định kiến trúc kèm lý do đều thuộc Confluence vì chúng sống lâu hơn mọi sprint.",
+    "explanationEn": "The business rules catalog, data dictionary, glossary, and architectural decisions all belong in Confluence since they outlive any sprint."
+  },
+  {
+    "id": "q6",
+    "question": "Vì sao mỗi trang Confluence quan trọng cần có người sở hữu và ngày cập nhật cuối?",
+    "questionEn": "Why does every important Confluence page need an owner and a last-updated date?",
+    "options": [
+      "Vì trang không có người sở hữu sẽ lỗi thời và không ai sửa, mà một trang sai gây hại hơn không có trang nào",
+      "Vì quy định kiểm toán yêu cầu",
+      "Vì công cụ tự động xoá trang cũ",
+      "Vì cần biết ai chịu trách nhiệm khi có lỗi"
+    ],
+    "optionsEn": [
+      "Because an ownerless page goes stale and nobody fixes it, and a wrong page does more harm than no page",
+      "Because audit regulations require it",
+      "Because the tool auto-deletes old pages",
+      "Because someone must be blamed for errors"
+    ],
+    "answer": 0,
+    "explanation": "Hãy xoá hoặc đánh dấu lỗi thời những trang không còn đúng, thay vì để chúng nằm đó tạo tự tin sai lầm cho người đọc.",
+    "explanationEn": "Delete or mark obsolete pages that are no longer correct rather than leaving them to manufacture false confidence."
+  },
+  {
+    "id": "q7",
+    "question": "Khi nào công cụ mô hình hoá chuyên dụng đáng cân nhắc hơn công cụ vẽ tổng quát?",
+    "questionEn": "When is a dedicated modeling tool worth more than a general drawing tool?",
+    "options": [
+      "Trên dự án lớn cần thực thi quy tắc ký hiệu, liên kết nhiều mô hình với nhau và truy vết tới yêu cầu tương ứng",
+      "Bất cứ khi nào cần vẽ sơ đồ",
+      "Khi đội có ngân sách dư",
+      "Khi khách hàng yêu cầu sơ đồ đẹp"
+    ],
+    "optionsEn": [
+      "On large projects needing notation rule enforcement, linked models, and tracing to corresponding requirements",
+      "Whenever a diagram is needed",
+      "When the team has spare budget",
+      "When customers want attractive diagrams"
+    ],
+    "answer": 0,
+    "explanation": "Với đa số dự án, một công cụ vẽ tổng quát như Draw.io là đủ. Đừng mua công cụ đắt tiền khi vấn đề thật là không ai đọc sơ đồ bạn vẽ.",
+    "explanationEn": "For most projects a general tool such as Draw.io suffices. Do not buy an expensive tool when the real problem is nobody reads your diagrams."
+  },
+  {
+    "id": "q8",
+    "question": "Điều gì quan trọng hơn việc chọn công cụ vẽ sơ đồ nào?",
+    "questionEn": "What matters more than which diagramming tool you pick?",
+    "options": [
+      "Cả dự án — lý tưởng là cả tổ chức — theo cùng MỘT quy ước ký hiệu, và mọi người review đều biết cách diễn giải",
+      "Sơ đồ được vẽ bằng màu sắc thống nhất",
+      "Sơ đồ được xuất ra định dạng PDF",
+      "Sơ đồ được lưu trong cùng một thư mục"
+    ],
+    "optionsEn": [
+      "The whole project — ideally the whole organization — following ONE notation convention that all reviewers can interpret",
+      "Diagrams using consistent colours",
+      "Diagrams exported to PDF",
+      "Diagrams stored in one folder"
+    ],
+    "answer": 0,
+    "explanation": "Ký hiệu nào không quan trọng bằng việc mọi người phải review hoặc dùng mô hình đều hiểu chúng theo cùng một cách.",
+    "explanationEn": "Which notation matters far less than everyone who must review or use the models interpreting them the same way."
+  },
+  {
+    "id": "q9",
+    "question": "Vì sao Balsamiq là lựa chọn tốt cho BA khi vẽ wireframe?",
+    "questionEn": "Why is Balsamiq a good BA choice for wireframing?",
+    "options": [
+      "Vì nó cố ý trông như vẽ tay, và chính sự thô sơ khiến người xem góp ý về cấu trúc thay vì về màu sắc",
+      "Vì nó có nhiều thư viện thành phần nhất",
+      "Vì nó xuất được mã HTML",
+      "Vì nó miễn phí hoàn toàn"
+    ],
+    "optionsEn": [
+      "Because it deliberately looks hand-drawn, and the crudeness makes reviewers comment on structure rather than colour",
+      "Because it has the largest component library",
+      "Because it exports HTML",
+      "Because it is entirely free"
+    ],
+    "answer": 0,
+    "explanation": "Prototype càng thô sơ thì phản hồi giai đoạn đầu càng có giá trị, vì người ta nói về việc quy trình có đúng không thay vì về màu nút bấm.",
+    "explanationEn": "The cruder the prototype, the more valuable the early feedback, since people discuss whether the process is right rather than button colours."
+  },
+  {
+    "id": "q10",
+    "question": "Với BA, Figma hữu ích nhất trong việc gì?",
+    "questionEn": "For a BA, what is Figma most useful for?",
+    "options": [
+      "ĐỌC và BÌNH LUẬN trên thiết kế của designer, để lại câu hỏi ngay tại vị trí có vấn đề",
+      "Vẽ toàn bộ giao diện thay cho designer",
+      "Xuất mã nguồn cho lập trình viên",
+      "Quản lý backlog và sprint"
+    ],
+    "optionsEn": [
+      "READING and COMMENTING on the designer's work, leaving questions right where the problem is",
+      "Drawing the whole interface in place of the designer",
+      "Exporting source code for developers",
+      "Managing the backlog and sprints"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ bình luận hữu ích: trạng thái rỗng của danh sách này hiển thị gì, và người dùng không đủ quyền thấy gì ở đây.",
+    "explanationEn": "Useful comment examples: what does this list's empty state show, and what does an unauthorised user see here."
+  },
+  {
+    "id": "q11",
+    "question": "Ba cách dùng AI có tỷ lệ hữu ích cao nhất trong công việc BA là gì?",
+    "questionEn": "What are the three highest-hit-rate AI uses in BA work?",
+    "options": [
+      "Sinh test case từ acceptance criteria; phản biện tài liệu của bạn; tìm khoảng trống trong mô tả quy trình",
+      "Ước tính công sức; quyết định ưu tiên; chọn công nghệ",
+      "Viết toàn bộ tài liệu; dịch sang nhiều ngôn ngữ; tạo sơ đồ",
+      "Phỏng vấn stakeholder; quan sát người dùng; tổ chức workshop"
+    ],
+    "optionsEn": [
+      "Generating test cases from acceptance criteria; challenging your document; finding gaps in a process description",
+      "Estimating effort; deciding priority; choosing technology",
+      "Writing entire documents; translating; generating diagrams",
+      "Interviewing stakeholders; observing users; running workshops"
+    ],
+    "answer": 0,
+    "explanation": "Ước tính thuộc về đội phát triển và ưu tiên hoá thuộc về Product Owner, còn phỏng vấn và quan sát cần sự hiện diện của con người.",
+    "explanationEn": "Estimation belongs to the team and prioritization to the Product Owner, while interviewing and observation need human presence."
+  },
+  {
+    "id": "q12",
+    "question": "Rủi ro nào phải quản lý khi dùng công cụ AI công cộng cho tài liệu dự án?",
+    "questionEn": "Which risk must be managed when using public AI tools with project documents?",
+    "options": [
+      "Rò rỉ dữ liệu — dán tài liệu yêu cầu hoặc dữ liệu khách hàng có thể vi phạm hợp đồng bảo mật, nên phải biết chính sách công ty trước",
+      "AI sẽ từ chối xử lý tài liệu dài",
+      "AI sẽ định dạng lại tài liệu sai",
+      "AI sẽ tính phí theo số trang"
+    ],
+    "optionsEn": [
+      "Data leakage — pasting requirements or customer data can breach confidentiality agreements, so know the company policy first",
+      "AI will refuse long documents",
+      "AI will reformat the document incorrectly",
+      "AI will charge per page"
+    ],
+    "answer": 0,
+    "explanation": "Hai rủi ro còn lại là ảo giác, tức thông tin nghe hợp lý nhưng sai hoàn toàn, và mất chiều sâu tư duy khi luôn để AI viết bản nháp.",
+    "explanationEn": "The other two risks are hallucination, meaning plausible but false information, and loss of thinking depth when AI always drafts."
+  },
+  {
+    "id": "q13",
+    "question": "Cách dùng AI hiệu quả nhất với BA được mô tả thế nào?",
+    "questionEn": "How is the most effective AI use for a BA described?",
+    "options": [
+      "Coi AI như một người review luôn sẵn sàng, và prompt mạnh nhất là yêu cầu nó TÌM LỖI trong thứ bạn đã viết",
+      "Coi AI như người viết thay để tiết kiệm thời gian",
+      "Coi AI như nguồn thông tin chính thức về quy định ngành",
+      "Coi AI như người ra quyết định thay cho stakeholder"
+    ],
+    "optionsEn": [
+      "Treating AI as an always-available reviewer, with the strongest prompt asking it to FIND FAULTS in what you wrote",
+      "Treating AI as a ghostwriter to save time",
+      "Treating AI as an authoritative source on industry regulations",
+      "Treating AI as a decision-maker in place of stakeholders"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ prompt mạnh: đọc yêu cầu này và liệt kê mọi cách hiểu khác nhau mà một lập trình viên có thể có.",
+    "explanationEn": "A strong prompt example: read this requirement and list every way a developer could interpret it."
+  },
+  {
+    "id": "q14",
+    "question": "Bộ công cụ tối thiểu bắt buộc cho một BA gồm những gì?",
+    "questionEn": "What is the essential minimum toolkit for a BA?",
+    "options": [
+      "Công cụ quản lý công việc, công cụ tài liệu, công cụ vẽ sơ đồ, bảng tính và SQL",
+      "Công cụ mô hình hoá chuyên dụng, Figma, Miro và một trợ lý AI",
+      "Chỉ cần Jira và Confluence",
+      "Chỉ cần bảng tính và email"
+    ],
+    "optionsEn": [
+      "A work tracker, a documentation tool, a diagramming tool, a spreadsheet, and SQL",
+      "A dedicated modeling tool, Figma, Miro, and an AI assistant",
+      "Only Jira and Confluence",
+      "Only a spreadsheet and email"
+    ],
+    "answer": 0,
+    "explanation": "SQL nằm trong nhóm bắt buộc vì nó cho phép BA tự truy vấn dữ liệu và kiểm chứng giả định mà không phải chờ ai.",
+    "explanationEn": "SQL is essential because it lets a BA query data and test assumptions without waiting on anyone."
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao bảng tính vẫn là công cụ quan trọng với BA dù có nhiều công cụ chuyên dụng?",
+    "questionEn": "Why do spreadsheets remain important to BAs despite specialised tools?",
+    "options": [
+      "Vì nó vẫn là công cụ mạnh nhất cho phân tích dữ liệu nhanh, ma trận truy vết đơn giản và danh sách kiểm",
+      "Vì mọi công ty đều có sẵn giấy phép",
+      "Vì nó dễ học hơn các công cụ khác",
+      "Vì khách hàng chỉ chấp nhận định dạng bảng tính"
+    ],
+    "optionsEn": [
+      "Because it remains the strongest tool for quick data analysis, simple traceability matrices, and checklists",
+      "Because every company already has a licence",
+      "Because it is easier to learn than other tools",
+      "Because customers only accept spreadsheet formats"
+    ],
+    "answer": 0,
+    "explanation": "Tuy nhiên đừng dùng bảng tính làm nguồn sự thật cho yêu cầu, vì nó không quản lý được phiên bản và liên kết truy vết ở quy mô lớn.",
+    "explanationEn": "But do not use a spreadsheet as the source of truth for requirements, since it cannot manage versions or trace links at scale."
+  },
+  {
+    "id": "q16",
+    "question": "Thứ gì quan trọng hơn mọi công cụ trong bộ công cụ của BA?",
+    "questionEn": "What matters more than any tool in a BA's kit?",
+    "options": [
+      "Khả năng đặt câu hỏi đúng — công cụ khuếch đại năng lực sẵn có chứ không tạo ra năng lực mới",
+      "Kỹ năng sử dụng thành thạo mọi tính năng của công cụ",
+      "Số lượng công cụ mà BA biết dùng",
+      "Chứng chỉ về công cụ quản lý dự án"
+    ],
+    "optionsEn": [
+      "The ability to ask the right question — tools amplify existing capability rather than creating new capability",
+      "Mastery of every feature in the tool",
+      "How many tools the BA can operate",
+      "Certification in project management tools"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng là lý do việc đầu tư vào kỹ năng lõi như đặt câu hỏi, lắng nghe và viết rõ ràng luôn được ưu tiên hơn việc học thêm công cụ mới.",
+    "explanationEn": "This is why investing in core skills like questioning, listening, and clear writing always outranks learning another tool."
+  }
+]

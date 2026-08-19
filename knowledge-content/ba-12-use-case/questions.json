@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Đâu là một use case hợp lệ?",
+    "questionEn": "Which is a valid use case?",
+    "options": [
+      "Đặt yêu cầu mua hoá chất",
+      "Nhấn nút Lưu",
+      "Hiển thị danh sách sản phẩm",
+      "Kiểm tra định dạng email"
+    ],
+    "optionsEn": [
+      "Place a chemical request",
+      "Click the Save button",
+      "Display the product list",
+      "Validate the email format"
+    ],
+    "answer": 0,
+    "explanation": "Use case luôn hướng tới một mục tiêu hoàn chỉnh có giá trị với actor, không phải một thao tác lẻ hay một bước xử lý bên trong.",
+    "explanationEn": "A use case always targets a complete goal of value to the actor, not an isolated action or an internal processing step."
+  },
+  {
+    "id": "q2",
+    "question": "Khi nào nên dùng đặc tả use case thay vì chỉ dùng user story?",
+    "questionEn": "When should you use a use case specification rather than only a user story?",
+    "options": [
+      "Khi luồng có nhiều nhánh và ngoại lệ, nhiều actor tham gia, cần tài liệu hợp đồng, hoặc đội ở xa nhau",
+      "Khi đội ngồi cùng phòng và trao đổi liên tục",
+      "Khi cần ưu tiên hoá backlog nhanh",
+      "Khi story đã có acceptance criteria"
+    ],
+    "optionsEn": [
+      "When the flow has many branches and exceptions, several actors, contractual documentation needs, or a distributed team",
+      "When the team sits together and talks constantly",
+      "When you need to prioritize the backlog quickly",
+      "When the story already has acceptance criteria"
+    ],
+    "answer": 0,
+    "explanation": "Đây không phải lựa chọn loại trừ nhau: nhiều đội dùng story để ưu tiên hoá và lên kế hoạch, rồi viết use case cho những luồng phức tạp nhất.",
+    "explanationEn": "It is not either-or: many teams use stories to prioritize and plan, then write use cases for the most complex flows."
+  },
+  {
+    "id": "q3",
+    "question": "Hai trường nào của đặc tả use case bị bỏ qua nhiều nhất và gây hậu quả gì?",
+    "questionEn": "Which two use case fields are most often omitted, and with what consequence?",
+    "options": [
+      "Precondition và postcondition; thiếu chúng lập trình viên không biết use case bắt đầu và kết thúc ở trạng thái nào, gây lỗi tích hợp giữa các màn hình",
+      "Tên và mã use case; thiếu chúng thì khó tham chiếu",
+      "Actor chính và actor phụ; thiếu chúng thì không biết ai dùng",
+      "Mô tả ngắn và trigger; thiếu chúng thì khó hiểu mục đích"
+    ],
+    "optionsEn": [
+      "Preconditions and postconditions; without them developers do not know the starting and ending state, causing integration defects between screens",
+      "The name and ID; without them referencing is hard",
+      "Primary and secondary actors; without them you do not know who uses it",
+      "The brief description and trigger; without them the purpose is unclear"
+    ],
+    "answer": 0,
+    "explanation": "Postcondition đặc biệt quan trọng vì nó là điều kiện trước của use case tiếp theo trong chuỗi công việc của người dùng.",
+    "explanationEn": "Postconditions matter especially because they become the precondition of the next use case in the user's chain of work."
+  },
+  {
+    "id": "q4",
+    "question": "Luồng chính của use case nên được viết theo cấu trúc nào?",
+    "questionEn": "How should a use case normal flow be structured?",
+    "options": [
+      "Theo cặp hành động của actor rồi phản hồi của hệ thống, đánh số từng bước, giữ trong khoảng 5 tới 10 bước",
+      "Theo đoạn văn liền mạch mô tả toàn bộ quy trình",
+      "Theo danh sách các màn hình người dùng đi qua",
+      "Theo thứ tự các bảng dữ liệu bị tác động"
+    ],
+    "optionsEn": [
+      "In actor action then system response pairs, with numbered steps, kept to 5 to 10 steps",
+      "As a continuous paragraph describing the whole process",
+      "As a list of the screens the user passes through",
+      "In the order of the data tables affected"
+    ],
+    "answer": 0,
+    "explanation": "Đánh số từng bước cho phép các luồng thay thế và ngoại lệ tham chiếu chính xác tới điểm rẽ nhánh.",
+    "explanationEn": "Numbering the steps lets alternative and exception flows reference the exact branch point."
+  },
+  {
+    "id": "q5",
+    "question": "Vì sao KHÔNG nên mô tả giao diện trong luồng use case?",
+    "questionEn": "Why should you NOT describe the interface inside a use case flow?",
+    "options": [
+      "Vì nó khoá chặt thiết kế và làm tài liệu lỗi thời ngay khi giao diện thay đổi",
+      "Vì lập trình viên không đọc phần mô tả giao diện",
+      "Vì giao diện thuộc về tài liệu riêng của designer",
+      "Vì nó làm luồng dài hơn"
+    ],
+    "optionsEn": [
+      "Because it locks the design and makes the document stale the moment the interface changes",
+      "Because developers do not read interface descriptions",
+      "Because interfaces belong in the designer's separate document",
+      "Because it makes the flow longer"
+    ],
+    "answer": 0,
+    "explanation": "Hãy viết hệ thống hiển thị các phương án khả dụng thay vì hệ thống hiển thị bảng có ba cột.",
+    "explanationEn": "Write the system displays the available options rather than the system shows a three-column table."
+  },
+  {
+    "id": "q6",
+    "question": "Sai lầm nghiêm trọng nhất khi viết use case là gì?",
+    "questionEn": "What is the most serious mistake when writing a use case?",
+    "options": [
+      "Chỉ viết luồng chính, vì phần lớn độ phức tạp và phần lớn bug nằm ở luồng ngoại lệ",
+      "Đánh số bước không liên tục",
+      "Viết luồng quá ngắn",
+      "Dùng quá nhiều actor"
+    ],
+    "optionsEn": [
+      "Writing only the normal flow, since most complexity and most defects live in the exception flows",
+      "Numbering steps non-sequentially",
+      "Writing flows that are too short",
+      "Using too many actors"
+    ],
+    "answer": 0,
+    "explanation": "Đường đi thuận lợi thường dễ hiện thực. Cái tốn thời gian và sinh ra bug chính là những gì xảy ra khi có lỗi.",
+    "explanationEn": "The happy path is usually easy to implement. What consumes time and generates defects is what happens when things fail."
+  },
+  {
+    "id": "q7",
+    "question": "Ký hiệu 4a trong đặc tả use case nghĩa là gì?",
+    "questionEn": "What does the notation 4a mean in a use case specification?",
+    "options": [
+      "Nhánh thứ nhất rẽ ra từ bước 4 của luồng chính",
+      "Bước thứ tư của luồng thay thế thứ nhất",
+      "Actor thứ tư trong use case",
+      "Điều kiện thứ tư cần kiểm tra"
+    ],
+    "optionsEn": [
+      "The first branch off step 4 of the normal flow",
+      "The fourth step of the first alternative flow",
+      "The fourth actor in the use case",
+      "The fourth condition to check"
+    ],
+    "answer": 0,
+    "explanation": "Quy ước này cho phép tham chiếu chính xác trong tài liệu, test case và bug report — ví dụ bug xảy ra ở nhánh 4a2.",
+    "explanationEn": "This convention enables precise references in documents, test cases, and defect reports — for example, a defect at branch 4a2."
+  },
+  {
+    "id": "q8",
+    "question": "Actor trong use case nên được xác định theo tiêu chí nào?",
+    "questionEn": "By what criterion should use case actors be identified?",
+    "options": [
+      "Theo vai trò, không theo chức danh hay tên người cụ thể",
+      "Theo phòng ban trong sơ đồ tổ chức",
+      "Theo cấp bậc quản lý",
+      "Theo số lượng người trong mỗi nhóm"
+    ],
+    "optionsEn": [
+      "By role, not by job title or a specific person's name",
+      "By department on the org chart",
+      "By management level",
+      "By how many people are in each group"
+    ],
+    "answer": 0,
+    "explanation": "Người yêu cầu và Người phê duyệt là hai actor ngay cả khi cùng một người có thể đóng cả hai vai ở các thời điểm khác nhau.",
+    "explanationEn": "Requester and Approver are two actors even when the same person plays both at different times."
+  },
+  {
+    "id": "q9",
+    "question": "Việc bỏ sót actor là hệ thống bên ngoài dẫn tới hậu quả gì?",
+    "questionEn": "What results from omitting external system actors?",
+    "options": [
+      "Bỏ sót yêu cầu tích hợp, gồm định dạng dữ liệu và hành vi khi hệ thống đối tác không phản hồi",
+      "Sơ đồ use case trông đơn giản hơn",
+      "Không có hậu quả gì vì hệ thống không phải người dùng",
+      "Đội phát triển sẽ tự bổ sung"
+    ],
+    "optionsEn": [
+      "Missed integration requirements, including data formats and behaviour when the partner system does not respond",
+      "The diagram simply looks cleaner",
+      "No consequence, since systems are not users",
+      "The development team will add them anyway"
+    ],
+    "answer": 0,
+    "explanation": "Cổng thanh toán, hệ thống nhân sự và dịch vụ email đều là actor, và mỗi cái đều mang theo một tập yêu cầu tích hợp riêng.",
+    "explanationEn": "Payment gateways, HR systems, and email services are all actors, and each brings its own set of integration requirements."
+  },
+  {
+    "id": "q10",
+    "question": "Khi nào hai vai trò nên được gộp thành một actor?",
+    "questionEn": "When should two roles be merged into one actor?",
+    "options": [
+      "Khi chúng có cùng tập use case và cùng quyền truy cập",
+      "Khi chúng thuộc cùng một phòng ban",
+      "Khi chúng có cùng cấp bậc lương",
+      "Khi chúng dùng chung một màn hình"
+    ],
+    "optionsEn": [
+      "When they share the same use cases and the same permissions",
+      "When they belong to the same department",
+      "When they are at the same salary grade",
+      "When they share one screen"
+    ],
+    "answer": 0,
+    "explanation": "Tạo quá nhiều actor làm sơ đồ rối mà không thêm thông tin. Ngược lại, nếu quyền khác nhau thì phải tách vì đó là yêu cầu phân quyền.",
+    "explanationEn": "Too many actors clutter the diagram without adding information. Conversely, different permissions require separate actors as an authorization requirement."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao đăng nhập thường KHÔNG phải là một use case?",
+    "questionEn": "Why is logging in usually NOT a use case?",
+    "options": [
+      "Vì nó là điều kiện trước của nhiều use case khác chứ không phải một mục tiêu có giá trị tự thân",
+      "Vì nó quá đơn giản để viết đặc tả",
+      "Vì nó thuộc về yêu cầu phi chức năng",
+      "Vì mọi hệ thống đều có nên không cần đặc tả"
+    ],
+    "optionsEn": [
+      "Because it is a precondition of many other use cases rather than a goal of value in itself",
+      "Because it is too simple to specify",
+      "Because it belongs to nonfunctional requirements",
+      "Because every system has one so no specification is needed"
+    ],
+    "answer": 0,
+    "explanation": "Người dùng không đăng nhập vì mục tiêu đăng nhập; họ đăng nhập để làm một việc khác. Việc đó mới là use case.",
+    "explanationEn": "Users do not log in for the sake of logging in; they log in to do something else. That something is the use case."
+  },
+  {
+    "id": "q12",
+    "question": "Luồng use case dài trên 15 bước thường là dấu hiệu gì?",
+    "questionEn": "What does a use case flow over 15 steps usually indicate?",
+    "options": [
+      "Bạn đang gộp nhiều use case vào một, và nên tách chúng ra",
+      "Use case được đặc tả rất kỹ lưỡng",
+      "Hệ thống có kiến trúc phức tạp",
+      "Cần thêm actor để chia sẻ công việc"
+    ],
+    "optionsEn": [
+      "You have merged several use cases into one and should split them",
+      "The use case is thoroughly specified",
+      "The system architecture is complex",
+      "You need more actors to share the work"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi use case nên hướng tới một mục tiêu hoàn chỉnh. Nhiều mục tiêu trong một tài liệu làm khó cả người đọc lẫn người viết test case.",
+    "explanationEn": "Each use case should target one complete goal. Several goals in one document burden both readers and test case writers."
+  },
+  {
+    "id": "q13",
+    "question": "Vì sao nên tham chiếu business rule thay vì chép nội dung vào luồng use case?",
+    "questionEn": "Why reference a business rule rather than copying it into the flow?",
+    "options": [
+      "Vì khi quy tắc đổi bạn chỉ phải sửa ở một nơi, thay vì tìm và sửa mọi use case có chép nội dung đó",
+      "Vì tham chiếu làm tài liệu ngắn hơn",
+      "Vì business rule thuộc tài liệu khác nên không được chép",
+      "Vì lập trình viên chỉ đọc mã business rule"
+    ],
+    "optionsEn": [
+      "Because a rule change then means one edit instead of hunting down every use case that copied it",
+      "Because references make the document shorter",
+      "Because rules belong in another document so copying is forbidden",
+      "Because developers only read rule IDs"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng chính là nguyên tắc tránh dư thừa: lặp lại một thông tin ở nhiều nơi làm tài liệu dễ đọc hơn nhưng khó bảo trì hơn nhiều.",
+    "explanationEn": "This is the redundancy principle: repeating information in several places makes documents easier to read but far harder to maintain."
+  },
+  {
+    "id": "q14",
+    "question": "Bài kiểm tra chất lượng nào cho biết đặc tả use case đã đủ hay chưa?",
+    "questionEn": "Which quality test shows whether a use case specification is sufficient?",
+    "options": [
+      "Đưa cho tester và hỏi họ có viết được test case đầy đủ không; nếu phải quay lại hỏi nhiều câu thì chưa đủ",
+      "Đếm số bước trong luồng chính",
+      "Kiểm tra tài liệu có đủ mọi trường trong mẫu không",
+      "Hỏi khách hàng đã ký duyệt chưa"
+    ],
+    "optionsEn": [
+      "Give it to a tester and ask whether they can write complete test cases; many follow-up questions means it is insufficient",
+      "Count the steps in the normal flow",
+      "Check the document has every field in the template",
+      "Ask whether the customer signed it off"
+    ],
+    "answer": 0,
+    "explanation": "Đầy đủ mọi trường trong mẫu không đảm bảo chất lượng: một tài liệu có thể điền đủ trường mà vẫn thiếu luồng ngoại lệ quan trọng nhất.",
+    "explanationEn": "Filling every template field does not guarantee quality: a document can be complete on form yet miss the most important exception flow."
+  },
+  {
+    "id": "q15",
+    "question": "Use case diagram thể hiện gì và KHÔNG thể hiện gì?",
+    "questionEn": "What does a use case diagram show and not show?",
+    "options": [
+      "Thể hiện actor nào dùng chức năng nào ở mức phạm vi; không thể hiện thứ tự các bước, điều kiện, ngoại lệ hay dữ liệu",
+      "Thể hiện chi tiết luồng xử lý; không thể hiện actor",
+      "Thể hiện cấu trúc dữ liệu; không thể hiện chức năng",
+      "Thể hiện bố cục màn hình; không thể hiện logic"
+    ],
+    "optionsEn": [
+      "It shows which actor uses which capability at scope level; it does not show step order, conditions, exceptions, or data",
+      "It shows the processing detail; it does not show actors",
+      "It shows the data structure; it does not show functionality",
+      "It shows screen layouts; it does not show logic"
+    ],
+    "answer": 0,
+    "explanation": "Sai lầm phổ biến là vẽ sơ đồ rồi coi như đã đặc tả xong. Sơ đồ chỉ là mục lục; nội dung nằm trong đặc tả.",
+    "explanationEn": "A common mistake is drawing the diagram and considering the work specified. The diagram is a table of contents; the content lives in the specification."
+  },
+  {
+    "id": "q16",
+    "question": "Lời khuyên thực tế nào về quan hệ include và extend trên use case diagram?",
+    "questionEn": "What is the practical advice about include and extend on a use case diagram?",
+    "options": [
+      "Đừng lạm dụng chúng, vì chúng dễ gây tranh cãi và ít mang lại giá trị cho người đọc không chuyên",
+      "Luôn dùng include cho mọi use case có bước chung",
+      "Phải dùng extend cho mọi luồng thay thế",
+      "Không bao giờ được dùng hai quan hệ này"
+    ],
+    "optionsEn": [
+      "Do not overuse them, since they invite argument and add little for non-specialist readers",
+      "Always use include wherever use cases share a step",
+      "Always use extend for every alternative flow",
+      "Never use either relationship"
+    ],
+    "answer": 0,
+    "explanation": "Nếu sơ đồ trở nên khó hiểu vì các quan hệ này, hãy đơn giản hoá nó. Mục đích của sơ đồ là truyền đạt, không phải chứng minh sự thành thạo ký hiệu.",
+    "explanationEn": "If the diagram becomes hard to follow because of them, simplify it. A diagram's purpose is communication, not proving notation mastery."
+  }
+]

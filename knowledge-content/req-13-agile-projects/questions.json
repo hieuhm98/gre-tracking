@@ -1,0 +1,326 @@
+[
+  {
+    "id": "q1",
+    "question": "Phát biểu nào ĐÚNG về yêu cầu trong dự án agile?",
+    "questionEn": "Which statement about requirements on agile projects is CORRECT?",
+    "options": [
+      "Agile loại bỏ nhu cầu về yêu cầu vì phần mềm chạy được tự nói lên tất cả",
+      "Agile không loại bỏ yêu cầu; nó thay đổi thời điểm bạn chi tiết hoá chúng, hình thức lưu trữ và cách xử lý thay đổi",
+      "Agile chỉ cần yêu cầu chức năng, không cần yêu cầu phi chức năng",
+      "Agile thay thế yêu cầu bằng ước tính và velocity"
+    ],
+    "optionsEn": [
+      "Agile eliminates the need for requirements because working software speaks for itself",
+      "Agile does not eliminate requirements; it changes when you detail them, how they are stored, and how change is handled",
+      "Agile needs only functional requirements, not nonfunctional ones",
+      "Agile replaces requirements with estimates and velocity"
+    ],
+    "answer": 1,
+    "explanation": "Bạn vẫn phải hiểu vấn đề nghiệp vụ, xác định user class, làm rõ chi tiết trước khi hiện thực, và xử lý quality attribute cùng business rule.",
+    "explanationEn": "You still have to understand the business problem, identify user classes, clarify details before implementing, and handle quality attributes and business rules."
+  },
+  {
+    "id": "q2",
+    "question": "Rủi ro thật sự khi hiểu sai nguyên tắc ít tài liệu của agile là gì?",
+    "questionEn": "What is the real risk of misunderstanding agile principle of less documentation?",
+    "options": [
+      "Đội sẽ không vượt qua được kiểm toán ISO",
+      "Nhầm lẫn ít tài liệu với ít suy nghĩ; đội agile khoẻ mạnh vẫn dành rất nhiều công sức hiểu vấn đề, chỉ là không đóng gói nó thành tài liệu 200 trang",
+      "Khách hàng sẽ không ký hợp đồng",
+      "Lập trình viên sẽ phải viết bình luận nhiều hơn trong mã"
+    ],
+    "optionsEn": [
+      "The team will fail an ISO audit",
+      "Confusing less documentation with less thinking; a healthy agile team still invests heavily in understanding the problem, it just does not package it into a 200-page document",
+      "Customers will refuse to sign contracts",
+      "Developers will have to write more code comments"
+    ],
+    "answer": 1,
+    "explanation": "Một đội agile không khoẻ mạnh bỏ qua cả hai: không tài liệu và không suy nghĩ. Kết quả là xây sai thứ, nhanh hơn.",
+    "explanationEn": "An unhealthy agile team skips both: no documentation and no thinking. The result is building the wrong thing, faster."
+  },
+  {
+    "id": "q3",
+    "question": "Chế độ thất bại nghiêm trọng nhất của vai trò product owner là gì?",
+    "questionEn": "What is the most serious product owner failure mode?",
+    "options": [
+      "Product owner viết user story không đúng mẫu chuẩn",
+      "Product owner vắng mặt nên đội không lấy được câu trả lời và phải tự đoán, tái tạo lại chính vấn đề mà agile định giải quyết",
+      "Product owner ước tính story point cùng với đội",
+      "Product owner tham dự mọi buổi retrospective"
+    ],
+    "optionsEn": [
+      "The product owner writes user stories in the wrong template",
+      "An absent product owner, so the team cannot get answers and has to guess, recreating exactly the problem agile was meant to solve",
+      "The product owner estimates story points with the team",
+      "The product owner attends every retrospective"
+    ],
+    "answer": 1,
+    "explanation": "Hai chế độ thất bại còn lại là product owner không có thẩm quyền phải đi hỏi cấp trên mọi quyết định, và uỷ ban product owner với nhiều người chỉ đạo backlog theo hướng khác nhau.",
+    "explanationEn": "The other two failure modes are a product owner without authority who must escalate every decision, and a product owner committee directing the backlog in different directions."
+  }
+  ,
+  {
+    "id": "q4",
+    "question": "Vì sao product backlog có độ chi tiết KHÔNG ĐỀU giữa đầu và cuối danh sách?",
+    "questionEn": "Why does a product backlog have UNEVEN detail between its top and bottom?",
+    "options": [
+      "Vì đội chưa có thời gian hoàn thiện phần cuối",
+      "Vì đó là hiệu quả chứ không phải cẩu thả: chi tiết hoá một mục sẽ thay đổi hoặc bị loại bỏ trước khi đến lượt là lãng phí thuần tuý",
+      "Vì product owner chỉ hiểu rõ phần đầu",
+      "Vì công cụ quản lý backlog giới hạn số mục chi tiết"
+    ],
+    "optionsEn": [
+      "Because the team has not had time to finish the bottom",
+      "Because it is efficiency rather than sloppiness: detailing an item that will change or be dropped before its turn is pure waste",
+      "Because the product owner only understands the top",
+      "Because backlog tools limit how many items can be detailed"
+    ],
+    "answer": 1,
+    "explanation": "Quy tắc thực dụng là giữ khoảng hai tới ba iteration tiếp theo ở trạng thái sẵn sàng. Ít hơn thì đội có nguy cơ bị chặn; nhiều hơn thì lãng phí.",
+    "explanationEn": "A practical rule is keeping about two to three iterations worth of items ready. Less and the team risks being blocked; more and you are wasting effort."
+  },
+  {
+    "id": "q5",
+    "question": "Ba chữ C của user story là gì và chữ nào chứa yêu cầu thực sự?",
+    "questionEn": "What are the three Cs of a user story and which one holds the real requirement?",
+    "options": [
+      "Cost, Complexity, Criteria; chữ Criteria chứa yêu cầu",
+      "Card, Conversation, Confirmation; Card chỉ là lời nhắc còn yêu cầu thực sự sống trong Conversation",
+      "Customer, Capability, Constraint; chữ Capability chứa yêu cầu",
+      "Context, Content, Completion; chữ Content chứa yêu cầu"
+    ],
+    "optionsEn": [
+      "Cost, Complexity, Criteria; the requirement lives in Criteria",
+      "Card, Conversation, Confirmation; the Card is only a reminder while the real requirement lives in the Conversation",
+      "Customer, Capability, Constraint; the requirement lives in Capability",
+      "Context, Content, Completion; the requirement lives in Content"
+    ],
+    "answer": 1,
+    "explanation": "Thẻ story cố ý không đầy đủ. Nhưng nếu cuộc trò chuyện không diễn ra, bạn chỉ còn lại một mẩu giấy vô dụng, đây là khó khăn của đội phân tán địa lý.",
+    "explanationEn": "The card is deliberately incomplete. But if the conversation never happens you are left with a useless scrap of paper, which is the struggle of distributed teams."
+  },
+  {
+    "id": "q6",
+    "question": "Nếu đội KHÔNG ước tính được một user story, điều đó nghĩa là gì?",
+    "questionEn": "If the team CANNOT estimate a user story, what does that mean?",
+    "options": [
+      "Kỹ thuật ước tính của đội chưa đủ tốt",
+      "Đó không phải vấn đề ước tính mà là dấu hiệu đội chưa hiểu đủ; câu trả lời là làm rõ story hoặc chạy một spike có giới hạn thời gian để học đủ",
+      "Story đó nên bị loại khỏi backlog",
+      "Nên gán cho nó số điểm trung bình của các story khác"
+    ],
+    "optionsEn": [
+      "The team estimation technique is not good enough",
+      "It is not an estimation problem but a signal the team does not understand it well enough; the answer is to clarify it or run a time-boxed spike to learn enough",
+      "The story should be removed from the backlog",
+      "Assign it the average point value of other stories"
+    ],
+    "answer": 1,
+    "explanation": "Trong INVEST, chữ E là Estimable. Chữ hay bị vi phạm còn lại là V, khi đội tạo story theo tầng kỹ thuật như xây tầng cơ sở dữ liệu, thứ không mang giá trị cho người dùng.",
+    "explanationEn": "In INVEST, E stands for Estimable. The other frequently violated letter is V, when teams create technical-layer stories like build the database layer, which deliver no user value."
+  }
+  ,
+  {
+    "id": "q7",
+    "question": "Lợi ích lớn nhất của việc cắt bản phát hành bằng một đường NGANG trên story map là gì?",
+    "questionEn": "What is the biggest benefit of slicing a release with a HORIZONTAL line across a story map?",
+    "options": [
+      "Nó giúp chia đều công việc cho các thành viên",
+      "Nó bảo đảm bản phát hành đầu tiên là một luồng công việc hoàn chỉnh nhưng tối giản, thay vì vài tính năng hoàn hảo mà người dùng không thể dùng để làm xong việc",
+      "Nó giảm số story cần ước tính",
+      "Nó cho phép bỏ qua giai đoạn kiểm thử tích hợp"
+    ],
+    "optionsEn": [
+      "It helps distribute work evenly among team members",
+      "It guarantees the first release is a complete but minimal workflow, rather than a few perfect features users cannot actually use to finish their job",
+      "It reduces the number of stories to estimate",
+      "It lets you skip integration testing"
+    ],
+    "answer": 1,
+    "explanation": "Người dùng thà có một cách cơ bản để hoàn thành toàn bộ công việc còn hơn có một bước được đánh bóng hoàn hảo và các bước còn lại thì thiếu.",
+    "explanationEn": "Users would rather have a basic way to complete the whole job than one polished step with the rest missing."
+  },
+  {
+    "id": "q8",
+    "question": "Cách chia epic nào là SAI và vì sao?",
+    "questionEn": "Which way of splitting an epic is WRONG, and why?",
+    "options": [
+      "Chia theo bước quy trình, vì các bước phụ thuộc lẫn nhau",
+      "Chia theo tầng kỹ thuật như xây giao diện, xây API, xây cơ sở dữ liệu, vì không cái nào mang giá trị riêng lẻ và không cái nào trình diễn được",
+      "Chia theo user class, vì user class có thể thay đổi",
+      "Chia theo mức độ hoàn thiện, vì khó xác định thế nào là cơ bản"
+    ],
+    "optionsEn": [
+      "By process step, because the steps depend on each other",
+      "By technical layer such as build the UI, build the API, build the database, because none delivers value on its own and none can be demonstrated",
+      "By user class, because user classes can change",
+      "By level of polish, because basic is hard to define"
+    ],
+    "answer": 1,
+    "explanation": "Các cách chia tốt gồm theo bước quy trình, theo loại dữ liệu, theo user class, theo quy tắc nghiệp vụ đơn giản trước rồi ngoại lệ sau, và theo mức độ hoàn thiện.",
+    "explanationEn": "Good splits include by process step, data type, user class, simple business rule first then exceptions, and level of polish."
+  },
+  {
+    "id": "q9",
+    "question": "Ba cách dùng SAI velocity gây hại nghiêm trọng là gì?",
+    "questionEn": "What are the three harmful MISUSES of velocity?",
+    "options": [
+      "Đo mỗi iteration, làm tròn số, và chia sẻ với khách hàng",
+      "So sánh velocity giữa các đội, dùng nó làm mục tiêu hiệu suất khiến đội thổi phồng ước tính, và ép dự báo dài hạn dựa trên hai iteration đầu",
+      "Tính cả story làm dở, dùng dãy Fibonacci, và ước tính theo nhóm",
+      "Trình bày dưới dạng khoảng, cập nhật hằng tuần, và vẽ biểu đồ"
+    ],
+    "optionsEn": [
+      "Measuring it every iteration, rounding it, and sharing it with customers",
+      "Comparing velocity between teams, using it as a performance target which makes teams inflate estimates, and forcing long-term forecasts from the first two iterations",
+      "Counting partially done stories, using Fibonacci, and estimating as a group",
+      "Presenting it as a range, updating it weekly, and charting it"
+    ],
+    "answer": 1,
+    "explanation": "Story point là đơn vị tương đối do mỗi đội tự định nghĩa nên so sánh giữa các đội là vô nghĩa về mặt toán học. Dùng làm mục tiêu sẽ phá hỏng công cụ dự báo duy nhất của bạn.",
+    "explanationEn": "Story points are relative units each team defines for itself, so cross-team comparison is mathematically meaningless. Using it as a target destroys your only forecasting tool."
+  }
+  ,
+  {
+    "id": "q10",
+    "question": "Acceptance criteria khác definition of done như thế nào?",
+    "questionEn": "How do acceptance criteria differ from the definition of done?",
+    "options": [
+      "Acceptance criteria do tester viết còn definition of done do product owner viết",
+      "Acceptance criteria trả lời story NÀY có đúng không và khác nhau ở mỗi story; definition of done trả lời chúng ta có làm theo chuẩn chất lượng của mình không và giống nhau ở mọi story",
+      "Acceptance criteria áp dụng cho bản phát hành còn definition of done áp dụng cho iteration",
+      "Chúng là hai tên gọi của cùng một khái niệm"
+    ],
+    "optionsEn": [
+      "Acceptance criteria are written by testers and the definition of done by the product owner",
+      "Acceptance criteria answer is THIS story correct and differ per story; the definition of done answers are we meeting our quality standard and is the same for every story",
+      "Acceptance criteria apply to releases and the definition of done to iterations",
+      "They are two names for the same concept"
+    ],
+    "answer": 1,
+    "explanation": "Định dạng Given-When-Then hiệu quả vì nó buộc bạn nêu rõ trạng thái ban đầu, hành động và kết quả mong đợi, chính ba thứ mà yêu cầu thiếu thông tin hay bỏ sót.",
+    "explanationEn": "The Given-When-Then format works because it forces you to state the starting state, the action, and the expected result, exactly what under-specified requirements omit."
+  },
+  {
+    "id": "q11",
+    "question": "Điều gì xảy ra khi đội không có definition of done rõ ràng?",
+    "questionEn": "What happens when a team lacks a clear definition of done?",
+    "options": [
+      "Đội sẽ làm chậm hơn nhưng chất lượng vẫn đảm bảo",
+      "Xong trở thành khái niệm co giãn và nợ hoàn thiện tích tụ âm thầm; đội tưởng đã xong 10 story trong khi còn hàng tuần công việc kiểm thử và sửa lỗi phía sau",
+      "Product owner sẽ phải kiểm tra từng dòng mã",
+      "Velocity sẽ giảm xuống bằng không"
+    ],
+    "optionsEn": [
+      "The team works more slowly but quality is still assured",
+      "Done becomes elastic and hidden completion debt accumulates; the team believes it finished 10 stories while weeks of testing and defect fixing still lurk behind",
+      "The product owner has to review every line of code",
+      "Velocity drops to zero"
+    ],
+    "answer": 1,
+    "explanation": "Đây là một trong những nguyên nhân phổ biến nhất khiến dự án agile trượt tiến độ mà không ai nhận ra cho tới quá muộn, vì velocity báo cáo trở nên vô nghĩa.",
+    "explanationEn": "This is one of the most common reasons agile projects slip without anyone noticing until too late, because the reported velocity becomes meaningless."
+  },
+  {
+    "id": "q12",
+    "question": "Cách phòng ngừa rủi ro phát hiện muộn vấn đề kiến trúc trong agile là gì?",
+    "questionEn": "How do you prevent the risk of discovering architectural problems late in agile?",
+    "options": [
+      "Viết tài liệu kiến trúc đầy đủ trước iteration đầu tiên",
+      "Khai thác quality attribute có ảnh hưởng kiến trúc sớm, xây một lát cắt dọc mỏng xuyên mọi tầng ngay iteration đầu, và dành một tỷ lệ công suất cố định cho công việc kỹ thuật",
+      "Tăng số lượng lập trình viên trong đội",
+      "Kéo dài iteration để có thời gian suy nghĩ"
+    ],
+    "optionsEn": [
+      "Write a complete architecture document before the first iteration",
+      "Elicit architecturally significant quality attributes early, build a thin vertical slice through every layer in the first iteration, and reserve a fixed share of capacity for technical work",
+      "Increase the number of developers on the team",
+      "Lengthen iterations to allow more thinking time"
+    ],
+    "answer": 1,
+    "explanation": "Lát cắt dọc mỏng phơi bày các vấn đề kiến trúc khi việc sửa còn rẻ. Nhiều đội dành 15 tới 20 phần trăm mỗi iteration cho nợ kỹ thuật và công việc kiến trúc.",
+    "explanationEn": "A thin vertical slice exposes architectural problems while fixes are still cheap. Many teams reserve 15 to 20 percent of each iteration for technical debt and architectural work."
+  }
+  ,
+  {
+    "id": "q13",
+    "question": "Tuyên ngôn agile thực sự nói gì về tài liệu?",
+    "questionEn": "What does the agile manifesto actually say about documentation?",
+    "options": [
+      "Phần mềm chạy được thay vì tài liệu",
+      "Phần mềm chạy được HƠN tài liệu toàn diện, và chính tuyên ngôn ghi rõ rằng trong khi các mục bên phải có giá trị, họ coi trọng các mục bên trái hơn",
+      "Tài liệu chỉ cần thiết trong lĩnh vực được quản lý chặt",
+      "Tài liệu nên được thay bằng bình luận trong mã nguồn"
+    ],
+    "optionsEn": [
+      "Working software instead of documentation",
+      "Working software OVER comprehensive documentation, and the manifesto itself states that while there is value in the items on the right, they value the items on the left more",
+      "Documentation is only needed in regulated domains",
+      "Documentation should be replaced by code comments"
+    ],
+    "answer": 1,
+    "explanation": "Tài liệu vẫn có giá trị. Những thứ hầu như luôn đáng ghi lại gồm tầm nhìn sản phẩm, business rule, định nghĩa dữ liệu, quyết định kiến trúc kèm lý do, và acceptance test tự động.",
+    "explanationEn": "Documentation still has value. Things almost always worth recording include the product vision, business rules, data definitions, architectural decisions with rationale, and automated acceptance tests."
+  },
+  {
+    "id": "q14",
+    "question": "Vì sao acceptance test tự động là dạng tài liệu đặc biệt giá trị?",
+    "questionEn": "Why are automated acceptance tests an especially valuable form of documentation?",
+    "options": [
+      "Vì chúng ngắn hơn tài liệu viết tay",
+      "Vì chúng là tài liệu duy nhất không bao giờ lỗi thời, bởi chúng chạy; nếu đội vứt bỏ user story sau khi hiện thực thì đó có thể là tài liệu bền vững duy nhất về việc hệ thống làm gì",
+      "Vì chúng được sinh tự động từ mã nguồn",
+      "Vì chúng không cần ai bảo trì"
+    ],
+    "optionsEn": [
+      "Because they are shorter than handwritten documents",
+      "Because they are the only documentation that never goes stale, since they run; if the team discards user stories after implementation they may be the only durable record of what the system does",
+      "Because they are auto-generated from source code",
+      "Because nobody has to maintain them"
+    ],
+    "answer": 1,
+    "explanation": "Hãy bảo đảm chúng đủ dễ đọc để phục vụ vai trò đó. Đây cũng là lý do acceptance test phải phủ cả điều kiện ngoại lệ, không chỉ đường đi hạnh phúc.",
+    "explanationEn": "Make sure they are readable enough to serve that role. This is also why acceptance tests must cover exception conditions, not just the happy path."
+  },
+  {
+    "id": "q15",
+    "question": "Ba điều mà agile KHÔNG miễn cho bạn khi xử lý thay đổi là gì?",
+    "questionEn": "What are the three things agile does NOT excuse you from when handling change?",
+    "options": [
+      "Viết tài liệu, họp hằng ngày và ước tính lại",
+      "Thay đổi vẫn có chi phí cơ hội vì thêm story này đẩy story khác ra; thay đổi giữa iteration vẫn gây hại; và sửa thứ đã xây vẫn đắt hơn xây đúng ngay từ đầu",
+      "Xin phê duyệt từ change control board, đánh giá tác động và cập nhật baseline",
+      "Thông báo cho khách hàng, cập nhật hợp đồng và điều chỉnh ngân sách"
+    ],
+    "optionsEn": [
+      "Writing documentation, daily standups, and re-estimating",
+      "Change still has an opportunity cost since adding one story pushes another out; mid-iteration change is still harmful; and changing what is already built still costs more than building it right the first time",
+      "Getting change control board approval, impact analysis, and baseline updates",
+      "Notifying the customer, updating the contract, and adjusting the budget"
+    ],
+    "answer": 1,
+    "explanation": "Agile giảm chi phí thay đổi bằng cách rút ngắn vòng phản hồi chứ không xoá bỏ nó. Nếu tốc độ thay đổi yêu cầu không giảm dần theo thời gian, dự án đang gặp rắc rối.",
+    "explanationEn": "Agile reduces the cost of change by shortening the feedback loop, not by eliminating it. If the requirements change rate is not decreasing over time, the project is in trouble."
+  },
+  {
+    "id": "q16",
+    "question": "Vì sao coi product backlog là danh sách cần làm hết là một bẫy?",
+    "questionEn": "Why is treating the product backlog as a to-do list to complete a trap?",
+    "options": [
+      "Vì backlog quá dài để hoàn thành trong ngân sách",
+      "Vì backlog là danh sách mọi thứ CÓ THỂ làm được sắp theo giá trị; nhiều mục sẽ không bao giờ được làm và đó là kết quả đúng đắn vì chúng có giá trị thấp hơn những gì đã làm",
+      "Vì product owner liên tục thêm mục mới",
+      "Vì công cụ quản lý backlog không hỗ trợ đánh dấu hoàn thành"
+    ],
+    "optionsEn": [
+      "Because the backlog is too long to finish within budget",
+      "Because the backlog is a list of everything that COULD be done, ordered by value; many items will never be built and that is the correct outcome since they were worth less than what was built",
+      "Because the product owner keeps adding new items",
+      "Because backlog tools cannot mark items complete"
+    ],
+    "answer": 1,
+    "explanation": "Bốn điều thực sự quyết định thành công agile: người ra quyết định sẵn sàng và có thẩm quyền, phần mềm chạy được cuối mỗi iteration, phản hồi thật từ người dùng thật, và đội sẵn sàng thay đổi cách làm việc.",
+    "explanationEn": "Four things really determine agile success: an available decision-maker with authority, working software each iteration, real feedback from real users, and a team willing to change how it works."
+  }
+]

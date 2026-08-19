@@ -1,17 +1,402 @@
 [
-  {"id":"q1","question":"Trong flowchart, hình thoi (diamond) biểu thị gì?","questionEn":"In a flowchart, what does a diamond represent?","options":["Điểm bắt đầu hoặc kết thúc","Bước xử lý hoặc hành động","Điểm quyết định (Yes/No)","Lưu trữ dữ liệu"],"optionsEn":["A start or end point","A processing step or action","A decision point (Yes/No)","Data storage"],"answer":2,"explanation":"Hình thoi = Decision node. Luồng sẽ phân nhánh dựa trên điều kiện (Yes/No, True/False, điều kiện A/B/C). Phải có ít nhất 2 nhánh ra.","explanationEn":"A diamond = a decision node. The flow branches based on a condition (Yes/No, True/False, condition A/B/C). It must have at least 2 outgoing branches."},
-  {"id":"q2","question":"Hình oval trong flowchart biểu thị gì?","questionEn":"What does an oval represent in a flowchart?","options":["Bước xử lý quan trọng","Điểm quyết định","Terminal - điểm bắt đầu hoặc kết thúc của quy trình","Tài liệu đầu ra"],"optionsEn":["An important processing step","A decision point","A Terminal — the start or end point of the process","An output document"],"answer":2,"explanation":"Hình oval (hoặc rounded rectangle) là Terminal — dùng cho Start và End. Mỗi flowchart phải bắt đầu và kết thúc bằng hình oval.","explanationEn":"An oval (or rounded rectangle) is a Terminal — used for Start and End. Every flowchart must begin and end with an oval."},
-  {"id":"q3","question":"Swimlane flowchart được dùng khi nào?","questionEn":"When is a swimlane flowchart used?","options":["Khi quy trình rất đơn giản","Khi cần phân chia rõ trách nhiệm của nhiều người/bộ phận trong cùng quy trình","Khi không có decision node","Khi vẽ sơ đồ cơ sở dữ liệu"],"optionsEn":["When the process is very simple","When you need to clearly divide the responsibilities of multiple people/departments within the same process","When there is no decision node","When drawing a database diagram"],"answer":1,"explanation":"Swimlane chia luồng thành các 'làn' theo vai trò/bộ phận. Giúp thấy rõ ai làm gì, bàn giao công việc ở đâu, tránh tranh cãi về trách nhiệm.","explanationEn":"A swimlane divides the flow into 'lanes' by role/department. It makes clear who does what and where handoffs occur, avoiding disputes over responsibility."},
-  {"id":"q4","question":"Flowchart có ích gì cho BA khi làm việc với developer?","questionEn":"How is a flowchart useful for a BA when working with developers?","options":["Thay thế hoàn toàn cho tài liệu yêu cầu","Mô tả logic và luồng xử lý trực quan, giảm hiểu nhầm khi implement","Tự động tạo code từ diagram","Thay thế cho thiết kế database"],"optionsEn":["It fully replaces the requirements document","It describes logic and processing flow visually, reducing misunderstandings during implementation","It automatically generates code from the diagram","It replaces database design"],"answer":1,"explanation":"Flowchart là ngôn ngữ trung gian giữa business và tech. BA mô tả nghiệp vụ bằng flowchart → developer hiểu cần code gì → ít họp, ít hiểu sai, ít làm lại.","explanationEn":"A flowchart is an intermediary language between business and tech. A BA describes the business logic with a flowchart → developers understand what to build → fewer meetings, fewer misunderstandings, less rework."},
-  {"id":"q5","question":"Hình bình hành trong flowchart biểu thị gì?","questionEn":"What does a parallelogram represent in a flowchart?","options":["Decision/quyết định","Bước xử lý","Input hoặc Output dữ liệu","Bắt đầu quy trình"],"optionsEn":["A decision","A processing step","Data input or output","The start of the process"],"answer":2,"explanation":"Hình bình hành = Input/Output. Ví dụ: 'Nhập thông tin đăng nhập' (input), 'Hiển thị kết quả tìm kiếm' (output), 'In hóa đơn' (output).","explanationEn":"A parallelogram = Input/Output. For example: 'Enter login credentials' (input), 'Display search results' (output), 'Print invoice' (output)."},
-  {"id":"q6","question":"Quy tắc nào QUAN TRỌNG nhất khi vẽ flowchart?","questionEn":"Which rule is the MOST important when drawing a flowchart?","options":["Phải dùng màu sắc sặc sỡ","Mỗi decision node phải có ít nhất 2 nhánh ra, và mọi nhánh phải dẫn đến kết thúc","Flowchart không được có vòng lặp","Chỉ dùng hình chữ nhật"],"optionsEn":["It must use vivid colors","Each decision node must have at least 2 outgoing branches, and every branch must lead to an end","A flowchart must not contain loops","Only rectangles may be used"],"answer":1,"explanation":"Decision node phải đầy đủ nhánh — không được để nhánh nào 'treo lơ lửng'. Mọi luồng phải dẫn đến Terminal (End). Vòng lặp được phép nhưng phải có điều kiện thoát.","explanationEn":"A decision node must have complete branches — no branch may be left 'hanging'. Every flow must lead to a Terminal (End). Loops are allowed but must have an exit condition."},
-  {"id":"q7","question":"Tools nào sau đây MIỄN PHÍ và dùng trực tiếp trên web để vẽ flowchart?","questionEn":"Which of the following tools is FREE and works directly in the browser for drawing flowcharts?","options":["Microsoft Visio","draw.io / diagrams.net","Adobe Illustrator","AutoCAD"],"optionsEn":["Microsoft Visio","draw.io / diagrams.net","Adobe Illustrator","AutoCAD"],"answer":1,"explanation":"draw.io (diagrams.net) là công cụ miễn phí trên web, không cần cài đặt, có nhiều template sẵn. Phổ biến nhất với BA/PM vì dễ dùng và có thể lưu vào Google Drive.","explanationEn":"draw.io (diagrams.net) is a free web-based tool that requires no installation and offers many ready-made templates. It is the most popular with BAs/PMs because it is easy to use and can save to Google Drive."},
-  {"id":"q8","question":"Trong flowchart quy trình đặt hàng, node 'Kiểm tra đủ hàng?' thuộc loại ký hiệu nào?","questionEn":"In an ordering-process flowchart, what type of symbol is the 'Enough stock?' node?","options":["Terminal","Process","Decision","Input/Output"],"optionsEn":["Terminal","Process","Decision","Input/Output"],"answer":2,"explanation":"'Kiểm tra đủ hàng?' là câu hỏi Yes/No → Decision node (hình thoi). Kết quả: Yes → xử lý đơn, No → thông báo hết hàng.","explanationEn":"'Enough stock?' is a Yes/No question → a decision node (diamond). Results: Yes → process the order, No → notify out of stock."},
-  {"id":"q9","question":"BPMN khác Flowchart thông thường ở điểm gì?","questionEn":"How does BPMN differ from a regular flowchart?","options":["BPMN không dùng ký hiệu đặc biệt","BPMN phức tạp hơn, chi tiết hơn, theo chuẩn OMG riêng cho business process","Flowchart không thể có swimlane","BPMN chỉ dùng cho IT, flowchart cho business"],"optionsEn":["BPMN uses no special symbols","BPMN is more complex and detailed, following the OMG standard specific to business processes","Flowcharts cannot have swimlanes","BPMN is only for IT and flowcharts are only for business"],"answer":1,"explanation":"BPMN (Business Process Model and Notation) là chuẩn chuyên biệt cho business process: có nhiều loại event, gateway, task phức tạp hơn. Flowchart đơn giản, universal hơn.","explanationEn":"BPMN (Business Process Model and Notation) is a specialized standard for business processes: it has many types of events, gateways, and tasks and is more complex. A flowchart is simpler and more universal."},
-  {"id":"q10","question":"Khi flowchart có nhiều nhánh từ decision node, cần đảm bảo điều gì?","questionEn":"When a flowchart has multiple branches from a decision node, what must be ensured?","options":["Số nhánh phải chẵn","Tất cả các nhánh đều phải dẫn đến End terminal","Chỉ có nhánh Yes mới cần kết thúc","Nhánh No luôn dẫn về bước đầu"],"optionsEn":["The number of branches must be even","Every branch must lead to an End terminal","Only the Yes branch needs to end","The No branch always leads back to the first step"],"answer":1,"explanation":"Mọi nhánh đều phải kết thúc — không được có 'dead end' (đường cụt). Một số nhánh có thể kết thúc sớm hơn (ví dụ: lỗi → kết thúc), nhưng phải có Terminal.","explanationEn":"Every branch must end — there must be no 'dead end'. Some branches may end earlier (e.g., error → end), but each must reach a Terminal."},
-  {"id":"q11","question":"Hình trụ (cylinder) trong flowchart biểu thị gì?","questionEn":"What does a cylinder represent in a flowchart?","options":["Điểm bắt đầu","Database / lưu trữ dữ liệu","Tài liệu in ra","Kết nối đến trang khác"],"optionsEn":["A start point","A database / data storage","A printed document","A connection to another page"],"answer":1,"explanation":"Hình trụ = Database/Storage. Dùng khi flowchart mô tả việc đọc/ghi vào cơ sở dữ liệu. Ví dụ: 'Lưu đơn hàng vào DB' → hình trụ.","explanationEn":"A cylinder = Database/Storage. It is used when a flowchart describes reading from or writing to a database. For example: 'Save the order to the DB' → a cylinder."},
-  {"id":"q12","question":"Connector (hình tròn nhỏ) trong flowchart dùng khi nào?","questionEn":"When is a connector (small circle) used in a flowchart?","options":["Khi cần quyết định","Khi flowchart quá lớn phải chia thành nhiều trang, dùng connector để nối","Để biểu thị bước xử lý","Để vẽ vòng lặp"],"optionsEn":["When a decision is needed","When a flowchart is too large and must be split across multiple pages, a connector is used to link them","To represent a processing step","To draw a loop"],"answer":1,"explanation":"Connector giúp kết nối flowchart khi không thể vẽ mũi tên trực tiếp — thường dùng khi diagram chia nhiều trang hoặc tránh đường chéo nhau phức tạp.","explanationEn":"A connector helps link a flowchart when a direct arrow cannot be drawn — it is commonly used when a diagram is split across pages or to avoid complex crossing lines."},
-  {"id":"q13","question":"BA nên vẽ flowchart ở mức chi tiết nào khi bàn giao cho developer?","questionEn":"At what level of detail should a BA draw a flowchart when handing it off to developers?","options":["Thật đơn giản, chỉ big picture","Đủ chi tiết để developer hiểu rõ logic và điều kiện, không cần đoán mò","Thật chi tiết đến từng dòng code","Chỉ cần tên các bước, không cần chi tiết"],"optionsEn":["Very simple, only the big picture","Detailed enough for developers to clearly understand the logic and conditions without guessing","Extremely detailed, down to each line of code","Only the names of the steps, no details needed"],"answer":1,"explanation":"Flowchart quá đơn giản → developer phải tự đoán → sai. Quá chi tiết → tốn thời gian và cứng nhắc. Cần đủ: mọi luồng chính, điều kiện rẽ nhánh quan trọng, xử lý lỗi.","explanationEn":"A flowchart that is too simple → developers have to guess → mistakes. Too detailed → time-consuming and rigid. It needs enough: all main flows, important branching conditions, and error handling."},
-  {"id":"q14","question":"Vòng lặp trong flowchart được biểu thị như thế nào?","questionEn":"How is a loop represented in a flowchart?","options":["Không thể có vòng lặp trong flowchart","Mũi tên từ decision node dẫn ngược về bước trước đó","Dùng ký hiệu đặc biệt cho loop","Dùng hình tròn đặc biệt"],"optionsEn":["A flowchart cannot contain a loop","An arrow from a decision node leads back to an earlier step","A special loop symbol is used","A special circle is used"],"answer":1,"explanation":"Vòng lặp: mũi tên từ nhánh 'No' hoặc 'Retry' của decision node trỏ ngược lên bước cần lặp lại. Quan trọng: phải có điều kiện thoát vòng lặp, nếu không là infinite loop.","explanationEn":"A loop: an arrow from the 'No' or 'Retry' branch of a decision node points back to the step to be repeated. Importantly, there must be an exit condition, otherwise it is an infinite loop."},
-  {"id":"q15","question":"Khi nào nên dùng Swimlane thay vì flowchart thường?","questionEn":"When should a swimlane be used instead of a regular flowchart?","options":["Luôn luôn, swimlane tốt hơn","Khi quy trình có nhiều vai trò/bộ phận tham gia và cần rõ ai chịu trách nhiệm bước nào","Khi diagram quá đơn giản","Khi diagram chỉ có 1 decision node"],"optionsEn":["Always, a swimlane is better","When the process involves multiple roles/departments and it must be clear who is responsible for each step","When the diagram is too simple","When the diagram has only 1 decision node"],"answer":1,"explanation":"Swimlane hiệu quả khi: có handoff giữa nhiều người/team, cần audit trách nhiệm, quy trình cross-functional. Ví dụ: approval workflow qua nhiều cấp, quy trình bán hàng qua sale-kho-kế toán.","explanationEn":"A swimlane is effective when there are handoffs between multiple people/teams, responsibility needs to be auditable, or the process is cross-functional. For example: a multi-level approval workflow, or a sales process across sales-warehouse-accounting."}
+  {
+    "id": "q1",
+    "question": "Trong flowchart, hình thoi (diamond) biểu thị gì?",
+    "questionEn": "In a flowchart, what does a diamond represent?",
+    "options": [
+      "Điểm bắt đầu hoặc kết thúc",
+      "Bước xử lý hoặc hành động",
+      "Điểm quyết định (Yes/No)",
+      "Lưu trữ dữ liệu"
+    ],
+    "optionsEn": [
+      "A start or end point",
+      "A processing step or action",
+      "A decision point (Yes/No)",
+      "Data storage"
+    ],
+    "answer": 2,
+    "explanation": "Hình thoi = Decision node. Luồng sẽ phân nhánh dựa trên điều kiện (Yes/No, True/False, điều kiện A/B/C). Phải có ít nhất 2 nhánh ra.",
+    "explanationEn": "A diamond = a decision node. The flow branches based on a condition (Yes/No, True/False, condition A/B/C). It must have at least 2 outgoing branches."
+  },
+  {
+    "id": "q2",
+    "question": "Hình oval trong flowchart biểu thị gì?",
+    "questionEn": "What does an oval represent in a flowchart?",
+    "options": [
+      "Bước xử lý quan trọng",
+      "Điểm quyết định",
+      "Terminal - điểm bắt đầu hoặc kết thúc của quy trình",
+      "Tài liệu đầu ra"
+    ],
+    "optionsEn": [
+      "An important processing step",
+      "A decision point",
+      "A Terminal — the start or end point of the process",
+      "An output document"
+    ],
+    "answer": 2,
+    "explanation": "Hình oval (hoặc rounded rectangle) là Terminal — dùng cho Start và End. Mỗi flowchart phải bắt đầu và kết thúc bằng hình oval.",
+    "explanationEn": "An oval (or rounded rectangle) is a Terminal — used for Start and End. Every flowchart must begin and end with an oval."
+  },
+  {
+    "id": "q3",
+    "question": "Swimlane flowchart được dùng khi nào?",
+    "questionEn": "When is a swimlane flowchart used?",
+    "options": [
+      "Khi quy trình rất đơn giản",
+      "Khi cần phân chia rõ trách nhiệm của nhiều người/bộ phận trong cùng quy trình",
+      "Khi không có decision node",
+      "Khi vẽ sơ đồ cơ sở dữ liệu"
+    ],
+    "optionsEn": [
+      "When the process is very simple",
+      "When you need to clearly divide the responsibilities of multiple people/departments within the same process",
+      "When there is no decision node",
+      "When drawing a database diagram"
+    ],
+    "answer": 1,
+    "explanation": "Swimlane chia luồng thành các 'làn' theo vai trò/bộ phận. Giúp thấy rõ ai làm gì, bàn giao công việc ở đâu, tránh tranh cãi về trách nhiệm.",
+    "explanationEn": "A swimlane divides the flow into 'lanes' by role/department. It makes clear who does what and where handoffs occur, avoiding disputes over responsibility."
+  },
+  {
+    "id": "q4",
+    "question": "Flowchart có ích gì cho BA khi làm việc với developer?",
+    "questionEn": "How is a flowchart useful for a BA when working with developers?",
+    "options": [
+      "Thay thế hoàn toàn cho tài liệu yêu cầu",
+      "Mô tả logic và luồng xử lý trực quan, giảm hiểu nhầm khi implement",
+      "Tự động tạo code từ diagram",
+      "Thay thế cho thiết kế database"
+    ],
+    "optionsEn": [
+      "It fully replaces the requirements document",
+      "It describes logic and processing flow visually, reducing misunderstandings during implementation",
+      "It automatically generates code from the diagram",
+      "It replaces database design"
+    ],
+    "answer": 1,
+    "explanation": "Flowchart là ngôn ngữ trung gian giữa business và tech. BA mô tả nghiệp vụ bằng flowchart → developer hiểu cần code gì → ít họp, ít hiểu sai, ít làm lại.",
+    "explanationEn": "A flowchart is an intermediary language between business and tech. A BA describes the business logic with a flowchart → developers understand what to build → fewer meetings, fewer misunderstandings, less rework."
+  },
+  {
+    "id": "q5",
+    "question": "Hình bình hành trong flowchart biểu thị gì?",
+    "questionEn": "What does a parallelogram represent in a flowchart?",
+    "options": [
+      "Decision/quyết định",
+      "Bước xử lý",
+      "Input hoặc Output dữ liệu",
+      "Bắt đầu quy trình"
+    ],
+    "optionsEn": [
+      "A decision",
+      "A processing step",
+      "Data input or output",
+      "The start of the process"
+    ],
+    "answer": 2,
+    "explanation": "Hình bình hành = Input/Output. Ví dụ: 'Nhập thông tin đăng nhập' (input), 'Hiển thị kết quả tìm kiếm' (output), 'In hóa đơn' (output).",
+    "explanationEn": "A parallelogram = Input/Output. For example: 'Enter login credentials' (input), 'Display search results' (output), 'Print invoice' (output)."
+  },
+  {
+    "id": "q6",
+    "question": "Quy tắc nào QUAN TRỌNG nhất khi vẽ flowchart?",
+    "questionEn": "Which rule is the MOST important when drawing a flowchart?",
+    "options": [
+      "Phải dùng màu sắc sặc sỡ",
+      "Mỗi decision node phải có ít nhất 2 nhánh ra, và mọi nhánh phải dẫn đến kết thúc",
+      "Flowchart không được có vòng lặp",
+      "Chỉ dùng hình chữ nhật"
+    ],
+    "optionsEn": [
+      "It must use vivid colors",
+      "Each decision node must have at least 2 outgoing branches, and every branch must lead to an end",
+      "A flowchart must not contain loops",
+      "Only rectangles may be used"
+    ],
+    "answer": 1,
+    "explanation": "Decision node phải đầy đủ nhánh — không được để nhánh nào 'treo lơ lửng'. Mọi luồng phải dẫn đến Terminal (End). Vòng lặp được phép nhưng phải có điều kiện thoát.",
+    "explanationEn": "A decision node must have complete branches — no branch may be left 'hanging'. Every flow must lead to a Terminal (End). Loops are allowed but must have an exit condition."
+  },
+  {
+    "id": "q7",
+    "question": "Tools nào sau đây MIỄN PHÍ và dùng trực tiếp trên web để vẽ flowchart?",
+    "questionEn": "Which of the following tools is FREE and works directly in the browser for drawing flowcharts?",
+    "options": [
+      "Microsoft Visio",
+      "draw.io / diagrams.net",
+      "Adobe Illustrator",
+      "AutoCAD"
+    ],
+    "optionsEn": [
+      "Microsoft Visio",
+      "draw.io / diagrams.net",
+      "Adobe Illustrator",
+      "AutoCAD"
+    ],
+    "answer": 1,
+    "explanation": "draw.io (diagrams.net) là công cụ miễn phí trên web, không cần cài đặt, có nhiều template sẵn. Phổ biến nhất với BA/PM vì dễ dùng và có thể lưu vào Google Drive.",
+    "explanationEn": "draw.io (diagrams.net) is a free web-based tool that requires no installation and offers many ready-made templates. It is the most popular with BAs/PMs because it is easy to use and can save to Google Drive."
+  },
+  {
+    "id": "q8",
+    "question": "Trong flowchart quy trình đặt hàng, node 'Kiểm tra đủ hàng?' thuộc loại ký hiệu nào?",
+    "questionEn": "In an ordering-process flowchart, what type of symbol is the 'Enough stock?' node?",
+    "options": [
+      "Terminal",
+      "Process",
+      "Decision",
+      "Input/Output"
+    ],
+    "optionsEn": [
+      "Terminal",
+      "Process",
+      "Decision",
+      "Input/Output"
+    ],
+    "answer": 2,
+    "explanation": "'Kiểm tra đủ hàng?' là câu hỏi Yes/No → Decision node (hình thoi). Kết quả: Yes → xử lý đơn, No → thông báo hết hàng.",
+    "explanationEn": "'Enough stock?' is a Yes/No question → a decision node (diamond). Results: Yes → process the order, No → notify out of stock."
+  },
+  {
+    "id": "q9",
+    "question": "BPMN khác Flowchart thông thường ở điểm gì?",
+    "questionEn": "How does BPMN differ from a regular flowchart?",
+    "options": [
+      "BPMN không dùng ký hiệu đặc biệt",
+      "BPMN phức tạp hơn, chi tiết hơn, theo chuẩn OMG riêng cho business process",
+      "Flowchart không thể có swimlane",
+      "BPMN chỉ dùng cho IT, flowchart cho business"
+    ],
+    "optionsEn": [
+      "BPMN uses no special symbols",
+      "BPMN is more complex and detailed, following the OMG standard specific to business processes",
+      "Flowcharts cannot have swimlanes",
+      "BPMN is only for IT and flowcharts are only for business"
+    ],
+    "answer": 1,
+    "explanation": "BPMN (Business Process Model and Notation) là chuẩn chuyên biệt cho business process: có nhiều loại event, gateway, task phức tạp hơn. Flowchart đơn giản, universal hơn.",
+    "explanationEn": "BPMN (Business Process Model and Notation) is a specialized standard for business processes: it has many types of events, gateways, and tasks and is more complex. A flowchart is simpler and more universal."
+  },
+  {
+    "id": "q10",
+    "question": "Khi flowchart có nhiều nhánh từ decision node, cần đảm bảo điều gì?",
+    "questionEn": "When a flowchart has multiple branches from a decision node, what must be ensured?",
+    "options": [
+      "Số nhánh phải chẵn",
+      "Tất cả các nhánh đều phải dẫn đến End terminal",
+      "Chỉ có nhánh Yes mới cần kết thúc",
+      "Nhánh No luôn dẫn về bước đầu"
+    ],
+    "optionsEn": [
+      "The number of branches must be even",
+      "Every branch must lead to an End terminal",
+      "Only the Yes branch needs to end",
+      "The No branch always leads back to the first step"
+    ],
+    "answer": 1,
+    "explanation": "Mọi nhánh đều phải kết thúc — không được có 'dead end' (đường cụt). Một số nhánh có thể kết thúc sớm hơn (ví dụ: lỗi → kết thúc), nhưng phải có Terminal.",
+    "explanationEn": "Every branch must end — there must be no 'dead end'. Some branches may end earlier (e.g., error → end), but each must reach a Terminal."
+  },
+  {
+    "id": "q11",
+    "question": "Hình trụ (cylinder) trong flowchart biểu thị gì?",
+    "questionEn": "What does a cylinder represent in a flowchart?",
+    "options": [
+      "Điểm bắt đầu",
+      "Database / lưu trữ dữ liệu",
+      "Tài liệu in ra",
+      "Kết nối đến trang khác"
+    ],
+    "optionsEn": [
+      "A start point",
+      "A database / data storage",
+      "A printed document",
+      "A connection to another page"
+    ],
+    "answer": 1,
+    "explanation": "Hình trụ = Database/Storage. Dùng khi flowchart mô tả việc đọc/ghi vào cơ sở dữ liệu. Ví dụ: 'Lưu đơn hàng vào DB' → hình trụ.",
+    "explanationEn": "A cylinder = Database/Storage. It is used when a flowchart describes reading from or writing to a database. For example: 'Save the order to the DB' → a cylinder."
+  },
+  {
+    "id": "q12",
+    "question": "Connector (hình tròn nhỏ) trong flowchart dùng khi nào?",
+    "questionEn": "When is a connector (small circle) used in a flowchart?",
+    "options": [
+      "Khi cần quyết định",
+      "Khi flowchart quá lớn phải chia thành nhiều trang, dùng connector để nối",
+      "Để biểu thị bước xử lý",
+      "Để vẽ vòng lặp"
+    ],
+    "optionsEn": [
+      "When a decision is needed",
+      "When a flowchart is too large and must be split across multiple pages, a connector is used to link them",
+      "To represent a processing step",
+      "To draw a loop"
+    ],
+    "answer": 1,
+    "explanation": "Connector giúp kết nối flowchart khi không thể vẽ mũi tên trực tiếp — thường dùng khi diagram chia nhiều trang hoặc tránh đường chéo nhau phức tạp.",
+    "explanationEn": "A connector helps link a flowchart when a direct arrow cannot be drawn — it is commonly used when a diagram is split across pages or to avoid complex crossing lines."
+  },
+  {
+    "id": "q13",
+    "question": "BA nên vẽ flowchart ở mức chi tiết nào khi bàn giao cho developer?",
+    "questionEn": "At what level of detail should a BA draw a flowchart when handing it off to developers?",
+    "options": [
+      "Thật đơn giản, chỉ big picture",
+      "Đủ chi tiết để developer hiểu rõ logic và điều kiện, không cần đoán mò",
+      "Thật chi tiết đến từng dòng code",
+      "Chỉ cần tên các bước, không cần chi tiết"
+    ],
+    "optionsEn": [
+      "Very simple, only the big picture",
+      "Detailed enough for developers to clearly understand the logic and conditions without guessing",
+      "Extremely detailed, down to each line of code",
+      "Only the names of the steps, no details needed"
+    ],
+    "answer": 1,
+    "explanation": "Flowchart quá đơn giản → developer phải tự đoán → sai. Quá chi tiết → tốn thời gian và cứng nhắc. Cần đủ: mọi luồng chính, điều kiện rẽ nhánh quan trọng, xử lý lỗi.",
+    "explanationEn": "A flowchart that is too simple → developers have to guess → mistakes. Too detailed → time-consuming and rigid. It needs enough: all main flows, important branching conditions, and error handling."
+  },
+  {
+    "id": "q14",
+    "question": "Vòng lặp trong flowchart được biểu thị như thế nào?",
+    "questionEn": "How is a loop represented in a flowchart?",
+    "options": [
+      "Không thể có vòng lặp trong flowchart",
+      "Mũi tên từ decision node dẫn ngược về bước trước đó",
+      "Dùng ký hiệu đặc biệt cho loop",
+      "Dùng hình tròn đặc biệt"
+    ],
+    "optionsEn": [
+      "A flowchart cannot contain a loop",
+      "An arrow from a decision node leads back to an earlier step",
+      "A special loop symbol is used",
+      "A special circle is used"
+    ],
+    "answer": 1,
+    "explanation": "Vòng lặp: mũi tên từ nhánh 'No' hoặc 'Retry' của decision node trỏ ngược lên bước cần lặp lại. Quan trọng: phải có điều kiện thoát vòng lặp, nếu không là infinite loop.",
+    "explanationEn": "A loop: an arrow from the 'No' or 'Retry' branch of a decision node points back to the step to be repeated. Importantly, there must be an exit condition, otherwise it is an infinite loop."
+  },
+  {
+    "id": "q15",
+    "question": "Khi nào nên dùng Swimlane thay vì flowchart thường?",
+    "questionEn": "When should a swimlane be used instead of a regular flowchart?",
+    "options": [
+      "Luôn luôn, swimlane tốt hơn",
+      "Khi quy trình có nhiều vai trò/bộ phận tham gia và cần rõ ai chịu trách nhiệm bước nào",
+      "Khi diagram quá đơn giản",
+      "Khi diagram chỉ có 1 decision node"
+    ],
+    "optionsEn": [
+      "Always, a swimlane is better",
+      "When the process involves multiple roles/departments and it must be clear who is responsible for each step",
+      "When the diagram is too simple",
+      "When the diagram has only 1 decision node"
+    ],
+    "answer": 1,
+    "explanation": "Swimlane hiệu quả khi: có handoff giữa nhiều người/team, cần audit trách nhiệm, quy trình cross-functional. Ví dụ: approval workflow qua nhiều cấp, quy trình bán hàng qua sale-kho-kế toán.",
+    "explanationEn": "A swimlane is effective when there are handoffs between multiple people/teams, responsibility needs to be auditable, or the process is cross-functional. For example: a multi-level approval workflow, or a sales process across sales-warehouse-accounting."
+  },
+  {
+    "question": "Trong flowchart, hình thoi biểu diễn điều gì?",
+    "questionEn": "In a flowchart, what does a diamond represent?",
+    "options": [
+      "Điểm quyết định với các nhánh rẽ",
+      "Bước xử lý",
+      "Điểm bắt đầu",
+      "Kho dữ liệu"
+    ],
+    "optionsEn": [
+      "A decision point with branches",
+      "A process step",
+      "The start point",
+      "A data store"
+    ],
+    "answer": 0,
+    "explanation": "Hình chữ nhật là bước xử lý, hình thoi là quyết định, hình bầu dục là bắt đầu hoặc kết thúc, hình bình hành là nhập hoặc xuất dữ liệu.",
+    "explanationEn": "A rectangle is a process step, a diamond a decision, an oval start or end, and a parallelogram input or output.",
+    "id": "q16"
+  },
+  {
+    "question": "Lỗi phổ biến nhất khiến flowchart trở nên vô dụng khi review là gì?",
+    "questionEn": "What most commonly makes a flowchart useless during review?",
+    "options": [
+      "Nhánh quyết định không có đủ đường ra cho mọi kết quả có thể, nên người đọc không biết điều gì xảy ra ở trường hợp còn lại",
+      "Dùng quá ít màu sắc",
+      "Vẽ theo chiều dọc thay vì ngang",
+      "Đặt tiêu đề quá ngắn"
+    ],
+    "optionsEn": [
+      "A decision has no outgoing path for every possible outcome, so readers cannot tell what happens in the remaining case",
+      "Using too few colours",
+      "Drawing vertically instead of horizontally",
+      "A title that is too short"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi hình thoi phải có đủ nhánh cho mọi kết quả. Nhánh thiếu chính là yêu cầu ngoại lệ bị bỏ sót — đúng chỗ mà bug hay sinh ra.",
+    "explanationEn": "Every diamond needs a branch for each outcome. A missing branch is a missing exception requirement — exactly where defects appear.",
+    "id": "q17"
+  },
+  {
+    "question": "Khi nào nên dùng swimlane flowchart thay vì flowchart thường?",
+    "questionEn": "When should you use a swimlane flowchart instead of a plain one?",
+    "options": [
+      "Khi cần thể hiện rõ ai hoặc bộ phận nào chịu trách nhiệm cho từng bước và quy trình đi qua nhiều vai trò",
+      "Khi quy trình chỉ có một người thực hiện",
+      "Khi cần vẽ nhanh trên giấy",
+      "Khi quy trình không có điểm quyết định"
+    ],
+    "optionsEn": [
+      "When you need to show who or which department owns each step and the process crosses several roles",
+      "When one person performs the whole process",
+      "When you need a quick paper sketch",
+      "When the process has no decision points"
+    ],
+    "answer": 0,
+    "explanation": "Lane làm lộ ra các lần chuyển giao giữa vai trò — nơi hay xảy ra chậm trễ và mất thông tin nhất trong quy trình nghiệp vụ.",
+    "explanationEn": "Lanes expose the handoffs between roles — the places where business processes most often lose time and information.",
+    "id": "q18"
+  },
+  {
+    "question": "Flowchart khác BPMN chủ yếu ở điểm nào?",
+    "questionEn": "How does a flowchart mainly differ from BPMN?",
+    "options": [
+      "BPMN có bộ ký hiệu chuẩn hoá phong phú hơn cho sự kiện, thông điệp và quy trình con, phù hợp mô hình hoá nghiệp vụ phức tạp",
+      "Flowchart không thể hiện được quyết định",
+      "BPMN chỉ dùng cho lập trình viên",
+      "Flowchart chỉ vẽ được trên giấy"
+    ],
+    "optionsEn": [
+      "BPMN has a richer standardized notation for events, messages, and subprocesses, suiting complex business modeling",
+      "Flowcharts cannot show decisions",
+      "BPMN is only for developers",
+      "Flowcharts can only be drawn on paper"
+    ],
+    "answer": 0,
+    "explanation": "Flowchart đơn giản và ai cũng đọc được. BPMN chính xác hơn và là chuẩn quốc tế, nhưng cần người đọc được đào tạo về ký hiệu.",
+    "explanationEn": "Flowcharts are simple and readable by anyone. BPMN is more precise and an international standard, but readers need notation training.",
+    "id": "q19"
+  },
+  {
+    "question": "BA vẽ flowchart quy trình duyệt đơn nghỉ phép. Giá trị lớn nhất của bản vẽ này là gì?",
+    "questionEn": "A BA charts the leave-approval process. What is the chart's greatest value?",
+    "options": [
+      "Nó tạo hiểu biết chung và làm lộ ra các bước thiếu, vòng lặp thừa và trường hợp ngoại lệ chưa ai nghĩ tới",
+      "Nó thay thế hoàn toàn tài liệu yêu cầu",
+      "Nó tự động sinh mã nguồn",
+      "Nó chứng minh dự án đúng tiến độ"
+    ],
+    "optionsEn": [
+      "It builds shared understanding and exposes missing steps, redundant loops, and exception cases nobody had considered",
+      "It fully replaces the requirements document",
+      "It generates source code automatically",
+      "It proves the project is on schedule"
+    ],
+    "answer": 0,
+    "explanation": "Mô hình trực quan bổ sung chứ không thay thế đặc tả. Giá trị chính là phát hiện lỗi sớm khi mọi người cùng nhìn vào một bức tranh.",
+    "explanationEn": "Visual models supplement rather than replace specifications. Their main value is catching errors early while everyone looks at one picture.",
+    "id": "q20"
+  }
 ]

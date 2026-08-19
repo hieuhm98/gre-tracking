@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "BPMN là gì và vì sao nó tồn tại · Bốn nhóm ký hiệu cốt lõi",
+      "titleEn": "What BPMN is and why it exists · The four core notation groups",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Event — nhiều hơn bạn nghĩ · Gateway — rẽ nhánh cho đúng",
+      "titleEn": "Events — richer than you expect · Gateways — branching correctly",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Pool, lane và ranh giới tổ chức · Mô hình as-is và to-be",
+      "titleEn": "Pools, lanes, and organizational boundaries · As-is and to-be models",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Từ mô hình quy trình tới yêu cầu",
+      "titleEn": "From process model to requirements",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

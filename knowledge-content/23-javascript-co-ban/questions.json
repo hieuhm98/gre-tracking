@@ -83,8 +83,18 @@
     "id": "js-05",
     "question": "typeof null trong JavaScript trả về gì?",
     "questionEn": "What does typeof null return in JavaScript?",
-    "options": ["'null'", "'undefined'", "'object'", "'boolean'"],
-    "optionsEn": ["'null'", "'undefined'", "'object'", "'boolean'"],
+    "options": [
+      "'null'",
+      "'undefined'",
+      "'object'",
+      "'boolean'"
+    ],
+    "optionsEn": [
+      "'null'",
+      "'undefined'",
+      "'object'",
+      "'boolean'"
+    ],
     "answer": 2,
     "explanation": "typeof null trả về 'object' — đây là một bug lịch sử của JavaScript từ phiên bản đầu tiên và không được sửa để giữ tương thích ngược. Để kiểm tra đúng: value === null.",
     "explanationEn": "typeof null returns 'object' — a historical bug in JavaScript dating back to its first version, left unfixed to preserve backward compatibility. To check correctly, use: value === null."
@@ -288,5 +298,105 @@
     "answer": 1,
     "explanation": "Khi trình duyệt gặp <script>, nó dừng parse HTML để tải và chạy JS. Đặt script ở cuối body cho HTML render xong trước, user thấy trang sớm hơn. Cách hiện đại hơn là dùng thuộc tính defer hoặc async trên script tag.",
     "explanationEn": "When the browser encounters a <script>, it pauses HTML parsing to download and run the JS. Placing the script at the end of the body lets the HTML render first, so the user sees the page sooner. A more modern approach is to use the defer or async attribute on the script tag."
+  },
+  {
+    "question": "Giao diện hiển thị vòng quay chờ mãi không dứt sau khi bấm Lưu. Nguyên nhân nào liên quan tới xử lý bất đồng bộ?",
+    "questionEn": "The UI spins forever after clicking Save. Which cause relates to asynchronous handling?",
+    "options": [
+      "Mã không xử lý trường hợp lời gọi API thất bại nên trạng thái chờ không bao giờ được tắt",
+      "Nút Lưu có màu sai",
+      "Trình duyệt thiếu bộ nhớ",
+      "CSS chưa được tải"
+    ],
+    "optionsEn": [
+      "The code does not handle the API call failing, so the loading state is never cleared",
+      "The Save button has the wrong colour",
+      "The browser is out of memory",
+      "The CSS has not loaded"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do mọi yêu cầu chức năng mô tả đường đi thuận lợi nên đi kèm yêu cầu mô tả hành vi khi có ngoại lệ.",
+    "explanationEn": "This is why every functional requirement describing the happy path should have a companion requirement for the exception behaviour.",
+    "id": "q16"
+  },
+  {
+    "question": "Fetch API trong JavaScript dùng để làm gì?",
+    "questionEn": "What is the JavaScript Fetch API used for?",
+    "options": [
+      "Gửi HTTP request từ trình duyệt tới server và nhận dữ liệu trả về",
+      "Lưu dữ liệu vĩnh viễn trên máy người dùng",
+      "Vẽ giao diện đồ hoạ",
+      "Nén tệp trước khi tải lên"
+    ],
+    "optionsEn": [
+      "Send HTTP requests from the browser to the server and receive the response",
+      "Store data permanently on the user's machine",
+      "Render graphical interfaces",
+      "Compress files before upload"
+    ],
+    "answer": 0,
+    "explanation": "Hiểu Fetch giúp BA đọc được tab Network và tự xác minh xem lỗi nằm ở phía giao diện hay phía dữ liệu trả về.",
+    "explanationEn": "Understanding fetch lets a BA read the Network tab and verify whether a defect sits in the UI or in the returned data.",
+    "id": "q17"
+  },
+  {
+    "question": "LocalStorage và SessionStorage khác nhau ở điểm nào?",
+    "questionEn": "How do localStorage and sessionStorage differ?",
+    "options": [
+      "LocalStorage tồn tại sau khi đóng trình duyệt; SessionStorage mất khi đóng tab",
+      "LocalStorage được mã hoá còn SessionStorage thì không",
+      "SessionStorage lưu được dung lượng lớn hơn nhiều",
+      "Cả hai đều được gửi tự động lên server"
+    ],
+    "optionsEn": [
+      "localStorage survives closing the browser; sessionStorage is cleared when the tab closes",
+      "localStorage is encrypted and sessionStorage is not",
+      "sessionStorage holds far more data",
+      "Both are sent to the server automatically"
+    ],
+    "answer": 0,
+    "explanation": "Cả hai đều lưu ở phía trình duyệt và KHÔNG được mã hoá, nên không bao giờ lưu dữ liệu nhạy cảm ở đó — đó là một yêu cầu bảo mật.",
+    "explanationEn": "Both live in the browser and are NOT encrypted, so sensitive data must never be stored there — that is a security requirement.",
+    "id": "q18"
+  },
+  {
+    "question": "DOM là gì?",
+    "questionEn": "What is the DOM?",
+    "options": [
+      "Cấu trúc cây biểu diễn trang HTML mà JavaScript có thể đọc và thay đổi",
+      "Một cơ sở dữ liệu của trình duyệt",
+      "Giao thức truyền dữ liệu",
+      "Định dạng tệp ảnh"
+    ],
+    "optionsEn": [
+      "A tree structure representing the HTML page that JavaScript can read and modify",
+      "A browser database",
+      "A data transfer protocol",
+      "An image file format"
+    ],
+    "answer": 0,
+    "explanation": "Mọi tương tác động trên trang — hiện thông báo, ẩn nút, thêm dòng — đều là thao tác trên DOM.",
+    "explanationEn": "Every dynamic interaction on a page — showing a message, hiding a button, adding a row — is a DOM operation.",
+    "id": "q19"
+  },
+  {
+    "question": "BA cần đặc tả hành vi khi người dùng bấm nút hai lần liên tiếp rất nhanh. Vì sao điều này quan trọng?",
+    "questionEn": "A BA must specify behaviour when a user double-clicks a button very fast. Why does this matter?",
+    "options": [
+      "Vì nếu không chặn, hệ thống có thể tạo hai bản ghi trùng hoặc trừ tiền hai lần",
+      "Vì trình duyệt sẽ bị treo",
+      "Vì CSS sẽ hiển thị sai",
+      "Vì đây là yêu cầu bắt buộc của mọi tiêu chuẩn"
+    ],
+    "optionsEn": [
+      "Because without guarding, the system may create duplicate records or charge twice",
+      "Because the browser will freeze",
+      "Because CSS will render incorrectly",
+      "Because every standard mandates it"
+    ],
+    "answer": 0,
+    "explanation": "Đây là loại yêu cầu ngoại lệ hay bị bỏ sót nhất và cũng là nguồn của những sự cố nghiệp vụ nghiêm trọng nhất.",
+    "explanationEn": "This is the most commonly omitted kind of exception requirement and a source of the most serious business incidents.",
+    "id": "q20"
   }
 ]

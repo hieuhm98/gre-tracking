@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Bốn môi trường và vì sao BA cần biết · Vòng đời một thay đổi qua các môi trường",
+      "titleEn": "The four environments and why a BA needs them · The life cycle of a change through the environments",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Các loại dự án IT phổ biến · Product company và Outsourcing",
+      "titleEn": "Common types of IT projects · Product companies versus outsourcing",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Các vị trí trong một đội phát triển · Tech Lead, DevOps và những vai trò hay bị hiểu nhầm",
+      "titleEn": "The roles on a delivery team · Tech lead, DevOps, and other misunderstood roles",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

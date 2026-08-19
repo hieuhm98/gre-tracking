@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Yêu cầu phần mềm là gì? · Functional vs Non-functional Requirements",
+      "titleEn": "What are software requirements? · Functional vs Non-functional Requirements",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "User Story · Acceptance Criteria",
+      "titleEn": "User Story · Acceptance Criteria",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Kỹ thuật Thu thập Yêu cầu · Các loại yêu cầu khác",
+      "titleEn": "Requirements Gathering Techniques · Other types of requirements",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Lỗi phổ biến khi viết yêu cầu",
+      "titleEn": "Common mistakes when writing requirements",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

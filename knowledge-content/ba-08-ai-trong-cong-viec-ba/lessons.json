@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "AI đổi gì và KHÔNG đổi gì · Dùng AI trong từng công việc của BA",
+      "titleEn": "What AI changes and what it does NOT · Using AI across the BA's tasks",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Ba mô hình phát triển phần mềm thời AI · Rủi ro khi dùng AI trong công việc BA",
+      "titleEn": "Three development models in the AI era · Risks when using AI in BA work",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Cách viết prompt hiệu quả cho công việc BA · Vai trò BA thay đổi thế nào",
+      "titleEn": "Writing effective prompts for BA work · How the BA role shifts",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Vai trò cốt lõi của IT Business Analyst được mô tả chính xác nhất là gì?",
+    "questionEn": "What most accurately describes the core role of an IT Business Analyst?",
+    "options": [
+      "Biến nhu cầu nghiệp vụ thành thứ đội kỹ thuật xây dựng được chính xác, và biến khả năng kỹ thuật thành thứ người nghiệp vụ hiểu được",
+      "Ghi lại đầy đủ mọi yêu cầu khách hàng nêu ra",
+      "Quyết định sản phẩm sẽ có những tính năng nào",
+      "Viết mã cho phần giao diện người dùng"
+    ],
+    "optionsEn": [
+      "Turning business needs into something a technical team can build precisely, and technical capability into something business people understand",
+      "Recording every requirement the customer states",
+      "Deciding which features the product will have",
+      "Writing the user interface code"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách giữa ngôn ngữ nghiệp vụ và ngôn ngữ kỹ thuật là có thật và không tự thu hẹp. Không bên nào có nhiệm vụ bắc cầu, đó chính là chỗ BA đứng.",
+    "explanationEn": "The gap between business and technical language is real and does not close by itself. Neither side owns bridging it — that is where the BA stands."
+  },
+  {
+    "id": "q2",
+    "question": "Vì sao nói BA phân tích chứ không chép lại yêu cầu?",
+    "questionEn": "Why is it said that a BA analyses rather than transcribes requirements?",
+    "options": [
+      "Vì khách hàng thường mô tả giải pháp họ nghĩ ra chứ không mô tả vấn đề họ gặp",
+      "Vì ghi chép là việc của thư ký",
+      "Vì tài liệu chép lại không đủ dài",
+      "Vì khách hàng thường nói sai sự thật"
+    ],
+    "optionsEn": [
+      "Because customers usually describe the solution they imagined rather than the problem they have",
+      "Because note-taking is a secretary's job",
+      "Because transcribed documents are too short",
+      "Because customers usually misstate facts"
+    ],
+    "answer": 0,
+    "explanation": "Khi người dùng nói tôi cần thêm nút xuất Excel, nhu cầu thật có thể là họ cần một báo cáo định kỳ mà hệ thống chưa có.",
+    "explanationEn": "When a user says I need an Excel export button, the real need may be a periodic report the system does not yet provide."
+  },
+  {
+    "id": "q3",
+    "question": "Nếu BA chỉ chuyển tiếp thông tin nguyên vẹn giữa hai bên thì hệ quả là gì?",
+    "questionEn": "What follows if a BA merely forwards information intact between two sides?",
+    "options": [
+      "Vai trò đó có thể bị thay bằng một email, vì không có giá trị phân tích nào được thêm vào",
+      "Dự án sẽ chạy nhanh hơn vì ít tầng trung gian",
+      "Chất lượng tài liệu sẽ cao hơn",
+      "Lập trình viên sẽ hài lòng hơn"
+    ],
+    "optionsEn": [
+      "The role could be replaced by an email, because no analytical value is added",
+      "The project runs faster with fewer intermediaries",
+      "Documentation quality improves",
+      "Developers are more satisfied"
+    ],
+    "answer": 0,
+    "explanation": "Giá trị của BA đo bằng việc mọi người hiểu vấn đề rõ hơn sau khi bạn tham gia, chứ không phải bằng số trang tài liệu.",
+    "explanationEn": "A BA's value is measured by everyone understanding the problem better after you engaged, not by page count."
+  },
+  {
+    "id": "q4",
+    "question": "Trong bốn nhóm công việc của BA, hai nhóm nào hay bị bỏ qua nhất khi BA vội?",
+    "questionEn": "Of the BA's four groups of work, which two are most often skipped when rushed?",
+    "options": [
+      "Phân tích và mô hình hoá; đồng hành tới khi hoàn thành",
+      "Khai thác nhu cầu; đặc tả và truyền đạt",
+      "Khai thác nhu cầu; phân tích và mô hình hoá",
+      "Đặc tả và truyền đạt; đồng hành tới khi hoàn thành"
+    ],
+    "optionsEn": [
+      "Analysing and modeling; staying to completion",
+      "Eliciting needs; specifying and communicating",
+      "Eliciting needs; analysing and modeling",
+      "Specifying and communicating; staying to completion"
+    ],
+    "answer": 0,
+    "explanation": "Kết quả là tài liệu trông đầy đủ nhưng đội vẫn liên tục hỏi lại, và sản phẩm giao ra vẫn không khớp kỳ vọng.",
+    "explanationEn": "The result is documentation that looks complete while the team keeps asking questions and the delivery still misses expectations."
+  },
+  {
+    "id": "q5",
+    "question": "BA có cần biết lập trình không?",
+    "questionEn": "Does a BA need to know how to code?",
+    "options": [
+      "Cần hiểu kỹ thuật đủ để đặt câu hỏi đúng, nhưng không cần viết mã sản phẩm",
+      "Bắt buộc phải viết được mã backend",
+      "Hoàn toàn không cần biết gì về kỹ thuật",
+      "Chỉ cần biết lập trình nếu làm ở công ty outsourcing"
+    ],
+    "optionsEn": [
+      "Enough technical understanding to ask the right questions, but not to write production code",
+      "They must be able to write backend code",
+      "No technical knowledge is needed at all",
+      "Only if working at an outsourcing company"
+    ],
+    "answer": 0,
+    "explanation": "Hiểu API, cơ sở dữ liệu và kiến trúc giúp BA đặt câu hỏi sắc bén và nhận ra công việc ẩn mà story ban đầu chưa nói tới.",
+    "explanationEn": "Understanding APIs, databases, and architecture lets a BA ask sharper questions and spot hidden work the original story omitted."
+  },
+  {
+    "id": "q6",
+    "question": "Trong một ngày làm việc, vì sao BA nên tham gia daily standup của đội?",
+    "questionEn": "Why should a BA attend the team's daily standup?",
+    "options": [
+      "Vì nhiều điểm chặn của đội hoá ra là do yêu cầu chưa rõ, và BA có thể gỡ ngay",
+      "Vì BA cần giao việc cho từng lập trình viên",
+      "Vì BA phải báo cáo tiến độ cho lãnh đạo",
+      "Vì standup là nơi phê duyệt thiết kế"
+    ],
+    "optionsEn": [
+      "Because many team blockers turn out to be unclear requirements the BA can resolve immediately",
+      "Because the BA must assign work to each developer",
+      "Because the BA must report progress to management",
+      "Because the standup is where designs get approved"
+    ],
+    "answer": 0,
+    "explanation": "Daily standup là sự kiện của đội phát triển để tự đồng bộ. BA tham gia để nghe và gỡ vướng, không phải để giao việc hay nhận báo cáo.",
+    "explanationEn": "The standup is the development team's own sync. The BA attends to listen and unblock, not to assign work or collect status."
+  },
+  {
+    "id": "q7",
+    "question": "Câu hỏi trung tâm phân biệt Business Analyst với Product Owner là gì?",
+    "questionEn": "Which central question distinguishes a Business Analyst from a Product Owner?",
+    "options": [
+      "BA hỏi vấn đề nghiệp vụ là gì và giải pháp phải làm được gì; PO hỏi chúng ta xây gì trước và vì sao",
+      "BA hỏi làm sao giao đúng hạn; PO hỏi hệ thống thiết kế ra sao",
+      "BA hỏi nó có hoạt động đúng không; PO hỏi ai chịu trách nhiệm",
+      "Hai vai trò có cùng câu hỏi trung tâm"
+    ],
+    "optionsEn": [
+      "The BA asks what the business problem is and what the solution must do; the PO asks what we build first and why",
+      "The BA asks how to deliver on time; the PO asks how the system is designed",
+      "The BA asks whether it works correctly; the PO asks who is accountable",
+      "Both roles share the same central question"
+    ],
+    "answer": 0,
+    "explanation": "Ở công ty nhỏ một người thường kiêm cả hai vai. Điều quan trọng không phải chức danh mà là những câu hỏi đó phải có ai đó trả lời.",
+    "explanationEn": "At small companies one person often holds both roles. What matters is not the title but that somebody answers those questions."
+  },
+  {
+    "id": "q8",
+    "question": "Bước nào trong vòng đời sản phẩm bị bỏ qua nhiều nhất, và vì sao điều đó đáng tiếc?",
+    "questionEn": "Which product life-cycle step is skipped most often, and why is that unfortunate?",
+    "options": [
+      "Đo xem giá trị nghiệp vụ có thực sự đạt được sau khi phát hành — không ai kiểm tra tính năng có giải quyết được vấn đề ban đầu hay không",
+      "Khai thác yêu cầu ở đầu dự án",
+      "Viết acceptance criteria",
+      "Tham gia sprint planning"
+    ],
+    "optionsEn": [
+      "Measuring whether the business value materialised after release — nobody checks if the feature solved the original problem",
+      "Eliciting requirements at project start",
+      "Writing acceptance criteria",
+      "Attending sprint planning"
+    ],
+    "answer": 0,
+    "explanation": "Rất nhiều đội giao xong tính năng rồi chuyển ngay sang cái tiếp theo, nên không bao giờ học được điều gì hiệu quả và điều gì không.",
+    "explanationEn": "Many teams ship a feature and move straight to the next, so they never learn what worked and what did not."
+  },
+  {
+    "id": "q9",
+    "question": "Tò mò có kỷ luật thể hiện thế nào trong công việc BA?",
+    "questionEn": "How does disciplined curiosity show up in BA work?",
+    "options": [
+      "Khi nghe chúng tôi luôn làm thế, BA hỏi tiếp vì sao cho tới khi chạm tới lý do thật — thường là ràng buộc đã biến mất từ lâu",
+      "BA hỏi mọi câu hỏi có thể nghĩ ra trong buổi họp đầu tiên",
+      "BA tự nghiên cứu công nghệ mới mỗi tuần",
+      "BA đọc hết tài liệu cũ trước khi gặp ai"
+    ],
+    "optionsEn": [
+      "Hearing we have always done it this way, the BA keeps asking why until reaching the real reason — usually a constraint long gone",
+      "The BA asks every conceivable question in the first meeting",
+      "The BA studies a new technology each week",
+      "The BA reads all old documentation before meeting anyone"
+    ],
+    "answer": 0,
+    "explanation": "Nhiều bước trong quy trình hiện tại tồn tại vì hạn chế của cách làm cũ chứ không vì nhu cầu nghiệp vụ. Phát hiện điều đó mở ra cơ hội cải tiến lớn.",
+    "explanationEn": "Many steps in a current process exist because of old limitations rather than business need. Spotting that opens major improvement opportunities."
+  },
+  {
+    "id": "q10",
+    "question": "Vì sao chịu được sự mơ hồ là phẩm chất quan trọng của BA?",
+    "questionEn": "Why is tolerance for ambiguity an important BA quality?",
+    "options": [
+      "Vì giai đoạn đầu dự án luôn hỗn loạn với thông tin mâu thuẫn; BA giỏi làm rõ dần theo lớp thay vì hoảng hoặc vội chốt",
+      "Vì BA không cần tài liệu chính xác",
+      "Vì mơ hồ giúp tránh trách nhiệm",
+      "Vì khách hàng thích sự linh hoạt"
+    ],
+    "optionsEn": [
+      "Because the early stage is always chaotic with contradictory information; a good BA clarifies in layers rather than panicking or locking down early",
+      "Because a BA does not need accurate documentation",
+      "Because ambiguity helps avoid accountability",
+      "Because customers like flexibility"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là nguyên tắc làm mịn chi tiết theo lớp: hiểu đủ để đi tiếp bước sau với mức rủi ro chấp nhận được, thay vì cố biết hết ngay từ đầu.",
+    "explanationEn": "This is progressive refinement: understand enough to take the next step at acceptable risk, rather than trying to know everything up front."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao khả năng nói không một cách xây dựng lại quan trọng với BA?",
+    "questionEn": "Why does the ability to say no constructively matter for a BA?",
+    "options": [
+      "Vì nhận hết mọi yêu cầu nghĩa là đẩy quyết định cắt giảm sang cho lập trình viên vào lúc hết thời gian — thời điểm tệ nhất",
+      "Vì BA cần thể hiện quyền lực với khách hàng",
+      "Vì từ chối giúp giảm khối lượng công việc của BA",
+      "Vì mọi yêu cầu mới đều là scope creep"
+    ],
+    "optionsEn": [
+      "Because accepting everything pushes the scope cut onto developers when time runs out — the worst possible moment",
+      "Because a BA must assert authority over customers",
+      "Because refusing reduces the BA's own workload",
+      "Because every new request is scope creep"
+    ],
+    "answer": 0,
+    "explanation": "Nói không xây dựng không có nghĩa là từ chối thẳng, mà là làm rõ đánh đổi: nếu thêm cái này thì cái nào bị đẩy ra.",
+    "explanationEn": "Saying no constructively is not a flat refusal but making the trade-off explicit: if we add this, what gets pushed out?"
+  },
+  {
+    "id": "q12",
+    "question": "Khó khăn nào đặc trưng nhất của nghề BA?",
+    "questionEn": "Which difficulty is most characteristic of the BA role?",
+    "options": [
+      "Chịu trách nhiệm nhưng không có thẩm quyền — phải làm mọi người đồng thuận mà không có quyền ra lệnh cho ai",
+      "Phải làm việc ngoài giờ thường xuyên",
+      "Phải học một ngôn ngữ lập trình mới mỗi năm",
+      "Phải đi công tác liên tục"
+    ],
+    "optionsEn": [
+      "Responsibility without authority — building consensus with no power to direct anyone",
+      "Frequent overtime",
+      "Learning a new programming language every year",
+      "Constant business travel"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế ảnh hưởng của BA phải đến từ uy tín chuyên môn và chất lượng câu hỏi, không đến từ chức vụ.",
+    "explanationEn": "That is why a BA's influence must come from professional credibility and the quality of their questions, not from position."
+  },
+  {
+    "id": "q13",
+    "question": "Vì sao sai lầm của BA thường lộ ra rất muộn?",
+    "questionEn": "Why do a BA's mistakes usually surface very late?",
+    "options": [
+      "Vì một yêu cầu bị hiểu sai chỉ bị phát hiện khi sản phẩm đã được xây xong hoặc đang kiểm thử",
+      "Vì BA không tham gia kiểm thử",
+      "Vì tài liệu không bao giờ được review",
+      "Vì khách hàng không phản hồi"
+    ],
+    "optionsEn": [
+      "Because a misunderstood requirement is only discovered once the product is built or being tested",
+      "Because BAs do not join testing",
+      "Because documentation is never reviewed",
+      "Because customers do not give feedback"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do review yêu cầu, prototype và bàn giao tăng dần có giá trị kinh tế lớn: chúng kéo thời điểm phát hiện lỗi về sớm hơn.",
+    "explanationEn": "This is why requirement reviews, prototypes, and incremental delivery pay off economically: they pull error detection earlier."
+  },
+  {
+    "id": "q14",
+    "question": "Phát biểu nào ĐÚNG về ranh giới giữa BA và các vai trò lân cận?",
+    "questionEn": "Which statement about the boundary between a BA and neighbouring roles is correct?",
+    "options": [
+      "Ranh giới thay đổi theo từng công ty; ở công ty nhỏ một người thường kiêm hai hoặc ba vai",
+      "Ranh giới được chuẩn hoá quốc tế và không thay đổi",
+      "BA không bao giờ được làm việc của tester",
+      "Product Owner luôn là cấp trên của BA"
+    ],
+    "optionsEn": [
+      "Boundaries vary by company; at small firms one person often wears two or three hats",
+      "Boundaries are internationally standardised and fixed",
+      "A BA must never do tester work",
+      "The Product Owner is always the BA's manager"
+    ],
+    "answer": 0,
+    "explanation": "Một BA có thể vừa làm PO vừa viết test case. Điều quan trọng là những câu hỏi trung tâm của mỗi vai trò đều phải có ai đó trả lời.",
+    "explanationEn": "A BA may act as PO and write test cases. What matters is that each role's central question gets answered by somebody."
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao công việc của BA thường khó nhìn thấy?",
+    "questionEn": "Why is a BA's work often hard to see?",
+    "options": [
+      "Vì khi BA làm tốt, mọi thứ trôi chảy và không ai để ý; chỉ khi làm tệ thì mọi người mới thấy",
+      "Vì BA không tham gia họp với đội",
+      "Vì tài liệu BA không được chia sẻ",
+      "Vì BA làm việc ở phòng riêng"
+    ],
+    "optionsEn": [
+      "Because when a BA does well everything flows and nobody notices; only failure is visible",
+      "Because BAs do not attend team meetings",
+      "Because BA documents are not shared",
+      "Because BAs work in a separate room"
+    ],
+    "answer": 0,
+    "explanation": "Đây là bản chất của mọi công việc bắc cầu. Cách chứng minh giá trị là chỉ ra những lỗi đã được ngăn chặn và những câu hỏi đã được giải quyết sớm.",
+    "explanationEn": "This is the nature of all bridging work. The way to show value is pointing at the defects prevented and the questions resolved early."
+  },
+  {
+    "id": "q16",
+    "question": "Lợi thế nghề nghiệp lớn nhất mà vai trò BA mang lại là gì?",
+    "questionEn": "What is the biggest career advantage the BA role offers?",
+    "options": [
+      "Thấy được toàn cảnh từ vấn đề kinh doanh tới dòng mã cuối cùng, tạo nền tảng để đi tiếp sang PO, PM hoặc quản lý",
+      "Mức lương khởi điểm cao nhất trong ngành IT",
+      "Không phải chịu áp lực tiến độ",
+      "Không cần học công nghệ mới"
+    ],
+    "optionsEn": [
+      "Seeing the whole picture from business problem to final line of code, a foundation for moving to PO, PM, or management",
+      "The highest starting salary in IT",
+      "Freedom from schedule pressure",
+      "No need to learn new technology"
+    ],
+    "answer": 0,
+    "explanation": "Rất ít vai trò có góc nhìn xuyên suốt như vậy, và đó là vốn liếng quý khi chuyển sang các vị trí thiên về sản phẩm hoặc quản lý.",
+    "explanationEn": "Few roles get such an end-to-end view, and it is valuable capital when moving into product or management positions."
+  }
+]

@@ -238,5 +238,165 @@
     "answer": 0,
     "explanation": "BA dùng JSON để đối chiếu (mapping) trường dữ liệu khi tích hợp, viết acceptance criteria rõ ràng (\"response có trường status = confirmed\") và kiểm thử nhanh trong Postman.",
     "explanationEn": "BAs use JSON to map data fields during integration, write clear acceptance criteria (\"the response has status = confirmed\"), and test quickly in Postman."
+  },
+  {
+    "question": "Trong JSON, giá trị `\"active\": \"false\"` khác `\"active\": false` như thế nào?",
+    "questionEn": "In JSON, how does `\"active\": \"false\"` differ from `\"active\": false`?",
+    "options": [
+      "Cái đầu là chuỗi ký tự, cái sau là boolean; mã kiểm tra kiểu boolean sẽ hiểu chuỗi \"false\" là có giá trị",
+      "Hai cách viết hoàn toàn tương đương",
+      "Cái đầu không hợp lệ trong JSON",
+      "Cái sau chỉ dùng được trong XML"
+    ],
+    "optionsEn": [
+      "The first is a string, the second a boolean; code testing for a boolean will treat the string \"false\" as truthy",
+      "They are exactly equivalent",
+      "The first is invalid JSON",
+      "The second only works in XML"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lỗi tích hợp kinh điển. Chuỗi \"false\" không rỗng nên nhiều ngôn ngữ coi là đúng, khiến logic chạy ngược hoàn toàn.",
+    "explanationEn": "This is a classic integration defect. The non-empty string \"false\" is truthy in many languages, inverting the logic entirely.",
+    "id": "q13"
+  },
+  {
+    "question": "Đường dẫn nào lấy ra tên của sản phẩm thứ hai trong `{\"order\":{\"items\":[{\"name\":\"A\"},{\"name\":\"B\"}]}}`?",
+    "questionEn": "Which path reads the second product name from `{\"order\":{\"items\":[{\"name\":\"A\"},{\"name\":\"B\"}]}}`?",
+    "options": [
+      "order.items[1].name",
+      "order.items[2].name",
+      "order.name[1]",
+      "items.order[1].name"
+    ],
+    "optionsEn": [
+      "order.items[1].name",
+      "order.items[2].name",
+      "order.name[1]",
+      "items.order[1].name"
+    ],
+    "answer": 0,
+    "explanation": "Mảng JSON đánh chỉ số từ 0, nên phần tử thứ hai là chỉ số 1. Đọc được path giúp BA đối chiếu tài liệu API với dữ liệu thật.",
+    "explanationEn": "JSON arrays are zero-indexed, so the second element is index 1. Reading paths lets a BA reconcile API docs with real payloads.",
+    "id": "q14"
+  },
+  {
+    "question": "Vì sao JSON thường được chọn thay XML cho API hiện đại?",
+    "questionEn": "Why is JSON usually chosen over XML for modern APIs?",
+    "options": [
+      "Gọn hơn, dễ đọc hơn và ánh xạ thẳng sang cấu trúc dữ liệu của hầu hết ngôn ngữ lập trình",
+      "JSON hỗ trợ mã hoá còn XML thì không",
+      "XML không truyền được qua HTTP",
+      "JSON tự động kiểm tra tính hợp lệ dữ liệu"
+    ],
+    "optionsEn": [
+      "It is more compact, easier to read, and maps directly onto native data structures in most languages",
+      "JSON supports encryption and XML does not",
+      "XML cannot travel over HTTP",
+      "JSON validates data automatically"
+    ],
+    "answer": 0,
+    "explanation": "XML vẫn mạnh ở nơi cần schema và chữ ký chặt chẽ. Nhưng cho API web thông thường, JSON nhẹ và tiện hơn nhiều.",
+    "explanationEn": "XML remains strong where strict schemas and signatures are needed. For ordinary web APIs, JSON is much lighter and more convenient.",
+    "id": "q15"
+  },
+  {
+    "question": "Lỗi cú pháp nào khiến JSON không parse được?",
+    "questionEn": "Which syntax mistake makes JSON fail to parse?",
+    "options": [
+      "Dấu phẩy thừa sau phần tử cuối cùng của object hoặc mảng",
+      "Dùng dấu ngoặc kép cho key",
+      "Xuống dòng giữa các cặp key-value",
+      "Dùng số âm làm giá trị"
+    ],
+    "optionsEn": [
+      "A trailing comma after the last element of an object or array",
+      "Using double quotes around keys",
+      "A line break between key-value pairs",
+      "Using a negative number as a value"
+    ],
+    "answer": 0,
+    "explanation": "JSON chuẩn không cho phép dấu phẩy thừa. Đây cùng với dùng nháy đơn thay nháy kép là hai lỗi hay gặp nhất khi soạn payload bằng tay.",
+    "explanationEn": "Standard JSON forbids trailing commas. That, along with single instead of double quotes, is the most common error when hand-writing payloads.",
+    "id": "q16"
+  },
+  {
+    "question": "BA nhận payload có trường `\"discount\": null`. Yêu cầu nên làm rõ điều gì?",
+    "questionEn": "A BA receives a payload with `\"discount\": null`. What should the requirement clarify?",
+    "options": [
+      "null nghĩa là không có chiết khấu hay là chưa xác định, và hệ thống hiển thị gì trong mỗi trường hợp",
+      "Màu sắc hiển thị của trường discount",
+      "Tên biến mà lập trình viên phải đặt",
+      "Cơ sở dữ liệu nào lưu trường này"
+    ],
+    "optionsEn": [
+      "Whether null means no discount or not yet determined, and what the system displays in each case",
+      "The display colour of the discount field",
+      "The variable name developers must use",
+      "Which database stores the field"
+    ],
+    "answer": 0,
+    "explanation": "null, 0 và trường vắng mặt là ba trạng thái khác nhau. Không phân biệt rõ sẽ dẫn tới hiển thị sai hoặc tính toán sai.",
+    "explanationEn": "null, 0, and an absent field are three different states. Failing to distinguish them leads to wrong display or wrong calculation.",
+    "id": "q17"
+  },
+  {
+    "question": "Cấu trúc nào đúng để biểu diễn một danh sách nhiều đơn hàng trong JSON?",
+    "questionEn": "Which structure correctly represents a list of several orders in JSON?",
+    "options": [
+      "Một mảng chứa các object, mỗi object là một đơn hàng",
+      "Một object chứa nhiều key trùng tên order",
+      "Một chuỗi ký tự ngăn cách bằng dấu phẩy",
+      "Một mảng chứa các mảng rỗng"
+    ],
+    "optionsEn": [
+      "An array of objects, each object being one order",
+      "One object with several keys all named order",
+      "A comma-separated string",
+      "An array of empty arrays"
+    ],
+    "answer": 0,
+    "explanation": "Mảng các object là khuôn mẫu chuẩn cho danh sách bản ghi. JSON không cho phép key trùng nhau trong cùng một object.",
+    "explanationEn": "An array of objects is the standard pattern for a record list. JSON does not allow duplicate keys within one object.",
+    "id": "q18"
+  },
+  {
+    "question": "Trong đặc tả API, vì sao BA nên đính kèm một payload JSON mẫu?",
+    "questionEn": "In an API specification, why should a BA attach a sample JSON payload?",
+    "options": [
+      "Vì ví dụ cụ thể loại bỏ nhập nhằng về tên trường, kiểu dữ liệu và cấu trúc lồng nhau nhanh hơn mọi đoạn mô tả",
+      "Vì lập trình viên không đọc được bảng",
+      "Vì payload thay thế được acceptance criteria",
+      "Vì JSON tự sinh ra mã nguồn"
+    ],
+    "optionsEn": [
+      "Because a concrete example removes ambiguity about field names, types, and nesting faster than any prose",
+      "Because developers cannot read tables",
+      "Because a payload replaces acceptance criteria",
+      "Because JSON generates source code automatically"
+    ],
+    "answer": 0,
+    "explanation": "Một ví dụ đầu vào và đầu ra cụ thể là cách hiệu quả nhất để hai bên xác nhận cùng cách hiểu, đặc biệt khi làm việc xuyên đội hoặc với nhà cung cấp.",
+    "explanationEn": "A concrete input and output example is the most effective way for both sides to confirm a shared understanding, especially across teams or with vendors.",
+    "id": "q19"
+  },
+  {
+    "question": "Kiểu giá trị nào KHÔNG hợp lệ trong JSON chuẩn?",
+    "questionEn": "Which value type is NOT valid in standard JSON?",
+    "options": [
+      "Ngày tháng dạng Date riêng biệt",
+      "Chuỗi",
+      "Số",
+      "null"
+    ],
+    "optionsEn": [
+      "A dedicated Date type",
+      "String",
+      "Number",
+      "null"
+    ],
+    "answer": 0,
+    "explanation": "JSON không có kiểu ngày tháng. Ngày luôn được truyền dưới dạng chuỗi, nên đặc tả phải nêu rõ định dạng, ví dụ ISO 8601.",
+    "explanationEn": "JSON has no date type. Dates always travel as strings, so the specification must state the format, for example ISO 8601.",
+    "id": "q20"
   }
 ]

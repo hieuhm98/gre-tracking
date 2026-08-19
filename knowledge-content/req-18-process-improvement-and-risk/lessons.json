@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao cải tiến & chu trình cải tiến quy trình",
+      "titleEn": "Why improve & the improvement cycle",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Đánh giá thực trạng & phân tích nguyên nhân gốc rễ",
+      "titleEn": "Assessing the current state & root cause analysis",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Kế hoạch cải tiến, thí điểm & vượt qua kháng cự",
+      "titleEn": "Improvement plans, pilots & overcoming resistance",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Đo lường hiệu quả & khái niệm quản lý rủi ro",
+      "titleEn": "Measuring effectiveness & risk management concepts",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Rủi ro yêu cầu điển hình & theo dõi liên tục",
+      "titleEn": "Typical requirements risks & continuous tracking",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

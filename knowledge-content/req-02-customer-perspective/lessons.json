@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Khoảng cách kỳ vọng & ai là khách hàng",
+      "titleEn": "The expectation gap & who the customer is",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Quan hệ đối tác & Bill of Rights",
+      "titleEn": "The partnership & the Bill of Rights",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6", "q7"]
+    },
+    {
+      "id": "l3",
+      "title": "Bill of Responsibilities & văn hoá tôn trọng yêu cầu",
+      "titleEn": "The Bill of Responsibilities & a culture that respects requirements",
+      "sections": [5, 6],
+      "questionIds": ["q8", "q9", "q10"]
+    },
+    {
+      "id": "l4",
+      "title": "Người ra quyết định, sign-off & baseline",
+      "titleEn": "Decision makers, sign-off & the baseline",
+      "sections": [7, 8, 9, 10],
+      "questionIds": ["q11", "q12", "q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l5",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,17 +1,402 @@
 [
-  {"id":"q1","question":"Functional Requirement khác Non-functional Requirement như thế nào?","questionEn":"How does a Functional Requirement differ from a Non-functional Requirement?","options":["FR là yêu cầu của khách hàng, NFR là yêu cầu của developer","FR mô tả hệ thống làm gì (tính năng), NFR mô tả hệ thống hoạt động như thế nào (chất lượng)","FR quan trọng hơn NFR","NFR chỉ dành cho performance"],"optionsEn":["An FR is a customer requirement, an NFR is a developer requirement","An FR describes what the system does (features), an NFR describes how well the system operates (quality)","FRs are more important than NFRs","NFRs are only about performance"],"answer":1,"explanation":"FR = what (chức năng): đăng nhập, đặt hàng, tìm kiếm. NFR = how well (chất lượng): tốc độ, bảo mật, reliability. Cả hai đều quan trọng — nhiều dự án fail vì bỏ qua NFR.","explanationEn":"FR = what (functionality): login, place an order, search. NFR = how well (quality): speed, security, reliability. Both matter — many projects fail by ignoring NFRs."},
-  {"id":"q2","question":"User Story đúng chuẩn được viết theo format nào?","questionEn":"What format is a properly written User Story in?","options":["Khi [điều kiện] thì [hành động]","Là [role], tôi muốn [action], để [benefit]","[Tính năng]: [mô tả chi tiết]","[Actor] [verb] [object]"],"optionsEn":["When [condition] then [action]","As a [role], I want [action], so that [benefit]","[Feature]: [detailed description]","[Actor] [verb] [object]"],"answer":1,"explanation":"Format chuẩn: 'As a [role], I want [action], So that [benefit]'. Quan trọng nhất là phần 'So that' — giải thích WHY, giúp team hiểu giá trị và có thể đề xuất giải pháp tốt hơn.","explanationEn":"The standard format is 'As a [role], I want [action], So that [benefit]'. The most important part is the 'So that' — it explains WHY, helping the team understand the value and propose better solutions."},
-  {"id":"q3","question":"Acceptance Criteria (AC) có mục đích gì?","questionEn":"What is the purpose of Acceptance Criteria (AC)?","options":["Ước tính effort của story","Xác định tiêu chí rõ ràng khi nào story được coi là hoàn thành và đúng","Phân chia task cho developer","Mô tả thiết kế kỹ thuật"],"optionsEn":["Estimating the effort of a story","Defining clear criteria for when a story is considered complete and correct","Splitting tasks among developers","Describing the technical design"],"answer":1,"explanation":"AC là 'hợp đồng' PO-Dev: dev biết cần build gì để PO accept, QA biết cần test gì, PO biết sẽ nhận được gì. Không có AC → 'done' là chủ quan → tranh luận không hồi kết.","explanationEn":"AC is the 'contract' between the PO and Dev: developers know what to build for the PO to accept, QA knows what to test, and the PO knows what they will receive. Without AC → 'done' is subjective → endless debate."},
-  {"id":"q4","question":"'Trang web phải nhanh' là yêu cầu như thế nào?","questionEn":"What kind of requirement is 'The website must be fast'?","options":["Functional Requirement tốt","Non-functional Requirement tốt","Yêu cầu mơ hồ, không thể kiểm tra — cần cụ thể hơn","Acceptance Criteria rõ ràng"],"optionsEn":["A good Functional Requirement","A good Non-functional Requirement","A vague, untestable requirement — it needs to be more specific","A clear piece of Acceptance Criteria"],"answer":2,"explanation":"'Nhanh' không đo lường được — ai cũng định nghĩa khác nhau. Yêu cầu đúng: 'Trang home load < 2 giây với LCP tại 95th percentile, trên connection 4G'. Cụ thể, đo được.","explanationEn":"'Fast' is not measurable — everyone defines it differently. A proper requirement: 'The home page loads in < 2 seconds with LCP at the 95th percentile on a 4G connection.' Specific and measurable."},
-  {"id":"q5","question":"INVEST là tiêu chí đánh giá User Story tốt. 'T' viết tắt cho điều gì?","questionEn":"INVEST is a set of criteria for a good User Story. What does 'T' stand for?","options":["Timely - kịp thời","Technical - có tính kỹ thuật","Testable - có thể kiểm tra được","Tracked - được theo dõi"],"optionsEn":["Timely","Technical","Testable","Tracked"],"answer":2,"explanation":"INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable. Testable: nếu không viết được test case → story quá mơ hồ. Story tốt phải verify được khi done.","explanationEn":"INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable. Testable: if you can't write a test case → the story is too vague. A good story must be verifiable when done."},
-  {"id":"q6","question":"Non-functional Requirement nào quan trọng nhất với hệ thống thanh toán?","questionEn":"Which Non-functional Requirement is most important for a payment system?","options":["Giao diện đẹp","Tốc độ load trang","Security (bảo mật và tuân thủ PCI DSS)","Số lượng màu sắc theme"],"optionsEn":["A beautiful interface","Page load speed","Security (protection and PCI DSS compliance)","The number of theme colors"],"answer":2,"explanation":"Hệ thống thanh toán xử lý tiền và thông tin thẻ → Security + Compliance là NFR quan trọng nhất. PCI DSS là chuẩn bảo mật bắt buộc cho mọi hệ thống xử lý thẻ tín dụng.","explanationEn":"A payment system handles money and card data → Security + Compliance are the most important NFRs. PCI DSS is a mandatory security standard for any system that processes credit cards."},
-  {"id":"q7","question":"Format Given-When-Then trong Acceptance Criteria biểu thị gì?","questionEn":"What does the Given-When-Then format in Acceptance Criteria represent?","options":["Given = người dùng, When = action, Then = role","Given = ngữ cảnh/precondition, When = hành động xảy ra, Then = kết quả mong đợi","Given = story, When = sprint, Then = release","Given = bug, When = fix, Then = test"],"optionsEn":["Given = user, When = action, Then = role","Given = context/precondition, When = the action occurs, Then = expected outcome","Given = story, When = sprint, Then = release","Given = bug, When = fix, Then = test"],"answer":1,"explanation":"Given-When-Then (Gherkin format): Given = setup/context, When = trigger/action, Then = expected outcome. Rõ ràng, testable, dùng được cho manual test và automation test.","explanationEn":"Given-When-Then (Gherkin format): Given = setup/context, When = trigger/action, Then = expected outcome. It is clear, testable, and usable for both manual and automated testing."},
-  {"id":"q8","question":"Kỹ thuật 'Job Shadowing' trong thu thập yêu cầu là gì?","questionEn":"What is the 'Job Shadowing' technique in requirements gathering?","options":["Shadow testing - test ẩn danh","BA quan sát trực tiếp người dùng làm việc để hiểu quy trình thực tế","Ghi âm cuộc họp","Phỏng vấn người dùng qua email"],"optionsEn":["Shadow testing - anonymous testing","The BA directly observes users at work to understand their real-world process","Recording a meeting","Interviewing users over email"],"answer":1,"explanation":"Job Shadowing (Observation): BA đi cùng, quan sát người dùng thực tế. Hiệu quả vì người dùng thường không nói được hết — 'show don't tell'. Phát hiện pain point ẩn, workflow không ai để ý.","explanationEn":"Job Shadowing (Observation): the BA accompanies and observes real users. It is effective because users often can't articulate everything — 'show, don't tell'. It reveals hidden pain points and overlooked workflows."},
-  {"id":"q9","question":"'Uptime 99.9%' là loại yêu cầu gì và ý nghĩa thực tế?","questionEn":"What type of requirement is '99.9% uptime' and what does it mean in practice?","options":["Functional Requirement, hệ thống hoạt động 999 giờ liên tục","Non-functional Requirement (Availability), cho phép downtime tối đa ~8.7 giờ/năm","Business Requirement về doanh thu","User Requirement về giao diện"],"optionsEn":["A Functional Requirement — the system runs for 999 hours straight","A Non-functional Requirement (Availability), allowing at most ~8.7 hours of downtime per year","A Business Requirement about revenue","A User Requirement about the interface"],"answer":1,"explanation":"99.9% uptime = 0.1% downtime = 8.766 giờ/năm. Đây là NFR Availability. Mỗi '9' thêm vào = 10x nghiêm ngặt hơn: 99.99% = 52 phút/năm, 99.999% = 5 phút/năm.","explanationEn":"99.9% uptime = 0.1% downtime = 8.766 hours/year. This is an Availability NFR. Each additional '9' is 10x stricter: 99.99% = 52 minutes/year, 99.999% = 5 minutes/year."},
-  {"id":"q10","question":"Lỗi phổ biến nào hay gặp khi viết User Story?","questionEn":"Which common mistake often occurs when writing a User Story?","options":["Quá ngắn","Viết từ góc nhìn người dùng","Chỉ mô tả happy path, bỏ qua error case và edge case","Quá nhiều acceptance criteria"],"optionsEn":["Being too short","Writing from the user's perspective","Only describing the happy path, ignoring error cases and edge cases","Having too much acceptance criteria"],"answer":2,"explanation":"Happy path trap: chỉ nghĩ đến kịch bản thuận lợi. Quên: input không hợp lệ, timeout, lỗi mạng, user không có quyền, data trống... Thiếu edge case → bug production.","explanationEn":"The happy-path trap: thinking only about the favorable scenario. Forgetting invalid input, timeouts, network errors, unauthorized users, empty data... Missing edge cases → production bugs."},
-  {"id":"q11","question":"'S' trong INVEST của User Story là gì?","questionEn":"What does the 'S' in INVEST for a User Story stand for?","options":["Secure","Structured","Small - đủ nhỏ để complete trong 1 sprint","Specific"],"optionsEn":["Secure","Structured","Small - small enough to complete within 1 sprint","Specific"],"answer":2,"explanation":"Small: story phải đủ nhỏ để team complete trong 1 sprint. Story quá lớn (Epic) cần chia nhỏ. Story quá nhỏ có thể merge với story khác. 'Goldilocks' — vừa phải.","explanationEn":"Small: a story must be small enough for the team to complete within 1 sprint. Too-large stories (Epics) need to be broken down. Too-small stories can be merged with others. 'Goldilocks' — just right."},
-  {"id":"q12","question":"Transition Requirements là gì?","questionEn":"What are Transition Requirements?","options":["Yêu cầu về hiệu năng trong khi transition state","Yêu cầu cho việc chuyển đổi từ hệ thống cũ sang hệ thống mới","Yêu cầu về animation UI","Yêu cầu khi chuyển môi trường staging sang production"],"optionsEn":["Performance requirements during a state transition","Requirements for migrating from the old system to the new one","UI animation requirements","Requirements for moving from staging to production"],"answer":1,"explanation":"Transition Requirements: những gì cần để migrate sang hệ thống mới. Ví dụ: migrate dữ liệu từ hệ thống cũ, đào tạo người dùng, chạy song song (parallel run), rollback plan.","explanationEn":"Transition Requirements: what is needed to migrate to the new system. Examples: migrating data from the old system, training users, running in parallel, and having a rollback plan."},
-  {"id":"q13","question":"Kỹ thuật thu thập yêu cầu nào phù hợp nhất khi cần validate idea sớm với người dùng?","questionEn":"Which requirements-gathering technique is best for validating an idea with users early?","options":["Document analysis","Survey","Prototyping (tạo prototype để người dùng thử)","Interview cá nhân"],"optionsEn":["Document analysis","Survey","Prototyping (building a prototype for users to try)","One-on-one interview"],"answer":2,"explanation":"Prototyping: tạo mockup/wireframe/clickable prototype → người dùng thử → nhận visual feedback sớm. 'Show me, don't tell me' — người dùng khó mô tả yêu cầu bằng lời nhưng có thể chỉ ra khi thấy prototype.","explanationEn":"Prototyping: build a mockup/wireframe/clickable prototype → users try it → you get visual feedback early. 'Show me, don't tell me' — users struggle to describe requirements in words but can point them out when they see a prototype."},
-  {"id":"q14","question":"Business Requirement khác User Requirement ở điểm gì?","questionEn":"How does a Business Requirement differ from a User Requirement?","options":["Chúng giống nhau","Business Requirement là mục tiêu kinh doanh cấp cao; User Requirement là nhu cầu người dùng cuối","User Requirement quan trọng hơn Business Requirement","Business Requirement chỉ do CEO viết"],"optionsEn":["They are the same","A Business Requirement is a high-level business goal; a User Requirement is an end-user need","User Requirements are more important than Business Requirements","Business Requirements are written only by the CEO"],"answer":1,"explanation":"BR: tại sao build (tăng doanh thu 20%, giảm chi phí vận hành...). UR: người dùng cuối cần gì (đặt hàng nhanh, track đơn hàng...). BR → UR → FR là chuỗi từ mục tiêu xuống tính năng.","explanationEn":"BR: why you build it (grow revenue 20%, reduce operating costs...). UR: what end users need (order quickly, track their order...). BR → UR → FR is the chain from goals down to features."},
-  {"id":"q15","question":"Một User Story tốt phải 'Valuable'. Điều này có nghĩa là gì?","questionEn":"A good User Story must be 'Valuable'. What does this mean?","options":["Có giá trị với developer","Có giá trị kỹ thuật cao","Có giá trị thực sự cho người dùng cuối hoặc business — không phải technical task thuần túy","Phải implement bằng công nghệ mới nhất"],"optionsEn":["Valuable to the developer","Of high technical value","Genuinely valuable to the end user or the business — not a purely technical task","Must be implemented with the latest technology"],"answer":2,"explanation":"Valuable: story phải deliver value cho user/business, không chỉ là technical task. 'Refactor code' không phải user story — đó là technical task. Nếu không giải thích được giá trị cho user → đặt câu hỏi lại.","explanationEn":"Valuable: a story must deliver value to the user/business, not just be a technical task. 'Refactor code' is not a user story — it's a technical task. If you can't explain the value to the user → question it."}
+  {
+    "id": "q1",
+    "question": "Functional Requirement khác Non-functional Requirement như thế nào?",
+    "questionEn": "How does a Functional Requirement differ from a Non-functional Requirement?",
+    "options": [
+      "FR là yêu cầu của khách hàng, NFR là yêu cầu của developer",
+      "FR mô tả hệ thống làm gì (tính năng), NFR mô tả hệ thống hoạt động như thế nào (chất lượng)",
+      "FR quan trọng hơn NFR",
+      "NFR chỉ dành cho performance"
+    ],
+    "optionsEn": [
+      "An FR is a customer requirement, an NFR is a developer requirement",
+      "An FR describes what the system does (features), an NFR describes how well the system operates (quality)",
+      "FRs are more important than NFRs",
+      "NFRs are only about performance"
+    ],
+    "answer": 1,
+    "explanation": "FR = what (chức năng): đăng nhập, đặt hàng, tìm kiếm. NFR = how well (chất lượng): tốc độ, bảo mật, reliability. Cả hai đều quan trọng — nhiều dự án fail vì bỏ qua NFR.",
+    "explanationEn": "FR = what (functionality): login, place an order, search. NFR = how well (quality): speed, security, reliability. Both matter — many projects fail by ignoring NFRs."
+  },
+  {
+    "id": "q2",
+    "question": "User Story đúng chuẩn được viết theo format nào?",
+    "questionEn": "What format is a properly written User Story in?",
+    "options": [
+      "Khi [điều kiện] thì [hành động]",
+      "Là [role], tôi muốn [action], để [benefit]",
+      "[Tính năng]: [mô tả chi tiết]",
+      "[Actor] [verb] [object]"
+    ],
+    "optionsEn": [
+      "When [condition] then [action]",
+      "As a [role], I want [action], so that [benefit]",
+      "[Feature]: [detailed description]",
+      "[Actor] [verb] [object]"
+    ],
+    "answer": 1,
+    "explanation": "Format chuẩn: 'As a [role], I want [action], So that [benefit]'. Quan trọng nhất là phần 'So that' — giải thích WHY, giúp team hiểu giá trị và có thể đề xuất giải pháp tốt hơn.",
+    "explanationEn": "The standard format is 'As a [role], I want [action], So that [benefit]'. The most important part is the 'So that' — it explains WHY, helping the team understand the value and propose better solutions."
+  },
+  {
+    "id": "q3",
+    "question": "Acceptance Criteria (AC) có mục đích gì?",
+    "questionEn": "What is the purpose of Acceptance Criteria (AC)?",
+    "options": [
+      "Ước tính effort của story",
+      "Xác định tiêu chí rõ ràng khi nào story được coi là hoàn thành và đúng",
+      "Phân chia task cho developer",
+      "Mô tả thiết kế kỹ thuật"
+    ],
+    "optionsEn": [
+      "Estimating the effort of a story",
+      "Defining clear criteria for when a story is considered complete and correct",
+      "Splitting tasks among developers",
+      "Describing the technical design"
+    ],
+    "answer": 1,
+    "explanation": "AC là 'hợp đồng' PO-Dev: dev biết cần build gì để PO accept, QA biết cần test gì, PO biết sẽ nhận được gì. Không có AC → 'done' là chủ quan → tranh luận không hồi kết.",
+    "explanationEn": "AC is the 'contract' between the PO and Dev: developers know what to build for the PO to accept, QA knows what to test, and the PO knows what they will receive. Without AC → 'done' is subjective → endless debate."
+  },
+  {
+    "id": "q4",
+    "question": "'Trang web phải nhanh' là yêu cầu như thế nào?",
+    "questionEn": "What kind of requirement is 'The website must be fast'?",
+    "options": [
+      "Functional Requirement tốt",
+      "Non-functional Requirement tốt",
+      "Yêu cầu mơ hồ, không thể kiểm tra — cần cụ thể hơn",
+      "Acceptance Criteria rõ ràng"
+    ],
+    "optionsEn": [
+      "A good Functional Requirement",
+      "A good Non-functional Requirement",
+      "A vague, untestable requirement — it needs to be more specific",
+      "A clear piece of Acceptance Criteria"
+    ],
+    "answer": 2,
+    "explanation": "'Nhanh' không đo lường được — ai cũng định nghĩa khác nhau. Yêu cầu đúng: 'Trang home load < 2 giây với LCP tại 95th percentile, trên connection 4G'. Cụ thể, đo được.",
+    "explanationEn": "'Fast' is not measurable — everyone defines it differently. A proper requirement: 'The home page loads in < 2 seconds with LCP at the 95th percentile on a 4G connection.' Specific and measurable."
+  },
+  {
+    "id": "q5",
+    "question": "INVEST là tiêu chí đánh giá User Story tốt. 'T' viết tắt cho điều gì?",
+    "questionEn": "INVEST is a set of criteria for a good User Story. What does 'T' stand for?",
+    "options": [
+      "Timely - kịp thời",
+      "Technical - có tính kỹ thuật",
+      "Testable - có thể kiểm tra được",
+      "Tracked - được theo dõi"
+    ],
+    "optionsEn": [
+      "Timely",
+      "Technical",
+      "Testable",
+      "Tracked"
+    ],
+    "answer": 2,
+    "explanation": "INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable. Testable: nếu không viết được test case → story quá mơ hồ. Story tốt phải verify được khi done.",
+    "explanationEn": "INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable. Testable: if you can't write a test case → the story is too vague. A good story must be verifiable when done."
+  },
+  {
+    "id": "q6",
+    "question": "Non-functional Requirement nào quan trọng nhất với hệ thống thanh toán?",
+    "questionEn": "Which Non-functional Requirement is most important for a payment system?",
+    "options": [
+      "Giao diện đẹp",
+      "Tốc độ load trang",
+      "Security (bảo mật và tuân thủ PCI DSS)",
+      "Số lượng màu sắc theme"
+    ],
+    "optionsEn": [
+      "A beautiful interface",
+      "Page load speed",
+      "Security (protection and PCI DSS compliance)",
+      "The number of theme colors"
+    ],
+    "answer": 2,
+    "explanation": "Hệ thống thanh toán xử lý tiền và thông tin thẻ → Security + Compliance là NFR quan trọng nhất. PCI DSS là chuẩn bảo mật bắt buộc cho mọi hệ thống xử lý thẻ tín dụng.",
+    "explanationEn": "A payment system handles money and card data → Security + Compliance are the most important NFRs. PCI DSS is a mandatory security standard for any system that processes credit cards."
+  },
+  {
+    "id": "q7",
+    "question": "Format Given-When-Then trong Acceptance Criteria biểu thị gì?",
+    "questionEn": "What does the Given-When-Then format in Acceptance Criteria represent?",
+    "options": [
+      "Given = người dùng, When = action, Then = role",
+      "Given = ngữ cảnh/precondition, When = hành động xảy ra, Then = kết quả mong đợi",
+      "Given = story, When = sprint, Then = release",
+      "Given = bug, When = fix, Then = test"
+    ],
+    "optionsEn": [
+      "Given = user, When = action, Then = role",
+      "Given = context/precondition, When = the action occurs, Then = expected outcome",
+      "Given = story, When = sprint, Then = release",
+      "Given = bug, When = fix, Then = test"
+    ],
+    "answer": 1,
+    "explanation": "Given-When-Then (Gherkin format): Given = setup/context, When = trigger/action, Then = expected outcome. Rõ ràng, testable, dùng được cho manual test và automation test.",
+    "explanationEn": "Given-When-Then (Gherkin format): Given = setup/context, When = trigger/action, Then = expected outcome. It is clear, testable, and usable for both manual and automated testing."
+  },
+  {
+    "id": "q8",
+    "question": "Kỹ thuật 'Job Shadowing' trong thu thập yêu cầu là gì?",
+    "questionEn": "What is the 'Job Shadowing' technique in requirements gathering?",
+    "options": [
+      "Shadow testing - test ẩn danh",
+      "BA quan sát trực tiếp người dùng làm việc để hiểu quy trình thực tế",
+      "Ghi âm cuộc họp",
+      "Phỏng vấn người dùng qua email"
+    ],
+    "optionsEn": [
+      "Shadow testing - anonymous testing",
+      "The BA directly observes users at work to understand their real-world process",
+      "Recording a meeting",
+      "Interviewing users over email"
+    ],
+    "answer": 1,
+    "explanation": "Job Shadowing (Observation): BA đi cùng, quan sát người dùng thực tế. Hiệu quả vì người dùng thường không nói được hết — 'show don't tell'. Phát hiện pain point ẩn, workflow không ai để ý.",
+    "explanationEn": "Job Shadowing (Observation): the BA accompanies and observes real users. It is effective because users often can't articulate everything — 'show, don't tell'. It reveals hidden pain points and overlooked workflows."
+  },
+  {
+    "id": "q9",
+    "question": "'Uptime 99.9%' là loại yêu cầu gì và ý nghĩa thực tế?",
+    "questionEn": "What type of requirement is '99.9% uptime' and what does it mean in practice?",
+    "options": [
+      "Functional Requirement, hệ thống hoạt động 999 giờ liên tục",
+      "Non-functional Requirement (Availability), cho phép downtime tối đa ~8.7 giờ/năm",
+      "Business Requirement về doanh thu",
+      "User Requirement về giao diện"
+    ],
+    "optionsEn": [
+      "A Functional Requirement — the system runs for 999 hours straight",
+      "A Non-functional Requirement (Availability), allowing at most ~8.7 hours of downtime per year",
+      "A Business Requirement about revenue",
+      "A User Requirement about the interface"
+    ],
+    "answer": 1,
+    "explanation": "99.9% uptime = 0.1% downtime = 8.766 giờ/năm. Đây là NFR Availability. Mỗi '9' thêm vào = 10x nghiêm ngặt hơn: 99.99% = 52 phút/năm, 99.999% = 5 phút/năm.",
+    "explanationEn": "99.9% uptime = 0.1% downtime = 8.766 hours/year. This is an Availability NFR. Each additional '9' is 10x stricter: 99.99% = 52 minutes/year, 99.999% = 5 minutes/year."
+  },
+  {
+    "id": "q10",
+    "question": "Lỗi phổ biến nào hay gặp khi viết User Story?",
+    "questionEn": "Which common mistake often occurs when writing a User Story?",
+    "options": [
+      "Quá ngắn",
+      "Viết từ góc nhìn người dùng",
+      "Chỉ mô tả happy path, bỏ qua error case và edge case",
+      "Quá nhiều acceptance criteria"
+    ],
+    "optionsEn": [
+      "Being too short",
+      "Writing from the user's perspective",
+      "Only describing the happy path, ignoring error cases and edge cases",
+      "Having too much acceptance criteria"
+    ],
+    "answer": 2,
+    "explanation": "Happy path trap: chỉ nghĩ đến kịch bản thuận lợi. Quên: input không hợp lệ, timeout, lỗi mạng, user không có quyền, data trống... Thiếu edge case → bug production.",
+    "explanationEn": "The happy-path trap: thinking only about the favorable scenario. Forgetting invalid input, timeouts, network errors, unauthorized users, empty data... Missing edge cases → production bugs."
+  },
+  {
+    "id": "q11",
+    "question": "'S' trong INVEST của User Story là gì?",
+    "questionEn": "What does the 'S' in INVEST for a User Story stand for?",
+    "options": [
+      "Secure",
+      "Structured",
+      "Small - đủ nhỏ để complete trong 1 sprint",
+      "Specific"
+    ],
+    "optionsEn": [
+      "Secure",
+      "Structured",
+      "Small - small enough to complete within 1 sprint",
+      "Specific"
+    ],
+    "answer": 2,
+    "explanation": "Small: story phải đủ nhỏ để team complete trong 1 sprint. Story quá lớn (Epic) cần chia nhỏ. Story quá nhỏ có thể merge với story khác. 'Goldilocks' — vừa phải.",
+    "explanationEn": "Small: a story must be small enough for the team to complete within 1 sprint. Too-large stories (Epics) need to be broken down. Too-small stories can be merged with others. 'Goldilocks' — just right."
+  },
+  {
+    "id": "q12",
+    "question": "Transition Requirements là gì?",
+    "questionEn": "What are Transition Requirements?",
+    "options": [
+      "Yêu cầu về hiệu năng trong khi transition state",
+      "Yêu cầu cho việc chuyển đổi từ hệ thống cũ sang hệ thống mới",
+      "Yêu cầu về animation UI",
+      "Yêu cầu khi chuyển môi trường staging sang production"
+    ],
+    "optionsEn": [
+      "Performance requirements during a state transition",
+      "Requirements for migrating from the old system to the new one",
+      "UI animation requirements",
+      "Requirements for moving from staging to production"
+    ],
+    "answer": 1,
+    "explanation": "Transition Requirements: những gì cần để migrate sang hệ thống mới. Ví dụ: migrate dữ liệu từ hệ thống cũ, đào tạo người dùng, chạy song song (parallel run), rollback plan.",
+    "explanationEn": "Transition Requirements: what is needed to migrate to the new system. Examples: migrating data from the old system, training users, running in parallel, and having a rollback plan."
+  },
+  {
+    "id": "q13",
+    "question": "Kỹ thuật thu thập yêu cầu nào phù hợp nhất khi cần validate idea sớm với người dùng?",
+    "questionEn": "Which requirements-gathering technique is best for validating an idea with users early?",
+    "options": [
+      "Document analysis",
+      "Survey",
+      "Prototyping (tạo prototype để người dùng thử)",
+      "Interview cá nhân"
+    ],
+    "optionsEn": [
+      "Document analysis",
+      "Survey",
+      "Prototyping (building a prototype for users to try)",
+      "One-on-one interview"
+    ],
+    "answer": 2,
+    "explanation": "Prototyping: tạo mockup/wireframe/clickable prototype → người dùng thử → nhận visual feedback sớm. 'Show me, don't tell me' — người dùng khó mô tả yêu cầu bằng lời nhưng có thể chỉ ra khi thấy prototype.",
+    "explanationEn": "Prototyping: build a mockup/wireframe/clickable prototype → users try it → you get visual feedback early. 'Show me, don't tell me' — users struggle to describe requirements in words but can point them out when they see a prototype."
+  },
+  {
+    "id": "q14",
+    "question": "Business Requirement khác User Requirement ở điểm gì?",
+    "questionEn": "How does a Business Requirement differ from a User Requirement?",
+    "options": [
+      "Chúng giống nhau",
+      "Business Requirement là mục tiêu kinh doanh cấp cao; User Requirement là nhu cầu người dùng cuối",
+      "User Requirement quan trọng hơn Business Requirement",
+      "Business Requirement chỉ do CEO viết"
+    ],
+    "optionsEn": [
+      "They are the same",
+      "A Business Requirement is a high-level business goal; a User Requirement is an end-user need",
+      "User Requirements are more important than Business Requirements",
+      "Business Requirements are written only by the CEO"
+    ],
+    "answer": 1,
+    "explanation": "BR: tại sao build (tăng doanh thu 20%, giảm chi phí vận hành...). UR: người dùng cuối cần gì (đặt hàng nhanh, track đơn hàng...). BR → UR → FR là chuỗi từ mục tiêu xuống tính năng.",
+    "explanationEn": "BR: why you build it (grow revenue 20%, reduce operating costs...). UR: what end users need (order quickly, track their order...). BR → UR → FR is the chain from goals down to features."
+  },
+  {
+    "id": "q15",
+    "question": "Một User Story tốt phải 'Valuable'. Điều này có nghĩa là gì?",
+    "questionEn": "A good User Story must be 'Valuable'. What does this mean?",
+    "options": [
+      "Có giá trị với developer",
+      "Có giá trị kỹ thuật cao",
+      "Có giá trị thực sự cho người dùng cuối hoặc business — không phải technical task thuần túy",
+      "Phải implement bằng công nghệ mới nhất"
+    ],
+    "optionsEn": [
+      "Valuable to the developer",
+      "Of high technical value",
+      "Genuinely valuable to the end user or the business — not a purely technical task",
+      "Must be implemented with the latest technology"
+    ],
+    "answer": 2,
+    "explanation": "Valuable: story phải deliver value cho user/business, không chỉ là technical task. 'Refactor code' không phải user story — đó là technical task. Nếu không giải thích được giá trị cho user → đặt câu hỏi lại.",
+    "explanationEn": "Valuable: a story must deliver value to the user/business, not just be a technical task. 'Refactor code' is not a user story — it's a technical task. If you can't explain the value to the user → question it."
+  },
+  {
+    "question": "Yêu cầu hệ thống phải nhanh mắc lỗi gì và nên viết lại thế nào?",
+    "questionEn": "What is wrong with the system must be fast, and how should it be rewritten?",
+    "options": [
+      "Không kiểm chứng được; phải nêu đo cái gì, dưới điều kiện tải nào và ngưỡng chấp nhận là bao nhiêu",
+      "Quá dài, nên rút ngắn lại",
+      "Thiếu tên user class, chỉ cần thêm tên là đủ",
+      "Không có gì sai, đây là yêu cầu hợp lệ"
+    ],
+    "optionsEn": [
+      "It is unverifiable; it must state what is measured, under what load, and the acceptable threshold",
+      "It is too long and should be shortened",
+      "It lacks a user class name, which is all it needs",
+      "Nothing is wrong; it is a valid requirement"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ tốt: 95% truy vấn tìm kiếm trả kết quả trong 2 giây khi có tối đa 500 người dùng đồng thời.",
+    "explanationEn": "A good example: 95 percent of search queries return within 2 seconds with up to 500 concurrent users.",
+    "id": "q16"
+  },
+  {
+    "question": "Từ nào trong một câu yêu cầu báo hiệu có thể đang THIẾU yêu cầu cho trường hợp ngược lại?",
+    "questionEn": "Which word in a requirement signals a possibly MISSING requirement for the opposite case?",
+    "options": [
+      "trừ khi, ngoại trừ, nhưng",
+      "hệ thống, người dùng, dữ liệu",
+      "phải, cần, nên",
+      "và, hoặc, cùng với"
+    ],
+    "optionsEn": [
+      "unless, except, but",
+      "system, user, data",
+      "shall, must, should",
+      "and, or, with"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ: thẻ sẽ bị tính tiền TRỪ KHI thẻ đã hết hạn — không nói gì xảy ra khi thẻ hết hạn chính là yêu cầu bị thiếu.",
+    "explanationEn": "For example: the card shall be charged UNLESS it has expired — saying nothing about the expired case is the missing requirement.",
+    "id": "q17"
+  },
+  {
+    "question": "Kỹ thuật thu thập yêu cầu nào phù hợp nhất khi người dùng làm việc theo thói quen và khó diễn đạt thành lời?",
+    "questionEn": "Which elicitation technique fits best when users work by habit and struggle to articulate it?",
+    "options": [
+      "Quan sát tại chỗ khi họ làm việc thật",
+      "Gửi bảng khảo sát qua email",
+      "Đọc tài liệu quy trình cũ",
+      "Họp brainstorming với lãnh đạo"
+    ],
+    "optionsEn": [
+      "On-site observation while they do the real work",
+      "Emailing a survey",
+      "Reading the old process documents",
+      "A brainstorming session with executives"
+    ],
+    "answer": 0,
+    "explanation": "Quan sát cho thấy những gì người dùng thực sự làm, khác với những gì họ nói, và làm lộ ra các cách làm vòng vo — mỗi cách vòng vo là một yêu cầu chưa được đáp ứng.",
+    "explanationEn": "Observation reveals what users actually do, as opposed to what they say, and exposes workarounds — each of which is an unmet requirement.",
+    "id": "q18"
+  },
+  {
+    "question": "Yêu cầu chức năng và phi chức năng khác nhau ở điểm cốt lõi nào?",
+    "questionEn": "What is the core difference between functional and nonfunctional requirements?",
+    "options": [
+      "Chức năng mô tả hệ thống LÀM GÌ; phi chức năng mô tả nó làm điều đó TỐT tới mức nào",
+      "Chức năng do BA viết, phi chức năng do lập trình viên viết",
+      "Chức năng quan trọng hơn phi chức năng",
+      "Phi chức năng chỉ áp dụng cho hệ thống lớn"
+    ],
+    "optionsEn": [
+      "Functional describes WHAT the system does; nonfunctional describes HOW WELL it does it",
+      "Functional is written by BAs and nonfunctional by developers",
+      "Functional matters more than nonfunctional",
+      "Nonfunctional only applies to large systems"
+    ],
+    "answer": 0,
+    "explanation": "Yêu cầu phi chức năng có ảnh hưởng rất lớn tới kiến trúc, nên phát hiện muộn có thể buộc phải viết lại phần lớn hệ thống.",
+    "explanationEn": "Nonfunctional requirements strongly shape the architecture, so discovering them late can force a large-scale rewrite.",
+    "id": "q19"
+  },
+  {
+    "question": "Khi người dùng nói tôi cần thêm một nút xuất Excel ở đây, BA nên phản ứng thế nào trước tiên?",
+    "questionEn": "When a user says I need an Excel export button here, how should the BA respond first?",
+    "options": [
+      "Hỏi vì sao và họ sẽ làm gì với tệp đó, để tìm ra nhu cầu thật đằng sau giải pháp họ đề xuất",
+      "Ghi lại đúng nguyên văn và chuyển cho lập trình viên",
+      "Từ chối vì đó là yêu cầu thiết kế",
+      "Ước tính công sức ngay lập tức"
+    ],
+    "optionsEn": [
+      "Ask why and what they will do with the file, to find the real need behind their proposed solution",
+      "Record it verbatim and pass it to developers",
+      "Refuse it because it is a design request",
+      "Estimate the effort immediately"
+    ],
+    "answer": 0,
+    "explanation": "Người dùng thường mô tả giải pháp chứ không mô tả nhu cầu. Hỏi vì sao vài lần thường dẫn tới cách đáp ứng tốt hơn và rẻ hơn.",
+    "explanationEn": "Users usually describe a solution rather than a need. Asking why a few times often leads to a better and cheaper way to meet it.",
+    "id": "q20"
+  }
 ]

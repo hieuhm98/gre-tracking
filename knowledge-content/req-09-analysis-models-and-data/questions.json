@@ -1,0 +1,325 @@
+[
+  {
+    "id": "q1",
+    "question": "Vì sao nên tạo NHIỀU biểu diễn khác nhau cho cùng một tập yêu cầu?",
+    "questionEn": "Why should you create MULTIPLE representations of the same requirements?",
+    "options": [
+      "Để tài liệu trông chuyên nghiệp hơn với khách hàng",
+      "Vì so sánh các biểu diễn tạo ra qua những quá trình tư duy và ký hiệu khác nhau sẽ bộc lộ thiếu nhất quán, nhập nhằng, giả định và thiếu sót mà không góc nhìn đơn lẻ nào cho thấy",
+      "Vì tiêu chuẩn ngành bắt buộc ít nhất ba mô hình",
+      "Để mỗi stakeholder có bản riêng của mình"
+    ],
+    "optionsEn": [
+      "To make the documentation look more professional to customers",
+      "Because comparing representations created through different thought processes and notations reveals inconsistencies, ambiguities, assumptions, and omissions that no single view exposes",
+      "Because industry standards mandate at least three models",
+      "So each stakeholder gets their own copy"
+    ],
+    "answer": 1,
+    "explanation": "Lý tưởng là những người khác nhau tạo ra các biểu diễn khác nhau: BA viết functional requirement, nhà thiết kế dựng prototype, test lead viết test case.",
+    "explanationEn": "Ideally different people create different representations: the BA writes functional requirements, the designer builds a prototype, the test lead writes test cases."
+  },
+  {
+    "id": "q2",
+    "question": "Cách trả lời phản bác Hệ thống của chúng tôi quá phức tạp để mô hình hoá là gì?",
+    "questionEn": "How do you answer the objection Our system is too complex to model?",
+    "options": [
+      "Đồng ý và chuyển sang chỉ dùng văn bản",
+      "Mô hình đơn giản hơn hệ thống mà nó mô hình hoá; nếu bạn không xử lý nổi độ phức tạp của mô hình thì làm sao xử lý nổi độ phức tạp của hệ thống",
+      "Thuê chuyên gia mô hình hoá bên ngoài",
+      "Chia hệ thống thành nhiều dự án nhỏ hơn"
+    ],
+    "optionsEn": [
+      "Agree and switch to text only",
+      "A model is simpler than the system it models; if you cannot handle the model complexity, how can you handle the system complexity",
+      "Hire an outside modeling expert",
+      "Split the system into several smaller projects"
+    ],
+    "answer": 1,
+    "explanation": "Với phản bác về lịch trình gấp: tạo mô hình không tốn nhiều thời gian hơn viết và phân tích câu yêu cầu, và thời gian đó được bù lại nhờ bắt lỗi sớm.",
+    "explanationEn": "For the tight-schedule objection: modeling takes little more time than writing and analysing requirement statements, and it is repaid by catching errors early."
+  },
+  {
+    "id": "q3",
+    "question": "Vì sao phải đánh dấu rõ mỗi sơ đồ là mô hình phân tích hay mô hình thiết kế?",
+    "questionEn": "Why must you clearly mark each diagram as an analysis or a design model?",
+    "options": [
+      "Vì công cụ vẽ yêu cầu như vậy",
+      "Vì cả hai dùng CÙNG ký hiệu, chỉ khác ở chỗ mô hình hoá miền vấn đề hay cách bạn dự định hiện thực hệ thống",
+      "Vì mô hình thiết kế phải được ký duyệt còn mô hình phân tích thì không",
+      "Vì chúng được lưu ở thư mục khác nhau"
+    ],
+    "optionsEn": [
+      "Because drawing tools require it",
+      "Because both use the SAME notations; they differ only in whether they model the problem domain or how you intend to implement the system",
+      "Because design models need sign-off and analysis models do not",
+      "Because they are stored in different folders"
+    ],
+    "answer": 1,
+    "explanation": "Mô hình phân tích thể hiện khía cạnh logic của dữ liệu, giao dịch và thay đổi trạng thái; mô hình thiết kế thể hiện cơ sở dữ liệu, object class và module mã thực sự sẽ được tạo ra.",
+    "explanationEn": "Analysis models show the logical aspects of data, transactions, and state changes; design models show the actual database, object classes, and code modules to be created."
+  }
+  ,
+  {
+    "id": "q4",
+    "question": "Trên data flow diagram, hai process giao tiếp với nhau bằng cách nào?",
+    "questionEn": "On a data flow diagram, how do two processes communicate with each other?",
+    "options": [
+      "Bằng một mũi tên nối trực tiếp từ bubble này sang bubble kia",
+      "Qua một data store; dữ liệu cũng không chảy trực tiếp giữa hai store hay giữa external entity và store mà phải đi qua một process bubble",
+      "Bằng một external entity trung gian",
+      "Bằng cách gộp chúng thành một process duy nhất"
+    ],
+    "optionsEn": [
+      "With an arrow drawn directly from one bubble to the other",
+      "Through a data store; data also cannot flow directly between two stores or between an external entity and a store, it must pass through a process bubble",
+      "Through an intermediate external entity",
+      "By merging them into a single process"
+    ],
+    "answer": 1,
+    "explanation": "Các quy ước khác: đừng vẽ quá 8 tới 10 process trên một sơ đồ, đặt tên process bằng động từ cộng tân ngữ, và đừng cố hàm ý thứ tự xử lý.",
+    "explanationEn": "Other conventions: do not draw more than 8 to 10 processes per diagram, name processes with a verb plus object, and do not try to imply processing sequence."
+  },
+  {
+    "id": "q5",
+    "question": "Điều gì làm DFD có giá trị riêng mà use case và swimlane diagram không có?",
+    "questionEn": "What makes DFDs uniquely valuable compared with use cases and swimlane diagrams?",
+    "options": [
+      "Chúng dễ vẽ hơn nhiều",
+      "Chúng cho cái nhìn tổng thể về toàn bộ vòng đời của một mẩu dữ liệu qua nhiều người và hệ thống, và cho thấy nhiều mẩu dữ liệu được gộp và biến đổi bởi một process",
+      "Chúng thể hiện được thứ tự xử lý chính xác",
+      "Chúng thay thế được functional requirement"
+    ],
+    "optionsEn": [
+      "They are much easier to draw",
+      "They give a holistic view of the entire life cycle of a piece of data across many people and systems, and show multiple data items being combined and transformed by one process",
+      "They show exact processing sequence",
+      "They can replace functional requirements"
+    ],
+    "answer": 1,
+    "explanation": "Nhưng DFD không đủ dùng một mình: chi tiết cách dữ liệu được biến đổi được thể hiện tốt hơn bằng các bước trong process, dùng use case hoặc swimlane diagram.",
+    "explanationEn": "But DFDs are not sufficient alone: the detail of how data is transformed is better shown by the steps within a process, using use cases or swimlane diagrams."
+  },
+  {
+    "id": "q6",
+    "question": "Vì sao một quy trình nghiệp vụ trong swimlane diagram có thể chứa vai trò KHÔNG xuất hiện trên context diagram?",
+    "questionEn": "Why might a business process in a swimlane diagram include a role that does NOT appear on the context diagram?",
+    "options": [
+      "Vì context diagram luôn được vẽ trước khi biết đủ thông tin",
+      "Vì một quy trình nghiệp vụ hoàn chỉnh có thể không nằm trọn trong phạm vi một hệ thống phần mềm; vai trò đó tham gia quy trình nhưng không bao giờ tương tác trực tiếp với hệ thống",
+      "Vì swimlane diagram dùng ký hiệu khác",
+      "Vì đó là lỗi mô hình hoá cần sửa"
+    ],
+    "optionsEn": [
+      "Because context diagrams are always drawn before enough is known",
+      "Because a complete business process might not fall entirely within one software system scope; that role participates in the process but never interacts directly with the system",
+      "Because swimlane diagrams use a different notation",
+      "Because it is a modeling error that must be fixed"
+    ],
+    "answer": 1,
+    "explanation": "Ví dụ phòng Receiving. Review ecosystem map có thể giúp đội nhận ra một phòng ban như vậy có vị trí trong quy trình.",
+    "explanationEn": "For example a Receiving department. Reviewing an ecosystem map can help the team recognise that such a department has a place in the process."
+  },
+  {
+    "id": "q7",
+    "question": "State-transition diagram và state table khác nhau ở mục đích như thế nào?",
+    "questionEn": "How do state-transition diagrams and state tables differ in purpose?",
+    "options": [
+      "STD dùng cho hệ thống thời gian thực, state table dùng cho hệ thống thông tin",
+      "State table bảo đảm không transition nào bị bỏ sót vì BA phân tích từng ô của ma trận; STD giúp stakeholder hình dung các chuỗi transition có thể",
+      "STD thể hiện dữ liệu, state table thể hiện chức năng",
+      "State table chi tiết hơn nên thay thế được STD"
+    ],
+    "optionsEn": [
+      "STDs are for real-time systems and state tables for information systems",
+      "The state table ensures no transition is overlooked because the BA analyses every cell; the STD helps stakeholders visualise possible transition sequences",
+      "STDs show data and state tables show functionality",
+      "State tables are more detailed so they replace STDs"
+    ],
+    "answer": 1,
+    "explanation": "Cả hai thể hiện cùng thông tin. Trong state table, hàng nào có mọi ô đều là không chính là một termination state.",
+    "explanationEn": "Both show the same information. In a state table, any row whose cells are all no is a termination state."
+  }
+  ,
+  {
+    "id": "q8",
+    "question": "Bằng chứng nào cho thấy mô hình trạng thái bắt được lỗi mà review yêu cầu văn bản không bắt được?",
+    "questionEn": "What evidence shows state models catch errors that reviewing textual requirements does not?",
+    "options": [
+      "Một nghiên cứu học thuật về 500 dự án",
+      "Khi đại diện người dùng của Chemical Tracking System review STD, họ tìm ra một trạng thái thừa, một trạng thái thiết yếu bị thiếu và hai transition sai; không ai thấy chúng khi review functional requirement",
+      "Công cụ mô hình hoá tự động báo lỗi",
+      "Tester phát hiện chúng trong giai đoạn system test"
+    ],
+    "optionsEn": [
+      "An academic study of 500 projects",
+      "When Chemical Tracking System user representatives reviewed the STD they found an unnecessary state, a missing essential state, and two incorrect transitions; nobody saw them when reviewing the functional requirements",
+      "The modeling tool flagged the errors automatically",
+      "Testers found them during system test"
+    ],
+    "answer": 1,
+    "explanation": "Điều này nhấn mạnh giá trị của việc biểu diễn yêu cầu ở nhiều mức trừu tượng: dễ phát hiện vấn đề hơn khi bạn lùi khỏi mức chi tiết.",
+    "explanationEn": "This underscores the value of representing requirements at multiple abstraction levels: it is easier to spot problems when you step back from the details."
+  },
+  {
+    "id": "q9",
+    "question": "Dialog map khác flowchart ở điểm nào?",
+    "questionEn": "How does a dialog map differ from a flowchart?",
+    "options": [
+      "Dialog map dùng hình thoi còn flowchart dùng hình chữ nhật",
+      "Flowchart thể hiện bước xử lý và điểm quyết định tường minh; dialog map thể hiện phần tử hiển thị giao diện và ẩn việc xử lý sau các màn hình, với điều kiện rẽ nhánh nằm trong nhãn trên transition",
+      "Dialog map chỉ dùng cho website",
+      "Flowchart là mô hình thiết kế còn dialog map là mô hình phân tích"
+    ],
+    "optionsEn": [
+      "Dialog maps use diamonds while flowcharts use rectangles",
+      "A flowchart shows processing steps and decision points explicitly; a dialog map shows interface display elements and hides the processing behind the screens, with branch conditions in the transition labels",
+      "Dialog maps are only for websites",
+      "Flowcharts are design models and dialog maps are analysis models"
+    ],
+    "answer": 1,
+    "explanation": "Dialog map thực chất là một giao diện người dùng được mô hình hoá dưới dạng state-transition diagram: mỗi phần tử dialog là một trạng thái, mỗi tuỳ chọn điều hướng là một transition.",
+    "explanationEn": "A dialog map really is a user interface modeled as a state-transition diagram: each dialog element is a state and each navigation option is a transition."
+  },
+  {
+    "id": "q10",
+    "question": "Lợi ích thiết kế quan trọng nào mà dialog map giúp bạn chủ động đưa vào?",
+    "questionEn": "What important design benefit does a dialog map help you build in deliberately?",
+    "options": [
+      "Tốc độ tải trang nhanh hơn",
+      "Các tuỳ chọn back-out và cancel tại những điểm chiến lược, vì người dùng khó chịu nếu bị buộc phải hoàn tất một tác vụ dù đã đổi ý giữa chừng",
+      "Mã hoá dữ liệu đầu cuối",
+      "Khả năng tương thích đa trình duyệt"
+    ],
+    "optionsEn": [
+      "Faster page load speed",
+      "Back-out and cancel options at strategic points, because users get frustrated if forced to complete a task after changing their mind partway through",
+      "End-to-end data encryption",
+      "Cross-browser compatibility"
+    ],
+    "answer": 1,
+    "explanation": "Người dùng review dialog map cũng có thể phát hiện yêu cầu thiếu, như xác nhận trước khi huỷ toàn bộ yêu cầu. Thêm chức năng này ở giai đoạn phân tích rẻ hơn nhiều so với xây vào sản phẩm đã hoàn thành.",
+    "explanationEn": "Users reviewing a dialog map can also discover missing requirements, such as confirming before canceling an entire request. Adding it at analysis time is far cheaper than building it into a finished product."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao decision table cho bốn yếu tố nhị phân thường KHÔNG cần tới 16 functional requirement?",
+    "questionEn": "Why does a decision table with four binary factors usually NOT need 16 functional requirements?",
+    "options": [
+      "Vì bạn chỉ nên đặc tả các trường hợp phổ biến nhất",
+      "Vì nhiều tổ hợp dẫn tới cùng một phản hồi hệ thống; khi một điều kiện làm các điều kiện còn lại trở nên không liên quan, ta ghi dấu gạch ngang, thu 16 tổ hợp xuống chỉ 5 yêu cầu riêng biệt",
+      "Vì lập trình viên tự suy ra các trường hợp còn lại",
+      "Vì decision tree luôn ngắn hơn decision table"
+    ],
+    "optionsEn": [
+      "Because you should only specify the most common cases",
+      "Because many combinations lead to the same system response; when one condition makes the rest irrelevant you write a dash, collapsing 16 combinations into just 5 distinct requirements",
+      "Because developers infer the remaining cases",
+      "Because decision trees are always shorter than decision tables"
+    ],
+    "answer": 1,
+    "explanation": "Ví dụ nếu người dùng không được uỷ quyền yêu cầu hoá chất, hệ thống sẽ không chấp nhận yêu cầu nên ba điều kiện còn lại không còn ý nghĩa.",
+    "explanationEn": "For example if the user is not authorized to request chemicals, the system will not accept the request so the other three conditions become irrelevant."
+  }
+  ,
+  {
+    "id": "q12",
+    "question": "Trong event-response table, phản hồi mong đợi của hệ thống phụ thuộc vào những gì?",
+    "questionEn": "In an event-response table, what does the expected system response depend on?",
+    "options": [
+      "Chỉ vào bản thân sự kiện",
+      "Không chỉ vào sự kiện mà còn vào TRẠNG THÁI của hệ thống tại thời điểm sự kiện xảy ra",
+      "Chỉ vào user class đang đăng nhập",
+      "Chỉ vào tần suất sự kiện"
+    ],
+    "optionsEn": [
+      "Only on the event itself",
+      "Not only on the event but also on the STATE of the system at the moment the event occurs",
+      "Only on the logged-in user class",
+      "Only on the event frequency"
+    ],
+    "answer": 1,
+    "explanation": "Ví dụ gạt nước ô tô: đặt công tắc sang chế độ gián đoạn cho hành vi khác nhau tuỳ gạt nước đang bật hay tắt. Ba loại sự kiện là business, signal và temporal.",
+    "explanationEn": "For example windshield wipers: setting the switch to intermittent behaves differently depending on whether the wipers are on or off. The three event kinds are business, signal, and temporal."
+  },
+  {
+    "id": "q13",
+    "question": "Vì sao phát triển hướng đối tượng KHÔNG đòi hỏi một cách tiếp cận phát triển yêu cầu riêng biệt?",
+    "questionEn": "Why does object-oriented development NOT demand a distinctive requirements development approach?",
+    "options": [
+      "Vì UML đã bao trùm mọi loại yêu cầu",
+      "Vì phát triển yêu cầu tập trung vào những gì người dùng cần làm với hệ thống, không phải cách nó sẽ được xây; người dùng không quan tâm tới object hay class",
+      "Vì class diagram thay thế được mọi mô hình khác",
+      "Vì object-oriented chỉ ảnh hưởng tới ngôn ngữ lập trình"
+    ],
+    "optionsEn": [
+      "Because UML already covers every kind of requirement",
+      "Because requirements development focuses on what users need to do with the system, not how it will be built; users do not care about objects or classes",
+      "Because class diagrams replace all other models",
+      "Because object orientation only affects the programming language"
+    ],
+    "answer": 1,
+    "explanation": "Dù vậy, bắt đầu xác định class cùng thuộc tính và hành vi trong giai đoạn phân tích vẫn hữu ích vì nó tạo điều kiện cho bước chuyển từ phân tích sang thiết kế.",
+    "explanationEn": "Even so, starting to identify classes with their attributes and behaviours during analysis is useful because it facilitates the transition from analysis to design."
+  },
+  {
+    "id": "q14",
+    "question": "Nên đặt tên relationship trong ERD như thế nào và vì sao?",
+    "questionEn": "How should you name an ERD relationship, and why?",
+    "options": [
+      "Là is placed by để câu đọc được trọn vẹn",
+      "Là placing, vì tên dạng is placed by chỉ đúng khi đọc trái sang phải và sẽ sai nếu bạn vẽ lại sơ đồ đảo vị trí hai entity",
+      "Luôn dùng tên viết tắt để tiết kiệm không gian",
+      "Dùng chính tên của entity đích"
+    ],
+    "optionsEn": [
+      "As is placed by so the sentence reads completely",
+      "As placing, because a name like is placed by only works read left to right and becomes wrong if you redraw the diagram with the entities swapped",
+      "Always use abbreviations to save space",
+      "Use the name of the target entity"
+    ],
+    "answer": 1,
+    "explanation": "Sau đó bạn diễn đạt lại theo cách nào đúng ngữ pháp — places hoặc is placed by — khi đọc câu. Ký hiệu nào không quan trọng bằng việc cả dự án theo cùng một quy ước.",
+    "explanationEn": "You then rephrase it grammatically — places or is placed by — as you read the sentence. Which notation you use matters less than the whole project following one convention."
+  },
+  {
+    "id": "q15",
+    "question": "Ký hiệu 1:10{Requested Chemical} trong data dictionary nghĩa là gì?",
+    "questionEn": "What does 1:10{Requested Chemical} mean in a data dictionary?",
+    "options": [
+      "Hoá chất được yêu cầu có độ dài từ 1 tới 10 ký tự",
+      "Một chemical request phải chứa ít nhất một hoá chất và không được chứa quá 10 hoá chất",
+      "Có 10 loại hoá chất được phép",
+      "Trường này là tuỳ chọn với giá trị mặc định 1"
+    ],
+    "optionsEn": [
+      "The requested chemical is 1 to 10 characters long",
+      "A chemical request must contain at least one chemical and no more than 10 chemicals",
+      "There are 10 permitted chemical types",
+      "The field is optional with a default value of 1"
+    ],
+    "answer": 1,
+    "explanation": "Dấu ngoặc nhọn chỉ nhóm lặp, dấu cộng nối các thành phần của cấu trúc, dấu ngoặc đơn chỉ phần tử tuỳ chọn, và n nghĩa là không giới hạn trên.",
+    "explanationEn": "Braces mark a repeating group, plus signs join structure components, parentheses mark optional elements, and n means no upper bound."
+  },
+  {
+    "id": "q16",
+    "question": "Nếu một cột trong CRUD matrix không có chữ D ở bất kỳ ô nào, điều đó nghĩa là gì?",
+    "questionEn": "If a column in a CRUD matrix has no D in any cell, what does that mean?",
+    "options": [
+      "Ma trận được lập sai và cần lập lại",
+      "Có thể là ba khả năng: việc xoá không phải chức năng mong đợi, ta đang thiếu một use case xoá, hoặc một use case hiện có chưa hoàn chỉnh",
+      "Thực thể đó không cần lưu vào cơ sở dữ liệu",
+      "Thực thể đó chỉ đọc theo thiết kế nên không cần điều tra"
+    ],
+    "optionsEn": [
+      "The matrix was built incorrectly and must be redone",
+      "One of three things: deleting is not expected functionality, a delete use case is missing, or an existing use case is incomplete",
+      "That entity does not need to be stored in the database",
+      "That entity is read-only by design so no investigation is needed"
+    ],
+    "answer": 1,
+    "explanation": "Ta không biết cách diễn giải nào đúng, nhưng CRUD analysis là một cách rất mạnh để phát hiện yêu cầu thiếu.",
+    "explanationEn": "We do not know which interpretation is correct, but CRUD analysis is a very powerful way to detect missing requirements."
+  }
+]

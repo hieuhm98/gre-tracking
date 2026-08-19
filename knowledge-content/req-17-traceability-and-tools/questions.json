@@ -1,0 +1,326 @@
+[
+  {
+    "id": "q1",
+    "question": "Traceable và traced khác nhau như thế nào?",
+    "questionEn": "How do traceable and traced differ?",
+    "options": [
+      "Traceable dùng cho yêu cầu còn traced dùng cho mã nguồn",
+      "Traceable là TÍNH CHẤT của yêu cầu, tức có nhãn duy nhất bền vững và được viết hạt mịn; traced nghĩa là bạn đã thực sự tạo ra các liên kết",
+      "Traceable là bắt buộc còn traced là tuỳ chọn trong mọi dự án",
+      "Chúng là hai tên gọi của cùng một khái niệm"
+    ],
+    "optionsEn": [
+      "Traceable applies to requirements and traced to code",
+      "Traceable is a PROPERTY of a requirement, namely a unique persistent label and fine-grained writing; traced means you actually created the links",
+      "Traceable is mandatory and traced optional on every project",
+      "They are two names for the same concept"
+    ],
+    "answer": 1,
+    "explanation": "Bạn không cần trace mọi thứ nhưng yêu cầu nên luôn traceable. Viết yêu cầu hạt mịn với nhãn bền vững gần như không tốn thêm chi phí; tạo và duy trì liên kết thì có.",
+    "explanationEn": "You need not trace everything but requirements should always be traceable. Fine-grained writing with persistent labels costs almost nothing extra; creating and maintaining links does."
+  },
+  {
+    "id": "q2",
+    "question": "Lợi ích lớn nhất và cụ thể nhất của truy vết yêu cầu là gì?",
+    "questionEn": "What is the biggest and most concrete benefit of requirements traceability?",
+    "options": [
+      "Nó làm tài liệu yêu cầu trông chuyên nghiệp hơn",
+      "Phân tích tác động của thay đổi: bạn truy vấn được yêu cầu này liên kết với thiết kế nào, mã nào, test nào, cho câu trả lời trong vài phút và đầy đủ thay vì vài ngày và dựa trên trí nhớ",
+      "Nó tự động sinh ra test case",
+      "Nó giúp giảm số lượng yêu cầu cần viết"
+    ],
+    "optionsEn": [
+      "It makes the requirements document look more professional",
+      "Change impact analysis: you can query which design, code, and tests a requirement links to, giving a complete answer in minutes instead of days based on memory",
+      "It automatically generates test cases",
+      "It reduces the number of requirements you must write"
+    ],
+    "answer": 1,
+    "explanation": "Bốn lợi ích còn lại là xác minh độ phủ kiểm thử, phát hiện chức năng thiếu và thừa, hỗ trợ bảo trì nhiều năm sau, và chứng minh tuân thủ với cơ quan chứng nhận.",
+    "explanationEn": "The other four benefits are verifying test coverage, detecting missing and superfluous functionality, supporting maintenance years later, and proving compliance to certification bodies."
+  },
+  {
+    "id": "q3",
+    "question": "Một yêu cầu không truy vết ngược được về nguồn nào có thẩm quyền thì nên làm gì?",
+    "questionEn": "What should you do with a requirement that cannot be traced back to an authoritative source?",
+    "options": [
+      "Gán cho nó độ ưu tiên thấp và giữ lại",
+      "Coi nó là ứng viên hàng đầu để bị loại bỏ, vì liên kết ngược trả lời câu hỏi vì sao chúng ta có yêu cầu này",
+      "Yêu cầu lập trình viên tự quyết định",
+      "Chuyển nó thành một business rule"
+    ],
+    "optionsEn": [
+      "Give it low priority and keep it",
+      "Treat it as a prime candidate for elimination, since the backward link answers why we have this requirement",
+      "Ask developers to decide",
+      "Convert it into a business rule"
+    ],
+    "answer": 1,
+    "explanation": "Bốn loại liên kết là yêu cầu về nguồn gốc, yêu cầu về yêu cầu cha, yêu cầu tới thiết kế mã test, và yêu cầu tới yêu cầu con.",
+    "explanationEn": "The four link types are requirement to origin, requirement to parent, requirement to design code and tests, and requirement to children."
+  }
+  ,
+  {
+    "id": "q4",
+    "question": "Trong ma trận yêu cầu nhân test case, một CỘT không có dấu X nào nghĩa là gì?",
+    "questionEn": "In a requirements-by-test-cases matrix, what does a COLUMN with no X mean?",
+    "options": [
+      "Test đó đã bị xoá",
+      "Test đó không xác minh yêu cầu nào: hoặc là test thừa, hoặc là có một yêu cầu chưa được ghi lại",
+      "Yêu cầu đó chưa được kiểm thử",
+      "Ma trận bị lỗi và cần lập lại"
+    ],
+    "optionsEn": [
+      "That test has been deleted",
+      "That test verifies no requirement: either it is superfluous or there is an unrecorded requirement",
+      "That requirement is untested",
+      "The matrix is broken and must be rebuilt"
+    ],
+    "answer": 1,
+    "explanation": "Hàng không có dấu X nghĩa là yêu cầu chưa được kiểm thử. Hàng có rất nhiều dấu X có thể nghĩa là yêu cầu quá lớn và nên được chia nhỏ.",
+    "explanationEn": "A row with no X means the requirement is untested. A row with very many Xs may mean the requirement is too large and should be split."
+  },
+  {
+    "id": "q5",
+    "question": "Nguyên tắc quan trọng nhất về THỜI ĐIỂM tạo liên kết truy vết là gì?",
+    "questionEn": "What is the most important rule about WHEN to create trace links?",
+    "options": [
+      "Tạo tất cả trước khi bắt đầu viết mã",
+      "Tạo khi công việc diễn ra chứ không phải ở cuối dự án; người viết mã ghi liên kết ngay lúc đó trong khi họ vẫn còn nhớ",
+      "Tạo ở cuối mỗi iteration để có cái nhìn tổng thể",
+      "Tạo khi có yêu cầu kiểm toán"
+    ],
+    "optionsEn": [
+      "Create them all before coding starts",
+      "Create them as the work happens rather than at project end; the developer records the link right then while they still remember",
+      "Create them at the end of each iteration for a holistic view",
+      "Create them when an audit is requested"
+    ],
+    "answer": 1,
+    "explanation": "Ba tháng trước khi giao hàng giao cho một người xây ma trận truy vết nghĩa là người đó phải đọc hàng nghìn dòng mã và phỏng đoán. Kết quả tốn kém, không chính xác và không ai tin.",
+    "explanationEn": "Assigning one person to build the matrix three months before delivery means reading thousands of lines of code and guessing. The result is expensive, inaccurate, and trusted by nobody."
+  },
+  {
+    "id": "q6",
+    "question": "Chi phí bảo trì truy vết tăng theo yếu tố nào?",
+    "questionEn": "What does trace maintenance cost scale with?",
+    "options": [
+      "Số lượng yêu cầu",
+      "Số lượng LIÊN KẾT, đó là lý do truy vết quá chi tiết trở nên không bền vững rất nhanh",
+      "Số lượng thành viên trong đội",
+      "Số lượng công cụ được tích hợp"
+    ],
+    "optionsEn": [
+      "The number of requirements",
+      "The number of LINKS, which is why over-detailed tracing becomes unsustainable very quickly",
+      "The number of team members",
+      "The number of integrated tools"
+    ],
+    "answer": 1,
+    "explanation": "Bài kiểm tra thực dụng: với mỗi loại liên kết, hỏi chúng ta sẽ dùng liên kết này để trả lời câu hỏi nào. Nếu không có câu hỏi cụ thể thì đừng duy trì loại liên kết đó.",
+    "explanationEn": "The pragmatic test: for each link type ask what question it will answer. If there is no specific question, do not maintain that link type."
+  }
+  ,
+  {
+    "id": "q7",
+    "question": "Dấu hiệu nào cho thấy truy vết đang được coi là bài tập tuân thủ chứ không phải công cụ làm việc?",
+    "questionEn": "What sign shows tracing is being treated as a compliance exercise rather than a working tool?",
+    "options": [
+      "Ma trận có quá nhiều liên kết",
+      "Ma trận truy vết chỉ được cập nhật khi sắp có kiểm toán, nghĩa là không ai dùng nó để làm việc nên nó không chính xác nên không ai tin nó",
+      "Chỉ có BA duy trì ma trận",
+      "Ma trận được lưu trong công cụ thay vì bảng tính"
+    ],
+    "optionsEn": [
+      "The matrix has too many links",
+      "The matrix is updated only when an audit is coming, meaning nobody uses it to work, so it is inaccurate, so nobody trusts it",
+      "Only the BA maintains the matrix",
+      "The matrix lives in a tool rather than a spreadsheet"
+    ],
+    "answer": 1,
+    "explanation": "Vòng luẩn quẩn này chỉ bị phá vỡ khi truy vết mang lại giá trị ngay lập tức cho người tạo ra nó, chủ yếu qua phân tích tác động nhanh và chính xác.",
+    "explanationEn": "The vicious circle is only broken when tracing delivers immediate value to the people creating it, mainly through fast and accurate impact analysis."
+  },
+  {
+    "id": "q8",
+    "question": "Truy vết trong dự án agile diễn ra như thế nào?",
+    "questionEn": "How does tracing work on agile projects?",
+    "options": [
+      "Agile không cần truy vết vì đội ngồi cùng chỗ",
+      "Agile CÓ truy vết nhưng ở dạng nhẹ hơn và tự động hơn, chẳng hạn commit message tham chiếu ID story tạo ra liên kết yêu cầu tới mã như tác dụng phụ của công việc bình thường",
+      "Agile chỉ truy vết ở cuối mỗi bản phát hành",
+      "Agile truy vết chi tiết hơn waterfall vì có nhiều iteration"
+    ],
+    "optionsEn": [
+      "Agile does not need tracing because the team is co-located",
+      "Agile DOES trace but more lightly and automatically, such as commit messages referencing story IDs creating requirement-to-code links as a side effect of normal work",
+      "Agile only traces at the end of each release",
+      "Agile traces more finely than waterfall because of many iterations"
+    ],
+    "answer": 1,
+    "explanation": "Truy vết tốt nhất được tạo ra như tác dụng phụ của công việc bình thường. Nếu lập trình viên phải nhớ cập nhật một bảng tính riêng thì họ sẽ quên.",
+    "explanationEn": "The best tracing is created as a side effect of normal work. If developers must remember to update a separate spreadsheet, they will forget."
+  },
+  {
+    "id": "q9",
+    "question": "Vì sao tài liệu và bảng tính thất bại khi quản lý yêu cầu ở quy mô lớn?",
+    "questionEn": "Why do documents and spreadsheets fail for managing requirements at scale?",
+    "options": [
+      "Vì chúng không hỗ trợ tiếng Việt có dấu",
+      "Vì yêu cầu về bản chất là dữ liệu có cấu trúc có quan hệ chứ không phải văn xuôi: bạn không lọc được theo trạng thái, không biểu diễn được quan hệ nhiều-nhiều, và không có lịch sử ở mức từng yêu cầu",
+      "Vì chúng quá đắt để cấp phép",
+      "Vì chúng không thể in ra được"
+    ],
+    "optionsEn": [
+      "Because they do not support non-Latin characters",
+      "Because requirements are fundamentally structured related data, not prose: you cannot filter by status, cannot express many-to-many links, and have no per-requirement history",
+      "Because they are too expensive to license",
+      "Because they cannot be printed"
+    ],
+    "answer": 1,
+    "explanation": "Tài liệu là một cách trình bày dữ liệu đó chứ không phải cách lưu trữ tốt. Với công cụ, SRS cho một release chỉ là một báo cáo được sinh ra từ cơ sở dữ liệu.",
+    "explanationEn": "A document is one way to present that data, not a good way to store it. With a tool, an SRS for a release is just a report generated from the database."
+  }
+  ,
+  {
+    "id": "q10",
+    "question": "Tính năng suspect link trong công cụ quản lý yêu cầu làm gì?",
+    "questionEn": "What does the suspect link feature in a requirements tool do?",
+    "options": [
+      "Nó phát hiện các liên kết trùng lặp",
+      "Khi một yêu cầu thay đổi, mọi liên kết từ nó tới thiết kế, mã và test tự động được đánh dấu là đáng ngờ, buộc ai đó xem lại xem chúng có cần cập nhật không",
+      "Nó cảnh báo khi có quá nhiều liên kết từ một yêu cầu",
+      "Nó tự động xoá các liên kết không còn hợp lệ"
+    ],
+    "optionsEn": [
+      "It detects duplicate links",
+      "When a requirement changes, every link from it to designs, code, and tests is automatically flagged suspect, forcing someone to review whether they need updating",
+      "It warns when one requirement has too many links",
+      "It automatically deletes invalid links"
+    ],
+    "answer": 1,
+    "explanation": "Đây chính là cơ chế biến truy vết từ tài liệu tĩnh thành công cụ làm việc sống, và là một trong những tính năng giá trị nhất của công cụ quản lý yêu cầu.",
+    "explanationEn": "This is precisely what turns tracing from a static document into a living working tool, and is one of the most valuable features of a requirements tool."
+  },
+  {
+    "id": "q11",
+    "question": "Cảnh báo quan trọng nhất về công cụ quản lý yêu cầu là gì?",
+    "questionEn": "What is the most important warning about requirements management tools?",
+    "options": [
+      "Chúng quá đắt cho dự án nhỏ",
+      "Công cụ KHÔNG cho bạn yêu cầu tốt: nó không khai thác, không làm rõ, không phát hiện yêu cầu thiếu và không giải quyết mâu thuẫn stakeholder, nên tổ chức có kỹ năng kém chỉ có được yêu cầu tệ được tổ chức đẹp hơn",
+      "Chúng đòi hỏi đội phải học ngôn ngữ truy vấn",
+      "Chúng không hỗ trợ phương pháp agile"
+    ],
+    "optionsEn": [
+      "They are too expensive for small projects",
+      "A tool does NOT give you good requirements: it does not elicit, clarify, detect gaps, or resolve stakeholder conflict, so a weak-skilled organization just gets bad requirements organized attractively",
+      "They require the team to learn a query language",
+      "They do not support agile methods"
+    ],
+    "answer": 1,
+    "explanation": "Hãy đầu tư vào kỹ năng trước, vào công cụ sau. Công cụ giúp bạn tổ chức, tìm kiếm, liên kết và theo dõi yêu cầu, chứ không tạo ra chất lượng của chính các yêu cầu đó.",
+    "explanationEn": "Invest in skills first, tools second. A tool helps you organize, search, link, and track requirements, but does not create the quality of the requirements themselves."
+  },
+  {
+    "id": "q12",
+    "question": "Vì sao phải định nghĩa quy trình TRƯỚC khi cấu hình công cụ?",
+    "questionEn": "Why must you define the process BEFORE configuring a tool?",
+    "options": [
+      "Vì nhà cung cấp yêu cầu tài liệu quy trình",
+      "Vì công cụ khuếch đại quy trình bạn có, tốt hoặc xấu; nếu quy trình lộn xộn thì công cụ sẽ làm nó lộn xộn nhanh hơn và ở quy mô lớn hơn",
+      "Vì cấu hình không thể thay đổi sau khi triển khai",
+      "Vì đội cần được đào tạo trước khi dùng"
+    ],
+    "optionsEn": [
+      "Because vendors require process documentation",
+      "Because a tool amplifies the process you have, good or bad; a chaotic process just becomes chaotic faster and at larger scale",
+      "Because configuration cannot change after rollout",
+      "Because the team must be trained before use"
+    ],
+    "answer": 1,
+    "explanation": "Bẫy phổ biến là mua công cụ rồi hy vọng nó sẽ dạy bạn cách làm việc. Điều đó không xảy ra. Hãy bắt đầu nhỏ với một dự án thí điểm và cấu hình đơn giản.",
+    "explanationEn": "The common trap is buying a tool and hoping it will teach you how to work. It will not. Start small with a pilot project and a simple configuration."
+  }
+  ,
+  {
+    "id": "q13",
+    "question": "Vì sao cấu hình công cụ với hai mươi thuộc tính bắt buộc cho mỗi yêu cầu là sai lầm?",
+    "questionEn": "Why is configuring a tool with twenty mandatory attributes per requirement a mistake?",
+    "options": [
+      "Vì công cụ sẽ chạy chậm",
+      "Vì mọi người sẽ điền bừa để vượt qua form và dữ liệu trở nên vô giá trị; hãy bắt đầu đơn giản vì thêm sau dễ hơn gỡ bỏ nhiều",
+      "Vì giấy phép tính phí theo số trường",
+      "Vì tiêu chuẩn ngành giới hạn ở mười thuộc tính"
+    ],
+    "optionsEn": [
+      "Because the tool will run slowly",
+      "Because people will fill in anything to get past the form and the data becomes worthless; start simple since adding later is far easier than removing",
+      "Because licences charge per field",
+      "Because industry standards cap it at ten attributes"
+    ],
+    "answer": 1,
+    "explanation": "Chỉ theo dõi những thuộc tính bạn thực sự dùng để ra quyết định. Với mỗi thuộc tính, hãy hỏi quyết định nào sẽ được đưa ra dựa trên trường này.",
+    "explanationEn": "Track only attributes you actually use to decide. For each attribute, ask what decision will be made based on this field."
+  },
+  {
+    "id": "q14",
+    "question": "Chế độ thất bại nghiêm trọng nhất khi dùng công cụ quản lý yêu cầu là gì?",
+    "questionEn": "What is the most serious failure mode when using a requirements tool?",
+    "options": [
+      "Công cụ quá đắt so với ngân sách",
+      "Dữ liệu không được duy trì: một công cụ chứa dữ liệu lỗi thời tệ hơn không có công cụ, vì người ta ra quyết định dựa trên thông tin sai mà không biết",
+      "Đội mất quá nhiều thời gian học công cụ",
+      "Công cụ không hỗ trợ xuất ra định dạng Word"
+    ],
+    "optionsEn": [
+      "The tool costs more than the budget",
+      "The data is not maintained: a tool holding stale data is worse than no tool, because people decide on wrong information without knowing it",
+      "The team spends too long learning the tool",
+      "The tool cannot export to Word"
+    ],
+    "answer": 1,
+    "explanation": "Các bẫy khác gồm công cụ trở thành mục đích thay vì phương tiện, sử dụng một phần tạo ra hai nguồn sự thật, và chỉ dùng như kho lưu trữ mà không bao giờ truy vấn.",
+    "explanationEn": "Other traps include the tool becoming the goal, partial adoption creating two sources of truth, and using it purely as a repository nobody ever queries."
+  },
+  {
+    "id": "q15",
+    "question": "Bài kiểm tra sức khoẻ đơn giản nào cho biết công cụ yêu cầu là tài sản hay gánh nặng?",
+    "questionEn": "What simple health check reveals whether a requirements tool is an asset or a burden?",
+    "options": [
+      "Đếm số yêu cầu được nhập vào mỗi tuần",
+      "Hỏi một thành viên đội bất kỳ lần cuối bạn dùng công cụ để TRẢ LỜI một câu hỏi là khi nào; nếu câu trả lời là tôi chỉ nhập dữ liệu vào đó thì công cụ đang là gánh nặng",
+      "Kiểm tra tỷ lệ trường bắt buộc được điền đầy đủ",
+      "Đo thời gian tải trang trung bình của công cụ"
+    ],
+    "optionsEn": [
+      "Count how many requirements are entered per week",
+      "Ask any team member when they last used the tool to ANSWER a question; if the answer is I just enter data into it, the tool is a burden",
+      "Check the fill rate of mandatory fields",
+      "Measure the tool average page load time"
+    ],
+    "answer": 1,
+    "explanation": "Truy vết và công cụ đều phục vụ cùng một mục đích: giúp bạn trả lời câu hỏi về yêu cầu nhanh chóng và chính xác. Nếu chúng chỉ tạo ra công việc mà không ai truy vấn kết quả, hãy cắt giảm.",
+    "explanationEn": "Tracing and tools serve the same purpose: helping you answer questions about requirements quickly and accurately. If they merely create work nobody queries, scale them back."
+  },
+  {
+    "id": "q16",
+    "question": "Nguyên tắc nào quan trọng nhất khi chọn bộ công cụ cho hệ sinh thái yêu cầu?",
+    "questionEn": "Which principle matters most when selecting a toolset for the requirements ecosystem?",
+    "options": [
+      "Chọn công cụ có nhiều tính năng nhất trong từng hạng mục",
+      "Ưu tiên tích hợp hơn tính năng đơn lẻ, và ưu tiên công cụ đội sẽ THỰC SỰ dùng, vì một công cụ đơn giản được dùng nhất quán vượt xa một công cụ mạnh mẽ bị né tránh",
+      "Chọn công cụ của cùng một nhà cung cấp để dễ đàm phán giá",
+      "Chọn công cụ mã nguồn mở để tránh phí giấy phép"
+    ],
+    "optionsEn": [
+      "Pick the tool with the most features in each category",
+      "Prefer integration over standalone features, and prefer the tool the team will ACTUALLY use, since a simple tool used consistently beats a powerful tool that gets avoided",
+      "Pick everything from one vendor for easier price negotiation",
+      "Pick open source to avoid licence fees"
+    ],
+    "answer": 1,
+    "explanation": "Cũng nên giảm thiểu số nơi cùng một thông tin tồn tại, vì mỗi bản sao là một cơ hội để không đồng bộ, và đừng để công cụ quyết định quy trình của bạn.",
+    "explanationEn": "Also minimise the number of places the same information lives, since each copy is a chance to drift, and do not let the tool dictate your process."
+  }
+]

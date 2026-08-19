@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "NFR là gì và tại sao BA hay bỏ sót? · Các nhóm NFR quan trọng nhất",
+      "titleEn": "What is an NFR and why do BAs often miss them? · The most important NFR categories",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "nfr-01",
+        "nfr-02",
+        "nfr-03",
+        "nfr-04",
+        "nfr-05"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "NFR ảnh hưởng đến kiến trúc như thế nào · Câu hỏi NFR BA cần hỏi cho từng màn hình",
+      "titleEn": "How NFRs shape the architecture · NFR questions the BA should ask for each screen",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "nfr-06",
+        "nfr-07",
+        "nfr-08",
+        "nfr-09",
+        "nfr-10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "NFR và Database — Những quyết định quan trọng · NFR trong Acceptance Criteria",
+      "titleEn": "NFRs and the Database — key decisions · NFRs in Acceptance Criteria",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "nfr-11",
+        "nfr-12",
+        "nfr-13",
+        "nfr-14",
+        "nfr-15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Ví dụ thực tế: NFR cho hệ thống khác nhau",
+      "titleEn": "Real-world examples: NFRs for different systems",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "NFR Checklist cho BA",
+      "titleEn": "NFR Checklist for the BA",
+      "sections": [
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

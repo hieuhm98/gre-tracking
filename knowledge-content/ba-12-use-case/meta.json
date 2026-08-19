@@ -1,0 +1,8 @@
+{
+  "group": "ba",
+  "order": 15,
+  "title": "Use Case & đặc tả use case",
+  "titleEn": "Use Cases & Use Case Specifications",
+  "description": "Actor, normal flow, alternative flow, exception flow; khi nào dùng use case thay vì user story và cách viết đặc tả.",
+  "descriptionEn": "Actors, normal, alternative, and exception flows; when to use a use case instead of a user story, and how to write the specification."
+}

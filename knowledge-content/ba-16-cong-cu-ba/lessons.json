@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Nguyên tắc chọn công cụ trước khi bàn tên công cụ · Jira — quản lý công việc và backlog",
+      "titleEn": "Principles before product names · Jira — work and backlog management",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Confluence — tài liệu và tri thức · Công cụ vẽ sơ đồ",
+      "titleEn": "Confluence — documentation and knowledge · Diagramming tools",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Công cụ wireframe và thiết kế · Công cụ AI trong công việc BA",
+      "titleEn": "Wireframing and design tools · AI tools in BA work",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Bộ công cụ tối thiểu cho một BA",
+      "titleEn": "A minimum toolkit for a BA",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

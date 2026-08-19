@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Vì sao test hệ thống phải được suy ra từ YÊU CẦU chứ không phải từ mã nguồn?",
+    "questionEn": "Why must system tests derive from REQUIREMENTS rather than from code?",
+    "options": [
+      "Vì viết test từ mã chỉ kiểm tra được rằng mã làm những gì nó làm, không phát hiện được chức năng bị bỏ sót hoàn toàn",
+      "Vì tester không được phép đọc mã nguồn",
+      "Vì mã thay đổi thường xuyên hơn yêu cầu",
+      "Vì đọc mã tốn nhiều thời gian hơn"
+    ],
+    "optionsEn": [
+      "Because tests from code only verify the code does what it does, missing functionality that is absent entirely",
+      "Because testers may not read source code",
+      "Because code changes more often than requirements",
+      "Because reading code takes longer"
+    ],
+    "answer": 0,
+    "explanation": "Chức năng bị bỏ sót không tồn tại trong mã nên không thể lộ ra khi đọc mã, dù bạn đọc kỹ tới đâu.",
+    "explanationEn": "Missing functionality is not in the code, so reading it cannot reveal it no matter how carefully you look."
+  },
+  {
+    "id": "q2",
+    "question": "Từ một acceptance criterion, nên sinh ra bốn nhóm test nào?",
+    "questionEn": "From one acceptance criterion, which four test groups should you generate?",
+    "options": [
+      "Đường đi thuận lợi, trường hợp biên, trường hợp lỗi và phân quyền",
+      "Chức năng, hiệu năng, bảo mật và khả năng sử dụng",
+      "Unit test, integration test, system test và UAT",
+      "Test thủ công, test tự động, test hồi quy và test khói"
+    ],
+    "optionsEn": [
+      "Happy path, boundary cases, failure cases, and permissions",
+      "Functional, performance, security, and usability",
+      "Unit, integration, system, and UAT",
+      "Manual, automated, regression, and smoke"
+    ],
+    "answer": 0,
+    "explanation": "Trường hợp biên là nhóm bị bỏ sót nhiều thứ hai sau trường hợp lỗi, và rất nhiều bug nằm đúng ở ranh giới như giá trị bằng ngưỡng hay danh sách rỗng.",
+    "explanationEn": "Boundary cases are the second most-omitted after failure cases, and many defects sit exactly at edges such as a value equal to the threshold or an empty list."
+  },
+  {
+    "id": "q3",
+    "question": "Trường nào trong test case là quan trọng nhất mà nhiều đội bỏ qua?",
+    "questionEn": "Which test case field is most important yet often skipped?",
+    "options": [
+      "Yêu cầu liên quan, vì nó cho biết ngay yêu cầu nào chưa được kiểm thử và test nào không truy vết về yêu cầu nào",
+      "Người viết test case",
+      "Ngày tạo test case",
+      "Thời gian ước tính để chạy test"
+    ],
+    "optionsEn": [
+      "The related requirement, since it instantly reveals which requirement is untested and which test traces to nothing",
+      "Who wrote the test case",
+      "The creation date",
+      "The estimated execution time"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là cách đo độ phủ kiểm thử ở mức yêu cầu, hữu ích hơn nhiều so với chỉ đo độ phủ dòng mã.",
+    "explanationEn": "This is how you measure test coverage at the requirements level, far more useful than code line coverage alone."
+  },
+  {
+    "id": "q4",
+    "question": "Khi nào nên dùng checklist thay vì test case đầy đủ?",
+    "questionEn": "When should you use a checklist instead of full test cases?",
+    "options": [
+      "Cho kiểm tra hồi quy nhanh, kiểm tra tính nhất quán giao diện, kiểm tra khả năng tiếp cận và các yêu cầu lặp lại trên nhiều màn hình",
+      "Cho mọi loại kiểm thử để tiết kiệm thời gian",
+      "Chỉ khi không có tester chuyên nghiệp",
+      "Chỉ cho dự án nhỏ dưới ba tháng"
+    ],
+    "optionsEn": [
+      "For quick regression, interface consistency, accessibility checks, and requirement types repeated across screens",
+      "For all testing, to save time",
+      "Only when there is no professional tester",
+      "Only for projects under three months"
+    ],
+    "answer": 0,
+    "explanation": "Checklist áp dụng cho mọi màn hình thuộc về definition of done chứ không phải acceptance criteria của từng story riêng lẻ.",
+    "explanationEn": "A checklist applying to every screen belongs to the definition of done rather than any individual story's acceptance criteria."
+  },
+  {
+    "id": "q5",
+    "question": "Mục nào KHÔNG thuộc checklist kiểm tra cho mỗi màn hình mới?",
+    "questionEn": "Which item does NOT belong on a per-screen checklist?",
+    "options": [
+      "Lập trình viên nào đã xây màn hình này",
+      "Trạng thái rỗng hiển thị đúng và có hướng dẫn hành động tiếp theo",
+      "Bấm hai lần liên tiếp không tạo hai bản ghi",
+      "Dữ liệu lớn một nghìn dòng vẫn dùng được"
+    ],
+    "optionsEn": [
+      "Which developer built this screen",
+      "The empty state displays correctly with a next-action hint",
+      "Double-clicking does not create two records",
+      "A thousand rows of data remains usable"
+    ],
+    "answer": 0,
+    "explanation": "Các mục khác gồm trạng thái tải không treo vô hạn, thông báo lỗi hữu ích thay vì mã lỗi kỹ thuật, và thao tác phá huỷ dữ liệu có xác nhận.",
+    "explanationEn": "Other items include a loading state that does not hang, useful error messages instead of technical codes, and confirmation on destructive actions."
+  },
+  {
+    "id": "q6",
+    "question": "UAT khác system testing ở câu hỏi trung tâm nào?",
+    "questionEn": "What central question separates UAT from system testing?",
+    "options": [
+      "System testing hỏi hệ thống có làm đúng đặc tả không; UAT hỏi hệ thống có giúp tôi làm được việc của mình không",
+      "System testing hỏi hệ thống có nhanh không; UAT hỏi hệ thống có đẹp không",
+      "System testing do người dùng làm; UAT do tester làm",
+      "Hai loại kiểm thử này trả lời cùng một câu hỏi"
+    ],
+    "optionsEn": [
+      "System testing asks whether the system matches the specification; UAT asks whether it helps me do my job",
+      "System testing asks whether it is fast; UAT asks whether it is attractive",
+      "System testing is done by users; UAT by testers",
+      "Both answer the same question"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế UAT tìm ra khoảng cách giữa đặc tả và nhu cầu thật, chứ không phải lỗi so với đặc tả.",
+    "explanationEn": "So UAT finds the gap between specification and real need, rather than defects against the specification."
+  },
+  {
+    "id": "q7",
+    "question": "Nếu UAT phát hiện toàn bug kỹ thuật cơ bản, điều đó nghĩa là gì?",
+    "questionEn": "If UAT surfaces mostly basic technical defects, what does that mean?",
+    "options": [
+      "System testing chưa làm tốt, và bạn đang lãng phí thời gian quý giá của người dùng nghiệp vụ",
+      "Người dùng đã kiểm thử rất kỹ",
+      "Đội phát triển cần thêm thời gian",
+      "UAT đã đạt được mục tiêu của nó"
+    ],
+    "optionsEn": [
+      "System testing was inadequate, and you are wasting valuable business users' time",
+      "The users tested very thoroughly",
+      "The team needs more time",
+      "UAT achieved its purpose"
+    ],
+    "answer": 0,
+    "explanation": "UAT tồn tại để tìm những gì đặc tả đã bỏ sót, chứ không phải để làm thay việc của tester chuyên nghiệp.",
+    "explanationEn": "UAT exists to find what the specification missed, not to do the professional tester's job for them."
+  },
+  {
+    "id": "q8",
+    "question": "Kịch bản UAT nên được viết theo cách nào?",
+    "questionEn": "How should UAT scenarios be written?",
+    "options": [
+      "Theo tác vụ nghiệp vụ, ví dụ xử lý đơn hàng cho khách ABC giao tới kho Bình Dương trước thứ Sáu",
+      "Theo màn hình, ví dụ mở màn hình A, nhập trường B, bấm nút C",
+      "Theo thứ tự các bảng dữ liệu bị tác động",
+      "Theo danh sách yêu cầu chức năng"
+    ],
+    "optionsEn": [
+      "Around business tasks, e.g. process an order for customer ABC delivered to Binh Duong before Friday",
+      "Around screens, e.g. open screen A, enter field B, press button C",
+      "In the order of the data tables affected",
+      "As a list of functional requirements"
+    ],
+    "answer": 0,
+    "explanation": "Kịch bản theo màn hình biến UAT thành bài kiểm tra khả năng làm theo chỉ dẫn, chứ không kiểm tra được hệ thống có phù hợp với công việc thật không.",
+    "explanationEn": "Screen-based scripts turn UAT into a test of following instructions rather than checking whether the system fits real work."
+  },
+  {
+    "id": "q9",
+    "question": "Vì sao phải dùng dữ liệu thật đã che thông tin nhạy cảm trong UAT?",
+    "questionEn": "Why use masked real data in UAT?",
+    "options": [
+      "Vì dữ liệu giả làm người dùng không nhận ra vấn đề, chẳng hạn tên sản phẩm dài thật làm vỡ bố cục",
+      "Vì quy định bắt buộc dùng dữ liệu thật",
+      "Vì dữ liệu giả làm hệ thống chạy chậm",
+      "Vì người dùng không biết cách tạo dữ liệu giả"
+    ],
+    "optionsEn": [
+      "Because fake data hides problems, such as a genuinely long product name breaking the layout",
+      "Because regulations mandate real data",
+      "Because fake data slows the system",
+      "Because users cannot create fake data"
+    ],
+    "answer": 0,
+    "explanation": "Che thông tin nhạy cảm là bắt buộc: sao chép dữ liệu thật xuống môi trường kiểm thử mà không che số điện thoại hay số thẻ là vi phạm quyền riêng tư.",
+    "explanationEn": "Masking is mandatory: copying real data to a test environment without masking phone or card numbers is a privacy breach."
+  },
+  {
+    "id": "q10",
+    "question": "Trong buổi UAT, vì sao KHÔNG nên giải thích khi người dùng mắc kẹt?",
+    "questionEn": "During UAT, why should you NOT explain when a user gets stuck?",
+    "options": [
+      "Vì nếu bạn phải giải thích thì sản phẩm thật cũng sẽ cần bạn ngồi cạnh mỗi người dùng",
+      "Vì quy trình UAT cấm trao đổi",
+      "Vì giải thích làm buổi UAT kéo dài",
+      "Vì người dùng sẽ tự tìm ra sau vài phút"
+    ],
+    "optionsEn": [
+      "Because if you must explain, the real product will need you sitting beside every user",
+      "Because UAT protocol forbids talking",
+      "Because explaining lengthens the session",
+      "Because users will figure it out shortly"
+    ],
+    "answer": 0,
+    "explanation": "Sự lúng túng của người dùng chính là dữ liệu bạn cần thu thập, và can thiệp sẽ xoá mất chính thông tin đó.",
+    "explanationEn": "The user's confusion is the data you came to collect, and intervening erases exactly that information."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao nên ghi lại cả những gì người dùng NÓI và những gì họ LÀM trong UAT?",
+    "questionEn": "Why record both what users SAY and what they DO in UAT?",
+    "options": [
+      "Vì hai thứ này thường khác nhau — người dùng có thể nói mọi thứ ổn trong khi hành vi cho thấy họ đã lúng túng nhiều lần",
+      "Vì cần đủ hai loại bằng chứng cho báo cáo",
+      "Vì quy trình yêu cầu ghi cả hai",
+      "Vì người dùng thường quên những gì mình đã làm"
+    ],
+    "optionsEn": [
+      "Because the two often differ — a user may say everything is fine while their behaviour showed repeated confusion",
+      "Because reports need both kinds of evidence",
+      "Because the process requires both",
+      "Because users forget what they did"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng là lý do quan sát là kỹ thuật khai thác yêu cầu có giá trị cao: nó cho thấy điều người dùng thực sự làm chứ không phải điều họ nói.",
+    "explanationEn": "This is also why observation is such a high-value elicitation technique: it reveals what users actually do rather than what they say."
+  },
+  {
+    "id": "q12",
+    "question": "Năm loại kết quả UAT cần phân loại là gì?",
+    "questionEn": "What are the five categories for classifying UAT results?",
+    "options": [
+      "Lỗi mã, yêu cầu bị bỏ sót, yêu cầu mới, hiểu lầm cần đào tạo và sở thích cá nhân",
+      "Nghiêm trọng, cao, trung bình, thấp và không đáng kể",
+      "Giao diện, chức năng, hiệu năng, bảo mật và dữ liệu",
+      "Đã sửa, đang sửa, chưa sửa, không sửa và cần thêm thông tin"
+    ],
+    "optionsEn": [
+      "Code defect, missed requirement, new requirement, misunderstanding needing training, and personal preference",
+      "Critical, high, medium, low, and trivial",
+      "Interface, functional, performance, security, and data",
+      "Fixed, fixing, unfixed, will not fix, and needs information"
+    ],
+    "answer": 0,
+    "explanation": "Phân loại đúng quyết định điều gì được sửa ngay trong đợt hiện tại, điều gì vào backlog, và điều gì chỉ cần ghi nhận.",
+    "explanationEn": "Correct classification determines what gets fixed now, what enters the backlog, and what is merely noted."
+  },
+  {
+    "id": "q13",
+    "question": "Nếu nhiều vấn đề UAT thuộc loại yêu cầu bị bỏ sót, điều đó nghĩa là gì?",
+    "questionEn": "If many UAT issues fall into the missed-requirement category, what does that mean?",
+    "options": [
+      "Đó là tín hiệu quy trình: khâu khai thác yêu cầu và grooming chưa phủ tốt các trường hợp ngoại lệ",
+      "Người dùng đã thay đổi ý kiến so với ban đầu",
+      "Đội phát triển đã hiện thực sai",
+      "UAT được tổ chức quá muộn"
+    ],
+    "optionsEn": [
+      "It is a process signal: elicitation and grooming did not cover exception cases well",
+      "Users changed their minds since the start",
+      "The team implemented it incorrectly",
+      "UAT was scheduled too late"
+    ],
+    "answer": 0,
+    "explanation": "Đây là điều đáng cải tiến cho dự án sau chứ không chỉ là một loạt bug cần sửa cho dự án hiện tại.",
+    "explanationEn": "This is something to improve for the next project rather than merely a batch of defects for the current one."
+  },
+  {
+    "id": "q14",
+    "question": "Khi nhiều người dùng cùng hiểu lầm một cách trong UAT, kết luận đúng là gì?",
+    "questionEn": "When many users misunderstand the same way in UAT, what is the right conclusion?",
+    "options": [
+      "Đó là vấn đề thiết kế chứ không phải vấn đề đào tạo",
+      "Cần tổ chức thêm buổi đào tạo cho người dùng",
+      "Cần viết tài liệu hướng dẫn chi tiết hơn",
+      "Người dùng chưa quen với hệ thống mới"
+    ],
+    "optionsEn": [
+      "It is a design problem, not a training problem",
+      "More user training sessions are needed",
+      "More detailed documentation is needed",
+      "Users simply need time with the new system"
+    ],
+    "answer": 0,
+    "explanation": "Hãy cẩn thận với phân loại hiểu lầm cần đào tạo, vì nó dễ trở thành cách né tránh việc thừa nhận một quyết định thiết kế chưa tốt.",
+    "explanationEn": "Be careful with the training category, since it easily becomes a way to avoid admitting a poor design decision."
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao việc không báo lại kết quả cho người tham gia UAT là lỗi nghiêm trọng?",
+    "questionEn": "Why is failing to report back to UAT participants a serious error?",
+    "options": [
+      "Vì lần sau bạn mời họ sẽ không đến, do họ tin rằng ý kiến của mình không dẫn tới điều gì",
+      "Vì quy trình kiểm thử yêu cầu phải có báo cáo",
+      "Vì cần bằng chứng cho việc nghiệm thu",
+      "Vì lãnh đạo cần biết kết quả"
+    ],
+    "optionsEn": [
+      "Because next time they will not come, believing their input leads nowhere",
+      "Because the test process requires a report",
+      "Because acceptance needs the evidence",
+      "Because management needs to know the results"
+    ],
+    "answer": 0,
+    "explanation": "Đóng vòng lặp là bắt buộc kể cả khi câu trả lời là không sửa — hãy nêu rõ lý do thay vì im lặng.",
+    "explanationEn": "Closing the loop is mandatory even when the answer is no fix — state the reason rather than staying silent."
+  },
+  {
+    "id": "q16",
+    "question": "Ai nên là người thực hiện UAT?",
+    "questionEn": "Who should perform UAT?",
+    "options": [
+      "Người dùng nghiệp vụ THẬT, gồm cả người thành thạo lẫn người mới, không phải quản lý của họ",
+      "Tester chuyên nghiệp của đội",
+      "Quản lý bộ phận đại diện cho người dùng",
+      "BA thay mặt người dùng"
+    ],
+    "optionsEn": [
+      "REAL business users, including both experts and newcomers, not their managers",
+      "The team's professional testers",
+      "Department managers representing users",
+      "The BA on the users' behalf"
+    ],
+    "answer": 0,
+    "explanation": "Người thành thạo và người mới gặp những vấn đề rất khác nhau, nên cần cả hai để phủ đủ các góc nhìn về khả năng sử dụng.",
+    "explanationEn": "Experts and newcomers hit very different problems, so you need both to cover the usability perspectives."
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tự động hoá quy trình & mô hình hoá as-is, to-be",
+      "titleEn": "Process automation & modeling as-is versus to-be",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Quy tắc kinh doanh & bản chất của business analytics",
+      "titleEn": "Business rules & the nature of business analytics",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Yêu cầu phân tích, data warehouse & quản trị dữ liệu",
+      "titleEn": "Analytics requirements, data warehouses & governance",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Hệ thống nhúng & khai thác yêu cầu cho chúng",
+      "titleEn": "Embedded systems & eliciting their requirements",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "An toàn, chứng nhận & bài học chung",
+      "titleEn": "Safety, certification & shared lessons",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

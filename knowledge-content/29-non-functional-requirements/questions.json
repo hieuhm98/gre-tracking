@@ -298,5 +298,105 @@
     "answer": 2,
     "explanation": "Ngôn ngữ lập trình là quyết định kỹ thuật của dev, BA không cần (và không nên) specify. BA cần: data volume (để biết cần index/cache), user expectation (để set SLA), peak pattern (để plan capacity). Những câu hỏi này giúp BA viết NFR đo lường được, không phải implementation detail.",
     "explanationEn": "The programming language is a technical decision for the devs; the BA doesn't need to (and shouldn't) specify it. The BA needs: data volume (to know if indexing/caching is needed), user expectations (to set the SLA), and the peak pattern (to plan capacity). These questions help the BA write measurable NFRs, not implementation details."
+  },
+  {
+    "question": "Vì sao NFR hay bị bỏ sót trong quá trình khai thác yêu cầu?",
+    "questionEn": "Why are NFRs so often missed during elicitation?",
+    "options": [
+      "Vì stakeholder rất quan tâm tới chúng nhưng hiếm khi nói ra — họ giả định hệ thống đương nhiên nhanh, đáng tin và an toàn",
+      "Vì NFR không quan trọng bằng yêu cầu chức năng",
+      "Vì NFR chỉ áp dụng cho hệ thống lớn",
+      "Vì lập trình viên tự xử lý NFR"
+    ],
+    "optionsEn": [
+      "Because stakeholders care deeply about them yet rarely state them — they assume the system will obviously be fast, reliable, and secure",
+      "Because NFRs matter less than functional requirements",
+      "Because NFRs only apply to large systems",
+      "Because developers handle NFRs themselves"
+    ],
+    "answer": 0,
+    "explanation": "Đừng hỏi cần nhanh tới mức nào vì câu trả lời luôn là nhanh nhất có thể. Hãy hỏi về kịch bản cụ thể và hậu quả khi không đạt.",
+    "explanationEn": "Do not ask how fast it must be — the answer is always as fast as possible. Ask about concrete scenarios and the cost of falling short.",
+    "id": "q16"
+  },
+  {
+    "question": "NFR nào có ảnh hưởng lớn nhất tới kiến trúc và vì sao phải biết sớm?",
+    "questionEn": "Which NFRs most shape the architecture, and why must they be known early?",
+    "options": [
+      "Hiệu năng, khả năng mở rộng, bảo mật và khả năng chuyển đổi — phát hiện muộn có thể buộc phải viết lại phần lớn hệ thống",
+      "Màu sắc và phông chữ giao diện",
+      "Ngôn ngữ hiển thị",
+      "Tên miền của website"
+    ],
+    "optionsEn": [
+      "Performance, scalability, security, and portability — discovering them late can force a large-scale rewrite",
+      "Interface colours and fonts",
+      "The display language",
+      "The website domain name"
+    ],
+    "answer": 0,
+    "explanation": "Biết muộn rằng hệ thống phải phục vụ 10.000 người dùng đồng thời thay vì 100 có thể làm hỏng toàn bộ kiến trúc đã xây.",
+    "explanationEn": "Learning late that the system must serve 10,000 concurrent users instead of 100 can invalidate the entire architecture already built.",
+    "id": "q17"
+  },
+  {
+    "question": "Cách viết NFR nào là kiểm chứng được?",
+    "questionEn": "Which NFR phrasing is verifiable?",
+    "options": [
+      "95% truy vấn tìm kiếm trả kết quả trong 2 giây với tối đa 500 người dùng đồng thời",
+      "Hệ thống phải có hiệu năng tốt",
+      "Giao diện phải thân thiện với người dùng",
+      "Hệ thống phải an toàn tuyệt đối"
+    ],
+    "optionsEn": [
+      "95 percent of search queries return within 2 seconds with up to 500 concurrent users",
+      "The system must have good performance",
+      "The interface must be user-friendly",
+      "The system must be absolutely secure"
+    ],
+    "answer": 0,
+    "explanation": "Luôn nêu ba điều: đo cái gì, dưới điều kiện nào, và ngưỡng chấp nhận là bao nhiêu. Thiếu bất kỳ điều nào là không kiểm chứng được.",
+    "explanationEn": "Always state three things: what is measured, under what conditions, and the acceptable threshold. Missing any one makes it unverifiable.",
+    "id": "q18"
+  },
+  {
+    "question": "Dễ học và dễ dùng là hai mục tiêu khác nhau. Điều đó có nghĩa gì với BA?",
+    "questionEn": "Ease of learning and efficiency of use are different goals. What does that mean for a BA?",
+    "options": [
+      "Phải biết user class nào quan trọng hơn, vì wizard dẫn dắt giúp người mới nhưng làm chậm người thành thạo",
+      "Cả hai luôn đạt được cùng lúc",
+      "Chỉ cần tối ưu dễ học là đủ",
+      "Đây là quyết định của nhà thiết kế, BA không cần quan tâm"
+    ],
+    "optionsEn": [
+      "You must know which user class matters more, since guiding wizards help newcomers but slow experts",
+      "Both are always achieved together",
+      "Optimising for ease of learning is enough",
+      "It is a designer decision the BA need not consider"
+    ],
+    "answer": 0,
+    "explanation": "Đây là một trong những đánh đổi phải đưa ra thảo luận với stakeholder, vì người chịu hậu quả phải là người quyết định.",
+    "explanationEn": "This is one of the trade-offs to take to stakeholders, because whoever bears the consequences should decide.",
+    "id": "q19"
+  },
+  {
+    "question": "Yêu cầu availability 99% nghe rất tốt. Thực tế nó nghĩa là gì?",
+    "questionEn": "A 99 percent availability requirement sounds excellent. What does it actually mean?",
+    "options": [
+      "Khoảng 3,65 ngày ngừng hoạt động mỗi năm; mỗi chữ số 9 thêm vào làm chi phí tăng vọt",
+      "Chỉ khoảng 1 giờ ngừng hoạt động mỗi năm",
+      "Hệ thống chỉ hỏng một lần mỗi năm",
+      "1% giao dịch bị thất bại"
+    ],
+    "optionsEn": [
+      "About 3.65 days of downtime a year; each additional nine makes the cost soar",
+      "Only about 1 hour of downtime a year",
+      "The system fails once a year",
+      "1 percent of transactions fail"
+    ],
+    "answer": 0,
+    "explanation": "Hãy hỏi stakeholder thiệt hại thực tế của mỗi giờ ngừng hoạt động để chọn mức hợp lý, thay vì mặc định đòi con số cao nhất.",
+    "explanationEn": "Ask stakeholders the real cost of each hour of downtime to choose a sensible level rather than defaulting to the highest number.",
+    "id": "q20"
   }
 ]

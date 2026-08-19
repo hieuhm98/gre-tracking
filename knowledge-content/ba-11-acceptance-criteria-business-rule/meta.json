@@ -1,0 +1,8 @@
+{
+  "group": "ba",
+  "order": 14,
+  "title": "Acceptance Criteria & Business Rule",
+  "titleEn": "Acceptance Criteria & Business Rules",
+  "description": "Viết AC cụ thể và kiểm chứng được với Given-When-Then; phân loại business rule và vì sao phải tách khỏi yêu cầu.",
+  "descriptionEn": "Writing specific, verifiable acceptance criteria with Given-When-Then; classifying business rules and why they live apart from requirements."
+}

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tổng quan · Cấu trúc URL",
+      "titleEn": "Overview · URL Structure",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Luồng khi truy cập website · Frontend vs Backend",
+      "titleEn": "The Flow When Visiting a Website · Frontend vs Backend",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Static vs Dynamic Website · CDN (Content Delivery Network)",
+      "titleEn": "Static vs Dynamic Website · CDN (Content Delivery Network)",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Browser Dev Tools · HTTP Response có gì?",
+      "titleEn": "Browser Dev Tools · What's in an HTTP Response?",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

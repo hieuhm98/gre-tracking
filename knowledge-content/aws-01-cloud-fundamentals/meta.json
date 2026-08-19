@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 1,
   "title": "Cloud & Hạ tầng toàn cầu của AWS",
   "titleEn": "Cloud Computing & AWS Global Infrastructure",
   "description": "Mô hình điện toán đám mây (IaaS/PaaS/SaaS), 6 lợi ích của cloud, Region, Availability Zone, Edge Location và cách chọn Region.",

@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 8,
+  "title": "Tài liệu SRS & viết yêu cầu xuất sắc",
+  "titleEn": "The SRS & Writing Excellent Requirements",
+  "description": "Cấu trúc SRS, cách đánh nhãn yêu cầu, đặc tính của yêu cầu xuất sắc, phong cách viết, và cách tránh nhập nhằng cùng thiếu sót.",
+  "descriptionEn": "The SRS structure, labelling requirements, the characteristics of excellent requirements, writing style, and avoiding ambiguity and incompleteness."
+}

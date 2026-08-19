@@ -298,5 +298,105 @@
     "answer": 2,
     "explanation": "10-20% là guideline phổ biến: đủ để dần dần trả nợ và refactor, không để debt tích lũy mãi, nhưng vẫn deliver feature. Sprint 100% debt ít hiệu quả hơn — đến lúc đó debt đã quá lớn và tốn nhiều hơn. Đây là quyết định cần BA/PO align với stakeholder từ đầu dự án.",
     "explanationEn": "10-20% is a common guideline: enough to gradually repay debt and refactor, so debt doesn't accumulate indefinitely, while still delivering features. A 100%-debt sprint is less effective — by that point the debt is already too large and costs more. This is a decision the BA/PO needs to align with stakeholders on from the start of the project."
+  },
+  {
+    "question": "Technical debt được hiểu chính xác nhất là gì?",
+    "questionEn": "What is the most accurate understanding of technical debt?",
+    "options": [
+      "Chi phí phát sinh trong tương lai do chọn giải pháp nhanh thay vì giải pháp tốt ở hiện tại",
+      "Số tiền công ty nợ nhà cung cấp phần mềm",
+      "Lỗi mà lập trình viên gây ra do thiếu năng lực",
+      "Thời gian đội dành cho việc học công nghệ mới"
+    ],
+    "optionsEn": [
+      "The future cost incurred by choosing a quick solution now instead of a good one",
+      "Money the company owes software vendors",
+      "Defects caused by developer incompetence",
+      "Time the team spends learning new technology"
+    ],
+    "answer": 0,
+    "explanation": "Nợ kỹ thuật không phải lúc nào cũng xấu — vay có ý thức để ra thị trường sớm là hợp lý. Vấn đề là vay mà không bao giờ trả lãi.",
+    "explanationEn": "Technical debt is not always bad — borrowing deliberately to reach market sooner can be rational. The problem is borrowing and never servicing it.",
+    "id": "q16"
+  },
+  {
+    "question": "Khi nào một shortcut kỹ thuật là hợp lý?",
+    "questionEn": "When is a technical shortcut reasonable?",
+    "options": [
+      "Khi nó được quyết định có ý thức, được ghi lại kèm kế hoạch trả nợ, và phục vụ mục tiêu học nhanh hoặc ra thị trường sớm",
+      "Bất cứ khi nào lịch trình bị trễ",
+      "Khi lập trình viên không muốn viết kiểm thử",
+      "Không bao giờ hợp lý"
+    ],
+    "optionsEn": [
+      "When it is a conscious decision, recorded with a repayment plan, and serves fast learning or an earlier market entry",
+      "Whenever the schedule slips",
+      "When developers do not want to write tests",
+      "It is never reasonable"
+    ],
+    "answer": 0,
+    "explanation": "Khác biệt giữa nợ có kiểm soát và nợ mất kiểm soát nằm ở chỗ nó có được ghi lại và có ai chịu trách nhiệm trả hay không.",
+    "explanationEn": "The difference between managed and unmanaged debt is whether it is recorded and whether anyone owns repaying it.",
+    "id": "q17"
+  },
+  {
+    "question": "Dấu hiệu nào cho thấy đội đang gánh technical debt cao?",
+    "questionEn": "Which sign indicates a team carries high technical debt?",
+    "options": [
+      "Ước tính cho những thay đổi nhỏ ngày càng lớn, và mỗi lần sửa lại làm hỏng thứ khác",
+      "Đội hoàn thành sprint đúng hạn",
+      "Số lượng story point tăng đều",
+      "Đội tổ chức retrospective mỗi sprint"
+    ],
+    "optionsEn": [
+      "Estimates for small changes keep growing, and each fix breaks something else",
+      "The team finishes sprints on time",
+      "Story points rise steadily",
+      "The team holds a retrospective every sprint"
+    ],
+    "answer": 0,
+    "explanation": "Khi chi phí thay đổi tăng dần theo thời gian, đó là triệu chứng kinh điển. BA có thể nhận ra qua ước tính chứ không cần đọc mã.",
+    "explanationEn": "When the cost of change rises over time, that is the classic symptom. A BA can spot it through estimates without reading code.",
+    "id": "q18"
+  },
+  {
+    "question": "Tư duy MVP đúng đắn là gì?",
+    "questionEn": "What is the correct MVP mindset?",
+    "options": [
+      "Làm đủ nhỏ để học được điều quan trọng nhất từ người dùng thật, chứ không phải làm phiên bản kém chất lượng của sản phẩm đầy đủ",
+      "Làm sản phẩm rẻ nhất có thể",
+      "Bỏ qua kiểm thử để ra mắt nhanh",
+      "Làm mọi tính năng nhưng mỗi tính năng chỉ 50%"
+    ],
+    "optionsEn": [
+      "Build just enough to learn the most important thing from real users, not a low-quality version of the full product",
+      "Build the cheapest possible product",
+      "Skip testing to launch faster",
+      "Build every feature but each one only half-finished"
+    ],
+    "answer": 0,
+    "explanation": "MVP là công cụ học hỏi. Một lát cắt dọc hoàn chỉnh cho một luồng công việc có giá trị hơn nhiều so với nhiều tính năng dở dang.",
+    "explanationEn": "An MVP is a learning tool. One complete vertical slice of a workflow is worth far more than many half-finished features.",
+    "id": "q19"
+  },
+  {
+    "question": "BA nên phản ứng thế nào khi lập trình viên nói việc này không đơn giản như vậy?",
+    "questionEn": "How should a BA respond when a developer says this is not that simple?",
+    "options": [
+      "Hỏi cụ thể điều gì làm nó phức tạp và có phương án nào rẻ hơn đáp ứng được cùng nhu cầu nghiệp vụ không",
+      "Kết luận lập trình viên đang né việc",
+      "Chuyển yêu cầu cho người khác làm",
+      "Giảm phạm vi ngay lập tức mà không hỏi"
+    ],
+    "optionsEn": [
+      "Ask specifically what makes it complex and whether a cheaper option meets the same business need",
+      "Conclude the developer is avoiding work",
+      "Reassign the requirement to someone else",
+      "Cut scope immediately without asking"
+    ],
+    "answer": 0,
+    "explanation": "Thường có nhiều cách đáp ứng cùng một nhu cầu với chi phí rất khác nhau. Cuộc trò chuyện đó chính là nơi BA tạo ra giá trị lớn nhất.",
+    "explanationEn": "There are usually several ways to meet the same need at very different costs. That conversation is where a BA adds the most value.",
+    "id": "q20"
   }
 ]

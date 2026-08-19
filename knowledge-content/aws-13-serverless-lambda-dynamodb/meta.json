@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 13,
   "title": "AWS Serverless – Lambda, DynamoDB & API Gateway",
   "titleEn": "AWS Serverless – Lambda, DynamoDB & API Gateway",
   "description": "Kiến trúc serverless trên AWS: Lambda chạy theo sự kiện, DynamoDB NoSQL độ trễ mili-giây và API Gateway làm cửa ngõ API.",

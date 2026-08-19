@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 7,
+  "title": "Business Rules",
+  "titleEn": "Business Rules",
+  "description": "Taxonomy business rule gồm facts, constraints, action enablers, inferences và computations; cách viết rule nguyên tử, tài liệu hoá, khám phá và nối chúng với yêu cầu.",
+  "descriptionEn": "The business rules taxonomy of facts, constraints, action enablers, inferences, and computations; writing atomic rules, documenting, discovering, and linking them to requirements."
+}

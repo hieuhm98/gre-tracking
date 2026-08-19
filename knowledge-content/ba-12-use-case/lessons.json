@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Use case là gì và khi nào dùng · Các thành phần của một đặc tả use case",
+      "titleEn": "What a use case is and when to use one · The components of a use case specification",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Ba loại luồng · Xác định actor",
+      "titleEn": "The three kinds of flow · Identifying actors",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Sai lầm thường gặp khi viết use case · Use case diagram và đặc tả use case",
+      "titleEn": "Common mistakes when writing use cases · Use case diagrams versus specifications",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 8,
   "title": "Amazon S3 – Nền tảng lưu trữ đối tượng",
   "titleEn": "Amazon S3 – Object Storage Fundamentals",
   "description": "Buckets, objects, storage classes, versioning, lifecycle và replication trong Amazon S3 cho kỳ thi SAA-C03.",

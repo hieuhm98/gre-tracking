@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 17,
+  "title": "Truy vết yêu cầu & công cụ",
+  "titleEn": "Requirements Traceability & Tools",
+  "description": "Bốn loại liên kết truy vết, ma trận truy vết, chi phí và mức độ truy vết hợp lý, truy vết trong agile và hệ thống được quản lý chặt, cùng cách chọn và triển khai công cụ quản lý yêu cầu.",
+  "descriptionEn": "The four kinds of trace links, traceability matrices, the cost and right depth of tracing, tracing in agile and regulated systems, and how to select and roll out a requirements management tool."
+}

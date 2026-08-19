@@ -63,8 +63,18 @@
     "id": "febe-04",
     "question": "REST API sử dụng HTTP method nào để TẠO MỚI một resource?",
     "questionEn": "Which HTTP method does a REST API use to CREATE a new resource?",
-    "options": ["GET", "PUT", "POST", "PATCH"],
-    "optionsEn": ["GET", "PUT", "POST", "PATCH"],
+    "options": [
+      "GET",
+      "PUT",
+      "POST",
+      "PATCH"
+    ],
+    "optionsEn": [
+      "GET",
+      "PUT",
+      "POST",
+      "PATCH"
+    ],
     "answer": 2,
     "explanation": "GET: đọc dữ liệu. POST: tạo mới. PUT: cập nhật toàn bộ. PATCH: cập nhật một phần. DELETE: xóa. Ví dụ: POST /api/users tạo user mới, GET /api/users lấy danh sách.",
     "explanationEn": "GET: read data. POST: create. PUT: full update. PATCH: partial update. DELETE: delete. Example: POST /api/users creates a new user, GET /api/users retrieves the list."
@@ -288,5 +298,105 @@
     "answer": 2,
     "explanation": "API Contract phải thống nhất trước. Sau đó FE dùng mock data (hardcode hoặc mock server) để làm UI, BE build API thật. Khi cả hai xong, integration nhanh vì đã biết format. Đây là cách tối ưu để không team nào phải chờ team kia.",
     "explanationEn": "The API Contract must be agreed on first. Then the FE uses mock data (hardcoded or a mock server) to build the UI while the BE builds the real API. When both are done, integration is fast because the format is already known. This is the optimal way so neither team has to wait for the other."
+  },
+  {
+    "question": "Người dùng báo dữ liệu hiển thị sai. BA nên hỏi câu nào để khoanh vùng FE hay BE?",
+    "questionEn": "A user reports wrong data on screen. Which question narrows it to FE or BE?",
+    "options": [
+      "Dữ liệu API trả về đã đúng chưa — nếu đúng thì lỗi ở hiển thị, nếu sai thì lỗi ở xử lý phía server",
+      "Người dùng đang dùng trình duyệt gì",
+      "Màn hình có độ phân giải bao nhiêu",
+      "Người dùng đăng nhập lúc mấy giờ"
+    ],
+    "optionsEn": [
+      "Is the API response already correct — if yes the bug is in rendering, if no it is in server-side processing",
+      "Which browser the user has",
+      "What screen resolution they use",
+      "What time they logged in"
+    ],
+    "answer": 0,
+    "explanation": "Xem tab Network để đối chiếu dữ liệu trả về với dữ liệu hiển thị là cách khoanh vùng nhanh nhất và giúp bug report chính xác hơn nhiều.",
+    "explanationEn": "Comparing the Network tab response with what is displayed is the fastest way to isolate the layer and makes bug reports far more precise.",
+    "id": "q16"
+  },
+  {
+    "question": "Việc kiểm tra tính hợp lệ dữ liệu (validation) nên đặt ở đâu?",
+    "questionEn": "Where should data validation live?",
+    "options": [
+      "Cả frontend lẫn backend: frontend cho trải nghiệm nhanh, backend vì đó mới là lớp bảo vệ thật",
+      "Chỉ ở frontend cho nhẹ server",
+      "Chỉ ở backend vì frontend không cần",
+      "Chỉ ở cơ sở dữ liệu"
+    ],
+    "optionsEn": [
+      "Both: the frontend for fast feedback, the backend because that is the real protection",
+      "Frontend only, to keep the server light",
+      "Backend only, since the frontend does not need it",
+      "In the database only"
+    ],
+    "answer": 0,
+    "explanation": "Kiểm tra ở frontend có thể bị bỏ qua hoàn toàn bằng cách gọi API trực tiếp. Mọi đầu vào tới server đều phải được coi là không đáng tin.",
+    "explanationEn": "Frontend checks can be bypassed entirely by calling the API directly. All input reaching the server must be treated as untrusted.",
+    "id": "q17"
+  },
+  {
+    "question": "Trong mô hình ba lớp, lớp nào chứa quy tắc nghiệp vụ?",
+    "questionEn": "In a three-layer architecture, which layer holds the business rules?",
+    "options": [
+      "Lớp nghiệp vụ (business/logic layer)",
+      "Lớp trình bày (presentation)",
+      "Lớp dữ liệu (data)",
+      "Lớp mạng"
+    ],
+    "optionsEn": [
+      "The business/logic layer",
+      "The presentation layer",
+      "The data layer",
+      "The network layer"
+    ],
+    "answer": 0,
+    "explanation": "Tách lớp giúp thay đổi giao diện mà không đụng tới quy tắc nghiệp vụ, và đổi cơ sở dữ liệu mà không viết lại logic.",
+    "explanationEn": "Layering lets you change the interface without touching business rules, and swap the database without rewriting logic.",
+    "id": "q18"
+  },
+  {
+    "question": "Token xác thực hết hạn giữa lúc người dùng đang điền biểu mẫu dài. Yêu cầu nào cần được đặc tả?",
+    "questionEn": "An auth token expires while a user fills a long form. Which requirement must be specified?",
+    "options": [
+      "Hệ thống làm gì với dữ liệu đang nhập dở và cách người dùng đăng nhập lại mà không mất công sức",
+      "Màu của thông báo hết phiên",
+      "Độ dài của token",
+      "Thuật toán mã hoá token"
+    ],
+    "optionsEn": [
+      "What happens to the partially entered data and how the user re-authenticates without losing their work",
+      "The colour of the session-expired message",
+      "The token length",
+      "The token encryption algorithm"
+    ],
+    "answer": 0,
+    "explanation": "Đây là điểm giao giữa bảo mật và khả năng sử dụng — đúng loại đánh đổi phải đưa ra thảo luận với stakeholder chứ không để lập trình viên tự quyết.",
+    "explanationEn": "This is where security meets usability — exactly the trade-off to take to stakeholders rather than leaving to developers.",
+    "id": "q19"
+  },
+  {
+    "question": "Vì sao BA cần biết một thay đổi thuộc FE hay BE khi ước tính?",
+    "questionEn": "Why does a BA need to know whether a change is FE or BE when estimating?",
+    "options": [
+      "Vì nó quyết định đội nào làm, mức phụ thuộc và liệu có cần thay đổi cấu trúc dữ liệu hay không",
+      "Vì FE luôn nhanh hơn BE",
+      "Vì BE không cần kiểm thử",
+      "Vì chỉ FE mới ảnh hưởng tới người dùng"
+    ],
+    "optionsEn": [
+      "Because it determines which team does the work, the dependencies, and whether the data model must change",
+      "Because FE is always faster than BE",
+      "Because BE needs no testing",
+      "Because only FE affects users"
+    ],
+    "answer": 0,
+    "explanation": "Thay đổi chạm tới cấu trúc dữ liệu hoặc hợp đồng API thường lan rộng hơn nhiều so với thay đổi thuần giao diện.",
+    "explanationEn": "Changes touching the data model or the API contract ripple much further than purely visual ones.",
+    "id": "q20"
   }
 ]

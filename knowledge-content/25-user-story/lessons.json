@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "User Story là gì? · INVEST — Tiêu chí của User Story tốt",
+      "titleEn": "What is a User Story? · INVEST — Criteria for a good User Story",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "us-01",
+        "us-02",
+        "us-03",
+        "us-04",
+        "us-05"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Acceptance Criteria (AC) · Các lỗi thường gặp khi viết User Story",
+      "titleEn": "Acceptance Criteria (AC) · Common mistakes when writing User Stories",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "us-06",
+        "us-07",
+        "us-08",
+        "us-09",
+        "us-10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Story Splitting — Chia nhỏ User Story · Definition of Done (DoD)",
+      "titleEn": "Story Splitting — Breaking down a User Story · Definition of Done (DoD)",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "us-11",
+        "us-12",
+        "us-13",
+        "us-14",
+        "us-15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Story Points và Estimation · User Story Mapping",
+      "titleEn": "Story Points and Estimation · User Story Mapping",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Ví dụ đầy đủ — User Story cho BA",
+      "titleEn": "A complete example — User Story for a BA",
+      "sections": [
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 10,
+  "title": "Quality attribute & ràng buộc",
+  "titleEn": "Quality Attributes & Constraints",
+  "description": "Khai thác và đặc tả yêu cầu phi chức năng: availability, performance, reliability, security, usability, portability, đánh đổi giữa chúng, ngôn ngữ Planguage và các loại constraint.",
+  "descriptionEn": "Eliciting and specifying nonfunctional requirements: availability, performance, reliability, security, usability, portability, the trade-offs among them, the Planguage notation, and kinds of constraints."
+}

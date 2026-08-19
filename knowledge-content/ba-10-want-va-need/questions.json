@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Khác biệt cốt lõi giữa WANT và NEED là gì?",
+    "questionEn": "What is the core difference between a WANT and a NEED?",
+    "options": [
+      "WANT là điều khách hàng nói ra, thường là giải pháp họ tự nghĩ; NEED là vấn đề thật đang gây đau cho họ",
+      "WANT là yêu cầu chức năng, NEED là yêu cầu phi chức năng",
+      "WANT do người dùng nêu, NEED do lãnh đạo nêu",
+      "WANT là ngắn hạn, NEED là dài hạn"
+    ],
+    "optionsEn": [
+      "A WANT is what the customer says, usually a solution they imagined; a NEED is the real problem hurting them",
+      "A WANT is functional and a NEED is nonfunctional",
+      "A WANT comes from users and a NEED from executives",
+      "A WANT is short-term and a NEED long-term"
+    ],
+    "answer": 0,
+    "explanation": "Khách hàng mô tả giải pháp dựa trên những gì họ biết hoặc từng thấy. Việc chuyển từ giải pháp về vấn đề là công việc của BA.",
+    "explanationEn": "Customers describe solutions based on what they know or have seen. Moving from solution back to problem is the BA's job."
+  },
+  {
+    "id": "q2",
+    "question": "Hậu quả của việc xây đúng WANT mà không hiểu NEED là gì?",
+    "questionEn": "What happens when you build the WANT correctly without understanding the NEED?",
+    "options": [
+      "Bạn xây đúng thứ khách hàng yêu cầu nhưng có thể không giải quyết được vấn đề của họ",
+      "Dự án sẽ vượt ngân sách",
+      "Đội phát triển sẽ mất động lực",
+      "Tài liệu yêu cầu sẽ quá dài"
+    ],
+    "optionsEn": [
+      "You build exactly what they asked for, which may still not solve their problem",
+      "The project overruns budget",
+      "The team loses motivation",
+      "The requirements document becomes too long"
+    ],
+    "answer": 0,
+    "explanation": "Hiểu NEED thường tìm ra cách rẻ hơn, nhanh hơn và hiệu quả hơn so với cách khách hàng đề xuất.",
+    "explanationEn": "Understanding the NEED usually reveals a cheaper, faster, and more effective route than the customer proposed."
+  },
+  {
+    "id": "q3",
+    "question": "Khách hàng nói tôi muốn hệ thống gửi email nhắc mỗi ngày. Câu hỏi lùi một bước nào phù hợp nhất?",
+    "questionEn": "A customer says they want a daily reminder email. Which step-back question fits best?",
+    "options": [
+      "Nhắc về việc gì, và vì sao việc đó lại bị bỏ sót?",
+      "Anh chị muốn email gửi lúc mấy giờ?",
+      "Email nên có tiêu đề như thế nào?",
+      "Ai sẽ nhận được email đó?"
+    ],
+    "optionsEn": [
+      "A reminder about what, and why is that being missed?",
+      "What time should the email be sent?",
+      "What subject line should it have?",
+      "Who will receive the email?"
+    ],
+    "answer": 0,
+    "explanation": "Nhu cầu thật có thể là nhân viên không nhìn thấy công việc đang chờ mình, và một chỉ báo trên màn hình chính có thể hiệu quả hơn email.",
+    "explanationEn": "The real need may be that staff cannot see the work waiting for them, and an on-screen badge may work better than email."
+  },
+  {
+    "id": "q4",
+    "question": "Câu hỏi nào đo được mức độ đau THẬT của một nhu cầu?",
+    "questionEn": "Which question measures the REAL pain behind a need?",
+    "options": [
+      "Điều gì xảy ra nếu anh chị không có nó?",
+      "Anh chị muốn nó trông như thế nào?",
+      "Bao giờ anh chị cần có nó?",
+      "Ai đề xuất tính năng này?"
+    ],
+    "optionsEn": [
+      "What happens if you do not have it?",
+      "What should it look like?",
+      "When do you need it by?",
+      "Who proposed this feature?"
+    ],
+    "answer": 0,
+    "explanation": "Nếu câu trả lời là cũng không sao lắm, đó là dấu hiệu nhu cầu này có mức ưu tiên thấp hơn người đề xuất nghĩ.",
+    "explanationEn": "If the answer is it would not really matter, that signals the need ranks lower than the requester believes."
+  },
+  {
+    "id": "q5",
+    "question": "Với nhu cầu mà người dùng không diễn đạt được, kỹ thuật nào phù hợp?",
+    "questionEn": "For needs users cannot articulate, which technique fits?",
+    "options": [
+      "Quan sát họ làm việc thật, vì người làm theo thói quen không ý thức được các bước mình đang làm",
+      "Gửi bảng khảo sát chi tiết hơn",
+      "Phỏng vấn thêm nhiều người khác",
+      "Yêu cầu họ viết ra quy trình"
+    ],
+    "optionsEn": [
+      "Observing them at real work, since people working by habit are unaware of the steps they take",
+      "Sending a more detailed survey",
+      "Interviewing more people",
+      "Asking them to write the process down"
+    ],
+    "answer": 0,
+    "explanation": "Họ càng không ý thức được những bước gây khó chịu mà họ đã quen chịu đựng, nên hỏi trực tiếp thường không lấy ra được.",
+    "explanationEn": "They are even less aware of the irritating steps they have learned to tolerate, so direct questioning rarely surfaces them."
+  },
+  {
+    "id": "q6",
+    "question": "Nhân viên nói mỗi cuối tháng tôi ngồi ghép ba báo cáo bằng tay mất một buổi, nhưng không nêu đó là yêu cầu. Đây là loại nhu cầu ẩn nào?",
+    "questionEn": "A user mentions spending half a day merging three reports monthly but never raises it as a requirement. Which hidden need is this?",
+    "options": [
+      "Nhu cầu họ không biết mình có, vì đã chịu đựng lâu tới mức coi đó là chuyện bình thường",
+      "Nhu cầu chỉ lộ ra khi nhìn thấy giải pháp",
+      "Nhu cầu họ biết nhưng nghĩ là không khả thi",
+      "Đây không phải nhu cầu mà là ràng buộc"
+    ],
+    "optionsEn": [
+      "A need they do not know they have, having endured it so long it feels normal",
+      "A need that only surfaces on seeing a solution",
+      "A need they know but assume is infeasible",
+      "Not a need but a constraint"
+    ],
+    "answer": 0,
+    "explanation": "Loại này bắt được bằng quan sát. Loại họ biết nhưng không nói bắt được bằng phỏng vấn kỹ, còn loại chỉ lộ khi thấy giải pháp bắt được bằng prototype.",
+    "explanationEn": "This kind is caught by observation. The known-but-unsaid kind is caught by careful interviewing, and the see-it-to-know-it kind by prototypes."
+  },
+  {
+    "id": "q7",
+    "question": "Vì sao prototype có giá trị đặc biệt trong việc khơi gợi nhu cầu?",
+    "questionEn": "Why are prototypes especially valuable for eliciting needs?",
+    "options": [
+      "Vì có những nhu cầu chỉ lộ ra khi người dùng nhìn thấy một giải pháp cụ thể trước mắt",
+      "Vì prototype thay thế được tài liệu yêu cầu",
+      "Vì prototype giúp ước tính chính xác hơn",
+      "Vì prototype giảm chi phí phát triển"
+    ],
+    "optionsEn": [
+      "Because some needs only surface once users see a concrete solution in front of them",
+      "Because prototypes replace requirements documents",
+      "Because prototypes improve estimates",
+      "Because prototypes reduce development cost"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ điển hình: khi nhìn màn hình này tôi mới nhớ ra là còn trường hợp khách hàng doanh nghiệp thì khác.",
+    "explanationEn": "A typical example: looking at this screen reminds me that corporate customers work differently."
+  },
+  {
+    "id": "q8",
+    "question": "Khi khách hàng kiên quyết giữ WANT dù bạn đã giải thích NEED, việc đầu tiên nên làm là gì?",
+    "questionEn": "When a customer insists on their WANT despite your explanation of the NEED, what should you do first?",
+    "options": [
+      "Hỏi thẳng liệu có lý do nào khác khiến cách này là bắt buộc không, trước khi kết luận rằng họ sai",
+      "Đưa vấn đề lên cấp trên của họ",
+      "Ghi lại yêu cầu theo đúng ý họ và không nói gì thêm",
+      "Từ chối thực hiện vì đó là giải pháp sai"
+    ],
+    "optionsEn": [
+      "Ask directly whether there is another reason this approach is mandatory, before concluding they are wrong",
+      "Escalate to their manager",
+      "Record their wish verbatim and say nothing more",
+      "Refuse to proceed because the solution is wrong"
+    ],
+    "answer": 0,
+    "explanation": "Có thể có một ràng buộc pháp lý, một cam kết với khách hàng, hoặc một quyết định của lãnh đạo mà bạn chưa nắm được.",
+    "explanationEn": "There may be a legal constraint, a customer commitment, or an executive decision you have not heard about."
+  },
+  {
+    "id": "q9",
+    "question": "Khi khách hàng đã cam kết công khai với cấp trên về một giải pháp, cách xử lý khéo léo nhất là gì?",
+    "questionEn": "When a customer has publicly committed to a solution, what is the most tactful approach?",
+    "options": [
+      "Trình bày phương án thay thế như một cải tiến của ý tưởng ban đầu của họ, không phải như một sự thay thế",
+      "Chỉ ra công khai rằng giải pháp đó có vấn đề",
+      "Bỏ qua và làm theo cam kết của họ",
+      "Đề nghị họ tự rút lại cam kết trước"
+    ],
+    "optionsEn": [
+      "Present the alternative as an improvement on their original idea rather than a replacement",
+      "Publicly point out the flaw in their solution",
+      "Drop it and follow their commitment",
+      "Ask them to retract the commitment first"
+    ],
+    "answer": 0,
+    "explanation": "Bỏ giải pháp đó đi nghĩa là thừa nhận mình sai trước mặt người khác, nên tạo đường lui thể diện là điều kiện để họ thay đổi được.",
+    "explanationEn": "Dropping it means admitting error in front of others, so creating a face-saving path is what makes change possible for them."
+  },
+  {
+    "id": "q10",
+    "question": "Nếu sau khi trình bày đầy đủ đánh đổi mà khách hàng vẫn chọn WANT của họ, BA nên làm gì?",
+    "questionEn": "If after a full trade-off discussion the customer still chooses their WANT, what should the BA do?",
+    "options": [
+      "Chấp nhận vì đó là quyền của họ, ghi lại lý do và đi tiếp — nhiệm vụ của BA là bảo đảm quyết định có đầy đủ thông tin",
+      "Tiếp tục thuyết phục cho tới khi họ đổi ý",
+      "Ghi vào biên bản rằng BA không đồng ý",
+      "Đưa vấn đề lên ban lãnh đạo"
+    ],
+    "optionsEn": [
+      "Accept it as their right, record the rationale, and move on — the BA's job is ensuring an informed decision",
+      "Keep persuading until they change their mind",
+      "Note in the minutes that the BA disagreed",
+      "Escalate to the executive board"
+    ],
+    "answer": 0,
+    "explanation": "Nhiệm vụ của BA không phải bảo đảm quyết định theo ý mình, mà bảo đảm nó được đưa ra với đầy đủ thông tin về đánh đổi.",
+    "explanationEn": "The BA's job is not ensuring the decision goes their way but ensuring it is made with full trade-off information."
+  },
+  {
+    "id": "q11",
+    "question": "Bài kiểm tra nào phân biệt được ràng buộc thật với sở thích cá nhân?",
+    "questionEn": "Which test distinguishes a real constraint from a personal preference?",
+    "options": [
+      "Hỏi vì sao: nếu câu trả lời là mục tiêu kinh doanh hoặc quy định thì là ràng buộc; nếu là tôi thấy vậy đẹp hơn thì là sở thích",
+      "Xem ai là người nêu ra yêu cầu đó",
+      "Kiểm tra xem yêu cầu có trong hợp đồng không",
+      "Hỏi lập trình viên xem có khả thi không"
+    ],
+    "optionsEn": [
+      "Ask why: a business objective or regulation means a constraint; I think it looks nicer means a preference",
+      "Check who raised the requirement",
+      "Check whether it appears in the contract",
+      "Ask developers whether it is feasible"
+    ],
+    "answer": 0,
+    "explanation": "Sở thích cá nhân nên để nhà thiết kế quyết định, còn ràng buộc thật phải được ghi lại kèm lý do để biết khi nào nó hết hiệu lực.",
+    "explanationEn": "Preferences should be left to designers, while genuine constraints must be recorded with a rationale so you know when they lapse."
+  },
+  {
+    "id": "q12",
+    "question": "Cách nói không hiệu quả nhất với một yêu cầu không khả thi trong sprint này là gì?",
+    "questionEn": "What is the most effective way to decline a request that will not fit this sprint?",
+    "options": [
+      "Nêu đánh đổi: tính năng này mất hai tuần, nếu đưa vào tháng Sáu thì phần báo cáo phải lùi sang tháng Tám",
+      "Giải thích rằng hệ thống hiện tại không hỗ trợ",
+      "Nói rằng đội đang quá tải",
+      "Đề nghị họ hỏi lại vào quý sau"
+    ],
+    "optionsEn": [
+      "State the trade-off: this takes two weeks, so putting it in June moves the reporting work to August",
+      "Explain that the current system does not support it",
+      "Say the team is overloaded",
+      "Suggest they ask again next quarter"
+    ],
+    "answer": 0,
+    "explanation": "Đánh đổi cụ thể cho phép khách hàng tự quyết định, còn lý do kỹ thuật nghe như một lời từ chối tuỳ tiện với người không hiểu kỹ thuật.",
+    "explanationEn": "A concrete trade-off lets the customer decide, while a technical reason sounds like an arbitrary refusal to a non-technical listener."
+  },
+  {
+    "id": "q13",
+    "question": "Cách đề xuất phương án rẻ hơn nào là tốt nhất?",
+    "questionEn": "Which way of proposing a cheaper option is best?",
+    "options": [
+      "Em hiểu anh chị cần biết đơn nào sắp quá hạn; thay vì dashboard sáu tuần, mình bắt đầu bằng cảnh báo đơn giản trong hai ngày và xem có đủ dùng không",
+      "Dashboard đó quá đắt, mình bỏ đi nhé",
+      "Đội không đủ người để làm dashboard",
+      "Để em hỏi lập trình viên xem có làm được không"
+    ],
+    "optionsEn": [
+      "I understand you need to know which orders are going overdue; instead of a six-week dashboard, could we start with a simple alert in two days and see if that suffices",
+      "That dashboard is too expensive, let us drop it",
+      "The team lacks people for a dashboard",
+      "Let me ask the developers whether it is possible"
+    ],
+    "answer": 0,
+    "explanation": "Phương án này bắt đầu bằng việc xác nhận NEED, rồi đề xuất một cách đáp ứng rẻ hơn nhiều — đúng tinh thần MVP là làm đủ để học.",
+    "explanationEn": "It starts by confirming the NEED, then proposes a far cheaper way to meet it — the MVP spirit of building enough to learn."
+  },
+  {
+    "id": "q14",
+    "question": "Vì sao KHÔNG nên từ chối một yêu cầu bằng lý do kỹ thuật?",
+    "questionEn": "Why should you NOT decline a request with a technical reason?",
+    "options": [
+      "Vì cái này khó lắm nghe như một lời từ chối tuỳ tiện với người không hiểu kỹ thuật; hãy chuyển sang ngôn ngữ đánh đổi nghiệp vụ",
+      "Vì lý do kỹ thuật thường sai",
+      "Vì khách hàng sẽ hỏi lại lập trình viên",
+      "Vì điều đó vi phạm quy trình dự án"
+    ],
+    "optionsEn": [
+      "Because that is really hard sounds arbitrary to a non-technical listener; translate into business trade-off language",
+      "Because technical reasons are usually wrong",
+      "Because the customer will ask the developers directly",
+      "Because it violates the project process"
+    ],
+    "answer": 0,
+    "explanation": "Khách hàng không đánh giá được lý do kỹ thuật, nhưng đánh giá được đánh đổi về thời gian, chi phí và giá trị nghiệp vụ.",
+    "explanationEn": "Customers cannot evaluate a technical reason but can evaluate a trade-off in time, cost, and business value."
+  },
+  {
+    "id": "q15",
+    "question": "Câu hỏi nếu chỉ được một trong hai anh chị chọn cái nào phục vụ mục đích gì?",
+    "questionEn": "What purpose does asking if you could only have one, which would you pick serve?",
+    "options": [
+      "Bộc lộ ưu tiên thật, vì khi mọi thứ đều được yêu cầu thì không có gì thực sự là ưu tiên",
+      "Giảm số lượng yêu cầu phải phân tích",
+      "Kiểm tra xem khách hàng có hiểu hệ thống không",
+      "Xác định ai là người ra quyết định"
+    ],
+    "optionsEn": [
+      "Revealing true priority, since when everything is requested nothing is really a priority",
+      "Reducing the number of requirements to analyse",
+      "Testing whether the customer understands the system",
+      "Identifying who the decision-maker is"
+    ],
+    "answer": 0,
+    "explanation": "Buộc phải chọn giữa các phương án cụ thể tạo ra câu trả lời thật, khác hẳn với câu hỏi cái nào quan trọng vốn luôn nhận được tất cả đều quan trọng.",
+    "explanationEn": "Forcing a choice between concrete options produces honest answers, unlike asking which is important, which always yields all of them."
+  },
+  {
+    "id": "q16",
+    "question": "Vì sao việc khách hàng mô tả giải pháp thay vì vấn đề KHÔNG phải lỗi của họ?",
+    "questionEn": "Why is it NOT the customer's fault that they describe a solution rather than a problem?",
+    "options": [
+      "Vì họ mô tả dựa trên những gì họ biết, từng thấy ở phần mềm khác, hoặc cách họ đang làm thủ công — chuyển từ giải pháp về vấn đề là công việc của BA",
+      "Vì họ không được đào tạo về phân tích nghiệp vụ",
+      "Vì hợp đồng không yêu cầu họ mô tả vấn đề",
+      "Vì họ không có thời gian suy nghĩ kỹ"
+    ],
+    "optionsEn": [
+      "Because they describe from what they know, saw in other software, or do manually — moving from solution to problem is the BA's job",
+      "Because they were never trained in business analysis",
+      "Because the contract does not require them to state problems",
+      "Because they lack time to think it through"
+    ],
+    "answer": 0,
+    "explanation": "Thái độ này quan trọng: nếu BA coi đó là lỗi của khách hàng, cuộc đối thoại sẽ trở nên đối kháng thay vì hợp tác khám phá.",
+    "explanationEn": "This attitude matters: if the BA treats it as the customer's fault, the dialogue becomes adversarial rather than a joint exploration."
+  }
+]

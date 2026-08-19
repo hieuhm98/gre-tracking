@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Định nghĩa và trách nhiệm cốt lõi · Tam giác ràng buộc và sự thật về nó",
+      "titleEn": "Definition and core responsibilities · The constraint triangle and the truth about it",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Phân biệt PM, Product Owner và Product Manager · Bốn kỹ năng quyết định thành bại",
+      "titleEn": "Distinguishing PM, Product Owner, and Product Manager · Four skills that decide success",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Một ngày và một tuần của PM · Lộ trình và chỉ dấu trưởng thành",
+      "titleEn": "A PM's day and week · Career paths and maturity signals",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

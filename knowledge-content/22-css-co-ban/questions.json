@@ -43,8 +43,18 @@
     "id": "css-03",
     "question": "Với box-sizing: border-box, khi bạn đặt width: 300px và padding: 20px, tổng chiều rộng thực tế của element là bao nhiêu?",
     "questionEn": "With box-sizing: border-box, when you set width: 300px and padding: 20px, what is the actual total width of the element?",
-    "options": ["340px", "360px", "300px", "280px"],
-    "optionsEn": ["340px", "360px", "300px", "280px"],
+    "options": [
+      "340px",
+      "360px",
+      "300px",
+      "280px"
+    ],
+    "optionsEn": [
+      "340px",
+      "360px",
+      "300px",
+      "280px"
+    ],
     "answer": 2,
     "explanation": "Với border-box, width: 300px bao gồm cả padding và border. Vì vậy tổng chiều rộng vẫn là 300px. Đây là lý do * { box-sizing: border-box } được dùng phổ biến — dễ dự đoán kích thước hơn.",
     "explanationEn": "With border-box, width: 300px already includes padding and border. So the total width remains 300px. This is why * { box-sizing: border-box } is so commonly used — sizes are easier to predict."
@@ -73,8 +83,18 @@
     "id": "css-05",
     "question": "Trong Flexbox, thuộc tính nào dùng để căn chỉnh items theo trục vuông góc (cross axis)?",
     "questionEn": "In Flexbox, which property aligns items along the perpendicular axis (cross axis)?",
-    "options": ["justify-content", "align-items", "flex-direction", "flex-wrap"],
-    "optionsEn": ["justify-content", "align-items", "flex-direction", "flex-wrap"],
+    "options": [
+      "justify-content",
+      "align-items",
+      "flex-direction",
+      "flex-wrap"
+    ],
+    "optionsEn": [
+      "justify-content",
+      "align-items",
+      "flex-direction",
+      "flex-wrap"
+    ],
     "answer": 1,
     "explanation": "align-items căn chỉnh theo cross axis (trục phụ, vuông góc với trục chính). justify-content căn chỉnh theo main axis (trục chính). Với flex-direction: row, main axis là ngang, cross axis là dọc.",
     "explanationEn": "align-items aligns along the cross axis (perpendicular to the main axis). justify-content aligns along the main axis. With flex-direction: row, the main axis is horizontal and the cross axis is vertical."
@@ -278,5 +298,105 @@
     "answer": 1,
     "explanation": "Flexbox tối ưu cho layout 1 chiều — sắp xếp items theo hàng hoặc cột. Grid tối ưu cho layout 2 chiều — kiểm soát cả hàng lẫn cột đồng thời. Ví dụ: navbar dùng Flex, page layout dùng Grid.",
     "explanationEn": "Flexbox is optimized for one-dimensional layouts — arranging items in a row or a column. Grid is optimized for two-dimensional layouts — controlling both rows and columns at once. For example: use Flex for a navbar, use Grid for a page layout."
+  },
+  {
+    "question": "Yêu cầu giao diện phải hiển thị tốt trên điện thoại liên quan trực tiếp tới khái niệm CSS nào?",
+    "questionEn": "A requirement that the interface must display well on phones relates directly to which CSS concept?",
+    "options": [
+      "Responsive design với media query và bố cục linh hoạt",
+      "Transitions và animations",
+      "Typography",
+      "Specificity"
+    ],
+    "optionsEn": [
+      "Responsive design with media queries and flexible layout",
+      "Transitions and animations",
+      "Typography",
+      "Specificity"
+    ],
+    "answer": 0,
+    "explanation": "BA nên nêu rõ các điểm ngắt (breakpoint) và hành vi mong đợi ở mỗi kích thước màn hình, thay vì chỉ nói hiển thị tốt.",
+    "explanationEn": "The BA should state the breakpoints and expected behaviour at each screen size rather than just saying displays well.",
+    "id": "q16"
+  },
+  {
+    "question": "Box Model gồm những lớp nào tính từ trong ra ngoài?",
+    "questionEn": "What layers make up the box model from the inside out?",
+    "options": [
+      "content, padding, border, margin",
+      "margin, border, padding, content",
+      "content, margin, border, padding",
+      "border, content, padding, margin"
+    ],
+    "optionsEn": [
+      "content, padding, border, margin",
+      "margin, border, padding, content",
+      "content, margin, border, padding",
+      "border, content, padding, margin"
+    ],
+    "answer": 0,
+    "explanation": "Hiểu box model giúp BA mô tả chính xác khoảng cách và căn lề khi góp ý thiết kế, thay vì nói cảm tính là nhìn chật quá.",
+    "explanationEn": "Understanding the box model lets a BA describe spacing and alignment precisely instead of vaguely saying it looks cramped.",
+    "id": "q17"
+  },
+  {
+    "question": "Hai quy tắc CSS cùng nhắm một phần tử nhưng khác nhau. Cái nào thắng?",
+    "questionEn": "Two CSS rules target the same element differently. Which wins?",
+    "options": [
+      "Quy tắc có specificity cao hơn; nếu bằng nhau thì quy tắc viết sau thắng",
+      "Quy tắc viết trước luôn thắng",
+      "Quy tắc ngắn hơn thắng",
+      "Cả hai đều bị bỏ qua"
+    ],
+    "optionsEn": [
+      "The rule with higher specificity; if equal, the one declared later wins",
+      "The earlier rule always wins",
+      "The shorter rule wins",
+      "Both are ignored"
+    ],
+    "answer": 0,
+    "explanation": "Đây là nguyên nhân của rất nhiều bug giao diện khó hiểu: kiểu đã viết đúng nhưng bị một quy tắc khác có specificity cao hơn ghi đè.",
+    "explanationEn": "This causes many puzzling UI bugs: a correct style is overridden by another rule with higher specificity.",
+    "id": "q18"
+  },
+  {
+    "question": "Flexbox và Grid khác nhau ở điểm nào?",
+    "questionEn": "How do Flexbox and Grid differ?",
+    "options": [
+      "Flexbox bố trí theo một chiều (hàng hoặc cột); Grid bố trí theo hai chiều đồng thời",
+      "Flexbox chỉ chạy trên điện thoại",
+      "Grid không hỗ trợ responsive",
+      "Hai công nghệ hoàn toàn tương đương"
+    ],
+    "optionsEn": [
+      "Flexbox lays out in one dimension (row or column); Grid lays out in two dimensions at once",
+      "Flexbox only works on phones",
+      "Grid does not support responsive layouts",
+      "They are entirely equivalent"
+    ],
+    "answer": 0,
+    "explanation": "Thanh điều hướng hay hàng nút hợp với Flexbox; bố cục trang nhiều vùng như dashboard hợp với Grid.",
+    "explanationEn": "A navigation bar or button row suits Flexbox; a multi-region page layout such as a dashboard suits Grid.",
+    "id": "q19"
+  },
+  {
+    "question": "Khi góp ý thiết kế, cách diễn đạt nào hữu ích nhất cho lập trình viên?",
+    "questionEn": "When giving design feedback, which phrasing helps developers most?",
+    "options": [
+      "Nêu vấn đề quan sát được và bối cảnh, ví dụ nút Lưu bị đẩy xuống dưới màn hình khi cửa sổ hẹp hơn 768px",
+      "Nói chung chung là giao diện nhìn chưa đẹp",
+      "Chỉ gửi ảnh chụp màn hình không kèm mô tả",
+      "Đề xuất trực tiếp giá trị CSS cần sửa"
+    ],
+    "optionsEn": [
+      "State the observable problem and its context, e.g. the Save button drops below the fold under 768px width",
+      "Say generally that the interface does not look nice",
+      "Send a screenshot with no description",
+      "Prescribe the exact CSS value to change"
+    ],
+    "answer": 0,
+    "explanation": "Ghi lại vấn đề chứ không ghi lại giải pháp: giải pháp là việc của nhà thiết kế và lập trình viên, còn vấn đề mới là dữ liệu quý giá.",
+    "explanationEn": "Record the problem, not the solution: solutions are the designer's and developer's job, while the problem is the valuable data.",
+    "id": "q20"
   }
 ]

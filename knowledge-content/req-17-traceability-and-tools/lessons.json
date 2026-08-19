@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Truy vết là gì & bốn loại liên kết",
+      "titleEn": "What traceability is & the four kinds of links",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Ma trận truy vết & chi phí thực tế",
+      "titleEn": "Traceability matrices & the real cost",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Truy vết trong agile & vì sao cần công cụ",
+      "titleEn": "Tracing in agile & why tools are needed",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Khả năng của công cụ & cách triển khai",
+      "titleEn": "Tool capabilities & how to roll one out",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Bẫy khi dùng công cụ & hệ sinh thái",
+      "titleEn": "Tool traps & the wider ecosystem",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

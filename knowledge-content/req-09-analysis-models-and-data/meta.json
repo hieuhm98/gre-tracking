@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 9,
+  "title": "Mô hình phân tích & yêu cầu dữ liệu",
+  "titleEn": "Analysis Models & Data Requirements",
+  "description": "Data flow diagram, swimlane, state-transition, dialog map, decision table, event-response table, ERD, data dictionary, CRUD analysis và đặc tả báo cáo, dashboard.",
+  "descriptionEn": "Data flow diagrams, swimlane and state-transition diagrams, dialog maps, decision tables, event-response tables, ERDs, data dictionaries, CRUD analysis, and specifying reports and dashboards."
+}

@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 4,
+  "title": "Business Requirements: Vision & Scope",
+  "titleEn": "Business Requirements: Vision & Scope",
+  "description": "Business objectives, success metrics, vision statement, phạm vi và giới hạn, context diagram, ecosystem map, feature tree, event list và cách kiểm soát scope creep.",
+  "descriptionEn": "Business objectives, success metrics, the vision statement, scope and limitations, context diagrams, ecosystem maps, feature trees, event lists, and controlling scope creep."
+}

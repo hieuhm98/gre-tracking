@@ -3,8 +3,18 @@
     "id": "q1",
     "question": "Trong URL 'https://shop.example.com/products?id=5', phần nào là query string?",
     "questionEn": "In the URL 'https://shop.example.com/products?id=5', which part is the query string?",
-    "options": ["https", "shop.example.com", "/products", "?id=5"],
-    "optionsEn": ["https", "shop.example.com", "/products", "?id=5"],
+    "options": [
+      "https",
+      "shop.example.com",
+      "/products",
+      "?id=5"
+    ],
+    "optionsEn": [
+      "https",
+      "shop.example.com",
+      "/products",
+      "?id=5"
+    ],
     "answer": 3,
     "explanation": "Query string bắt đầu bằng dấu '?' và chứa các tham số key=value. Dùng để lọc, tìm kiếm, phân trang. Ví dụ ?id=5 nghĩa là lấy sản phẩm có id=5.",
     "explanationEn": "The query string starts with a '?' and contains key=value parameters. It is used for filtering, searching, and pagination. For example, ?id=5 means fetch the product with id=5."
@@ -13,8 +23,18 @@
     "id": "q2",
     "question": "Frontend (giao diện web) chạy ở đâu?",
     "questionEn": "Where does the frontend (the web interface) run?",
-    "options": ["Trên server", "Trong trình duyệt của người dùng", "Trong database", "Trên CDN server"],
-    "optionsEn": ["On the server", "In the user's browser", "In the database", "On the CDN server"],
+    "options": [
+      "Trên server",
+      "Trong trình duyệt của người dùng",
+      "Trong database",
+      "Trên CDN server"
+    ],
+    "optionsEn": [
+      "On the server",
+      "In the user's browser",
+      "In the database",
+      "On the CDN server"
+    ],
     "answer": 1,
     "explanation": "Frontend code (HTML/CSS/JavaScript) được server gửi về và chạy trong browser của người dùng. Backend code chạy trên server — người dùng không thấy.",
     "explanationEn": "Frontend code (HTML/CSS/JavaScript) is sent by the server and runs in the user's browser. Backend code runs on the server — the user does not see it."
@@ -23,8 +43,18 @@
     "id": "q3",
     "question": "CDN (Content Delivery Network) mang lại lợi ích gì?",
     "questionEn": "What benefit does a CDN (Content Delivery Network) provide?",
-    "options": ["Tăng bảo mật database", "Giảm độ trễ bằng cách phục vụ nội dung từ server gần người dùng nhất", "Thay thế backend server", "Mã hóa dữ liệu người dùng"],
-    "optionsEn": ["Increases database security", "Reduces latency by serving content from the server closest to the user", "Replaces the backend server", "Encrypts user data"],
+    "options": [
+      "Tăng bảo mật database",
+      "Giảm độ trễ bằng cách phục vụ nội dung từ server gần người dùng nhất",
+      "Thay thế backend server",
+      "Mã hóa dữ liệu người dùng"
+    ],
+    "optionsEn": [
+      "Increases database security",
+      "Reduces latency by serving content from the server closest to the user",
+      "Replaces the backend server",
+      "Encrypts user data"
+    ],
     "answer": 1,
     "explanation": "CDN đặt bản sao nội dung tĩnh (ảnh, JS, CSS) tại nhiều server khắp thế giới. User ở đâu nhận từ server gần đó — giảm độ trễ đáng kể.",
     "explanationEn": "A CDN places copies of static content (images, JS, CSS) on servers around the world. A user receives content from a nearby server — significantly reducing latency."
@@ -33,8 +63,18 @@
     "id": "q4",
     "question": "Dynamic website khác Static website ở điểm gì?",
     "questionEn": "How does a dynamic website differ from a static website?",
-    "options": ["Dynamic website không dùng database", "Static website cần backend phức tạp hơn", "Dynamic website tạo HTML theo request dựa trên dữ liệu, Static website phục vụ HTML có sẵn", "Static website chỉ dùng cho game online"],
-    "optionsEn": ["A dynamic website does not use a database", "A static website needs a more complex backend", "A dynamic website generates HTML per request based on data, while a static website serves prebuilt HTML", "A static website is only used for online games"],
+    "options": [
+      "Dynamic website không dùng database",
+      "Static website cần backend phức tạp hơn",
+      "Dynamic website tạo HTML theo request dựa trên dữ liệu, Static website phục vụ HTML có sẵn",
+      "Static website chỉ dùng cho game online"
+    ],
+    "optionsEn": [
+      "A dynamic website does not use a database",
+      "A static website needs a more complex backend",
+      "A dynamic website generates HTML per request based on data, while a static website serves prebuilt HTML",
+      "A static website is only used for online games"
+    ],
     "answer": 2,
     "explanation": "Static: HTML cố định, gửi thẳng. Dynamic: server chạy code, query database, tạo HTML phù hợp từng user từng thời điểm. Facebook, Shopee là dynamic.",
     "explanationEn": "Static: fixed HTML, sent directly. Dynamic: the server runs code, queries the database, and generates HTML tailored to each user at each moment. Facebook and Shopee are dynamic."
@@ -43,8 +83,18 @@
     "id": "q5",
     "question": "Phím tắt nào mở Dev Tools trong Chrome?",
     "questionEn": "Which shortcut opens Dev Tools in Chrome?",
-    "options": ["Ctrl+P", "F12", "Alt+F4", "Ctrl+Shift+X"],
-    "optionsEn": ["Ctrl+P", "F12", "Alt+F4", "Ctrl+Shift+X"],
+    "options": [
+      "Ctrl+P",
+      "F12",
+      "Alt+F4",
+      "Ctrl+Shift+X"
+    ],
+    "optionsEn": [
+      "Ctrl+P",
+      "F12",
+      "Alt+F4",
+      "Ctrl+Shift+X"
+    ],
     "answer": 1,
     "explanation": "F12 (hoặc Ctrl+Shift+I) mở Chrome DevTools. Đây là công cụ thiết yếu để xem request/response, lỗi JavaScript, và inspect HTML/CSS.",
     "explanationEn": "F12 (or Ctrl+Shift+I) opens Chrome DevTools. It is an essential tool for viewing requests/responses, JavaScript errors, and inspecting HTML/CSS."
@@ -53,8 +103,18 @@
     "id": "q6",
     "question": "HTTP Response gồm những phần nào?",
     "questionEn": "What parts make up an HTTP Response?",
-    "options": ["Chỉ có body (nội dung)", "Status line, Headers và Body", "Chỉ có headers", "IP address và Port number"],
-    "optionsEn": ["Only the body (content)", "Status line, Headers, and Body", "Only headers", "IP address and Port number"],
+    "options": [
+      "Chỉ có body (nội dung)",
+      "Status line, Headers và Body",
+      "Chỉ có headers",
+      "IP address và Port number"
+    ],
+    "optionsEn": [
+      "Only the body (content)",
+      "Status line, Headers, and Body",
+      "Only headers",
+      "IP address and Port number"
+    ],
     "answer": 1,
     "explanation": "HTTP Response: status line (HTTP/1.1 200 OK), headers (Content-Type, Content-Length...) và body (HTML, JSON, ảnh... — nội dung thực sự).",
     "explanationEn": "An HTTP Response: the status line (HTTP/1.1 200 OK), headers (Content-Type, Content-Length...), and the body (HTML, JSON, images... — the actual content)."
@@ -63,8 +123,18 @@
     "id": "q7",
     "question": "Bước nào xảy ra SAU KHI browser nhận được HTML từ server?",
     "questionEn": "Which step happens AFTER the browser receives the HTML from the server?",
-    "options": ["Browser gửi thêm request DNS", "Browser tải thêm CSS, JavaScript, ảnh được tham chiếu trong HTML", "Browser đóng kết nối TCP ngay lập tức", "Browser gửi response về server"],
-    "optionsEn": ["The browser sends another DNS request", "The browser loads additional CSS, JavaScript, and images referenced in the HTML", "The browser closes the TCP connection immediately", "The browser sends a response back to the server"],
+    "options": [
+      "Browser gửi thêm request DNS",
+      "Browser tải thêm CSS, JavaScript, ảnh được tham chiếu trong HTML",
+      "Browser đóng kết nối TCP ngay lập tức",
+      "Browser gửi response về server"
+    ],
+    "optionsEn": [
+      "The browser sends another DNS request",
+      "The browser loads additional CSS, JavaScript, and images referenced in the HTML",
+      "The browser closes the TCP connection immediately",
+      "The browser sends a response back to the server"
+    ],
     "answer": 1,
     "explanation": "Sau khi nhận HTML, browser parse thấy các thẻ <link>, <script>, <img>... và gửi thêm request để tải CSS, JS, ảnh. Đây là lý do Network tab có nhiều request khi tải 1 trang.",
     "explanationEn": "After receiving the HTML, the browser parses it and finds <link>, <script>, <img>... tags and sends additional requests to load CSS, JS, and images. This is why the Network tab shows many requests when loading a single page."
@@ -73,8 +143,18 @@
     "id": "q8",
     "question": "Fragment '#reviews' trong URL https://example.com/product#reviews dùng để làm gì?",
     "questionEn": "What is the fragment '#reviews' in the URL https://example.com/product#reviews used for?",
-    "options": ["Gửi tham số đến server", "Xác định vị trí cụ thể trong trang web (xử lý bởi browser)", "Mã hóa địa chỉ trang", "Trỏ đến subdomain reviews"],
-    "optionsEn": ["To send parameters to the server", "To identify a specific position within the page (handled by the browser)", "To encrypt the page address", "To point to a 'reviews' subdomain"],
+    "options": [
+      "Gửi tham số đến server",
+      "Xác định vị trí cụ thể trong trang web (xử lý bởi browser)",
+      "Mã hóa địa chỉ trang",
+      "Trỏ đến subdomain reviews"
+    ],
+    "optionsEn": [
+      "To send parameters to the server",
+      "To identify a specific position within the page (handled by the browser)",
+      "To encrypt the page address",
+      "To point to a 'reviews' subdomain"
+    ],
     "answer": 1,
     "explanation": "Fragment (#) xử lý ở phía browser, KHÔNG gửi đến server. Browser tự cuộn đến element có id='reviews' trong trang.",
     "explanationEn": "The fragment (#) is handled on the browser side and is NOT sent to the server. The browser scrolls to the element with id='reviews' on the page."
@@ -83,8 +163,18 @@
     "id": "q9",
     "question": "Backend developer thường làm việc với gì?",
     "questionEn": "What does a backend developer typically work with?",
-    "options": ["HTML và CSS", "JavaScript chạy trong browser", "Logic nghiệp vụ, database và API phía server", "Thiết kế giao diện người dùng"],
-    "optionsEn": ["HTML and CSS", "JavaScript running in the browser", "Business logic, databases, and server-side APIs", "Designing the user interface"],
+    "options": [
+      "HTML và CSS",
+      "JavaScript chạy trong browser",
+      "Logic nghiệp vụ, database và API phía server",
+      "Thiết kế giao diện người dùng"
+    ],
+    "optionsEn": [
+      "HTML and CSS",
+      "JavaScript running in the browser",
+      "Business logic, databases, and server-side APIs",
+      "Designing the user interface"
+    ],
     "answer": 2,
     "explanation": "Backend xử lý logic phức tạp: xác thực, tính toán, truy vấn database, bảo mật. Người dùng không tương tác trực tiếp với backend — họ tương tác qua frontend.",
     "explanationEn": "The backend handles complex logic: authentication, computation, database queries, and security. Users do not interact with the backend directly — they interact through the frontend."
@@ -93,8 +183,18 @@
     "id": "q10",
     "question": "Khi bạn truy cập facebook.com và thấy newsfeed cá nhân hóa, đó là loại website gì?",
     "questionEn": "When you visit facebook.com and see a personalized newsfeed, what type of website is that?",
-    "options": ["Static website", "Dynamic website", "CDN-only website", "Frontend-only website"],
-    "optionsEn": ["Static website", "Dynamic website", "CDN-only website", "Frontend-only website"],
+    "options": [
+      "Static website",
+      "Dynamic website",
+      "CDN-only website",
+      "Frontend-only website"
+    ],
+    "optionsEn": [
+      "Static website",
+      "Dynamic website",
+      "CDN-only website",
+      "Frontend-only website"
+    ],
     "answer": 1,
     "explanation": "Dynamic website: server chạy code để tạo trang khác nhau cho từng user dựa trên database (bạn bè, bài đăng, quảng cáo...). Mỗi người thấy content khác nhau.",
     "explanationEn": "Dynamic website: the server runs code to generate a different page for each user based on the database (friends, posts, ads...). Each person sees different content."
@@ -103,8 +203,18 @@
     "id": "q11",
     "question": "Trong Network tab của Dev Tools, bạn có thể xem gì?",
     "questionEn": "In the Network tab of Dev Tools, what can you view?",
-    "options": ["Mã nguồn của backend server", "Tất cả HTTP requests và responses khi tải trang", "Lịch sử duyệt web", "Cài đặt bảo mật của browser"],
-    "optionsEn": ["The backend server's source code", "All HTTP requests and responses when loading the page", "Browsing history", "The browser's security settings"],
+    "options": [
+      "Mã nguồn của backend server",
+      "Tất cả HTTP requests và responses khi tải trang",
+      "Lịch sử duyệt web",
+      "Cài đặt bảo mật của browser"
+    ],
+    "optionsEn": [
+      "The backend server's source code",
+      "All HTTP requests and responses when loading the page",
+      "Browsing history",
+      "The browser's security settings"
+    ],
     "answer": 1,
     "explanation": "Network tab hiển thị mọi request trình duyệt gửi đi (HTML, CSS, JS, ảnh, API calls) và response tương ứng. Hữu ích để debug và phân tích hiệu năng trang web.",
     "explanationEn": "The Network tab shows every request the browser sends (HTML, CSS, JS, images, API calls) and the corresponding responses. It is useful for debugging and analyzing page performance."
@@ -113,8 +223,18 @@
     "id": "q12",
     "question": "Path '/products/detail' trong URL có ý nghĩa gì với server?",
     "questionEn": "What does the path '/products/detail' in a URL mean to the server?",
-    "options": ["Tên file cụ thể trên ổ cứng server", "Đường dẫn đến tài nguyên/trang cụ thể trên server", "Tên database cần truy vấn", "Tên người dùng đang đăng nhập"],
-    "optionsEn": ["A specific file name on the server's disk", "The path to a specific resource/page on the server", "The name of the database to query", "The name of the logged-in user"],
+    "options": [
+      "Tên file cụ thể trên ổ cứng server",
+      "Đường dẫn đến tài nguyên/trang cụ thể trên server",
+      "Tên database cần truy vấn",
+      "Tên người dùng đang đăng nhập"
+    ],
+    "optionsEn": [
+      "A specific file name on the server's disk",
+      "The path to a specific resource/page on the server",
+      "The name of the database to query",
+      "The name of the logged-in user"
+    ],
     "answer": 1,
     "explanation": "Path chỉ định tài nguyên cụ thể cần lấy. Server dùng path để routing — quyết định code nào xử lý request này và trả về dữ liệu gì.",
     "explanationEn": "The path specifies the exact resource to fetch. The server uses the path for routing — deciding which code handles this request and what data to return."
@@ -123,8 +243,18 @@
     "id": "q13",
     "question": "Full-stack developer là gì?",
     "questionEn": "What is a full-stack developer?",
-    "options": ["Developer chỉ làm frontend", "Developer chỉ làm backend", "Developer có thể làm cả frontend lẫn backend", "Developer chuyên về database"],
-    "optionsEn": ["A developer who only does frontend", "A developer who only does backend", "A developer who can do both frontend and backend", "A developer who specializes in databases"],
+    "options": [
+      "Developer chỉ làm frontend",
+      "Developer chỉ làm backend",
+      "Developer có thể làm cả frontend lẫn backend",
+      "Developer chuyên về database"
+    ],
+    "optionsEn": [
+      "A developer who only does frontend",
+      "A developer who only does backend",
+      "A developer who can do both frontend and backend",
+      "A developer who specializes in databases"
+    ],
     "answer": 2,
     "explanation": "Full-stack developer có kỹ năng cả 2 phía: frontend (UI/UX, HTML/CSS/JS) và backend (server, database, API). Thường phù hợp với startup nhỏ cần 'người làm được nhiều việc'.",
     "explanationEn": "A full-stack developer has skills on both sides: frontend (UI/UX, HTML/CSS/JS) and backend (server, database, API). This often suits small startups that need someone who can wear many hats."
@@ -133,8 +263,18 @@
     "id": "q14",
     "question": "Tại sao HTTPS cần thêm bước TLS handshake so với HTTP?",
     "questionEn": "Why does HTTPS need an extra TLS handshake step compared to HTTP?",
-    "options": ["Để tăng tốc độ tải trang", "Để thiết lập kênh mã hóa an toàn trước khi truyền dữ liệu", "Để xác thực người dùng", "Để kiểm tra DNS record"],
-    "optionsEn": ["To speed up page loading", "To establish a secure encrypted channel before transmitting data", "To authenticate the user", "To check DNS records"],
+    "options": [
+      "Để tăng tốc độ tải trang",
+      "Để thiết lập kênh mã hóa an toàn trước khi truyền dữ liệu",
+      "Để xác thực người dùng",
+      "Để kiểm tra DNS record"
+    ],
+    "optionsEn": [
+      "To speed up page loading",
+      "To establish a secure encrypted channel before transmitting data",
+      "To authenticate the user",
+      "To check DNS records"
+    ],
     "answer": 1,
     "explanation": "TLS handshake: client và server trao đổi certificate, xác thực danh tính, và thỏa thuận khóa mã hóa. Sau đó mọi dữ liệu truyền đi đều được mã hóa.",
     "explanationEn": "TLS handshake: the client and server exchange certificates, verify identity, and negotiate an encryption key. After that, all transmitted data is encrypted."
@@ -143,10 +283,120 @@
     "id": "q15",
     "question": "CDN phù hợp nhất để phục vụ loại nội dung nào?",
     "questionEn": "Which type of content is a CDN best suited to serve?",
-    "options": ["Dữ liệu cá nhân người dùng như giỏ hàng", "Nội dung tĩnh như ảnh, CSS, JavaScript library", "Kết quả truy vấn database real-time", "Thông tin thanh toán"],
-    "optionsEn": ["Personal user data such as a shopping cart", "Static content such as images, CSS, and JavaScript libraries", "Real-time database query results", "Payment information"],
+    "options": [
+      "Dữ liệu cá nhân người dùng như giỏ hàng",
+      "Nội dung tĩnh như ảnh, CSS, JavaScript library",
+      "Kết quả truy vấn database real-time",
+      "Thông tin thanh toán"
+    ],
+    "optionsEn": [
+      "Personal user data such as a shopping cart",
+      "Static content such as images, CSS, and JavaScript libraries",
+      "Real-time database query results",
+      "Payment information"
+    ],
     "answer": 1,
     "explanation": "CDN phù hợp với nội dung tĩnh (không thay đổi theo user). Nội dung động hay dữ liệu nhạy cảm cần xử lý ở origin server, không nên cache tại CDN.",
     "explanationEn": "A CDN is suited to static content (that does not change per user). Dynamic content or sensitive data must be handled at the origin server and should not be cached at the CDN."
+  },
+  {
+    "question": "Người dùng ở Việt Nam báo website tải chậm dù máy chủ đặt ở Mỹ chạy tốt. Giải pháp hạ tầng nào phù hợp nhất?",
+    "questionEn": "Users in Vietnam report a slow site although the US-hosted server performs well. Which infrastructure fix fits best?",
+    "options": [
+      "Dùng CDN để phục vụ tài nguyên tĩnh từ máy chủ gần người dùng",
+      "Tăng RAM cho máy chủ ở Mỹ",
+      "Đổi tên miền sang đuôi .vn",
+      "Nén cơ sở dữ liệu"
+    ],
+    "optionsEn": [
+      "Use a CDN so static assets are served from a node near the user",
+      "Add RAM to the US server",
+      "Change the domain to a .vn suffix",
+      "Compress the database"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách địa lý tạo độ trễ. CDN nhân bản ảnh, CSS, JS ra các điểm gần người dùng nên giảm mạnh thời gian tải.",
+    "explanationEn": "Geographic distance creates latency. A CDN replicates images, CSS, and JS to edge nodes near users, sharply cutting load time.",
+    "id": "q16"
+  },
+  {
+    "question": "Sắp xếp đúng thứ tự khi người dùng gõ một địa chỉ web và nhấn Enter?",
+    "questionEn": "What is the correct order when a user types a web address and presses Enter?",
+    "options": [
+      "Phân giải DNS → thiết lập kết nối tới server → gửi HTTP request → nhận response → trình duyệt render",
+      "Gửi HTTP request → phân giải DNS → render → kết nối server",
+      "Trình duyệt render → phân giải DNS → gửi request",
+      "Kết nối server → render → phân giải DNS → gửi request"
+    ],
+    "optionsEn": [
+      "DNS resolution → connect to the server → send the HTTP request → receive the response → the browser renders",
+      "Send the HTTP request → DNS resolution → render → connect",
+      "Browser renders → DNS resolution → send request",
+      "Connect → render → DNS resolution → send request"
+    ],
+    "answer": 0,
+    "explanation": "Trình duyệt phải biết địa chỉ IP trước khi kết nối được, nên phân giải DNS luôn đứng đầu chuỗi.",
+    "explanationEn": "The browser must know the IP address before it can connect, so DNS resolution always comes first in the chain.",
+    "id": "q17"
+  },
+  {
+    "question": "Website tin tức có nội dung thay đổi liên tục theo người đọc thuộc loại nào?",
+    "questionEn": "A news site whose content changes constantly per reader is which type?",
+    "options": [
+      "Dynamic website",
+      "Static website",
+      "Landing page",
+      "Sitemap"
+    ],
+    "optionsEn": [
+      "A dynamic website",
+      "A static website",
+      "A landing page",
+      "A sitemap"
+    ],
+    "answer": 0,
+    "explanation": "Static website trả về tệp cố định giống nhau cho mọi người. Dynamic website sinh nội dung theo yêu cầu, thường lấy dữ liệu từ cơ sở dữ liệu.",
+    "explanationEn": "A static site returns the same fixed files to everyone. A dynamic site generates content per request, usually from a database.",
+    "id": "q18"
+  },
+  {
+    "question": "BA muốn tự kiểm tra xem một request có gửi đúng dữ liệu lên server không. Công cụ nào dùng ngay được?",
+    "questionEn": "A BA wants to check whether a request sends the right data to the server. Which tool works immediately?",
+    "options": [
+      "Tab Network trong Browser Dev Tools",
+      "Trình quản lý tệp của hệ điều hành",
+      "Phần mềm vẽ sơ đồ",
+      "Trình soạn thảo văn bản"
+    ],
+    "optionsEn": [
+      "The Network tab in the browser dev tools",
+      "The operating system file manager",
+      "A diagramming tool",
+      "A text editor"
+    ],
+    "answer": 0,
+    "explanation": "Tab Network hiển thị mọi request, payload, header và mã trạng thái trả về — kỹ năng tự chẩn đoán rất giá trị cho BA khi làm việc với Dev và QC.",
+    "explanationEn": "The Network tab shows every request, its payload, headers, and status code — a self-diagnosis skill that is very valuable when a BA works with dev and QC.",
+    "id": "q19"
+  },
+  {
+    "question": "Server trả về mã trạng thái 404. Điều đó nghĩa là gì?",
+    "questionEn": "The server returns status code 404. What does that mean?",
+    "options": [
+      "Máy chủ nhận được yêu cầu nhưng không tìm thấy tài nguyên ở đường dẫn đó",
+      "Máy chủ bị lỗi nội bộ",
+      "Người dùng chưa đăng nhập",
+      "Yêu cầu thành công"
+    ],
+    "optionsEn": [
+      "The server got the request but found no resource at that path",
+      "The server had an internal error",
+      "The user is not logged in",
+      "The request succeeded"
+    ],
+    "answer": 0,
+    "explanation": "Nhóm 4xx là lỗi phía client: 404 không tìm thấy, 401 chưa xác thực, 403 không đủ quyền. Nhóm 5xx là lỗi phía server.",
+    "explanationEn": "The 4xx family is client-side: 404 not found, 401 unauthenticated, 403 forbidden. The 5xx family is server-side.",
+    "id": "q20"
   }
 ]

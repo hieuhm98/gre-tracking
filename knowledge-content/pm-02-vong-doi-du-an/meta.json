@@ -1,0 +1,8 @@
+{
+  "group": "pm",
+  "order": 3,
+  "title": "Vòng đời dự án",
+  "titleEn": "The Project Life Cycle",
+  "description": "Năm giai đoạn từ khởi tạo tới đóng dự án, sản phẩm bàn giao ở mỗi giai đoạn và các cổng quyết định.",
+  "descriptionEn": "The five phases from initiation to closing, the deliverables of each, and the decision gates between them."
+}

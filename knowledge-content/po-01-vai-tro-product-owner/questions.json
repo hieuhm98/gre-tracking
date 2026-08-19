@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Ba từ khoá trong định nghĩa vai trò Product Owner là gì?",
+    "questionEn": "What are the three key words in the Product Owner definition?",
+    "options": [
+      "Thẩm quyền quyết định, thứ tự của backlog, và tối đa hoá giá trị",
+      "Quản lý, lập kế hoạch, và báo cáo",
+      "Thiết kế, phát triển, và kiểm thử",
+      "Ngân sách, lịch trình, và nguồn lực"
+    ],
+    "optionsEn": [
+      "Decision authority, backlog order, and maximising value",
+      "Managing, planning, and reporting",
+      "Designing, developing, and testing",
+      "Budget, schedule, and resources"
+    ],
+    "answer": 0,
+    "explanation": "PO quyết định cái gì làm trước; đội quyết định làm thế nào và mất bao lâu. Mục tiêu không phải giao nhiều tính năng nhất mà là tạo nhiều giá trị nhất.",
+    "explanationEn": "The PO decides what comes first; the team decides how and how long. The goal is not the most features but the most value."
+  },
+  {
+    "id": "q2",
+    "question": "Vì sao Product Owner phải là MỘT người chứ không phải một uỷ ban?",
+    "questionEn": "Why must the Product Owner be ONE person rather than a committee?",
+    "options": [
+      "Vì uỷ ban khiến đội nhận chỉ đạo mâu thuẫn và không ai chịu trách nhiệm cuối cùng khi sản phẩm không đạt mục tiêu",
+      "Vì Scrum Guide cấm có nhiều hơn một người",
+      "Vì chi phí nhân sự cao",
+      "Vì đội không thể nhớ tên nhiều người"
+    ],
+    "optionsEn": [
+      "Because a committee gives the team contradictory direction and nobody is ultimately accountable when the product misses its goal",
+      "Because the Scrum Guide forbids more than one",
+      "Because staffing costs are high",
+      "Because teams cannot remember many names"
+    ],
+    "answer": 0,
+    "explanation": "Vẫn có thể có nhiều stakeholder đóng góp, nhưng phải có một người duy nhất chốt thứ tự và một quy trình rõ ràng khi họ bất đồng.",
+    "explanationEn": "Many stakeholders may contribute, but one person must settle the order with a clear process for resolving disagreement."
+  },
+  {
+    "id": "q3",
+    "question": "Trách nhiệm nào của PO bị đánh giá thấp nhất trong thực tế?",
+    "questionEn": "Which PO responsibility is most underrated in practice?",
+    "options": [
+      "Trả lời câu hỏi của đội kịp thời, vì phần lớn giá trị PO tạo ra trong sprint đến từ việc trả lời đúng và nhanh",
+      "Viết user story cho toàn bộ backlog",
+      "Tham dự mọi cuộc họp của đội",
+      "Báo cáo tiến độ cho lãnh đạo"
+    ],
+    "optionsEn": [
+      "Answering the team's questions promptly, since most in-sprint PO value comes from answering correctly and quickly",
+      "Writing every user story in the backlog",
+      "Attending every team meeting",
+      "Reporting progress to management"
+    ],
+    "answer": 0,
+    "explanation": "Rất nhiều PO coi công việc của mình là viết backlog rồi biến mất, trong khi đội cần họ nhất là ở giữa sprint.",
+    "explanationEn": "Many POs treat the job as writing the backlog then disappearing, when the team needs them most mid-sprint."
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao việc đội TỰ ĐOÁN nguy hiểm hơn việc đội BỊ CHẶN?",
+    "questionEn": "Why is a team GUESSING more dangerous than a team being BLOCKED?",
+    "options": [
+      "Vì bị chặn lộ ra ngay trong daily standup, còn đoán sai chỉ lộ ra ở giai đoạn kiểm thử hoặc sau khi giao hàng khi việc sửa đã tốn kém hơn nhiều lần",
+      "Vì đoán sai làm mất uy tín của đội",
+      "Vì bị chặn giúp đội có thời gian nghỉ",
+      "Vì đoán sai vi phạm quy trình Scrum"
+    ],
+    "optionsEn": [
+      "Because being blocked shows up in the daily standup, while a wrong guess only surfaces during testing or after delivery when fixing costs many times more",
+      "Because guessing damages the team's reputation",
+      "Because being blocked gives the team a rest",
+      "Because guessing violates Scrum process"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do câu hỏi chưa được trả lời phải được ưu tiên gỡ trong ngày, trước mọi việc khác của PO.",
+    "explanationEn": "This is why unanswered questions must be resolved the same day, ahead of everything else on the PO's list."
+  },
+  {
+    "id": "q5",
+    "question": "Một PO phải đi hỏi cấp trên mọi quyết định. Đây là tình huống gì?",
+    "questionEn": "A PO must escalate every decision. What is this situation?",
+    "options": [
+      "PO không có thẩm quyền — họ thực chất là người đưa tin chứ không phải Product Owner",
+      "PO đang làm việc thận trọng và đúng quy trình",
+      "PO đang xây dựng sự đồng thuận trong tổ chức",
+      "PO chưa đủ kinh nghiệm nhưng sẽ cải thiện"
+    ],
+    "optionsEn": [
+      "A PO without authority — effectively a messenger rather than a Product Owner",
+      "A PO working carefully and correctly",
+      "A PO building organizational consensus",
+      "An inexperienced PO who will improve"
+    ],
+    "answer": 0,
+    "explanation": "Hậu quả là mỗi quyết định mất vài ngày, đội mất niềm tin và bắt đầu đi đường vòng, và quyết định bị đảo ngược muộn khi cấp trên thực sự xem lại.",
+    "explanationEn": "The consequences: every decision takes days, the team loses confidence and routes around them, and decisions get reversed late."
+  },
+  {
+    "id": "q6",
+    "question": "Ranh giới quan trọng nhất giữa PO và đội phát triển là gì?",
+    "questionEn": "What is the most important boundary between the PO and the development team?",
+    "options": [
+      "PO quyết định THỨ TỰ và GIÁ TRỊ; đội quyết định CÁCH LÀM và ƯỚC TÍNH",
+      "PO quyết định mọi thứ; đội thực thi",
+      "Đội quyết định thứ tự; PO chỉ xác nhận",
+      "Cả hai cùng quyết định mọi thứ bằng biểu quyết"
+    ],
+    "optionsEn": [
+      "The PO decides ORDER and VALUE; the team decides HOW and the ESTIMATES",
+      "The PO decides everything and the team executes",
+      "The team decides order and the PO confirms",
+      "Both decide everything by vote"
+    ],
+    "answer": 0,
+    "explanation": "Vượt qua ranh giới này theo cả hai chiều đều gây hại: PO ước tính thay đội, hoặc đội tự quyết định hành vi nghiệp vụ.",
+    "explanationEn": "Crossing it either way causes harm: the PO estimating for the team, or the team deciding business behaviour themselves."
+  },
+  {
+    "id": "q7",
+    "question": "Phát biểu nào ĐÚNG về việc PO đại diện cho ai?",
+    "questionEn": "Which statement about whom the PO represents is correct?",
+    "options": [
+      "PO đại diện cho TẤT CẢ stakeholder gồm cả vận hành, hỗ trợ và tuân thủ, không chỉ phòng kinh doanh",
+      "PO chỉ đại diện cho phòng kinh doanh vì họ mang lại doanh thu",
+      "PO chỉ đại diện cho người dùng cuối",
+      "PO đại diện cho đội phát triển trước lãnh đạo"
+    ],
+    "optionsEn": [
+      "The PO represents ALL stakeholders including operations, support, and compliance, not just sales",
+      "The PO represents sales only, since they bring revenue",
+      "The PO represents only end users",
+      "The PO represents the development team to management"
+    ],
+    "answer": 0,
+    "explanation": "Bộ phận vận hành và tuân thủ thường bị bỏ quên cho tới phút chót, và họ có quyền phủ quyết nếu không được hỏi sớm.",
+    "explanationEn": "Operations and compliance are usually forgotten until the last minute, and they hold a veto if not consulted early."
+  },
+  {
+    "id": "q8",
+    "question": "Vì sao PO không nên chấp nhận mọi yêu cầu từ lãnh đạo?",
+    "questionEn": "Why should a PO not accept every executive request?",
+    "options": [
+      "Vì nhận hết mọi yêu cầu nghĩa là không ưu tiên hoá gì cả, và PO phải bảo vệ tính toàn vẹn của backlog",
+      "Vì lãnh đạo không hiểu sản phẩm",
+      "Vì đội sẽ phản đối",
+      "Vì Scrum cấm lãnh đạo can thiệp vào backlog"
+    ],
+    "optionsEn": [
+      "Because accepting everything means prioritizing nothing, and the PO must protect the backlog's integrity",
+      "Because executives do not understand the product",
+      "Because the team will object",
+      "Because Scrum forbids executive input to the backlog"
+    ],
+    "answer": 0,
+    "explanation": "Cách nói không xây dựng là nêu đánh đổi: nếu thêm cái này thì cái kia lùi sang bản sau, anh chị chọn cái nào.",
+    "explanationEn": "The constructive refusal states the trade-off: if we add this, that moves to the next release — which do you prefer?"
+  },
+  {
+    "id": "q9",
+    "question": "Hoạt động nào của PO dễ bị cắt bỏ nhất khi bận nhưng quan trọng nhất về dài hạn?",
+    "questionEn": "Which PO activity is most easily dropped when busy yet most important long term?",
+    "options": [
+      "Nói chuyện trực tiếp với người dùng hoặc khách hàng",
+      "Tham dự daily standup",
+      "Cập nhật trạng thái trên công cụ quản lý",
+      "Báo cáo tiến độ cho lãnh đạo"
+    ],
+    "optionsEn": [
+      "Talking directly with users or customers",
+      "Attending the daily standup",
+      "Updating statuses in the tool",
+      "Reporting progress to management"
+    ],
+    "answer": 0,
+    "explanation": "Chỉ báo sức khoẻ: nếu tuần nào bạn cũng không dành được thời gian cho người dùng thật, bạn đang trở thành người quản lý backlog thay vì người sở hữu sản phẩm.",
+    "explanationEn": "A health indicator: no time for real users any week means you are becoming a backlog administrator rather than a product owner."
+  },
+  {
+    "id": "q10",
+    "question": "Kỹ năng nào bị đánh giá thấp nhất ở một Product Owner?",
+    "questionEn": "Which Product Owner skill is most underrated?",
+    "options": [
+      "Sẵn sàng thừa nhận một quyết định trước đó là sai, vì bảo vệ quyết định cũ chỉ vì đã lỡ quyết định sẽ dẫn sản phẩm đi sai hướng lâu hơn cần thiết",
+      "Khả năng viết user story nhanh",
+      "Khả năng dùng thành thạo công cụ quản lý backlog",
+      "Khả năng thuyết trình trước đông người"
+    ],
+    "optionsEn": [
+      "Willingness to admit a previous decision was wrong, since defending an old call merely because you made it steers the product wrong for longer",
+      "Writing user stories quickly",
+      "Mastering backlog tools",
+      "Presenting to large audiences"
+    ],
+    "answer": 0,
+    "explanation": "PO phải quyết định với thông tin không đầy đủ nên một số quyết định sẽ sai. Điều quan trọng là quyết định nhanh và sẵn sàng sửa khi có bằng chứng mới.",
+    "explanationEn": "A PO decides with incomplete information so some decisions will be wrong. What matters is deciding fast and correcting on new evidence."
+  },
+  {
+    "id": "q11",
+    "question": "Ai quyết định ước tính công sức cho một hạng mục backlog?",
+    "questionEn": "Who decides the effort estimate for a backlog item?",
+    "options": [
+      "Đội phát triển, vì họ là người thực hiện công việc",
+      "Product Owner, vì họ sở hữu backlog",
+      "Scrum Master, vì họ điều phối quy trình",
+      "Quản lý dự án, vì họ chịu trách nhiệm lịch trình"
+    ],
+    "optionsEn": [
+      "The development team, because they do the work",
+      "The Product Owner, because they own the backlog",
+      "The Scrum Master, because they facilitate",
+      "The project manager, because they own the schedule"
+    ],
+    "answer": 0,
+    "explanation": "PO quyết định thứ tự dựa trên giá trị và ước tính mà đội cung cấp, nhưng không quyết định bản thân con số ước tính.",
+    "explanationEn": "The PO decides order based on value and the estimates the team supplies, but does not decide the estimate figure itself."
+  },
+  {
+    "id": "q12",
+    "question": "Trong mô hình hiệu quả nhất cho sản phẩm phức tạp, PO và BA phân chia thế nào?",
+    "questionEn": "In the most effective pattern for complex products, how do PO and BA divide the work?",
+    "options": [
+      "PO lo giá trị và thứ tự; BA lo chi tiết và mô hình hoá, giải phóng PO cho việc nói chuyện với người dùng và định hướng sản phẩm",
+      "PO lo chi tiết; BA lo thứ tự ưu tiên",
+      "PO và BA cùng làm mọi việc để tránh phụ thuộc",
+      "BA thay thế hoàn toàn vai trò PO"
+    ],
+    "optionsEn": [
+      "The PO owns value and order; the BA owns detail and modeling, freeing the PO to talk to users and steer the product",
+      "The PO owns detail; the BA owns priority order",
+      "Both do everything to avoid dependency",
+      "The BA fully replaces the PO role"
+    ],
+    "answer": 0,
+    "explanation": "PO vẫn xác nhận acceptance criteria và trả lời câu hỏi về giá trị, còn BA trả lời câu hỏi về chi tiết trong sprint.",
+    "explanationEn": "The PO still confirms acceptance criteria and answers value questions, while the BA answers detail questions during the sprint."
+  },
+  {
+    "id": "q13",
+    "question": "Dấu hiệu nào cho thấy PO đang vắng mặt khỏi công việc thực sự của đội?",
+    "questionEn": "Which sign shows a PO is absent from the team's real work?",
+    "options": [
+      "Câu hỏi trên công cụ quản lý không được trả lời quá 24 giờ, đội bắt đầu tự quyết định hành vi nghiệp vụ, và sprint review liên tục có bất ngờ",
+      "PO không tham dự retrospective",
+      "PO không viết user story",
+      "PO không dùng cùng công cụ với đội"
+    ],
+    "optionsEn": [
+      "Questions unanswered beyond 24 hours, the team deciding business behaviour themselves, and sprint reviews full of surprises",
+      "The PO skips retrospectives",
+      "The PO does not write user stories",
+      "The PO uses a different tool from the team"
+    ],
+    "answer": 0,
+    "explanation": "Sprint review liên tục có bất ngờ là dấu hiệu rõ nhất, vì nó cho thấy PO không theo dõi công việc trong suốt sprint.",
+    "explanationEn": "Sprint reviews full of surprises is the clearest sign, showing the PO did not follow the work during the sprint."
+  },
+  {
+    "id": "q14",
+    "question": "Vì sao tầm nhìn sản phẩm là trách nhiệm quan trọng của PO?",
+    "questionEn": "Why is the product vision an important PO responsibility?",
+    "options": [
+      "Vì không có tầm nhìn, mọi quyết định ưu tiên đều trở nên tuỳ tiện và đội không biết vì sao sản phẩm tồn tại",
+      "Vì tầm nhìn cần thiết cho hồ sơ gọi vốn",
+      "Vì lãnh đạo yêu cầu có tài liệu tầm nhìn",
+      "Vì tầm nhìn thay thế cho backlog"
+    ],
+    "optionsEn": [
+      "Because without it every prioritization decision becomes arbitrary and the team does not know why the product exists",
+      "Because investors require a vision document",
+      "Because management requires the document",
+      "Because a vision replaces the backlog"
+    ],
+    "answer": 0,
+    "explanation": "Tầm nhìn cho biết sản phẩm tồn tại vì sao và cho ai, và đó là cơ sở để phán định một hạng mục có đáng làm hay không.",
+    "explanationEn": "The vision states why the product exists and for whom, and that is the basis for judging whether an item is worth building."
+  },
+  {
+    "id": "q15",
+    "question": "Việc đầu tiên PO nên làm mỗi buổi sáng là gì?",
+    "questionEn": "What should a PO do first each morning?",
+    "options": [
+      "Trả lời các câu hỏi tồn đọng trên backlog, vì mỗi câu hỏi chưa trả lời là một người đang bị chặn hoặc sắp đoán bừa",
+      "Viết thêm user story cho backlog",
+      "Cập nhật báo cáo tiến độ cho lãnh đạo",
+      "Xem lại chỉ số sản phẩm của tháng trước"
+    ],
+    "optionsEn": [
+      "Answer outstanding backlog questions, since each unanswered question is someone blocked or about to guess",
+      "Write more user stories",
+      "Update the management progress report",
+      "Review last month's product metrics"
+    ],
+    "answer": 0,
+    "explanation": "Ưu tiên việc này trước mọi việc khác là cách trực tiếp nhất để PO tạo ra giá trị trong sprint đang chạy.",
+    "explanationEn": "Prioritizing this above all else is the most direct way a PO creates value during the running sprint."
+  },
+  {
+    "id": "q16",
+    "question": "Hai điều kiện tiên quyết để vai trò Product Owner hoạt động là gì?",
+    "questionEn": "What are the two preconditions for the Product Owner role to function?",
+    "options": [
+      "Thẩm quyền quyết định và sự sẵn sàng khi đội cần — thiếu một trong hai thì vai trò không hoạt động",
+      "Kinh nghiệm sản phẩm và chứng chỉ Scrum",
+      "Kiến thức kỹ thuật và kỹ năng lập trình",
+      "Ngân sách riêng và quyền tuyển dụng"
+    ],
+    "optionsEn": [
+      "Decision authority and availability when the team needs them — missing either breaks the role",
+      "Product experience and a Scrum certification",
+      "Technical knowledge and coding skill",
+      "An independent budget and hiring authority"
+    ],
+    "answer": 0,
+    "explanation": "Ba chế độ thất bại phổ biến — vắng mặt, không thẩm quyền, uỷ ban — đều là những cách khác nhau khiến hai điều kiện này không được thoả mãn.",
+    "explanationEn": "The three common failure modes — absence, no authority, committee — are all different ways these two conditions go unmet."
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao đo lường là việc của Product Owner · Vanity metric và cách nhận diện",
+      "titleEn": "Why measurement is the Product Owner's job · Vanity metrics and how to spot them",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Chỉ số dẫn dắt và chỉ số theo sau · Các khung chỉ số hay dùng",
+      "titleEn": "Leading and lagging indicators · Common metric frameworks",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "A/B testing và giới hạn của nó · Bốn cái bẫy khi đo lường",
+      "titleEn": "A/B testing and its limits · Four measurement traps",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

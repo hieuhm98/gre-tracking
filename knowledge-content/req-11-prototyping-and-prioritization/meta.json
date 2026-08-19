@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 11,
+  "title": "Prototype & ưu tiên hoá yêu cầu",
+  "titleEn": "Prototyping & Prioritizing Requirements",
+  "description": "Prototype ngang và dọc, throwaway và evolutionary, prototype giấy và điện tử, rủi ro của prototyping, cùng các kỹ thuật ưu tiên hoá từ MoSCoW tới phân tích giá trị-chi phí-rủi ro và mô hình Kano.",
+  "descriptionEn": "Horizontal and vertical prototypes, throwaway versus evolutionary, paper versus electronic, the risks of prototyping, plus prioritization techniques from MoSCoW to value-cost-risk analysis and the Kano model."
+}

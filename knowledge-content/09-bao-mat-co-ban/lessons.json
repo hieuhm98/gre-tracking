@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tại sao bảo mật quan trọng? · Authentication vs Authorization",
+      "titleEn": "Why Does Security Matter? · Authentication vs Authorization",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Các mối đe dọa phổ biến · HTTPS và mã hóa",
+      "titleEn": "Common Threats · HTTPS and Encryption",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Password Security · 2FA (Two-Factor Authentication)",
+      "titleEn": "Password Security · 2FA (Two-Factor Authentication)",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Nguyên tắc Least Privilege · Bảo mật trong dự án — góc nhìn BA/PM",
+      "titleEn": "The Principle of Least Privilege · Security in a Project — The BA/PM Perspective",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

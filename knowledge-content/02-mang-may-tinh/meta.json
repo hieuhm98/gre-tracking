@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 2,
   "title": "Mạng máy tính",
   "titleEn": "Computer Networks",
   "description": "LAN, WAN, router, switch, băng thông và cách các thiết bị kết nối với nhau.",

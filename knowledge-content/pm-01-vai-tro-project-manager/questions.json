@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q1",
+    "question": "Trách nhiệm cốt lõi của Project Manager là gì?",
+    "questionEn": "What is the Project Manager's core accountability?",
+    "options": [
+      "Đưa dự án tới đích trong các ràng buộc đã cam kết, và tạo điều kiện để người khác làm tốt việc của họ",
+      "Trực tiếp thiết kế giải pháp và phân công công việc kỹ thuật",
+      "Viết yêu cầu chi tiết và acceptance criteria cho đội",
+      "Theo dõi trạng thái ticket và cập nhật bảng biểu tiến độ"
+    ],
+    "optionsEn": [
+      "Getting the project to its destination within committed constraints, and enabling others to do their work well",
+      "Designing the solution and assigning technical work directly",
+      "Writing detailed requirements and acceptance criteria",
+      "Tracking ticket statuses and updating progress spreadsheets"
+    ],
+    "answer": 0,
+    "explanation": "PM chỉ theo dõi tiến độ và cập nhật bảng biểu là thư ký dự án; PM thật sự phải ra quyết định đánh đổi.",
+    "explanationEn": "A PM who only tracks progress and updates spreadsheets is a project administrator; a real PM makes trade-off decisions."
+  },
+  {
+    "id": "q2",
+    "question": "Sáu trách nhiệm không thể chuyển cho ai khác của PM là gì?",
+    "questionEn": "What six PM responsibilities cannot be handed to anyone else?",
+    "options": [
+      "Phạm vi, tiến độ, nguồn lực, rủi ro, giao tiếp và chất lượng",
+      "Yêu cầu, thiết kế, lập trình, kiểm thử, triển khai và bảo trì",
+      "Tầm nhìn, roadmap, backlog, ưu tiên, đo lường và phát hành",
+      "Ngân sách, hợp đồng, tuyển dụng, đào tạo, đánh giá và lương"
+    ],
+    "optionsEn": [
+      "Scope, schedule, resources, risk, communication and quality",
+      "Requirements, design, coding, testing, deployment and maintenance",
+      "Vision, roadmap, backlog, prioritisation, measurement and release",
+      "Budget, contracts, hiring, training, appraisal and pay"
+    ],
+    "answer": 0,
+    "explanation": "Trong đó phạm vi đòi hỏi biết dự án bao gồm gì và đặc biệt là không bao gồm gì.",
+    "explanationEn": "Scope in particular means knowing what the project includes and especially what it excludes."
+  },
+  {
+    "id": "q3",
+    "question": "Điều gì xảy ra nếu cố định cả ba ràng buộc phạm vi, thời gian và chi phí?",
+    "questionEn": "What happens if scope, time and cost are all fixed?",
+    "options": [
+      "Chất lượng trở thành biến số duy nhất còn lại, và nó sẽ tự giảm mà không ai quyết định",
+      "Dự án sẽ thành công nếu đội đủ kỷ luật",
+      "Rủi ro dự án được loại bỏ hoàn toàn",
+      "Đội sẽ tự động tìm cách làm hiệu quả hơn"
+    ],
+    "optionsEn": [
+      "Quality becomes the only remaining variable, and it drops without anyone deciding to let it",
+      "The project succeeds if the team is disciplined enough",
+      "Project risk is eliminated entirely",
+      "The team automatically finds a more efficient approach"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế khi bị ép cả ba, PM phải nói không hoặc ghi nhận rủi ro bằng văn bản.",
+    "explanationEn": "So when pressed on all three, the PM must say no or record the risk in writing."
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao dựa vào làm thêm giờ để bù tiến độ là sai?",
+    "questionEn": "Why is relying on overtime to recover schedule wrong?",
+    "options": [
+      "Vì làm thêm giờ vay được vài tuần và trả bằng nhiều tháng: lỗi tăng, người giỏi nghỉ việc, năng suất giảm bền vững",
+      "Vì luật lao động không cho phép làm thêm giờ",
+      "Vì đội sẽ đòi tăng lương tương ứng",
+      "Vì chi phí dự án sẽ vượt ngân sách"
+    ],
+    "optionsEn": [
+      "Because overtime borrows a few weeks and repays with months: more defects, good people leaving, and a sustained productivity drop",
+      "Because labour law forbids overtime",
+      "Because the team will demand matching pay rises",
+      "Because project cost will exceed budget"
+    ],
+    "answer": 0,
+    "explanation": "Nhận cam kết rồi hy vọng đội làm thêm giờ để bù là sai lầm phổ biến nhất của PM khi bị ép tiến độ.",
+    "explanationEn": "Accepting a commitment and hoping overtime covers it is a PM's most common mistake under schedule pressure."
+  },
+  {
+    "id": "q5",
+    "question": "Trong Agile, tam giác ràng buộc được đảo như thế nào?",
+    "questionEn": "How is the constraint triangle inverted in Agile?",
+    "options": [
+      "Thời gian và chi phí cố định là một sprint và một đội, còn phạm vi là biến số — nên backlog phải được sắp thứ tự để cắt từ dưới lên",
+      "Phạm vi và chất lượng cố định, còn thời gian là biến số",
+      "Cả ba ràng buộc đều trở thành biến số",
+      "Chi phí là biến số duy nhất vì đội có thể mở rộng"
+    ],
+    "optionsEn": [
+      "Time and cost are fixed as one sprint and one team while scope varies — hence an ordered backlog so cuts come from the bottom",
+      "Scope and quality are fixed while time varies",
+      "All three constraints become variables",
+      "Cost is the only variable since the team can scale"
+    ],
+    "answer": 0,
+    "explanation": "Thứ tự backlog chính là công cụ giúp việc cắt phạm vi trở thành một quyết định có kế hoạch chứ không phải khủng hoảng.",
+    "explanationEn": "Backlog order is exactly what turns scope cutting into a planned decision rather than a crisis."
+  },
+  {
+    "id": "q6",
+    "question": "Khác biệt cốt lõi giữa Project Manager và Product Owner là gì?",
+    "questionEn": "What is the core difference between a Project Manager and a Product Owner?",
+    "options": [
+      "Dự án có ngày kết thúc còn sản phẩm thì không, nên PM tối ưu cho việc kết thúc còn PO tối ưu cho việc tiếp tục tốt hơn",
+      "PM có quyền lực chính thức còn PO thì không",
+      "PM làm việc với khách hàng còn PO làm việc với đội",
+      "PM quản lý ngân sách còn PO quản lý chất lượng"
+    ],
+    "optionsEn": [
+      "A project has an end date while a product does not, so a PM optimises for finishing and a PO for continuing better",
+      "A PM has formal authority while a PO does not",
+      "A PM works with customers while a PO works with the team",
+      "A PM manages budget while a PO manages quality"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế phạm vi thời gian của PM là từ khởi tạo tới đóng dự án, còn của PO là liên tục theo từng sprint.",
+    "explanationEn": "So the PM's horizon runs from initiation to closing, while the PO's is continuous, sprint by sprint."
+  },
+  {
+    "question": "Vì sao cùng chức danh PM ở công ty outsourcing và công ty product lại là hai công việc khác nhau?",
+    "questionEn": "Why is the same PM title at an outsourcing versus a product company two different jobs?",
+    "options": [
+      "Ở outsourcing mỗi hợp đồng là một dự án có ngày kết thúc nên PM là vai trò trung tâm; ở product company trách nhiệm được chia cho Product Owner và Engineering Manager",
+      "Ở outsourcing PM chỉ làm hành chính, ở product company PM làm kỹ thuật",
+      "Ở outsourcing PM báo cáo cho khách hàng, ở product company PM báo cáo cho CEO",
+      "Ở outsourcing PM cần chứng chỉ PMP, ở product company thì không"
+    ],
+    "optionsEn": [
+      "In outsourcing every contract is a project with an end date so the PM is central; in a product company the responsibility splits between PO and Engineering Manager",
+      "In outsourcing the PM is administrative, in product companies technical",
+      "In outsourcing the PM reports to the customer, in product companies to the CEO",
+      "In outsourcing the PM needs PMP, in product companies not"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế nên hỏi rõ nội dung công việc khi phỏng vấn chứ không suy ra từ chức danh.",
+    "explanationEn": "So ask explicitly what the job contains in interviews rather than inferring it from the title.",
+    "id": "q7"
+  },
+  {
+    "question": "Kỹ năng nào phân biệt PM giỏi với PM trung bình?",
+    "questionEn": "Which skill separates a good PM from an average one?",
+    "options": [
+      "Ra quyết định khi thiếu thông tin: quyết với dữ liệu hiện có, ghi lại giả định, và điều chỉnh khi biết thêm",
+      "Sử dụng thành thạo công cụ quản lý dự án",
+      "Ước tính thời gian chính xác từ lần đầu",
+      "Viết báo cáo trạng thái đầy đủ và đúng hạn"
+    ],
+    "optionsEn": [
+      "Deciding with incomplete information: decide with what you have, record the assumption, adjust as you learn",
+      "Mastering project management tooling",
+      "Estimating accurately on the first try",
+      "Writing complete status reports on time"
+    ],
+    "answer": 0,
+    "explanation": "Một quyết định muộn thường tệ hơn một quyết định chưa hoàn hảo được đưa ra sớm và sửa kịp.",
+    "explanationEn": "A late decision is usually worse than an imperfect one made early and corrected in time.",
+    "id": "q8"
+  },
+  {
+    "question": "Giao tiếp có tầng nghĩa là gì?",
+    "questionEn": "What does layered communication mean?",
+    "options": [
+      "Cùng một tình huống được kể ở mức chi tiết khác nhau: đội cần chi tiết, cấp trên cần tác động và đề xuất, khách hàng cần ảnh hưởng và phương án",
+      "Nói khác nhau với từng nhóm để giữ hình ảnh dự án",
+      "Chỉ báo cáo tin tốt lên trên và tin xấu xuống dưới",
+      "Dùng ba kênh giao tiếp khác nhau cho ba nhóm"
+    ],
+    "optionsEn": [
+      "Telling one situation at different detail levels: teams need detail, management needs impact and a recommendation, customers need effect and options",
+      "Saying different things to each group to protect the project's image",
+      "Reporting only good news upward and bad news downward",
+      "Using three different channels for three groups"
+    ],
+    "answer": 0,
+    "explanation": "Đó không phải là nói khác sự thật mà là chọn đúng mức chi tiết; đọc nguyên báo cáo kỹ thuật cho ban lãnh đạo là chưa làm việc của mình.",
+    "explanationEn": "It is not saying something other than the truth but choosing the right detail level; reading a full technical report to the board is not doing the job.",
+    "id": "q9"
+  },
+  {
+    "question": "PM không phải quản lý trực tiếp của ai trong đội. Vậy công cụ ảnh hưởng của PM là gì?",
+    "questionEn": "A PM is nobody's line manager. So what are their tools of influence?",
+    "options": [
+      "Uy tín, sự rõ ràng, và việc PM có bảo vệ đội hay không — PM đẩy hết áp lực xuống đội sẽ mất khả năng ảnh hưởng chỉ sau một dự án",
+      "Quyền phê duyệt nghỉ phép và đánh giá hiệu suất",
+      "Sự hỗ trợ của ban lãnh đạo khi cần gây áp lực",
+      "Quy trình và tài liệu bắt buộc mà đội phải tuân theo"
+    ],
+    "optionsEn": [
+      "Credibility, clarity, and whether they shield the team — a PM who pushes all pressure down loses influence after one project",
+      "Authority over leave approvals and performance reviews",
+      "Leadership backing when pressure is needed",
+      "Mandatory process and documents the team must follow"
+    ],
+    "answer": 0,
+    "explanation": "PM không quyết lương, không quyết thăng chức, nên ảnh hưởng phải được xây bằng cách khác.",
+    "explanationEn": "A PM sets neither pay nor promotions, so influence must be built another way.",
+    "id": "q10"
+  },
+  {
+    "question": "Cách từ chối đúng của một PM là gì?",
+    "questionEn": "What does refusing properly look like for a PM?",
+    "options": [
+      "Làm được, nhưng nó đẩy mốc UAT sang ngày 15 và cần thêm một tester — đây là hai phương án",
+      "Không làm được với nguồn lực hiện tại",
+      "Việc này không nằm trong phạm vi đã ký",
+      "Tôi sẽ hỏi đội rồi trả lời sau"
+    ],
+    "optionsEn": [
+      "It can be done, but it pushes UAT to the 15th and needs another tester — here are two options",
+      "It cannot be done with current resources",
+      "This is not in the signed scope",
+      "I will ask the team and reply later"
+    ],
+    "answer": 0,
+    "explanation": "Từ chối mà không có dữ liệu là cản trở; từ chối kèm phân tích tác động là bảo vệ dự án.",
+    "explanationEn": "Refusing without data is obstruction; refusing with an impact analysis protects the project.",
+    "id": "q11"
+  },
+  {
+    "question": "Công việc có giá trị cao nhất trong một ngày của PM là gì?",
+    "questionEn": "What is the highest-value work in a PM's day?",
+    "options": [
+      "Xử lý trở ngại mà đội báo lên, và trả lời câu hỏi chặn hoặc tìm người trả lời được",
+      "Cập nhật trạng thái toàn bộ ticket trong công cụ",
+      "Viết báo cáo tiến độ cho stakeholder",
+      "Rà soát lại toàn bộ kế hoạch chi tiết"
+    ],
+    "optionsEn": [
+      "Clearing impediments the team raises, and answering blocking questions or finding someone who can",
+      "Updating every ticket's status in the tool",
+      "Writing the stakeholder status report",
+      "Reviewing the entire detailed plan"
+    ],
+    "answer": 0,
+    "explanation": "PM dành cả tuần chỉ đi cập nhật trạng thái ticket là đang làm việc mà công cụ nên làm thay.",
+    "explanationEn": "A PM spending the week updating ticket statuses is doing work the tools should do.",
+    "id": "q12"
+  },
+  {
+    "question": "Khi làm việc hàng tuần, PM nên cập nhật gì?",
+    "questionEn": "In weekly work, what should a PM update?",
+    "options": [
+      "So sánh thực tế với kế hoạch rồi cập nhật DỰ BÁO, chứ không chỉ cập nhật quá khứ",
+      "Chỉ ghi lại những gì đã hoàn thành trong tuần",
+      "Chỉ cập nhật ngân sách đã chi",
+      "Chỉ cập nhật danh sách công việc cho tuần tới"
+    ],
+    "optionsEn": [
+      "Compare actual against plan then update the FORECAST, not just the record of the past",
+      "Only record what was completed this week",
+      "Only update budget spent",
+      "Only update next week's task list"
+    ],
+    "answer": 0,
+    "explanation": "Cập nhật quá khứ là ghi chép; cập nhật dự báo mới là quản lý dự án, vì nó cho stakeholder thời gian phản ứng.",
+    "explanationEn": "Recording the past is bookkeeping; updating the forecast is project management, since it gives stakeholders time to react.",
+    "id": "q13"
+  },
+  {
+    "question": "PM đi lên từ nền tảng kỹ thuật có rủi ro đặc trưng nào?",
+    "questionEn": "What characteristic risk does a PM from an engineering background carry?",
+    "options": [
+      "Có xu hướng tự nhảy vào làm thay vì để đội làm",
+      "Yếu về ước tính kỹ thuật và rủi ro công nghệ",
+      "Dễ nghiêng về hình thức và tài liệu thay vì nội dung",
+      "Không hiểu nghiệp vụ và stakeholder"
+    ],
+    "optionsEn": [
+      "A tendency to jump in and do the work rather than letting the team",
+      "Weakness in technical estimation and technology risk",
+      "Leaning toward form and documents over substance",
+      "Not understanding the business or stakeholders"
+    ],
+    "answer": 0,
+    "explanation": "Ưu thế của họ là hiểu công việc thật và ước tính đáng tin, nhưng chính sự thành thạo đó tạo ra xu hướng làm thay đội.",
+    "explanationEn": "Their advantage is understanding the real work and estimating credibly, but that very fluency creates the urge to do it themselves.",
+    "id": "q14"
+  },
+  {
+    "question": "PM đi lên từ nền tảng BA thường yếu ở đâu?",
+    "questionEn": "Where is a PM from a BA background usually weaker?",
+    "options": [
+      "Ước tính kỹ thuật và rủi ro công nghệ",
+      "Hiểu nghiệp vụ và làm việc với stakeholder",
+      "Quy trình và tài liệu dự án",
+      "Giao tiếp với khách hàng"
+    ],
+    "optionsEn": [
+      "Technical estimation and technology risk",
+      "Understanding the business and working with stakeholders",
+      "Project process and documentation",
+      "Communicating with customers"
+    ],
+    "answer": 0,
+    "explanation": "Ưu thế của họ là hiểu nghiệp vụ và stakeholder rất tốt, nên phần cần bù đắp là phía kỹ thuật.",
+    "explanationEn": "Their strength is a firm grasp of the business and stakeholders, so the gap to close is on the technical side.",
+    "id": "q15"
+  },
+  {
+    "question": "Vì sao tin xấu đến sớm là dấu hiệu của một PM trưởng thành?",
+    "questionEn": "Why is bad news arriving early a sign of a mature PM?",
+    "options": [
+      "Vì điều đó chỉ xảy ra khi PM không trừng phạt người mang tin xấu, nên đội chủ động báo vấn đề thay vì che tới khi không thể che",
+      "Vì nó chứng tỏ dự án đang có nhiều rủi ro được nhận diện",
+      "Vì nó cho phép PM báo cáo lên trên nhanh hơn",
+      "Vì nó giúp PM có cơ sở để yêu cầu thêm nguồn lực"
+    ],
+    "optionsEn": [
+      "Because it only happens when the PM does not punish the messenger, so the team raises problems rather than hiding them until they cannot be hidden",
+      "Because it shows many risks are being identified",
+      "Because it lets the PM escalate faster",
+      "Because it gives the PM grounds to request more resources"
+    ],
+    "answer": 0,
+    "explanation": "Văn hoá an toàn để nói thật là điều kiện tiên quyết cho mọi cơ chế quản lý rủi ro hoạt động được.",
+    "explanationEn": "A culture safe enough for honesty is a precondition for any risk management mechanism to work.",
+    "id": "q16"
+  },
+  {
+    "question": "Nếu dự án đứng lại khi PM nghỉ một tuần, điều đó nói lên gì?",
+    "questionEn": "If a project stalls while the PM takes a week off, what does that say?",
+    "options": [
+      "PM đang là nút cổ chai chứ không phải người tạo điều kiện",
+      "Đội chưa đủ kinh nghiệm để tự vận hành",
+      "PM đang quản lý dự án rất chặt chẽ và hiệu quả",
+      "Kế hoạch dự án chưa được viết đủ chi tiết"
+    ],
+    "optionsEn": [
+      "The PM is a bottleneck rather than an enabler",
+      "The team lacks the experience to run itself",
+      "The PM is managing the project tightly and effectively",
+      "The project plan is not detailed enough"
+    ],
+    "answer": 0,
+    "explanation": "Đây là một trong ba dấu hiệu trưởng thành, cùng với tin xấu đến sớm và dự báo ngày càng chính xác.",
+    "explanationEn": "This is one of three maturity signals, along with early bad news and steadily improving forecasts.",
+    "id": "q17"
+  },
+  {
+    "question": "Vai trò của chứng chỉ PMP hay PMI-ACP với sự nghiệp PM là gì?",
+    "questionEn": "What role do certifications like PMP or PMI-ACP play in a PM career?",
+    "options": [
+      "Hữu ích cho môi trường tương ứng và cho việc lọc CV, nhưng không thay được một dự án bạn đã đưa tới đích và kể lại được chi tiết",
+      "Là điều kiện bắt buộc để được nhận vào vị trí PM",
+      "Không có giá trị gì vì nhà tuyển dụng chỉ xem kinh nghiệm",
+      "Thay thế được kinh nghiệm thực tế nếu đạt điểm cao"
+    ],
+    "optionsEn": [
+      "Useful for their matching environment and for CV screening, but no substitute for a project you took to the finish and can narrate in detail",
+      "A mandatory condition for any PM position",
+      "Worthless, since employers only look at experience",
+      "A replacement for real experience if you score highly"
+    ],
+    "answer": 0,
+    "explanation": "PMP và PRINCE2 phù hợp môi trường truyền thống, còn PMI-ACP và chứng chỉ Scrum phù hợp môi trường agile.",
+    "explanationEn": "PMP and PRINCE2 suit traditional environments while PMI-ACP and Scrum certifications suit agile ones.",
+    "id": "q18"
+  }
+]

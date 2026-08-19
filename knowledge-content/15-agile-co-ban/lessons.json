@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Agile là gì? · Agile Manifesto – 4 Giá trị cốt lõi",
+      "titleEn": "What Is Agile? · The Agile Manifesto – 4 Core Values",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "So sánh Waterfall vs Agile · Tại sao Waterfall thất bại với phần mềm?",
+      "titleEn": "Waterfall vs Agile · Why Waterfall Fails for Software",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Iterative & Incremental · Các framework Agile phổ biến",
+      "titleEn": "Iterative & Incremental · Popular Agile Frameworks",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Agile không phải là...",
+      "titleEn": "Agile Is NOT...",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "q1",
+    "question": "Yếu tố dự báo hiệu quả của một đội mạnh nhất là gì?",
+    "questionEn": "What most strongly predicts a team's effectiveness?",
+    "options": [
+      "Mức độ an toàn khi nói thật trong đội, chứ không phải năng lực cá nhân của từng thành viên",
+      "Kinh nghiệm trung bình của các thành viên",
+      "Chất lượng công cụ và quy trình đội đang dùng",
+      "Số năm các thành viên đã làm việc cùng nhau"
+    ],
+    "optionsEn": [
+      "How safe it feels to speak honestly, rather than individual member ability",
+      "The average experience of members",
+      "The quality of the tools and process in use",
+      "How many years members have worked together"
+    ],
+    "answer": 0,
+    "explanation": "Đội giỏi nhưng không ai dám nói tôi không hiểu sẽ làm tệ hơn đội trung bình mà mọi người nói thẳng, vì thông tin xấu bị giữ lại tới khi quá muộn.",
+    "explanationEn": "A strong team where nobody dares say I do not understand performs worse than an average honest one, because bad information is withheld until too late."
+  },
+  {
+    "id": "q2",
+    "question": "Cách rẻ nhất để PM tạo ra sự an toàn khi nói thật trong đội là gì?",
+    "questionEn": "What is a PM's cheapest way to create safety to speak honestly?",
+    "options": [
+      "Thừa nhận sai của chính mình trước và ra tiếng, ví dụ tôi ước tính phần này sai vì đã không tính tới việc di trú dữ liệu",
+      "Tổ chức một buổi đào tạo về văn hoá phản hồi",
+      "Cam kết rằng không ai bị phạt vì mắc lỗi",
+      "Thu thập phản hồi ẩn danh mỗi tháng"
+    ],
+    "optionsEn": [
+      "Admitting your own mistakes first and out loud, such as I estimated this wrong because I did not account for data migration",
+      "Running a training session on feedback culture",
+      "Promising nobody will be punished for mistakes",
+      "Collecting anonymous feedback monthly"
+    ],
+    "answer": 0,
+    "explanation": "Không có cách nào rẻ hơn để cho phép người khác làm điều tương tự, vì nó chứng minh bằng hành động chứ không bằng lời cam kết.",
+    "explanationEn": "Nothing is cheaper for permitting others to do the same, since it demonstrates through action rather than promises."
+  },
+  {
+    "id": "q3",
+    "question": "Vì sao luôn giao việc khó cho người giỏi nhất lại là sai lầm?",
+    "questionEn": "Why is always giving hard work to the strongest person a mistake?",
+    "options": [
+      "Ngắn hạn hiệu quả nhưng dài hạn tạo ra một nút cổ chai và một đội không phát triển: người giỏi kiệt sức, người còn lại không học được gì",
+      "Vì người giỏi thường ước tính không chính xác",
+      "Vì nó tạo ra sự bất công về lương trong đội",
+      "Vì việc khó nên được chia đều cho mọi người"
+    ],
+    "optionsEn": [
+      "Efficient short term but long term it creates a bottleneck and a team that never grows: your best person burns out and the rest learn nothing",
+      "Because strong people usually estimate inaccurately",
+      "Because it creates pay unfairness in the team",
+      "Because hard work should be shared equally"
+    ],
+    "answer": 0,
+    "explanation": "Cách thay thế là ghép cặp có chủ đích: người thành thạo cùng người đang học ở những phần quan trọng.",
+    "explanationEn": "The alternative is deliberate pairing: an experienced person with a learner on the important parts."
+  },
+  {
+    "id": "q4",
+    "question": "Chia việc sao cho không ai phụ thuộc ai dẫn tới hệ quả gì?",
+    "questionEn": "What results from splitting work so nobody depends on anybody?",
+    "options": [
+      "Ốc đảo kiến thức, mỗi phần chỉ một người hiểu — đây là nguồn rủi ro nhân sự lớn nhất trong dự án phần mềm",
+      "Đội làm việc nhanh hơn vì không cần phối hợp",
+      "Chất lượng code giảm vì thiếu review chéo",
+      "Chi phí quản lý tăng vì phải theo dõi nhiều luồng"
+    ],
+    "optionsEn": [
+      "Knowledge islands, each part understood by one person — the largest people-risk source in software projects",
+      "The team works faster since no coordination is needed",
+      "Code quality drops from missing cross review",
+      "Management cost rises from tracking many streams"
+    ],
+    "answer": 0,
+    "explanation": "Khi người duy nhất hiểu một phần rời đi, phần đó trở thành rủi ro nghiêm trọng mà không có cách xử lý nhanh.",
+    "explanationEn": "When the only person who understands a part leaves, that part becomes a severe risk with no quick remedy."
+  },
+  {
+    "id": "q5",
+    "question": "Vì sao phân bổ một người 50 phần trăm cho hai dự án là kém hiệu quả?",
+    "questionEn": "Why is allocating someone 50 percent to two projects inefficient?",
+    "options": [
+      "Vì chuyển ngữ cảnh có chi phí thật, và một người chia đôi thường tạo ra ít hơn 70 phần trăm giá trị so với làm toàn thời gian một việc",
+      "Vì người đó sẽ không hiểu rõ cả hai dự án",
+      "Vì hai PM sẽ tranh nhau thời gian của người đó",
+      "Vì quy định nhân sự không cho phép chia nhỏ hơn 100 phần trăm"
+    ],
+    "optionsEn": [
+      "Because context switching has a real cost, and a person split in half usually produces under 70 percent of full-time output",
+      "Because they will not understand either project well",
+      "Because two PMs will compete for their time",
+      "Because HR policy forbids splitting below 100 percent"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên tắc thay thế là giới hạn việc song song: mỗi người tập trung một việc chính, vì công việc chờ tốt hơn người chờ giữa nhiều việc.",
+    "explanationEn": "The replacement principle is limiting parallel work: one primary task per person, since work waiting beats a person waiting."
+  },
+  {
+    "id": "q6",
+    "question": "Điều gì biến một nhóm người thành một đội?",
+    "questionEn": "What turns a group of people into a team?",
+    "options": [
+      "Một mục tiêu chung mà thành công được đo bằng kết quả của cả nhóm — nếu mỗi người chỉ được đánh giá bằng phần việc riêng thì không có lý do gì để họ giúp nhau",
+      "Việc họ cùng ngồi trong một phòng và họp hàng ngày",
+      "Việc họ có cùng một quản lý trực tiếp",
+      "Việc họ dùng cùng một công cụ quản lý công việc"
+    ],
+    "optionsEn": [
+      "A shared goal whose success is measured by the whole group's result — if each is judged only on their own slice there is no reason to help each other",
+      "Sitting in one room and meeting daily",
+      "Reporting to the same line manager",
+      "Using the same work management tool"
+    ],
+    "answer": 0,
+    "explanation": "Không có mục tiêu chung được đo chung, bạn chỉ có một nhóm cá nhân làm việc cạnh nhau.",
+    "explanationEn": "Without a shared, jointly measured goal, you have individuals working side by side."
+  },
+  {
+    "question": "Chẩn đoán vấn đề giao tiếp nên được nói cụ thể hơn thành gì?",
+    "questionEn": "How should the diagnosis of a communication problem be stated more precisely?",
+    "options": [
+      "Thông tin đúng không tới đúng người vào lúc họ còn có thể làm gì đó",
+      "Đội không họp đủ thường xuyên với nhau",
+      "Tài liệu dự án không được cập nhật kịp thời",
+      "PM không có kỹ năng thuyết trình tốt"
+    ],
+    "optionsEn": [
+      "The right information does not reach the right people while they can still act on it",
+      "The team does not meet often enough",
+      "Project documents are not updated in time",
+      "The PM lacks presentation skills"
+    ],
+    "answer": 0,
+    "explanation": "Chẩn đoán chung là vấn đề giao tiếp thì quá mơ hồ để hành động, còn cách nói cụ thể chỉ ra đúng chỗ cần sửa.",
+    "explanationEn": "Calling it a communication problem is too vague to act on, while the precise wording points at what to fix.",
+    "id": "q7"
+  },
+  {
+    "question": "Vì sao quyết định phải được ghi lại bằng văn bản dù đã bàn miệng?",
+    "questionEn": "Why record decisions in writing even when agreed verbally?",
+    "options": [
+      "Vì ba tháng sau không ai nhớ chính xác đã đồng ý điều gì, và một dòng ghi lại tiết kiệm hàng giờ tranh cãi",
+      "Vì cần bằng chứng nếu phải khiếu nại khách hàng",
+      "Vì các thành viên đội không tin lời nhau",
+      "Vì quy trình kiểm toán bắt buộc lưu mọi quyết định"
+    ],
+    "optionsEn": [
+      "Because three months later nobody remembers exactly what was agreed, and one recorded line saves hours of argument",
+      "Because you need evidence for customer disputes",
+      "Because team members do not trust each other",
+      "Because audit requires every decision stored"
+    ],
+    "answer": 0,
+    "explanation": "Đây không phải vấn đề thiếu tin nhau mà là giới hạn của trí nhớ con người.",
+    "explanationEn": "This is not about distrust but about the limits of human memory.",
+    "id": "q8"
+  },
+  {
+    "question": "Cách đúng để truyền tin xấu là gì?",
+    "questionEn": "What is the right way to deliver bad news?",
+    "options": [
+      "Đi trực tiếp hoặc gọi điện trước, rồi mới gửi văn bản xác nhận — email cho tin xấu tạo ra hiểu nhầm và phản ứng phòng vệ",
+      "Gửi email chi tiết để mọi người có thời gian tiêu hoá thông tin",
+      "Chờ tới buổi họp trạng thái định kỳ để trình bày đầy đủ",
+      "Để trưởng nhóm kỹ thuật truyền đạt vì họ hiểu chi tiết hơn"
+    ],
+    "optionsEn": [
+      "In person or by call first, then written confirmation — email for bad news creates misreadings and defensiveness",
+      "Send a detailed email so people have time to digest it",
+      "Wait for the regular status meeting to present it fully",
+      "Let the tech lead convey it since they know the detail"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên tắc quan trọng nhất về lòng tin là người bị ảnh hưởng phải nghe từ bạn trước, không nghe từ người khác.",
+    "explanationEn": "The most important trust rule is that whoever is affected hears it from you first, not from someone else.",
+    "id": "q9"
+  },
+  {
+    "question": "Phần nào của một báo cáo trạng thái hay bị thiếu và làm báo cáo không dẫn tới hành động?",
+    "questionEn": "Which status report part is usually missing, leaving it actionless?",
+    "options": [
+      "Phần nói rõ bạn cần quyết định hoặc hỗ trợ gì từ người đọc, kèm ngày hạn cụ thể",
+      "Phần liệt kê chi tiết các công việc đã hoàn thành trong tuần",
+      "Phần trình bày biểu đồ tiến độ so với kế hoạch",
+      "Phần tổng hợp số giờ công đã sử dụng"
+    ],
+    "optionsEn": [
+      "The part stating what decision or support you need from the reader, with dates",
+      "A detailed list of work completed this week",
+      "A progress chart against plan",
+      "A summary of person-hours consumed"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi báo cáo nên có đang ở đâu, xu hướng đi về đâu, rủi ro nào đang lớn lên, và bạn cần gì từ người đọc.",
+    "explanationEn": "Every report should carry where we are, the trend, growing risks, and what you need from the reader.",
+    "id": "q10"
+  },
+  {
+    "question": "Dự án được báo xanh mười tuần rồi tuần thứ mười một chuyển sang trễ hai tháng. Điều gì thực sự đã xảy ra?",
+    "questionEn": "A project is green for ten weeks then two months late in week eleven. What really happened?",
+    "options": [
+      "Nó đã vàng từ lâu và người ta không dám nói — không có dự án nào thật sự chuyển từ xanh sang đỏ trong một tuần",
+      "Một rủi ro xác suất thấp đã xảy ra đột ngột",
+      "Khách hàng đã thay đổi phạm vi vào tuần thứ mười một",
+      "Đội đã ước tính sai từ đầu nhưng chỉ phát hiện muộn"
+    ],
+    "optionsEn": [
+      "It had been amber for a long time and nobody dared say so — no project truly goes green to red in a week",
+      "A low-probability risk struck suddenly",
+      "The customer changed scope in week eleven",
+      "The team estimated wrongly and only noticed late"
+    ],
+    "answer": 0,
+    "explanation": "PM không bao giờ báo vàng là PM đang tự lấy đi công cụ cảnh báo của chính mình.",
+    "explanationEn": "A PM who never reports amber has removed their own warning instrument.",
+    "id": "q11"
+  },
+  {
+    "question": "Màu vàng trong báo cáo trạng thái nên được hiểu là gì?",
+    "questionEn": "What should amber mean in a status report?",
+    "options": [
+      "Tôi có thể xử lý được nhưng anh chị nên biết — một dự án chuyển vàng sớm rồi trở lại xanh là dấu hiệu quản lý tốt",
+      "Dự án đã trễ nhưng chưa đủ nghiêm trọng để báo đỏ",
+      "PM chưa chắc chắn về trạng thái thật của dự án",
+      "Cần nhà tài trợ can thiệp ngay lập tức"
+    ],
+    "optionsEn": [
+      "I can handle this but you should know — a project going amber early and returning to green signals good management",
+      "The project is late but not serious enough for red",
+      "The PM is unsure of the real status",
+      "The sponsor must intervene immediately"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế báo vàng sớm không phải dấu hiệu yếu kém mà là cách giữ cho công cụ cảnh báo còn hoạt động.",
+    "explanationEn": "So reporting amber early is not weakness but keeping the warning instrument functional.",
+    "id": "q12"
+  },
+  {
+    "question": "Câu hỏi đúng trước khi tổ chức một cuộc họp là gì?",
+    "questionEn": "What is the right question before scheduling a meeting?",
+    "options": [
+      "Cuộc họp này tạo ra giá trị lớn hơn sáu giờ công không, vì sáu người họp một giờ tốn sáu giờ công",
+      "Có đủ người tham dự để quyết định không",
+      "Phòng họp còn trống vào giờ nào",
+      "Có ai phản đối việc tổ chức họp không"
+    ],
+    "optionsEn": [
+      "Does this create more value than six person-hours, since six people for an hour costs six person-hours",
+      "Are enough people available to decide",
+      "When is a meeting room free",
+      "Does anyone object to holding it"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi cuộc họp phải có mục đích thuộc một trong ba loại: quyết định, giải quyết, hoặc đồng bộ hiểu biết.",
+    "explanationEn": "Every meeting needs a purpose of one of three kinds: deciding, solving, or aligning understanding.",
+    "id": "q13"
+  },
+  {
+    "question": "Cuộc họp nào nên được thay bằng một văn bản?",
+    "questionEn": "Which meeting should be replaced by a document?",
+    "options": [
+      "Họp để cập nhật thông tin, vì nó không quyết định, không giải quyết, cũng không đồng bộ hiểu biết",
+      "Họp để giải quyết một vấn đề kỹ thuật phức tạp",
+      "Họp để quyết định phương án khi có hai lựa chọn",
+      "Họp để đồng bộ hiểu biết về một thay đổi lớn"
+    ],
+    "optionsEn": [
+      "A meeting to share updates, since it neither decides, solves, nor aligns understanding",
+      "A meeting to solve a complex technical problem",
+      "A meeting to decide between two options",
+      "A meeting to align understanding of a major change"
+    ],
+    "answer": 0,
+    "explanation": "Cuộc họp cũng phải kết thúc bằng ba dòng ghi lại: quyết định gì, ai làm gì, hạn nào; nếu không nó sẽ được họp lại trong hai tuần.",
+    "explanationEn": "A meeting must also end with three lines: what was decided, who does what, by when; otherwise it repeats in two weeks.",
+    "id": "q14"
+  },
+  {
+    "question": "Buổi họp hàng ngày biến thành báo cáo cho PM sẽ gây ra hệ quả gì?",
+    "questionEn": "What happens when a daily meeting becomes a report to the PM?",
+    "options": [
+      "Đội sẽ tối ưu việc nghe hay chứ không tối ưu việc giao hàng",
+      "Buổi họp sẽ kéo dài quá thời gian quy định",
+      "PM sẽ mất thời gian ghi chép thay vì lắng nghe",
+      "Đội sẽ ngừng tham dự buổi họp"
+    ],
+    "optionsEn": [
+      "The team optimises for sounding good rather than for delivering",
+      "The meeting runs over its time box",
+      "The PM spends time taking notes instead of listening",
+      "The team stops attending"
+    ],
+    "answer": 0,
+    "explanation": "Buổi đồng bộ ngắn có giá trị thật, nhưng nó phải nói về trở ngại và luồng công việc.",
+    "explanationEn": "A short alignment session has real value, but it must be about impediments and the flow of work.",
+    "id": "q15"
+  },
+  {
+    "question": "Một đội chưa bao giờ xung đột thường nói lên điều gì?",
+    "questionEn": "What does a team that never conflicts usually indicate?",
+    "options": [
+      "Đội đã ngừng nói thật, vì xung đột về nội dung là dấu hiệu của việc mọi người thật sự tham gia",
+      "Đội đang làm việc rất hiệu quả và hoà hợp",
+      "PM đang quản lý xung đột rất tốt",
+      "Đội có quy trình ra quyết định rõ ràng"
+    ],
+    "optionsEn": [
+      "The team has stopped speaking honestly, since task conflict signals genuine engagement",
+      "The team is working very effectively and harmoniously",
+      "The PM manages conflict very well",
+      "The team has a clear decision process"
+    ],
+    "answer": 0,
+    "explanation": "Xung đột về nội dung có lợi vì nó cho ra quyết định tốt hơn; chỉ xung đột về con người mới có hại.",
+    "explanationEn": "Task conflict is beneficial because it produces better decisions; only relationship conflict is harmful.",
+    "id": "q16"
+  },
+  {
+    "question": "Điều gì xảy ra khi PM để xung đột về con người tồn tại quá lâu vì hy vọng nó tự hết?",
+    "questionEn": "What happens when a PM lets relationship conflict persist hoping it resolves itself?",
+    "options": [
+      "Nó biến thành xung đột về nội dung giả tạo, khi hai người phản đối mọi đề xuất của nhau vì lý do khác hẳn lý do họ nói ra",
+      "Nó dần dịu đi khi hai người quen với nhau hơn",
+      "Nó chuyển thành cạnh tranh lành mạnh về chất lượng công việc",
+      "Nó chỉ ảnh hưởng tới hai người liên quan"
+    ],
+    "optionsEn": [
+      "It mutates into fake task conflict, where two people oppose every proposal the other makes for reasons unlike the ones they state",
+      "It softens as the two get used to each other",
+      "It becomes healthy competition over work quality",
+      "It affects only the two people involved"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế xung đột về con người phải được xử lý riêng, nhanh, và không để tích tụ.",
+    "explanationEn": "So relationship conflict must be handled privately, quickly, and never allowed to accumulate.",
+    "id": "q17"
+  },
+  {
+    "question": "Cách mở đầu đúng cho một cuộc trò chuyện khó với thành viên trong đội là gì?",
+    "questionEn": "How should a difficult conversation with a team member open?",
+    "options": [
+      "Bằng quan sát cụ thể, ví dụ trong ba buổi họp gần đây khi Minh đưa đề xuất thì em phản đối trước khi nghe hết",
+      "Bằng nhận xét về tính cách, ví dụ em khó hợp tác",
+      "Bằng việc nhắc lại các quy tắc làm việc của đội",
+      "Bằng việc hỏi xem người đó có biết mình đang làm sai không"
+    ],
+    "optionsEn": [
+      "With a specific observation, such as in the last three meetings when Minh made a proposal you objected before hearing it out",
+      "With a character judgement, such as you are difficult to work with",
+      "By restating the team working agreements",
+      "By asking whether they know what they are doing wrong"
+    ],
+    "answer": 0,
+    "explanation": "Bốn bước là nói riêng càng sớm càng tốt, quan sát cụ thể, hỏi trước khi kết luận, và kết thúc bằng một thay đổi cụ thể được hai bên đồng ý.",
+    "explanationEn": "The four steps are speak privately as early as possible, observe specifically, ask before concluding, and end with one agreed change.",
+    "id": "q18"
+  },
+  {
+    "question": "Vì sao nên hỏi trước khi kết luận trong một cuộc trò chuyện khó?",
+    "questionEn": "Why ask before concluding in a difficult conversation?",
+    "options": [
+      "Vì rất thường xuyên có một lý do bạn không biết đằng sau hành vi đó",
+      "Vì quy trình nhân sự yêu cầu phải nghe ý kiến của người liên quan",
+      "Vì nó giúp người kia cảm thấy được tôn trọng dù kết luận không đổi",
+      "Vì cần bằng chứng trước khi đưa ra khiển trách chính thức"
+    ],
+    "optionsEn": [
+      "Because very often there is a reason behind the behaviour that you do not know",
+      "Because HR process requires hearing the person out",
+      "Because it makes them feel respected even if the conclusion stands",
+      "Because you need evidence before a formal reprimand"
+    ],
+    "answer": 0,
+    "explanation": "Kết luận sớm dựa trên hành vi quan sát được mà không hỏi lý do thường dẫn tới giải pháp sai.",
+    "explanationEn": "Concluding from observed behaviour without asking why usually leads to the wrong remedy.",
+    "id": "q19"
+  },
+  {
+    "question": "Khi đội đã quá tải, PM nên làm gì thay vì nói cố gắng thêm chút nữa?",
+    "questionEn": "When the team is overloaded, what should the PM do instead of asking for more effort?",
+    "options": [
+      "Đưa ra một quyết định thật: cắt phạm vi, dời hạn, hoặc thêm người có ích — và nếu không làm được cả ba thì nói thẳng và chịu trách nhiệm về hệ quả",
+      "Sắp xếp lại thứ tự công việc để đội cảm thấy nhẹ hơn",
+      "Tổ chức một buổi ăn uống để đội lấy lại tinh thần",
+      "Giảm số buổi họp để đội có thêm thời gian làm việc"
+    ],
+    "optionsEn": [
+      "Make a real decision: cut scope, move the date, or add help — and if none of the three is possible, say so plainly and own the consequence",
+      "Reorder tasks so the team feels lighter",
+      "Organise a team meal to restore morale",
+      "Cut meetings so the team has more working time"
+    ],
+    "answer": 0,
+    "explanation": "Câu cố gắng thêm chút nữa chỉ chuyển vấn đề của PM thành vấn đề của đội, và đội chịu được sự thật khó nhưng không chịu được cảm giác bị bỏ mặc.",
+    "explanationEn": "Asking for more effort only converts the PM problem into the team problem, and teams can handle hard truths but not abandonment.",
+    "id": "q20"
+  },
+  {
+    "question": "Nguyên tắc giao việc nào giúp giảm ốc đảo kiến thức mà vẫn phát triển đội?",
+    "questionEn": "Which allocation principle reduces knowledge islands while growing the team?",
+    "options": [
+      "Ghép cặp có chủ đích: người thành thạo cùng người đang học ở những phần quan trọng",
+      "Luân chuyển toàn bộ thành viên giữa các module mỗi sprint",
+      "Yêu cầu mọi người viết tài liệu chi tiết cho phần mình làm",
+      "Giao mỗi module cho hai người làm độc lập rồi so kết quả"
+    ],
+    "optionsEn": [
+      "Deliberate pairing: an experienced person with a learner on important parts",
+      "Rotating every member across modules each sprint",
+      "Requiring everyone to document their own part in detail",
+      "Assigning each module to two people independently and comparing"
+    ],
+    "answer": 0,
+    "explanation": "Ghép cặp vừa truyền kiến thức vừa giữ được tiến độ, khác với luân chuyển toàn bộ vốn tốn rất nhiều thời gian làm quen.",
+    "explanationEn": "Pairing transfers knowledge while keeping pace, unlike full rotation which costs heavy ramp-up time.",
+    "id": "q21"
+  }
+]

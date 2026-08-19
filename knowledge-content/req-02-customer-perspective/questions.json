@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Expectation gap (khoảng cách kỳ vọng) là gì?",
+    "questionEn": "What is the expectation gap?",
+    "options": [
+      "Chênh lệch giữa ngân sách dự kiến và ngân sách thực tế",
+      "Vực ngăn giữa thứ khách hàng thực sự cần và thứ đội phát triển giao ra dựa trên những gì họ nghe lúc đầu",
+      "Khoảng thời gian giữa lúc duyệt yêu cầu và lúc bắt đầu code",
+      "Sự khác biệt giữa yêu cầu chức năng và phi chức năng"
+    ],
+    "optionsEn": [
+      "The difference between planned and actual budget",
+      "The gulf between what customers really need and what developers deliver based on what they heard at the start",
+      "The time between approving requirements and starting to code",
+      "The difference between functional and nonfunctional requirements"
+    ],
+    "answer": 1,
+    "explanation": "Khoảng cách này lớn dần khi không có tiếp xúc với khách hàng. Cách thu hẹp là tạo nhiều điểm tiếp xúc thường xuyên trong suốt dự án.",
+    "explanationEn": "The gap widens whenever customer contact stops. The way to close it is to arrange frequent contact points throughout the project."
+  },
+  {
+    "id": "q2",
+    "question": "Quan hệ bao hàm nào là ĐÚNG?",
+    "questionEn": "Which containment relationship is CORRECT?",
+    "options": [
+      "User ⊃ Customer ⊃ Stakeholder",
+      "Stakeholder ⊃ Customer ⊃ User",
+      "Customer ⊃ Stakeholder ⊃ User",
+      "Ba khái niệm hoàn toàn tách rời nhau"
+    ],
+    "optionsEn": [
+      "Users ⊃ Customers ⊃ Stakeholders",
+      "Stakeholders ⊃ Customers ⊃ Users",
+      "Customers ⊃ Stakeholders ⊃ Users",
+      "The three are completely separate sets"
+    ],
+    "answer": 1,
+    "explanation": "Customer là tập con của stakeholder, user là tập con của customer. Pháp chế, kiểm toán, nhà cung cấp là stakeholder nhưng không phải customer.",
+    "explanationEn": "Customers are a subset of stakeholders and users are a subset of customers. Legal staff, auditors, and suppliers are stakeholders but not customers."
+  },
+  {
+    "id": "q3",
+    "question": "Một quản lý kho nhận báo cáo hoạt động hằng ngày qua email từ hệ thống nhưng không bao giờ đăng nhập vào hệ thống. Người đó là gì?",
+    "questionEn": "A warehouse manager receives a daily activity report by email from the system but never logs into it. What is that person?",
+    "options": [
+      "Không phải stakeholder, vì không dùng hệ thống",
+      "Indirect user, một dạng customer có yêu cầu hợp lệ",
+      "Chỉ là người nhận thông tin, không cần khai thác yêu cầu",
+      "Direct user"
+    ],
+    "optionsEn": [
+      "Not a stakeholder, since they do not use the system",
+      "An indirect user, a kind of customer with legitimate requirements",
+      "Merely an information recipient, with no requirements to elicit",
+      "A direct user"
+    ],
+    "answer": 1,
+    "explanation": "Indirect user nhận đầu ra mà không chạm vào hệ thống. Khách hàng cách một lớp vẫn là khách hàng và vẫn có yêu cầu cần khai thác.",
+    "explanationEn": "Indirect users receive outputs without touching the system. Your customer once removed is still your customer and still has requirements."
+  },
+  {
+    "id": "q4",
+    "question": "Theo Bill of Rights, khách hàng có quyền thay đổi yêu cầu. Điều gì LUÔN đi kèm quyền này?",
+    "questionEn": "The Bill of Rights says customers may change their requirements. What ALWAYS accompanies that right?",
+    "options": [
+      "Đội phát triển phải hấp thụ thay đổi mà không đổi lịch",
+      "Thay đổi luôn có giá, đôi khi phải đánh đổi với chức năng khác hoặc với lịch và ngân sách",
+      "Thay đổi chỉ được phép trước khi baseline",
+      "Khách hàng phải tự viết lại đặc tả"
+    ],
+    "optionsEn": [
+      "The development team must absorb the change without touching the schedule",
+      "Change always has a price, sometimes demanding trade-offs against other functions, schedule, or budget",
+      "Changes are only allowed before the baseline",
+      "The customer must rewrite the specification themselves"
+    ],
+    "answer": 1,
+    "explanation": "Quyền thay đổi là có thật, nhưng mặt trái của nó là trách nhiệm thông báo sớm và chấp nhận rằng cam kết có thể phải thương lượng lại.",
+    "explanationEn": "The right to change is real, but its flip side is the responsibility to communicate changes promptly and accept that commitments may need renegotiating."
+  },
+  {
+    "id": "q5",
+    "question": "Khách hàng nói sản phẩm phải user-friendly và robust. Theo Bill of Rights, BA nên làm gì?",
+    "questionEn": "A customer says the product must be user-friendly and robust. According to the Bill of Rights, what should the BA do?",
+    "options": [
+      "Ghi nguyên văn vào SRS vì đó là điều khách hàng muốn",
+      "Bỏ qua vì đây không phải yêu cầu thực sự",
+      "Hỏi cụ thể đặc tính nào khiến khách hàng thấy dễ dùng hoặc ổn định, kể cả ví dụ từ hệ thống hiện tại",
+      "Để lập trình viên tự quyết định vì đó là vấn đề thiết kế"
+    ],
+    "optionsEn": [
+      "Record it verbatim in the SRS because that is what the customer wants",
+      "Ignore it because it is not a real requirement",
+      "Ask which specific characteristics mean easy to use or robust to them, including examples from their current systems",
+      "Let developers decide, since it is a design matter"
+    ],
+    "answer": 2,
+    "explanation": "Các từ này quá chủ quan để lập trình viên hành động. Khách hàng có quyền được hỏi về đặc tính cụ thể, và BA có nghĩa vụ đào sâu để biến chúng thành yêu cầu kiểm chứng được.",
+    "explanationEn": "Such terms are too subjective to guide developers. Customers have the right to be asked about specific characteristics, and the BA must dig until they become verifiable requirements."
+  },
+  {
+    "id": "q6",
+    "question": "Paving the cow paths trong bối cảnh yêu cầu nghĩa là gì?",
+    "questionEn": "What does paving the cow paths mean in a requirements context?",
+    "options": [
+      "Tự động hoá nguyên xi một quy trình nghiệp vụ kém hiệu quả hoặc lỗi thời thay vì cải tiến nó",
+      "Xây dựng hạ tầng trước khi làm tính năng",
+      "Viết yêu cầu bằng ngôn ngữ nghiệp vụ thay vì kỹ thuật",
+      "Ưu tiên tính năng dễ làm trước"
+    ],
+    "optionsEn": [
+      "Automating an ineffective or obsolete business process as-is instead of improving it",
+      "Building infrastructure before features",
+      "Writing requirements in business rather than technical language",
+      "Prioritising the easiest features first"
+    ],
+    "answer": 0,
+    "explanation": "Khách hàng có quyền nghe ý tưởng và phương án thay thế. Một BA giỏi chỉ ra chỗ quy trình hiện tại không còn phù hợp thay vì số hoá nguyên xi cái cũ.",
+    "explanationEn": "Customers have the right to hear ideas and alternatives. A good BA points out where the current process no longer fits, rather than digitising the old one unchanged."
+  },
+  {
+    "id": "q7",
+    "question": "Vì sao nên thảo luận Bill of Rights và Bill of Responsibilities NGAY TỪ ĐẦU dự án?",
+    "questionEn": "Why should the Bill of Rights and Bill of Responsibilities be discussed at the START of a project?",
+    "options": [
+      "Để có tài liệu pháp lý ràng buộc khách hàng",
+      "Để các bên thống nhất kỳ vọng hai chiều, giảm ma sát khi một bên kỳ vọng thứ bên kia không sẵn sàng cung cấp",
+      "Vì quy trình ISO bắt buộc",
+      "Để tính chi phí dự án chính xác hơn"
+    ],
+    "optionsEn": [
+      "To create a legal document binding the customer",
+      "So the parties agree on two-way expectations, reducing friction when one side expects what the other is not ready to provide",
+      "Because an ISO process mandates it",
+      "To estimate project cost more accurately"
+    ],
+    "answer": 1,
+    "explanation": "Đừng giả định các bên biết cách cộng tác. Viết ra cách làm việc chung là công cụ giao tiếp có giá trị suốt dự án.",
+    "explanationEn": "Do not assume participants instinctively know how to collaborate. Writing down how you will work together is a valuable communication tool for the whole project."
+  },
+  {
+    "id": "q8",
+    "question": "Theo Bill of Responsibilities, cách phân bổ thời gian nào của khách hàng hiệu quả hơn?",
+    "questionEn": "According to the Bill of Responsibilities, which allocation of customer time is more effective?",
+    "options": [
+      "Chia nhỏ thành nhiều lát vụn trải dài nhiều tuần",
+      "Vài giờ tập trung liên tục",
+      "Chỉ trả lời qua email để không mất thời gian họp",
+      "Uỷ quyền toàn bộ cho quản lý cấp trên"
+    ],
+    "optionsEn": [
+      "Split into many small fragments spread over weeks",
+      "Several focused, continuous hours",
+      "Answering only by email to avoid meetings",
+      "Delegating everything to a senior manager"
+    ],
+    "answer": 1,
+    "explanation": "Tổng thời gian cần thiết ít hơn khi có vài giờ làm việc tập trung, so với thời gian vụn vặt rải rác — vì mỗi lần quay lại đều tốn chi phí bắt nhịp.",
+    "explanationEn": "The total time required is less with several focused hours than with time spent in bits and pieces strung out over weeks, because every restart costs context."
+  },
+  {
+    "id": "q9",
+    "question": "Khách hàng tuyên bố TẤT CẢ yêu cầu đều ưu tiên cao. Vấn đề là gì?",
+    "questionEn": "A customer declares that ALL requirements are high priority. What is the problem?",
+    "options": [
+      "Không có vấn đề gì, đó là quyền của khách hàng",
+      "Nó không thực tế và không mang tính hợp tác; nó tước đi khả năng ứng phó của project manager khi có biến động",
+      "Nó chỉ gây khó cho tester",
+      "Nó làm chậm quá trình viết SRS"
+    ],
+    "optionsEn": [
+      "There is no problem; it is the customer prerogative",
+      "It is neither realistic nor collaborative, and it removes the project manager ability to respond when reality shifts",
+      "It only makes life harder for testers",
+      "It slows down writing the SRS"
+    ],
+    "answer": 1,
+    "explanation": "Nếu tất cả đều ưu tiên cao thì project manager không biết phải làm gì khi lịch trượt, mất người, hoặc có yêu cầu mới. Đặt ưu tiên thực tế là trách nhiệm của khách hàng.",
+    "explanationEn": "If everything is top priority the project manager has no basis for responding to schedule overruns, staff losses, or new requirements. Setting realistic priorities is a customer responsibility."
+  },
+  {
+    "id": "q10",
+    "question": "Vì sao nên cho lập trình viên và tester review yêu cầu KHI CHÚNG ĐANG HÌNH THÀNH, thay vì chờ tới cuối?",
+    "questionEn": "Why have developers and testers review requirements WHILE THEY ARE EVOLVING rather than at the end?",
+    "options": [
+      "Để họ ký duyệt sớm và không được phản đối về sau",
+      "Họ biết trước điều gì sắp tới, chỉ ra chỗ cần rõ hơn, đề xuất cách rẻ hơn, và phát hiện yêu cầu thiếu như xử lý ngoại lệ",
+      "Để giảm số lượng buổi họp",
+      "Vì quy trình yêu cầu bắt buộc mọi người phải ký"
+    ],
+    "optionsEn": [
+      "So they sign off early and cannot object later",
+      "They see what is coming, spot areas needing clarity, suggest cheaper approaches, and catch missing requirements such as exception handling",
+      "To reduce the number of meetings",
+      "Because the process requires everyone to sign"
+    ],
+    "answer": 1,
+    "explanation": "Lập trình viên thường trở thành nạn nhân của yêu cầu bị ném qua tường. Tham gia sớm giúp họ đóng góp cả những yêu cầu chất lượng nội bộ mà người dùng không nhìn thấy.",
+    "explanationEn": "Developers often become victims of requirements thrown over the wall. Early involvement also lets them contribute internal quality attributes that users never see."
+  },
+  {
+    "id": "q11",
+    "question": "Decision rule trong bối cảnh ra quyết định về yêu cầu là gì?",
+    "questionEn": "What is a decision rule in the context of requirements decision making?",
+    "options": [
+      "Quy tắc kỹ thuật xác định yêu cầu nào được hiện thực trước",
+      "Cách nhóm ra quyết định thống nhất sẽ đi tới quyết định như thế nào, ví dụ đa số, đồng thuận, uỷ quyền hay phủ quyết",
+      "Ngưỡng điểm để một yêu cầu được coi là ưu tiên cao",
+      "Điều khoản hợp đồng về thay đổi phạm vi"
+    ],
+    "optionsEn": [
+      "A technical rule determining which requirement is built first",
+      "How the decision-making group agrees it will arrive at decisions, for example majority, consensus, delegation, or veto",
+      "A score threshold for calling a requirement high priority",
+      "A contract clause about scope change"
+    ],
+    "answer": 1,
+    "explanation": "Không có decision rule nào đúng cho mọi tình huống. Điều quan trọng là nhóm chọn và thống nhất trước khi gặp quyết định lớn đầu tiên.",
+    "explanationEn": "There is no globally correct decision rule. What matters is that the group chooses and agrees one before confronting its first significant decision."
+  },
+  {
+    "id": "q12",
+    "question": "Requirements baseline khác gì so với nghi thức sign-off?",
+    "questionEn": "How does a requirements baseline differ from the sign-off ritual?",
+    "options": [
+      "Baseline là chữ ký của quản lý, sign-off là chữ ký của khách hàng",
+      "Baseline là ảnh chụp tập yêu cầu đã review và đồng thuận làm nền cho công việc tiếp theo; sign-off chỉ là nghi thức và vô nghĩa nếu các bên hiểu khác nhau",
+      "Baseline chỉ dùng trong dự án agile",
+      "Chúng là hai tên gọi của cùng một thứ"
+    ],
+    "optionsEn": [
+      "A baseline is management signature, sign-off is the customer signature",
+      "A baseline is a reviewed, agreed snapshot that serves as the basis for further development; sign-off is only a ritual and is meaningless if the parties understand it differently",
+      "Baselines only apply to agile projects",
+      "They are two names for the same thing"
+    ],
+    "answer": 1,
+    "explanation": "Điều quan trọng là hiểu biết chung về ý nghĩa của chữ ký, không phải bản thân chữ ký. Nhiều tổ chức in rõ ý nghĩa đó ngay trên trang ký.",
+    "explanationEn": "What matters is a shared understanding of what the signature means, not the signature itself. Many organizations print that meaning right on the signature page."
+  },
+  {
+    "id": "q13",
+    "question": "Câu nói nào thể hiện việc DÙNG SAI sign-off?",
+    "questionEn": "Which statement shows sign-off being MISUSED?",
+    "options": [
+      "Tôi đồng ý đây là hiểu biết tốt nhất hiện có, và thay đổi sau này sẽ đi qua quy trình change control",
+      "Anh đã ký rồi, nên chúng tôi chỉ xây đúng thế thôi; muốn khác thì đáng lẽ phải nói từ trước",
+      "Chúng ta cùng review lại phần này trước khi baseline",
+      "Tôi hiểu rằng thay đổi có thể buộc thương lượng lại lịch và chi phí"
+    ],
+    "optionsEn": [
+      "I agree this is our best current understanding, and future changes will go through change control",
+      "You signed off on these requirements, so that is what we are building; if you wanted something else you should have said so",
+      "Let us review this part together before we baseline it",
+      "I understand that changes may require renegotiating schedule and cost"
+    ],
+    "answer": 1,
+    "explanation": "Đây là kiểu dùng sign-off như vũ khí để đóng băng yêu cầu. Nó phủ nhận thực tế rằng không thể biết hết yêu cầu từ sớm.",
+    "explanationEn": "That is using sign-off as a weapon to freeze requirements. It denies the reality that it is impossible to know all the requirements early on."
+  },
+  {
+    "id": "q14",
+    "question": "Một stakeholder quan trọng không chịu ký duyệt yêu cầu. Cách xử lý nào là TỐT NHẤT?",
+    "questionEn": "A key stakeholder will not sign off on the requirements. What is the BEST way to handle it?",
+    "options": [
+      "Gửi email nói rằng im lặng đến thứ Sáu đồng nghĩa với đồng ý, rồi tiếp tục",
+      "Dừng dự án cho tới khi có đủ chữ ký",
+      "Tìm hiểu nguyên nhân, tiến lên thận trọng với giả định chưa có phê duyệt, và ghi việc thiếu phê duyệt vào danh sách rủi ro",
+      "Thay stakeholder đó bằng người dễ tính hơn"
+    ],
+    "optionsEn": [
+      "Email that silence by Friday means agreement, then carry on",
+      "Halt the project until every signature is collected",
+      "Understand why, move forward cautiously assuming you do not have approval, and log the missing approval on the risk list",
+      "Replace that stakeholder with a more agreeable one"
+    ],
+    "answer": 2,
+    "explanation": "Mặc định coi im lặng là đồng ý thực chất là không đạt thoả thuận, và còn làm sứt mẻ quan hệ. Quản lý nó như một rủi ro có theo dõi là cách trung thực hơn.",
+    "explanationEn": "Assuming tacit approval equates to not reaching agreement and risks straining the relationship. Managing it as a tracked risk is the more honest approach."
+  },
+  {
+    "id": "q15",
+    "question": "Trong dự án agile, cái gì đóng vai trò sign-off tối thượng?",
+    "questionEn": "On an agile project, what serves as the ultimate sign-off?",
+    "options": [
+      "Chữ ký của product owner trên product backlog đầu dự án",
+      "Việc product owner chấp nhận phần mềm chạy được, đã kiểm thử, giao ra từ iteration",
+      "Bản SRS được duyệt trước iteration đầu tiên",
+      "Biên bản họp retrospective"
+    ],
+    "optionsEn": [
+      "The product owner signature on the product backlog at project start",
+      "The product owner accepting the working, tested software delivered from the iteration",
+      "An SRS approved before the first iteration",
+      "The retrospective meeting minutes"
+    ],
+    "answer": 1,
+    "explanation": "Agile không phê duyệt toàn bộ phạm vi từ đầu. Tuy vậy vision và các business requirement khác vẫn cần được thiết lập ngay từ đầu dự án.",
+    "explanationEn": "Agile does not approve the full scope up front. Even so, the vision and other business requirements still need to be established at the outset."
+  },
+  {
+    "id": "q16",
+    "question": "Vì sao nên dùng sơ đồ tổ chức khi phân tích stakeholder?",
+    "questionEn": "Why use an organization chart during stakeholder analysis?",
+    "options": [
+      "Để biết ai có quyền phê duyệt ngân sách",
+      "Để phát hiện những phòng ban bị ảnh hưởng mà đội dự án chưa từng nghĩ tới, tránh phát hiện yêu cầu bị thiếu quá muộn",
+      "Để chọn người dẫn dắt buổi workshop",
+      "Để phân bổ yêu cầu cho các hệ thống con"
+    ],
+    "optionsEn": [
+      "To learn who can approve budget",
+      "To surface affected departments the team never thought of, so missing requirements are not discovered far too late",
+      "To pick who will facilitate the workshop",
+      "To allocate requirements to subsystems"
+    ],
+    "answer": 1,
+    "explanation": "Trong ví dụ kinh điển, cả đội không biết phòng thuế tồn tại. Khi cuối cùng gặp họ, hàng loạt yêu cầu bị thiếu xuất hiện và dự án trễ nhiều tháng.",
+    "explanationEn": "In the classic example the team did not know a tax department existed. When they finally met, a long list of missed requirements appeared and the project slipped by months."
+  }
+]

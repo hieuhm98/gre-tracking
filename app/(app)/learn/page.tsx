@@ -5,9 +5,18 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useLang } from "@/context/lang";
 import { useProgress } from "@/context/progress";
-import { flattenLessons, lessonKey, type LessonTopic } from "@/lib/lessons";
+import {
+  flattenLessons,
+  lessonKey,
+  rankTopics,
+  resumeLesson,
+  type LessonTopic,
+  type TopicBucket,
+} from "@/lib/lessons";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
+
+type SortMode = "progress" | "curriculum";
 
 export default function StudyPathPage() {
   const { t, pick } = useLang();
@@ -15,6 +24,8 @@ export default function StudyPathPage() {
   const [topics, setTopics] = useState<LessonTopic[]>([]);
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState<Set<string>>(new Set());
+  const [sort, setSort] = useState<SortMode>("progress");
+  const [track, setTrack] = useState<string>("all");
 
   useEffect(() => {
     fetch("/api/lessons")
@@ -30,10 +41,25 @@ export default function StudyPathPage() {
     [progress.lessons]
   );
 
-  // "Next up" is the first lesson in study order that isn't finished yet.
-  const nextUp = flat.find((x) => !completed.has(lessonKey(x.topic.slug, x.lesson.id))) ?? null;
+  // The list is sorted around the learner: live work first, the obvious next
+  // topic under it, finished work last. "Curriculum" restores the authored order
+  // for anyone who wants to browse the course as designed.
+  const ranked = useMemo(() => rankTopics(topics, progress), [topics, progress]);
+  const ordered = useMemo(() => {
+    const base = sort === "progress" ? ranked : ranked.slice().sort((a, b) => {
+      const ai = topics.indexOf(a.topic);
+      const bi = topics.indexOf(b.topic);
 
-  // Open the topic containing the next lesson, once the data has arrived.
+      return ai - bi;
+    });
+
+    return track === "all" ? base : base.filter((r) => (r.topic.group ?? DEFAULT_GROUP) === track);
+  }, [ranked, sort, track, topics]);
+
+  // "Continue" resumes where the learner left off, not the globally first gap.
+  const nextUp = useMemo(() => resumeLesson(topics, progress), [topics, progress]);
+
+  // Open the topic being resumed, once the data has arrived.
   useEffect(() => {
     if (nextUp) setOpen(new Set([nextUp.topic.slug]));
   }, [nextUp?.topic.slug]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -50,6 +76,12 @@ export default function StudyPathPage() {
   if (loading || !ready) return <div className="text-zinc-500 text-sm p-8">{t("common.loading")}</div>;
 
   const donePct = flat.length > 0 ? Math.round((completed.size / flat.length) * 100) : 0;
+  const bucketLabel: Record<TopicBucket, string> = {
+    "in-progress": pick("Đang học", "In progress"),
+    "not-started": pick("Chưa bắt đầu", "Not started"),
+    completed: pick("Đã xong", "Completed"),
+  };
+  const tracks = GROUPS.filter((g) => topics.some((tp) => (tp.group ?? DEFAULT_GROUP) === g.id));
 
   return (
     <div className="max-w-4xl space-y-6">
@@ -97,85 +129,144 @@ export default function StudyPathPage() {
         )}
       </div>
 
+      {/* Track filter + sort */}
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          onClick={() => setTrack("all")}
+          className={cn(
+            "px-3 py-1.5 rounded-full text-xs font-medium border transition-colors",
+            track === "all"
+              ? "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100"
+              : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          )}
+        >
+          {pick("Tất cả", "All tracks")}
+        </button>
+
+        {tracks.map((g) => (
+          <button
+            key={g.id}
+            type="button"
+            onClick={() => setTrack(g.id)}
+            className={cn(
+              "px-3 py-1.5 rounded-full text-xs font-medium border transition-colors",
+              track === g.id
+                ? "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100"
+                : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            )}
+          >
+            <span className="mr-1">{g.icon}</span>
+            {pick(g.label, g.labelEn)}
+          </button>
+        ))}
+
+        <button
+          type="button"
+          onClick={() => setSort((s) => (s === "progress" ? "curriculum" : "progress"))}
+          className="ml-auto px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+        >
+          {sort === "progress"
+            ? pick("Sắp theo: tiến độ của bạn", "Sorted by: your progress")
+            : pick("Sắp theo: thứ tự khoá học", "Sorted by: curriculum")}
+        </button>
+      </div>
+
       {/* Topics */}
       <div className="space-y-3">
-        {topics.map((topic) => {
+        {ordered.map((entry, idx) => {
+          const topic = entry.topic;
           const group = GROUPS.find((g) => g.id === (topic.group ?? DEFAULT_GROUP));
           const accent = GROUP_ACCENT[group?.accent ?? "blue"];
-          const doneHere = topic.lessons.filter((l) => completed.has(lessonKey(topic.slug, l.id))).length;
           const isOpen = open.has(topic.slug);
+          // Only the progress view groups by bucket, and only at each boundary.
+          const heading =
+            sort === "progress" && (idx === 0 || ordered[idx - 1].bucket !== entry.bucket)
+              ? bucketLabel[entry.bucket]
+              : null;
 
           return (
-            <section
-              key={topic.slug}
-              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden"
-            >
-              <button
-                type="button"
-                onClick={() => toggle(topic.slug)}
-                aria-expanded={isOpen}
-                className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors"
-              >
-                <span className="text-lg shrink-0">{group?.icon ?? "◉"}</span>
-                <div className="min-w-0 flex-1">
-                  <div className="text-sm font-semibold truncate">{pick(topic.title, topic.titleEn)}</div>
-                  <div className="mt-1.5 h-1 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden max-w-xs">
-                    <div
-                      className={cn("h-full rounded-full", accent.bar)}
-                      style={{ width: `${(doneHere / topic.lessons.length) * 100}%` }}
-                    />
-                  </div>
+            <div key={topic.slug} className="space-y-3">
+              {heading && (
+                <div className="text-xs font-semibold uppercase tracking-wide text-zinc-500 pt-2 first:pt-0">
+                  {heading}
                 </div>
-                <span className="text-xs font-mono text-zinc-500 shrink-0">
-                  {doneHere}/{topic.lessons.length}
-                </span>
-                <ChevronDown
-                  className={cn("w-5 h-5 text-zinc-500 shrink-0 transition-transform", isOpen && "rotate-180")}
-                />
-              </button>
+              )}
 
-              {isOpen && (
-                <ul className="border-t border-zinc-200 dark:border-zinc-800 divide-y divide-zinc-200 dark:divide-zinc-800">
-                  {topic.lessons.map((lesson, i) => {
-                    const state = progress.lessons[lessonKey(topic.slug, lesson.id)];
-                    const isDone = state?.completed ?? false;
-                    const isNext = nextUp?.topic.slug === topic.slug && nextUp?.lesson.id === lesson.id;
+              <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => toggle(topic.slug)}
+                  aria-expanded={isOpen}
+                  className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors"
+                >
+                  <span className="text-lg shrink-0">{group?.icon ?? "◉"}</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-sm font-semibold truncate">{pick(topic.title, topic.titleEn)}</div>
+                    <div className="mt-1.5 h-1 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden max-w-xs">
+                      <div
+                        className={cn("h-full rounded-full", accent.bar)}
+                        style={{ width: `${(entry.done / entry.total) * 100}%` }}
+                      />
+                    </div>
+                  </div>
+                  <span className="text-xs font-mono text-zinc-500 shrink-0">
+                    {entry.done}/{entry.total}
+                  </span>
+                  <ChevronDown
+                    className={cn("w-5 h-5 text-zinc-500 shrink-0 transition-transform", isOpen && "rotate-180")}
+                  />
+                </button>
 
-                    return (
-                      <li key={lesson.id}>
-                        <Link
-                          href={`/learn/${topic.slug}/${lesson.id}`}
-                          className={cn(
-                            "flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors",
-                            isNext && "bg-blue-50 dark:bg-blue-950/30"
-                          )}
-                        >
-                          <span
+                {isOpen && (
+                  <ul className="border-t border-zinc-200 dark:border-zinc-800 divide-y divide-zinc-200 dark:divide-zinc-800">
+                    {topic.lessons.map((lesson, i) => {
+                      const state = progress.lessons[lessonKey(topic.slug, lesson.id)];
+                      const isDone = state?.completed ?? false;
+                      const isNext = nextUp?.topic.slug === topic.slug && nextUp?.lesson.id === lesson.id;
+
+                      return (
+                        <li key={lesson.id}>
+                          <Link
+                            href={`/learn/${topic.slug}/${lesson.id}`}
                             className={cn(
-                              "w-6 h-6 rounded-full border flex items-center justify-center text-xs shrink-0",
-                              isDone
-                                ? "bg-green-100 dark:bg-green-900/50 border-green-300 dark:border-green-700 text-green-700 dark:text-green-300"
-                                : "border-zinc-300 dark:border-zinc-700 text-zinc-500"
+                              "flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors",
+                              isNext && "bg-blue-50 dark:bg-blue-950/30"
                             )}
                           >
-                            {isDone ? "✓" : i + 1}
-                          </span>
-                          <span className="flex-1 min-w-0 truncate">{pick(lesson.title, lesson.titleEn)}</span>
-                          {lesson.recap && (
-                            <span className="text-xs text-zinc-500 shrink-0">{pick("ôn tập", "recap")}</span>
-                          )}
-                          {state && state.bestCheckPct > 0 && (
-                            <span className="text-xs font-mono text-zinc-500 shrink-0">{state.bestCheckPct}%</span>
-                          )}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </section>
+                            <span
+                              className={cn(
+                                "w-6 h-6 rounded-full border flex items-center justify-center text-xs shrink-0",
+                                isDone
+                                  ? "bg-green-100 dark:bg-green-900/50 border-green-300 dark:border-green-700 text-green-700 dark:text-green-300"
+                                  : "border-zinc-300 dark:border-zinc-700 text-zinc-500"
+                              )}
+                            >
+                              {isDone ? "✓" : i + 1}
+                            </span>
+                            <span className="flex-1 min-w-0 truncate">{pick(lesson.title, lesson.titleEn)}</span>
+                            {lesson.recap && (
+                              <span className="text-xs text-zinc-500 shrink-0">{pick("ôn tập", "recap")}</span>
+                            )}
+                            {state && state.bestCheckPct > 0 && (
+                              <span className="text-xs font-mono text-zinc-500 shrink-0">{state.bestCheckPct}%</span>
+                            )}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </section>
+            </div>
           );
         })}
+
+        {ordered.length === 0 && (
+          <p className="text-sm text-zinc-500 p-4">
+            {pick("Không có chủ đề nào trong nhóm này.", "No topics in this track yet.")}
+          </p>
+        )}
       </div>
     </div>
   );

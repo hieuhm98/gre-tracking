@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 7,
   "title": "Web hoạt động thế nào?",
   "titleEn": "How Does the Web Work?",
   "description": "URL, request/response, browser rendering, frontend vs backend và CDN.",

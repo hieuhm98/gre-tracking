@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao mô hình hoá & chọn mô hình phù hợp",
+      "titleEn": "Why model & selecting the right representation",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Data flow diagram & swimlane diagram",
+      "titleEn": "Data flow diagrams & swimlane diagrams",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "State-transition diagram & dialog map",
+      "titleEn": "State-transition diagrams & dialog maps",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Decision table, event-response & UML",
+      "titleEn": "Decision tables, event-response tables & UML",
+      "sections": [7, 8, 9],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Mô hình dữ liệu, data dictionary & báo cáo",
+      "titleEn": "Data models, the data dictionary & reports",
+      "sections": [10, 11],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [12, 13],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

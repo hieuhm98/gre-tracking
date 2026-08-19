@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Vì sao domain knowledge quyết định giá trị của một BA nhiều hơn kỹ thuật phân tích?",
+    "questionEn": "Why does domain knowledge determine a BA's value more than analysis technique?",
+    "options": [
+      "Vì kỹ thuật phân tích học được trong vài tháng, còn domain knowledge cần nhiều năm tích luỹ",
+      "Vì kỹ thuật phân tích không quan trọng",
+      "Vì nhà tuyển dụng chỉ hỏi về domain",
+      "Vì domain knowledge được trả lương riêng"
+    ],
+    "optionsEn": [
+      "Because analysis technique can be learned in months while domain knowledge takes years to accumulate",
+      "Because analysis technique does not matter",
+      "Because employers only ask about domain",
+      "Because domain knowledge is paid separately"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng là lý do người chuyển ngành từ kế toán, ngân hàng hay y tế có lợi thế thật: họ mang theo thứ khó dạy nhất.",
+    "explanationEn": "This is also why career changers from accounting, banking, or healthcare have a real advantage: they bring the hardest thing to teach."
+  },
+  {
+    "id": "q2",
+    "question": "Domain knowledge mang lại ba lợi thế cụ thể nào?",
+    "questionEn": "Which three concrete advantages does domain knowledge bring?",
+    "options": [
+      "Đặt được câu hỏi người khác không nghĩ ra; nhận ra khi có gì đó sai; được người làm nghiệp vụ tin tưởng nhanh hơn",
+      "Viết tài liệu nhanh hơn; vẽ sơ đồ đẹp hơn; dùng công cụ thành thạo hơn",
+      "Ước tính chính xác hơn; lập kế hoạch tốt hơn; quản lý rủi ro giỏi hơn",
+      "Lập trình được; kiểm thử được; triển khai được"
+    ],
+    "optionsEn": [
+      "Asking questions others never think of; noticing when something is wrong; earning business trust faster",
+      "Writing documents faster; drawing prettier diagrams; using tools better",
+      "Estimating more accurately; planning better; managing risk better",
+      "Being able to code, test, and deploy"
+    ],
+    "answer": 0,
+    "explanation": "Người làm nghiệp vụ mở lòng với người hiểu công việc của họ, và đóng lại với người phải giải thích từ đầu mọi thuật ngữ.",
+    "explanationEn": "Business people open up to someone who understands their work and close down with someone who needs every term explained."
+  },
+  {
+    "id": "q3",
+    "question": "Việc đầu tiên nên làm khi vào một domain hoàn toàn mới là gì?",
+    "questionEn": "What should you do first when entering a completely new domain?",
+    "options": [
+      "Lập glossary cá nhân ngay từ ngày đầu và không giả vờ hiểu khi gặp thuật ngữ lạ",
+      "Đọc hết tài liệu quy trình của công ty",
+      "Thi lấy chứng chỉ về ngành đó",
+      "Chờ đội hướng dẫn khi cần"
+    ],
+    "optionsEn": [
+      "Start a personal glossary on day one and never pretend to understand an unfamiliar term",
+      "Read all the company's process documentation",
+      "Take a certification in that industry",
+      "Wait for the team to explain when needed"
+    ],
+    "answer": 0,
+    "explanation": "Câu em chưa rõ thuật ngữ này, anh giải thích giúp em được không tạo uy tín nhiều hơn là gật đầu rồi đoán sai.",
+    "explanationEn": "Saying I am not clear on this term, could you explain it builds more credibility than nodding and guessing wrong."
+  },
+  {
+    "id": "q4",
+    "question": "Câu hỏi tổng quát nào giúp hiểu nhanh nhất một domain mới?",
+    "questionEn": "Which broad question fastest reveals a new domain?",
+    "options": [
+      "Doanh nghiệp này kiếm tiền như thế nào, và điều gì làm họ mất tiền?",
+      "Công ty có bao nhiêu nhân viên?",
+      "Hệ thống hiện tại dùng công nghệ gì?",
+      "Ai là đối thủ cạnh tranh chính?"
+    ],
+    "optionsEn": [
+      "How does this business make money, and what makes it lose money?",
+      "How many employees does the company have?",
+      "What technology does the current system use?",
+      "Who are the main competitors?"
+    ],
+    "answer": 0,
+    "explanation": "Câu trả lời cho câu hỏi này định hình cách bạn ưu tiên mọi thứ sau đó, vì nó cho biết giá trị nghiệp vụ thật nằm ở đâu.",
+    "explanationEn": "The answer shapes how you prioritize everything afterwards, because it reveals where the real business value sits."
+  },
+  {
+    "id": "q5",
+    "question": "Nguồn học domain nhanh nhất mà ít người dùng là gì?",
+    "questionEn": "What is the fastest domain-learning source few people use?",
+    "options": [
+      "Ngồi cạnh một người vận hành nửa ngày và xem họ làm việc thật",
+      "Đọc tài liệu quy trình chính thức của công ty",
+      "Tham dự các buổi đào tạo nội bộ",
+      "Đọc báo cáo tài chính của doanh nghiệp"
+    ],
+    "optionsEn": [
+      "Sitting beside an operations person for half a day and watching them really work",
+      "Reading the company's official process documentation",
+      "Attending internal training sessions",
+      "Reading the company's financial reports"
+    ],
+    "answer": 0,
+    "explanation": "Bạn học được nhiều hơn so với đọc tài liệu quy trình trong một tuần, vì bạn thấy được khoảng cách giữa quy trình trên giấy và quy trình thực tế.",
+    "explanationEn": "You learn more than from a week of process documentation, because you see the gap between the documented and the actual process."
+  },
+  {
+    "id": "q6",
+    "question": "Chỉ báo nào cho thấy bạn đã có domain knowledge đủ dùng?",
+    "questionEn": "Which sign shows you have sufficient domain knowledge?",
+    "options": [
+      "Bạn đoán được câu trả lời trước khi hỏi và thường đúng; bạn nhận ra khi ai đó nói sai; người làm nghiệp vụ hỏi ý kiến bạn ngoài phạm vi phần mềm",
+      "Bạn thuộc lòng mọi thuật ngữ trong glossary",
+      "Bạn đã làm trong ngành đó trên hai năm",
+      "Bạn có chứng chỉ liên quan tới ngành"
+    ],
+    "optionsEn": [
+      "You predict answers correctly, notice when someone states the business wrongly, and get asked for opinions beyond the software",
+      "You have memorised every glossary term",
+      "You have been in the industry over two years",
+      "You hold an industry certification"
+    ],
+    "answer": 0,
+    "explanation": "Thời gian làm việc và chứng chỉ không đảm bảo hiểu biết thật; ba chỉ báo hành vi trên mới phản ánh năng lực thực tế.",
+    "explanationEn": "Tenure and certificates do not guarantee real understanding; those three behavioural signs reflect actual capability."
+  },
+  {
+    "id": "q7",
+    "question": "Chứng chỉ ECBA phù hợp với ai?",
+    "questionEn": "Who is the ECBA certification for?",
+    "options": [
+      "Người mới vào nghề hoặc sinh viên, vì nó không yêu cầu kinh nghiệm làm BA",
+      "BA đã có khoảng 7.500 giờ kinh nghiệm",
+      "Quản lý dự án muốn chuyển sang BA",
+      "Product Owner trong đội Scrum"
+    ],
+    "optionsEn": [
+      "Newcomers or students, since it requires no BA experience",
+      "BAs with about 7,500 hours of experience",
+      "Project managers moving into BA work",
+      "Product Owners on Scrum teams"
+    ],
+    "answer": 0,
+    "explanation": "CCBA yêu cầu khoảng 3.750 giờ trong 7 năm gần nhất, còn CBAP yêu cầu khoảng 7.500 giờ trong 10 năm gần nhất.",
+    "explanationEn": "CCBA requires about 3,750 hours in the last 7 years, and CBAP about 7,500 hours in the last 10."
+  },
+  {
+    "id": "q8",
+    "question": "Khi nào chứng chỉ BA thực sự giúp ích?",
+    "questionEn": "When does a BA certification genuinely help?",
+    "options": [
+      "Khi bạn chuyển ngành và cần tín hiệu cho nhà tuyển dụng, hoặc khi khách hàng yêu cầu rõ ràng trong hồ sơ thầu",
+      "Khi bạn đã có portfolio và kinh nghiệm thực chiến rõ ràng",
+      "Khi bạn muốn tăng lương ngay lập tức",
+      "Khi bạn muốn thay thế cho kinh nghiệm dự án"
+    ],
+    "optionsEn": [
+      "When changing careers and needing a signal to employers, or when a client explicitly requires it in a tender",
+      "When you already have a clear portfolio and real experience",
+      "When you want an immediate raise",
+      "When you want to substitute for project experience"
+    ],
+    "answer": 0,
+    "explanation": "Chứng chỉ chứng minh bạn đã học; portfolio chứng minh bạn làm được việc. Nhà tuyển dụng có kinh nghiệm sẽ hỏi về dự án chứ không hỏi về chứng chỉ.",
+    "explanationEn": "A certificate proves you studied; a portfolio proves you can do the work. Experienced interviewers ask about projects, not certificates."
+  },
+  {
+    "id": "q9",
+    "question": "Nhà tuyển dụng đánh giá ứng viên BA theo thứ tự quan trọng nào?",
+    "questionEn": "In what order of importance do employers assess BA candidates?",
+    "options": [
+      "Tư duy phân tích, kỹ năng giao tiếp, kiến thức nền tảng, rồi mới tới kinh nghiệm và domain",
+      "Kinh nghiệm, chứng chỉ, bằng cấp, rồi mới tới kỹ năng mềm",
+      "Kiến thức công cụ, kiến thức kỹ thuật, tiếng Anh, rồi mới tới tư duy",
+      "Bằng cấp đại học, điểm trung bình, chứng chỉ, rồi mới tới kinh nghiệm"
+    ],
+    "optionsEn": [
+      "Analytical thinking, communication, foundational knowledge, then experience and domain",
+      "Experience, certificates, degrees, then soft skills",
+      "Tool knowledge, technical knowledge, English, then thinking",
+      "University degree, GPA, certificates, then experience"
+    ],
+    "answer": 0,
+    "explanation": "Người mới thường chuẩn bị kỹ kiến thức nền và kinh nghiệm nhưng bị loại vì không trình bày được cách mình suy nghĩ.",
+    "explanationEn": "Newcomers usually prepare knowledge and experience thoroughly but get rejected for failing to demonstrate how they think."
+  },
+  {
+    "id": "q10",
+    "question": "Với câu hỏi vì sao bạn muốn làm BA, câu trả lời nào NÊN tránh?",
+    "questionEn": "For why do you want to be a BA, which answer should be AVOIDED?",
+    "options": [
+      "Vì em không muốn lập trình nhưng vẫn muốn làm trong ngành IT",
+      "Vì em thích hiểu vấn đề hơn là viết mã",
+      "Vì em thấy hào hứng khi kết nối những người không hiểu nhau",
+      "Vì em có xu hướng hỏi vì sao nhiều lần thay vì nhận câu trả lời đầu tiên"
+    ],
+    "optionsEn": [
+      "Because I do not want to code but still want to work in IT",
+      "Because I enjoy understanding problems more than writing code",
+      "Because I find energy in connecting people who do not understand each other",
+      "Because I tend to ask why repeatedly rather than accept the first answer"
+    ],
+    "answer": 0,
+    "explanation": "BA không phải lối thoát khỏi kỹ thuật; bạn vẫn phải hiểu kỹ thuật đủ sâu để đặt câu hỏi đúng và nhận ra công việc ẩn.",
+    "explanationEn": "BA is not an escape from technology; you still need enough technical depth to ask the right questions and spot hidden work."
+  },
+  {
+    "id": "q11",
+    "question": "Với câu hỏi làm sao biết một yêu cầu đã đủ tốt, ý chính cần có là gì?",
+    "questionEn": "For how do you know a requirement is good enough, what key points are needed?",
+    "options": [
+      "Kiểm chứng được, không mơ hồ, phủ cả trường hợp ngoại lệ, và tester viết được test case từ nó",
+      "Được khách hàng ký duyệt và lưu trong công cụ quản lý",
+      "Đủ dài và có đầy đủ các trường trong mẫu",
+      "Được lập trình viên xác nhận là khả thi"
+    ],
+    "optionsEn": [
+      "Verifiable, unambiguous, covering exceptions, and a tester can write test cases from it",
+      "Signed off by the customer and stored in a tool",
+      "Long enough with every template field filled",
+      "Confirmed feasible by a developer"
+    ],
+    "answer": 0,
+    "explanation": "Ký duyệt và điền đủ mẫu không đảm bảo chất lượng: một yêu cầu có thể được ký mà vẫn mơ hồ và không kiểm chứng được.",
+    "explanationEn": "Sign-off and a complete template do not guarantee quality: a requirement can be signed and still be vague and unverifiable."
+  },
+  {
+    "id": "q12",
+    "question": "Với câu hỏi tình huống khách hàng yêu cầu tính năng bạn thấy không cần thiết, cách trả lời tốt là gì?",
+    "questionEn": "For the scenario where a customer asks for an unnecessary feature, what is a good answer?",
+    "options": [
+      "Hỏi vì sao nhiều lần để tìm nhu cầu thật; nếu vẫn khác biệt thì trình bày đánh đổi và để họ quyết định",
+      "Từ chối và giải thích rằng tính năng đó không mang lại giá trị",
+      "Chấp nhận và đưa vào backlog mà không thảo luận thêm",
+      "Tự quyết định bỏ tính năng đó khỏi phạm vi"
+    ],
+    "optionsEn": [
+      "Ask why repeatedly to find the real need; if you still differ, present the trade-off and let them decide",
+      "Refuse and explain that the feature adds no value",
+      "Accept it into the backlog without further discussion",
+      "Decide yourself to drop it from scope"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên tắc trả lời câu hỏi tình huống là luôn thể hiện rằng bạn làm rõ và đưa dữ liệu, còn quyết định thuộc về người có thẩm quyền.",
+    "explanationEn": "The principle for situational answers is always showing that you clarify and supply data while the decision belongs to the authority."
+  },
+  {
+    "id": "q13",
+    "question": "Vì sao ứng viên trả lời em sẽ tự quyết định làm theo cách hợp lý nhất thường bị đánh giá thấp?",
+    "questionEn": "Why are candidates who answer I would just decide the most sensible option marked down?",
+    "options": [
+      "Vì điều đó cho thấy họ chưa hiểu ranh giới vai trò: BA làm rõ và đưa dữ liệu, còn quyết định thuộc về người có thẩm quyền",
+      "Vì câu trả lời đó quá ngắn",
+      "Vì nó cho thấy ứng viên thiếu tự tin",
+      "Vì nhà tuyển dụng muốn nghe về công cụ cụ thể"
+    ],
+    "optionsEn": [
+      "Because it shows they misunderstand role boundaries: a BA clarifies and supplies data while the authority decides",
+      "Because the answer is too short",
+      "Because it shows a lack of confidence",
+      "Because interviewers want to hear about specific tools"
+    ],
+    "answer": 0,
+    "explanation": "Nếu BA tự quyết định thay người có thẩm quyền, họ chịu trách nhiệm cho một quyết định không thuộc quyền mình, và quyết định đó thường bị đảo ngược muộn.",
+    "explanationEn": "If a BA decides for the authority, they carry responsibility for a decision that was not theirs, and it usually gets reversed late."
+  },
+  {
+    "id": "q14",
+    "question": "Dự án cá nhân hiệu quả nhất cho portfolio BA gồm những gì?",
+    "questionEn": "What does the most effective personal BA portfolio project contain?",
+    "options": [
+      "Chọn một ứng dụng thật rồi viết user class, quy trình nghiệp vụ, user story kèm AC, business rule, wireframe và test case như thể bạn là BA của nó",
+      "Một bản trình bày về lý thuyết BABOK",
+      "Bản dịch tài liệu BA sang tiếng Việt",
+      "Danh sách các chứng chỉ đã thi"
+    ],
+    "optionsEn": [
+      "Pick a real app and write user classes, the business process, user stories with AC, business rules, wireframes, and test cases as if you were its BA",
+      "A presentation on BABOK theory",
+      "A translation of BA material",
+      "A list of certifications taken"
+    ],
+    "answer": 0,
+    "explanation": "Nó chứng minh bạn làm được việc chứ không chỉ học được lý thuyết, và cho bạn nội dung để nói suốt 20 phút trong buổi phỏng vấn.",
+    "explanationEn": "It proves you can do the work rather than merely study theory, and gives you twenty minutes of substance to discuss in an interview."
+  },
+  {
+    "id": "q15",
+    "question": "Nguồn kinh nghiệm nào phù hợp cho người đang làm ngành khác muốn chuyển sang BA?",
+    "questionEn": "Which experience source suits someone in another field moving into BA work?",
+    "options": [
+      "Tình nguyện tham gia dự án số hoá của chính phòng mình ở công việc hiện tại",
+      "Nghỉ việc để học toàn thời gian",
+      "Thi lấy càng nhiều chứng chỉ càng tốt",
+      "Chờ tới khi có công ty nhận đào tạo từ đầu"
+    ],
+    "optionsEn": [
+      "Volunteering for your own department's digitisation project at your current job",
+      "Quitting to study full time",
+      "Collecting as many certificates as possible",
+      "Waiting for a company that trains from scratch"
+    ],
+    "answer": 0,
+    "explanation": "Cách này vừa cho kinh nghiệm thật vừa tận dụng domain knowledge sẵn có của bạn, đó là kết hợp mạnh nhất cho người chuyển ngành.",
+    "explanationEn": "This gives real experience while leveraging your existing domain knowledge — the strongest combination for a career changer."
+  },
+  {
+    "id": "q16",
+    "question": "Nhận định thẳng thắn nào ĐÚNG về chứng chỉ so với portfolio?",
+    "questionEn": "Which blunt assessment of certificates versus portfolios is correct?",
+    "options": [
+      "Chứng chỉ chứng minh bạn đã học; portfolio chứng minh bạn làm được việc — và ở phần lớn thị trường, portfolio có giá trị hơn",
+      "Chứng chỉ luôn quan trọng hơn portfolio vì được công nhận quốc tế",
+      "Portfolio chỉ dành cho người đã có kinh nghiệm",
+      "Cả hai đều không ảnh hưởng tới kết quả phỏng vấn"
+    ],
+    "optionsEn": [
+      "A certificate proves you studied; a portfolio proves you can do the work — and in most markets the portfolio is worth more",
+      "Certificates always outweigh portfolios because they are internationally recognised",
+      "Portfolios are only for people who already have experience",
+      "Neither affects the interview outcome"
+    ],
+    "answer": 0,
+    "explanation": "Một sản phẩm bạn tự làm và có thể nói về nó suốt 20 phút chính là thứ tạo khác biệt lớn nhất trong phỏng vấn fresher.",
+    "explanationEn": "Something you built yourself and can discuss for twenty minutes is the biggest differentiator in a fresher interview."
+  }
+]

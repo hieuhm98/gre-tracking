@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 1,
+  "title": "Yêu cầu phần mềm cốt lõi",
+  "titleEn": "The Essential Software Requirement",
+  "description": "Định nghĩa yêu cầu, ba cấp độ business – user – functional, yêu cầu phi chức năng, phát triển vs quản lý yêu cầu, và cái giá của yêu cầu tồi.",
+  "descriptionEn": "Defining a requirement, the business–user–functional levels, nonfunctional requirements, development vs management, and the cost of bad requirements."
+}

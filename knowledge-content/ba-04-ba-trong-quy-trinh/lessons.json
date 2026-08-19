@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Cùng một nghề, hai nhịp làm việc · BA trong Waterfall — theo từng giai đoạn",
+      "titleEn": "One craft, two rhythms · The BA in waterfall — phase by phase",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "BA trong Scrum — theo từng sự kiện · BA và Product Owner — phân chia thế nào",
+      "titleEn": "The BA in Scrum — event by event · BA and Product Owner — how to divide the work",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Tài liệu: nhiều bao nhiêu là đủ? · Khi tổ chức chuyển từ Waterfall sang Agile",
+      "titleEn": "Documentation: how much is enough? · When an organization moves from waterfall to Agile",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

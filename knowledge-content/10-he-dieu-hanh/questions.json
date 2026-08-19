@@ -3,8 +3,18 @@
     "id": "q1",
     "question": "Hệ điều hành (OS) có vai trò cơ bản nhất là gì?",
     "questionEn": "What is the most fundamental role of an operating system (OS)?",
-    "options": ["Chỉ để chạy trình duyệt web", "Quản lý tài nguyên phần cứng và cung cấp môi trường cho phần mềm chạy", "Lưu trữ file của người dùng", "Kết nối Internet"],
-    "optionsEn": ["Just to run a web browser", "To manage hardware resources and provide an environment for software to run", "To store the user's files", "To connect to the Internet"],
+    "options": [
+      "Chỉ để chạy trình duyệt web",
+      "Quản lý tài nguyên phần cứng và cung cấp môi trường cho phần mềm chạy",
+      "Lưu trữ file của người dùng",
+      "Kết nối Internet"
+    ],
+    "optionsEn": [
+      "Just to run a web browser",
+      "To manage hardware resources and provide an environment for software to run",
+      "To store the user's files",
+      "To connect to the Internet"
+    ],
     "answer": 1,
     "explanation": "OS là cầu nối giữa phần cứng và phần mềm. Không có OS, ứng dụng không thể chạy vì không có cách nào giao tiếp với CPU, RAM, ổ cứng một cách có tổ chức.",
     "explanationEn": "The OS is the bridge between hardware and software. Without an OS, applications cannot run because there is no organized way to communicate with the CPU, RAM, and disk."
@@ -13,8 +23,18 @@
     "id": "q2",
     "question": "Process (tiến trình) là gì?",
     "questionEn": "What is a process?",
-    "options": ["File đang được lưu trữ", "Một chương trình đang được thực thi", "Một file cấu hình hệ thống", "Kết nối mạng đang hoạt động"],
-    "optionsEn": ["A file being stored", "A program that is being executed", "A system configuration file", "An active network connection"],
+    "options": [
+      "File đang được lưu trữ",
+      "Một chương trình đang được thực thi",
+      "Một file cấu hình hệ thống",
+      "Kết nối mạng đang hoạt động"
+    ],
+    "optionsEn": [
+      "A file being stored",
+      "A program that is being executed",
+      "A system configuration file",
+      "An active network connection"
+    ],
     "answer": 1,
     "explanation": "Process = chương trình đang chạy trong RAM. Khi bạn mở Chrome, OS tạo một process Chrome. Đóng Chrome = kết thúc process, giải phóng RAM.",
     "explanationEn": "A process = a program running in RAM. When you open Chrome, the OS creates a Chrome process. Closing Chrome = ending the process and freeing the RAM."
@@ -23,8 +43,18 @@
     "id": "q3",
     "question": "Virtual Memory là gì?",
     "questionEn": "What is virtual memory?",
-    "options": ["RAM được chia sẻ qua mạng", "Dùng ổ cứng làm bộ nhớ tạm khi RAM thật đầy", "RAM được ảo hóa bằng phần mềm", "Bộ nhớ chỉ dùng cho máy ảo (VM)"],
-    "optionsEn": ["RAM shared over the network", "Using the disk as temporary memory when real RAM is full", "RAM virtualized by software", "Memory used only by virtual machines (VMs)"],
+    "options": [
+      "RAM được chia sẻ qua mạng",
+      "Dùng ổ cứng làm bộ nhớ tạm khi RAM thật đầy",
+      "RAM được ảo hóa bằng phần mềm",
+      "Bộ nhớ chỉ dùng cho máy ảo (VM)"
+    ],
+    "optionsEn": [
+      "RAM shared over the network",
+      "Using the disk as temporary memory when real RAM is full",
+      "RAM virtualized by software",
+      "Memory used only by virtual machines (VMs)"
+    ],
     "answer": 1,
     "explanation": "Khi RAM đầy, OS swap dữ liệu ít dùng ra ổ cứng (swap file/partition). Tốc độ chậm hơn RAM nhiều, nên khi máy dùng nhiều virtual memory, hiệu năng giảm đáng kể.",
     "explanationEn": "When RAM is full, the OS swaps rarely used data out to the disk (a swap file/partition). This is much slower than RAM, so when a machine relies heavily on virtual memory, performance drops significantly."
@@ -33,8 +63,18 @@
     "id": "q4",
     "question": "Tại sao server thường dùng CLI thay vì GUI?",
     "questionEn": "Why do servers often use a CLI instead of a GUI?",
-    "options": ["CLI đẹp hơn GUI", "CLI không cần cài đặt", "GUI không hoạt động được trên server", "CLI tiêu tốn ít tài nguyên hơn và phù hợp tự động hóa bằng script"],
-    "optionsEn": ["The CLI looks nicer than a GUI", "The CLI requires no installation", "A GUI cannot work on a server", "The CLI uses fewer resources and is well suited to automation via scripts"],
+    "options": [
+      "CLI đẹp hơn GUI",
+      "CLI không cần cài đặt",
+      "GUI không hoạt động được trên server",
+      "CLI tiêu tốn ít tài nguyên hơn và phù hợp tự động hóa bằng script"
+    ],
+    "optionsEn": [
+      "The CLI looks nicer than a GUI",
+      "The CLI requires no installation",
+      "A GUI cannot work on a server",
+      "The CLI uses fewer resources and is well suited to automation via scripts"
+    ],
     "answer": 3,
     "explanation": "GUI ngốn RAM và CPU. Server cần tài nguyên cho ứng dụng, không phải giao diện. CLI cũng dễ tự động hóa (shell script, CI/CD) và remote access qua SSH.",
     "explanationEn": "A GUI consumes RAM and CPU. Servers need resources for applications, not for a UI. The CLI is also easy to automate (shell scripts, CI/CD) and supports remote access via SSH."
@@ -43,8 +83,18 @@
     "id": "q5",
     "question": "Driver thiết bị có chức năng gì?",
     "questionEn": "What is the function of a device driver?",
-    "options": ["Tăng tốc CPU", "Phần mềm cho phép OS giao tiếp với phần cứng cụ thể", "Lưu trữ mật khẩu người dùng", "Quản lý kết nối mạng"],
-    "optionsEn": ["To speed up the CPU", "Software that lets the OS communicate with specific hardware", "To store user passwords", "To manage network connections"],
+    "options": [
+      "Tăng tốc CPU",
+      "Phần mềm cho phép OS giao tiếp với phần cứng cụ thể",
+      "Lưu trữ mật khẩu người dùng",
+      "Quản lý kết nối mạng"
+    ],
+    "optionsEn": [
+      "To speed up the CPU",
+      "Software that lets the OS communicate with specific hardware",
+      "To store user passwords",
+      "To manage network connections"
+    ],
     "answer": 1,
     "explanation": "Driver là lớp phần mềm trung gian. Khi cắm chuột mới, Windows tải driver tương ứng để OS biết cách 'nói chuyện' với chuột đó. Không có driver → phần cứng không dùng được.",
     "explanationEn": "A driver is an intermediary software layer. When you plug in a new mouse, Windows loads the corresponding driver so the OS knows how to 'talk to' that mouse. Without a driver → the hardware is unusable."
@@ -53,8 +103,18 @@
     "id": "q6",
     "question": "Kernel là gì?",
     "questionEn": "What is the kernel?",
-    "options": ["Phần mềm diệt virus", "Lõi của OS, chạy với đặc quyền cao nhất, trực tiếp tương tác với phần cứng", "Giao diện đồ họa của OS", "Trình quản lý file"],
-    "optionsEn": ["Antivirus software", "The core of the OS, running with the highest privilege and interacting directly with hardware", "The OS's graphical interface", "A file manager"],
+    "options": [
+      "Phần mềm diệt virus",
+      "Lõi của OS, chạy với đặc quyền cao nhất, trực tiếp tương tác với phần cứng",
+      "Giao diện đồ họa của OS",
+      "Trình quản lý file"
+    ],
+    "optionsEn": [
+      "Antivirus software",
+      "The core of the OS, running with the highest privilege and interacting directly with hardware",
+      "The OS's graphical interface",
+      "A file manager"
+    ],
     "answer": 1,
     "explanation": "Kernel là lõi của OS — phần duy nhất có quyền trực tiếp điều khiển CPU, RAM, I/O. Ứng dụng giao tiếp với kernel qua system calls (không được phép trực tiếp truy cập phần cứng).",
     "explanationEn": "The kernel is the core of the OS — the only part with the right to directly control the CPU, RAM, and I/O. Applications communicate with the kernel through system calls (they are not allowed to access hardware directly)."
@@ -63,8 +123,18 @@
     "id": "q7",
     "question": "Lệnh CLI nào dùng để liệt kê file trong Linux/macOS?",
     "questionEn": "Which CLI command is used to list files on Linux/macOS?",
-    "options": ["dir", "list", "ls", "show"],
-    "optionsEn": ["dir", "list", "ls", "show"],
+    "options": [
+      "dir",
+      "list",
+      "ls",
+      "show"
+    ],
+    "optionsEn": [
+      "dir",
+      "list",
+      "ls",
+      "show"
+    ],
     "answer": 2,
     "explanation": "'ls' (list) là lệnh liệt kê file trong Unix/Linux/macOS. 'dir' dùng trên Windows. 'ls -la' hiển thị chi tiết gồm file ẩn, quyền truy cập, kích thước.",
     "explanationEn": "'ls' (list) is the command to list files on Unix/Linux/macOS. 'dir' is used on Windows. 'ls -la' shows details including hidden files, permissions, and sizes."
@@ -73,8 +143,18 @@
     "id": "q8",
     "question": "Thread khác Process ở điểm gì?",
     "questionEn": "How does a thread differ from a process?",
-    "options": ["Thread lớn hơn process", "Thread là đơn vị thực thi nhỏ hơn trong một process, chia sẻ bộ nhớ với nhau", "Process không có bộ nhớ riêng", "Thread chỉ dùng trên Windows"],
-    "optionsEn": ["A thread is larger than a process", "A thread is a smaller unit of execution within a process, sharing memory with other threads", "A process has no memory of its own", "Threads are only used on Windows"],
+    "options": [
+      "Thread lớn hơn process",
+      "Thread là đơn vị thực thi nhỏ hơn trong một process, chia sẻ bộ nhớ với nhau",
+      "Process không có bộ nhớ riêng",
+      "Thread chỉ dùng trên Windows"
+    ],
+    "optionsEn": [
+      "A thread is larger than a process",
+      "A thread is a smaller unit of execution within a process, sharing memory with other threads",
+      "A process has no memory of its own",
+      "Threads are only used on Windows"
+    ],
     "answer": 1,
     "explanation": "Process có bộ nhớ riêng, cách ly với process khác. Thread là 'luồng thực thi' trong process — nhẹ hơn, chia sẻ RAM của process cha. App Chrome dùng nhiều thread để xử lý song song.",
     "explanationEn": "A process has its own memory, isolated from other processes. A thread is an 'execution stream' within a process — lighter weight, sharing the parent process's RAM. Chrome uses many threads to process things in parallel."
@@ -83,8 +163,18 @@
     "id": "q9",
     "question": "Cấu trúc file system trên Linux bắt đầu từ đâu?",
     "questionEn": "Where does the Linux file system structure start?",
-    "options": ["C:\\", "My Computer", "/ (root directory)", "~/home"],
-    "optionsEn": ["C:\\", "My Computer", "/ (root directory)", "~/home"],
+    "options": [
+      "C:\\",
+      "My Computer",
+      "/ (root directory)",
+      "~/home"
+    ],
+    "optionsEn": [
+      "C:\\",
+      "My Computer",
+      "/ (root directory)",
+      "~/home"
+    ],
     "answer": 2,
     "explanation": "Linux/Unix dùng cây thư mục bắt đầu từ '/' (root). Tất cả mọi thứ — file, thiết bị, thư mục — đều nằm dưới /. Windows dùng ổ đĩa (C:\\, D:\\...).",
     "explanationEn": "Linux/Unix uses a directory tree starting from '/' (root). Everything — files, devices, directories — lives under /. Windows uses drives (C:\\, D:\\...)."
@@ -93,8 +183,18 @@
     "id": "q10",
     "question": "Multi-tasking của OS hoạt động như thế nào?",
     "questionEn": "How does the OS's multi-tasking work?",
-    "options": ["Có nhiều CPU cho mỗi ứng dụng", "CPU chuyển đổi cực nhanh giữa các process tạo cảm giác chạy đồng thời", "OS dừng tất cả process trừ một process đang cần CPU", "Mỗi RAM stick chạy một ứng dụng"],
-    "optionsEn": ["There is a separate CPU for each application", "The CPU switches extremely quickly between processes, creating the feeling of running simultaneously", "The OS stops all processes except the one that currently needs the CPU", "Each RAM stick runs one application"],
+    "options": [
+      "Có nhiều CPU cho mỗi ứng dụng",
+      "CPU chuyển đổi cực nhanh giữa các process tạo cảm giác chạy đồng thời",
+      "OS dừng tất cả process trừ một process đang cần CPU",
+      "Mỗi RAM stick chạy một ứng dụng"
+    ],
+    "optionsEn": [
+      "There is a separate CPU for each application",
+      "The CPU switches extremely quickly between processes, creating the feeling of running simultaneously",
+      "The OS stops all processes except the one that currently needs the CPU",
+      "Each RAM stick runs one application"
+    ],
     "answer": 1,
     "explanation": "OS scheduler phân CPU time cho từng process theo lượt. CPU chuyển giữa chúng hàng nghìn lần/giây — quá nhanh để người dùng nhận ra. Đây là 'concurrent' execution, không phải parallel thực sự (trừ khi có nhiều core).",
     "explanationEn": "The OS scheduler allocates CPU time to each process in turns. The CPU switches between them thousands of times per second — too fast for users to notice. This is 'concurrent' execution, not true parallelism (unless there are multiple cores)."
@@ -103,8 +203,18 @@
     "id": "q11",
     "question": "Khi gõ lệnh 'mkdir project' trong CLI, điều gì xảy ra?",
     "questionEn": "When you type 'mkdir project' in the CLI, what happens?",
-    "options": ["Xóa thư mục 'project'", "Tạo thư mục mới tên 'project' tại vị trí hiện tại", "Liệt kê nội dung thư mục 'project'", "Di chuyển vào thư mục 'project'"],
-    "optionsEn": ["Deletes the 'project' directory", "Creates a new directory named 'project' in the current location", "Lists the contents of the 'project' directory", "Moves into the 'project' directory"],
+    "options": [
+      "Xóa thư mục 'project'",
+      "Tạo thư mục mới tên 'project' tại vị trí hiện tại",
+      "Liệt kê nội dung thư mục 'project'",
+      "Di chuyển vào thư mục 'project'"
+    ],
+    "optionsEn": [
+      "Deletes the 'project' directory",
+      "Creates a new directory named 'project' in the current location",
+      "Lists the contents of the 'project' directory",
+      "Moves into the 'project' directory"
+    ],
     "answer": 1,
     "explanation": "'mkdir' = make directory. 'mkdir project' tạo một thư mục mới tên 'project' trong thư mục hiện tại. 'cd project' để vào thư mục, 'rm -rf project' để xóa.",
     "explanationEn": "'mkdir' = make directory. 'mkdir project' creates a new directory named 'project' in the current directory. 'cd project' to enter it, 'rm -rf project' to delete it."
@@ -113,8 +223,18 @@
     "id": "q12",
     "question": "Tại sao cần 'process isolation' trong OS?",
     "questionEn": "Why is 'process isolation' needed in an OS?",
-    "options": ["Tăng tốc độ CPU", "Tiết kiệm RAM", "Ngăn process này can thiệp hoặc đọc bộ nhớ của process khác — bảo mật và ổn định", "Cho phép nhiều người dùng cùng lúc"],
-    "optionsEn": ["To speed up the CPU", "To save RAM", "To prevent one process from interfering with or reading another process's memory — for security and stability", "To allow multiple users at the same time"],
+    "options": [
+      "Tăng tốc độ CPU",
+      "Tiết kiệm RAM",
+      "Ngăn process này can thiệp hoặc đọc bộ nhớ của process khác — bảo mật và ổn định",
+      "Cho phép nhiều người dùng cùng lúc"
+    ],
+    "optionsEn": [
+      "To speed up the CPU",
+      "To save RAM",
+      "To prevent one process from interfering with or reading another process's memory — for security and stability",
+      "To allow multiple users at the same time"
+    ],
     "answer": 2,
     "explanation": "Process isolation: nếu Chrome bị hack, attacker chỉ có thể truy cập bộ nhớ của Chrome process, không đọc được dữ liệu của process ngân hàng đang mở. Cũng ngăn bug của app A crash app B.",
     "explanationEn": "Process isolation: if Chrome is hacked, the attacker can only access the Chrome process's memory, not the data of an open banking process. It also prevents a bug in app A from crashing app B."
@@ -123,8 +243,18 @@
     "id": "q13",
     "question": "Linux được dùng phổ biến trên server vì lý do gì?",
     "questionEn": "Why is Linux widely used on servers?",
-    "options": ["Linux có giao diện đẹp nhất", "Linux miễn phí, ổn định, bảo mật cao, hiệu năng tốt và có thể tùy chỉnh sâu", "Linux dễ sử dụng hơn Windows", "Linux hỗ trợ tốt hơn các phần mềm doanh nghiệp"],
-    "optionsEn": ["Linux has the nicest interface", "Linux is free, stable, highly secure, performant, and deeply customizable", "Linux is easier to use than Windows", "Linux has better support for enterprise software"],
+    "options": [
+      "Linux có giao diện đẹp nhất",
+      "Linux miễn phí, ổn định, bảo mật cao, hiệu năng tốt và có thể tùy chỉnh sâu",
+      "Linux dễ sử dụng hơn Windows",
+      "Linux hỗ trợ tốt hơn các phần mềm doanh nghiệp"
+    ],
+    "optionsEn": [
+      "Linux has the nicest interface",
+      "Linux is free, stable, highly secure, performant, and deeply customizable",
+      "Linux is easier to use than Windows",
+      "Linux has better support for enterprise software"
+    ],
     "answer": 1,
     "explanation": "Linux: mã nguồn mở (miễn phí), cộng đồng lớn, rất ổn định (uptime năm trời không restart), bảo mật tốt, nhẹ (chạy không cần GUI), và phù hợp tự động hóa qua shell script.",
     "explanationEn": "Linux: open source (free), a large community, very stable (uptime of years without a restart), good security, lightweight (runs without a GUI), and well suited to automation via shell scripts."
@@ -133,8 +263,18 @@
     "id": "q14",
     "question": "Sự khác biệt giữa Windows File System và Linux File System?",
     "questionEn": "What is the difference between the Windows file system and the Linux file system?",
-    "options": ["Windows không có file system", "Windows dùng ổ đĩa (C:\\, D:\\) làm gốc, Linux dùng cây thư mục đơn bắt đầu từ /", "Linux không hỗ trợ nhiều ổ đĩa", "Chúng hoàn toàn giống nhau"],
-    "optionsEn": ["Windows has no file system", "Windows uses drives (C:\\, D:\\) as roots, while Linux uses a single directory tree starting from /", "Linux does not support multiple drives", "They are completely identical"],
+    "options": [
+      "Windows không có file system",
+      "Windows dùng ổ đĩa (C:\\, D:\\) làm gốc, Linux dùng cây thư mục đơn bắt đầu từ /",
+      "Linux không hỗ trợ nhiều ổ đĩa",
+      "Chúng hoàn toàn giống nhau"
+    ],
+    "optionsEn": [
+      "Windows has no file system",
+      "Windows uses drives (C:\\, D:\\) as roots, while Linux uses a single directory tree starting from /",
+      "Linux does not support multiple drives",
+      "They are completely identical"
+    ],
     "answer": 1,
     "explanation": "Windows: mỗi ổ đĩa là gốc riêng (C:\\, D:\\). Linux: một cây duy nhất từ /, các ổ đĩa được 'mount' vào thư mục (ví dụ /mnt/disk2). Cách tiếp cận thống nhất hơn.",
     "explanationEn": "Windows: each drive is its own root (C:\\, D:\\). Linux: a single tree from /, with drives 'mounted' into directories (e.g. /mnt/disk2). A more unified approach."
@@ -143,10 +283,120 @@
     "id": "q15",
     "question": "System call trong OS là gì?",
     "questionEn": "What is a system call in an OS?",
-    "options": ["Cuộc gọi điện thoại qua VoIP", "Cơ chế ứng dụng yêu cầu dịch vụ từ kernel (như đọc file, tạo process)", "Lệnh CLI đặc biệt của hệ thống", "Cổng mạng dành riêng cho OS"],
-    "optionsEn": ["A phone call over VoIP", "The mechanism by which an application requests a service from the kernel (such as reading a file or creating a process)", "A special system CLI command", "A network port reserved for the OS"],
+    "options": [
+      "Cuộc gọi điện thoại qua VoIP",
+      "Cơ chế ứng dụng yêu cầu dịch vụ từ kernel (như đọc file, tạo process)",
+      "Lệnh CLI đặc biệt của hệ thống",
+      "Cổng mạng dành riêng cho OS"
+    ],
+    "optionsEn": [
+      "A phone call over VoIP",
+      "The mechanism by which an application requests a service from the kernel (such as reading a file or creating a process)",
+      "A special system CLI command",
+      "A network port reserved for the OS"
+    ],
     "answer": 1,
     "explanation": "Ứng dụng không được trực tiếp truy cập phần cứng. Khi cần (đọc file, dùng mạng, cấp RAM), app gọi system call → kernel thực hiện với đặc quyền cao → trả kết quả về app. Bảo mật và ổn định hơn.",
     "explanationEn": "Applications are not allowed to access hardware directly. When needed (reading a file, using the network, allocating RAM), the app makes a system call → the kernel performs it with high privilege → returns the result to the app. This is more secure and stable."
+  },
+  {
+    "question": "Vì sao đội vận hành thường thao tác máy chủ qua CLI thay vì giao diện đồ hoạ?",
+    "questionEn": "Why do operations teams usually manage servers through the CLI rather than a GUI?",
+    "options": [
+      "Vì lệnh có thể ghi thành kịch bản, lặp lại chính xác và chạy từ xa trên hàng trăm máy",
+      "Vì CLI đẹp hơn GUI",
+      "Vì máy chủ không hỗ trợ chuột",
+      "Vì GUI không mã hoá dữ liệu"
+    ],
+    "optionsEn": [
+      "Because commands can be scripted, repeated exactly, and run remotely across hundreds of machines",
+      "Because the CLI looks better",
+      "Because servers do not support a mouse",
+      "Because GUIs do not encrypt data"
+    ],
+    "answer": 0,
+    "explanation": "Khả năng tự động hoá là lý do chính. Một kịch bản chạy giống hệt nhau mọi lần, còn thao tác tay trên GUI dễ sai và không tái lập được.",
+    "explanationEn": "Automation is the main reason. A script runs identically every time, while manual GUI steps are error-prone and not reproducible.",
+    "id": "q16"
+  },
+  {
+    "question": "Process và thread khác nhau ở điểm cốt lõi nào?",
+    "questionEn": "What is the core difference between a process and a thread?",
+    "options": [
+      "Process có vùng nhớ riêng; các thread trong cùng process chia sẻ vùng nhớ đó",
+      "Thread chạy nhanh hơn vì được ưu tiên CPU tuyệt đối",
+      "Process chỉ tồn tại trên Linux",
+      "Thread không cần CPU để chạy"
+    ],
+    "optionsEn": [
+      "A process has its own memory space; threads inside one process share that memory",
+      "Threads run faster because they get absolute CPU priority",
+      "Processes only exist on Linux",
+      "Threads do not need CPU to run"
+    ],
+    "answer": 0,
+    "explanation": "Chia sẻ bộ nhớ khiến thread nhẹ và giao tiếp nhanh, nhưng cũng sinh ra lỗi tranh chấp dữ liệu — nguyên nhân của nhiều bug khó tái hiện.",
+    "explanationEn": "Shared memory makes threads lightweight and fast to communicate, but also creates race conditions — the source of many hard-to-reproduce bugs.",
+    "id": "q17"
+  },
+  {
+    "question": "Ứng dụng chạy tốt trên máy lập trình viên nhưng lỗi trên máy chủ. Khác biệt nào về OS hay gây ra điều này nhất?",
+    "questionEn": "An app runs fine on the developer machine but fails on the server. Which OS difference most often causes this?",
+    "options": [
+      "Hệ thống tệp phân biệt hoa thường trên Linux nhưng không trên Windows, làm sai đường dẫn tệp",
+      "Máy chủ không có màn hình",
+      "Máy chủ dùng bàn phím khác",
+      "Linux không chạy được ứng dụng web"
+    ],
+    "optionsEn": [
+      "Linux file systems are case-sensitive while Windows is not, breaking file paths",
+      "The server has no monitor",
+      "The server uses a different keyboard",
+      "Linux cannot run web applications"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lỗi kinh điển: tệp Logo.png và logo.png là hai tệp khác nhau trên Linux nhưng là một trên Windows.",
+    "explanationEn": "This is a classic defect: Logo.png and logo.png are two different files on Linux but the same file on Windows.",
+    "id": "q18"
+  },
+  {
+    "question": "Kernel đóng vai trò gì trong hệ điều hành?",
+    "questionEn": "What role does the kernel play in an operating system?",
+    "options": [
+      "Là lõi trung gian quản lý CPU, bộ nhớ và thiết bị, cấp phát tài nguyên cho các tiến trình",
+      "Là giao diện đồ hoạ mà người dùng nhìn thấy",
+      "Là trình duyệt tích hợp sẵn",
+      "Là nơi lưu trữ tệp của người dùng"
+    ],
+    "optionsEn": [
+      "The core layer managing CPU, memory, and devices, allocating resources to processes",
+      "The graphical interface the user sees",
+      "The built-in browser",
+      "The place where user files are stored"
+    ],
+    "answer": 0,
+    "explanation": "Kernel đứng giữa phần cứng và phần mềm ứng dụng. Ứng dụng không chạm trực tiếp vào phần cứng mà phải đi qua kernel.",
+    "explanationEn": "The kernel sits between the hardware and application software. Applications never touch hardware directly; they go through the kernel.",
+    "id": "q19"
+  },
+  {
+    "question": "Yêu cầu nói ứng dụng phải chạy trên máy trạm hiện tại của công ty. BA cần làm rõ gì?",
+    "questionEn": "A requirement says the app must run on existing company workstations. What must the BA clarify?",
+    "options": [
+      "Phiên bản hệ điều hành cụ thể, cấu hình tối thiểu và quyền cài đặt của người dùng",
+      "Màu vỏ máy tính",
+      "Nhà cung cấp bàn phím",
+      "Số lượng cổng USB"
+    ],
+    "optionsEn": [
+      "The specific OS version, minimum specs, and whether users have install permission",
+      "The colour of the machine casing",
+      "The keyboard vendor",
+      "The number of USB ports"
+    ],
+    "answer": 0,
+    "explanation": "Đây là ràng buộc môi trường vận hành. Thiếu phiên bản OS và quyền cài đặt, đội phát triển không biết mình bị giới hạn tới đâu.",
+    "explanationEn": "This is an operating-environment constraint. Without the OS version and install rights, the team cannot know what limits it is working under.",
+    "id": "q20"
   }
 ]

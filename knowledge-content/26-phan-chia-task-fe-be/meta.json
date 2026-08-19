@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "ba",
+  "order": 18,
   "title": "Phân Chia Task cho FE & BE",
   "titleEn": "Splitting Tasks Between FE & BE",
   "description": "Kỹ năng BA cần có để breakdown task kỹ thuật, phân biệt trách nhiệm FE/BE và ước lượng effort.",

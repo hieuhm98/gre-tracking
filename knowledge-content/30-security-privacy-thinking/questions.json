@@ -298,5 +298,105 @@
     "answer": 1,
     "explanation": "Câu hỏi security cho báo cáo nhạy cảm: (1) Phân cấp quyền — không phải mọi admin đều xem được mọi thứ. (2) Audit trail — ai xem báo cáo gì, lúc nào (quan trọng cho dữ liệu lương/hiệu suất). (3) Data masking — có cần ẩn bớt số không? (4) Export — xuất ra file có watermark không? Dữ liệu nhân viên = nhạy cảm, BA không nên assume 'admin xem được tất cả'.",
     "explanationEn": "Security questions for a sensitive report: (1) Permission hierarchy — not every admin can see everything. (2) Audit trail — who viewed which report and when (important for salary/performance data). (3) Data masking — do some figures need to be hidden? (4) Export — does the exported file have a watermark? Employee data is sensitive, so the BA should not assume 'admins can see everything'."
+  },
+  {
+    "question": "Threat thinking đòi hỏi BA đặt câu hỏi nào khi đặc tả một tính năng?",
+    "questionEn": "What question does threat thinking require a BA to ask when specifying a feature?",
+    "options": [
+      "Nếu tính năng này bị lạm dụng thì kẻ xấu làm được gì, và hệ thống ngăn điều đó thế nào",
+      "Tính năng này tốn bao nhiêu thời gian phát triển",
+      "Giao diện của tính năng nên có màu gì",
+      "Ai sẽ viết tài liệu hướng dẫn"
+    ],
+    "optionsEn": [
+      "If this feature were abused, what could a bad actor do, and how does the system prevent it",
+      "How long the feature takes to build",
+      "What colour the feature's UI should be",
+      "Who will write the user guide"
+    ],
+    "answer": 0,
+    "explanation": "Mọi tính năng cho phép người dùng nhập liệu, tải tệp lên hoặc truy vấn dữ liệu đều là bề mặt tấn công tiềm năng cần được đặc tả.",
+    "explanationEn": "Every feature accepting input, uploads, or queries is a potential attack surface that must be specified.",
+    "id": "q16"
+  },
+  {
+    "question": "Nguyên tắc Privacy by Design khuyến nghị điều gì?",
+    "questionEn": "What does privacy by design recommend?",
+    "options": [
+      "Chỉ thu thập dữ liệu thực sự cần cho mục đích đã nêu, và bảo vệ chặt những gì đã thu thập",
+      "Thu thập càng nhiều dữ liệu càng tốt để dùng sau này",
+      "Chỉ cần thông báo cho người dùng là đủ",
+      "Bảo mật chỉ cần xử lý ở giai đoạn triển khai"
+    ],
+    "optionsEn": [
+      "Collect only the data genuinely needed for the stated purpose, and protect what you do collect",
+      "Collect as much data as possible for later use",
+      "Notifying users is sufficient",
+      "Security only needs handling at deployment"
+    ],
+    "answer": 0,
+    "explanation": "Dữ liệu không thu thập là dữ liệu không thể bị rò rỉ. Giảm phạm vi thu thập là biện pháp giảm rủi ro rẻ nhất và hiệu quả nhất.",
+    "explanationEn": "Data you never collect cannot leak. Reducing what you gather is the cheapest and most effective risk reduction available.",
+    "id": "q17"
+  },
+  {
+    "question": "Audit trail phục vụ mục đích gì và BA cần đặc tả điều gì?",
+    "questionEn": "What is an audit trail for, and what must a BA specify about it?",
+    "options": [
+      "Ghi lại ai làm gì lúc nào; cần nêu rõ hành động nào được ghi, giữ bao lâu, ai xem được và có sửa được không",
+      "Tăng tốc độ truy vấn cơ sở dữ liệu",
+      "Thay thế cho việc kiểm thử",
+      "Mã hoá toàn bộ dữ liệu người dùng"
+    ],
+    "optionsEn": [
+      "To record who did what and when; specify which actions are logged, retention, who can view, and whether it is editable",
+      "To speed up database queries",
+      "To replace testing",
+      "To encrypt all user data"
+    ],
+    "answer": 0,
+    "explanation": "Nhật ký kiểm toán sửa được thì vô giá trị khi điều tra sự cố. Đây chính là loại chi tiết mà requirements pattern nhắc bạn hỏi.",
+    "explanationEn": "An editable audit log is worthless during an incident investigation. This is exactly the detail a requirements pattern prompts you to ask about.",
+    "id": "q18"
+  },
+  {
+    "question": "Yêu cầu bảo mật nào bắt nguồn trực tiếp từ quy định pháp luật?",
+    "questionEn": "Which security requirement derives directly from regulation?",
+    "options": [
+      "Người dùng EU có quyền yêu cầu xoá dữ liệu cá nhân của mình theo GDPR",
+      "Nút đăng xuất phải nằm ở góc trên bên phải",
+      "Mật khẩu phải có màu ẩn khi nhập",
+      "Trang đăng nhập phải tải trong 2 giây"
+    ],
+    "optionsEn": [
+      "EU users have the right to request deletion of their personal data under GDPR",
+      "The logout button must sit in the top-right corner",
+      "Passwords must be masked when typed",
+      "The login page must load within 2 seconds"
+    ],
+    "answer": 0,
+    "explanation": "Yêu cầu từ quy định thường không thể thương lượng. Truy về nguồn gốc pháp lý cho bạn lý do vững chắc khi ai đó muốn cắt nó khỏi phạm vi.",
+    "explanationEn": "Regulatory requirements are usually non-negotiable. Tracing them to their legal source gives you solid ground when someone wants to cut them from scope.",
+    "id": "q19"
+  },
+  {
+    "question": "Tư duy assume breach nghĩa là gì?",
+    "questionEn": "What does the assume-breach mindset mean?",
+    "options": [
+      "Thiết kế hệ thống với giả định rằng một lúc nào đó kẻ tấn công sẽ vào được, nên phải giới hạn thiệt hại và phát hiện sớm",
+      "Chấp nhận rằng không cần đầu tư vào bảo mật",
+      "Thông báo trước cho người dùng rằng dữ liệu sẽ bị lộ",
+      "Chỉ bảo vệ lớp ngoài cùng của hệ thống"
+    ],
+    "optionsEn": [
+      "Design assuming an attacker will eventually get in, so limit the damage and detect it early",
+      "Accept that security is not worth investing in",
+      "Warn users in advance that data will leak",
+      "Protect only the outermost layer"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do nguyên tắc least privilege, mã hoá dữ liệu khi lưu trữ và audit trail đều quan trọng: chúng giới hạn thiệt hại khi lớp ngoài bị vượt qua.",
+    "explanationEn": "This is why least privilege, encryption at rest, and audit trails all matter: they limit the damage once the perimeter is breached.",
+    "id": "q20"
   }
 ]

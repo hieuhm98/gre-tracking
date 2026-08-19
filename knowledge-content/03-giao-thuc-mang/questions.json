@@ -3,8 +3,18 @@
     "id": "q1",
     "question": "Giao thức mạng (protocol) là gì?",
     "questionEn": "What is a network protocol?",
-    "options": ["Phần mềm cài trên router", "Tập hợp quy tắc và quy ước để các thiết bị giao tiếp với nhau", "Loại cáp mạng vật lý", "Địa chỉ IP của thiết bị"],
-    "optionsEn": ["Software installed on a router", "A set of rules and conventions that lets devices communicate with one another", "A type of physical network cable", "The IP address of a device"],
+    "options": [
+      "Phần mềm cài trên router",
+      "Tập hợp quy tắc và quy ước để các thiết bị giao tiếp với nhau",
+      "Loại cáp mạng vật lý",
+      "Địa chỉ IP của thiết bị"
+    ],
+    "optionsEn": [
+      "Software installed on a router",
+      "A set of rules and conventions that lets devices communicate with one another",
+      "A type of physical network cable",
+      "The IP address of a device"
+    ],
     "answer": 1,
     "explanation": "Giao thức là 'ngôn ngữ chung' — tập quy tắc mà tất cả thiết bị phải tuân theo để có thể hiểu và giao tiếp với nhau.",
     "explanationEn": "A protocol is a 'shared language' — the set of rules that all devices must follow in order to understand and communicate with each other."
@@ -13,8 +23,18 @@
     "id": "q2",
     "question": "TCP khác UDP ở điểm quan trọng nào nhất?",
     "questionEn": "What is the most important way TCP differs from UDP?",
-    "options": ["TCP nhanh hơn UDP", "TCP đảm bảo dữ liệu đến đủ và đúng thứ tự, UDP không đảm bảo điều này", "UDP mã hóa dữ liệu, TCP không", "TCP dùng cho video, UDP dùng cho web"],
-    "optionsEn": ["TCP is faster than UDP", "TCP guarantees that data arrives completely and in the correct order, while UDP does not", "UDP encrypts data while TCP does not", "TCP is used for video while UDP is used for the web"],
+    "options": [
+      "TCP nhanh hơn UDP",
+      "TCP đảm bảo dữ liệu đến đủ và đúng thứ tự, UDP không đảm bảo điều này",
+      "UDP mã hóa dữ liệu, TCP không",
+      "TCP dùng cho video, UDP dùng cho web"
+    ],
+    "optionsEn": [
+      "TCP is faster than UDP",
+      "TCP guarantees that data arrives completely and in the correct order, while UDP does not",
+      "UDP encrypts data while TCP does not",
+      "TCP is used for video while UDP is used for the web"
+    ],
     "answer": 1,
     "explanation": "TCP có cơ chế xác nhận (acknowledgment) và gửi lại khi mất gói — đáng tin cậy nhưng chậm hơn. UDP không xác nhận — nhanh hơn nhưng có thể mất gói.",
     "explanationEn": "TCP has an acknowledgment mechanism and retransmits lost packets — reliable but slower. UDP does not acknowledge — faster but packets can be lost."
@@ -23,8 +43,18 @@
     "id": "q3",
     "question": "Ứng dụng nào phù hợp dùng UDP thay vì TCP?",
     "questionEn": "Which application is best suited to use UDP instead of TCP?",
-    "options": ["Tải file quan trọng", "Gửi email", "Video call thời gian thực", "Giao dịch ngân hàng"],
-    "optionsEn": ["Downloading an important file", "Sending email", "A real-time video call", "A banking transaction"],
+    "options": [
+      "Tải file quan trọng",
+      "Gửi email",
+      "Video call thời gian thực",
+      "Giao dịch ngân hàng"
+    ],
+    "optionsEn": [
+      "Downloading an important file",
+      "Sending email",
+      "A real-time video call",
+      "A banking transaction"
+    ],
     "answer": 2,
     "explanation": "Video call chấp nhận mất vài gói hình ảnh (không ai để ý) nhưng cần tốc độ cao. TCP gửi lại gói mất gây giật lag, UDP chấp nhận mất gói để duy trì tốc độ.",
     "explanationEn": "A video call can tolerate losing a few image packets (which no one notices) but needs high speed. TCP retransmitting lost packets causes lag, whereas UDP accepts packet loss to maintain speed."
@@ -33,8 +63,18 @@
     "id": "q4",
     "question": "HTTP Status Code 404 có nghĩa là gì?",
     "questionEn": "What does HTTP Status Code 404 mean?",
-    "options": ["Server bị lỗi nội bộ", "Yêu cầu thành công", "Tài nguyên không tìm thấy", "Người dùng chưa xác thực"],
-    "optionsEn": ["An internal server error", "A successful request", "The resource was not found", "The user is not authenticated"],
+    "options": [
+      "Server bị lỗi nội bộ",
+      "Yêu cầu thành công",
+      "Tài nguyên không tìm thấy",
+      "Người dùng chưa xác thực"
+    ],
+    "optionsEn": [
+      "An internal server error",
+      "A successful request",
+      "The resource was not found",
+      "The user is not authenticated"
+    ],
     "answer": 2,
     "explanation": "404 Not Found nghĩa là server không tìm thấy tài nguyên được yêu cầu — URL không tồn tại hoặc đã bị xóa.",
     "explanationEn": "404 Not Found means the server could not find the requested resource — the URL does not exist or has been deleted."
@@ -43,8 +83,18 @@
     "id": "q5",
     "question": "HTTPS khác HTTP ở điểm gì?",
     "questionEn": "How does HTTPS differ from HTTP?",
-    "options": ["HTTPS nhanh hơn HTTP", "HTTPS mã hóa dữ liệu truyền tải bằng TLS/SSL", "HTTPS chỉ dùng cho trang web tĩnh", "HTTPS không cần DNS"],
-    "optionsEn": ["HTTPS is faster than HTTP", "HTTPS encrypts transmitted data using TLS/SSL", "HTTPS is only used for static websites", "HTTPS does not need DNS"],
+    "options": [
+      "HTTPS nhanh hơn HTTP",
+      "HTTPS mã hóa dữ liệu truyền tải bằng TLS/SSL",
+      "HTTPS chỉ dùng cho trang web tĩnh",
+      "HTTPS không cần DNS"
+    ],
+    "optionsEn": [
+      "HTTPS is faster than HTTP",
+      "HTTPS encrypts transmitted data using TLS/SSL",
+      "HTTPS is only used for static websites",
+      "HTTPS does not need DNS"
+    ],
     "answer": 1,
     "explanation": "HTTPS = HTTP + TLS/SSL encryption. Dữ liệu được mã hóa trước khi gửi, kẻ nghe lén không đọc được nội dung.",
     "explanationEn": "HTTPS = HTTP + TLS/SSL encryption. Data is encrypted before being sent, so an eavesdropper cannot read the content."
@@ -53,8 +103,18 @@
     "id": "q6",
     "question": "DNS có chức năng gì?",
     "questionEn": "What is the function of DNS?",
-    "options": ["Phân phối băng thông cho các thiết bị", "Chuyển đổi tên miền (domain) thành địa chỉ IP", "Mã hóa dữ liệu truyền tải", "Kiểm soát tường lửa mạng"],
-    "optionsEn": ["Distributing bandwidth among devices", "Converting domain names into IP addresses", "Encrypting transmitted data", "Controlling the network firewall"],
+    "options": [
+      "Phân phối băng thông cho các thiết bị",
+      "Chuyển đổi tên miền (domain) thành địa chỉ IP",
+      "Mã hóa dữ liệu truyền tải",
+      "Kiểm soát tường lửa mạng"
+    ],
+    "optionsEn": [
+      "Distributing bandwidth among devices",
+      "Converting domain names into IP addresses",
+      "Encrypting transmitted data",
+      "Controlling the network firewall"
+    ],
     "answer": 1,
     "explanation": "DNS (Domain Name System) là 'danh bạ điện thoại' của Internet — chuyển tên dễ nhớ như google.com thành địa chỉ IP mà máy tính dùng để kết nối.",
     "explanationEn": "DNS (Domain Name System) is the 'phone book' of the Internet — converting easy-to-remember names like google.com into the IP addresses computers use to connect."
@@ -63,8 +123,18 @@
     "id": "q7",
     "question": "HTTP Method nào được dùng để LẤY dữ liệu từ server?",
     "questionEn": "Which HTTP method is used to RETRIEVE data from a server?",
-    "options": ["POST", "PUT", "DELETE", "GET"],
-    "optionsEn": ["POST", "PUT", "DELETE", "GET"],
+    "options": [
+      "POST",
+      "PUT",
+      "DELETE",
+      "GET"
+    ],
+    "optionsEn": [
+      "POST",
+      "PUT",
+      "DELETE",
+      "GET"
+    ],
     "answer": 3,
     "explanation": "GET là phương thức HTTP dùng để lấy/đọc dữ liệu. POST gửi dữ liệu mới, PUT/PATCH cập nhật, DELETE xóa.",
     "explanationEn": "GET is the HTTP method used to retrieve/read data. POST sends new data, PUT/PATCH updates, and DELETE removes."
@@ -73,8 +143,18 @@
     "id": "q8",
     "question": "Trong quy trình DNS, khi bạn gõ 'facebook.com', điều gì xảy ra đầu tiên?",
     "questionEn": "In the DNS process, when you type 'facebook.com', what happens first?",
-    "options": ["Browser kết nối ngay đến server Facebook", "Browser kiểm tra cache DNS nội bộ trước", "ISP ngắt kết nối để bảo mật", "Router gửi yêu cầu đến server Facebook"],
-    "optionsEn": ["The browser connects directly to the Facebook server", "The browser checks its local DNS cache first", "The ISP disconnects for security", "The router sends a request to the Facebook server"],
+    "options": [
+      "Browser kết nối ngay đến server Facebook",
+      "Browser kiểm tra cache DNS nội bộ trước",
+      "ISP ngắt kết nối để bảo mật",
+      "Router gửi yêu cầu đến server Facebook"
+    ],
+    "optionsEn": [
+      "The browser connects directly to the Facebook server",
+      "The browser checks its local DNS cache first",
+      "The ISP disconnects for security",
+      "The router sends a request to the Facebook server"
+    ],
     "answer": 1,
     "explanation": "Browser luôn kiểm tra cache DNS nội bộ trước — nếu đã từng truy cập và còn cache, không cần hỏi DNS server nữa, tiết kiệm thời gian.",
     "explanationEn": "The browser always checks its local DNS cache first — if the site was visited before and is still cached, there is no need to query the DNS server again, saving time."
@@ -83,8 +163,18 @@
     "id": "q9",
     "question": "HTTP Status Code 500 báo hiệu vấn đề ở đâu?",
     "questionEn": "Where does HTTP Status Code 500 indicate a problem?",
-    "options": ["Lỗi ở phía người dùng (sai URL)", "Lỗi ở phía server", "Kết nối mạng bị đứt", "Tên miền chưa được đăng ký"],
-    "optionsEn": ["An error on the user's side (wrong URL)", "An error on the server's side", "The network connection is down", "The domain name is not registered"],
+    "options": [
+      "Lỗi ở phía người dùng (sai URL)",
+      "Lỗi ở phía server",
+      "Kết nối mạng bị đứt",
+      "Tên miền chưa được đăng ký"
+    ],
+    "optionsEn": [
+      "An error on the user's side (wrong URL)",
+      "An error on the server's side",
+      "The network connection is down",
+      "The domain name is not registered"
+    ],
     "answer": 1,
     "explanation": "5xx errors là lỗi phía server. 500 Internal Server Error nghĩa là server gặp lỗi xử lý — không phải lỗi của người dùng.",
     "explanationEn": "5xx errors are server-side errors. 500 Internal Server Error means the server encountered a processing error — it is not the user's fault."
@@ -93,8 +183,18 @@
     "id": "q10",
     "question": "Giao thức SSH dùng để làm gì?",
     "questionEn": "What is the SSH protocol used for?",
-    "options": ["Gửi email bảo mật", "Điều khiển server từ xa qua kết nối mã hóa", "Truyền file qua mạng nội bộ", "Phát sóng WiFi bảo mật"],
-    "optionsEn": ["Sending secure email", "Controlling a server remotely over an encrypted connection", "Transferring files within the local network", "Broadcasting secure WiFi"],
+    "options": [
+      "Gửi email bảo mật",
+      "Điều khiển server từ xa qua kết nối mã hóa",
+      "Truyền file qua mạng nội bộ",
+      "Phát sóng WiFi bảo mật"
+    ],
+    "optionsEn": [
+      "Sending secure email",
+      "Controlling a server remotely over an encrypted connection",
+      "Transferring files within the local network",
+      "Broadcasting secure WiFi"
+    ],
     "answer": 1,
     "explanation": "SSH (Secure Shell) cho phép quản trị viên kết nối và điều khiển server từ xa qua terminal, với mọi lệnh được mã hóa.",
     "explanationEn": "SSH (Secure Shell) lets administrators connect to and control a server remotely through a terminal, with every command encrypted."
@@ -103,8 +203,18 @@
     "id": "q11",
     "question": "3-Way Handshake trong TCP diễn ra khi nào?",
     "questionEn": "When does the 3-Way Handshake in TCP take place?",
-    "options": ["Khi truyền file kết thúc", "Khi thiết lập kết nối TCP ban đầu", "Khi có lỗi mạng xảy ra", "Khi DNS phân giải địa chỉ IP"],
-    "optionsEn": ["When a file transfer ends", "When the initial TCP connection is established", "When a network error occurs", "When DNS resolves an IP address"],
+    "options": [
+      "Khi truyền file kết thúc",
+      "Khi thiết lập kết nối TCP ban đầu",
+      "Khi có lỗi mạng xảy ra",
+      "Khi DNS phân giải địa chỉ IP"
+    ],
+    "optionsEn": [
+      "When a file transfer ends",
+      "When the initial TCP connection is established",
+      "When a network error occurs",
+      "When DNS resolves an IP address"
+    ],
     "answer": 1,
     "explanation": "TCP dùng 3-Way Handshake (SYN → SYN-ACK → ACK) để thiết lập kết nối đáng tin cậy TRƯỚC khi truyền bất kỳ dữ liệu nào.",
     "explanationEn": "TCP uses the 3-Way Handshake (SYN → SYN-ACK → ACK) to establish a reliable connection BEFORE any data is transmitted."
@@ -113,8 +223,18 @@
     "id": "q12",
     "question": "Giao thức nào được dùng để GỬI email?",
     "questionEn": "Which protocol is used to SEND email?",
-    "options": ["IMAP", "POP3", "SMTP", "FTP"],
-    "optionsEn": ["IMAP", "POP3", "SMTP", "FTP"],
+    "options": [
+      "IMAP",
+      "POP3",
+      "SMTP",
+      "FTP"
+    ],
+    "optionsEn": [
+      "IMAP",
+      "POP3",
+      "SMTP",
+      "FTP"
+    ],
     "answer": 2,
     "explanation": "SMTP (Simple Mail Transfer Protocol) dùng để gửi email. IMAP và POP3 dùng để nhận/đọc email từ server về client.",
     "explanationEn": "SMTP (Simple Mail Transfer Protocol) is used to send email. IMAP and POP3 are used to receive/read email from the server to the client."
@@ -123,8 +243,18 @@
     "id": "q13",
     "question": "HTTP Method nào phù hợp để CẬP NHẬT một phần thông tin của một bản ghi?",
     "questionEn": "Which HTTP method is appropriate for UPDATING part of a record's information?",
-    "options": ["GET", "POST", "PATCH", "DELETE"],
-    "optionsEn": ["GET", "POST", "PATCH", "DELETE"],
+    "options": [
+      "GET",
+      "POST",
+      "PATCH",
+      "DELETE"
+    ],
+    "optionsEn": [
+      "GET",
+      "POST",
+      "PATCH",
+      "DELETE"
+    ],
     "answer": 2,
     "explanation": "PATCH dùng để cập nhật một phần (partial update). PUT thường dùng để thay thế hoàn toàn. POST tạo mới. GET chỉ đọc.",
     "explanationEn": "PATCH is used for a partial update. PUT is typically used to fully replace. POST creates new records. GET only reads."
@@ -133,8 +263,18 @@
     "id": "q14",
     "question": "Tầng nào trong TCP/IP chịu trách nhiệm định tuyến gói tin?",
     "questionEn": "Which layer in TCP/IP is responsible for routing packets?",
-    "options": ["Tầng ứng dụng", "Tầng vận chuyển", "Tầng mạng (Internet)", "Tầng liên kết"],
-    "optionsEn": ["The Application layer", "The Transport layer", "The Internet (Network) layer", "The Link layer"],
+    "options": [
+      "Tầng ứng dụng",
+      "Tầng vận chuyển",
+      "Tầng mạng (Internet)",
+      "Tầng liên kết"
+    ],
+    "optionsEn": [
+      "The Application layer",
+      "The Transport layer",
+      "The Internet (Network) layer",
+      "The Link layer"
+    ],
     "answer": 2,
     "explanation": "Tầng Mạng (Internet Layer) với giao thức IP chịu trách nhiệm đánh địa chỉ (IP addressing) và định tuyến (routing) gói tin đến đúng đích.",
     "explanationEn": "The Internet layer, using the IP protocol, is responsible for IP addressing and routing packets to their correct destination."
@@ -143,10 +283,120 @@
     "id": "q15",
     "question": "Khi thấy icon ổ khóa 🔒 trên thanh địa chỉ browser, điều đó có nghĩa là?",
     "questionEn": "When you see the padlock icon 🔒 in the browser's address bar, what does it mean?",
-    "options": ["Trang web yêu cầu mật khẩu đăng nhập", "Kết nối đang dùng HTTPS - dữ liệu được mã hóa", "Trang web đã được chặn", "WiFi đang kết nối"],
-    "optionsEn": ["The website requires a login password", "The connection is using HTTPS - the data is encrypted", "The website has been blocked", "WiFi is connecting"],
+    "options": [
+      "Trang web yêu cầu mật khẩu đăng nhập",
+      "Kết nối đang dùng HTTPS - dữ liệu được mã hóa",
+      "Trang web đã được chặn",
+      "WiFi đang kết nối"
+    ],
+    "optionsEn": [
+      "The website requires a login password",
+      "The connection is using HTTPS - the data is encrypted",
+      "The website has been blocked",
+      "WiFi is connecting"
+    ],
     "answer": 1,
     "explanation": "Icon ổ khóa xác nhận trang web dùng HTTPS với chứng chỉ SSL/TLS hợp lệ — mọi dữ liệu trao đổi giữa browser và server được mã hóa.",
     "explanationEn": "The padlock icon confirms the website uses HTTPS with a valid SSL/TLS certificate — all data exchanged between the browser and server is encrypted."
+  },
+  {
+    "question": "Ứng dụng gọi video trực tuyến thường chọn UDP thay vì TCP. Vì sao?",
+    "questionEn": "Live video-calling apps usually pick UDP over TCP. Why?",
+    "options": [
+      "Vì UDP không chờ gửi lại gói mất, nên giữ được độ trễ thấp — một khung hình mất đi ít hại hơn cả cuộc gọi bị khựng",
+      "Vì UDP mã hoá dữ liệu còn TCP thì không",
+      "Vì UDP nhanh hơn nhờ nén dữ liệu",
+      "Vì TCP không hoạt động trên internet"
+    ],
+    "optionsEn": [
+      "Because UDP does not wait to retransmit lost packets, keeping latency low — one dropped frame hurts less than the whole call freezing",
+      "Because UDP encrypts data and TCP does not",
+      "Because UDP is faster thanks to compression",
+      "Because TCP does not work over the internet"
+    ],
+    "answer": 0,
+    "explanation": "TCP bảo đảm mọi gói tin đến đủ và đúng thứ tự, nhưng cái giá là chờ gửi lại. Với thoại và video thời gian thực, độ trễ quan trọng hơn tính toàn vẹn tuyệt đối.",
+    "explanationEn": "TCP guarantees every packet arrives in order, but pays for it with retransmission delay. For real-time audio and video, latency matters more than perfect integrity.",
+    "id": "q16"
+  },
+  {
+    "question": "Khách hàng yêu cầu website phải chạy HTTPS. Điều đó mang lại gì mà HTTP không có?",
+    "questionEn": "A customer requires the site to run on HTTPS. What does that give that HTTP does not?",
+    "options": [
+      "Mã hoá dữ liệu trên đường truyền và xác thực rằng máy chủ đúng là bên nó tuyên bố",
+      "Tốc độ tải trang nhanh gấp đôi",
+      "Tự động sao lưu dữ liệu người dùng",
+      "Loại bỏ nhu cầu xác thực người dùng"
+    ],
+    "optionsEn": [
+      "Encryption of data in transit plus verification that the server really is who it claims to be",
+      "Twice the page load speed",
+      "Automatic backup of user data",
+      "It removes the need to authenticate users"
+    ],
+    "answer": 0,
+    "explanation": "HTTPS bọc HTTP trong TLS: dữ liệu được mã hoá và chứng chỉ xác thực danh tính máy chủ. Nó không thay thế việc đăng nhập hay phân quyền.",
+    "explanationEn": "HTTPS wraps HTTP in TLS: data is encrypted and a certificate verifies the server identity. It does not replace login or authorization.",
+    "id": "q17"
+  },
+  {
+    "question": "Trong mô hình TCP/IP, tầng nào chịu trách nhiệm định tuyến gói tin tới đúng địa chỉ đích?",
+    "questionEn": "In the TCP/IP model, which layer routes packets to the correct destination address?",
+    "options": [
+      "Tầng ứng dụng",
+      "Tầng Internet",
+      "Tầng liên kết dữ liệu",
+      "Tầng giao vận"
+    ],
+    "optionsEn": [
+      "Application layer",
+      "Internet layer",
+      "Link layer",
+      "Transport layer"
+    ],
+    "answer": 1,
+    "explanation": "Tầng Internet (IP) lo địa chỉ và định tuyến. Tầng giao vận (TCP/UDP) lo việc phân phối tới đúng tiến trình và độ tin cậy.",
+    "explanationEn": "The Internet layer (IP) handles addressing and routing. The transport layer (TCP/UDP) handles delivery to the right process and reliability.",
+    "id": "q18"
+  },
+  {
+    "question": "Hệ thống cần gửi email xác nhận đơn hàng tự động. Giao thức nào liên quan trực tiếp nhất?",
+    "questionEn": "A system must send automatic order confirmation emails. Which protocol is most directly involved?",
+    "options": [
+      "FTP",
+      "SSH",
+      "SMTP",
+      "DNS"
+    ],
+    "optionsEn": [
+      "FTP",
+      "SSH",
+      "SMTP",
+      "DNS"
+    ],
+    "answer": 2,
+    "explanation": "SMTP là giao thức gửi email. FTP truyền tệp, SSH đăng nhập máy chủ từ xa an toàn, DNS phân giải tên miền.",
+    "explanationEn": "SMTP is the mail-sending protocol. FTP transfers files, SSH gives secure remote server access, and DNS resolves domain names.",
+    "id": "q19"
+  },
+  {
+    "question": "Vì sao BA nên biết một tính năng dùng giao thức nào khi viết yêu cầu tích hợp?",
+    "questionEn": "Why should a BA know which protocol a feature uses when writing an integration requirement?",
+    "options": [
+      "Vì giao thức quyết định định dạng dữ liệu, cách xử lý lỗi và hành vi khi hệ thống đối tác không phản hồi",
+      "Vì mỗi giao thức có một màu sắc riêng trên sơ đồ",
+      "Vì lập trình viên không được phép chọn giao thức",
+      "Vì giao thức quyết định ngân sách dự án"
+    ],
+    "optionsEn": [
+      "Because the protocol determines the data format, error handling, and behaviour when the partner system does not respond",
+      "Because each protocol has its own colour on diagrams",
+      "Because developers are not allowed to choose the protocol",
+      "Because the protocol determines the project budget"
+    ],
+    "answer": 0,
+    "explanation": "Yêu cầu tích hợp phải nêu rõ định dạng, giao thức và điều gì xảy ra khi bên kia không khả dụng — đó là phần hay bị bỏ sót nhất.",
+    "explanationEn": "An integration requirement must state the format, the protocol, and what happens when the other side is unavailable — the part most often omitted.",
+    "id": "q20"
   }
 ]

@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 14,
   "title": "Flowchart",
   "titleEn": "Flowchart",
   "description": "Ký hiệu chuẩn, cách vẽ luồng xử lý, decision node và ứng dụng trong phân tích nghiệp vụ.",

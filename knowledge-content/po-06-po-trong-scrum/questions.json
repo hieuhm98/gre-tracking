@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Vì sao Scrum tách vai trò quyết định LÀM GÌ khỏi vai trò quyết định LÀM THẾ NÀO?",
+    "questionEn": "Why does Scrum separate deciding WHAT from deciding HOW?",
+    "options": [
+      "Vì khi một người nắm cả hai, áp lực tiến độ luôn thắng chất lượng và người đó sẽ tự cho phép cắt góc kỹ thuật",
+      "Vì một người không đủ thời gian làm cả hai việc",
+      "Vì quy định của Scrum Guide bắt buộc như vậy",
+      "Vì cần có người chịu trách nhiệm khi dự án thất bại"
+    ],
+    "optionsEn": [
+      "Because when one person holds both, schedule pressure always beats quality and they let themselves cut technical corners",
+      "Because one person lacks time for both jobs",
+      "Because the Scrum Guide mandates it",
+      "Because someone must be blamed when the project fails"
+    ],
+    "answer": 0,
+    "explanation": "Sự tách bạch tạo ra một cơ chế kiểm soát tự nhiên giữa giá trị nghiệp vụ và tính bền vững kỹ thuật.",
+    "explanationEn": "The separation creates a natural check between business value and technical sustainability."
+  },
+  {
+    "id": "q2",
+    "question": "PO nói sprint này phải xong cả bảy story. Vấn đề ở đây là gì?",
+    "questionEn": "A PO says all seven stories must be done this sprint. What is wrong?",
+    "options": [
+      "PO đang xâm phạm quyền của đội — PO nói cái gì quan trọng hơn cái gì, còn đội nói bao nhiêu là khả thi",
+      "Bảy story là quá nhiều cho một sprint",
+      "PO nên nói chuyện qua Scrum Master thay vì trực tiếp",
+      "Không có vấn đề gì nếu bảy story đó đều ưu tiên cao"
+    ],
+    "optionsEn": [
+      "The PO is invading the team's authority — the PO says what matters more, the team says how much is feasible",
+      "Seven stories is too many for one sprint",
+      "The PO should speak through the Scrum Master",
+      "Nothing is wrong if all seven are high priority"
+    ],
+    "answer": 0,
+    "explanation": "Khối lượng nhận vào một sprint là quyết định của đội phát triển, dựa trên năng lực thật của họ.",
+    "explanationEn": "Sprint capacity is the development team's decision, based on their real capability."
+  },
+  {
+    "id": "q3",
+    "question": "Buổi sprint planning kéo dài vì đội liên tục hỏi những câu cơ bản về yêu cầu. Đây là dấu hiệu của điều gì?",
+    "questionEn": "Planning runs long because the team keeps asking basic requirement questions. What does this signal?",
+    "options": [
+      "PO chuẩn bị kém — những câu đó lẽ ra đã được giải đáp trong backlog refinement",
+      "Đội phát triển thiếu kinh nghiệm nghiệp vụ",
+      "Buổi planning được phân bổ quá ít thời gian",
+      "Scrum Master điều phối chưa hiệu quả"
+    ],
+    "optionsEn": [
+      "Poor PO preparation — those questions belonged in backlog refinement",
+      "The team lacks domain experience",
+      "Planning was given too little time",
+      "The Scrum Master facilitates poorly"
+    ],
+    "answer": 0,
+    "explanation": "Refinement tốt là cách rẻ nhất để mọi sự kiện Scrum khác diễn ra trơn tru.",
+    "explanationEn": "Good refinement is the cheapest way to make every other Scrum event run smoothly."
+  },
+  {
+    "id": "q4",
+    "question": "Nếu PO tham dự Daily Scrum thì nên hành xử thế nào?",
+    "questionEn": "If the PO attends the Daily Scrum, how should they behave?",
+    "options": [
+      "Chỉ nghe để nắm trở ngại và trả lời câu hỏi nghiệp vụ ngay, không biến buổi này thành cuộc báo cáo tiến độ cho mình",
+      "Yêu cầu từng người báo cáo phần trăm hoàn thành",
+      "Phân công lại công việc cho phù hợp ưu tiên mới",
+      "Không nên tham dự trong mọi trường hợp"
+    ],
+    "optionsEn": [
+      "Listen for impediments and answer business questions on the spot, rather than making it a status report for themselves",
+      "Ask each person for a completion percentage",
+      "Reassign work to match new priorities",
+      "Never attend under any circumstances"
+    ],
+    "answer": 0,
+    "explanation": "Daily Scrum là buổi của đội phát triển; PO không bắt buộc tham dự nhưng có mặt để trả lời nhanh là rất giá trị.",
+    "explanationEn": "The Daily Scrum belongs to the development team; the PO need not attend but answering quickly when present is valuable."
+  },
+  {
+    "id": "q5",
+    "question": "Buổi sprint review chỉ có PO và đội phát triển, không có người dùng thật. Hệ quả là gì?",
+    "questionEn": "A sprint review has only the PO and the team, no real users. What is the consequence?",
+    "options": [
+      "Nó chỉ là buổi trình diễn nội bộ — mất đi mục đích chính là thu phản hồi thật để cập nhật backlog",
+      "Buổi review sẽ ngắn hơn và hiệu quả hơn",
+      "Đội sẽ thoải mái hơn khi demo",
+      "Không ảnh hưởng gì vì PO đại diện cho người dùng"
+    ],
+    "optionsEn": [
+      "It is only an internal demo — losing the main purpose of gathering real feedback to update the backlog",
+      "The review will be shorter and more efficient",
+      "The team demos more comfortably",
+      "No impact, since the PO represents users"
+    ],
+    "answer": 0,
+    "explanation": "PO có trách nhiệm mời stakeholder thật, và cập nhật lại backlog dựa trên phản hồi ngay sau buổi.",
+    "explanationEn": "The PO must invite real stakeholders and update the backlog from their feedback right after."
+  },
+  {
+    "id": "q6",
+    "question": "Khi nào PO nên vắng mặt ở sprint retrospective?",
+    "questionEn": "When should the PO skip a sprint retrospective?",
+    "options": [
+      "Khi sự có mặt của PO khiến đội không dám nói thẳng — nên hỏi Scrum Master và chấp nhận vắng một số buổi",
+      "Luôn luôn, vì retrospective chỉ dành cho đội phát triển",
+      "Khi sprint vừa rồi thất bại nặng",
+      "Khi PO đang bận với backlog refinement"
+    ],
+    "optionsEn": [
+      "When their presence stops the team speaking frankly — ask the Scrum Master and accept missing some sessions",
+      "Always, since retrospectives are only for the development team",
+      "When the sprint failed badly",
+      "When the PO is busy with refinement"
+    ],
+    "answer": 0,
+    "explanation": "PO là một phần của hệ thống làm việc nên nói chung nên tham dự, nhưng tính thẳng thắn của buổi quan trọng hơn.",
+    "explanationEn": "The PO is part of the working system so should generally attend, but the session's candour matters more."
+  },
+  {
+    "question": "Hai lớp cơ sở để PO chấp nhận một hạng mục ở sprint review là gì?",
+    "questionEn": "What are the two layers behind a PO accepting an item at sprint review?",
+    "options": [
+      "Definition of Done chung cho mọi hạng mục, và acceptance criteria riêng cho từng hạng mục",
+      "Ước tính story point và velocity của sprint",
+      "Ý kiến của Scrum Master và của stakeholder",
+      "Kết quả unit test và số dòng code thay đổi"
+    ],
+    "optionsEn": [
+      "A Definition of Done common to all items, and acceptance criteria specific to each item",
+      "Story point estimates and sprint velocity",
+      "The Scrum Master's and stakeholders' opinions",
+      "Unit test results and lines of code changed"
+    ],
+    "answer": 0,
+    "explanation": "Definition of Done do đội và PO thống nhất từ trước, gồm đã code, review, test, tích hợp và cập nhật tài liệu.",
+    "explanationEn": "The Definition of Done is agreed in advance and covers coded, reviewed, tested, integrated, and documented.",
+    "id": "q7"
+  },
+  {
+    "question": "Vì sao không được chấp nhận một hạng mục xong 90 phần trăm?",
+    "questionEn": "Why must a 90-percent-done item not be accepted?",
+    "options": [
+      "Vì chấp nhận công việc dở dang phá huỷ ý nghĩa của velocity và mọi dự báo dựa trên nó",
+      "Vì Scrum Guide cấm điều đó",
+      "Vì stakeholder sẽ không hài lòng khi xem demo",
+      "Vì phần 10 phần trăm còn lại luôn tốn nhiều thời gian nhất"
+    ],
+    "optionsEn": [
+      "Because accepting partial work destroys the meaning of velocity and every forecast built on it",
+      "Because the Scrum Guide forbids it",
+      "Because stakeholders will dislike the demo",
+      "Because the last 10 percent always takes longest"
+    ],
+    "answer": 0,
+    "explanation": "Một hạng mục hoặc đạt hoặc không đạt; không có trạng thái trung gian được tính vào velocity.",
+    "explanationEn": "An item either passes or it does not; there is no intermediate state that counts toward velocity.",
+    "id": "q8"
+  },
+  {
+    "question": "PO phải từ chối ba tới bốn hạng mục mỗi sprint review. Nguyên nhân gốc thường nằm ở đâu?",
+    "questionEn": "A PO rejects three or four items every sprint review. Where does the root cause usually lie?",
+    "options": [
+      "Ở backlog refinement — AC không rõ, đội hiểu sai, hoặc PO không sẵn sàng trả lời trong sprint",
+      "Ở năng lực kỹ thuật của lập trình viên",
+      "Ở việc đội nhận quá nhiều hạng mục mỗi sprint",
+      "Ở việc Definition of Done quá nghiêm ngặt"
+    ],
+    "optionsEn": [
+      "In backlog refinement — unclear AC, misunderstandings, or a PO unavailable during the sprint",
+      "In the developers' technical ability",
+      "In the team taking too many items per sprint",
+      "In an overly strict Definition of Done"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên nhân thường nằm ở phía trước chứ không phải ở lập trình viên, nên hãy sửa refinement trước.",
+    "explanationEn": "The cause sits upstream rather than with the developers, so fix refinement first.",
+    "id": "q9"
+  },
+  {
+    "question": "Giữa sprint có một việc thật sự khẩn cấp. Cách xử lý đúng theo Scrum là gì?",
+    "questionEn": "Something genuinely urgent arrives mid-sprint. What is the correct Scrum response?",
+    "options": [
+      "Thương lượng với đội để bỏ một hạng mục tương đương ra, hoặc trong trường hợp cực đoan là huỷ sprint",
+      "Thêm thẳng hạng mục vào sprint backlog vì nó khẩn cấp",
+      "Yêu cầu đội làm thêm giờ để hoàn thành cả hai",
+      "Đợi tới sprint sau trong mọi trường hợp"
+    ],
+    "optionsEn": [
+      "Negotiate an equivalent item out with the team, or in the extreme case cancel the sprint",
+      "Push the item straight into the sprint backlog since it is urgent",
+      "Ask the team to work overtime to do both",
+      "Always wait for the next sprint"
+    ],
+    "answer": 0,
+    "explanation": "Sprint backlog thuộc về đội, nên mọi thay đổi giữa sprint phải là thương lượng chứ không phải áp đặt.",
+    "explanationEn": "The sprint backlog belongs to the team, so any mid-sprint change must be negotiated rather than imposed.",
+    "id": "q10"
+  },
+  {
+    "question": "Vì sao biến velocity thành chỉ tiêu năng suất lại phản tác dụng?",
+    "questionEn": "Why does turning velocity into a productivity target backfire?",
+    "options": [
+      "Vì đội sẽ thổi phồng ước tính để đạt chỉ tiêu, và bạn mất luôn công cụ dự báo",
+      "Vì velocity không thể đo được chính xác",
+      "Vì Scrum Master sẽ phản đối",
+      "Vì stakeholder không hiểu story point"
+    ],
+    "optionsEn": [
+      "Because the team inflates estimates to hit the target, and you lose the forecasting tool entirely",
+      "Because velocity cannot be measured precisely",
+      "Because the Scrum Master will object",
+      "Because stakeholders do not understand story points"
+    ],
+    "answer": 0,
+    "explanation": "Velocity là công cụ dự báo chứ không phải thước đo năng suất, và nó chỉ có ý nghĩa khi ước tính trung thực.",
+    "explanationEn": "Velocity is a forecasting tool rather than a productivity measure, and it only works when estimates stay honest.",
+    "id": "q11"
+  },
+  {
+    "question": "Rủi ro số một của một đội Scrum liên quan tới PO là gì?",
+    "questionEn": "What is a Scrum team's number one PO-related risk?",
+    "options": [
+      "PO không sẵn sàng — đội bị chặn sẽ tự đoán ý, và đoán sai thì phải làm lại",
+      "PO không có kiến thức kỹ thuật sâu",
+      "PO thay đổi ưu tiên giữa các sprint",
+      "PO không viết được user story chuẩn"
+    ],
+    "optionsEn": [
+      "An unavailable PO — a blocked team guesses, and wrong guesses mean rework",
+      "A PO without deep technical knowledge",
+      "A PO who changes priorities between sprints",
+      "A PO who cannot write proper user stories"
+    ],
+    "answer": 0,
+    "explanation": "Thay đổi ưu tiên giữa các sprint là điều bình thường và được Scrum khuyến khích; vắng mặt mới là vấn đề.",
+    "explanationEn": "Changing priorities between sprints is normal and encouraged by Scrum; absence is the real problem.",
+    "id": "q12"
+  },
+  {
+    "question": "PO nên dừng lại ở đâu khi nói về giải pháp?",
+    "questionEn": "Where should the PO stop when discussing the solution?",
+    "options": [
+      "PO mô tả vấn đề và giá trị; đội thiết kế cách giải quyết — áp đặt giải pháp kỹ thuật làm mất cả quyền của đội lẫn ý tưởng tốt hơn",
+      "PO nên đưa ra thiết kế chi tiết để đội thực hiện nhanh hơn",
+      "PO chỉ nên nói về giao diện, không nói về logic",
+      "PO không nên tham gia thảo luận giải pháp dưới bất kỳ hình thức nào"
+    ],
+    "optionsEn": [
+      "The PO describes the problem and value; the team designs the answer — imposing a technical solution costs both the team's authority and the better idea",
+      "The PO should give a detailed design so the team works faster",
+      "The PO should discuss only UI, never logic",
+      "The PO should not join solution discussions at all"
+    ],
+    "answer": 0,
+    "explanation": "PO vẫn tham gia thảo luận và đặt câu hỏi, nhưng quyết định về cách làm thuộc về đội phát triển.",
+    "explanationEn": "The PO still joins discussions and asks questions, but the decision on approach belongs to the team.",
+    "id": "q13"
+  },
+  {
+    "question": "Vì sao không nên gộp vai trò Product Owner và Scrum Master vào một người?",
+    "questionEn": "Why should one person not hold both Product Owner and Scrum Master roles?",
+    "options": [
+      "Vì hai vai trò căng nhau có chủ ý, và người kiêm cả hai sẽ luôn ưu tiên tiến độ hơn sức khoẻ của đội",
+      "Vì khối lượng công việc của hai vai trò quá lớn",
+      "Vì Scrum Guide cấm tuyệt đối",
+      "Vì đội sẽ không biết nên hỏi ai"
+    ],
+    "optionsEn": [
+      "Because the roles are deliberately in tension, and one person holding both always favours schedule over team health",
+      "Because the combined workload is too large",
+      "Because the Scrum Guide absolutely forbids it",
+      "Because the team will not know who to ask"
+    ],
+    "answer": 0,
+    "explanation": "PO tối ưu cho giá trị sản phẩm còn SM tối ưu cho hiệu quả quy trình và tính bền vững của nhịp làm việc.",
+    "explanationEn": "The PO optimises for product value while the SM optimises for process effectiveness and a sustainable pace.",
+    "id": "q14"
+  },
+  {
+    "question": "Ở tổ chức có cả BA và PO, điều gì là bắt buộc?",
+    "questionEn": "In an organisation with both a BA and a PO, what is mandatory?",
+    "options": [
+      "Quyền quyết định thứ tự backlog chỉ thuộc về một người — hai người cùng sắp xếp là công thức của hỗn loạn",
+      "BA phải báo cáo trực tiếp cho PO",
+      "PO phải viết toàn bộ user story, BA chỉ hỗ trợ",
+      "BA và PO phải cùng tham dự mọi sự kiện Scrum"
+    ],
+    "optionsEn": [
+      "Backlog ordering authority belongs to exactly one person — two people ordering is a recipe for chaos",
+      "The BA must report directly to the PO",
+      "The PO must write every user story with the BA assisting",
+      "BA and PO must both attend every Scrum event"
+    ],
+    "answer": 0,
+    "explanation": "BA có thể làm phần lớn phân tích và viết story, nhưng thứ tự và trách nhiệm về giá trị thuộc về PO.",
+    "explanationEn": "The BA may do most analysis and story writing, but order and value accountability sit with the PO.",
+    "id": "q15"
+  },
+  {
+    "question": "Đội phân tán qua nhiều múi giờ đòi hỏi PO điều chỉnh thế nào?",
+    "questionEn": "How must a PO adapt for a team spread across time zones?",
+    "options": [
+      "Tăng độ chi tiết của acceptance criteria, ghi lại quyết định bằng văn bản, và đảm bảo có một khung giờ trùng nhau mỗi ngày",
+      "Giảm số lượng hạng mục mỗi sprint xuống một nửa",
+      "Chuyển toàn bộ giao tiếp sang email để có bằng chứng",
+      "Yêu cầu đội làm việc theo múi giờ của PO"
+    ],
+    "optionsEn": [
+      "Increase acceptance criteria detail, write decisions down, and guarantee one overlapping hour each day",
+      "Halve the number of items per sprint",
+      "Move all communication to email for evidence",
+      "Require the team to work in the PO's time zone"
+    ],
+    "answer": 0,
+    "explanation": "Chi tiết hơn và ghi chép nhiều hơn là cách bù cho việc đội không thể hỏi PO ngay lập tức.",
+    "explanationEn": "More detail and more written records compensate for the team's inability to ask immediately.",
+    "id": "q16"
+  }
+]

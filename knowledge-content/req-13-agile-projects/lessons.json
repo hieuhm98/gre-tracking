@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Yêu cầu trong agile & vai trò product owner",
+      "titleEn": "Requirements in agile & the product owner role",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Product backlog & user story",
+      "titleEn": "The product backlog & user stories",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Story mapping, ước tính & velocity",
+      "titleEn": "Story mapping, estimation & velocity",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Acceptance criteria & yêu cầu phi chức năng",
+      "titleEn": "Acceptance criteria & nonfunctional requirements",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Tài liệu vừa đủ & chuyển sang agile",
+      "titleEn": "Just-enough documentation & transitioning to agile",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

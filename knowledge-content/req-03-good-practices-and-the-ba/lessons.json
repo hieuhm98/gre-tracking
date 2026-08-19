@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Khung quy trình & thực hành khai thác",
+      "titleEn": "The process framework & elicitation practices",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Thực hành phân tích, đặc tả, thẩm định & quản lý",
+      "titleEn": "Analysis, specification, validation & management practices",
+      "sections": [3, 4, 5],
+      "questionIds": ["q4", "q5", "q6", "q7"]
+    },
+    {
+      "id": "l3",
+      "title": "Kiến thức, quản lý dự án & bắt đầu áp dụng",
+      "titleEn": "Knowledge, project management & getting started",
+      "sections": [6, 7],
+      "questionIds": ["q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Vai trò & nhiệm vụ của Business Analyst",
+      "titleEn": "The business analyst role & tasks",
+      "sections": [8, 9],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Kỹ năng, kiến thức & con đường trở thành BA",
+      "titleEn": "Skills, knowledge & becoming a BA",
+      "sections": [10, 11],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [12, 13],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

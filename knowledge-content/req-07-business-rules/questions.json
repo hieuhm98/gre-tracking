@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Vì sao business rule KHÔNG được coi là yêu cầu phần mềm, dù nó buộc hệ thống phải có chức năng nhất định?",
+    "questionEn": "Why is a business rule NOT a software requirement, even though it forces the system to contain certain functionality?",
+    "options": [
+      "Vì business rule luôn quá mơ hồ để hiện thực",
+      "Vì nó tồn tại bên ngoài bối cảnh của mọi ứng dụng phần mềm và vẫn đúng ngay cả khi công ty làm thủ công hoàn toàn",
+      "Vì chỉ bộ phận pháp chế mới được viết business rule",
+      "Vì business rule không bao giờ thay đổi"
+    ],
+    "optionsEn": [
+      "Because business rules are always too vague to implement",
+      "Because it exists outside the context of any software application and holds even if the company works entirely manually",
+      "Because only the legal department may write business rules",
+      "Because business rules never change"
+    ],
+    "answer": 1,
+    "explanation": "Quy định nhân viên phải học lại lớp an toàn hoá chất mỗi năm vẫn đúng nếu công ty cấp phát hoá chất hoàn toàn thủ công. Chính CHỨC NĂNG tuân thủ rule mới là yêu cầu phần mềm.",
+    "explanationEn": "The rule that employees must retake annual safety training holds even if chemicals are dispensed entirely by hand. It is the FUNCTIONALITY that complies with the rule that is the software requirement."
+  },
+  {
+    "id": "q2",
+    "question": "Taxonomy business rule gồm năm loại nào?",
+    "questionEn": "What are the five types in the business rules taxonomy?",
+    "options": [
+      "Functional, nonfunctional, external interface, constraint, quality attribute",
+      "Facts, constraints, action enablers, inferences, computations",
+      "Business, user, functional, system, transition",
+      "Static, dynamic, legal, financial, operational"
+    ],
+    "optionsEn": [
+      "Functional, nonfunctional, external interface, constraint, quality attribute",
+      "Facts, constraints, action enablers, inferences, computations",
+      "Business, user, functional, system, transition",
+      "Static, dynamic, legal, financial, operational"
+    ],
+    "answer": 1,
+    "explanation": "Loại thứ sáu là terms, tức các từ và viết tắt quan trọng với nghiệp vụ; bạn có thể gộp chúng vào facts hoặc định nghĩa trong glossary.",
+    "explanationEn": "A sixth category is terms, the words and abbreviations important to the business; you can group them with facts or define them in a glossary."
+  },
+  {
+    "id": "q3",
+    "question": "Phát biểu Mỗi bình hoá chất có một mã vạch định danh duy nhất thuộc loại business rule nào?",
+    "questionEn": "The statement Every chemical container has a unique bar code identifier is which type of business rule?",
+    "options": [
+      "Fact",
+      "Constraint",
+      "Action enabler",
+      "Computation"
+    ],
+    "optionsEn": [
+      "Fact",
+      "Constraint",
+      "Action enabler",
+      "Computation"
+    ],
+    "answer": 0,
+    "explanation": "Fact mô tả mối liên hệ hoặc quan hệ giữa các thuật ngữ nghiệp vụ quan trọng, và thường xuất hiện trong data model. Hãy chỉ thu thập fact nằm trong phạm vi dự án.",
+    "explanationEn": "Facts describe associations or relationships between important business terms and often appear in data models. Only collect facts that are in scope for the project."
+  },
+  {
+    "id": "q4",
+    "question": "Chính sách cửa hàng quy định chỉ giám sát viên và quản lý mới được hoàn tiền mặt trên 50. Rule này hàm ý điều gì cho phần mềm bán hàng?",
+    "questionEn": "A store policy says only supervisors and managers may issue cash refunds over 50. What does this rule imply for the point-of-sale software?",
+    "options": [
+      "Không hàm ý gì, vì đây chỉ là chính sách nhân sự",
+      "Mỗi người dùng phải có mức đặc quyền, và phần mềm phải kiểm tra mức đó trước khi cho phép một số hành động",
+      "Phần mềm phải ghi log mọi giao dịch hoàn tiền",
+      "Phần mềm phải giới hạn số tiền tối đa trong ngăn kéo"
+    ],
+    "optionsEn": [
+      "Nothing, since this is only an HR policy",
+      "Each user must have a privilege level, and the software must check it before permitting certain actions",
+      "The software must log every refund transaction",
+      "The software must cap the maximum cash in the drawer"
+    ],
+    "answer": 1,
+    "explanation": "Constraint có thể mang hàm ý phát triển ngay cả khi không chuyển trực tiếp thành chức năng. Ở đây nó dẫn tới yêu cầu kiểm tra quyền trước khi mở ngăn kéo tiền.",
+    "explanationEn": "Constraints can convey development implications even when they do not translate directly into functionality. Here it leads to a privilege check before opening the cash drawer."
+  },
+  {
+    "id": "q5",
+    "question": "Khác biệt then chốt giữa action enabler và inference là gì, khi cả hai đều viết dạng if/then?",
+    "questionEn": "What is the key difference between an action enabler and an inference, given both use if/then form?",
+    "options": [
+      "Action enabler luôn dài hơn inference",
+      "Mệnh đề then của action enabler dẫn tới một HÀNH ĐỘNG, còn của inference chỉ cung cấp một mẩu TRI THỨC mới",
+      "Inference chỉ áp dụng cho dữ liệu số",
+      "Action enabler do IT viết, inference do nghiệp vụ viết"
+    ],
+    "optionsEn": [
+      "Action enablers are always longer than inferences",
+      "The then clause of an action enabler leads to an ACTION, while an inference only supplies a new piece of KNOWLEDGE",
+      "Inferences only apply to numeric data",
+      "Action enablers are written by IT and inferences by the business"
+    ],
+    "answer": 1,
+    "explanation": "Ví dụ inference: nếu thanh toán không nhận được trong 30 ngày sau hạn thì tài khoản ĐƯỢC COI LÀ quá hạn. Câu này gán một trạng thái, không ra lệnh cho hệ thống làm gì.",
+    "explanationEn": "An inference example: if a payment is not received within 30 days it IS CONSIDERED delinquent. That assigns a state; it does not direct the system to act."
+  },
+  {
+    "id": "q6",
+    "question": "Phát biểu Nếu đã tới ngày hết hạn của một bình hoá chất, thì thông báo cho người đang giữ bình đó thuộc loại nào?",
+    "questionEn": "The statement If the expiration date for a chemical container has been reached, then notify the person who possesses it is which type?",
+    "options": [
+      "Fact",
+      "Inference",
+      "Action enabler",
+      "Computation"
+    ],
+    "optionsEn": [
+      "Fact",
+      "Inference",
+      "Action enabler",
+      "Computation"
+    ],
+    "answer": 2,
+    "explanation": "Rule này kích hoạt một hành động khi điều kiện đúng. Nó là nguồn gốc của feature thông báo cho chủ sở hữu hoá chất về việc hết hạn.",
+    "explanationEn": "The rule triggers an activity when the condition is true. It is the origin of a feature that notifies chemical owners about expiration."
+  },
+  {
+    "id": "q7",
+    "question": "Khi viết computation có nhiều bậc chiết khấu, cách biểu diễn nào TỐT hơn?",
+    "questionEn": "When writing a computation with several discount tiers, which representation is BETTER?",
+    "options": [
+      "Một đoạn văn xuôi dài liệt kê mọi bậc",
+      "Một bảng rule hoặc biểu thức toán học, vì rõ ràng hơn và dễ bảo trì hơn",
+      "Một đoạn mã giả trong SRS",
+      "Một use case riêng cho mỗi bậc chiết khấu"
+    ],
+    "optionsEn": [
+      "A long prose paragraph listing every tier",
+      "A table of rules or a mathematical expression, since it is clearer and easier to maintain",
+      "A pseudocode block in the SRS",
+      "A separate use case for each discount tier"
+    ],
+    "answer": 1,
+    "explanation": "Viết chi tiết computation bằng ngôn ngữ tự nhiên thường dài dòng và gây rối. Bảng cũng giúp lộ ra ngay các khoảng giá trị bị chồng lấn.",
+    "explanationEn": "Representing computation details in natural language can be wordy and confusing. A table also makes overlapping ranges immediately visible."
+  },
+  {
+    "id": "q8",
+    "question": "Các khoảng giá trị 1 đến 5, 5 đến 10, 10 đến 20 mắc lỗi gì?",
+    "questionEn": "What is wrong with the ranges 1 to 5, 5 to 10, and 10 to 20?",
+    "options": [
+      "Chúng không phủ hết mọi giá trị có thể",
+      "Chúng chồng lấn ở giá trị biên, gây nhập nhằng về việc đúng 5 và đúng 10 thuộc khoảng nào",
+      "Chúng dùng số nguyên thay vì số thực",
+      "Chúng không có đơn vị đo"
+    ],
+    "optionsEn": [
+      "They do not cover every possible value",
+      "They overlap at the boundaries, creating ambiguity about which range exactly 5 and exactly 10 belong to",
+      "They use integers instead of real numbers",
+      "They have no unit of measure"
+    ],
+    "answer": 1,
+    "explanation": "Đây là bẫy rất dễ mắc khi viết một tập rule hoặc yêu cầu định nghĩa các khoảng. Hãy dùng từ ngữ rõ ràng như tới, bao gồm, hoặc không bao gồm.",
+    "explanationEn": "This is an easy trap when writing sets of rules or requirements that define ranges. Use precise wording such as through, inclusive, or exclusive."
+  },
+  {
+    "id": "q9",
+    "question": "Quy tắc nào giúp viết business rule ở mức NGUYÊN TỬ?",
+    "questionEn": "Which guideline helps write business rules at the ATOMIC level?",
+    "options": [
+      "Gộp mọi điều kiện liên quan vào một câu để đầy đủ",
+      "Không dùng logic OR ở vế trái của if/then, và tránh logic AND ở vế phải",
+      "Luôn viết rule dưới dạng câu shall",
+      "Giới hạn mỗi rule không quá 10 từ"
+    ],
+    "optionsEn": [
+      "Combine every related condition into one sentence for completeness",
+      "Do not use OR logic on the left-hand side of if/then, and avoid AND logic on the right-hand side",
+      "Always write rules as shall statements",
+      "Limit every rule to no more than 10 words"
+    ],
+    "answer": 1,
+    "explanation": "Rule nguyên tử không thể phân rã thêm. Bạn sẽ có nhiều rule nguyên tử, và functional requirement phụ thuộc vào các tổ hợp khác nhau của chúng.",
+    "explanationEn": "Atomic rules cannot be decomposed further. You will have many of them, and functional requirements depend on various combinations."
+  },
+  {
+    "id": "q10",
+    "question": "Lợi ích bảo trì cụ thể của việc viết rule nguyên tử cho thư viện là gì?",
+    "questionEn": "What concrete maintenance benefit comes from writing the library rules atomically?",
+    "options": [
+      "Tổng số rule giảm xuống đáng kể",
+      "Khi công nghệ video mới xuất hiện, thư viện chỉ cần cập nhật rule về loại phương tiện, không rule nào khác bị ảnh hưởng",
+      "Không cần lưu rule trong kho chung nữa",
+      "Lập trình viên không cần đọc rule nữa"
+    ],
+    "optionsEn": [
+      "The total number of rules drops significantly",
+      "When new video technology arrives, the library only updates the media-types rule and none of the others are affected",
+      "The rules no longer need a shared repository",
+      "Developers no longer need to read the rules"
+    ],
+    "answer": 1,
+    "explanation": "Ngược lại, nếu rule bị gộp thành một câu phức hợp, việc tìm và sửa đúng đoạn mã sẽ tốn thời gian khi chỉ một phần rule thay đổi.",
+    "explanationEn": "By contrast, if rules are merged into one composite statement it becomes time-consuming to find and modify the right code when just one part changes."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao cột static or dynamic trong business rules catalog lại quan trọng với lập trình viên?",
+    "questionEn": "Why does the static-or-dynamic column in a business rules catalog matter to developers?",
+    "options": [
+      "Nó cho biết rule nào cần phê duyệt của lãnh đạo",
+      "Biết rule sẽ thay đổi định kỳ giúp họ cấu trúc phần mềm sao cho chức năng hoặc dữ liệu bị ảnh hưởng dễ cập nhật, ví dụ đưa vào bảng thay vì hard-code",
+      "Nó xác định độ ưu tiên hiện thực của rule",
+      "Nó cho biết rule có cần kiểm thử hay không"
+    ],
+    "optionsEn": [
+      "It says which rules need executive approval",
+      "Knowing a rule changes periodically lets them structure the software so affected functionality or data is easy to update, for example in a table rather than hard-coded",
+      "It sets the implementation priority of the rule",
+      "It says whether the rule needs testing"
+    ],
+    "answer": 1,
+    "explanation": "Cách tính thuế thu nhập thay đổi ít nhất mỗi năm. Định luật của tự nhiên có thể hard-code an toàn; luật lệ của con người thì biến động hơn nhiều.",
+    "explanationEn": "Income tax calculations change at least every year. Laws of nature can safely be hard-coded; laws of humans are much more volatile."
+  },
+  {
+    "id": "q12",
+    "question": "Ai NÊN sở hữu kho business rule của tổ chức?",
+    "questionEn": "Who SHOULD own the organization business rules repository?",
+    "options": [
+      "Phòng IT, vì họ hiện thực rule",
+      "Đội dự án đang cần rule nhiều nhất",
+      "Doanh nghiệp, vì rule là tài sản cấp doanh nghiệp tồn tại vượt ra ngoài mọi dự án",
+      "Nhà cung cấp công cụ quản lý rule"
+    ],
+    "optionsEn": [
+      "The IT department, since they implement the rules",
+      "Whichever project team needs them most",
+      "The business, since rules are an enterprise asset that outlives any project",
+      "The vendor of the rule management tool"
+    ],
+    "answer": 2,
+    "explanation": "Hãy dùng hình thức đơn giản nhất bảo đảm đội phát triển thực sự sử dụng rule hiệu quả, và đừng làm catalog phức tạp hơn mức cần thiết.",
+    "explanationEn": "Use the simplest form that ensures development teams actually use the rules effectively, and do not make the catalog more complex than necessary."
+  },
+  {
+    "id": "q13",
+    "question": "Bạn tìm thấy một công thức tính được hiện thực trong mã của một ứng dụng cũ. Bạn nên làm gì?",
+    "questionEn": "You find a computational formula implemented in the code of a legacy application. What should you do?",
+    "options": [
+      "Sao chép nguyên xi vào hệ thống mới vì nó đã chạy nhiều năm",
+      "Xác nhận lại xem rule đó có còn hiệu lực và có áp dụng cho dự án hiện tại không, vì nó có thể đã lỗi thời",
+      "Bỏ qua vì mã cũ không phải nguồn business rule hợp lệ",
+      "Chuyển nó thành một quality attribute"
+    ],
+    "optionsEn": [
+      "Copy it verbatim into the new system since it has run for years",
+      "Confirm whether the rule is still valid and applies to the current project, since it may be obsolete",
+      "Ignore it, since old code is not a valid source of business rules",
+      "Convert it into a quality attribute"
+    ],
+    "answer": 1,
+    "explanation": "Hệ thống cũ là nguồn khám phá rule hợp lệ, nhưng đòi hỏi reverse-engineer lý do đằng sau mã và thường chỉ cho tri thức không đầy đủ.",
+    "explanationEn": "Legacy systems are a legitimate source, but they require reverse-engineering the rationale behind the code and often yield incomplete knowledge."
+  },
+  {
+    "id": "q14",
+    "question": "Cùng một rule về hồ sơ đào tạo dẫn tới functional requirement khác nhau tuỳ theo điều gì?",
+    "questionEn": "The same training-record rule leads to different functional requirements depending on what?",
+    "options": [
+      "Ngôn ngữ lập trình được chọn",
+      "Việc cơ sở dữ liệu đào tạo có truy cập được từ hệ thống hay không",
+      "Số lượng người dùng của hệ thống",
+      "Độ ưu tiên mà khách hàng gán cho rule"
+    ],
+    "optionsEn": [
+      "The programming language chosen",
+      "Whether the training records database is accessible to the system",
+      "The number of system users",
+      "The priority the customer assigns to the rule"
+    ],
+    "answer": 1,
+    "explanation": "Nếu truy cập được, hệ thống tự tra cứu và quyết định. Nếu không, hệ thống lưu tạm yêu cầu và gửi thông báo cho điều phối viên đào tạo để phê duyệt thủ công.",
+    "explanationEn": "If accessible, the system looks up the record and decides. If not, it stores the request temporarily and messages the training coordinator for manual approval."
+  },
+  {
+    "id": "q15",
+    "question": "Cách nào là ĐÚNG để nối business rule với functional requirement trong tài liệu?",
+    "questionEn": "What is the CORRECT way to connect business rules to functional requirements in documentation?",
+    "options": [
+      "Chép toàn văn rule vào phần mô tả của mỗi yêu cầu liên quan",
+      "Dùng liên kết qua requirement attribute Origin, traceability matrix, hoặc hyperlink tới bản gốc duy nhất của rule",
+      "Ghi rule vào phần chú thích cuối tài liệu SRS",
+      "Không cần nối, vì lập trình viên sẽ tự tìm rule khi cần"
+    ],
+    "optionsEn": [
+      "Copy the full rule text into the description of every related requirement",
+      "Use links via an Origin requirement attribute, a traceability matrix, or a hyperlink to the single master instance of the rule",
+      "Put the rules in a footnote at the end of the SRS",
+      "No connection is needed; developers will find the rules themselves"
+    ],
+    "answer": 1,
+    "explanation": "Liên kết giúp yêu cầu luôn cập nhật khi rule thay đổi, và cho phép tìm mọi yêu cầu bị ảnh hưởng bằng cách tìm kiếm theo ID rule.",
+    "explanationEn": "Links keep requirements current with rule changes and let you find every affected requirement by searching for the rule ID."
+  },
+  {
+    "id": "q16",
+    "question": "Câu chuyện về vé máy bay đổi dặm cho người có họ khác minh hoạ điều gì?",
+    "questionEn": "What does the frequent-flyer ticket story about different last names illustrate?",
+    "options": [
+      "Business rule chống gian lận là không cần thiết",
+      "Việc hiện thực một business rule hoàn toàn hợp lý theo cách thiếu suy nghĩ vẫn có thể gây tổn hại cho khách hàng và doanh nghiệp",
+      "Website không nên hiển thị thông báo lỗi",
+      "Rule về danh tính phải luôn được kiểm tra thủ công"
+    ],
+    "optionsEn": [
+      "Anti-fraud business rules are unnecessary",
+      "Implementing a perfectly sensible business rule thoughtlessly can still harm the customer and the business",
+      "Websites should never display error messages",
+      "Identity rules must always be checked manually"
+    ],
+    "answer": 1,
+    "explanation": "Rule chống gian lận là hợp lý, nhưng phần mềm hiển thị thông báo lỗi đáng báo động thay vì giải thích vấn đề, và lãng phí thời gian của cả khách lẫn nhân viên đặt chỗ.",
+    "explanationEn": "The anti-fraud rule was sensible, but the software displayed an alarming error message instead of explaining the issue, and wasted both the customer and the agent time."
+  }
+]

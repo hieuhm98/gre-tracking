@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "JavaScript là gì? · Toán tử",
+      "titleEn": "What is JavaScript? · Operators",
+      "sections": [
+        1,
+        2,
+        3
+      ],
+      "questionIds": [
+        "js-01",
+        "js-02",
+        "js-03",
+        "js-04"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "String — Chuỗi · Object",
+      "titleEn": "String · Object",
+      "sections": [
+        4,
+        5,
+        6
+      ],
+      "questionIds": [
+        "js-05",
+        "js-06",
+        "js-07",
+        "js-08"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Hàm (Functions) · DOM Manipulation",
+      "titleEn": "Functions · DOM Manipulation",
+      "sections": [
+        7,
+        8,
+        9
+      ],
+      "questionIds": [
+        "js-09",
+        "js-10",
+        "js-11"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Sự kiện (Events) · Bất đồng bộ (Asynchronous)",
+      "titleEn": "Events · Asynchronous",
+      "sections": [
+        10,
+        11
+      ],
+      "questionIds": [
+        "js-12",
+        "js-13",
+        "js-14"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Fetch API — Gọi HTTP Request · LocalStorage và SessionStorage",
+      "titleEn": "Fetch API — Making HTTP Requests · LocalStorage and SessionStorage",
+      "sections": [
+        12,
+        13
+      ],
+      "questionIds": [
+        "js-15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Xử lý lỗi · Modules (ES Modules)",
+      "titleEn": "Error handling · Modules (ES Modules)",
+      "sections": [
+        14,
+        15
+      ],
+      "questionIds": [
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l7",
+      "title": "JS và BA",
+      "titleEn": "JS and the BA",
+      "sections": [
+        16
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

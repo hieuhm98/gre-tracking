@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Business requirements gồm bốn thành phần nào?",
+    "questionEn": "What four elements make up the business requirements?",
+    "options": [
+      "Use case, user story, functional requirement, test case",
+      "Business opportunity, business objectives, success metrics, vision statement",
+      "Scope, schedule, cost, quality",
+      "Stakeholder, user class, product champion, decision maker"
+    ],
+    "optionsEn": [
+      "Use cases, user stories, functional requirements, test cases",
+      "Business opportunity, business objectives, success metrics, and the vision statement",
+      "Scope, schedule, cost, quality",
+      "Stakeholders, user classes, product champions, decision makers"
+    ],
+    "answer": 1,
+    "explanation": "Bốn thành phần này mô tả nhu cầu kinh doanh dẫn tới dự án và kết quả kinh doanh mong muốn. Chúng đứng ở đỉnh chuỗi yêu cầu.",
+    "explanationEn": "These four describe the business need that leads to the project and the desired business outcomes. They sit at the top of the requirements chain."
+  },
+  {
+    "id": "q2",
+    "question": "Phát biểu nào KHÔNG phải là một business objective hợp lệ?",
+    "questionEn": "Which statement is NOT a valid business objective?",
+    "options": [
+      "Giảm chi phí hỗ trợ hằng tháng từ X xuống Y trong vòng 6 tháng",
+      "Gộp hai hệ thống hiện có thành một hệ thống duy nhất",
+      "Tăng năng suất xử lý giao dịch 20% và giảm tỷ lệ lỗi dữ liệu xuống dưới 2%",
+      "Tuân thủ các quy định bắt buộc của cơ quan quản lý trước tháng 6"
+    ],
+    "optionsEn": [
+      "Reduce monthly support costs from X to Y within 6 months",
+      "Merge two existing systems into a single system",
+      "Increase transaction-processing productivity by 20 percent and cut the data error rate below 2 percent",
+      "Comply with mandatory regulatory requirements before June"
+    ],
+    "answer": 1,
+    "explanation": "Khách hàng không quan tâm họ đang dùng 1 hay 10 hệ thống. Gộp hệ thống có thể là một phần của giải pháp, nhưng nó không phải giá trị kinh doanh mà doanh nghiệp thực sự theo đuổi.",
+    "explanationEn": "Customers do not care whether they use 1 or 10 systems. Merging systems may be part of the solution, but it is not the business value the organization is actually pursuing."
+  },
+  {
+    "id": "q3",
+    "question": "Vì sao cần success metrics tách riêng khỏi business objectives?",
+    "questionEn": "Why are success metrics needed separately from business objectives?",
+    "options": [
+      "Vì business objectives do marketing viết còn success metrics do IT viết",
+      "Vì business objectives thường chỉ đo được rất lâu sau khi dự án kết thúc, còn success metrics đo được trong lúc test hoặc ngay sau phát hành",
+      "Vì success metrics là bắt buộc theo chuẩn ISO",
+      "Vì business objectives không cần phải đo được"
+    ],
+    "optionsEn": [
+      "Because marketing writes the objectives and IT writes the metrics",
+      "Because business objectives often cannot be measured until well after the project ends, while success metrics can be tracked during testing or shortly after release",
+      "Because ISO standards require success metrics",
+      "Because business objectives do not need to be measurable"
+    ],
+    "answer": 1,
+    "explanation": "Việc đạt business objective đôi khi còn phụ thuộc vào các dự án khác. Success metrics cho biết dự án hiện tại có đang đi đúng hướng hay không.",
+    "explanationEn": "Achieving a business objective may even depend on other projects. Success metrics indicate whether this project is on track."
+  },
+  {
+    "id": "q4",
+    "question": "Mục tiêu giảm 20% chi phí phát triển sản phẩm minh hoạ cạm bẫy nào khi chọn success metric?",
+    "questionEn": "The objective reduce product development costs by 20 percent illustrates which pitfall in choosing success metrics?",
+    "options": [
+      "Nó quá khó đo lường trong thực tế",
+      "Nó dễ đo nhưng cũng dễ đạt bằng cách sa thải nhân viên hoặc cắt đầu tư đổi mới, tức không phản ánh kết quả mong muốn",
+      "Nó chỉ áp dụng cho dự án phần cứng",
+      "Nó không có mốc thời gian"
+    ],
+    "optionsEn": [
+      "It is far too hard to measure in practice",
+      "It is easy to measure but also easy to achieve by laying off staff or cutting innovation, so it does not reflect the intended outcome",
+      "It only applies to hardware projects",
+      "It has no time frame"
+    ],
+    "answer": 1,
+    "explanation": "Hãy chọn metric đo điều quan trọng với doanh nghiệp, không phải điều dễ đo. Metric sai có thể khuyến khích hành vi phá hoại giá trị.",
+    "explanationEn": "Choose metrics that measure what is important to the business, not what is easy to measure. The wrong metric can reward value-destroying behaviour."
+  },
+  {
+    "id": "q5",
+    "question": "Khác biệt cốt lõi giữa vision và scope là gì?",
+    "questionEn": "What is the core difference between vision and scope?",
+    "options": [
+      "Vision do khách hàng viết, scope do đội phát triển viết",
+      "Vision áp dụng cho toàn sản phẩm và thay đổi chậm; scope áp dụng cho một release hoặc iteration và động hơn nhiều",
+      "Vision là tài liệu kỹ thuật, scope là tài liệu kinh doanh",
+      "Vision chỉ dùng trong agile, scope chỉ dùng trong waterfall"
+    ],
+    "optionsEn": [
+      "Customers write the vision and the development team writes the scope",
+      "The vision applies to the whole product and changes slowly; scope applies to one release or iteration and is far more dynamic",
+      "The vision is a technical document and the scope is a business document",
+      "Vision is only for agile and scope only for waterfall"
+    ],
+    "answer": 1,
+    "explanation": "Vision bảo đảm mọi người biết đích đến cuối cùng. Scope bảo đảm mọi người đang nói về cùng một thứ cho dự án hoặc iteration trước mắt.",
+    "explanationEn": "The vision ensures everyone knows where you hope to end up. The scope ensures everyone is talking about the same thing for the immediate project or iteration."
+  },
+  {
+    "id": "q6",
+    "question": "Vì sao nên để nhiều stakeholder viết vision statement RIÊNG RẼ thay vì làm chung nhóm?",
+    "questionEn": "Why have several stakeholders write the vision statement SEPARATELY rather than as a group?",
+    "options": [
+      "Để tiết kiệm thời gian họp",
+      "So sánh các bản viết riêng là cách tuyệt vời để phát hiện những hiểu biết khác nhau về mục tiêu dự án",
+      "Vì làm nhóm sẽ tạo ra vision quá dài",
+      "Để mỗi phòng ban có vision riêng của mình"
+    ],
+    "optionsEn": [
+      "To save meeting time",
+      "Comparing the separate versions is an excellent way to spot different understandings of the project objectives",
+      "Because group writing produces an overly long vision",
+      "So each department can keep its own vision"
+    ],
+    "answer": 1,
+    "explanation": "Nếu các bản viết ra khác nhau đáng kể, bạn vừa phát hiện một vấn đề nghiêm trọng trước khi nó gây thiệt hại. Không bao giờ là quá muộn để viết vision statement.",
+    "explanationEn": "If the versions differ noticeably you have just uncovered a serious problem before it does damage. It is never too late to write a vision statement."
+  },
+  {
+    "id": "q7",
+    "question": "Một nhà tài trợ đặt mục tiêu website mới tăng doanh thu 100.000 mỗi tháng, dựa trên giả định site thu hút thêm 200 khách mỗi ngày với mức chi trung bình 17. Nếu giả định này sai thì sao?",
+    "questionEn": "A sponsor targets 100,000 extra monthly revenue from a new website, assuming 200 additional daily visitors spending an average of 17 each. What if the assumption is wrong?",
+    "options": [
+      "Không ảnh hưởng, vì giả định không phải là yêu cầu",
+      "Dự án có thể không đạt business objective dù phần mềm chạy hoàn hảo, và có thể phải đổi phạm vi, điều chỉnh lịch hoặc khởi động dự án khác",
+      "Chỉ cần cập nhật lại success metric là xong",
+      "Lỗi thuộc về đội phát triển vì không kiểm chứng giả định"
+    ],
+    "optionsEn": [
+      "No impact, because assumptions are not requirements",
+      "The project may miss its business objective even if the software works perfectly, and scope, schedule, or additional projects may need to change",
+      "You simply update the success metric",
+      "It is the development team fault for not verifying the assumption"
+    ],
+    "answer": 1,
+    "explanation": "Giả định sai là một loại rủi ro dự án. Hãy ghi lại giả định cùng tác động khi nó sai, để project manager theo dõi như một rủi ro.",
+    "explanationEn": "An incorrect assumption is a form of project risk. Record assumptions with the impact of being wrong so the project manager can track them as risks."
+  },
+  {
+    "id": "q8",
+    "question": "Vì sao phần Limitations and exclusions lại quan trọng trong vision and scope document?",
+    "questionEn": "Why does the limitations and exclusions section matter in a vision and scope document?",
+    "options": [
+      "Để bảo vệ đội phát triển về mặt pháp lý",
+      "Để thiết lập kỳ vọng thực tế và ghi lại những thứ đã bị cắt khỏi phạm vi, tránh quyết định đó bị quên",
+      "Vì template bắt buộc phải điền đủ mọi mục",
+      "Để tester biết phần nào không cần kiểm thử"
+    ],
+    "optionsEn": [
+      "To protect the development team legally",
+      "To set realistic expectations and record what was cut from scope so that decision is not forgotten",
+      "Because the template requires every section to be filled in",
+      "So testers know which parts need no testing"
+    ],
+    "answer": 1,
+    "explanation": "Khách hàng đôi khi mặc định một năng lực sẽ có mặt. Nêu rõ những gì sản phẩm KHÔNG làm cũng quan trọng như nêu những gì nó làm.",
+    "explanationEn": "Customers sometimes assume a capability will be there. Stating what the product will not do is as important as stating what it will."
+  },
+  {
+    "id": "q9",
+    "question": "Một đội quyết định bản phát hành 1 không cần nhanh, không cần đẹp, không cần dễ dùng, nhưng phải đáng tin cậy. Nguy cơ nào họ vẫn phải cảnh giác?",
+    "questionEn": "A team decides release 1 need not be fast, pretty, or easy to use, but must be reliable. What risk must they still watch for?",
+    "options": [
+      "Không có nguy cơ nào, vì đã ưu tiên rõ ràng",
+      "Bỏ quên các yêu cầu phi chức năng ảnh hưởng trực tiếp tới kiến trúc, vì tái kiến trúc về sau có thể tốn gần bằng viết lại toàn bộ",
+      "Người dùng sẽ không chấp nhận bất kỳ bản phát hành nào thiếu tính năng",
+      "Tester sẽ không có gì để kiểm thử"
+    ],
+    "optionsEn": [
+      "No risk, since priorities are explicit",
+      "Neglecting nonfunctional requirements that directly affect architecture, since rearchitecting later can cost almost as much as a total rewrite",
+      "Users will reject any release that lacks features",
+      "Testers will have nothing to test"
+    ],
+    "answer": 1,
+    "explanation": "Tập trung phạm vi cho bản đầu là đúng, nhưng thuộc tính chất lượng nào định hình kiến trúc thì phải được xác lập ngay từ đầu.",
+    "explanationEn": "Focusing the first release is correct, but any quality attribute that shapes the architecture must be established from the outset."
+  },
+  {
+    "id": "q10",
+    "question": "Trên context diagram, toàn bộ hệ thống được biểu diễn như thế nào?",
+    "questionEn": "How is the entire system represented on a context diagram?",
+    "options": [
+      "Là một sơ đồ phân rã các module bên trong",
+      "Là một vòng tròn duy nhất, cố ý không cho thấy bất cứ gì bên trong hệ thống",
+      "Là một danh sách các use case",
+      "Là các hình chữ nhật lồng nhau theo tầng kiến trúc"
+    ],
+    "optionsEn": [
+      "As a decomposition diagram of internal modules",
+      "As a single circle, deliberately providing no visibility into the system internals",
+      "As a list of use cases",
+      "As nested rectangles by architectural layer"
+    ],
+    "answer": 1,
+    "explanation": "External entity vẽ trong hình chữ nhật, mũi tên thể hiện luồng dữ liệu hoặc vật thể. Hệ thống bên trong vòng tròn có thể gồm cả phần mềm, phần cứng và thao tác thủ công.",
+    "explanationEn": "External entities appear in rectangles and arrows show data or material flows. The system inside the circle may include software, hardware, and manual operations."
+  },
+  {
+    "id": "q11",
+    "question": "Ecosystem map khác context diagram ở điểm cốt lõi nào?",
+    "questionEn": "What is the core difference between an ecosystem map and a context diagram?",
+    "options": [
+      "Ecosystem map chỉ dùng cho hệ thống nhúng",
+      "Ecosystem map thể hiện cả những hệ thống có quan hệ nhưng KHÔNG có giao diện trực tiếp với hệ thống của bạn",
+      "Ecosystem map không thể hiện luồng dữ liệu",
+      "Ecosystem map luôn được vẽ sau khi hoàn thành thiết kế"
+    ],
+    "optionsEn": [
+      "Ecosystem maps are only for embedded systems",
+      "An ecosystem map also shows systems that are related but have NO direct interface with your system",
+      "Ecosystem maps do not show data flows",
+      "Ecosystem maps are always drawn after design is complete"
+    ],
+    "answer": 1,
+    "explanation": "Một hệ thống có thể nhận dữ liệu của bạn qua một hệ thống trung gian. Bạn vẫn phải cân nhắc yêu cầu phát sinh từ chuỗi lan truyền dữ liệu đó.",
+    "explanationEn": "A system may receive your data through an intermediary. You must still consider requirements arising from that chain of data propagation."
+  },
+  {
+    "id": "q12",
+    "question": "Feature tree hữu ích nhất cho mục đích nào?",
+    "questionEn": "What is a feature tree most useful for?",
+    "options": [
+      "Đặc tả chi tiết logic nghiệp vụ của từng chức năng",
+      "Cho cái nhìn cô đọng về toàn bộ phạm vi và lập kế hoạch phát hành bằng cách chọn tập L1, L2, L3 cho mỗi bản",
+      "Mô hình hoá quan hệ dữ liệu giữa các thực thể",
+      "Theo dõi trạng thái hiện thực của từng yêu cầu"
+    ],
+    "optionsEn": [
+      "Specifying the detailed business logic of each function",
+      "Giving a concise view of the entire scope and planning releases by selecting sets of L1, L2, and L3 features",
+      "Modelling data relationships between entities",
+      "Tracking the implementation status of each requirement"
+    ],
+    "answer": 1,
+    "explanation": "Feature tree phân cấp tới ba mức. Bạn có thể hiện thực một phần feature ở bản đầu rồi làm giàu dần ở các bản sau.",
+    "explanationEn": "A feature tree goes up to three levels. You can implement part of a feature in the first release and enrich it in later releases."
+  },
+  {
+    "id": "q13",
+    "question": "Trong năm chiều ưu tiên dự án (features, quality, schedule, cost, staff), phát biểu nào ĐÚNG?",
+    "questionEn": "Regarding the five project priority dimensions (features, quality, schedule, cost, staff), which statement is CORRECT?",
+    "options": [
+      "Cả năm chiều nên là constraint để kiểm soát dự án chặt chẽ",
+      "Không thể để cả năm đều là constraint và cũng không thể để tất cả đều là driver; PM cần ít nhất vài degree of freedom",
+      "Chỉ schedule mới có thể là driver",
+      "Staff luôn phải là degree of freedom"
+    ],
+    "optionsEn": [
+      "All five should be constraints so the project is tightly controlled",
+      "They cannot all be constraints and cannot all be drivers; the PM needs at least some degrees of freedom",
+      "Only schedule can ever be a driver",
+      "Staff must always be a degree of freedom"
+    ],
+    "answer": 1,
+    "explanation": "Nếu mọi chiều đều bị khoá, project manager không còn cách nào phản ứng khi yêu cầu hoặc thực tế dự án thay đổi.",
+    "explanationEn": "If every dimension is locked, the project manager has no way to respond appropriately when requirements or project realities change."
+  },
+  {
+    "id": "q14",
+    "question": "Khi ai đó đề xuất một yêu cầu mới, BA nên hỏi Cái này có trong phạm vi không. Có bao nhiêu câu trả lời có thể?",
+    "questionEn": "When someone proposes a new requirement the BA asks whether it is in scope. How many possible answers are there?",
+    "options": [
+      "Hai: có hoặc không",
+      "Ba: rõ ràng ngoài phạm vi; rõ ràng trong phạm vi; ngoài phạm vi nhưng phục vụ business objective nên đáng lẽ phải nằm trong",
+      "Bốn, tương ứng bốn cấp độ ưu tiên",
+      "Một, vì phạm vi đã được baseline"
+    ],
+    "optionsEn": [
+      "Two: yes or no",
+      "Three: clearly out of scope; clearly in scope; out of scope but it supports the business objectives so it ought to be in",
+      "Four, matching the four priority levels",
+      "One, because scope is already baselined"
+    ],
+    "answer": 1,
+    "explanation": "Khả năng thứ ba tạo ra vòng phản hồi ngược từ user requirement lên business requirement, và buộc phải cập nhật vision and scope document cùng ngân sách, lịch trình.",
+    "explanationEn": "The third answer creates a feedback loop from user requirements back to business requirements, forcing an update to the vision and scope document plus budget and schedule."
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao nên ghi lại LÝ DO một yêu cầu bị từ chối?",
+    "questionEn": "Why record the REASON a requirement was rejected?",
+    "options": [
+      "Để có bằng chứng khi khách hàng khiếu nại",
+      "Vì yêu cầu bị từ chối có thói quen quay trở lại, và bạn sẽ cần biết vì sao lần trước đã nói không",
+      "Vì quy trình change control bắt buộc",
+      "Để tính chi phí dự án chính xác hơn"
+    ],
+    "optionsEn": [
+      "To have evidence if the customer complains",
+      "Because rejected requirements have a way of reappearing, and you will need to know why you said no last time",
+      "Because the change control process demands it",
+      "To estimate project cost more accurately"
+    ],
+    "answer": 1,
+    "explanation": "Một requirement attribute về trạng thái trong công cụ quản lý yêu cầu cho phép lưu yêu cầu bị từ chối hoặc hoãn mà không làm rối tập yêu cầu đã cam kết.",
+    "explanationEn": "A status attribute in a requirements management tool lets you keep rejected or deferred requirements without cluttering the committed set."
+  },
+  {
+    "id": "q16",
+    "question": "Hậu quả của việc để business objectives ở dạng mơ hồ là gì?",
+    "questionEn": "What is the consequence of leaving business objectives vague?",
+    "options": [
+      "Đội phát triển sẽ tự do sáng tạo hơn",
+      "Dự án trở nên mở vô hạn, không có cách nào biết khi nào xong; nhà tài trợ không lập được ngân sách và khách hàng có thể nhận giải pháp đúng hạn nhưng không có giá trị",
+      "Chỉ ảnh hưởng tới việc viết tài liệu marketing",
+      "Không ảnh hưởng nếu functional requirement đủ chi tiết"
+    ],
+    "optionsEn": [
+      "The development team gains creative freedom",
+      "The project becomes open-ended with no way to know when it is done; sponsors cannot budget and customers may get an on-time solution that provides no value",
+      "It only affects marketing documentation",
+      "No impact as long as the functional requirements are detailed"
+    ],
+    "answer": 1,
+    "explanation": "BA là người hiểu rõ business objectives nhất và có thể xác định khi nào giá trị mong muốn đã được giao. Success metrics chính là tín hiệu cho biết điều đó.",
+    "explanationEn": "The BA understands the business objectives most intimately and can determine when the desired value has been delivered. Success metrics are the signal for that."
+  }
+]

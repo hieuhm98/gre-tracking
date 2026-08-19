@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao cần chia dự án thành giai đoạn · Khởi tạo: quyết định dự án có nên tồn tại",
+      "titleEn": "Why projects are divided into phases · Initiation: deciding whether the project should exist",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Lập kế hoạch: chi tiết tới đâu là đủ · Thực thi và kiểm soát song song",
+      "titleEn": "Planning: how detailed is detailed enough · Execution and control in parallel",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Đóng dự án: giai đoạn bị bỏ qua nhiều nhất · Vòng đời truyền thống so với agile",
+      "titleEn": "Closing: the most-skipped phase · Traditional life cycle versus agile",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

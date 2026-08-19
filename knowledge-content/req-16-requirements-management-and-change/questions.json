@@ -1,0 +1,326 @@
+[
+  {
+    "id": "q1",
+    "question": "Phát triển yêu cầu và quản lý yêu cầu khác nhau như thế nào?",
+    "questionEn": "How do requirements development and requirements management differ?",
+    "options": [
+      "Phát triển do BA làm còn quản lý do quản lý dự án làm",
+      "Phát triển tạo ra một tập yêu cầu đúng qua khai thác, phân tích, đặc tả và thẩm định; quản lý duy trì tập đó qua baseline, kiểm soát phiên bản, theo dõi trạng thái và quản lý thay đổi",
+      "Phát triển dùng cho waterfall còn quản lý dùng cho agile",
+      "Phát triển diễn ra một lần còn quản lý diễn ra ở cuối dự án"
+    ],
+    "optionsEn": [
+      "Development is done by BAs and management by project managers",
+      "Development produces a correct set through elicitation, analysis, specification, and validation; management maintains it through baselines, version control, status tracking, and change management",
+      "Development is for waterfall and management for agile",
+      "Development happens once while management happens at project end"
+    ],
+    "answer": 1,
+    "explanation": "Phát triển yêu cầu xuất sắc mà không có quản lý yêu cầu sẽ tan rã trong vài tuần: không ai biết phiên bản nào mới nhất và đến tháng thứ ba không ai còn chắc hệ thống phải làm gì.",
+    "explanationEn": "Excellent development without management falls apart within weeks: nobody knows which version is current and by month three nobody is sure what the system should do."
+  },
+  {
+    "id": "q2",
+    "question": "Thiết lập baseline cho một tập yêu cầu có nghĩa là gì?",
+    "questionEn": "What does baselining a set of requirements mean?",
+    "options": [
+      "Yêu cầu bị đóng băng vĩnh viễn và không được thay đổi nữa",
+      "Tập yêu cầu đã được review và thoả thuận, được đóng băng làm điểm tham chiếu; thay đổi từ đó trở đi phải đi qua một quy trình có ý thức thay vì lặng lẽ trượt vào",
+      "Tài liệu được ký duyệt bởi khách hàng",
+      "Toàn bộ hệ thống đã được đặc tả xong"
+    ],
+    "optionsEn": [
+      "The requirements are frozen permanently and can no longer change",
+      "A reviewed and agreed set is frozen as a reference point; change from then on must go through a conscious process rather than silently slipping in",
+      "The document has been signed off by the customer",
+      "The entire system has been fully specified"
+    ],
+    "answer": 1,
+    "explanation": "Bạn không cần đợi tới khi toàn bộ hệ thống được đặc tả: có thể baseline từng phần, từng bản phát hành, từng iteration. Trong agile, baseline tương ứng với nội dung của iteration đã được chốt.",
+    "explanationEn": "You need not wait until the whole system is specified: baseline by part, by release, by iteration. In agile the baseline corresponds to the iteration content being locked."
+  },
+  {
+    "id": "q3",
+    "question": "Trường nào trong lịch sử sửa đổi yêu cầu là quan trọng nhất và bị bỏ trống nhiều nhất?",
+    "questionEn": "Which field in a requirements revision history is most important and most often left blank?",
+    "options": [
+      "Ngày thay đổi",
+      "Lý do VÌ SAO thay đổi; sáu tháng sau ai đó sẽ hỏi vì sao yêu cầu lại thế này, và lý do cho biết yêu cầu có thể thương lượng hay không",
+      "Tên người thay đổi",
+      "Số phiên bản mới"
+    ],
+    "optionsEn": [
+      "The change date",
+      "The reason WHY it changed; six months later someone will ask why a requirement is like this, and the reason tells you whether it is negotiable",
+      "The name of the person who changed it",
+      "The new version number"
+    ],
+    "answer": 1,
+    "explanation": "Cập nhật mục 3.4 không cho bạn học được gì. Đổi từ 30 sang 60 ngày theo yêu cầu của bộ phận pháp chế do quy định X cho bạn biết ngay yêu cầu này có thương lượng được không.",
+    "explanationEn": "Updated section 3.4 teaches you nothing. Changed from 30 to 60 days at Legal request under regulation X immediately tells you whether it is negotiable."
+  }
+  ,
+  {
+    "id": "q4",
+    "question": "Bài kiểm tra nào giúp quyết định có nên theo dõi một thuộc tính của yêu cầu hay không?",
+    "questionEn": "What test helps decide whether to track a requirement attribute?",
+    "options": [
+      "Công cụ quản lý yêu cầu có hỗ trợ trường đó không",
+      "Hỏi quyết định nào sẽ được đưa ra dựa trên trường này; nếu không trả lời được thì đừng theo dõi nó",
+      "Trường đó có xuất hiện trong template chuẩn không",
+      "Có ai từng hỏi về nó chưa"
+    ],
+    "optionsEn": [
+      "Whether the requirements tool supports that field",
+      "Ask what decision will be made based on this field; if you cannot answer, do not track it",
+      "Whether the field appears in the standard template",
+      "Whether anyone has ever asked about it"
+    ],
+    "answer": 1,
+    "explanation": "Cố ghi mọi thuộc tính cho mọi yêu cầu tạo ra chi phí bảo trì khổng lồ mà không ai dùng. Hãy chọn tập thuộc tính nhỏ nhất mà bạn thực sự dùng để ra quyết định.",
+    "explanationEn": "Recording every attribute for every requirement creates enormous maintenance cost nobody uses. Pick the smallest set you actually use to decide."
+  },
+  {
+    "id": "q5",
+    "question": "Vì sao KHÔNG nên xoá hẳn một yêu cầu đã bị loại bỏ?",
+    "questionEn": "Why should you NOT outright delete a removed requirement?",
+    "options": [
+      "Vì quy định kiểm toán cấm xoá dữ liệu",
+      "Vì những ý tưởng bị từ chối có xu hướng quay lại; giữ lại nó cùng lý do từ chối nghĩa là lần sau bạn có ngay câu trả lời mà không phải phân tích lại từ đầu",
+      "Vì công cụ không cho phép xoá",
+      "Vì có thể ai đó đã bắt đầu hiện thực nó"
+    ],
+    "optionsEn": [
+      "Because audit regulations forbid deleting data",
+      "Because rejected ideas have a way of coming back; keeping it with the rejection rationale means next time you have the answer ready without re-analysing",
+      "Because the tool does not allow deletion",
+      "Because someone may have started implementing it"
+    ],
+    "answer": 1,
+    "explanation": "Vòng đời trạng thái điển hình gồm proposed, approved, implemented, verified, deferred, deleted và rejected. Trạng thái deleted vẫn giữ yêu cầu trong hệ thống kèm lý do.",
+    "explanationEn": "A typical status life cycle is proposed, approved, implemented, verified, deferred, deleted, and rejected. Deleted still retains the requirement with its reason."
+  },
+  {
+    "id": "q6",
+    "question": "Hai dự án cùng báo cáo hoàn thành 70%. Dự án nào đang gặp rắc rối và vì sao?",
+    "questionEn": "Two projects both report 70 percent complete. Which is in trouble and why?",
+    "options": [
+      "Dự án có nhiều yêu cầu hơn, vì khối lượng lớn hơn",
+      "Dự án có 70% ở trạng thái implemented nhưng chỉ 5% verified, vì có một khối lượng kiểm thử và sửa lỗi khổng lồ chưa được nhìn thấy phía trước",
+      "Dự án có ít lập trình viên hơn",
+      "Không thể biết được nếu chỉ dựa vào trạng thái yêu cầu"
+    ],
+    "optionsEn": [
+      "The one with more requirements, since the volume is larger",
+      "The one with 70 percent implemented but only 5 percent verified, because an enormous unseen mass of testing and defect fixing lies ahead",
+      "The one with fewer developers",
+      "You cannot tell from requirement status alone"
+    ],
+    "answer": 1,
+    "explanation": "Dự án với 70% verified và 30% implemented đang trong tình trạng tốt. Cùng một con số phần trăm nhưng hai thực tế hoàn toàn khác nhau, điều mà phần trăm cảm tính không bao giờ cho thấy.",
+    "explanationEn": "The project with 70 percent verified and 30 percent implemented is healthy. The same percentage, two completely different realities, which gut-feel percentages never reveal."
+  }
+  ,
+  {
+    "id": "q7",
+    "question": "Tốc độ thay đổi yêu cầu nói lên điều gì về sức khoẻ dự án?",
+    "questionEn": "What does the requirements change rate say about project health?",
+    "options": [
+      "Tốc độ cao nghĩa là đội đang làm việc năng suất",
+      "Tốc độ phải GIẢM DẦN theo thời gian; nếu ở tuần 20 bạn vẫn thay đổi như tuần 3 thì hoặc bạn chưa nói chuyện với đúng người, hoặc tầm nhìn chưa rõ, hoặc phạm vi đang mở rộng không kiểm soát",
+      "Tốc độ nên giữ ổn định suốt dự án",
+      "Tốc độ không liên quan tới sức khoẻ dự án"
+    ],
+    "optionsEn": [
+      "A high rate means the team is productive",
+      "The rate must DECREASE over time; if at week 20 you change as much as at week 3, either you have not talked to the right people, the vision is unclear, or scope is expanding uncontrolled",
+      "The rate should stay constant throughout",
+      "The rate is unrelated to project health"
+    ],
+    "answer": 1,
+    "explanation": "Đây là một trong những chỉ báo sức khoẻ dự án mạnh nhất. Nguyên tắc trình bày cho lãnh đạo là đưa ra xu hướng chứ không đưa ra ảnh chụp một thời điểm.",
+    "explanationEn": "This is one of the strongest project health indicators. The principle for reporting to management is to present trends rather than a snapshot."
+  },
+  {
+    "id": "q8",
+    "question": "Chi phí nào của một thay đổi hầu như không bao giờ được tính tới?",
+    "questionEn": "Which cost of a change is almost never counted?",
+    "options": [
+      "Chi phí viết mã",
+      "Chi phí gián đoạn khi đội phải chuyển ngữ cảnh và mất đà; một thay đổi nhỏ vào giữa iteration có thể tốn nhiều hơn cùng thay đổi đó được lên kế hoạch cho iteration sau",
+      "Chi phí phần cứng bổ sung",
+      "Chi phí đào tạo lập trình viên"
+    ],
+    "optionsEn": [
+      "The coding cost",
+      "Disruption cost when the team switches context and loses momentum; a small mid-iteration change can cost more than the same change planned for the next iteration",
+      "Additional hardware cost",
+      "Developer training cost"
+    ],
+    "answer": 1,
+    "explanation": "Phần chìm còn gồm cập nhật tài liệu và mô hình, thay đổi thiết kế lan sang thành phần khác, kiểm thử hồi quy, cập nhật tài liệu người dùng, và chi phí cơ hội.",
+    "explanationEn": "The submerged part also includes updating documentation and models, design ripple, regression testing, user documentation updates, and opportunity cost."
+  },
+  {
+    "id": "q9",
+    "question": "Mục đích thật sự của quy trình kiểm soát thay đổi là gì?",
+    "questionEn": "What is the real purpose of a change control process?",
+    "options": [
+      "Ngăn chặn thay đổi để bảo vệ lịch trình",
+      "Bảo đảm rằng khi bạn nói có, bạn biết mình đang đồng ý với cái gì; quy trình phải đơn giản, nhanh, minh bạch và tương xứng với rủi ro",
+      "Tạo hồ sơ pháp lý cho tranh chấp hợp đồng",
+      "Chuyển trách nhiệm quyết định sang cho khách hàng"
+    ],
+    "optionsEn": [
+      "To prevent change and protect the schedule",
+      "To ensure that when you say yes, you know what you are agreeing to; the process must be simple, fast, transparent, and proportional to risk",
+      "To create a legal record for contract disputes",
+      "To shift decision responsibility onto the customer"
+    ],
+    "answer": 1,
+    "explanation": "Một quy trình nặng nề sẽ bị né tránh và thay đổi sẽ đi vào hệ thống qua cửa sau. Việc không đóng vòng lặp với người đề xuất là lỗi phổ biến giết chết quy trình.",
+    "explanationEn": "A heavyweight process gets bypassed and change enters through the back door. Failing to close the loop with the proposer is the common error that kills a process."
+  }
+  ,
+  {
+    "id": "q10",
+    "question": "Nguyên tắc về thẩm quyền của thành viên change control board là gì?",
+    "questionEn": "What is the authority principle for change control board members?",
+    "options": [
+      "Mỗi phòng ban phải có ít nhất một đại diện",
+      "Mọi thành viên phải có thẩm quyền quyết định thay mặt tổ chức của mình; ai phải nói để tôi về hỏi sếp cho mọi quyết định thì là người đưa tin chứ không phải thành viên CCB",
+      "Chỉ quản lý cấp cao mới được tham gia",
+      "Thành viên phải được luân phiên hằng quý"
+    ],
+    "optionsEn": [
+      "Every department must have at least one representative",
+      "Every member must be able to decide on behalf of their organization; anyone who says let me check with my boss for every decision is a messenger, not a CCB member",
+      "Only senior management may participate",
+      "Membership must rotate quarterly"
+    ],
+    "answer": 1,
+    "explanation": "CCB cũng phải nhỏ đủ để họp được và quyết định được: một hội đồng 15 người sẽ họp mỗi tháng một lần và không quyết định được gì. Con số hiệu quả thường là 3 tới 6 người.",
+    "explanationEn": "A CCB must also be small enough to meet and decide: a 15-person board meets monthly and decides nothing. The effective number is usually 3 to 6."
+  },
+  {
+    "id": "q11",
+    "question": "Vì sao nên xem xét các đề xuất thay đổi theo LÔ thay vì từng cái một?",
+    "questionEn": "Why review change proposals in BATCHES rather than one at a time?",
+    "options": [
+      "Để tiết kiệm thời gian họp",
+      "Vì nhìn 10 đề xuất cùng lúc cho bạn cái nhìn về tổng tác động, điều mà xem từng cái riêng lẻ không bao giờ cho thấy",
+      "Vì công cụ chỉ hỗ trợ xử lý hàng loạt",
+      "Vì hội đồng chỉ họp mỗi tháng một lần"
+    ],
+    "optionsEn": [
+      "To save meeting time",
+      "Because looking at 10 proposals together shows the aggregate impact, which reviewing them individually never reveals",
+      "Because tools only support batch processing",
+      "Because the board only meets monthly"
+    ],
+    "answer": 1,
+    "explanation": "Đây cũng chính là lý do scope creep nguy hiểm: năm mươi thay đổi nhỏ mỗi cái chỉ mất một ngày không bao giờ được xem xét như một tổng thể nhưng cộng lại thành mười tuần công việc.",
+    "explanationEn": "This is also why scope creep is dangerous: fifty small changes each just a day are never examined as a whole yet total ten weeks of work."
+  },
+  {
+    "id": "q12",
+    "question": "Trong phân tích tác động, câu hỏi nào mà người đề xuất thay đổi hiếm khi nghĩ tới?",
+    "questionEn": "In impact analysis, which question do change proposers rarely consider?",
+    "options": [
+      "Thay đổi này tốn bao nhiêu tiền?",
+      "Công việc nào bị đẩy ra để nhường chỗ cho thay đổi này?",
+      "Ai sẽ hiện thực thay đổi này?",
+      "Thay đổi này có cần phê duyệt không?"
+    ],
+    "optionsEn": [
+      "How much will this change cost?",
+      "What work gets pushed out to make room for this change?",
+      "Who will implement this change?",
+      "Does this change need approval?"
+    ],
+    "answer": 1,
+    "explanation": "Một cảnh báo khác là thiên kiến ước tính thấp: người phân tích thường chỉ nghĩ tới việc viết mã và bỏ qua kiểm thử hồi quy, cập nhật tài liệu và chi phí gián đoạn.",
+    "explanationEn": "Another warning is underestimation bias: analysts typically think only about coding and skip regression testing, documentation updates, and disruption cost."
+  }
+  ,
+  {
+    "id": "q13",
+    "question": "Vì sao truy vết yêu cầu trả cổ tức lớn nhất trong phân tích tác động?",
+    "questionEn": "Why does requirements tracing pay its biggest dividend in impact analysis?",
+    "options": [
+      "Vì nó tự động tính được chi phí thay đổi",
+      "Vì không có truy vết, phân tích tác động dựa vào trí nhớ con người và bạn sẽ bỏ sót thứ gì đó; với truy vết bạn truy vấn được câu trả lời trong vài phút và đầy đủ thay vì vài ngày và phỏng đoán",
+      "Vì kiểm toán viên yêu cầu ma trận truy vết",
+      "Vì nó thay thế được việc phải review thay đổi"
+    ],
+    "optionsEn": [
+      "Because it automatically computes the change cost",
+      "Because without tracing, impact analysis relies on human memory and you will miss something; with tracing you query the answer in minutes and completely instead of days and guesswork",
+      "Because auditors require a traceability matrix",
+      "Because it replaces the need to review changes"
+    ],
+    "answer": 1,
+    "explanation": "Câu hỏi quan trọng nhất trong phân tích tác động sản phẩm là thay đổi có ảnh hưởng tới kiến trúc không, vì thay đổi kiến trúc có chi phí khác hẳn thay đổi cục bộ.",
+    "explanationEn": "The most important product-impact question is whether the change affects the architecture, since architectural change has a completely different cost profile from a local one."
+  },
+  {
+    "id": "q14",
+    "question": "Việc phân loại LÝ DO của các thay đổi mang lại giá trị gì?",
+    "questionEn": "What value comes from classifying the REASONS for changes?",
+    "options": [
+      "Nó giúp tính phí khách hàng chính xác hơn",
+      "Nó biến dữ liệu thay đổi thành cải tiến quy trình: nếu phần lớn thuộc loại yêu cầu bị bỏ sót thì bạn biết chính xác cần cải thiện khâu khai thác cho dự án sau",
+      "Nó giúp giảm số lượng thay đổi trong tương lai",
+      "Nó là yêu cầu bắt buộc của tiêu chuẩn CMMI"
+    ],
+    "optionsEn": [
+      "It helps bill customers more accurately",
+      "It turns change data into process improvement: if most are of the missed-requirement kind, you know precisely to improve elicitation on the next project",
+      "It reduces the number of future changes",
+      "It is a mandatory CMMI requirement"
+    ],
+    "answer": 1,
+    "explanation": "Bốn loại lý do là yêu cầu bị bỏ sót, yêu cầu bị hiểu sai, nghiệp vụ thực sự thay đổi, và ý tưởng mới. Chỉ hai loại đầu là vấn đề quy trình cần sửa.",
+    "explanationEn": "The four reason types are missed requirement, misunderstood requirement, genuine business change, and new idea. Only the first two are process problems to fix."
+  },
+  {
+    "id": "q15",
+    "question": "Dấu hiệu rõ nhất của scope creep là gì?",
+    "questionEn": "What is the clearest sign of scope creep?",
+    "options": [
+      "Đội yêu cầu thêm ngân sách",
+      "Khối lượng công việc tăng nhưng lịch trình và nguồn lực không đổi; đây thực chất là vấn đề về việc không thừa nhận hệ quả của thay đổi",
+      "Số lượng cuộc họp CCB tăng lên",
+      "Khách hàng gửi nhiều email hơn"
+    ],
+    "optionsEn": [
+      "The team asks for more budget",
+      "Workload rises but schedule and resources do not; this is really a problem of refusing to acknowledge the consequences of change",
+      "The number of CCB meetings increases",
+      "The customer sends more emails"
+    ],
+    "answer": 1,
+    "explanation": "Thay đổi hợp lệ được ghi lại, có phân tích tác động, được phê duyệt bởi người có thẩm quyền, và lịch trình cùng nguồn lực được điều chỉnh. Scope creep thiếu cả bốn.",
+    "explanationEn": "Legitimate change is recorded, has impact analysis, is approved by someone with authority, and has schedule and resources adjusted. Scope creep lacks all four."
+  },
+  {
+    "id": "q16",
+    "question": "Hai thái cực nào của quản lý thay đổi đều dẫn tới thất bại?",
+    "questionEn": "Which two extremes of change management both lead to failure?",
+    "options": [
+      "Quá nhiều tài liệu và quá ít tài liệu",
+      "Quá cứng nhắc thì dự án giao đúng thứ đã đặc tả 18 tháng trước nhưng đó không còn là điều tổ chức cần; quá lỏng lẻo thì dự án không bao giờ hoàn thành vì mục tiêu liên tục dịch chuyển",
+      "Quá nhiều thành viên CCB và quá ít thành viên CCB",
+      "Quá nhiều baseline và quá ít baseline"
+    ],
+    "optionsEn": [
+      "Too much documentation and too little documentation",
+      "Too rigid delivers exactly what was specified 18 months ago but that is no longer what the organization needs; too loose never finishes because the target keeps moving",
+      "Too many CCB members and too few",
+      "Too many baselines and too few"
+    ],
+    "answer": 1,
+    "explanation": "Quá cứng nhắc là thành công về thủ tục và thất bại về thực chất. Điểm cân bằng là chào đón thay đổi đúng, với hiểu biết đầy đủ về cái giá, và với sự điều chỉnh trung thực cho lịch trình.",
+    "explanationEn": "Too rigid succeeds procedurally and fails substantively. The balance is welcoming the right changes, with full understanding of cost, and honest schedule adjustment."
+  }
+]

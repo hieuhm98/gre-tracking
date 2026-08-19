@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Hai mô hình giải quyết hai bài toán khác nhau · Vai trò PM thay đổi thế nào",
+      "titleEn": "Two models answering two different problems · How the PM role shifts",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "PM làm gì trong một tổ chức Agile · Mô hình lai và cách làm cho nó không tệ",
+      "titleEn": "What a PM does in an Agile organisation · Hybrid models and how to keep them from being awful",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Chọn cách tiếp cận cho một dự án cụ thể · Kỹ năng PM cần bổ sung khi chuyển sang Agile",
+      "titleEn": "Choosing an approach for a specific project · Skills a PM must add when moving to Agile",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

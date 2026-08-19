@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "UI và UX khác nhau thế nào · Vai trò của BA trong việc bảo đảm UX tốt",
+      "titleEn": "How UI and UX differ · The BA's contribution to good UX",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Wireframe, mockup và prototype · Cách BA dùng wireframe hiệu quả",
+      "titleEn": "Wireframes, mockups, and prototypes · Using wireframes effectively as a BA",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Ranh giới giữa BA và Designer · Đặc tả khả năng sử dụng ở dạng đo lường được",
+      "titleEn": "The boundary between BA and designer · Specifying usability measurably",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Kiểm thử khả năng sử dụng",
+      "titleEn": "Usability testing",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

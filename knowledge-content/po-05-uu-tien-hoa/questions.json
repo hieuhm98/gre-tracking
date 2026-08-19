@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Nếu Product Owner không quyết định thứ tự backlog, ai sẽ quyết định thay?",
+    "questionEn": "If the Product Owner does not decide backlog order, who decides instead?",
+    "options": [
+      "Lập trình viên dựa trên cái gì dễ nhất, người nói to nhất, hoặc sự ngẫu nhiên theo thứ tự yêu cầu tới",
+      "Scrum Master sẽ quyết định thay",
+      "Khách hàng sẽ tự sắp xếp",
+      "Không ai cả, backlog sẽ đứng yên"
+    ],
+    "optionsEn": [
+      "Developers based on what is easiest, the loudest voice, or chance in request order",
+      "The Scrum Master decides instead",
+      "Customers order it themselves",
+      "Nobody; the backlog stalls"
+    ],
+    "answer": 0,
+    "explanation": "Ba người quyết định thay này đều là những lựa chọn tệ nhất, vì không ai trong số họ đánh giá theo giá trị nghiệp vụ.",
+    "explanationEn": "All three substitutes are the worst choices, since none of them judges by business value."
+  },
+  {
+    "id": "q2",
+    "question": "Câu mọi thứ đều là ưu tiên cao thực ra nghĩa là gì?",
+    "questionEn": "What does everything is high priority really mean?",
+    "options": [
+      "Tôi không muốn phải chọn, hoặc tôi sợ nếu nói ưu tiên thấp thì nó sẽ không bao giờ được làm",
+      "Stakeholder chưa hiểu về sản phẩm",
+      "Danh sách yêu cầu quá ngắn",
+      "Đội chưa cung cấp đủ ước tính"
+    ],
+    "optionsEn": [
+      "I do not want to choose, or I fear that calling it low priority means never",
+      "The stakeholder does not understand the product",
+      "The request list is too short",
+      "The team has not supplied estimates"
+    ],
+    "answer": 0,
+    "explanation": "Hiểu được động cơ thật giúp bạn xử lý đúng: làm rõ rằng ưu tiên thấp nghĩa là làm sau chứ không phải không bao giờ, và giữ đúng lời hứa đó.",
+    "explanationEn": "Understanding the real motive helps you respond: clarify that low priority means later rather than never, and keep that promise."
+  },
+  {
+    "id": "q3",
+    "question": "Cách hiệu quả nhất để phá vỡ tình trạng mọi thứ đều ưu tiên cao là gì?",
+    "questionEn": "What most effectively breaks the everything-is-high-priority deadlock?",
+    "options": [
+      "Đảo ngược câu hỏi: nếu chúng ta chỉ giao được một nửa danh sách này vào tháng Sáu, anh chị muốn nửa nào?",
+      "Yêu cầu stakeholder xếp hạng mọi mục từ 1 tới 100",
+      "Giải thích rằng đội không đủ nguồn lực",
+      "Đưa vấn đề lên lãnh đạo cấp cao"
+    ],
+    "optionsEn": [
+      "Invert the question: if we can only deliver half this list by June, which half do you want?",
+      "Ask stakeholders to rank every item from 1 to 100",
+      "Explain the team lacks resources",
+      "Escalate to senior leadership"
+    ],
+    "answer": 0,
+    "explanation": "Buộc phải chọn giữa các phương án cụ thể sẽ tạo ra câu trả lời thật, khác hẳn câu hỏi trừu tượng cái nào quan trọng.",
+    "explanationEn": "Forcing a choice between concrete options produces honest answers, unlike the abstract question of which is important."
+  },
+  {
+    "id": "q4",
+    "question": "Chữ W trong MoSCoW mang lại lợi ích gì?",
+    "questionEn": "What benefit does the W in MoSCoW bring?",
+    "options": [
+      "Won't this time khác hoàn toàn với never, nên nó cho stakeholder sự an tâm và làm giảm mạnh xu hướng gán mọi thứ vào Must",
+      "Nó cho phép loại bỏ vĩnh viễn các yêu cầu không hợp lý",
+      "Nó giúp đội giảm khối lượng công việc",
+      "Nó là cách lịch sự để từ chối stakeholder"
+    ],
+    "optionsEn": [
+      "Won't this time differs entirely from never, reassuring stakeholders and sharply reducing the urge to label everything Must",
+      "It permanently removes unreasonable requests",
+      "It reduces the team's workload",
+      "It is a polite way to refuse stakeholders"
+    ],
+    "answer": 0,
+    "explanation": "Nhiều đội còn đặt quy tắc Must không vượt quá khoảng 60% tổng công sức của iteration, để lại chỗ cho bất định.",
+    "explanationEn": "Many teams also cap Must at about 60 percent of the iteration's effort, leaving room for uncertainty."
+  },
+  {
+    "id": "q5",
+    "question": "Kỹ thuật 100 đô la có ưu điểm gì mà ưu tiên ba mức không có?",
+    "questionEn": "What advantage does the $100 technique have over three-level prioritization?",
+    "options": [
+      "Nó buộc phải đánh đổi thật, vì cho hạng mục này nhiều điểm hơn nghĩa là cho hạng mục kia ít điểm hơn",
+      "Nó nhanh hơn và ít tốn thời gian hơn",
+      "Nó cho kết quả chính xác về mặt toán học",
+      "Nó không cần sự tham gia của stakeholder"
+    ],
+    "optionsEn": [
+      "It forces real trade-offs, since more points for one item means fewer for another",
+      "It is faster and takes less time",
+      "It gives mathematically precise results",
+      "It needs no stakeholder participation"
+    ],
+    "answer": 0,
+    "explanation": "Nhược điểm cần khắc phục là thao túng chiến lược, nên hãy đặt trần không quá 20 điểm cho một hạng mục từ một người.",
+    "explanationEn": "The weakness to fix is strategic manipulation, so cap any item at 20 points from any one person."
+  },
+  {
+    "id": "q6",
+    "question": "Nguyên lý cốt lõi của phân tích giá trị-chi phí-rủi ro là gì?",
+    "questionEn": "What is the core principle of value-cost-risk analysis?",
+    "options": [
+      "Ưu tiên cao nhất thuộc về hạng mục có tỷ lệ giá trị trên chi phí cao nhất sau khi điều chỉnh theo rủi ro",
+      "Ưu tiên cao nhất thuộc về hạng mục có giá trị tuyệt đối lớn nhất",
+      "Ưu tiên cao nhất thuộc về hạng mục rẻ nhất",
+      "Ưu tiên cao nhất thuộc về hạng mục ít rủi ro nhất"
+    ],
+    "optionsEn": [
+      "The highest priority belongs to items with the best value-to-cost ratio, adjusted for risk",
+      "The highest priority belongs to the item with the largest absolute value",
+      "The highest priority belongs to the cheapest item",
+      "The highest priority belongs to the least risky item"
+    ],
+    "answer": 0,
+    "explanation": "Điều này giải quyết vấn đề lớn nhất của ưu tiên hoá cảm tính: một hạng mục giá trị vừa phải nhưng cực rẻ thường đáng làm trước một hạng mục giá trị cao nhưng cực đắt.",
+    "explanationEn": "This solves intuitive prioritization's biggest weakness: a moderately valuable but very cheap item often beats a valuable but very expensive one."
+  },
+  {
+    "id": "q7",
+    "question": "Vì sao phải hỏi CẢ lợi ích khi có VÀ tổn thất khi không có một tính năng?",
+    "questionEn": "Why ask about BOTH the benefit of having and the penalty of lacking a feature?",
+    "options": [
+      "Vì chúng khác nhau: một tính năng tuân thủ pháp luật có lợi ích thấp nhưng tổn thất cực cao vì bị phạt hoặc bị cấm bán",
+      "Vì cần hai con số để tính trung bình cho chính xác",
+      "Vì khách hàng và đội trả lời hai câu khác nhau",
+      "Vì công thức ưu tiên bắt buộc có hai đầu vào"
+    ],
+    "optionsEn": [
+      "Because they differ: a compliance feature has low benefit but enormous penalty through fines or a sales ban",
+      "Because two numbers are needed for an accurate average",
+      "Because customers and the team answer different questions",
+      "Because the formula requires two inputs"
+    ],
+    "answer": 0,
+    "explanation": "Nếu chỉ hỏi về lợi ích, bạn sẽ xếp sai những tính năng như vậy xuống đáy danh sách và chỉ phát hiện sai lầm khi bị phạt.",
+    "explanationEn": "If you only ask about benefit, you will wrongly rank such features at the bottom and discover the error only when fined."
+  },
+  {
+    "id": "q8",
+    "question": "Giá trị THẬT của phân tích bán định lượng nằm ở đâu?",
+    "questionEn": "Where does the REAL value of semiquantitative analysis lie?",
+    "options": [
+      "Ở chỗ nó làm lộ ra sự bất đồng — khi hai stakeholder chấm cùng một hạng mục là 9 và 2, đó là cuộc thảo luận đáng giá nhất trong cả buổi",
+      "Ở con số ưu tiên cuối cùng, vì nó chính xác về mặt toán học",
+      "Ở việc nó loại bỏ hoàn toàn nhu cầu thảo luận",
+      "Ở việc nó cho phép tự động hoá quyết định ưu tiên"
+    ],
+    "optionsEn": [
+      "In exposing disagreement — when two stakeholders score the same item 9 and 2, that is the session's most valuable discussion",
+      "In the final priority number, which is mathematically precise",
+      "In eliminating the need for discussion",
+      "In allowing prioritization to be automated"
+    ],
+    "answer": 0,
+    "explanation": "Nó cũng buộc phải có cuộc trò chuyện có cấu trúc giữa khách hàng và đội, mỗi bên đóng góp thông tin mà bên kia không có.",
+    "explanationEn": "It also forces a structured conversation between customers and team, each contributing information the other lacks."
+  },
+  {
+    "id": "q9",
+    "question": "Chiến lược đầu tư đúng cho thuộc tính must-be trong mô hình Kano là gì?",
+    "questionEn": "What is the right investment strategy for Kano must-be attributes?",
+    "options": [
+      "Đạt mức ĐỦ chứ không cần xuất sắc, vì đầu tư thêm không tăng sự hài lòng nhưng thiếu sót thì gây thiệt hại nghiêm trọng",
+      "Đầu tư nhiều nhất vì chúng quan trọng nhất",
+      "Không cần đầu tư vì khách hàng không yêu cầu",
+      "Đầu tư ngang bằng với thuộc tính delighter"
+    ],
+    "optionsEn": [
+      "Reach ADEQUATE rather than excellence, since more investment does not raise satisfaction while any shortfall causes serious damage",
+      "Invest the most, since they matter most",
+      "No investment needed, since customers do not ask",
+      "Invest equally with delighters"
+    ],
+    "answer": 0,
+    "explanation": "Quan hệ này phi tuyến: khách hàng coi must-be là hiển nhiên nên có chúng không làm ai vui, nhưng thiếu chúng làm mọi người tức giận.",
+    "explanationEn": "The relationship is nonlinear: customers take must-bes for granted so having them pleases nobody, while lacking them angers everybody."
+  },
+  {
+    "id": "q10",
+    "question": "Cái nhìn quan trọng nhất của mô hình Kano về thời gian là gì?",
+    "questionEn": "What is Kano's most important insight about time?",
+    "options": [
+      "Các loại thuộc tính DI CHUYỂN: delighter thành performance rồi thành must-be, nên sản phẩm phải liên tục đổi mới chỉ để giữ nguyên vị trí",
+      "Các loại cố định vĩnh viễn sau khi được phân loại",
+      "Must-be dần trở thành delighter khi công nghệ tiến bộ",
+      "Mọi thuộc tính đều mất giá trị sau 5 năm"
+    ],
+    "optionsEn": [
+      "The categories MIGRATE: delighter to performance to must-be, so products must innovate continuously just to stay in place",
+      "Categories are fixed permanently once assigned",
+      "Must-bes gradually become delighters as technology advances",
+      "All attributes lose value after 5 years"
+    ],
+    "answer": 0,
+    "explanation": "Camera trên điện thoại từng gây kinh ngạc; giờ điện thoại không có camera là không bán được.",
+    "explanationEn": "A phone camera was once astonishing; now a phone without one is unsellable."
+  },
+  {
+    "id": "q11",
+    "question": "Quy tắc nào KHÔNG BAO GIỜ nên vi phạm khi áp dụng mô hình Kano?",
+    "questionEn": "Which Kano rule should NEVER be broken?",
+    "options": [
+      "Đừng bao giờ đánh đổi must-be lấy delighter — sản phẩm có tính năng gây thích thú nhưng thiếu điều cơ bản sẽ bị từ chối",
+      "Đừng bao giờ đầu tư vào delighter",
+      "Đừng bao giờ đo lường thuộc tính performance",
+      "Đừng bao giờ phân loại lại một thuộc tính"
+    ],
+    "optionsEn": [
+      "Never trade a must-be for a delighter — a product with charming features but missing basics gets rejected",
+      "Never invest in delighters",
+      "Never measure performance attributes",
+      "Never reclassify an attribute"
+    ],
+    "answer": 0,
+    "explanation": "Must-be là điều kiện tiên quyết chứ không phải lựa chọn, nên mọi must-be phải nằm trong bản phát hành đầu tiên.",
+    "explanationEn": "Must-bes are preconditions rather than options, so every must-be belongs in the first release."
+  },
+  {
+    "id": "q12",
+    "question": "Vì sao một số hạng mục ưu tiên thấp vẫn phải được làm sớm?",
+    "questionEn": "Why must some low-priority items still be built early?",
+    "options": [
+      "Vì hạng mục ưu tiên cao phụ thuộc vào chúng — ví dụ cơ chế xác thực người dùng không mang giá trị trực tiếp nhưng mọi thứ khác đều cần nó",
+      "Vì chúng dễ làm nên nên làm cho xong",
+      "Vì stakeholder đã yêu cầu từ lâu",
+      "Vì chúng có chi phí thấp nhất"
+    ],
+    "optionsEn": [
+      "Because high-priority items depend on them — authentication delivers no direct value but everything else needs it",
+      "Because they are easy so should be cleared",
+      "Because stakeholders asked long ago",
+      "Because they cost the least"
+    ],
+    "answer": 0,
+    "explanation": "Bốn loại phụ thuộc cần tính tới là kỹ thuật, kiến trúc, bên ngoài như chờ đối tác mở API, và học hỏi khi cần kết quả thử nghiệm trước.",
+    "explanationEn": "The four dependency kinds are technical, architectural, external such as waiting for a partner API, and learning from a prior experiment."
+  },
+  {
+    "id": "q13",
+    "question": "Khi phải phá vỡ thứ tự giá trị vì lý do kỹ thuật, PO nên làm gì?",
+    "questionEn": "When technical sequence overrides value order, what should the PO do?",
+    "options": [
+      "Ghi lại lý do, vì nếu không thì sáu tháng sau sẽ có người hỏi vì sao một hạng mục giá trị thấp lại được làm trước",
+      "Giữ nguyên thứ tự giá trị và chấp nhận rủi ro kỹ thuật",
+      "Không cần giải thích vì đội hiểu lý do",
+      "Đổi lại đánh giá giá trị cho khớp với thứ tự thực hiện"
+    ],
+    "optionsEn": [
+      "Record the reason, since otherwise in six months somebody will ask why a low-value item was built first",
+      "Keep value order and accept the technical risk",
+      "No explanation needed since the team understands",
+      "Rewrite the value scores to match the execution order"
+    ],
+    "answer": 0,
+    "explanation": "Ưu tiên theo giá trị là đầu vào cho kế hoạch chứ không phải bản thân kế hoạch; kế hoạch cuối cùng phải tính tới thứ tự kỹ thuật bắt buộc.",
+    "explanationEn": "Value order is an input to the plan rather than the plan itself; the final plan must account for mandatory technical sequence."
+  },
+  {
+    "id": "q14",
+    "question": "Vì sao ưu tiên hoá phải là hoạt động cộng tác?",
+    "questionEn": "Why must prioritization be collaborative?",
+    "options": [
+      "Vì khách hàng cung cấp thông tin về giá trị còn đội cung cấp chi phí và rủi ro kỹ thuật — không bên nào có đủ cả hai",
+      "Vì quy trình Scrum yêu cầu mọi quyết định phải đồng thuận",
+      "Vì Product Owner không đủ thẩm quyền quyết định một mình",
+      "Vì cần nhiều người để tránh sai sót"
+    ],
+    "optionsEn": [
+      "Because customers supply value information while the team supplies cost and technical risk — neither side has both",
+      "Because Scrum requires consensus on every decision",
+      "Because the PO lacks authority to decide alone",
+      "Because more people reduce mistakes"
+    ],
+    "answer": 0,
+    "explanation": "Product Owner vẫn là người quyết định cuối cùng về thứ tự, nhưng quyết định đó cần đầu vào từ cả hai phía để có cơ sở.",
+    "explanationEn": "The PO still makes the final ordering decision, but that decision needs input from both sides to be grounded."
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao ưu tiên KHÔNG cố định?",
+    "questionEn": "Why are priorities NOT fixed?",
+    "options": [
+      "Vì chúng thay đổi khi thị trường dịch chuyển, khi bạn học được điều mới, và khi đối thủ tung sản phẩm",
+      "Vì stakeholder hay đổi ý",
+      "Vì đội không hoàn thành đúng kế hoạch",
+      "Vì công cụ tự động sắp xếp lại backlog"
+    ],
+    "optionsEn": [
+      "Because they change as markets shift, as you learn, and as competitors ship",
+      "Because stakeholders change their minds",
+      "Because the team misses its plan",
+      "Because tools reorder the backlog automatically"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế hãy xem lại ưu tiên định kỳ, đặc biệt ở đầu mỗi sprint, thay vì coi thứ tự đã chốt là bất biến.",
+    "explanationEn": "So revisit priorities regularly, especially each sprint, rather than treating a settled order as permanent."
+  },
+  {
+    "id": "q16",
+    "question": "Hậu quả của việc không có ưu tiên rõ ràng khi lịch trình bị trễ là gì?",
+    "questionEn": "What happens without clear priorities when the schedule slips?",
+    "options": [
+      "Quản lý không biết phản ứng thế nào, và mọi quyết định cắt giảm trở thành khủng hoảng chính trị",
+      "Đội sẽ tự động làm thêm giờ để bù",
+      "Khách hàng sẽ tự giảm phạm vi",
+      "Dự án sẽ tự động được gia hạn"
+    ],
+    "optionsEn": [
+      "Management does not know how to respond, and every cut becomes a political crisis",
+      "The team automatically works overtime",
+      "Customers reduce scope themselves",
+      "The project is automatically extended"
+    ],
+    "answer": 0,
+    "explanation": "Với ưu tiên rõ ràng, việc cắt giảm chỉ là thực thi một kế hoạch đã được thoả thuận từ trước chứ không phải một cuộc đàm phán khẩn cấp.",
+    "explanationEn": "With clear priorities, cutting is simply executing a previously agreed plan rather than an emergency negotiation."
+  }
+]

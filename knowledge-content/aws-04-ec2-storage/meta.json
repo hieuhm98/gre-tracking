@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 4,
   "title": "Lưu trữ cho EC2 – EBS, EFS, Instance Store & AMI",
   "titleEn": "EC2 Storage – EBS, EFS, Instance Store & AMI",
   "description": "Các lựa chọn lưu trữ cho EC2 – EBS, EFS, Instance Store, AMI và FSx – kèm loại volume, snapshot, mã hóa và so sánh cho kỳ thi SAA-C03.",

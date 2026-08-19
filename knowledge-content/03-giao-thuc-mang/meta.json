@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "it-fundamentals",
+  "order": 3,
   "title": "Giao thức mạng",
   "titleEn": "Network Protocols",
   "description": "TCP/IP, UDP, HTTP/HTTPS, DNS và cách dữ liệu di chuyển qua mạng.",

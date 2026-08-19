@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Acceptance criteria trả lời câu hỏi nào?",
+    "questionEn": "Which question do acceptance criteria answer?",
+    "options": [
+      "Làm sao chúng ta biết hạng mục này đã xong đúng?",
+      "Hạng mục này tốn bao lâu để làm?",
+      "Ai sẽ thực hiện hạng mục này?",
+      "Hạng mục này được xây bằng công nghệ gì?"
+    ],
+    "optionsEn": [
+      "How do we know this item is done right?",
+      "How long will this item take?",
+      "Who will implement this item?",
+      "What technology will build this item?"
+    ],
+    "answer": 0,
+    "explanation": "AC là hợp đồng chung giữa BA, Dev và QC về việc thế nào là hoàn thành đúng, nên phải được thoả thuận trước khi bắt đầu hiện thực.",
+    "explanationEn": "AC are the shared contract between BA, developer, and tester about what done means, so they must be agreed before implementation starts."
+  },
+  {
+    "id": "q2",
+    "question": "Câu nào KHÔNG phải một acceptance criterion hợp lệ?",
+    "questionEn": "Which is NOT a valid acceptance criterion?",
+    "options": [
+      "Dùng bộ nhớ đệm để tăng tốc tìm kiếm",
+      "Kết quả tìm kiếm hiển thị trong vòng 2 giây với tối đa 1.000 bản ghi",
+      "Khi không có kết quả, hệ thống hiển thị thông báo không tìm thấy kèm gợi ý sửa từ khoá",
+      "Người dùng không đủ quyền nhìn thấy thông báo từ chối truy cập"
+    ],
+    "optionsEn": [
+      "Use a cache to speed up search",
+      "Search results display within 2 seconds with up to 1,000 records",
+      "When there are no results, the system shows a not-found message with search suggestions",
+      "A user without permission sees an access denied message"
+    ],
+    "answer": 0,
+    "explanation": "AC nêu điều kiện phải thoả mãn, không mô tả cách làm. Bộ nhớ đệm là quyết định thiết kế thuộc về đội phát triển.",
+    "explanationEn": "AC state conditions to satisfy, not implementation. Caching is a design decision belonging to the development team."
+  },
+  {
+    "id": "q3",
+    "question": "Định dạng Given-When-Then buộc bạn nêu rõ ba thứ nào?",
+    "questionEn": "Which three things does the Given-When-Then format force you to state?",
+    "options": [
+      "Trạng thái ban đầu, hành động xảy ra, và kết quả mong đợi",
+      "Người dùng, hệ thống, và dữ liệu",
+      "Chi phí, thời gian, và rủi ro",
+      "Ai, ở đâu, và khi nào"
+    ],
+    "optionsEn": [
+      "The starting state, the action, and the expected result",
+      "The user, the system, and the data",
+      "Cost, time, and risk",
+      "Who, where, and when"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là ba thứ mà một yêu cầu thiếu thông tin thường bỏ sót, đặc biệt là trạng thái ban đầu.",
+    "explanationEn": "These are exactly the three things an under-specified requirement usually omits, especially the starting state."
+  },
+  {
+    "id": "q4",
+    "question": "Phần nào của acceptance criteria bị bỏ sót nhiều nhất?",
+    "questionEn": "Which part of acceptance criteria is most frequently omitted?",
+    "options": [
+      "Điều kiện ngoại lệ và trường hợp lỗi, chứ không phải đường đi thuận lợi",
+      "Tên của user class thực hiện hành động",
+      "Thời điểm hành động xảy ra",
+      "Định dạng hiển thị của kết quả"
+    ],
+    "optionsEn": [
+      "Exception conditions and failure cases, not the happy path",
+      "The name of the acting user class",
+      "When the action occurs",
+      "The display format of the result"
+    ],
+    "answer": 0,
+    "explanation": "Một story chỉ thực sự xong khi hệ thống xử lý đúng cả những gì có thể sai, chứ không chỉ khi mọi thứ diễn ra suôn sẻ.",
+    "explanationEn": "A story is only truly done when the system handles what can go wrong, not merely when everything goes smoothly."
+  },
+  {
+    "id": "q5",
+    "question": "Một story vừa chỉ có 1 tới 2 acceptance criteria. Điều đó thường có nghĩa gì?",
+    "questionEn": "A medium story has only one or two acceptance criteria. What does that usually mean?",
+    "options": [
+      "Nhiều khả năng bạn chỉ mô tả đường đi thuận lợi và còn thiếu các trường hợp ngoại lệ",
+      "Story đã được đặc tả rất hiệu quả và súc tích",
+      "Story quá lớn và cần được chia nhỏ",
+      "Đội đã hiểu rõ nên không cần viết thêm"
+    ],
+    "optionsEn": [
+      "You probably described only the happy path and are missing exception cases",
+      "The story is efficiently and concisely specified",
+      "The story is too large and needs splitting",
+      "The team understands it well enough already"
+    ],
+    "answer": 0,
+    "explanation": "Ngược lại, trên 10 AC thường là dấu hiệu story quá lớn. Con số hợp lý nằm ở giữa và phải phủ được cả trường hợp lỗi.",
+    "explanationEn": "Conversely, over ten AC usually signals a story too large. A reasonable number sits between and must cover failure cases."
+  },
+  {
+    "id": "q6",
+    "question": "Câu hỏi nào KHÔNG nằm trong danh sách kiểm AC cho mỗi story?",
+    "questionEn": "Which question is NOT in the AC checklist for each story?",
+    "options": [
+      "Lập trình viên nào sẽ nhận story này?",
+      "Dữ liệu rỗng thì hiển thị gì?",
+      "Người dùng không đủ quyền thì thấy gì?",
+      "Hệ thống bên ngoài lỗi thì xử lý ra sao?"
+    ],
+    "optionsEn": [
+      "Which developer will take this story?",
+      "What displays when data is empty?",
+      "What does an unauthorised user see?",
+      "How is an external system failure handled?"
+    ],
+    "answer": 0,
+    "explanation": "Việc phân công thuộc về đội phát triển. Danh sách kiểm còn có dữ liệu quá nhiều, thao tác hai lần liên tiếp và giới hạn giá trị.",
+    "explanationEn": "Assignment belongs to the team. The checklist also covers too much data, double actions, and value limits."
+  },
+  {
+    "id": "q7",
+    "question": "Business rule khác functional requirement ở điểm cốt lõi nào?",
+    "questionEn": "What is the core difference between a business rule and a functional requirement?",
+    "options": [
+      "Business rule tồn tại độc lập với phần mềm và được thực thi ngay cả khi chưa có hệ thống nào",
+      "Business rule chi tiết hơn functional requirement",
+      "Business rule do lập trình viên viết",
+      "Business rule chỉ áp dụng cho hệ thống tài chính"
+    ],
+    "optionsEn": [
+      "A business rule exists independently of software and was enforced before any system existed",
+      "A business rule is more detailed than a functional requirement",
+      "Business rules are written by developers",
+      "Business rules only apply to financial systems"
+    ],
+    "answer": 0,
+    "explanation": "Trước khi có hệ thống, quy tắc đơn trên 50 triệu phải được phê duyệt vẫn được thực thi bằng giấy tờ và con người.",
+    "explanationEn": "Before the system existed, the rule that orders above 50 million need approval was enforced on paper by people."
+  },
+  {
+    "id": "q8",
+    "question": "Vì sao một business rule có thể sinh ra nhiều yêu cầu chức năng?",
+    "questionEn": "Why can one business rule generate several functional requirements?",
+    "options": [
+      "Vì nó áp dụng ở nhiều nơi trong hệ thống: màn hình tạo đơn, màn hình duyệt, báo cáo và API",
+      "Vì lập trình viên hiểu quy tắc theo nhiều cách khác nhau",
+      "Vì mỗi sprint cần một yêu cầu riêng",
+      "Vì mỗi user class cần một yêu cầu riêng"
+    ],
+    "optionsEn": [
+      "Because it applies in many places: the order screen, the approval screen, reporting, and the API",
+      "Because developers interpret it in different ways",
+      "Because each sprint needs its own requirement",
+      "Because each user class needs its own requirement"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là lý do phải tách business rule ra riêng: nếu viết nó vào ba story khác nhau, khi quy tắc đổi bạn sẽ quên sửa một chỗ.",
+    "explanationEn": "This is exactly why rules belong separately: written into three stories, you will miss one when the rule changes."
+  },
+  {
+    "id": "q9",
+    "question": "Trường nào là quan trọng nhất khi ghi lại một business rule?",
+    "questionEn": "Which field matters most when recording a business rule?",
+    "options": [
+      "Nguồn gốc, vì nó cho biết quy tắc có thể thương lượng hay không và ai phải được hỏi khi cần thay đổi",
+      "Mã định danh",
+      "Ngày tạo",
+      "Số lượng yêu cầu chức năng liên quan"
+    ],
+    "optionsEn": [
+      "Origin, because it reveals whether the rule is negotiable and whom to consult for a change",
+      "The identifier",
+      "The creation date",
+      "The number of related functional requirements"
+    ],
+    "answer": 0,
+    "explanation": "Quy tắc bắt nguồn từ quy định pháp luật thường không thể thương lượng, còn quy tắc từ chính sách nội bộ thì có thể xem lại.",
+    "explanationEn": "A rule originating in law is usually non-negotiable, while one from internal policy can be revisited."
+  },
+  {
+    "id": "q10",
+    "question": "Quy tắc khách hàng có tổng chi tiêu năm trên 500 triệu được xếp hạng Vàng thuộc loại business rule nào?",
+    "questionEn": "Which kind of business rule is a customer with annual spend above 500 million is Gold tier?",
+    "options": [
+      "Suy luận (inference) — từ sự thật này suy ra sự thật khác",
+      "Ràng buộc (constraint)",
+      "Điều kiện kích hoạt (action enabler)",
+      "Tính toán (computation)"
+    ],
+    "optionsEn": [
+      "An inference — deriving one fact from another",
+      "A constraint",
+      "An action enabler",
+      "A computation"
+    ],
+    "answer": 0,
+    "explanation": "Loại suy luận bị bỏ sót nhiều nhất vì nó ngầm định trong đầu người làm nghiệp vụ, cho tới khi hệ thống xếp hạng sai một khách hàng quan trọng.",
+    "explanationEn": "Inferences are most often missed because they live implicitly in business staff's heads, until the system misclassifies an important customer."
+  },
+  {
+    "id": "q11",
+    "question": "Quy tắc khi tồn kho xuống dưới mức tối thiểu, hệ thống phải tạo yêu cầu nhập hàng thuộc loại nào?",
+    "questionEn": "Which kind is when stock falls below the minimum, the system must raise a replenishment request?",
+    "options": [
+      "Điều kiện kích hoạt (action enabler)",
+      "Ràng buộc (constraint)",
+      "Suy luận (inference)",
+      "Tính toán (computation)"
+    ],
+    "optionsEn": [
+      "An action enabler",
+      "A constraint",
+      "An inference",
+      "A computation"
+    ],
+    "answer": 0,
+    "explanation": "Ràng buộc nêu điều gì bắt buộc hoặc bị cấm; tính toán nêu công thức tính một giá trị; suy luận rút ra sự thật mới từ sự thật cũ.",
+    "explanationEn": "Constraints state what is mandatory or forbidden; computations give a formula; inferences derive a new fact from an existing one."
+  },
+  {
+    "id": "q12",
+    "question": "Cách liên kết đúng giữa acceptance criteria và business rule là gì?",
+    "questionEn": "What is the right way to link acceptance criteria and business rules?",
+    "options": [
+      "AC tham chiếu tới mã của business rule chứ không lặp lại nội dung, để khi quy tắc đổi chỉ phải sửa một chỗ",
+      "Chép nguyên nội dung business rule vào mọi AC liên quan",
+      "Bỏ business rule và chỉ giữ AC",
+      "Ghi business rule vào phần mô tả của story"
+    ],
+    "optionsEn": [
+      "AC reference the rule's ID rather than repeating its content, so a rule change means one edit",
+      "Copy the rule's full text into every related AC",
+      "Drop the rule and keep only the AC",
+      "Write the rule into the story description"
+    ],
+    "answer": 0,
+    "explanation": "Khi ngưỡng đổi từ 50 triệu sang 100 triệu, bạn chỉ sửa BR-012 và mọi AC tham chiếu tới nó tự động vẫn đúng.",
+    "explanationEn": "When the threshold moves from 50 to 100 million you edit only BR-012, and every AC referencing it stays correct automatically."
+  },
+  {
+    "id": "q13",
+    "question": "Vì sao business rule nên nằm ở nơi thay đổi được mà không cần lập trình lại?",
+    "questionEn": "Why should business rules live where they can change without reprogramming?",
+    "options": [
+      "Vì business rule thay đổi thường xuyên hơn quy trình, và quy trình thay đổi thường xuyên hơn kiến trúc",
+      "Vì lập trình viên không muốn sửa mã",
+      "Vì cấu hình chạy nhanh hơn mã cứng",
+      "Vì tiêu chuẩn ngành yêu cầu như vậy"
+    ],
+    "optionsEn": [
+      "Because business rules change more often than processes, and processes more often than architecture",
+      "Because developers dislike editing code",
+      "Because configuration runs faster than hard-coded logic",
+      "Because industry standards require it"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do BA nên ghi lại mức độ ổn định của mỗi quy tắc: quy tắc đổi hằng quý phải đưa vào cấu hình, quy tắc 20 năm chưa đổi có thể mã hoá cứng.",
+    "explanationEn": "This is why a BA records each rule's stability: one changing quarterly belongs in configuration, one unchanged in 20 years can be hard-coded."
+  },
+  {
+    "id": "q14",
+    "question": "Câu hỏi nào về business rule hay bị bỏ sót nhất và gây nhiều sự cố nghiêm trọng nhất?",
+    "questionEn": "Which business rule question is most often omitted and causes the most serious incidents?",
+    "options": [
+      "Khi quy tắc đổi, có cần áp dụng ngược cho dữ liệu cũ không — ví dụ các đơn đang chờ duyệt xử lý theo quy tắc cũ hay mới",
+      "Ai là người viết ra quy tắc đầu tiên",
+      "Quy tắc được lưu ở tệp nào",
+      "Quy tắc dài bao nhiêu từ"
+    ],
+    "optionsEn": [
+      "Whether a changed rule applies retroactively — for example, are pending orders processed under the old or new rule",
+      "Who originally wrote the rule",
+      "Which file the rule is stored in",
+      "How many words the rule contains"
+    ],
+    "answer": 0,
+    "explanation": "Các câu hỏi khác cần đặt gồm ai có thẩm quyền thay đổi, có ngoại lệ nào, ai được phép ghi đè và việc ghi đè có được ghi nhật ký không.",
+    "explanationEn": "Other questions to ask: who may change it, are there exceptions, who may override, and is the override logged."
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao business rule được coi là tài sản của tổ chức chứ không phải của dự án?",
+    "questionEn": "Why is a business rule an organizational asset rather than a project asset?",
+    "options": [
+      "Vì hệ thống bị thay thế nhưng quy tắc vẫn còn đó, và nó thuộc quyền sở hữu của bộ phận nghiệp vụ",
+      "Vì nó được lưu trong hệ thống quản lý tài liệu của công ty",
+      "Vì nó được kiểm toán hằng năm",
+      "Vì nó có mã định danh riêng"
+    ],
+    "optionsEn": [
+      "Because systems get replaced while the rule remains, and it is owned by the business function",
+      "Because it is stored in the corporate document system",
+      "Because it is audited annually",
+      "Because it has its own identifier"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng là lý do business rule nên được lưu ở kho cấp doanh nghiệp chứ không chôn trong tài liệu yêu cầu của từng dự án.",
+    "explanationEn": "This is also why business rules belong in an enterprise repository rather than buried in individual project requirements."
+  },
+  {
+    "id": "q16",
+    "question": "Bài kiểm tra thực dụng nào cho biết acceptance criteria đã đủ hay chưa?",
+    "questionEn": "Which pragmatic test tells you whether acceptance criteria are sufficient?",
+    "options": [
+      "Tester có viết được test case từ AC đó không; nếu không thì AC chưa đủ",
+      "AC có dài hơn mô tả story không",
+      "AC có được khách hàng ký duyệt không",
+      "AC có dùng đúng định dạng Given-When-Then không"
+    ],
+    "optionsEn": [
+      "Can a tester write test cases from it; if not, the AC is insufficient",
+      "Is the AC longer than the story description",
+      "Has the customer signed off the AC",
+      "Does the AC use the exact Given-When-Then format"
+    ],
+    "answer": 0,
+    "explanation": "Định dạng chỉ là công cụ; điều quan trọng là AC phải cụ thể, kiểm chứng được và phủ cả trường hợp lỗi.",
+    "explanationEn": "The format is only a tool; what matters is that AC are specific, verifiable, and cover failure cases."
+  }
+]

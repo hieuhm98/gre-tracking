@@ -1,5 +1,6 @@
 {
-  "group": "ba-po-pm",
+  "group": "ba",
+  "order": 11,
   "title": "Yêu cầu phần mềm",
   "titleEn": "Software Requirements",
   "description": "Functional vs non-functional requirements, user story, acceptance criteria và cách thu thập yêu cầu.",

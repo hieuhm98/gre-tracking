@@ -27,8 +27,12 @@ export default function BilingualPair({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3",
-        divider && "md:divide-x md:divide-zinc-200 md:dark:divide-zinc-800",
+        "grid grid-cols-1 md:grid-cols-2 gap-y-3",
+        // With a divider the gutter comes from each column's padding, so the rule
+        // sits centred between the two languages instead of hugging the right one.
+        divider
+          ? "md:divide-x md:divide-zinc-200 md:dark:divide-zinc-800"
+          : "md:gap-x-6",
         className
       )}
     >
@@ -40,7 +44,7 @@ export default function BilingualPair({
         )}
         {en}
       </div>
-      <div className="min-w-0">
+      <div className={cn("min-w-0", divider && "md:pl-6")}>
         {labels && (
           <div className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-600 mb-1">
             VI

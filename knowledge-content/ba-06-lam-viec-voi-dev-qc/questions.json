@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Điều mà lập trình viên sợ nhất trong công việc với BA là gì?",
+    "questionEn": "What do developers fear most in their work with a BA?",
+    "options": [
+      "Yêu cầu đổi liên tục sau khi đã viết mã",
+      "Phải tham gia quá nhiều cuộc họp",
+      "Không được tự chọn công nghệ",
+      "Tài liệu yêu cầu quá dài"
+    ],
+    "optionsEn": [
+      "Requirements changing repeatedly after the code is written",
+      "Attending too many meetings",
+      "Not choosing the technology themselves",
+      "Requirements documents being too long"
+    ],
+    "answer": 0,
+    "explanation": "BA sợ xây xong mới biết là sai thứ; tester sợ không có tiêu chí rõ ràng để phán định đúng sai. Ba nỗi sợ này va vào nhau tạo ra phần lớn xung đột trong đội.",
+    "explanationEn": "BAs fear building the wrong thing; testers fear having no clear criterion to judge by. These three fears colliding cause most team conflict."
+  },
+  {
+    "id": "q2",
+    "question": "Phần nào của yêu cầu tốn thời gian nhất của lập trình viên?",
+    "questionEn": "Which part of a requirement consumes most of a developer's time?",
+    "options": [
+      "Các trường hợp ngoại lệ: dữ liệu rỗng hiện gì, API lỗi thì sao, không đủ quyền thì thấy gì, hai người sửa cùng lúc thì ai thắng",
+      "Đường đi thuận lợi của tính năng",
+      "Việc đặt tên biến cho đúng quy ước",
+      "Việc chọn màu sắc giao diện"
+    ],
+    "optionsEn": [
+      "The exception cases: what shows when data is empty, when the API fails, when the user lacks permission, who wins on concurrent edits",
+      "The feature's happy path",
+      "Naming variables to convention",
+      "Choosing interface colours"
+    ],
+    "answer": 0,
+    "explanation": "Đường đi thuận lợi thường dễ. Chính vì thế acceptance criteria phải phủ cả điều kiện ngoại lệ chứ không chỉ trường hợp thành công.",
+    "explanationEn": "The happy path is usually easy. That is why acceptance criteria must cover exception conditions, not only the success case."
+  },
+  {
+    "id": "q3",
+    "question": "Vì sao BA nên giải thích LÝ DO đằng sau một yêu cầu cho lập trình viên?",
+    "questionEn": "Why should a BA explain the REASON behind a requirement to developers?",
+    "options": [
+      "Vì khi hiểu vì sao, họ thường đề xuất được cách làm rẻ hơn mà vẫn đạt mục tiêu; khi chỉ nhận được cái gì, họ chỉ làm đúng chữ",
+      "Vì lập trình viên cần biết ai yêu cầu để chịu trách nhiệm",
+      "Vì quy trình bắt buộc phải ghi lý do",
+      "Vì lý do giúp ước tính chính xác hơn"
+    ],
+    "optionsEn": [
+      "Because knowing why, they often propose a cheaper route to the same goal; knowing only what, they can only follow the letter",
+      "Because developers need to know who asked, for accountability",
+      "Because the process mandates recording a rationale",
+      "Because a rationale improves estimate accuracy"
+    ],
+    "answer": 0,
+    "explanation": "Lý do cũng cho biết yêu cầu có thể thương lượng hay không, điều rất quan trọng khi phải cắt giảm phạm vi.",
+    "explanationEn": "The rationale also reveals whether the requirement is negotiable, which matters greatly when scope must be cut."
+  },
+  {
+    "id": "q4",
+    "question": "Một câu hỏi của lập trình viên không được trả lời trong ngày dẫn tới hậu quả gì?",
+    "questionEn": "What happens when a developer's question goes unanswered for a day?",
+    "options": [
+      "Họ hoặc bị chặn, hoặc tự đoán — và tự đoán là chế độ thất bại tệ hơn",
+      "Họ sẽ chuyển sang task khác và không có hậu quả gì",
+      "Họ sẽ tự viết tài liệu yêu cầu",
+      "Họ sẽ báo cáo lên quản lý dự án"
+    ],
+    "optionsEn": [
+      "They are either blocked or they guess — and guessing is the worse failure mode",
+      "They switch tasks with no consequence",
+      "They write the requirements themselves",
+      "They escalate to the project manager"
+    ],
+    "answer": 0,
+    "explanation": "Bị chặn thì thấy được ngay; tự đoán thì chỉ lộ ra ở giai đoạn kiểm thử hoặc sau khi giao hàng, khi việc sửa đã tốn kém hơn nhiều.",
+    "explanationEn": "Being blocked is visible immediately; guessing only surfaces during testing or after delivery, when fixing costs far more."
+  },
+  {
+    "id": "q5",
+    "question": "Khi lập trình viên nói việc này phức tạp, BA nên hỏi gì?",
+    "questionEn": "When a developer says this is complex, what should the BA ask?",
+    "options": [
+      "Điều gì cụ thể làm nó phức tạp, và có cách nào rẻ hơn đáp ứng được cùng nhu cầu nghiệp vụ không",
+      "Bạn có chắc là mình đủ năng lực làm việc này không",
+      "Bao lâu thì bạn làm xong nếu cố gắng hơn",
+      "Có thể nhờ người khác làm thay không"
+    ],
+    "optionsEn": [
+      "What specifically makes it complex, and is there a cheaper way to meet the same business need",
+      "Are you sure you are capable of this",
+      "How fast could you finish if you tried harder",
+      "Could someone else do it instead"
+    ],
+    "answer": 0,
+    "explanation": "Thường có nhiều cách đáp ứng cùng một nhu cầu với chi phí rất khác nhau. Cuộc trò chuyện đó là nơi BA tạo ra giá trị lớn nhất.",
+    "explanationEn": "There are usually several ways to meet one need at very different costs. That conversation is where a BA adds the most value."
+  },
+  {
+    "id": "q6",
+    "question": "Cách viết yêu cầu nào ĐÚNG khi làm việc với lập trình viên?",
+    "questionEn": "Which way of writing a requirement is correct when working with developers?",
+    "options": [
+      "Hệ thống cần lưu lịch sử thay đổi của đơn hàng, gồm người thực hiện và thời điểm",
+      "Tạo bảng order_history với các cột id, order_id, user_id, changed_at",
+      "Dùng trigger của cơ sở dữ liệu để ghi lịch sử",
+      "Lưu lịch sử vào tệp log dạng JSON"
+    ],
+    "optionsEn": [
+      "The system must retain a change history for orders, including who made the change and when",
+      "Create an order_history table with columns id, order_id, user_id, changed_at",
+      "Use a database trigger to record history",
+      "Store the history in a JSON log file"
+    ],
+    "answer": 0,
+    "explanation": "BA đặc tả nhu cầu, không đặc tả giải pháp kỹ thuật. Ba phương án còn lại đều là quyết định thiết kế thuộc về đội phát triển.",
+    "explanationEn": "A BA specifies the need, not the technical solution. The other three are design decisions belonging to the development team."
+  },
+  {
+    "id": "q7",
+    "question": "Vì sao tester là nhóm có giá trị nhất trong review yêu cầu?",
+    "questionEn": "Why are testers the most valuable group in a requirements review?",
+    "options": [
+      "Vì tư duy kiểm thử tự động hỏi làm sao chứng minh điều này đúng, kết quả mong đợi là gì và còn trường hợp nào khác không",
+      "Vì họ có nhiều thời gian rảnh nhất",
+      "Vì họ hiểu nghiệp vụ hơn BA",
+      "Vì họ là người viết tài liệu cuối cùng"
+    ],
+    "optionsEn": [
+      "Because the testing mindset automatically asks how to prove it correct, what the expected result is, and whether other cases exist",
+      "Because they have the most free time",
+      "Because they understand the business better than the BA",
+      "Because they write the final documentation"
+    ],
+    "answer": 0,
+    "explanation": "Ba câu hỏi đó lần lượt phát hiện yêu cầu không kiểm chứng được, yêu cầu thiếu thông tin và ngoại lệ bị bỏ sót.",
+    "explanationEn": "Those three questions respectively expose unverifiable requirements, under-specified requirements, and missing exceptions."
+  },
+  {
+    "id": "q8",
+    "question": "Nguyên tắc thực dụng nào liên kết tester với lập trình viên?",
+    "questionEn": "Which pragmatic rule links testers and developers?",
+    "options": [
+      "Nếu tester không viết được test case từ câu yêu cầu, thì lập trình viên cũng không xây đúng được",
+      "Nếu tester tìm ra nhiều bug thì lập trình viên yếu kém",
+      "Nếu lập trình viên viết unit test thì không cần tester",
+      "Nếu yêu cầu dài thì test case cũng phải dài"
+    ],
+    "optionsEn": [
+      "If a tester cannot write a test case from the requirement, a developer cannot build it correctly either",
+      "If testers find many defects, developers are weak",
+      "If developers write unit tests, testers are unnecessary",
+      "If a requirement is long, its test cases must be long"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do nên viết acceptance criteria cùng tester: BA mang hiểu biết nghiệp vụ, tester mang tư duy tìm ngoại lệ.",
+    "explanationEn": "This is why acceptance criteria should be written with testers: the BA brings business understanding, the tester brings exception hunting."
+  },
+  {
+    "id": "q9",
+    "question": "Khi tester báo một vấn đề, câu hỏi đầu tiên cần trả lời là gì?",
+    "questionEn": "When a tester raises an issue, what is the first question to answer?",
+    "options": [
+      "Đây là lỗi mã, hay là yêu cầu chưa nói tới trường hợp này?",
+      "Ai là người viết đoạn mã đó?",
+      "Bug này nghiêm trọng tới mức nào?",
+      "Có bao nhiêu người dùng bị ảnh hưởng?"
+    ],
+    "optionsEn": [
+      "Is this a code defect, or a case the requirement never covered?",
+      "Who wrote that code?",
+      "How severe is this defect?",
+      "How many users are affected?"
+    ],
+    "answer": 0,
+    "explanation": "Nếu là lỗi mã thì Dev sửa; nếu là yêu cầu thiếu thì đó là mục backlog mới cần ưu tiên hoá, không phải sửa lén trong sprint.",
+    "explanationEn": "A code defect gets fixed; a missing requirement becomes a new backlog item to prioritize, not something slipped into the sprint."
+  },
+  {
+    "id": "q10",
+    "question": "Hậu quả của việc nhầm lẫn giữa lỗi mã và yêu cầu thiếu là gì?",
+    "questionEn": "What are the consequences of confusing a code defect with a missing requirement?",
+    "options": [
+      "Hoặc đội bị đổ lỗi oan cho việc thiếu yêu cầu, hoặc phạm vi bị mở rộng âm thầm dưới danh nghĩa sửa bug",
+      "Số lượng bug trong báo cáo sẽ sai",
+      "Tester sẽ phải viết lại test case",
+      "Khách hàng sẽ không nghiệm thu sản phẩm"
+    ],
+    "optionsEn": [
+      "Either the team is unfairly blamed for a missing requirement, or scope expands silently under the label of bug fixing",
+      "The defect count in reports becomes wrong",
+      "Testers must rewrite their test cases",
+      "The customer refuses to accept the product"
+    ],
+    "answer": 0,
+    "explanation": "Mở rộng phạm vi âm thầm nguy hiểm hơn vì nó không bao giờ được xem xét như một tổng thể và không có ai điều chỉnh lịch trình.",
+    "explanationEn": "Silent scope expansion is more dangerous because it is never examined as a whole and nobody adjusts the schedule."
+  },
+  {
+    "id": "q11",
+    "question": "Nhiều yêu cầu đổi thực chất hoá ra là gì?",
+    "questionEn": "What do many change requests turn out to be?",
+    "options": [
+      "Làm rõ một điều đã ngầm định — và làm rõ thì không tính là thay đổi phạm vi",
+      "Yêu cầu hoàn toàn mới cần tính phí bổ sung",
+      "Lỗi của giai đoạn phân tích ban đầu",
+      "Cách khách hàng thử phản ứng của đội"
+    ],
+    "optionsEn": [
+      "Clarifications of something already implied — and a clarification is not a scope change",
+      "Entirely new requirements needing extra billing",
+      "A failure of the initial analysis phase",
+      "The customer testing the team's reaction"
+    ],
+    "answer": 0,
+    "explanation": "Chính vì thế ranh giới giữa làm rõ và thay đổi phạm vi phải được định nghĩa trước, không phải khi tranh chấp đã nổ ra.",
+    "explanationEn": "This is exactly why the clarification-versus-scope-change boundary must be defined beforehand, not once a dispute erupts."
+  },
+  {
+    "id": "q12",
+    "question": "Cách trình bày đúng khi khách hàng muốn thêm một thay đổi giữa sprint?",
+    "questionEn": "What is the right way to respond when a customer wants a mid-sprint change?",
+    "options": [
+      "Được, thay đổi này mất khoảng ba ngày; nếu đưa vào sprint này thì story X phải lùi lại — anh chị chọn phương án nào",
+      "Không được, sprint đã chốt rồi",
+      "Được, đội sẽ cố gắng làm thêm",
+      "Để tôi hỏi lại quản lý dự án rồi trả lời sau"
+    ],
+    "optionsEn": [
+      "Yes, this takes about three days; adding it to this sprint means story X moves out — which do you prefer",
+      "No, the sprint is locked",
+      "Yes, the team will put in extra effort",
+      "Let me ask the project manager and get back to you"
+    ],
+    "answer": 0,
+    "explanation": "Trình bày đánh đổi chứ không trình bày lời từ chối. Đây cũng là cách nói không một cách xây dựng.",
+    "explanationEn": "Present the trade-off rather than a refusal. This is also how you say no constructively."
+  },
+  {
+    "id": "q13",
+    "question": "Khi tranh cãi về việc một vấn đề có phải bug hay không, câu hỏi ĐÚNG là gì?",
+    "questionEn": "In an argument over whether something is a defect, what is the RIGHT question?",
+    "options": [
+      "Làm sao lần sau chúng ta bắt được điều này sớm hơn",
+      "Ai là người sai trong tình huống này",
+      "Bug này có ảnh hưởng tới tiến độ không",
+      "Ai sẽ chịu chi phí sửa lỗi"
+    ],
+    "optionsEn": [
+      "How do we catch this earlier next time",
+      "Who was at fault here",
+      "Does this defect affect the schedule",
+      "Who bears the fix cost"
+    ],
+    "answer": 0,
+    "explanation": "Nếu nhiều bug thuộc loại yêu cầu không nói tới, đó là tín hiệu quy trình: BA cần phủ tốt hơn các trường hợp ngoại lệ trong grooming.",
+    "explanationEn": "If many defects fall into the requirement-never-covered category, that is a process signal: the BA must cover exceptions better in grooming."
+  },
+  {
+    "id": "q14",
+    "question": "Ước tính công sức cho một hạng mục thuộc về ai?",
+    "questionEn": "Who owns the effort estimate for an item?",
+    "options": [
+      "Đội phát triển, vì họ là người thực hiện công việc đó",
+      "BA, vì BA hiểu rõ yêu cầu nhất",
+      "Quản lý dự án, vì họ chịu trách nhiệm lịch trình",
+      "Khách hàng, vì họ trả tiền"
+    ],
+    "optionsEn": [
+      "The development team, because they do the work",
+      "The BA, because they understand the requirement best",
+      "The project manager, because they own the schedule",
+      "The customer, because they pay"
+    ],
+    "answer": 0,
+    "explanation": "Khi khách hàng hỏi cái này mất bao lâu và BA trả lời ngay, bạn vừa cam kết thay người sẽ phải làm việc đó — một vi phạm ranh giới phổ biến.",
+    "explanationEn": "When a customer asks how long and the BA answers immediately, you just committed on behalf of whoever must do the work — a common boundary violation."
+  },
+  {
+    "id": "q15",
+    "question": "Vi phạm ranh giới nào xảy ra khi yêu cầu mơ hồ và lập trình viên tự chọn cách xử lý?",
+    "questionEn": "Which boundary violation occurs when a requirement is ambiguous and a developer picks a handling?",
+    "options": [
+      "Quyết định nghiệp vụ đang được đưa ra bởi người không có bối cảnh nghiệp vụ",
+      "Lập trình viên đang làm việc của tester",
+      "Product Owner mất quyền kiểm soát backlog",
+      "BA bị mất vai trò trong dự án"
+    ],
+    "optionsEn": [
+      "A business decision is being made by someone without business context",
+      "The developer is doing the tester's job",
+      "The Product Owner loses backlog control",
+      "The BA loses their role on the project"
+    ],
+    "answer": 0,
+    "explanation": "Đây là lý do câu hỏi chưa được trả lời phải được ưu tiên gỡ trong ngày, và vì sao BA cần có mặt và sẵn sàng suốt sprint.",
+    "explanationEn": "This is why unanswered questions must be resolved the same day, and why a BA must be present and available throughout the sprint."
+  },
+  {
+    "id": "q16",
+    "question": "Chỉ báo nào cho thấy BA đã xây dựng được quan hệ tốt với Dev và QC?",
+    "questionEn": "What indicates a BA has built a good relationship with developers and testers?",
+    "options": [
+      "Họ chủ động tìm bạn để hỏi TRƯỚC khi tự quyết định, nghĩa là tin bạn trả lời nhanh và trả lời đúng",
+      "Họ không còn báo bug nào nữa",
+      "Họ không đặt câu hỏi trong sprint",
+      "Họ tự viết lại yêu cầu theo ý mình"
+    ],
+    "optionsEn": [
+      "They come to you before deciding for themselves, meaning they trust you to answer fast and correctly",
+      "They stop logging defects",
+      "They ask no questions during the sprint",
+      "They rewrite requirements to their own liking"
+    ],
+    "answer": 0,
+    "explanation": "Ngược lại, việc họ ngừng hỏi thường không phải dấu hiệu tốt mà là dấu hiệu họ đã từ bỏ việc chờ câu trả lời từ bạn.",
+    "explanationEn": "Conversely, them no longer asking is usually not a good sign but a sign they gave up waiting for your answers."
+  }
+]

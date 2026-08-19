@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tổng quan · Frontend làm gì?",
+      "titleEn": "Overview · What does the Frontend do?",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "febe-01",
+        "febe-02",
+        "febe-03",
+        "febe-04",
+        "febe-05"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Backend làm gì? · Giao tiếp FE ↔ BE qua API",
+      "titleEn": "What does the Backend do? · FE ↔ BE communication via API",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "febe-06",
+        "febe-07",
+        "febe-08",
+        "febe-09",
+        "febe-10"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Authentication & Authorization · Các tầng kiến trúc phổ biến",
+      "titleEn": "Authentication & Authorization · Common architecture layers",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "febe-11",
+        "febe-12",
+        "febe-13",
+        "febe-14",
+        "febe-15"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Môi trường phát triển",
+      "titleEn": "Development environments",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "BA cần hiểu gì về FE/BE để làm việc hiệu quả?",
+      "titleEn": "What does a BA need to understand about FE/BE to work effectively?",
+      "sections": [
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "API là gì? · REST API",
+      "titleEn": "What is an API? · REST API",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Cấu trúc một Request (4 phần) · JSON – Định dạng dữ liệu",
+      "titleEn": "The Structure of a Request (4 parts) · JSON – The Data Format",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Request và Response · HTTP Status Codes",
+      "titleEn": "Request and Response · HTTP Status Codes",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Phân trang & Lọc dữ liệu (Query String) · Webhook vs Polling – Cập nhật real-time",
+      "titleEn": "Pagination & Filtering (Query String) · Webhook vs Polling – Real-time updates",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q11",
+        "q12",
+        "q13"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "API Key và Authentication · API Documentation",
+      "titleEn": "API Key and Authentication · API Documentation",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Ví dụ thực tế: Shopee & Grab",
+      "titleEn": "Real-World Example: Shopee & Grab",
+      "sections": [
+        11
+      ],
+      "questionIds": [
+        "q17",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "id": "l7",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        12
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

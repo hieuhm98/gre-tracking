@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Quản lý yêu cầu, baseline & kiểm soát phiên bản",
+      "titleEn": "Requirements management, baselines & version control",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Thuộc tính, trạng thái & đo lường yêu cầu",
+      "titleEn": "Attributes, status & measuring requirements",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Vì sao thay đổi xảy ra & quy trình kiểm soát",
+      "titleEn": "Why change happens & the control process",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Change control board & phân tích tác động",
+      "titleEn": "The change control board & impact analysis",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Đo lường thay đổi, scope creep & văn hoá",
+      "titleEn": "Measuring change, scope creep & culture",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

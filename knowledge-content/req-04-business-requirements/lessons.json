@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Business requirements, objectives & success metrics",
+      "titleEn": "Business requirements, objectives & success metrics",
+      "sections": [1, 2, 3],
+      "questionIds": ["q1", "q2", "q3", "q4"]
+    },
+    {
+      "id": "l2",
+      "title": "Vision statement, rủi ro & giả định",
+      "titleEn": "The vision statement, risks & assumptions",
+      "sections": [4, 5],
+      "questionIds": ["q5", "q6", "q7"]
+    },
+    {
+      "id": "l3",
+      "title": "Phạm vi & giới hạn",
+      "titleEn": "Scope & limitations",
+      "sections": [6],
+      "questionIds": ["q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Kỹ thuật biểu diễn phạm vi",
+      "titleEn": "Scope representation techniques",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Stakeholder, ưu tiên dự án & kiểm soát scope",
+      "titleEn": "Stakeholders, project priorities & controlling scope",
+      "sections": [9, 10, 11],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [12, 13],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

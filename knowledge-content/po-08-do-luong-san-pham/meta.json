@@ -1,0 +1,8 @@
+{
+  "group": "po",
+  "order": 8,
+  "title": "Đo lường sản phẩm & metrics",
+  "titleEn": "Product Metrics & Measurement",
+  "description": "Chọn chỉ số phản ánh giá trị thật, vanity metric, chỉ số dẫn dắt và chỉ số theo sau, A/B testing và bẫy khi đo lường.",
+  "descriptionEn": "Choosing metrics that reflect real value, vanity metrics, leading versus lagging indicators, A/B testing, and measurement traps."
+}

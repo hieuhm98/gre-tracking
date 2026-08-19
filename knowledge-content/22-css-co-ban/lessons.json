@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "CSS là gì? · Selector — Chọn phần tử",
+      "titleEn": "What is CSS? · Selectors — Choosing elements",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "css-01",
+        "css-02",
+        "css-03",
+        "css-04"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Box Model · Display — Cách hiển thị",
+      "titleEn": "Box Model · Display — How elements are shown",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "css-05",
+        "css-06",
+        "css-07",
+        "css-08"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Flexbox · CSS Grid",
+      "titleEn": "Flexbox · CSS Grid",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "css-09",
+        "css-10",
+        "css-11"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Position · Typography",
+      "titleEn": "Position · Typography",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "css-12",
+        "css-13",
+        "css-14"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Màu sắc · Responsive Design",
+      "titleEn": "Colors · Responsive Design",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "css-15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Transitions và Animations · Cascade, Specificity và Inheritance",
+      "titleEn": "Transitions and Animations · Cascade, Specificity, and Inheritance",
+      "sections": [
+        11,
+        12
+      ],
+      "questionIds": [
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l7",
+      "title": "CSS và BA",
+      "titleEn": "CSS and the BA",
+      "sections": [
+        13
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

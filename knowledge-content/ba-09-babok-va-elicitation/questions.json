@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Cách dùng BABOK thực dụng nhất là gì?",
+    "questionEn": "What is the most pragmatic way to use BABOK?",
+    "options": [
+      "Coi nó như bản đồ và danh sách kiểm giúp nhận ra mình đang bỏ sót nhóm công việc nào, không phải quy trình bắt buộc",
+      "Học thuộc toàn bộ để làm được nghề",
+      "Tuân theo từng bước cho mọi dự án",
+      "Dùng nó thay cho tài liệu yêu cầu"
+    ],
+    "optionsEn": [
+      "As a map and checklist for noticing which group of work you are skipping, not a mandatory process",
+      "Memorise all of it to be able to do the job",
+      "Follow it step by step on every project",
+      "Use it in place of the requirements document"
+    ],
+    "answer": 0,
+    "explanation": "Khi dự án gặp vấn đề mà không biết vì sao, đối chiếu với các nhóm kiến thức thường chỉ ra ngay bạn đang bỏ qua điều gì.",
+    "explanationEn": "When a project struggles and you cannot say why, comparing against the knowledge areas usually points straight at what is being skipped."
+  },
+  {
+    "id": "q2",
+    "question": "Nhóm kiến thức nào của BABOK bị bỏ qua nhiều nhất trong thực tế?",
+    "questionEn": "Which BABOK knowledge area is most skipped in practice?",
+    "options": [
+      "Lập kế hoạch và giám sát công việc phân tích — ít ai dừng lại hỏi nên đầu tư bao nhiêu công sức cho tương xứng rủi ro",
+      "Khơi gợi và cộng tác",
+      "Phân tích và định nghĩa thiết kế",
+      "Quản lý vòng đời yêu cầu"
+    ],
+    "optionsEn": [
+      "Business analysis planning and monitoring — few pause to ask how much effort is proportionate to the risk",
+      "Elicitation and collaboration",
+      "Requirements analysis and design definition",
+      "Requirements life cycle management"
+    ],
+    "answer": 0,
+    "explanation": "Rất nhiều BA lao thẳng vào phỏng vấn mà không xác định trước cách tiếp cận, ai tham gia và sản phẩm nào sẽ tạo ra.",
+    "explanationEn": "Many BAs dive straight into interviews without first deciding the approach, who participates, and which deliverables to produce."
+  },
+  {
+    "id": "q3",
+    "question": "Nhóm Solution Evaluation của BABOK làm gì, và vì sao nó hay bị bỏ qua?",
+    "questionEn": "What does BABOK's solution evaluation area cover, and why is it often skipped?",
+    "options": [
+      "Đo xem giải pháp có thực sự tạo ra giá trị không; bị bỏ qua vì đội thường giao xong tính năng rồi chuyển ngay sang cái tiếp theo",
+      "Đánh giá năng lực của đội phát triển; bị bỏ qua vì nhạy cảm",
+      "Chọn nhà cung cấp phần mềm; bị bỏ qua vì thuộc về mua sắm",
+      "Kiểm thử hệ thống; bị bỏ qua vì thuộc về QC"
+    ],
+    "optionsEn": [
+      "Measuring whether the solution truly delivers value; skipped because teams ship a feature and move straight to the next",
+      "Evaluating team performance; skipped because it is sensitive",
+      "Selecting a software vendor; skipped because it belongs to procurement",
+      "System testing; skipped because it belongs to QC"
+    ],
+    "answer": 0,
+    "explanation": "Không đo thì không bao giờ học được điều gì hiệu quả và điều gì không, nên tổ chức lặp lại cùng sai lầm qua nhiều dự án.",
+    "explanationEn": "Without measurement you never learn what worked and what did not, so the organization repeats the same mistakes across projects."
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao dùng từ khơi gợi thay vì thu thập yêu cầu?",
+    "questionEn": "Why is it called eliciting rather than gathering requirements?",
+    "options": [
+      "Vì yêu cầu không nằm sẵn chờ bạn nhặt lên: người dùng không biết hết nhu cầu, nhiều thứ họ không nói ra vì cho là hiển nhiên, và điều họ nói thường là giải pháp",
+      "Vì đó là thuật ngữ chuẩn của IIBA nên phải dùng",
+      "Vì thu thập nghe không chuyên nghiệp",
+      "Vì khơi gợi mô tả đúng hơn công việc phỏng vấn"
+    ],
+    "optionsEn": [
+      "Because requirements do not lie around waiting: users do not know all their needs, leave much unsaid as obvious, and describe solutions rather than needs",
+      "Because IIBA standardised the term so it must be used",
+      "Because gathering sounds unprofessional",
+      "Because eliciting better describes interviewing"
+    ],
+    "answer": 0,
+    "explanation": "Các nhóm khác nhau còn mô tả cùng một quy trình theo cách khác nhau mà không ai biết mình đang mâu thuẫn với ai.",
+    "explanationEn": "Different groups also describe the same process differently without anyone realising they contradict each other."
+  },
+  {
+    "id": "q5",
+    "question": "Kiến thức ngầm được mô tả chính xác nhất là gì?",
+    "questionEn": "What most accurately describes tacit knowledge?",
+    "options": [
+      "Những điều người dùng biết nhưng không nói ra vì cho rằng đó là hiển nhiên — kẻ thù chính của BA",
+      "Kiến thức chỉ có trong tài liệu nội bộ",
+      "Kiến thức kỹ thuật mà BA chưa học",
+      "Thông tin bị cố tình giấu vì lý do chính trị"
+    ],
+    "optionsEn": [
+      "What users know but leave unsaid because they consider it obvious — the BA's main enemy",
+      "Knowledge that exists only in internal documents",
+      "Technical knowledge the BA has not yet learned",
+      "Information deliberately hidden for political reasons"
+    ],
+    "answer": 0,
+    "explanation": "Trong dự án kế thừa nó nằm trong đầu người dùng lâu năm; trong dự án thuê ngoài nó là tất cả những gì ai cũng biết trong tổ chức bạn.",
+    "explanationEn": "On legacy projects it lives in long-time users' heads; on outsourced projects it is everything everybody knows inside your organization."
+  },
+  {
+    "id": "q6",
+    "question": "Ba loại thông tin mà BA cần khơi ra là gì?",
+    "questionEn": "What are the three kinds of information a BA must draw out?",
+    "options": [
+      "Điều họ nói, điều họ làm, và điều họ không nói",
+      "Yêu cầu chức năng, phi chức năng và ràng buộc",
+      "Quá khứ, hiện tại và tương lai của quy trình",
+      "Dữ liệu, quy trình và trạng thái"
+    ],
+    "optionsEn": [
+      "What they say, what they do, and what they do not say",
+      "Functional requirements, nonfunctional requirements, and constraints",
+      "The past, present, and future of the process",
+      "Data, process, and state"
+    ],
+    "answer": 0,
+    "explanation": "Điều họ nói lấy bằng phỏng vấn, điều họ làm lấy bằng quan sát và dữ liệu, điều họ không nói lấy bằng câu hỏi phản biện và ví dụ cực đoan.",
+    "explanationEn": "What they say comes from interviews, what they do from observation and data, and what they do not say from challenging questions and extreme examples."
+  },
+  {
+    "id": "q7",
+    "question": "Mục tiêu nào cho một buổi phỏng vấn là TỐT?",
+    "questionEn": "Which interview goal is GOOD?",
+    "options": [
+      "Hiểu quy trình duyệt đơn từ lúc nhận tới lúc thanh toán, gồm cả các trường hợp ngoại lệ",
+      "Tìm hiểu về hệ thống hiện tại",
+      "Thu thập yêu cầu của phòng kế toán",
+      "Nói chuyện với trưởng phòng vận hành"
+    ],
+    "optionsEn": [
+      "Understand the approval process from receipt to payment, including exception cases",
+      "Learn about the current system",
+      "Gather requirements from the accounting department",
+      "Talk to the head of operations"
+    ],
+    "answer": 0,
+    "explanation": "Mục tiêu cụ thể giúp bạn chuẩn bị đúng câu hỏi và biết khi nào buổi phỏng vấn đã đạt được điều cần đạt.",
+    "explanationEn": "A concrete goal lets you prepare the right questions and know when the interview has achieved what it needed to."
+  },
+  {
+    "id": "q8",
+    "question": "Kỹ thuật im lặng có chủ đích trong phỏng vấn mang lại điều gì?",
+    "questionEn": "What does deliberate silence in an interview achieve?",
+    "options": [
+      "Rất nhiều thông tin giá trị đến trong khoảng lặng vài giây sau khi người được phỏng vấn trả lời xong",
+      "Giúp buổi phỏng vấn ngắn hơn",
+      "Cho BA thời gian ghi chép đầy đủ",
+      "Thể hiện sự tôn trọng với người được phỏng vấn"
+    ],
+    "optionsEn": [
+      "A great deal of valuable information arrives in the few seconds of pause after the interviewee finishes",
+      "It shortens the interview",
+      "It gives the BA time to finish notes",
+      "It shows respect for the interviewee"
+    ],
+    "answer": 0,
+    "explanation": "Người được phỏng vấn thường bổ sung chính những chi tiết ngoại lệ và ngoại tệ mà bạn cần, nếu bạn không vội lấp khoảng lặng bằng câu hỏi tiếp theo.",
+    "explanationEn": "Interviewees often add exactly the exception details you need, provided you do not rush to fill the pause with your next question."
+  },
+  {
+    "id": "q9",
+    "question": "Bước nào sau phỏng vấn bị bỏ qua nhiều nhất và tạo ra nhiều lỗi nhất?",
+    "questionEn": "Which post-interview step is most skipped and causes the most defects?",
+    "options": [
+      "Gửi lại ghi chú cho người được phỏng vấn để họ xác nhận",
+      "Lưu ghi chú vào công cụ quản lý tài liệu",
+      "Chia sẻ ghi chú với đội phát triển",
+      "Đánh số thứ tự cho từng ý trong ghi chú"
+    ],
+    "optionsEn": [
+      "Sending the notes back to the interviewee for confirmation",
+      "Filing the notes in a document tool",
+      "Sharing the notes with the development team",
+      "Numbering each point in the notes"
+    ],
+    "answer": 0,
+    "explanation": "Đây chính là kỹ thuật diễn giải lại ở dạng văn bản: khi họ nói không hẳn thế, bạn vừa bắt được một nhập nhằng trước khi nó thành mã sai.",
+    "explanationEn": "This is paraphrasing in written form: when they say not quite, you caught an ambiguity before it became wrong code."
+  },
+  {
+    "id": "q10",
+    "question": "Vì sao người điều phối workshop nên tách khỏi người ghi chép?",
+    "questionEn": "Why should a workshop facilitator be separate from the note-taker?",
+    "options": [
+      "Vì nếu vừa dẫn dắt vừa ghi, bạn sẽ làm tệ cả hai việc",
+      "Vì quy trình workshop bắt buộc phải có hai người",
+      "Vì ghi chép cần kỹ năng đánh máy nhanh",
+      "Vì người điều phối không được viết trong buổi họp"
+    ],
+    "optionsEn": [
+      "Because doing both means doing both badly",
+      "Because workshop process mandates two people",
+      "Because note-taking needs fast typing",
+      "Because facilitators may not write during the session"
+    ],
+    "answer": 0,
+    "explanation": "Ba yếu tố còn lại quyết định thành công là mục tiêu và đầu ra rõ ràng, đúng người trong phòng, và có vật thể trực quan để cùng nhìn vào.",
+    "explanationEn": "The other three success factors are a clear goal and output, the right people in the room, and something visual to look at together."
+  },
+  {
+    "id": "q11",
+    "question": "Con số người tham dự hiệu quả cho một workshop khai thác yêu cầu là bao nhiêu?",
+    "questionEn": "What is the effective number of participants for an elicitation workshop?",
+    "options": [
+      "Khoảng 5 tới 8 người; 15 người biến nó thành buổi thuyết trình một chiều",
+      "Càng nhiều càng tốt để lấy đủ ý kiến",
+      "Đúng 3 người để dễ đồng thuận",
+      "Trên 20 người để đại diện đủ các bộ phận"
+    ],
+    "optionsEn": [
+      "About 5 to 8; 15 turns it into a one-way presentation",
+      "As many as possible to gather all views",
+      "Exactly 3 to reach consensus easily",
+      "Over 20 to represent every department"
+    ],
+    "answer": 0,
+    "explanation": "Thiếu người có thẩm quyền quyết định thì buổi workshop chỉ tạo ra danh sách câu hỏi mở, nên quan trọng là đúng người chứ không phải nhiều người.",
+    "explanationEn": "Without someone who can decide, the workshop only produces open questions, so the right people matter more than many people."
+  },
+  {
+    "id": "q12",
+    "question": "Vì sao quan sát là kỹ thuật có giá trị cao nhất mà ít người dùng nhất?",
+    "questionEn": "Why is observation the highest-value yet least-used technique?",
+    "options": [
+      "Vì nó cho thấy điều người dùng thực sự làm, các cách làm vòng vo và những bước họ làm bên ngoài hệ thống",
+      "Vì nó nhanh hơn phỏng vấn",
+      "Vì nó không cần chuẩn bị trước",
+      "Vì nó cho dữ liệu định lượng"
+    ],
+    "optionsEn": [
+      "Because it reveals what users actually do, their workarounds, and steps performed outside the system",
+      "Because it is faster than interviewing",
+      "Because it needs no preparation",
+      "Because it yields quantitative data"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi cách làm vòng vo là một yêu cầu chưa được đáp ứng, và mỗi bảng tính chạy song song với hệ thống là một lời tố cáo về chức năng còn thiếu.",
+    "explanationEn": "Each workaround is an unmet requirement, and each spreadsheet running alongside the system is an indictment of missing functionality."
+  },
+  {
+    "id": "q13",
+    "question": "Khảo sát KHÔNG phù hợp để làm gì?",
+    "questionEn": "What are surveys NOT suitable for?",
+    "options": [
+      "Khám phá vấn đề mới, vì bạn chỉ nhận được câu trả lời cho câu hỏi bạn đã nghĩ ra",
+      "Lấy ý kiến từ số lượng lớn người dùng",
+      "Xác nhận một giả thuyết bằng dữ liệu định lượng",
+      "Đo mức độ hài lòng của người dùng"
+    ],
+    "optionsEn": [
+      "Discovering new problems, since you only get answers to questions you already thought of",
+      "Gathering input from many users",
+      "Confirming a hypothesis with quantitative data",
+      "Measuring user satisfaction"
+    ],
+    "answer": 0,
+    "explanation": "Luôn kiểm thử bảng khảo sát với vài người trước khi gửi đại trà, và luôn có ít nhất một câu hỏi mở để bắt những điều bạn chưa nghĩ tới.",
+    "explanationEn": "Always pilot a survey with a few people before wide distribution, and always include one open question to catch what you did not anticipate."
+  },
+  {
+    "id": "q14",
+    "question": "Hai nguồn thông tin sẵn có nào mà rất ít BA khai thác?",
+    "questionEn": "Which two ready-made information sources do very few BAs mine?",
+    "options": [
+      "Kho ticket hỗ trợ và backlog yêu cầu thay đổi tồn đọng",
+      "Sơ đồ tổ chức và danh sách nhân sự",
+      "Hợp đồng lao động và bảng lương",
+      "Báo cáo tài chính và kế hoạch ngân sách"
+    ],
+    "optionsEn": [
+      "The support ticket repository and the outstanding change request backlog",
+      "The org chart and staff list",
+      "Employment contracts and payroll",
+      "Financial reports and budget plans"
+    ],
+    "answer": 0,
+    "explanation": "Kho ticket là danh sách sẵn có của những điểm đau, còn backlog thay đổi là danh sách mong muốn đã được người dùng thật nêu ra.",
+    "explanationEn": "The ticket repository is a ready-made list of pain points, and the change backlog is a wish list already articulated by real users."
+  },
+  {
+    "id": "q15",
+    "question": "Nguyên tắc quan trọng nhất khi chọn kỹ thuật khơi gợi là gì?",
+    "questionEn": "What is the most important principle when choosing elicitation techniques?",
+    "options": [
+      "Đừng dùng một kỹ thuật duy nhất, vì mỗi kỹ thuật có điểm mù riêng",
+      "Luôn bắt đầu bằng phỏng vấn vì đó là kỹ thuật chuẩn",
+      "Chọn kỹ thuật tốn ít thời gian nhất",
+      "Dùng kỹ thuật mà stakeholder quen thuộc nhất"
+    ],
+    "optionsEn": [
+      "Never rely on a single technique, because each has its own blind spot",
+      "Always start with interviews as the standard technique",
+      "Choose whichever takes least time",
+      "Use whichever technique stakeholders are most familiar with"
+    ],
+    "answer": 0,
+    "explanation": "Phỏng vấn cho bạn điều họ nói; quan sát cho bạn điều họ làm; dữ liệu cho bạn điều thực sự xảy ra.",
+    "explanationEn": "Interviews give you what they say; observation gives you what they do; data gives you what actually happens."
+  },
+  {
+    "id": "q16",
+    "question": "Sự thật về một quy trình thường được phát hiện ở đâu?",
+    "questionEn": "Where is the truth about a process usually found?",
+    "options": [
+      "Ở chỗ ba nguồn thông tin không khớp nhau: điều họ nói, điều họ làm và dữ liệu thực tế",
+      "Trong tài liệu quy trình chính thức của công ty",
+      "Trong lời kể của người quản lý bộ phận",
+      "Trong mã nguồn của hệ thống hiện tại"
+    ],
+    "optionsEn": [
+      "Where the three sources disagree: what they say, what they do, and the real data",
+      "In the company's official process documentation",
+      "In the department manager's account",
+      "In the current system's source code"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách giữa quy trình trên giấy và quy trình thực tế là nơi ẩn chứa nhiều yêu cầu bị bỏ sót nhất.",
+    "explanationEn": "The gap between the documented process and the actual one hides most of the missing requirements."
+  }
+]

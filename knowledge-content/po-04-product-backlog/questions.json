@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Product backlog được định nghĩa chính xác nhất là gì?",
+    "questionEn": "What is the most accurate definition of a product backlog?",
+    "options": [
+      "Danh sách được SẮP XẾP của mọi thứ đội CÓ THỂ làm cho sản phẩm",
+      "Danh sách mọi việc đội phải hoàn thành trước khi phát hành",
+      "Danh sách user story do Product Owner viết",
+      "Kho lưu trữ mọi ý tưởng từng được đề xuất"
+    ],
+    "optionsEn": [
+      "An ORDERED list of everything the team COULD do for the product",
+      "A list of everything the team must finish before release",
+      "A list of user stories written by the Product Owner",
+      "A repository of every idea ever proposed"
+    ],
+    "answer": 0,
+    "explanation": "Từ có thể quan trọng: nhiều mục sẽ không bao giờ được làm, và đó là kết quả đúng đắn vì chúng có giá trị thấp hơn những gì đã được làm.",
+    "explanationEn": "The word could matters: many items will never be built, and that is the correct outcome since they were worth less than what was."
+  },
+  {
+    "id": "q2",
+    "question": "Vì sao độ chi tiết KHÔNG ĐỀU trong backlog là hiệu quả chứ không phải cẩu thả?",
+    "questionEn": "Why is UNEVEN detail in a backlog efficiency rather than sloppiness?",
+    "options": [
+      "Vì chi tiết hoá một mục sẽ thay đổi hoặc bị loại bỏ trước khi đến lượt là lãng phí thuần tuý",
+      "Vì công cụ quản lý không hỗ trợ chi tiết cho mọi mục",
+      "Vì Product Owner không có thời gian viết hết",
+      "Vì đội chỉ đọc phần đầu backlog"
+    ],
+    "optionsEn": [
+      "Because detailing an item that will change or be dropped before its turn is pure waste",
+      "Because tools cannot hold detail for every item",
+      "Because the PO lacks time to write it all",
+      "Because the team only reads the top"
+    ],
+    "answer": 0,
+    "explanation": "Mục ở đầu phải chi tiết và sẵn sàng hiện thực; mục ở cuối chỉ cần một dòng mô tả ý tưởng.",
+    "explanationEn": "Top items must be detailed and ready to build; bottom items need only a single line of description."
+  },
+  {
+    "id": "q3",
+    "question": "Ngoài user story, backlog còn chứa những gì?",
+    "questionEn": "Besides user stories, what else does a backlog hold?",
+    "options": [
+      "Lỗi cần sửa, công việc kỹ thuật, spike nghiên cứu và nợ kỹ thuật cần trả",
+      "Chỉ chứa user story để giữ backlog sạch",
+      "Biên bản họp và tài liệu yêu cầu",
+      "Kế hoạch dự án và ngân sách"
+    ],
+    "optionsEn": [
+      "Defects to fix, technical work, research spikes, and technical debt to repay",
+      "Only user stories, to keep it clean",
+      "Meeting minutes and requirements documents",
+      "Project plans and budgets"
+    ],
+    "answer": 0,
+    "explanation": "Đưa nợ kỹ thuật vào backlog làm nó cạnh tranh công khai với tính năng mới, thay vì bị làm lén hoặc không bao giờ được làm.",
+    "explanationEn": "Putting technical debt in the backlog makes it compete openly with new features rather than being done secretly or never."
+  },
+  {
+    "id": "q4",
+    "question": "Ai nên tham gia buổi backlog refinement?",
+    "questionEn": "Who should attend a backlog refinement session?",
+    "options": [
+      "Product Owner, BA và ít nhất một vài thành viên đội phát triển, vì chính họ đặt câu hỏi làm lộ ra công việc ẩn",
+      "Chỉ Product Owner và BA để buổi họp gọn nhẹ",
+      "Toàn bộ đội cộng với mọi stakeholder",
+      "Chỉ Scrum Master và Product Owner"
+    ],
+    "optionsEn": [
+      "The Product Owner, the BA, and at least some developers, since they ask the questions that surface hidden work",
+      "Only the PO and BA, to keep it short",
+      "The whole team plus every stakeholder",
+      "Only the Scrum Master and PO"
+    ],
+    "answer": 0,
+    "explanation": "Công việc ẩn mà đội hay chỉ ra gồm trạng thái rỗng, trạng thái lỗi, phân quyền và di trú dữ liệu.",
+    "explanationEn": "The hidden work developers surface includes empty states, error states, permissions, and data migration."
+  },
+  {
+    "id": "q5",
+    "question": "Quy tắc thực dụng về mức độ chuẩn bị backlog là gì?",
+    "questionEn": "What is the practical rule for how far ahead to prepare the backlog?",
+    "options": [
+      "Giữ khoảng hai tới ba sprint tiếp theo ở trạng thái sẵn sàng",
+      "Chuẩn bị sẵn toàn bộ backlog tới cuối dự án",
+      "Chỉ chuẩn bị đúng sprint đang chạy",
+      "Chuẩn bị sẵn sáu tháng công việc"
+    ],
+    "optionsEn": [
+      "Keep about two to three sprints of work in a ready state",
+      "Prepare the whole backlog to project end",
+      "Prepare only the current sprint",
+      "Prepare six months of work"
+    ],
+    "answer": 0,
+    "explanation": "Ít hơn thì đội có nguy cơ bị chặn ở đầu sprint; nhiều hơn thì bạn đang lãng phí công sức vào những thứ sẽ thay đổi trước khi đến lượt.",
+    "explanationEn": "Less and the team risks blocking at sprint start; more and you waste effort on things that will change before their turn."
+  },
+  {
+    "id": "q6",
+    "question": "Buổi refinement kéo dài quá lâu là dấu hiệu của điều gì?",
+    "questionEn": "What does a refinement session running too long signal?",
+    "options": [
+      "Bạn đang chi tiết hoá những thứ ở quá xa trong backlog",
+      "Đội chưa hiểu sản phẩm",
+      "Product Owner chuẩn bị chưa kỹ",
+      "Backlog có quá ít mục"
+    ],
+    "optionsEn": [
+      "You are detailing things too far away in the backlog",
+      "The team does not understand the product",
+      "The PO prepared poorly",
+      "The backlog has too few items"
+    ],
+    "answer": 0,
+    "explanation": "Thường một tới hai buổi mỗi sprint, mỗi buổi không quá một giờ là đủ nếu bạn chỉ làm mịn phần sắp tới.",
+    "explanationEn": "One or two sessions per sprint, each under an hour, suffices if you only refine what is coming next."
+  },
+  {
+    "id": "q7",
+    "question": "Definition of Ready mang lại lợi ích chính nào cho đội?",
+    "questionEn": "What is the main benefit of a definition of ready for a team?",
+    "options": [
+      "Cho phép đội từ chối một story chưa sẵn sàng một cách KHÁCH QUAN, thay vì nhận vào rồi mắc kẹt giữa sprint",
+      "Giúp Product Owner viết story nhanh hơn",
+      "Giảm số lượng story cần ước tính",
+      "Bảo đảm mọi story đều hoàn thành đúng hạn"
+    ],
+    "optionsEn": [
+      "It lets the team OBJECTIVELY refuse an unready story rather than accepting it and getting stuck mid-sprint",
+      "It helps the PO write stories faster",
+      "It reduces the number of stories to estimate",
+      "It guarantees every story finishes on time"
+    ],
+    "answer": 0,
+    "explanation": "Không có tiêu chí khách quan, việc từ chối một story trở thành tranh cãi cá nhân giữa đội và Product Owner.",
+    "explanationEn": "Without objective criteria, refusing a story becomes a personal argument between the team and the PO."
+  },
+  {
+    "id": "q8",
+    "question": "Rủi ro khi Definition of Ready quá nghiêm ngặt là gì?",
+    "questionEn": "What is the risk of an overly strict definition of ready?",
+    "options": [
+      "Nó biến thành một cổng kiểm soát làm chậm mọi thứ và tái tạo lại mô hình chuyển giao tài liệu của Waterfall",
+      "Đội sẽ không hiểu các tiêu chí",
+      "Product Owner sẽ mất quyền quyết định thứ tự",
+      "Công cụ quản lý không hỗ trợ nhiều tiêu chí"
+    ],
+    "optionsEn": [
+      "It becomes a control gate slowing everything and recreating waterfall's document-handoff model",
+      "The team will not understand the criteria",
+      "The PO loses the right to decide order",
+      "Tools cannot support many criteria"
+    ],
+    "answer": 0,
+    "explanation": "Hãy giữ Definition of Ready ngắn và tập trung vào những gì thực sự chặn đội, chứ không phải mọi thứ có thể hữu ích.",
+    "explanationEn": "Keep the definition of ready short and focused on what genuinely blocks the team, not on everything that might help."
+  },
+  {
+    "id": "q9",
+    "question": "Vì sao backlog có 800 mục là một vấn đề thật?",
+    "questionEn": "Why is an 800-item backlog a real problem?",
+    "options": [
+      "Không ai đọc hết, tìm kiếm trở nên vô vọng, và các mục cũ ở cuối chỉ tạo ảo giác rằng chúng sẽ được làm",
+      "Công cụ quản lý sẽ chạy chậm",
+      "Chi phí giấy phép tăng theo số mục",
+      "Đội sẽ mất động lực khi thấy danh sách dài"
+    ],
+    "optionsEn": [
+      "Nobody reads it all, searching becomes hopeless, and old bottom items merely create the illusion they will be built",
+      "The tool runs slowly",
+      "Licence costs scale with item count",
+      "The team loses motivation seeing a long list"
+    ],
+    "answer": 0,
+    "explanation": "Ảo giác này gây hại thật: stakeholder tin rằng yêu cầu của họ đang chờ tới lượt trong khi thực tế nó sẽ không bao giờ được làm.",
+    "explanationEn": "The illusion does real harm: stakeholders believe their request is queued when in reality it will never be built."
+  },
+  {
+    "id": "q10",
+    "question": "Cách xử lý những mục đã nằm ở cuối backlog hơn một năm mà chưa bao giờ được ưu tiên?",
+    "questionEn": "How should you handle items that sat at the bottom over a year without prioritization?",
+    "options": [
+      "Đóng chúng kèm lý do — nếu chúng thực sự quan trọng, chúng sẽ quay lại",
+      "Giữ lại vì có thể sau này sẽ cần",
+      "Xoá hẳn khỏi hệ thống để backlog gọn",
+      "Chuyển hết sang một backlog phụ"
+    ],
+    "optionsEn": [
+      "Close them with a reason — if they truly matter, they will come back",
+      "Keep them in case they are needed later",
+      "Delete them entirely to keep it clean",
+      "Move them all to a secondary backlog"
+    ],
+    "answer": 0,
+    "explanation": "Đóng thay vì xoá vì ý tưởng bị từ chối có xu hướng quay lại, và giữ lại lý do giúp lần sau bạn có ngay câu trả lời.",
+    "explanationEn": "Close rather than delete, since rejected ideas return, and keeping the reason gives you the answer ready next time."
+  },
+  {
+    "id": "q11",
+    "question": "Cách nói trung thực nhất với stakeholder khi đóng một mục backlog là gì?",
+    "questionEn": "What is the most honest way to tell a stakeholder you are closing their item?",
+    "options": [
+      "Chúng tôi chưa thấy đủ giá trị để ưu tiên việc này trong 12 tháng qua; nếu tình hình đã thay đổi, hãy cho tôi biết điều gì mới để xem lại",
+      "Mục này đã bị hệ thống tự động lưu trữ",
+      "Chúng tôi sẽ xem xét lại trong tương lai",
+      "Đội hiện đang quá tải nên chưa làm được"
+    ],
+    "optionsEn": [
+      "We have not seen enough value to prioritize this in twelve months; if something changed, tell me what is new and we will revisit",
+      "The system archived it automatically",
+      "We will look at it again in future",
+      "The team is currently overloaded"
+    ],
+    "answer": 0,
+    "explanation": "Điều này trung thực hơn nhiều so với việc để mục đó nằm mãi ở cuối danh sách và tạo hy vọng giả cho người đề xuất.",
+    "explanationEn": "This is far more honest than leaving it at the bottom forever, creating false hope for the requester."
+  },
+  {
+    "id": "q12",
+    "question": "Vì sao chia epic theo tầng kỹ thuật là cách chia SAI?",
+    "questionEn": "Why is splitting an epic by technical layer WRONG?",
+    "options": [
+      "Vì không story nào mang giá trị riêng lẻ và không story nào trình diễn được ở sprint review",
+      "Vì lập trình viên không thích làm việc theo tầng",
+      "Vì công cụ không hỗ trợ phân loại theo tầng",
+      "Vì nó làm tăng số lượng story"
+    ],
+    "optionsEn": [
+      "Because no story delivers value alone and none can be demonstrated at a sprint review",
+      "Because developers dislike working by layer",
+      "Because tools cannot classify by layer",
+      "Because it increases the story count"
+    ],
+    "answer": 0,
+    "explanation": "Mỗi story sau khi chia phải là một lát cắt dọc mỏng đi xuyên qua mọi tầng kỹ thuật cho một chức năng thật.",
+    "explanationEn": "Every split story must be a thin vertical slice cutting through every technical layer for one real function."
+  },
+  {
+    "id": "q13",
+    "question": "Cách chia epic Quản lý đơn hàng theo bước quy trình sẽ tạo ra những story nào?",
+    "questionEn": "Splitting an order management epic by process step yields which stories?",
+    "options": [
+      "Tạo đơn, duyệt đơn, theo dõi trạng thái, huỷ đơn",
+      "Giao diện đơn hàng, API đơn hàng, bảng dữ liệu đơn hàng",
+      "Đơn hàng cho khách lẻ, đơn hàng cho doanh nghiệp, đơn hàng quốc tế",
+      "Thiết kế, lập trình, kiểm thử, triển khai"
+    ],
+    "optionsEn": [
+      "Create order, approve order, track status, cancel order",
+      "Order UI, order API, order database table",
+      "Retail orders, corporate orders, international orders",
+      "Design, code, test, deploy"
+    ],
+    "answer": 0,
+    "explanation": "Phương án thứ ba là chia theo loại dữ liệu, cũng là một cách chia đúng. Phương án thứ hai và thứ tư đều chia theo tầng hoặc giai đoạn nên đều sai.",
+    "explanationEn": "The third option splits by data type, also valid. The second and fourth split by layer or phase and are both wrong."
+  },
+  {
+    "id": "q14",
+    "question": "Thuộc tính nào quan trọng nhất của một product backlog?",
+    "questionEn": "Which property of a product backlog matters most?",
+    "options": [
+      "Được sắp xếp theo thứ tự — một backlog không có thứ tự không giúp được ai",
+      "Chứa đầy đủ mọi ý tưởng đã được đề xuất",
+      "Mọi mục đều đã được ước tính",
+      "Mọi mục đều có acceptance criteria"
+    ],
+    "optionsEn": [
+      "Being ordered — an unordered backlog helps nobody",
+      "Containing every idea ever proposed",
+      "Every item having an estimate",
+      "Every item having acceptance criteria"
+    ],
+    "answer": 0,
+    "explanation": "Ước tính và acceptance criteria chỉ cần cho phần đầu backlog; thứ tự thì cần cho toàn bộ vì đó là thứ trả lời câu hỏi làm gì tiếp theo.",
+    "explanationEn": "Estimates and acceptance criteria are only needed at the top; order is needed throughout since it answers what comes next."
+  },
+  {
+    "id": "q15",
+    "question": "Nguyên tắc bao trùm khi chia nhỏ epic là gì?",
+    "questionEn": "What is the overarching principle when splitting epics?",
+    "options": [
+      "Mỗi story phải là một lát cắt dọc mỏng đi xuyên mọi tầng kỹ thuật cho một chức năng thật, để nó trình diễn được và mang lại phản hồi thật",
+      "Mỗi story phải có kích thước bằng nhau",
+      "Mỗi story phải thuộc về một lập trình viên duy nhất",
+      "Mỗi story phải hoàn thành trong một ngày"
+    ],
+    "optionsEn": [
+      "Every story must be a thin vertical slice through every layer for one real function, so it is demonstrable and yields real feedback",
+      "Every story must be the same size",
+      "Every story must belong to one developer",
+      "Every story must finish in one day"
+    ],
+    "answer": 0,
+    "explanation": "Đây cũng là lý do phương pháp agile nhấn mạnh việc xây một lát cắt dọc ngay từ iteration đầu để phơi bày vấn đề kiến trúc sớm.",
+    "explanationEn": "This is also why agile emphasises building a vertical slice in the first iteration, to expose architectural problems early."
+  },
+  {
+    "id": "q16",
+    "question": "Phát biểu nào ĐÚNG về việc nhiều mục backlog sẽ không bao giờ được làm?",
+    "questionEn": "Which statement about many backlog items never being built is correct?",
+    "options": [
+      "Đó là kết quả đúng đắn, vì chúng có giá trị thấp hơn những gì đã được làm",
+      "Đó là thất bại của Product Owner trong việc lập kế hoạch",
+      "Đó là dấu hiệu đội làm việc không đủ nhanh",
+      "Đó là lý do nên xoá backlog và bắt đầu lại"
+    ],
+    "optionsEn": [
+      "It is the correct outcome, since they were worth less than what was built",
+      "It is a PO planning failure",
+      "It signals the team works too slowly",
+      "It is a reason to delete the backlog and start over"
+    ],
+    "answer": 0,
+    "explanation": "Coi backlog là danh sách cần làm hết là một trong những hiểu lầm phổ biến nhất khi tổ chức chuyển sang agile.",
+    "explanationEn": "Treating the backlog as a to-do list to complete is among the most common misconceptions when organizations adopt agile."
+  }
+]

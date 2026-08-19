@@ -1,0 +1,8 @@
+{
+  "group": "req",
+  "order": 13,
+  "title": "Yêu cầu trong dự án agile",
+  "titleEn": "Requirements on Agile Projects",
+  "description": "Vai trò product owner và BA, product backlog và grooming, user story với 3C và INVEST, story mapping, ước tính và velocity, acceptance criteria, xử lý yêu cầu phi chức năng và mức tài liệu vừa đủ.",
+  "descriptionEn": "The product owner and BA roles, product backlog and grooming, user stories with the 3Cs and INVEST, story mapping, estimation and velocity, acceptance criteria, handling nonfunctional requirements, and just-enough documentation."
+}

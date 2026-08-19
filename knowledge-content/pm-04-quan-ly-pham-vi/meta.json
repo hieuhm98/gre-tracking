@@ -1,0 +1,8 @@
+{
+  "group": "pm",
+  "order": 5,
+  "title": "Quản lý phạm vi & thay đổi",
+  "titleEn": "Scope & Change Management",
+  "description": "Xác định phạm vi, mục loại trừ, quy trình kiểm soát thay đổi, phân tích tác động và nhận diện scope creep.",
+  "descriptionEn": "Defining scope, exclusions, the change control process, impact analysis, and recognising scope creep."
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Business rule là gì, facts & constraints",
+      "titleEn": "What business rules are, facts & constraints",
+      "sections": [1, 2, 3],
+      "questionIds": ["q1", "q2", "q3", "q4"]
+    },
+    {
+      "id": "l2",
+      "title": "Action enablers, inferences & computations",
+      "titleEn": "Action enablers, inferences & computations",
+      "sections": [4, 5],
+      "questionIds": ["q5", "q6", "q7", "q8"]
+    },
+    {
+      "id": "l3",
+      "title": "Rule nguyên tử & tài liệu hoá",
+      "titleEn": "Atomic rules & documenting them",
+      "sections": [6, 7],
+      "questionIds": ["q9", "q10", "q11", "q12"]
+    },
+    {
+      "id": "l4",
+      "title": "Khám phá rule & nối với yêu cầu",
+      "titleEn": "Discovering rules & tying them to requirements",
+      "sections": [8, 9],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l5",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [10, 11],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

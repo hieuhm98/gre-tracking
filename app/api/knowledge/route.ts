@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { DEFAULT_GROUP } from "@/lib/groups";
+import { DEFAULT_GROUP, getGroup } from "@/lib/groups";
 
 const CONTENT_DIR = path.join(process.cwd(), "knowledge-content");
 
@@ -14,7 +14,30 @@ export interface StaticTopic {
   descriptionEn?: string;
   /** Number of quiz questions — lets the UI show "answered / total" progress. */
   questionCount: number;
+  /** Position within the group's curriculum; see byCurriculum below. */
+  order?: number;
 }
+
+/**
+ * Curriculum order: group first, then the topic's explicit `order` from
+ * meta.json, then folder name as a stable tiebreak. Folder names alone stopped
+ * working once topics were regrouped — a `17-` topic can now belong to a track
+ * whose other members are named `ba-…`.
+ */
+function byCurriculum<T extends { group: string; order?: number; slug: string }>(a: T, b: T): number {
+  const ga = getGroup(a.group)?.order ?? 99;
+  const gb = getGroup(b.group)?.order ?? 99;
+
+  if (ga !== gb) return ga - gb;
+
+  const oa = a.order ?? 999;
+  const ob = b.order ?? 999;
+
+  if (oa !== ob) return oa - ob;
+
+  return a.slug.localeCompare(b.slug);
+}
+
 
 function countQuestions(slug: string): number {
   try {
@@ -44,7 +67,7 @@ export async function GET() {
       };
     });
 
-    return NextResponse.json(topics);
+    return NextResponse.json(topics.sort(byCurriculum));
   } catch {
     return NextResponse.json([], { status: 200 });
   }

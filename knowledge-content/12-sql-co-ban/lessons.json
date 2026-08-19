@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "SQL là gì? · Các nhóm lệnh SQL",
+      "titleEn": "What Is SQL? · SQL Command Categories",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "SELECT – Truy vấn dữ liệu · WHERE – Điều kiện lọc",
+      "titleEn": "SELECT – Querying Data · WHERE – Filter Conditions",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "INSERT – Thêm dữ liệu · UPDATE – Cập nhật dữ liệu",
+      "titleEn": "INSERT – Adding Data · UPDATE – Updating Data",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "DELETE – Xóa dữ liệu · JOIN – Kết hợp bảng",
+      "titleEn": "DELETE – Deleting Data · JOIN – Combining Tables",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Aggregate Functions · SQL cho BA – Làm báo cáo",
+      "titleEn": "Aggregate Functions · SQL for BAs – Building Reports",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "q17",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        11
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

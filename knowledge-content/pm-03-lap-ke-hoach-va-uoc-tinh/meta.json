@@ -1,0 +1,8 @@
+{
+  "group": "pm",
+  "order": 4,
+  "title": "Lập kế hoạch & ước tính",
+  "titleEn": "Planning & Estimation",
+  "description": "WBS, phụ thuộc, đường găng, các kỹ thuật ước tính, hình nón bất định và cách trình bày ước tính một cách trung thực.",
+  "descriptionEn": "Work breakdown, dependencies, the critical path, estimation techniques, the cone of uncertainty, and presenting estimates honestly."
+}

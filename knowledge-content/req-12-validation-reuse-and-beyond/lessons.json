@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao thẩm định & các mức trang trọng của review",
+      "titleEn": "Why validate & the formality levels of review",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Formal inspection & bí quyết review thành công",
+      "titleEn": "Formal inspection & keys to a successful review",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Kiểm thử yêu cầu & tái sử dụng",
+      "titleEn": "Testing requirements & requirements reuse",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Rào cản tái sử dụng, pattern & ước tính",
+      "titleEn": "Reuse barriers, patterns & estimation",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Yêu cầu với thiết kế, mã, kiểm thử & quản lý dự án",
+      "titleEn": "Requirements and design, code, testing & project management",
+      "sections": [9, 10],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [11, 12],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

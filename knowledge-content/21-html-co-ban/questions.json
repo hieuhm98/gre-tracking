@@ -23,8 +23,18 @@
     "id": "html-02",
     "question": "Thẻ nào dùng để tạo liên kết (hyperlink) trong HTML?",
     "questionEn": "Which tag is used to create a link (hyperlink) in HTML?",
-    "options": ["<link>", "<a>", "<href>", "<url>"],
-    "optionsEn": ["<link>", "<a>", "<href>", "<url>"],
+    "options": [
+      "<link>",
+      "<a>",
+      "<href>",
+      "<url>"
+    ],
+    "optionsEn": [
+      "<link>",
+      "<a>",
+      "<href>",
+      "<url>"
+    ],
     "answer": 1,
     "explanation": "Thẻ <a> (anchor) dùng để tạo liên kết, với thuộc tính href chỉ định đích đến. Ví dụ: <a href='https://example.com'>Click here</a>",
     "explanationEn": "The <a> (anchor) tag is used to create links, with the href attribute specifying the destination. Example: <a href='https://example.com'>Click here</a>"
@@ -33,8 +43,18 @@
     "id": "html-03",
     "question": "Thẻ nào dưới đây là thẻ tự đóng (self-closing)?",
     "questionEn": "Which of the following tags is self-closing?",
-    "options": ["<p>", "<div>", "<img>", "<span>"],
-    "optionsEn": ["<p>", "<div>", "<img>", "<span>"],
+    "options": [
+      "<p>",
+      "<div>",
+      "<img>",
+      "<span>"
+    ],
+    "optionsEn": [
+      "<p>",
+      "<div>",
+      "<img>",
+      "<span>"
+    ],
     "answer": 2,
     "explanation": "Thẻ <img> là self-closing vì không có nội dung bên trong. Viết: <img src='photo.jpg' alt='Mô tả' />. Tương tự: <br />, <hr />, <input />, <meta />.",
     "explanationEn": "The <img> tag is self-closing because it has no content inside. Written as: <img src='photo.jpg' alt='Description' />. Similar tags: <br />, <hr />, <input />, <meta />."
@@ -83,8 +103,18 @@
     "id": "html-06",
     "question": "Phần tử nào trong HTML được dùng để nhóm các lựa chọn radio button lại với nhau?",
     "questionEn": "Which HTML element is used to group radio button options together?",
-    "options": ["<group>", "<section>", "<fieldset>", "<div>"],
-    "optionsEn": ["<group>", "<section>", "<fieldset>", "<div>"],
+    "options": [
+      "<group>",
+      "<section>",
+      "<fieldset>",
+      "<div>"
+    ],
+    "optionsEn": [
+      "<group>",
+      "<section>",
+      "<fieldset>",
+      "<div>"
+    ],
     "answer": 2,
     "explanation": "<fieldset> nhóm các input liên quan, thường kết hợp với <legend> để đặt tiêu đề. Đây là cách semantic và accessible để nhóm radio buttons hoặc checkboxes.",
     "explanationEn": "<fieldset> groups related inputs, usually combined with <legend> to give the group a title. It is the semantic and accessible way to group radio buttons or checkboxes."
@@ -93,8 +123,18 @@
     "id": "html-07",
     "question": "Thẻ HTML nào dùng để đánh dấu nội dung điều hướng chính (navigation menu)?",
     "questionEn": "Which HTML tag is used to mark up the main navigation content (navigation menu)?",
-    "options": ["<menu>", "<nav>", "<header>", "<ul>"],
-    "optionsEn": ["<menu>", "<nav>", "<header>", "<ul>"],
+    "options": [
+      "<menu>",
+      "<nav>",
+      "<header>",
+      "<ul>"
+    ],
+    "optionsEn": [
+      "<menu>",
+      "<nav>",
+      "<header>",
+      "<ul>"
+    ],
     "answer": 1,
     "explanation": "<nav> là semantic tag dùng cho menu điều hướng chính. Giúp screen reader nhận biết đây là navigation, cải thiện SEO và accessibility.",
     "explanationEn": "<nav> is the semantic tag for the main navigation menu. It helps screen readers recognize this as navigation, improving SEO and accessibility."
@@ -258,5 +298,105 @@
     "answer": 1,
     "explanation": "<details> và <summary> là native HTML accordion. <summary> là phần tiêu đề hiển thị luôn, click vào sẽ toggle hiển thị nội dung bên trong <details>. Không cần JavaScript!",
     "explanationEn": "<details> and <summary> form a native HTML accordion. <summary> is the always-visible title; clicking it toggles the content inside <details>. No JavaScript required!"
+  },
+  {
+    "question": "Vì sao Semantic HTML quan trọng với yêu cầu về khả năng tiếp cận (accessibility)?",
+    "questionEn": "Why does semantic HTML matter for accessibility requirements?",
+    "options": [
+      "Vì trình đọc màn hình dựa vào thẻ ngữ nghĩa như nav, main, header để giúp người khiếm thị điều hướng trang",
+      "Vì thẻ ngữ nghĩa làm trang tải nhanh hơn",
+      "Vì thẻ ngữ nghĩa tự động dịch nội dung",
+      "Vì thẻ ngữ nghĩa mã hoá dữ liệu biểu mẫu"
+    ],
+    "optionsEn": [
+      "Because screen readers rely on semantic tags such as nav, main, and header to help blind users navigate",
+      "Because semantic tags make pages load faster",
+      "Because semantic tags translate content automatically",
+      "Because semantic tags encrypt form data"
+    ],
+    "answer": 0,
+    "explanation": "Dùng div cho mọi thứ khiến trang trông giống nhau nhưng vô nghĩa với công nghệ hỗ trợ. Yêu cầu tuân thủ WCAG thường bắt đầu từ đây.",
+    "explanationEn": "Using div for everything looks the same visually but is meaningless to assistive technology. WCAG compliance requirements usually start here.",
+    "id": "q16"
+  },
+  {
+    "question": "BA đặc tả biểu mẫu đăng ký. Thuộc tính HTML nào liên quan trực tiếp tới yêu cầu trường bắt buộc?",
+    "questionEn": "A BA specifies a signup form. Which HTML attribute maps directly to a mandatory-field requirement?",
+    "options": [
+      "required",
+      "placeholder",
+      "class",
+      "style"
+    ],
+    "optionsEn": [
+      "required",
+      "placeholder",
+      "class",
+      "style"
+    ],
+    "answer": 0,
+    "explanation": "placeholder chỉ là gợi ý hiển thị chứ không bắt buộc nhập. Nhầm hai thứ này là lỗi đặc tả biểu mẫu rất phổ biến.",
+    "explanationEn": "placeholder is only a display hint, not a constraint. Confusing the two is a very common form-specification error.",
+    "id": "q17"
+  },
+  {
+    "question": "Thẻ nào dùng đúng cho dữ liệu dạng bảng có hàng và cột?",
+    "questionEn": "Which tag correctly presents tabular data with rows and columns?",
+    "options": [
+      "table",
+      "div",
+      "section",
+      "list"
+    ],
+    "optionsEn": [
+      "table",
+      "div",
+      "section",
+      "list"
+    ],
+    "answer": 0,
+    "explanation": "Dùng div để giả lập bảng làm mất ngữ nghĩa hàng-cột, gây khó cho trình đọc màn hình và cho việc xuất dữ liệu.",
+    "explanationEn": "Faking a table with divs loses the row-column semantics, hurting screen readers and data export.",
+    "id": "q18"
+  },
+  {
+    "question": "Vì sao BA nên biết đọc cấu trúc HTML của trang khi viết bug report?",
+    "questionEn": "Why should a BA read a page's HTML structure when writing bug reports?",
+    "options": [
+      "Vì mô tả chính xác phần tử nào bị lỗi giúp lập trình viên tái hiện nhanh hơn nhiều so với mô tả chung chung",
+      "Vì BA phải tự sửa mã HTML",
+      "Vì HTML quyết định logic nghiệp vụ",
+      "Vì bug report bắt buộc phải chứa mã nguồn"
+    ],
+    "optionsEn": [
+      "Because naming the exact element that fails helps developers reproduce it far faster than a vague description",
+      "Because the BA must fix the HTML",
+      "Because HTML determines business logic",
+      "Because bug reports must contain source code"
+    ],
+    "answer": 0,
+    "explanation": "Không tái hiện được thì không sửa được. Chỉ đúng phần tử và bước thao tác là phần giá trị nhất của một bug report.",
+    "explanationEn": "What cannot be reproduced cannot be fixed. Pinpointing the element and the steps is the most valuable part of a bug report.",
+    "id": "q19"
+  },
+  {
+    "question": "Thuộc tính alt của thẻ img phục vụ mục đích nào?",
+    "questionEn": "What purpose does the alt attribute on an img tag serve?",
+    "options": [
+      "Mô tả nội dung ảnh cho trình đọc màn hình và hiển thị khi ảnh không tải được",
+      "Đặt kích thước ảnh",
+      "Nén dung lượng ảnh",
+      "Đặt vị trí ảnh trên trang"
+    ],
+    "optionsEn": [
+      "Describe the image for screen readers and display when the image fails to load",
+      "Set the image dimensions",
+      "Compress the image",
+      "Position the image on the page"
+    ],
+    "answer": 0,
+    "explanation": "alt là yêu cầu khả năng tiếp cận cơ bản nhất và cũng là thứ hay bị bỏ sót nhất khi đặc tả nội dung có hình ảnh.",
+    "explanationEn": "alt is the most basic accessibility requirement and the one most often omitted when specifying image content.",
+    "id": "q20"
   }
 ]

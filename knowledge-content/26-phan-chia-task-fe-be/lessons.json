@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tại sao BA cần biết phân chia task? · Nguyên tắc chia FE / BE",
+      "titleEn": "Why does a BA need to know how to split tasks? · Principles for splitting FE / BE",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "task-01",
+        "task-02",
+        "task-03",
+        "task-04"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Quy trình phân chia task cho một feature · Ví dụ thực tế: Feature \"Đặt lịch hẹn\"",
+      "titleEn": "The process for splitting tasks for a feature · Real-world example: The \"Book an appointment\" feature",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "task-05",
+        "task-06",
+        "task-07",
+        "task-08"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "API Contract — Thứ cần thống nhất trước tiên · Nhận biết task thuộc FE hay BE",
+      "titleEn": "API Contract — The first thing to agree on · Telling whether a task belongs to FE or BE",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "task-09",
+        "task-10",
+        "task-11",
+        "task-12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Các câu hỏi BA nên hỏi khi grooming · Dependency và Sprint Planning",
+      "titleEn": "Questions a BA should ask during grooming · Dependencies and Sprint Planning",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "task-13",
+        "task-14",
+        "task-15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Template Ticket Kỹ thuật",
+      "titleEn": "Technical Ticket Template",
+      "sections": [
+        9
+      ],
+      "questionIds": [
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "[FE] Màn hình danh sách người dùng",
+      "titleEn": "[FE] User list screen",
+      "sections": [
+        10
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

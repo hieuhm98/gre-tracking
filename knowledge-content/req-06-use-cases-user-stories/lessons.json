@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Use case, user story & actor",
+      "titleEn": "Use cases, user stories & actors",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Template, các luồng & điều kiện trước sau",
+      "titleEn": "The template, flows & pre/postconditions",
+      "sections": [3, 4, 5],
+      "questionIds": ["q4", "q5", "q6", "q7"]
+    },
+    {
+      "id": "l3",
+      "title": "Extend, include & business rules",
+      "titleEn": "Extend, include & business rules",
+      "sections": [6, 7],
+      "questionIds": ["q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Xác định, khám phá & thẩm định use case",
+      "titleEn": "Identifying, exploring & validating use cases",
+      "sections": [8, 9],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Từ use case tới functional requirement, cạm bẫy & lợi ích",
+      "titleEn": "From use cases to functional requirements, traps & benefits",
+      "sections": [10, 11],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [12, 13],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

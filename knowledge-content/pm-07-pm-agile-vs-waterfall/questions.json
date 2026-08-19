@@ -1,0 +1,342 @@
+[
+  {
+    "id": "q1",
+    "question": "Giả định nền tảng của Waterfall là gì?",
+    "questionEn": "What is the foundational assumption of Waterfall?",
+    "options": [
+      "Chúng ta có thể biết trước phải làm gì, nên làm tuần tự là hiệu quả nhất",
+      "Chúng ta sẽ học được điều quan trọng sau khi người dùng chạm vào sản phẩm",
+      "Tài liệu chi tiết luôn tốt hơn giao tiếp trực tiếp",
+      "Đội cần được quản lý chặt để đảm bảo tiến độ"
+    ],
+    "optionsEn": [
+      "We can know in advance what must be built, so sequential work is most efficient",
+      "We will learn what matters after users touch the product",
+      "Detailed documents always beat direct conversation",
+      "Teams need tight management to hit schedules"
+    ],
+    "answer": 0,
+    "explanation": "Nếu giả định này đúng thì làm tuần tự không lãng phí vào việc lập kế hoạch lại và không tốn chi phí quay vòng.",
+    "explanationEn": "If that assumption holds, sequential work wastes nothing on replanning and pays no iteration cost."
+  },
+  {
+    "id": "q2",
+    "question": "Nếu giả định của Agile là đúng nhưng bạn làm tuần tự thì hệ quả là gì?",
+    "questionEn": "If the Agile assumption holds but you work sequentially, what follows?",
+    "options": [
+      "Bạn sẽ hoàn thiện một thứ sai với độ chính xác rất cao",
+      "Bạn sẽ mất thêm chi phí lập kế hoạch lại nhiều lần",
+      "Bạn sẽ giao hàng đúng hạn nhưng vượt ngân sách",
+      "Bạn sẽ có tài liệu tốt nhưng đội mất động lực"
+    ],
+    "optionsEn": [
+      "You will perfect the wrong thing with great precision",
+      "You will pay extra replanning cost many times over",
+      "You will deliver on time but over budget",
+      "You will have good documents but a demotivated team"
+    ],
+    "answer": 0,
+    "explanation": "Đó là lý do các dự án có mức bất định cao cần vòng phản hồi ngắn với người dùng thật.",
+    "explanationEn": "That is why high-uncertainty projects need short feedback loops with real users."
+  },
+  {
+    "id": "q3",
+    "question": "Loại công việc nào phù hợp hơn với cách tiếp cận tuần tự?",
+    "questionEn": "Which kind of work suits a sequential approach better?",
+    "options": [
+      "Di trú dữ liệu từ hệ thống cũ, vì công việc rõ và không có gì để học từ người dùng",
+      "Cải thiện tỷ lệ chuyển đổi của một luồng thanh toán",
+      "Làm một sản phẩm mới cho thị trường chưa ai làm",
+      "Thiết kế lại trải nghiệm onboarding cho người dùng mới"
+    ],
+    "optionsEn": [
+      "Migrating data from a legacy system, since the work is clear and there is nothing to learn from users",
+      "Improving conversion on a checkout flow",
+      "Building a new product for an untouched market",
+      "Redesigning the onboarding experience"
+    ],
+    "answer": 0,
+    "explanation": "Xây một hệ thống theo chuẩn đã ban hành cũng thuộc loại này, vì yêu cầu do quy định quyết định chứ không do người dùng.",
+    "explanationEn": "Building to a published standard is similar, since regulation rather than users dictates the requirements."
+  },
+  {
+    "id": "q4",
+    "question": "Sai lầm tốn kém nhất khi chọn giữa hai mô hình là gì?",
+    "questionEn": "What is the costliest mistake when choosing between the two models?",
+    "options": [
+      "Chọn một mô hình rồi áp dụng nửa vời — waterfall không có kiểm soát thay đổi và agile không có phản hồi thật đều tệ hơn cả hai mô hình gốc",
+      "Chọn waterfall cho một dự án có nhiều bất định",
+      "Chọn agile cho một dự án có yêu cầu tuân thủ nặng",
+      "Thay đổi mô hình giữa dự án"
+    ],
+    "optionsEn": [
+      "Choosing a model then applying it half-heartedly — waterfall without change control and agile without real feedback are both worse than either original",
+      "Choosing waterfall for a high-uncertainty project",
+      "Choosing agile for a heavy-compliance project",
+      "Switching models mid-project"
+    ],
+    "answer": 0,
+    "explanation": "Áp dụng nửa vời khiến bạn gánh chi phí của một mô hình mà không nhận được lợi ích của nó.",
+    "explanationEn": "Half-hearted application makes you carry a model's costs without receiving its benefits."
+  },
+  {
+    "id": "q5",
+    "question": "Bốn chuyển dịch cốt lõi của vai trò PM khi sang Agile là gì?",
+    "questionEn": "What are the four core shifts in the PM role moving to Agile?",
+    "options": [
+      "Lập kế hoạch liên tục, đo tốc độ giao hàng thật, quản phạm vi bằng thứ tự backlog, và tháo gỡ trở ngại thay vì phân công theo dõi",
+      "Bỏ kế hoạch, bỏ báo cáo, bỏ ngân sách, và bỏ quản lý rủi ro",
+      "Tăng số buổi họp, giảm tài liệu, tăng tự do cho đội, và giảm cam kết",
+      "Chuyển toàn bộ trách nhiệm sang Product Owner và Scrum Master"
+    ],
+    "optionsEn": [
+      "Continuous planning, measuring real delivery rate, managing scope by backlog order, and clearing impediments rather than assigning and tracking",
+      "Dropping plans, reports, budget and risk management",
+      "More meetings, fewer documents, more team freedom, fewer commitments",
+      "Handing all responsibility to the PO and Scrum Master"
+    ],
+    "answer": 0,
+    "explanation": "Điều không đổi là ngân sách, phụ thuộc liên đội, rủi ro ngoài phạm vi một sprint, và giao tiếp với cấp trên.",
+    "explanationEn": "What does not change is budget, cross-team dependencies, risks beyond one sprint, and upward communication."
+  },
+  {
+    "id": "q6",
+    "question": "Nhận định Agile không cần PM chỉ đúng trong bối cảnh nào?",
+    "questionEn": "In what context is the claim that Agile needs no PM actually true?",
+    "options": [
+      "Một đội duy nhất, một sản phẩm, không phụ thuộc bên ngoài, và không có cam kết ngày tháng với ai",
+      "Mọi tổ chức đã áp dụng Scrum đầy đủ",
+      "Khi Scrum Master có kinh nghiệm quản lý dự án",
+      "Khi Product Owner là người của khách hàng"
+    ],
+    "optionsEn": [
+      "A single team, one product, no external dependencies, and no date commitments to anyone",
+      "Any organisation that has fully adopted Scrum",
+      "When the Scrum Master has project management experience",
+      "When the Product Owner works for the customer"
+    ],
+    "answer": 0,
+    "explanation": "Ngay khi có nhiều đội, nhiều phụ thuộc, hoặc một hợp đồng, công việc PM xuất hiện lại dù chức danh có thể khác.",
+    "explanationEn": "The moment there are several teams, dependencies, or a contract, the PM work reappears whatever the title."
+  },
+  {
+    "question": "Vùng công việc nào rõ ràng thuộc PM chứ không thuộc PO hay Scrum Master?",
+    "questionEn": "Which area clearly belongs to the PM rather than the PO or Scrum Master?",
+    "options": [
+      "Quản lý bên thứ ba như đối tác và nhà cung cấp, vì không đội Scrum nào tự đàm phán được việc đối tác chậm mở API hai tháng",
+      "Quyết định thứ tự các hạng mục trong product backlog",
+      "Điều phối buổi retrospective và cải tiến quy trình",
+      "Viết acceptance criteria cho từng user story"
+    ],
+    "optionsEn": [
+      "Managing third parties like partners and vendors, since no Scrum team negotiates its way out of a partner being two months late",
+      "Deciding the order of product backlog items",
+      "Facilitating retrospectives and process improvement",
+      "Writing acceptance criteria for each user story"
+    ],
+    "answer": 0,
+    "explanation": "Sáu vùng thuộc PM gồm phối hợp liên đội, bên thứ ba, ngân sách và báo cáo, rủi ro dài hạn, cam kết ngày ra ngoài, và trở ngại cấp tổ chức.",
+    "explanationEn": "The six PM areas are cross-team coordination, third parties, budget and reporting, long-horizon risk, external dates, and organisational impediments.",
+    "id": "q7"
+  },
+  {
+    "question": "Ban lãnh đạo cần gì trong báo cáo, thay vì đọc backlog?",
+    "questionEn": "What does leadership need in a report, rather than reading the backlog?",
+    "options": [
+      "Tiêu bao nhiêu, được gì, rủi ro nào, và quyết định gì cần từ họ",
+      "Danh sách chi tiết các user story đã hoàn thành",
+      "Biểu đồ burndown của từng sprint",
+      "Velocity và số story point còn lại"
+    ],
+    "optionsEn": [
+      "How much was spent, what was gained, which risks exist, and what decision is needed from them",
+      "A detailed list of completed user stories",
+      "Each sprint burndown chart",
+      "Velocity and remaining story points"
+    ],
+    "answer": 0,
+    "explanation": "PM là người dịch giữa hai ngôn ngữ: năng lực của đội thành dự báo bên ngoài hiểu được, và ràng buộc bên ngoài thành điều đội hiểu được.",
+    "explanationEn": "The PM translates both ways: team capacity into forecasts outsiders understand, and external constraints into terms the team understands.",
+    "id": "q8"
+  },
+  {
+    "question": "Ba việc PM trong Agile KHÔNG được làm là gì?",
+    "questionEn": "What three things must a PM in Agile NOT do?",
+    "options": [
+      "Phân công công việc cho từng người, quyết định thứ tự backlog, và ép cam kết sprint",
+      "Báo cáo lên cấp trên, quản lý ngân sách, và theo dõi rủi ro",
+      "Tham dự sprint review, nói chuyện với khách hàng, và ghi nhận quyết định",
+      "Loại bỏ trở ngại, quản lý phụ thuộc, và đàm phán với đối tác"
+    ],
+    "optionsEn": [
+      "Assigning work to individuals, deciding backlog order, and forcing sprint commitments",
+      "Reporting upward, managing budget, and tracking risk",
+      "Attending sprint reviews, talking to customers, and recording decisions",
+      "Removing impediments, managing dependencies, and negotiating with partners"
+    ],
+    "answer": 0,
+    "explanation": "PM lấn vào ba việc đó sẽ phá vỡ chính cơ chế làm Agile hoạt động.",
+    "explanationEn": "A PM crossing into those three breaks the very mechanism that makes Agile work.",
+    "id": "q9"
+  },
+  {
+    "question": "Dạng mô hình lai nào là thực dụng nhất?",
+    "questionEn": "Which hybrid form is the most pragmatic?",
+    "options": [
+      "Lai theo phần công việc: tích hợp và di trú chạy tuần tự, giao diện và trải nghiệm chạy theo sprint có phản hồi",
+      "Lai theo giai đoạn: kế hoạch tổng thể truyền thống, xây dựng theo sprint",
+      "Lai theo tầng báo cáo: đội làm Scrum, báo cáo lên trên bằng mốc và phần trăm",
+      "Lai theo đội: một số đội làm agile, một số đội làm waterfall"
+    ],
+    "optionsEn": [
+      "Hybrid by work type: integration and migration sequential, interface and experience in sprints with feedback",
+      "Hybrid by phase: traditional overall planning, construction in sprints",
+      "Hybrid by reporting layer: the team runs Scrum, upward reporting uses milestones and percentages",
+      "Hybrid by team: some teams agile, some waterfall"
+    ],
+    "answer": 0,
+    "explanation": "Nó thực dụng nhất vì đặt mỗi loại công việc vào mô hình phù hợp với mức bất định của chính nó.",
+    "explanationEn": "It is most pragmatic because it puts each kind of work into the model matching its own uncertainty.",
+    "id": "q10"
+  },
+  {
+    "question": "Đội chạy sprint đều đặn nhưng cả phạm vi và ngày đều cố định từ đầu. Vấn đề là gì?",
+    "questionEn": "A team runs regular sprints but both scope and date are fixed from the start. What is wrong?",
+    "options": [
+      "Đội mang mọi chi phí của Agile mà không có lợi ích nào, vì không có gì được điều chỉnh theo học hỏi",
+      "Đội sẽ không kịp hoàn thành trong số sprint đã định",
+      "Sprint quá ngắn để hoàn thành các hạng mục lớn",
+      "Không có vấn đề gì nếu backlog đã được sắp thứ tự"
+    ],
+    "optionsEn": [
+      "The team carries every cost of Agile with none of the benefit, since nothing adjusts to learning",
+      "The team will not finish within the planned sprint count",
+      "Sprints are too short for large items",
+      "Nothing is wrong if the backlog is ordered"
+    ],
+    "answer": 0,
+    "explanation": "Nguyên tắc để mô hình lai hoạt động là mỗi biến số phải có một chỗ để nhường; nếu không thì đó là waterfall có họp hàng ngày.",
+    "explanationEn": "The rule for a working hybrid is that every variable must have somewhere to give; otherwise it is waterfall with daily standups.",
+    "id": "q11"
+  },
+  {
+    "question": "Câu hỏi quan trọng nhất khi chọn cách tiếp cận cho một dự án là gì?",
+    "questionEn": "What is the most important question when choosing an approach?",
+    "options": [
+      "Chi phí của việc sai là bao nhiêu, và bao lâu mới biết mình sai — nếu phải sáu tháng mới biết thì bạn cần vòng phản hồi ngắn dù hợp đồng nói gì",
+      "Đội đã từng làm agile chưa",
+      "Khách hàng thích mô hình nào hơn",
+      "Ngân sách có đủ cho việc lập kế hoạch chi tiết không"
+    ],
+    "optionsEn": [
+      "What being wrong costs and how long until you find out — if it takes six months, you need short feedback loops whatever the contract says",
+      "Has the team done agile before",
+      "Which model does the customer prefer",
+      "Is there budget for detailed planning"
+    ],
+    "answer": 0,
+    "explanation": "Đây là câu hỏi quyết định vì nó đo trực tiếp mức bất định và chi phí của sự chậm phát hiện.",
+    "explanationEn": "It is the decisive question because it directly measures uncertainty and the cost of late discovery.",
+    "id": "q12"
+  },
+  {
+    "question": "Điều gì xảy ra khi làm Agile mà không có người dùng tham gia cho phản hồi?",
+    "questionEn": "What happens when Agile runs without users giving feedback?",
+    "options": [
+      "Bạn đang làm waterfall chia nhỏ, không phải Agile, vì vòng phản hồi thật đã bị cắt",
+      "Agile vẫn hoạt động nhờ sprint review nội bộ",
+      "Đội sẽ tự bù đắp bằng cách kiểm thử kỹ hơn",
+      "PO sẽ đại diện đủ tốt cho tiếng nói người dùng"
+    ],
+    "optionsEn": [
+      "You are doing chopped-up waterfall rather than Agile, since the real feedback loop is severed",
+      "Agile still works through internal sprint reviews",
+      "The team compensates with more thorough testing",
+      "The PO represents the user voice well enough"
+    ],
+    "answer": 0,
+    "explanation": "Agile không hoạt động nếu không ai trả lời trong hai tuần, vì toàn bộ giá trị của nó nằm ở việc điều chỉnh theo học hỏi.",
+    "explanationEn": "Agile does not work if nobody answers within two weeks, since its whole value lies in adjusting to what you learn.",
+    "id": "q13"
+  },
+  {
+    "question": "Hợp đồng giá cố định và yêu cầu tuân thủ nặng ảnh hưởng thế nào tới việc chọn Agile?",
+    "questionEn": "How do fixed price and heavy compliance affect choosing Agile?",
+    "options": [
+      "Giá cố định không loại trừ Agile nhưng đòi hỏi cố định tổng khối lượng; tuân thủ nặng không loại bỏ sprint nhưng thêm chi phí cho mỗi vòng",
+      "Cả hai đều loại trừ hoàn toàn khả năng dùng Agile",
+      "Cả hai đều không ảnh hưởng gì tới việc chọn mô hình",
+      "Giá cố định loại trừ Agile còn tuân thủ thì không ảnh hưởng"
+    ],
+    "optionsEn": [
+      "Fixed price does not rule out Agile but requires fixing total volume; heavy compliance does not remove sprints but adds cost per loop",
+      "Both entirely rule out Agile",
+      "Neither affects the model choice",
+      "Fixed price rules out Agile while compliance does not matter"
+    ],
+    "answer": 0,
+    "explanation": "Ngành y tế, tài chính và hàng không cần dấu vết tài liệu nhiều hơn, và điều đó làm mỗi vòng đắt hơn chứ không làm nó bất khả thi.",
+    "explanationEn": "Healthcare, finance and aviation need more documentary trail, which makes each loop costlier rather than impossible.",
+    "id": "q14"
+  },
+  {
+    "question": "Cách nhìn thực dụng nhất khi chọn mô hình cho một dự án lớn là gì?",
+    "questionEn": "What is the most pragmatic view when choosing a model for a large project?",
+    "options": [
+      "Chọn theo mức bất định của từng phần, không theo triết lý của cả dự án, miễn là ranh giới và phụ thuộc giữa các phần được quản lý rõ",
+      "Chọn một mô hình duy nhất cho toàn bộ dự án để tránh nhầm lẫn",
+      "Luôn chọn agile vì nó linh hoạt hơn trong mọi trường hợp",
+      "Để mỗi trưởng nhóm tự chọn mô hình cho phần của mình"
+    ],
+    "optionsEn": [
+      "Choose by the uncertainty of each part rather than a philosophy for the whole project, provided boundaries and dependencies are managed explicitly",
+      "Pick one model for the whole project to avoid confusion",
+      "Always pick agile since it is more flexible in every case",
+      "Let each team lead pick a model for their own part"
+    ],
+    "answer": 0,
+    "explanation": "Cùng một dự án có thể có một phần chạy tuần tự và một phần chạy sprint, và đó chính là mô hình lai theo phần công việc.",
+    "explanationEn": "One project can have a sequential part and a sprint part, which is exactly hybrid by work type.",
+    "id": "q15"
+  },
+  {
+    "question": "Chuyển dịch cá nhân khó nhất của một PM khi sang Agile là gì?",
+    "questionEn": "What is the hardest personal shift for a PM moving to Agile?",
+    "options": [
+      "Từ kiểm soát sang tạo điều kiện — nguồn giá trị không còn là biết mọi chi tiết mà là loại bỏ những thứ chặn đội",
+      "Học cách dùng công cụ quản lý backlog",
+      "Chuyển từ báo cáo hàng tháng sang báo cáo hai tuần",
+      "Học các thuật ngữ mới của Scrum"
+    ],
+    "optionsEn": [
+      "From control to enablement — your value is no longer knowing every detail but removing what blocks the team",
+      "Learning backlog tooling",
+      "Moving from monthly to fortnightly reporting",
+      "Learning new Scrum terminology"
+    ],
+    "answer": 0,
+    "explanation": "Đây là chuyển dịch khó nhất đặc biệt với PM giỏi kiểm soát, vì nó đòi hỏi từ bỏ đúng thứ đã làm họ thành công.",
+    "explanationEn": "It is hardest for PMs who are good at control, since it means giving up the very thing that made them successful.",
+    "id": "q16"
+  },
+  {
+    "question": "Dự báo nào đáng tin hơn trong môi trường Agile?",
+    "questionEn": "Which forecast is more trustworthy in an Agile environment?",
+    "options": [
+      "Dự báo dựa trên tốc độ giao hàng thật của ba sprint gần nhất, thay vì ước tính viết từ sáu tháng trước",
+      "Dự báo dựa trên kế hoạch chi tiết đã được phê duyệt",
+      "Dự báo dựa trên ước tính lạc quan nhất của đội",
+      "Dự báo dựa trên số giờ công còn lại trong ngân sách"
+    ],
+    "optionsEn": [
+      "A forecast from the actual delivery rate of the last three sprints rather than estimates written six months ago",
+      "A forecast from the approved detailed plan",
+      "A forecast from the team's most optimistic estimate",
+      "A forecast from remaining budgeted hours"
+    ],
+    "answer": 0,
+    "explanation": "Vì thế điều PM cần bảo vệ không còn là con số đã cam kết mà là nhịp giao hàng bền vững, vì đó chính là thứ tạo ra khả năng dự báo.",
+    "explanationEn": "So what a PM must protect is no longer the committed numbers but a sustainable delivery pace, since that is what creates predictability.",
+    "id": "q17"
+  }
+]

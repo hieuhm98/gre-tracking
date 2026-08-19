@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "User class & user persona",
+      "titleEn": "User classes & personas",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Product champion, product owner & xung đột",
+      "titleEn": "Product champions, product owners & conflicts",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Phỏng vấn, workshop, focus group & quan sát",
+      "titleEn": "Interviews, workshops, focus groups & observation",
+      "sections": [5, 6, 7],
+      "questionIds": ["q7", "q8", "q9", "q10"]
+    },
+    {
+      "id": "l4",
+      "title": "Bảng hỏi, phân tích & lập kế hoạch elicitation",
+      "titleEn": "Questionnaires, analysis techniques & planning elicitation",
+      "sections": [8, 9, 10],
+      "questionIds": ["q11", "q12", "q13"]
+    },
+    {
+      "id": "l5",
+      "title": "Theo sau buổi khai thác & tìm yêu cầu thiếu",
+      "titleEn": "Following up & finding missing requirements",
+      "sections": [11, 12],
+      "questionIds": ["q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [13, 14],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

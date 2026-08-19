@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "BABOK là gì và dùng để làm gì · Sáu nhóm kiến thức của BABOK",
+      "titleEn": "What BABOK is and what it is for · The six BABOK knowledge areas",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Elicitation là gì và vì sao không gọi là thu thập · Phỏng vấn — kỹ thuật nền tảng",
+      "titleEn": "Why it is called elicitation, not gathering · Interviews — the foundational technique",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Workshop — khi cần nhiều người cùng lúc · Quan sát, khảo sát và phân tích tài liệu",
+      "titleEn": "Workshops — when you need several people at once · Observation, surveys, and document analysis",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Chọn kỹ thuật nào cho tình huống nào",
+      "titleEn": "Choosing the right technique",
+      "sections": [
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tại sao dev hay nói \"không đơn giản vậy\"? · Technical Debt là gì?",
+      "titleEn": "Why do developers always say \"it's not that simple\"? · What is Technical Debt?",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "td-01",
+        "td-02",
+        "td-03",
+        "td-04"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Các loại Trade-off phổ biến · MVP Mindset — Làm đủ để học, không làm đủ để hoàn hảo",
+      "titleEn": "Common Types of Trade-offs · MVP Mindset — Do Enough to Learn, Not Enough to Be Perfect",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "td-05",
+        "td-06",
+        "td-07",
+        "td-08"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Khi nào shortcut hợp lý, khi nào không? · Cách BA nhận biết team đang có Technical Debt cao",
+      "titleEn": "When is a shortcut reasonable, and when is it not? · How a BA Can Recognize a Team with High Technical Debt",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "td-09",
+        "td-10",
+        "td-11"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Tam giác Trade-off Kinh điển · Cách BA ra quyết định trade-off thông minh",
+      "titleEn": "The Classic Trade-off Triangle · How a BA Makes Smart Trade-off Decisions",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "td-12",
+        "td-13",
+        "td-14"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Ví dụ thực tế: BA đưa ra quyết định trade-off · Technical Debt Ledger — Công cụ BA nên dùng",
+      "titleEn": "Real-world Example: A BA Makes a Trade-off Decision · Technical Debt Ledger — A Tool the BA Should Use",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [
+        "td-15",
+        "q16",
+        "q17"
+      ]
+    },
+    {
+      "id": "l6",
+      "title": "Technical Debt Log",
+      "titleEn": "Technical Debt Log",
+      "sections": [
+        11
+      ],
+      "questionIds": [
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l7",
+      "title": "Điều BA KHÔNG nên làm",
+      "titleEn": "What a BA SHOULD NOT Do",
+      "sections": [
+        12
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

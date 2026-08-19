@@ -1,0 +1,422 @@
+[
+  {
+    "id": "q1",
+    "question": "Dòng đội thiếu người trong sổ rủi ro có vấn đề gì?",
+    "questionEn": "What is wrong with the line the team is short-staffed in a risk register?",
+    "options": [
+      "Đó không phải rủi ro mà là vấn đề hoặc ràng buộc, vì nó đã xảy ra rồi hoặc không đổi được",
+      "Nó thiếu con số xác suất cụ thể",
+      "Nó chưa được nhà tài trợ phê duyệt",
+      "Nó không nêu rõ ai là người sở hữu"
+    ],
+    "optionsEn": [
+      "It is not a risk but an issue or a constraint, since it has already happened or cannot change",
+      "It lacks a specific probability figure",
+      "It has not been approved by the sponsor",
+      "It does not name an owner"
+    ],
+    "answer": 0,
+    "explanation": "Rủi ro tương ứng phải là nếu một lập trình viên senior nghỉ trong tháng Ba thì tiến độ module thanh toán chậm ba tuần.",
+    "explanationEn": "The corresponding risk would be that if a senior developer leaves in March, the payment module slips three weeks."
+  },
+  {
+    "id": "q2",
+    "question": "Công thức viết một rủi ro cho đúng là gì?",
+    "questionEn": "What is the formula for writing a risk properly?",
+    "options": [
+      "Vì nguyên nhân, có thể sự kiện xảy ra, dẫn tới hệ quả lên mục tiêu",
+      "Xác suất nhân tác động bằng mức độ ưu tiên",
+      "Ai, cái gì, khi nào, ở đâu",
+      "Nguyên nhân gốc, giải pháp, người thực hiện"
+    ],
+    "optionsEn": [
+      "Because cause, event may happen, leading to consequence for an objective",
+      "Probability times impact equals exposure",
+      "Who, what, when, where",
+      "Root cause, solution, owner"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ: vì chỉ có một người hiểu hệ thống thanh toán cũ, nếu người đó nghỉ việc thì việc di trú dữ liệu sẽ chậm ít nhất bốn tuần.",
+    "explanationEn": "For example: because only one person understands the legacy payment system, if they leave, data migration slips at least four weeks."
+  },
+  {
+    "id": "q3",
+    "question": "Mục đích thật của quản lý rủi ro là gì?",
+    "questionEn": "What is the real purpose of risk management?",
+    "options": [
+      "Biết mình đang gánh rủi ro gì một cách có ý thức, vì dự án không có rủi ro là dự án không tạo ra giá trị mới",
+      "Loại bỏ toàn bộ rủi ro trước khi bắt đầu thực thi",
+      "Chuyển toàn bộ rủi ro sang bên thứ ba",
+      "Tạo tài liệu để bảo vệ PM khi dự án thất bại"
+    ],
+    "optionsEn": [
+      "Knowing consciously which risks you carry, since a project with no risk creates no new value",
+      "Eliminating all risk before execution starts",
+      "Transferring all risk to a third party",
+      "Producing documents that protect the PM when the project fails"
+    ],
+    "answer": 0,
+    "explanation": "Rủi ro là mặt trái của việc làm điều mới, nên mục tiêu là quản lý có ý thức chứ không phải triệt tiêu.",
+    "explanationEn": "Risk is the flip side of doing something new, so the goal is conscious management rather than elimination."
+  },
+  {
+    "id": "q4",
+    "question": "Kỹ thuật nhận diện rủi ro nào rẻ nhất và hiệu quả nhất?",
+    "questionEn": "Which risk identification technique is cheapest and most effective?",
+    "options": [
+      "Danh sách kiểm tra từ dự án trước, vì rủi ro làm bạn trượt lần trước rất có thể sẽ quay lại",
+      "Thuê chuyên gia bên ngoài đánh giá độc lập",
+      "Phân tích định lượng bằng mô phỏng Monte Carlo",
+      "Họp toàn đội để cùng liệt kê rủi ro"
+    ],
+    "optionsEn": [
+      "A checklist from previous projects, since the risk that tripped you last time is likely to return",
+      "Hiring an external expert for an independent assessment",
+      "Quantitative analysis via Monte Carlo simulation",
+      "A whole-team meeting to list risks together"
+    ],
+    "answer": 0,
+    "explanation": "Ba kỹ thuật hiệu quả gồm danh sách kiểm tra, phỏng vấn riêng từng người, và pre-mortem.",
+    "explanationEn": "The three effective techniques are checklists, individual interviews, and pre-mortems."
+  },
+  {
+    "id": "q5",
+    "question": "Vì sao pre-mortem cho ra nhiều rủi ro hơn câu hỏi chúng ta có rủi ro gì?",
+    "questionEn": "Why does a pre-mortem surface more risks than asking what are our risks?",
+    "options": [
+      "Vì nó cho phép người ta bi quan mà không bị coi là tiêu cực, khi yêu cầu họ tưởng tượng dự án đã thất bại thảm hại",
+      "Vì nó được thực hiện bởi chuyên gia bên ngoài",
+      "Vì nó dùng dữ liệu thống kê từ nhiều dự án",
+      "Vì nó diễn ra sau khi dự án đã kết thúc"
+    ],
+    "optionsEn": [
+      "Because it lets people be pessimistic without being labelled negative, by asking them to imagine the project already failed disastrously",
+      "Because it is run by external experts",
+      "Because it uses statistics from many projects",
+      "Because it happens after the project ends"
+    ],
+    "answer": 0,
+    "explanation": "Câu hỏi giả sử sáu tháng sau dự án này thất bại thảm hại, hãy viết ra vì sao, mở ra những điều người ta không dám nói trực tiếp.",
+    "explanationEn": "Asking people to imagine a disastrous failure six months out unlocks things they would not say directly."
+  },
+  {
+    "id": "q6",
+    "question": "Ô nào trong ma trận rủi ro bị bỏ qua nhiều nhất và vì sao điều đó nguy hiểm?",
+    "questionEn": "Which risk matrix cell is most skipped and why is that dangerous?",
+    "options": [
+      "Xác suất thấp nhưng tác động cao, bị bỏ qua vì khó xảy ra — nhưng đó chính là loại đánh chìm dự án",
+      "Xác suất cao và tác động thấp, vì nó xảy ra thường xuyên",
+      "Xác suất trung bình và tác động trung bình, vì nó không rõ ràng",
+      "Xác suất cao và tác động cao, vì nó quá hiển nhiên"
+    ],
+    "optionsEn": [
+      "Low probability but high impact, skipped because it is unlikely — yet that is the kind that sinks projects",
+      "High probability and low impact, since it happens often",
+      "Medium probability and medium impact, since it is unclear",
+      "High probability and high impact, since it is too obvious"
+    ],
+    "answer": 0,
+    "explanation": "Với ô này bạn không cần phòng ngừa tốn kém, bạn cần một phương án đã viết ra sẵn.",
+    "explanationEn": "For this cell you do not need expensive prevention, you need a written response plan ready."
+  },
+  {
+    "question": "Vì sao khả năng phát hiện nên được thêm vào khi ưu tiên hoá rủi ro?",
+    "questionEn": "Why should detectability be added when prioritising risks?",
+    "options": [
+      "Vì rủi ro bạn sẽ thấy trước ba tuần khác hoàn toàn rủi ro nổ ra không báo trước, nên rủi ro khó phát hiện đáng ưu tiên cao hơn",
+      "Vì rủi ro dễ phát hiện thường có tác động lớn hơn",
+      "Vì nó cho phép tính xác suất chính xác hơn",
+      "Vì nhà tài trợ chỉ quan tâm tới rủi ro có thể đo lường"
+    ],
+    "optionsEn": [
+      "Because a risk you see three weeks out is entirely different from one that detonates unannounced, so hard-to-detect risks deserve higher priority",
+      "Because easily detected risks usually have larger impact",
+      "Because it allows more accurate probability estimates",
+      "Because sponsors only care about measurable risks"
+    ],
+    "answer": 0,
+    "explanation": "Hai yếu tố nên thêm nữa là thời điểm rủi ro có thể xảy ra, và chi phí phòng ngừa.",
+    "explanationEn": "Two further factors worth adding are the timing of the risk and the cost of prevention.",
+    "id": "q7"
+  },
+  {
+    "question": "Vì sao không nên cố tỏ ra chính xác với xác suất rủi ro?",
+    "questionEn": "Why should you not pretend to precision about risk probability?",
+    "options": [
+      "Vì con số như 35 phần trăm nghe khoa học nhưng thường là bịa; ba mức cao, trung bình, thấp là đủ nếu cả đội hiểu giống nhau",
+      "Vì xác suất không liên quan tới việc ưu tiên hoá rủi ro",
+      "Vì chỉ chuyên gia thống kê mới được tính xác suất",
+      "Vì xác suất luôn thay đổi nên không cần ghi lại"
+    ],
+    "optionsEn": [
+      "Because a figure like 35 percent sounds scientific but is usually invented; high, medium, low is enough if the team means the same by them",
+      "Because probability is irrelevant to prioritising risk",
+      "Because only statisticians may calculate probability",
+      "Because probability always changes so recording it is pointless"
+    ],
+    "answer": 0,
+    "explanation": "Điều quan trọng không phải độ chính xác của con số mà là sự thống nhất trong cách cả đội hiểu ba mức đó.",
+    "explanationEn": "What matters is not numeric precision but a shared understanding of the three levels across the team.",
+    "id": "q8"
+  },
+  {
+    "question": "Chiến lược tránh rủi ro (avoid) có đặc điểm gì?",
+    "questionEn": "What characterises the avoid strategy?",
+    "options": [
+      "Thay đổi kế hoạch để rủi ro không còn tồn tại — mạnh nhất nhưng thường tốn nhất, vì bạn từ bỏ lợi ích đi kèm rủi ro đó",
+      "Giảm xác suất xảy ra bằng một thử nghiệm kỹ thuật",
+      "Đưa rủi ro sang bên có khả năng gánh tốt hơn",
+      "Ghi nhận rủi ro và chuẩn bị kế hoạch dự phòng"
+    ],
+    "optionsEn": [
+      "Changing the plan so the risk no longer exists — strongest but usually costliest, since you give up the benefit that came with it",
+      "Reducing probability via a technical experiment",
+      "Moving the risk to a party better able to carry it",
+      "Recording it and preparing a contingency plan"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ tránh rủi ro công nghệ mới bằng cách dùng công nghệ đội đã thành thạo, nhưng khi đó bạn mất lợi ích của công nghệ mới.",
+    "explanationEn": "For example avoiding new-technology risk by using familiar technology, at the cost of that technology's benefits.",
+    "id": "q9"
+  },
+  {
+    "question": "Lưu ý quan trọng về chiến lược chuyển giao rủi ro là gì?",
+    "questionEn": "What is the key caveat about transferring risk?",
+    "options": [
+      "Chuyển giao không làm rủi ro biến mất, và bạn vẫn chịu hệ quả nghiệp vụ nếu nó xảy ra",
+      "Chuyển giao chỉ áp dụng được cho rủi ro tài chính",
+      "Chuyển giao luôn rẻ hơn giảm thiểu rủi ro",
+      "Chuyển giao yêu cầu phải có bảo hiểm dự án"
+    ],
+    "optionsEn": [
+      "Transfer does not make the risk disappear, and you still bear the business consequence if it occurs",
+      "Transfer only applies to financial risk",
+      "Transfer is always cheaper than mitigation",
+      "Transfer requires project insurance"
+    ],
+    "answer": 0,
+    "explanation": "Mua bảo hiểm hay thuê bên thứ ba chuyển được trách nhiệm hợp đồng, nhưng khách hàng của bạn vẫn chịu ảnh hưởng khi hệ thống lỗi.",
+    "explanationEn": "Insurance or a third party can shift contractual responsibility, but your customers still suffer when the system fails.",
+    "id": "q10"
+  },
+  {
+    "question": "Khi nào việc chấp nhận rủi ro trở thành vấn đề?",
+    "questionEn": "When does accepting a risk become a problem?",
+    "options": [
+      "Khi rủi ro bị chấp nhận mà không ai biết là đã chấp nhận — lúc đó nó không phải quyết định, nó là sự lãng quên",
+      "Khi rủi ro có tác động cao hơn mức trung bình",
+      "Khi PM chấp nhận thay vì nhà tài trợ",
+      "Khi rủi ro được chấp nhận nhiều hơn ba lần"
+    ],
+    "optionsEn": [
+      "When it is accepted without anyone knowing it was accepted — then it is not a decision, it is an oversight",
+      "When the risk has above-average impact",
+      "When the PM accepts it rather than the sponsor",
+      "When more than three risks are accepted"
+    ],
+    "answer": 0,
+    "explanation": "Chấp nhận chủ động nghĩa là ghi nhận rủi ro và chuẩn bị kế hoạch dự phòng kèm điều kiện kích hoạt rõ ràng.",
+    "explanationEn": "Active acceptance means recording the risk and preparing a contingency plan with a clear trigger condition.",
+    "id": "q11"
+  },
+  {
+    "question": "Khác biệt giữa contingency reserve và management reserve là gì?",
+    "questionEn": "What is the difference between contingency reserve and management reserve?",
+    "options": [
+      "Contingency dành cho rủi ro đã biết trong sổ và do PM quản lý; management dành cho rủi ro chưa biết và do nhà tài trợ quản lý",
+      "Contingency dành cho chi phí còn management dành cho thời gian",
+      "Contingency do khách hàng chi trả còn management do công ty chi trả",
+      "Contingency dùng trong agile còn management dùng trong waterfall"
+    ],
+    "optionsEn": [
+      "Contingency covers known register risks under PM control; management covers unknown risks under the sponsor",
+      "Contingency is for cost while management is for time",
+      "Contingency is paid by the customer while management is paid by the company",
+      "Contingency is used in agile while management is used in waterfall"
+    ],
+    "answer": 0,
+    "explanation": "Trộn lẫn hai loại này gây tranh cãi, vì PM sẽ bị hỏi vì sao dùng dự phòng cho một thứ không có trong sổ rủi ro.",
+    "explanationEn": "Mixing them causes arguments, since the PM gets asked why reserve was spent on something not in the register.",
+    "id": "q12"
+  },
+  {
+    "question": "Một rủi ro có thể gây chậm bốn tuần với xác suất 25 phần trăm góp bao nhiêu vào khoản dự phòng?",
+    "questionEn": "A risk of a four-week slip at 25 percent probability contributes how much to the reserve?",
+    "options": [
+      "Một tuần, vì cách xác định là cộng tác động dự kiến có tính xác suất",
+      "Bốn tuần, vì phải chuẩn bị cho tình huống xấu nhất",
+      "Không góp gì, vì xác suất dưới 50 phần trăm",
+      "Hai tuần, vì lấy một nửa tác động cho an toàn"
+    ],
+    "optionsEn": [
+      "One week, since the method sums probability-weighted expected impact",
+      "Four weeks, since you must prepare for the worst case",
+      "Nothing, since probability is under 50 percent",
+      "Two weeks, taking half the impact for safety"
+    ],
+    "answer": 0,
+    "explanation": "Cách này cho một con số dự phòng có cơ sở thay vì một tỷ lệ phần trăm được chọn tuỳ ý.",
+    "explanationEn": "This gives a defensible reserve figure rather than an arbitrarily chosen percentage.",
+    "id": "q13"
+  },
+  {
+    "question": "Không có chỉ báo cảnh báo sớm, sổ rủi ro trở thành gì?",
+    "questionEn": "Without early warning indicators, what does a risk register become?",
+    "options": [
+      "Chỉ là một danh sách lo lắng, thay vì một hệ thống cảnh báo",
+      "Một tài liệu tuân thủ hợp lệ nhưng thiếu chi tiết",
+      "Một công cụ hữu ích cho báo cáo lên nhà tài trợ",
+      "Một bản ghi lịch sử để dùng cho dự án sau"
+    ],
+    "optionsEn": [
+      "Just a list of worries rather than a warning system",
+      "A valid compliance document lacking detail",
+      "A useful tool for sponsor reporting",
+      "A historical record for future projects"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ rủi ro đối tác chậm mở API cần chỉ báo cụ thể là không có bản đặc tả API vào cuối tháng Hai.",
+    "explanationEn": "For example the partner-API risk needs the concrete indicator of no API specification by end of February.",
+    "id": "q14"
+  },
+  {
+    "question": "Bốn thứ mà mỗi rủi ro trong sổ nên có là gì?",
+    "questionEn": "What four things should each register entry have?",
+    "options": [
+      "Người sở hữu cụ thể, chỉ báo cảnh báo sớm, điều kiện kích hoạt, và ngày xem lại",
+      "Xác suất, tác động, mức độ ưu tiên, và ngân sách dự phòng",
+      "Nguyên nhân, hệ quả, giải pháp, và người phê duyệt",
+      "Mã rủi ro, phân loại, mức độ nghiêm trọng, và trạng thái"
+    ],
+    "optionsEn": [
+      "A specific owner, an early warning indicator, a trigger condition, and a review date",
+      "Probability, impact, exposure, and reserve",
+      "Cause, consequence, solution, and approver",
+      "A risk ID, category, severity, and status"
+    ],
+    "answer": 0,
+    "explanation": "Người sở hữu phải là một người cụ thể chứ không phải cả đội, và không có ngày xem lại thì rủi ro sẽ không được xem lại.",
+    "explanationEn": "The owner must be one named person rather than the team, and without a review date it will not be reviewed.",
+    "id": "q15"
+  },
+  {
+    "question": "Vì sao nên quyết định điều kiện kích hoạt trước khi rủi ro xảy ra?",
+    "questionEn": "Why decide trigger conditions before a risk materialises?",
+    "options": [
+      "Vì quyết định trước khi bị áp lực luôn tốt hơn quyết định trong lúc đang cháy",
+      "Vì nhà tài trợ yêu cầu mọi quyết định phải được phê duyệt trước",
+      "Vì sau khi rủi ro xảy ra thì không còn phương án nào",
+      "Vì nó cho phép PM chuyển trách nhiệm sang người khác"
+    ],
+    "optionsEn": [
+      "Because a decision made before the pressure is always better than one made mid-fire",
+      "Because sponsors require every decision pre-approved",
+      "Because once a risk occurs no options remain",
+      "Because it lets the PM shift responsibility"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ: nếu tới ngày 10 tháng Ba mà chưa có API của đối tác, chúng ta chuyển sang dùng dữ liệu giả và tách phần tích hợp sang phát hành sau.",
+    "explanationEn": "For example: if there is still no partner API by March 10, we switch to mock data and defer integration to a later release.",
+    "id": "q16"
+  },
+  {
+    "question": "Dấu hiệu chắc chắn nhất của quản lý rủi ro hình thức là gì?",
+    "questionEn": "What is the surest sign of ceremonial risk management?",
+    "options": [
+      "Một sổ rủi ro không đổi trong ba tháng",
+      "Một sổ rủi ro có quá nhiều mục",
+      "Một sổ rủi ro không có con số xác suất",
+      "Một sổ rủi ro chỉ do PM viết"
+    ],
+    "optionsEn": [
+      "A risk register unchanged for three months",
+      "A register with too many entries",
+      "A register without probability figures",
+      "A register written only by the PM"
+    ],
+    "answer": 0,
+    "explanation": "Sổ rủi ro là tài liệu sống, nên cần nhịp xem lại hàng tuần khoảng mười lăm phút và rà soát toàn bộ ở mỗi mốc lớn.",
+    "explanationEn": "A register is a living document, needing a fifteen-minute weekly review and a full sweep at each major milestone.",
+    "id": "q17"
+  },
+  {
+    "question": "Vì sao phải ghi lại cả những rủi ro KHÔNG xảy ra?",
+    "questionEn": "Why record the risks that did NOT occur?",
+    "options": [
+      "Vì nếu không, năm sau sẽ có người nói lo hão và cắt hết chi phí phòng ngừa",
+      "Vì cần số liệu để tính xác suất chính xác hơn",
+      "Vì kiểm toán yêu cầu lưu trữ toàn bộ hồ sơ",
+      "Vì rủi ro không xảy ra vẫn tiêu tốn ngân sách dự phòng"
+    ],
+    "optionsEn": [
+      "Because otherwise next year somebody says you were worrying about nothing and cuts all preventive spending",
+      "Because you need data for more accurate probability",
+      "Because auditors require full records",
+      "Because unrealised risks still consume reserve"
+    ],
+    "answer": 0,
+    "explanation": "Phòng ngừa thành công trông giống như không có gì xảy ra, nên nó phải được ghi lại để không bị coi là chi phí vô ích.",
+    "explanationEn": "Successful prevention looks like nothing happening, so it must be recorded or it will be judged as wasted spend.",
+    "id": "q18"
+  },
+  {
+    "question": "Điều kiện nền tảng cho mọi cơ chế quản lý rủi ro hoạt động được là gì?",
+    "questionEn": "What is the precondition for any risk management mechanism to work?",
+    "options": [
+      "Đội phải cảm thấy an toàn khi nêu rủi ro — nếu người báo rủi ro bị coi là tiêu cực thì rủi ro chỉ được nêu khi đã thành vấn đề",
+      "PM phải có chứng chỉ về quản lý rủi ro",
+      "Sổ rủi ro phải được lưu trong một công cụ chuyên dụng",
+      "Nhà tài trợ phải phê duyệt toàn bộ sổ rủi ro"
+    ],
+    "optionsEn": [
+      "The team must feel safe raising risks — if risk-raisers are treated as negative, risks surface only once they are issues",
+      "The PM must hold a risk management certification",
+      "The register must live in a dedicated tool",
+      "The sponsor must approve the entire register"
+    ],
+    "answer": 0,
+    "explanation": "Khi rủi ro chỉ được nêu lúc đã thành vấn đề thì bạn không còn lựa chọn nào để phòng ngừa.",
+    "explanationEn": "When risks only surface as issues, you have no preventive options left.",
+    "id": "q19"
+  },
+  {
+    "question": "Câu nói nào của PM phá huỷ văn hoá nói thật về rủi ro nhanh nhất?",
+    "questionEn": "Which PM sentence destroys a culture of honesty about risk fastest?",
+    "options": [
+      "Đừng lo, sẽ ổn thôi; hoặc tìm giải pháp đi đừng mang vấn đề tới khi người ta chưa có thẩm quyền giải quyết; hoặc tôi đã nói rồi mà",
+      "Rủi ro này thuộc về ai và chỉ báo là gì",
+      "Nếu điều này xảy ra thì phương án của chúng ta là gì",
+      "Tôi cần biết ngay khi anh chị thấy dấu hiệu đầu tiên"
+    ],
+    "optionsEn": [
+      "Do not worry it will be fine; or bring me solutions not problems when they lack authority to solve it; or I told you so",
+      "Who owns this risk and what is the indicator",
+      "If this happens, what is our response",
+      "Tell me the moment you see the first sign"
+    ],
+    "answer": 0,
+    "explanation": "Ba câu này đều dạy đội rằng nêu rủi ro là hành động tốn kém cho chính họ.",
+    "explanationEn": "All three teach the team that raising a risk is personally costly.",
+    "id": "q20"
+  },
+  {
+    "question": "Vì sao phải đóng những rủi ro đã hết trong sổ?",
+    "questionEn": "Why close spent risks in the register?",
+    "options": [
+      "Vì sổ rủi ro đầy những dòng chết sẽ không được ai đọc",
+      "Vì mỗi rủi ro mở đều chiếm một phần ngân sách dự phòng",
+      "Vì quy trình yêu cầu số mục trong sổ không vượt quá hai mươi",
+      "Vì rủi ro đã hết vẫn tính vào báo cáo cho nhà tài trợ"
+    ],
+    "optionsEn": [
+      "Because a register full of dead lines will not be read by anyone",
+      "Because every open risk consumes part of the reserve",
+      "Because process caps the register at twenty entries",
+      "Because spent risks still appear in sponsor reports"
+    ],
+    "answer": 0,
+    "explanation": "Ví dụ rủi ro về công nghệ mới không còn ý nghĩa sau khi đội đã dùng nó ba tháng.",
+    "explanationEn": "For example a new-technology risk stops meaning anything after the team has used it for three months.",
+    "id": "q21"
+  }
+]

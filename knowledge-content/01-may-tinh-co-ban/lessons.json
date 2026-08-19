@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tổng quan · Phần cứng (Hardware)",
+      "titleEn": "Overview · Hardware",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Phần mềm (Software) · Cách máy tính hoạt động",
+      "titleEn": "Software · How a Computer Works",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Đơn vị dữ liệu",
+      "titleEn": "Data Units",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        6
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

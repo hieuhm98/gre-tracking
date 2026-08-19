@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao quality attribute quan trọng & cách phân loại",
+      "titleEn": "Why quality attributes matter & how to classify them",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Availability, integrity, interoperability, performance",
+      "titleEn": "Availability, integrity, interoperability, performance",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Robustness, safety, security & usability",
+      "titleEn": "Robustness, safety, security & usability",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q9"]
+    },
+    {
+      "id": "l4",
+      "title": "Thuộc tính phát triển & đánh đổi",
+      "titleEn": "Development attributes & trade-offs",
+      "sections": [7, 8],
+      "questionIds": ["q10", "q11", "q12"]
+    },
+    {
+      "id": "l5",
+      "title": "Planguage, agile & constraint",
+      "titleEn": "Planguage, agile & constraints",
+      "sections": [9, 10, 11],
+      "questionIds": ["q13", "q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [12, 13],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

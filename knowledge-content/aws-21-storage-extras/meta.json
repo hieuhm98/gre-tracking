@@ -1,5 +1,6 @@
 {
   "group": "dev",
+  "order": 21,
   "title": "AWS Storage bổ sung & Truyền dữ liệu – FSx, Storage Gateway, Snow, DataSync, Backup",
   "titleEn": "AWS Extra Storage & Data Transfer – FSx, Storage Gateway, Snow, DataSync, Backup",
   "description": "Amazon FSx, Storage Gateway, Snow Family, Transfer Family, DataSync và AWS Backup: chọn dịch vụ lưu trữ và di chuyển dữ liệu phù hợp cho kỳ thi SAA-C03.",

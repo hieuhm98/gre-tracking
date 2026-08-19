@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q1",
+    "question": "Cách phân biệt hữu ích nhất giữa bốn vai trò sản phẩm là gì?",
+    "questionEn": "What is the most useful way to distinguish the four product roles?",
+    "options": [
+      "Hỏi bốn câu hỏi trung tâm khác nhau mà mỗi vai trò trả lời, thay vì nhớ định nghĩa chức danh",
+      "Xem sơ đồ tổ chức của công ty",
+      "So sánh mức lương của từng vị trí",
+      "Đọc mô tả công việc trong tin tuyển dụng"
+    ],
+    "optionsEn": [
+      "Ask the four different central questions each role answers, rather than memorising title definitions",
+      "Look at the company org chart",
+      "Compare the salary of each position",
+      "Read the job descriptions in postings"
+    ],
+    "answer": 0,
+    "explanation": "Chức danh thay đổi theo công ty nhưng câu hỏi thì không. Hãy tìm xem ai đang trả lời câu hỏi nào trong tổ chức của bạn.",
+    "explanationEn": "Titles vary by company but the questions do not. Find out who answers which question in your organization."
+  },
+  {
+    "id": "q2",
+    "question": "Ghép đúng câu hỏi trung tâm với Business Owner?",
+    "questionEn": "Which central question belongs to the business owner?",
+    "options": [
+      "Chúng ta đầu tư vào đâu và kỳ vọng thu về gì?",
+      "Chúng ta xây gì tiếp theo và vì sao?",
+      "Làm sao giao đúng hạn và đúng nguồn lực?",
+      "Chúng ta nên xây sản phẩm gì cho thị trường nào?"
+    ],
+    "optionsEn": [
+      "Where do we invest and what return do we expect?",
+      "What do we build next, and why?",
+      "How do we deliver on time and on resources?",
+      "What product should we build, and for which market?"
+    ],
+    "answer": 0,
+    "explanation": "Chân trời thời gian của Business Owner là nhiều năm, dài hơn cả Product Manager, và họ chịu trách nhiệm trước lãnh đạo về lợi ích thu được.",
+    "explanationEn": "The business owner's horizon is years, longer than the product manager's, and they answer to leadership for benefits realised."
+  },
+  {
+    "id": "q3",
+    "question": "BA và PO cần điều gì quan trọng nhất từ Business Owner?",
+    "questionEn": "What do BAs and POs most need from a business owner?",
+    "options": [
+      "Mục tiêu kinh doanh rõ ràng và đo lường được, ví dụ giảm 30% số cuộc gọi hỗ trợ về đơn hàng trong 6 tháng",
+      "Phê duyệt nhanh mọi yêu cầu thay đổi",
+      "Tham gia daily standup hằng ngày",
+      "Viết user story cho backlog"
+    ],
+    "optionsEn": [
+      "Clear, measurable business objectives, e.g. cut order-related support calls by 30 percent within 6 months",
+      "Fast approval of every change request",
+      "Daily standup attendance",
+      "Writing user stories for the backlog"
+    ],
+    "answer": 0,
+    "explanation": "Mục tiêu chung chung như cải thiện trải nghiệm khách hàng không giúp phán định được một hạng mục có đáng làm hay không.",
+    "explanationEn": "A vague objective like improve the customer experience gives no basis for judging whether an item is worth building."
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao không xác định được Business Owner là dấu hiệu dự án rủi ro cao?",
+    "questionEn": "Why is being unable to name the business owner a high-risk sign?",
+    "options": [
+      "Vì không ai có thẩm quyền giải quyết xung đột giữa các bộ phận, và dự án sẽ mắc kẹt ở tầng chính trị",
+      "Vì không ai phê duyệt được tài liệu yêu cầu",
+      "Vì đội không biết báo cáo tiến độ cho ai",
+      "Vì không ai ký hợp đồng với nhà cung cấp"
+    ],
+    "optionsEn": [
+      "Because nobody has authority to resolve inter-departmental conflict, and the project stalls at the political layer",
+      "Because nobody can approve the requirements document",
+      "Because the team does not know whom to report to",
+      "Because nobody can sign vendor contracts"
+    ],
+    "answer": 0,
+    "explanation": "Business Owner cũng là người cung cấp sự bảo trợ khi cần thay đổi quy trình của một bộ phận khác — điều mà BA và PO không có thẩm quyền làm.",
+    "explanationEn": "The business owner also provides the sponsorship needed to change another department's process, which BAs and POs cannot do."
+  },
+  {
+    "id": "q5",
+    "question": "Khác biệt cốt lõi giữa Product Manager và Product Owner là gì?",
+    "questionEn": "What is the core difference between a product manager and a Product Owner?",
+    "options": [
+      "Product Manager chủ yếu hướng ra ngoài về thị trường và đối thủ; Product Owner chủ yếu hướng vào trong về đội, backlog và sprint",
+      "Product Manager cấp cao hơn Product Owner",
+      "Product Manager làm việc với khách hàng; Product Owner làm việc với lập trình viên",
+      "Hai vai trò hoàn toàn giống nhau, chỉ khác tên gọi"
+    ],
+    "optionsEn": [
+      "Product managers look outward at market and competitors; Product Owners look inward at team, backlog, and sprint",
+      "Product managers are senior to Product Owners",
+      "Product managers work with customers; Product Owners with developers",
+      "The two are identical, differing only in name"
+    ],
+    "answer": 0,
+    "explanation": "PM hỏi phân khúc nào và định giá ra sao; PO hỏi story nào làm trước và acceptance criteria là gì.",
+    "explanationEn": "PMs ask which segment and what pricing; POs ask which story comes first and what the acceptance criteria are."
+  },
+  {
+    "id": "q6",
+    "question": "Rủi ro khi một người kiêm cả Product Manager và Product Owner là gì?",
+    "questionEn": "What is the risk when one person is both product manager and Product Owner?",
+    "options": [
+      "Bị kéo về phía việc gấp là backlog và bỏ bê việc quan trọng là chiến lược sản phẩm",
+      "Không đủ thời gian tham dự các cuộc họp",
+      "Đội sẽ không tin tưởng một người kiêm nhiệm",
+      "Lương phải trả cho vị trí đó quá cao"
+    ],
+    "optionsEn": [
+      "Being pulled toward the urgent (backlog) and neglecting the important (product strategy)",
+      "Not having time for meetings",
+      "The team distrusting a dual-role person",
+      "The salary for that role being too high"
+    ],
+    "answer": 0,
+    "explanation": "Backlog luôn có việc gấp mỗi ngày, còn chiến lược thì không bao giờ khẩn cấp — nên nó bị đẩy lùi vô thời hạn.",
+    "explanationEn": "The backlog always has something urgent daily while strategy is never urgent, so it gets postponed indefinitely."
+  },
+  {
+    "id": "q7",
+    "question": "Nếu công ty chỉ có chức danh Product Owner mà không có Product Manager, cần hỏi gì?",
+    "questionEn": "If a company has a Product Owner but no product manager, what should you ask?",
+    "options": [
+      "Ai đang trả lời câu hỏi chúng ta nên xây sản phẩm gì cho thị trường nào — nếu không ai trả lời, đội có thể đang thực thi hiệu quả về phía sai",
+      "Có nên tuyển thêm Product Manager không",
+      "Product Owner có được trả lương như Product Manager không",
+      "Ai sẽ viết roadmap sản phẩm"
+    ],
+    "optionsEn": [
+      "Who is answering what product should we build for which market — if nobody is, the team may be executing efficiently in the wrong direction",
+      "Whether to hire a product manager",
+      "Whether the PO is paid like a product manager",
+      "Who will write the product roadmap"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng trống nguy hiểm nhất là khi không ai trả lời một trong bốn câu hỏi trung tâm, đặc biệt là câu hỏi về thị trường.",
+    "explanationEn": "The dangerous gap is nobody answering one of the four central questions, especially the market question."
+  },
+  {
+    "id": "q8",
+    "question": "Khác biệt cốt lõi giữa Product Owner và Project Manager là gì?",
+    "questionEn": "What is the core difference between a Product Owner and a project manager?",
+    "options": [
+      "PO quản lý một sản phẩm liên tục tiến hoá không có điểm kết thúc; Project Manager quản lý một dự án có điểm đầu và điểm cuối",
+      "PO làm việc trong Scrum; Project Manager làm việc trong Waterfall",
+      "PO thuộc phòng sản phẩm; Project Manager thuộc phòng kỹ thuật",
+      "PO quyết định kỹ thuật; Project Manager quyết định nghiệp vụ"
+    ],
+    "optionsEn": [
+      "A PO manages a continuously evolving product with no defined end; a project manager manages a project with a start and an end",
+      "POs work in Scrum; project managers in waterfall",
+      "POs sit in product; project managers in engineering",
+      "POs decide technology; project managers decide business"
+    ],
+    "answer": 0,
+    "explanation": "Khi phạm vi tăng, PO sắp lại thứ tự backlog và đẩy thứ khác ra; Project Manager đàm phán thay đổi hợp đồng và điều chỉnh lịch cùng nguồn lực.",
+    "explanationEn": "When scope grows, a PO reorders the backlog and pushes something out; a project manager renegotiates the contract and adjusts schedule and resources."
+  },
+  {
+    "id": "q9",
+    "question": "Trong tổ chức áp dụng Scrum thuần tuý, vai trò Project Manager được phân rã thế nào?",
+    "questionEn": "In a pure Scrum organization, how is the project manager role decomposed?",
+    "options": [
+      "Ưu tiên hoá và phạm vi sang Product Owner; quy trình và gỡ vướng sang Scrum Master; lịch trình và nguồn lực do đội tự quản lý hoặc quản lý cấp cao hơn",
+      "Toàn bộ sang Scrum Master",
+      "Toàn bộ sang Product Owner",
+      "Vai trò này bị loại bỏ hoàn toàn và không ai thay thế"
+    ],
+    "optionsEn": [
+      "Prioritization and scope to the Product Owner; process and unblocking to the Scrum Master; schedule and resources to the team or a higher layer",
+      "Everything to the Scrum Master",
+      "Everything to the Product Owner",
+      "The role is eliminated with no replacement"
+    ],
+    "answer": 0,
+    "explanation": "Tuy nhiên với dự án outsourcing có hợp đồng, ai đó vẫn phải quản lý cam kết với khách hàng, ngân sách, rủi ro và báo cáo — Scrum không định nghĩa vai trò nào làm việc đó.",
+    "explanationEn": "But on contracted outsourced projects somebody must still manage the customer commitment, budget, risk, and reporting — Scrum defines no role for that."
+  },
+  {
+    "id": "q10",
+    "question": "Khi Project Manager muốn chốt phạm vi còn Product Owner muốn linh hoạt, cách xử lý là gì?",
+    "questionEn": "When a project manager wants locked scope and the PO wants flexibility, how do you resolve it?",
+    "options": [
+      "Thoả thuận trước phần nào của phạm vi là cố định, thường là kết quả nghiệp vụ và thời hạn, và phần nào linh hoạt, thường là cách đạt được kết quả đó",
+      "Để Project Manager quyết định vì họ chịu trách nhiệm hợp đồng",
+      "Để Product Owner quyết định vì họ sở hữu backlog",
+      "Đưa lên lãnh đạo mỗi khi có bất đồng"
+    ],
+    "optionsEn": [
+      "Agree up front which part of scope is fixed, usually the business outcome and deadline, and which is flexible, usually how that outcome is achieved",
+      "Let the project manager decide since they own the contract",
+      "Let the Product Owner decide since they own the backlog",
+      "Escalate to leadership on every disagreement"
+    ],
+    "answer": 0,
+    "explanation": "Bản chất xung đột này là PM chịu trách nhiệm về cam kết đã ký còn PO chịu trách nhiệm về giá trị, nên cả hai đều đúng theo góc nhìn của mình.",
+    "explanationEn": "The conflict's nature is that the PM answers for a signed commitment while the PO answers for value, so both are right from their own view."
+  },
+  {
+    "id": "q11",
+    "question": "Khi Product Manager muốn tính năng mới còn PO thấy nợ kỹ thuật đang cản trở, nên làm gì?",
+    "questionEn": "When a product manager wants new features and the PO sees technical debt blocking, what should happen?",
+    "options": [
+      "Đưa lên Business Owner với dữ liệu về chi phí của nợ kỹ thuật, ví dụ ước tính cho các thay đổi tương tự đã tăng bao nhiêu trong sáu tháng qua",
+      "Product Owner tự quyết định dừng tính năng mới",
+      "Product Manager tự quyết định bỏ qua nợ kỹ thuật",
+      "Đội tự chia thời gian giữa hai việc"
+    ],
+    "optionsEn": [
+      "Take it to the business owner with data on what the debt costs, e.g. how much estimates for similar changes rose over six months",
+      "The Product Owner unilaterally stops new features",
+      "The product manager unilaterally ignores the debt",
+      "The team splits its own time between both"
+    ],
+    "answer": 0,
+    "explanation": "Đây là đánh đổi giữa tăng trưởng ngắn hạn và khả năng giao hàng dài hạn, nên nó thuộc thẩm quyền của người chịu trách nhiệm về kết quả kinh doanh.",
+    "explanationEn": "This trades short-term growth against long-term delivery capability, so it belongs to whoever is accountable for the business outcome."
+  },
+  {
+    "id": "q12",
+    "question": "Khi Business Owner ép một thời hạn mà đội nói không khả thi, cách xử lý tốt nhất là gì?",
+    "questionEn": "When a business owner enforces a deadline the team says is infeasible, what works best?",
+    "options": [
+      "Đừng tranh cãi về thời hạn mà hãy trình bày lựa chọn về phạm vi: đúng hạn được, nhưng với phạm vi A hoặc phạm vi B",
+      "Giải thích chi tiết lý do kỹ thuật khiến việc đó bất khả thi",
+      "Chấp nhận thời hạn và để đội làm thêm giờ",
+      "Từ chối cam kết và đề nghị lùi hạn"
+    ],
+    "optionsEn": [
+      "Do not argue the date; present scope options: we can hit it with scope A or scope B",
+      "Explain in detail the technical reasons it is impossible",
+      "Accept the date and have the team work overtime",
+      "Refuse to commit and propose a later date"
+    ],
+    "answer": 0,
+    "explanation": "Thời hạn thường gắn với một sự kiện kinh doanh thật như mùa cao điểm hoặc hạn tuân thủ, nên nó ít khi thương lượng được.",
+    "explanationEn": "Deadlines usually attach to a real business event such as peak season or a compliance date, so they are rarely negotiable."
+  },
+  {
+    "id": "q13",
+    "question": "Nguyên tắc chung để giải quyết mọi xung đột vai trò là gì?",
+    "questionEn": "What is the general principle for resolving any role conflict?",
+    "options": [
+      "Xác định rõ ai có thẩm quyền quyết định trong tình huống đó, đưa dữ liệu cho họ, và chấp nhận quyết định của họ",
+      "Biểu quyết theo đa số trong đội",
+      "Chọn theo ý người có chức vụ cao nhất",
+      "Trì hoãn tới khi mọi người tự đồng thuận"
+    ],
+    "optionsEn": [
+      "Establish who has authority in that situation, give them the data, and accept their decision",
+      "Vote by majority in the team",
+      "Follow whoever holds the highest position",
+      "Postpone until everyone agrees naturally"
+    ],
+    "answer": 0,
+    "explanation": "Xung đột kéo dài thường không phải vì thiếu thông tin mà vì không ai rõ ai được quyết trong tình huống cụ thể đó.",
+    "explanationEn": "Prolonged conflict usually stems not from missing information but from nobody being clear on who decides in that specific situation."
+  },
+  {
+    "id": "q14",
+    "question": "Trong mô hình một Product Manager phụ trách nhiều đội, rủi ro với Product Owner là gì?",
+    "questionEn": "In the one-PM-across-several-teams model, what is the risk for the Product Owner?",
+    "options": [
+      "PO trở thành người quản lý backlog thuần tuý và mất kết nối với lý do nghiệp vụ đằng sau các hạng mục",
+      "PO phải làm việc quá nhiều giờ",
+      "PO không được tham gia sprint planning",
+      "PO mất quyền chấp nhận công việc hoàn thành"
+    ],
+    "optionsEn": [
+      "The PO becomes a pure backlog administrator, disconnected from the business reasoning behind items",
+      "The PO must work excessive hours",
+      "The PO is excluded from sprint planning",
+      "The PO loses the right to accept completed work"
+    ],
+    "answer": 0,
+    "explanation": "Khi mất kết nối với lý do nghiệp vụ, PO không còn phán định được thứ tự ưu tiên và chỉ có thể chuyển tiếp thứ tự mà Product Manager đưa xuống.",
+    "explanationEn": "Disconnected from the reasoning, the PO can no longer judge priority and merely relays the order handed down by the product manager."
+  },
+  {
+    "id": "q15",
+    "question": "Cách nhớ đơn giản nhất về bốn vai trò là gì?",
+    "questionEn": "What is the simplest way to remember the four roles?",
+    "options": [
+      "Business Owner lo tiền và lợi ích; Product Manager lo thị trường và sản phẩm đúng; Product Owner lo thứ tự và giá trị; Project Manager lo kế hoạch và rủi ro",
+      "Bốn vai trò xếp theo cấp bậc từ cao xuống thấp",
+      "Bốn vai trò tương ứng với bốn giai đoạn của dự án",
+      "Bốn vai trò đều báo cáo cho cùng một người"
+    ],
+    "optionsEn": [
+      "Business owner: money and benefit; product manager: market and the right product; PO: order and value; project manager: plan and risk",
+      "The four form a hierarchy from top to bottom",
+      "The four correspond to four project phases",
+      "All four report to the same person"
+    ],
+    "answer": 0,
+    "explanation": "Chân trời thời gian cũng khác nhau: Business Owner nhiều năm, Product Manager quý tới năm, Product Owner sprint tới quý, Project Manager vòng đời một dự án.",
+    "explanationEn": "Their horizons also differ: business owner years, product manager quarters to years, PO sprints to quarters, project manager one project's life."
+  },
+  {
+    "id": "q16",
+    "question": "Hậu quả thực tế nào xảy ra khi bốn vai trò bị nhầm lẫn trong tổ chức?",
+    "questionEn": "What practical consequences follow when the four roles are confused?",
+    "options": [
+      "Đội không biết hỏi ai khi cần quyết định; hai người cùng nghĩ mình có quyền quyết dẫn tới chỉ đạo mâu thuẫn; không ai chịu trách nhiệm khi sản phẩm không đạt mục tiêu",
+      "Chi phí nhân sự tăng do trùng lặp vị trí",
+      "Nhân viên không biết viết chức danh vào hồ sơ",
+      "Công cụ quản lý không phân quyền được"
+    ],
+    "optionsEn": [
+      "The team does not know whom to ask; two people each believe they decide, giving contradictory direction; nobody is accountable when the product misses",
+      "Staffing costs rise from duplicate positions",
+      "Employees cannot state their title on a CV",
+      "Tools cannot assign permissions"
+    ],
+    "answer": 0,
+    "explanation": "Hậu quả thứ ba nghiêm trọng nhất, vì khi không ai chịu trách nhiệm cuối cùng thì mỗi người đều có thể chỉ ra rằng phần của mình đã làm đúng.",
+    "explanationEn": "The third is worst, because with nobody ultimately accountable everyone can point out that their own part was done correctly."
+  }
+]

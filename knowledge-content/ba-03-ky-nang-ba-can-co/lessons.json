@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Bản đồ kỹ năng: ba tầng · Đặt câu hỏi — kỹ năng quan trọng nhất",
+      "titleEn": "A skill map in three tiers · Questioning — the most important skill",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Lắng nghe chủ động · Tư duy phân tích",
+      "titleEn": "Active listening · Analytical thinking",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Viết rõ ràng · Giao tiếp và đàm phán",
+      "titleEn": "Clear writing · Communication and negotiation",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Kiến thức kỹ thuật vừa đủ · Cách rèn luyện từng kỹ năng",
+      "titleEn": "Just-enough technical knowledge · How to practise each skill",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        9,
+        10
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

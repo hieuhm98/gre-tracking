@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "UML là gì? · Use Case Diagram",
+      "titleEn": "What Is UML? · Use Case Diagram",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Activity Diagram · Sequence Diagram",
+      "titleEn": "Activity Diagram · Sequence Diagram",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Khi nào dùng loại diagram nào? · Lưu ý thực tế cho BA/PM",
+      "titleEn": "When to Use Which Type of Diagram? · Practical Notes for BAs/PMs",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Tóm tắt",
+      "titleEn": "Summary",
+      "sections": [
+        7
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

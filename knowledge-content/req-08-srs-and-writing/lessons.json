@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Vì sao cần tài liệu, SRS & template",
+      "titleEn": "Why document, the SRS & its template",
+      "sections": [1, 2, 3],
+      "questionIds": ["q1", "q2", "q3"]
+    },
+    {
+      "id": "l2",
+      "title": "Đánh nhãn, TBD, giao diện & agile",
+      "titleEn": "Labelling, TBDs, interfaces & agile",
+      "sections": [4, 5, 6],
+      "questionIds": ["q4", "q5", "q6"]
+    },
+    {
+      "id": "l3",
+      "title": "Đặc tính của yêu cầu xuất sắc",
+      "titleEn": "Characteristics of excellent requirements",
+      "sections": [7, 8],
+      "questionIds": ["q7", "q8", "q9", "q10"]
+    },
+    {
+      "id": "l4",
+      "title": "Phong cách viết & mức chi tiết",
+      "titleEn": "Writing style & level of detail",
+      "sections": [9, 10],
+      "questionIds": ["q11", "q12", "q13"]
+    },
+    {
+      "id": "l5",
+      "title": "Tránh nhập nhằng & thiếu sót",
+      "titleEn": "Avoiding ambiguity & incompleteness",
+      "sections": [11, 12],
+      "questionIds": ["q14", "q15", "q16"]
+    },
+    {
+      "id": "l6",
+      "title": "Ôn tập & điểm cốt lõi",
+      "titleEn": "Recap & key takeaways",
+      "sections": [13, 14],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Điều gì thật sự quyết định hiệu quả của một đội · Xây đội và phân bổ công việc",
+      "titleEn": "What actually decides a team's effectiveness · Building a team and allocating work",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Kế hoạch giao tiếp · Báo cáo trạng thái trung thực",
+      "titleEn": "The communication plan · Honest status reporting",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Họp: ít hơn nhưng có ích hơn · Xung đột và những cuộc trò chuyện khó",
+      "titleEn": "Meetings: fewer but more useful · Conflict and difficult conversations",
+      "sections": [
+        5,
+        6
+      ],
+      "questionIds": [
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q21"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        7,
+        8
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}
