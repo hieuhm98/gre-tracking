@@ -14,6 +14,13 @@ import {
 /** Batch rapid answer clicks into a single write-back request. */
 const PUSH_DEBOUNCE_MS = 1500;
 
+interface PushOptions {
+  /** Survive the tab closing (pagehide). */
+  keepalive?: boolean;
+  /** "replace" overwrites the server snapshot instead of merging into it. */
+  mode?: "merge" | "replace";
+}
+
 interface ProgressContextValue {
   progress: ProgressData;
   /** False until localStorage + the shipped seed have been reconciled. */
@@ -22,8 +29,9 @@ interface ProgressContextValue {
   writable: boolean;
   lastSyncedAt: string | null;
   update: (fn: (prev: ProgressData) => ProgressData) => void;
-  replaceAll: (data: ProgressData) => void;
-  reset: () => void;
+  /** Overwrite everything (import / reset), syncing the server in replace mode. */
+  replaceAll: (data: ProgressData) => Promise<void>;
+  reset: () => Promise<void>;
   flush: () => Promise<void>;
 }
 
@@ -39,15 +47,15 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
   const writableRef = useRef(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const push = useCallback(async (data: ProgressData, keepalive = false) => {
+  const push = useCallback(async (data: ProgressData, opts: PushOptions = {}) => {
     if (!writableRef.current) return;
 
     try {
-      const res = await fetch("/api/progress", {
+      const res = await fetch(opts.mode === "replace" ? "/api/progress?mode=replace" : "/api/progress", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
-        keepalive,
+        keepalive: opts.keepalive ?? false,
       });
 
       if (!res.ok) return;
@@ -92,9 +100,30 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     [commit]
   );
 
-  const replaceAll = useCallback((data: ProgressData) => commit(normalize(data)), [commit]);
+  /**
+   * Overwrite the whole snapshot — an import or a reset. Both bypass the
+   * debounce and tell the server to replace rather than merge, since a merge
+   * would undo the very decision the learner just made.
+   */
+  const replaceAll = useCallback(
+    async (data: ProgressData) => {
+      const next = normalize(data);
 
-  const reset = useCallback(() => commit(emptyProgress()), [commit]);
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+
+      progressRef.current = next;
+      setProgress(next);
+      saveLocal(next);
+
+      await push(next, { mode: "replace" });
+    },
+    [push]
+  );
+
+  const reset = useCallback(() => replaceAll(emptyProgress()), [replaceAll]);
 
   // Reconcile the three sources on mount: the static seed shipped with the
   // build, the snapshot the server holds on disk, and this browser's storage.
@@ -153,7 +182,7 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
 
       clearTimeout(timerRef.current);
       timerRef.current = null;
-      void push(progressRef.current, true);
+      void push(progressRef.current, { keepalive: true });
     }
 
     window.addEventListener("pagehide", handlePageHide);

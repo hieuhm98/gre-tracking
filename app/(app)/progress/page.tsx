@@ -4,7 +4,17 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useLang } from "@/context/lang";
 import { useProgress } from "@/context/progress";
-import { normalize, overallStats, topicStats } from "@/lib/progress";
+import {
+  UNKNOWN_COURSE,
+  isUnchanged,
+  mergeImport,
+  normalize,
+  overallStats,
+  topicStats,
+  type CourseGain,
+  type CourseMerge,
+  type CourseSnapshot,
+} from "@/lib/progress";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
 
@@ -28,10 +38,12 @@ function StatTile({ label, value, hint }: { label: string; value: string; hint?:
 
 export default function ProgressPage() {
   const { t, pick, lang } = useLang();
-  const { progress, ready, writable, lastSyncedAt, replaceAll, reset, flush } = useProgress();
+  const { progress, ready, writable, lastSyncedAt, replaceAll, reset } = useProgress();
   const [topics, setTopics] = useState<StaticTopic[]>([]);
   const [lessonTotal, setLessonTotal] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
+  /** A parsed import waiting for the learner to confirm the comparison. */
+  const [pending, setPending] = useState<{ fileName: string; merge: CourseMerge } | null>(null);
   const fileInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -65,11 +77,30 @@ export default function ProgressPage() {
       .sort((a, b) => (progress.topics[b.slug]?.updatedAt ?? "").localeCompare(progress.topics[a.slug]?.updatedAt ?? ""));
   }, [progress, topics]);
 
-  function handleExport() {
-    const stamp = new Date().toISOString().slice(0, 10);
-    const url = URL.createObjectURL(
-      new Blob([JSON.stringify(progress, null, 2)], { type: "application/json" })
+  /** Progress is keyed by slug; the catalogue is what maps a slug to a course. */
+  const topicGroups = useMemo(
+    () => Object.fromEntries(topics.map((tp) => [tp.slug, tp.group])),
+    [topics]
+  );
+
+  const courseRows = useMemo(() => {
+    if (!pending) return [];
+
+    const order = new Map(GROUPS.map((g, i) => [g.id, i]));
+
+    return [...pending.merge.courses].sort(
+      (a, b) => (order.get(a.course) ?? 99) - (order.get(b.course) ?? 99) || a.course.localeCompare(b.course)
     );
+  }, [pending]);
+
+  function handleExport() {
+    const now = new Date();
+    const stamp = `${now.toISOString().slice(0, 10)}-${now.toTimeString().slice(0, 5).replace(":", "")}`;
+
+    // `exportedAt` and `app` are provenance only — normalize() ignores unknown
+    // keys, so the file still imports as a plain snapshot.
+    const payload = { app: "milestone-tracking", exportedAt: now.toISOString(), ...progress };
+    const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" }));
     const link = document.createElement("a");
 
     link.href = url;
@@ -82,26 +113,107 @@ export default function ProgressPage() {
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
+  /**
+   * Importing never overwrites blind: the file is compared with what this
+   * browser holds, course by course, and the result is shown for confirmation
+   * before anything is written.
+   */
   async function handleImport(file: File) {
     try {
-      const parsed = JSON.parse(await file.text());
+      const imported = normalize(JSON.parse(await file.text()));
 
-      replaceAll(normalize(parsed));
-      setNotice(t("progress.imported"));
-      await flush();
+      setNotice(null);
+      setPending({ fileName: file.name, merge: mergeImport(progress, imported, topicGroups) });
     } catch {
+      setPending(null);
       setNotice(t("progress.importFailed"));
     }
   }
 
+  async function applyImport() {
+    if (!pending) return;
+
+    const { merge } = pending;
+    const grew = merge.courses.filter((c) => !isUnchanged(c.gain)).length;
+
+    setPending(null);
+    await replaceAll(merge.data);
+    setNotice(
+      grew === 0 && merge.newReviews === 0
+        ? pick(
+            "Đã nhập — file không có gì mới so với tiến độ hiện tại.",
+            "Imported — the file held nothing this browser did not already have."
+          )
+        : pick(
+            `Đã nhập tiến độ — ${grew} khoá học được bổ sung, ${merge.newReviews} lượt ôn tập mới.`,
+            `Progress imported — ${grew} course(s) gained progress, ${merge.newReviews} new review session(s).`
+          )
+    );
+  }
+
   function handleReset() {
-    if (window.confirm(t("progress.resetConfirm"))) reset();
+    if (window.confirm(t("progress.resetConfirm"))) {
+      setPending(null);
+      void reset();
+    }
   }
 
   const dateFmt = new Intl.DateTimeFormat(lang === "vi" ? "vi-VN" : "en-GB", {
     dateStyle: "medium",
     timeStyle: "short",
   });
+
+  const shortDate = new Intl.DateTimeFormat(lang === "vi" ? "vi-VN" : "en-GB", { dateStyle: "short" });
+
+  /** What the merge adds to a course — nothing here is ever a subtraction. */
+  function gainCell(gain: CourseGain) {
+    if (isUnchanged(gain)) {
+      return (
+        <span className="w-24 shrink-0 text-right text-[11px] text-zinc-400 dark:text-zinc-600">
+          {pick("không đổi", "unchanged")}
+        </span>
+      );
+    }
+
+    const parts: string[] = [];
+
+    if (gain.topics > 0) parts.push(`+${gain.topics} ${pick("chủ đề", "topics")}`);
+
+    if (gain.answered > 0) parts.push(`+${gain.answered} ${pick("câu", "q")}`);
+
+    if (gain.lessonsCompleted > 0) parts.push(`+${gain.lessonsCompleted} ${pick("bài", "lessons")}`);
+
+    return (
+      <span className="w-24 shrink-0 text-right text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
+        {parts.map((part) => (
+          <span key={part} className="block">
+            {part}
+          </span>
+        ))}
+      </span>
+    );
+  }
+
+  /** One side of a course comparison: last activity, then what it holds. */
+  function sideCell(snap: CourseSnapshot | null, active: boolean) {
+    if (!snap || !snap.updatedAt) {
+      return <span className="w-24 shrink-0 text-right text-xs text-zinc-400 dark:text-zinc-600">—</span>;
+    }
+
+    return (
+      <span
+        className={cn(
+          "w-24 shrink-0 text-right text-xs",
+          active ? "text-zinc-900 dark:text-zinc-100 font-medium" : "text-zinc-500"
+        )}
+      >
+        <span className="block font-mono">{shortDate.format(new Date(snap.updatedAt))}</span>
+        <span className="block text-[10px] text-zinc-500">
+          {snap.topics} {pick("chủ đề", "topics")} · {snap.answered} {pick("câu", "q")}
+        </span>
+      </span>
+    );
+  }
 
   if (!ready) return <div className="text-zinc-500 text-sm p-8">{t("common.loading")}</div>;
 
@@ -285,6 +397,75 @@ export default function ProgressPage() {
               }}
             />
           </div>
+
+          {pending && (
+            <div className="rounded-lg border border-blue-300 dark:border-blue-900 bg-blue-50/60 dark:bg-blue-950/30 p-3 space-y-3">
+              <div>
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  {pick("So sánh theo khoá học", "Course-by-course comparison")}
+                </h3>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1 leading-relaxed">
+                  {pick(
+                    `Đang so sánh “${pending.fileName}” với tiến độ trên máy này, theo từng khoá học. Hai bên được gộp lại — luôn giữ phần tiến độ nhiều hơn, nên nhập file không bao giờ làm mất bài đã làm. Câu đã trả lời ở hai bên được cộng gộp, điểm cao nhất và số bài đã hoàn thành không bao giờ giảm; chỉ điểm của lần làm gần nhất là lấy theo bên mới hơn.`,
+                    `Comparing “${pending.fileName}” with the progress in this browser, course by course. The two are merged — the bigger progress always wins, so importing can never lose work. Answers from both sides are combined, best scores and completed lessons never go down, and only the most recent sitting's score follows recency.`
+                  )}
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden divide-y divide-zinc-200 dark:divide-zinc-800">
+                <div className="flex items-center gap-3 px-3 py-1.5 text-[11px] text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50">
+                  <span className="flex-1 min-w-0">{pick("Khoá học", "Course")}</span>
+                  <span className="w-24 shrink-0 text-right">{pick("Máy này", "This browser")}</span>
+                  <span className="w-24 shrink-0 text-right">{pick("Trong file", "In the file")}</span>
+                  <span className="w-24 shrink-0 text-right">{pick("Sau khi nhập", "After import")}</span>
+                </div>
+
+                {courseRows.length === 0 ? (
+                  <div className="px-3 py-2 text-xs text-zinc-500">
+                    {pick("Không có tiến độ nào để so sánh.", "There is no progress to compare.")}
+                  </div>
+                ) : (
+                  courseRows.map((row) => {
+                    const group = GROUPS.find((g) => g.id === row.course);
+
+                    return (
+                      <div key={row.course} className="flex items-center gap-3 px-3 py-2">
+                        <span className="flex-1 min-w-0 truncate text-sm text-zinc-800 dark:text-zinc-200">
+                          {group
+                            ? `${group.icon} ${pick(group.label, group.labelEn)}`
+                            : row.course === UNKNOWN_COURSE
+                              ? pick("Chủ đề ngoài danh mục", "Topics outside the catalogue")
+                              : row.course}
+                        </span>
+                        {sideCell(row.local, row.ahead !== "imported")}
+                        {sideCell(row.imported, row.ahead === "imported")}
+                        {gainCell(row.gain)}
+                      </div>
+                    );
+                  })
+                )}
+              </div>
+
+              {pending.merge.newReviews > 0 && (
+                <p className="text-xs text-zinc-600 dark:text-zinc-400">
+                  + {pending.merge.newReviews}{" "}
+                  {pick("lượt ôn tập mới từ file", "new review session(s) from the file")}
+                </p>
+              )}
+
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => void applyImport()}
+                  className="text-sm px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+                >
+                  {pick("Áp dụng", "Apply")}
+                </button>
+                <button onClick={() => setPending(null)} className="btn-secondary text-sm">
+                  {pick("Huỷ", "Cancel")}
+                </button>
+              </div>
+            </div>
+          )}
 
           {notice && <p className="text-xs text-zinc-600 dark:text-zinc-400">{notice}</p>}
         </div>

@@ -63,8 +63,12 @@ export async function PUT(request: Request) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const merged = mergeProgress(await readSnapshot(), incoming);
-  const persisted = await writeSnapshot(merged);
+  // `?mode=replace` is for a deliberate overwrite — an import or a reset. The
+  // default per-entry merge would otherwise resurrect from disk exactly the
+  // state the caller just decided against.
+  const replace = new URL(request.url).searchParams.get("mode") === "replace";
+  const next = replace ? incoming : mergeProgress(await readSnapshot(), incoming);
+  const persisted = await writeSnapshot(next);
 
-  return NextResponse.json({ writable: FILE_WRITES_ENABLED, persisted, progress: merged });
+  return NextResponse.json({ writable: FILE_WRITES_ENABLED, persisted, progress: next });
 }
