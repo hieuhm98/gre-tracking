@@ -15,7 +15,7 @@ export default function ArticleRenderer({ content }: Props) {
       prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-3
       prose-h3:text-base prose-h3:mt-5 prose-h3:mb-2
       prose-p:leading-relaxed
-      prose-code:text-blue-600 dark:prose-code:text-blue-300 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+      prose-code:text-blue-600 dark:prose-code:text-blue-300 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:break-words
       prose-pre:bg-zinc-100 dark:prose-pre:bg-zinc-800 prose-pre:border prose-pre:border-zinc-200 dark:prose-pre:border-zinc-700 prose-pre:rounded-xl
       prose-blockquote:border-blue-500 prose-blockquote:italic
       prose-table:text-sm
@@ -24,7 +24,21 @@ export default function ArticleRenderer({ content }: Props) {
       prose-hr:border-zinc-200 dark:prose-hr:border-zinc-700
       prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300
     ">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          // A wide table must scroll inside its own box; left alone it pushes
+          // the whole article sideways on a phone. `<pre>` already gets this
+          // from the prose plugin.
+          table: ({ node, ...props }) => (
+            <div className="overflow-x-auto">
+              <table {...props} />
+            </div>
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 }

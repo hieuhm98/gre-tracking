@@ -232,7 +232,7 @@ export default function ReviewSession() {
             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
               {t("review.topics")} ({selectedVisibleCount}/{visibleTopics.length})
             </span>
-            <button onClick={toggleAll} className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+            <button onClick={toggleAll} className="shrink-0 py-1.5 -my-1.5 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
               {visibleTopics.every((tp) => selected.has(tp.slug)) ? t("review.deselectAll") : t("review.selectAll")}
             </button>
           </div>
@@ -248,7 +248,7 @@ export default function ReviewSession() {
                   type="checkbox"
                   checked={selected.has(tp.slug)}
                   onChange={() => toggleTopic(tp.slug)}
-                  className="accent-blue-500"
+                  className="accent-blue-500 w-4 h-4 shrink-0"
                 />
                 <span className="truncate">{pick(tp.title, tp.titleEn)}</span>
               </label>
@@ -414,7 +414,7 @@ export default function ReviewSession() {
     <div className={cn("space-y-4", dual ? "max-w-5xl" : "max-w-2xl")}>
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">{t("review.title")}</h1>
-        <button onClick={() => setStarted(false)} className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">{t("review.exit")}</button>
+        <button onClick={() => setStarted(false)} className="inline-block py-2 -my-2 text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">{t("review.exit")}</button>
       </div>
 
       {/* Progress */}

@@ -57,7 +57,7 @@ export default function ArticlePage() {
   return (
     <div className={bilingual ? "max-w-6xl" : "max-w-3xl"}>
       <div className="mb-6">
-        <Link href="/knowledge" className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+        <Link href="/knowledge" className="inline-block py-2 -my-2 text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
           {t("article.back")}
         </Link>
         <div className="flex items-center gap-2 mt-2">

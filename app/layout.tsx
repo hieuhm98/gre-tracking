@@ -1,9 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Milestone Tracking",
   description: "Track your milestones and IT knowledge",
+};
+
+/**
+ * Without this a phone browser assumes a ~980px desktop layout and zooms out,
+ * which no amount of responsive CSS can undo. `viewportFit: cover` lets the
+ * safe-area insets below reach the notch/home-indicator area.
+ */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

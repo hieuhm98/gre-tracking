@@ -185,7 +185,7 @@ export default function QuizBlock({ questions, title, slug }: Props) {
             {dual ? (
               <BilingualPair
                 labels
-                className="flex-1"
+                className="flex-1 min-w-0"
                 en={
                   <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">
                     {enQs[currentIdx].question}
@@ -198,7 +198,9 @@ export default function QuizBlock({ questions, title, slug }: Props) {
                 }
               />
             ) : (
-              <p className="text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">{currentQ.question}</p>
+              <p className="flex-1 min-w-0 text-zinc-900 dark:text-zinc-100 font-medium leading-relaxed">
+                {currentQ.question}
+              </p>
             )}
           </div>
 

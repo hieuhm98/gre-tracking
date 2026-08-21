@@ -10,9 +10,15 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <ThemeProvider>
       <LanguageProvider>
         <ProgressProvider>
-          <div className="flex min-h-screen">
+          {/* Column on mobile so the top bar stacks above the page; the rail
+              only becomes a sibling column at lg. `min-w-0` is what stops a
+              wide child (a table, a long token) from pushing the whole page
+              sideways instead of scrolling inside its own box. */}
+          <div className="flex min-h-screen flex-col lg:flex-row">
             <Sidebar />
-            <main className="flex-1 overflow-y-auto p-6 lg:p-8">{children}</main>
+            <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+              {children}
+            </main>
           </div>
         </ProgressProvider>
       </LanguageProvider>

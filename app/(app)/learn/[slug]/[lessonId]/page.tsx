@@ -290,7 +290,7 @@ export default function LessonPlayerPage() {
             </button>
             <Link
               href={`/knowledge/${slug}`}
-              className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
+              className="inline-block py-2 -my-2 text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
             >
               {pick("Xem toàn bộ bài viết", "View the full article")}
             </Link>

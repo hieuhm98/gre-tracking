@@ -135,7 +135,7 @@ export default function StudyPathPage() {
           type="button"
           onClick={() => setTrack("all")}
           className={cn(
-            "px-3 py-1.5 rounded-full text-xs font-medium border transition-colors",
+            "px-3 py-2 sm:py-1.5 rounded-full text-xs font-medium border transition-colors",
             track === "all"
               ? "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100"
               : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
@@ -150,7 +150,7 @@ export default function StudyPathPage() {
             type="button"
             onClick={() => setTrack(g.id)}
             className={cn(
-              "px-3 py-1.5 rounded-full text-xs font-medium border transition-colors",
+              "px-3 py-2 sm:py-1.5 rounded-full text-xs font-medium border transition-colors",
               track === g.id
                 ? "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100"
                 : "border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
@@ -164,7 +164,7 @@ export default function StudyPathPage() {
         <button
           type="button"
           onClick={() => setSort((s) => (s === "progress" ? "curriculum" : "progress"))}
-          className="ml-auto px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+          className="ml-auto px-3 py-2 sm:py-1.5 rounded-full text-xs font-medium border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
         >
           {sort === "progress"
             ? pick("Sắp theo: tiến độ của bạn", "Sorted by: your progress")

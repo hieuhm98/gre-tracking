@@ -47,7 +47,7 @@ export default function LearnTopicPage() {
   return (
     <div className="max-w-3xl space-y-6">
       <div>
-        <Link href="/learn" className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+        <Link href="/learn" className="inline-block py-2 -my-2 text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
           {pick("← Lộ trình học", "← Study path")}
         </Link>
         <div className="flex items-center gap-2 mt-1">
@@ -112,7 +112,7 @@ export default function LearnTopicPage() {
 
       <Link
         href={`/knowledge/${topic.slug}`}
-        className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 inline-block"
+        className="inline-block py-2 -my-2 text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 inline-block"
       >
         {pick("Xem toàn bộ bài viết & quiz đầy đủ", "View the full article & complete quiz")} →
       </Link>

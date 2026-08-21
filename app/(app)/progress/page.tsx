@@ -165,16 +165,21 @@ export default function ProgressPage() {
 
   const shortDate = new Intl.DateTimeFormat(lang === "vi" ? "vi-VN" : "en-GB", { dateStyle: "short" });
 
+  // The three comparison cells share the row below the course name on a narrow
+  // screen and line up as columns from sm up, so the table reflows instead of
+  // scrolling sideways. Each carries its own label for when the header is hidden.
+  const cellClass = "flex-1 min-w-0 sm:flex-none sm:w-24 text-xs sm:text-right";
+
+  function cellLabel(label: string) {
+    return (
+      <span className="block sm:hidden text-[10px] uppercase tracking-wide text-zinc-400 dark:text-zinc-600">
+        {label}
+      </span>
+    );
+  }
+
   /** What the merge adds to a course — nothing here is ever a subtraction. */
   function gainCell(gain: CourseGain) {
-    if (isUnchanged(gain)) {
-      return (
-        <span className="w-24 shrink-0 text-right text-[11px] text-zinc-400 dark:text-zinc-600">
-          {pick("không đổi", "unchanged")}
-        </span>
-      );
-    }
-
     const parts: string[] = [];
 
     if (gain.topics > 0) parts.push(`+${gain.topics} ${pick("chủ đề", "topics")}`);
@@ -184,33 +189,45 @@ export default function ProgressPage() {
     if (gain.lessonsCompleted > 0) parts.push(`+${gain.lessonsCompleted} ${pick("bài", "lessons")}`);
 
     return (
-      <span className="w-24 shrink-0 text-right text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
-        {parts.map((part) => (
-          <span key={part} className="block">
-            {part}
+      <span className={cellClass}>
+        {cellLabel(pick("Sau khi nhập", "After import"))}
+        {isUnchanged(gain) ? (
+          <span className="block text-[11px] text-zinc-400 dark:text-zinc-600">
+            {pick("không đổi", "unchanged")}
           </span>
-        ))}
+        ) : (
+          parts.map((part) => (
+            <span key={part} className="block text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+              {part}
+            </span>
+          ))
+        )}
       </span>
     );
   }
 
   /** One side of a course comparison: last activity, then what it holds. */
-  function sideCell(snap: CourseSnapshot | null, active: boolean) {
-    if (!snap || !snap.updatedAt) {
-      return <span className="w-24 shrink-0 text-right text-xs text-zinc-400 dark:text-zinc-600">—</span>;
-    }
-
+  function sideCell(label: string, snap: CourseSnapshot | null, active: boolean) {
     return (
-      <span
-        className={cn(
-          "w-24 shrink-0 text-right text-xs",
-          active ? "text-zinc-900 dark:text-zinc-100 font-medium" : "text-zinc-500"
+      <span className={cellClass}>
+        {cellLabel(label)}
+        {!snap || !snap.updatedAt ? (
+          <span className="block text-zinc-400 dark:text-zinc-600">—</span>
+        ) : (
+          <>
+            <span
+              className={cn(
+                "block font-mono",
+                active ? "text-zinc-900 dark:text-zinc-100 font-medium" : "text-zinc-500"
+              )}
+            >
+              {shortDate.format(new Date(snap.updatedAt))}
+            </span>
+            <span className="block text-[10px] text-zinc-500">
+              {snap.topics} {pick("chủ đề", "topics")} · {snap.answered} {pick("câu", "q")}
+            </span>
+          </>
         )}
-      >
-        <span className="block font-mono">{shortDate.format(new Date(snap.updatedAt))}</span>
-        <span className="block text-[10px] text-zinc-500">
-          {snap.topics} {pick("chủ đề", "topics")} · {snap.answered} {pick("câu", "q")}
-        </span>
       </span>
     );
   }
@@ -224,7 +241,7 @@ export default function ProgressPage() {
         <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">{t("progress.subtitle")}</p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <StatTile
           label={t("progress.streak")}
           value={`${stats.streak} ${t("progress.streakDays")}`}
@@ -250,7 +267,9 @@ export default function ProgressPage() {
             {startedTopics.map(({ slug, topic, stat }) => {
               const group = GROUPS.find((g) => g.id === (topic?.group ?? DEFAULT_GROUP));
               const accent = GROUP_ACCENT[group?.accent ?? "blue"];
-              const pct = stat.total > 0 ? Math.round((stat.answered / stat.total) * 100) : 0;
+              // Clamped: a topic that lost questions since the last attempt can
+              // otherwise report over 100% and overrun its own bar.
+              const pct = stat.total > 0 ? Math.min(100, Math.round((stat.answered / stat.total) * 100)) : 0;
 
               return (
                 <Link
@@ -258,8 +277,8 @@ export default function ProgressPage() {
                   href={`/knowledge/${slug}`}
                   className="card block hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-base shrink-0">{group?.icon ?? "◉"}</span>
+                  <div className="flex items-start sm:items-center gap-3">
+                    <span className="text-base shrink-0 leading-5">{group?.icon ?? "◉"}</span>
                     <div className="min-w-0 flex-1">
                       <div className="text-sm font-medium text-zinc-900 dark:text-zinc-100 truncate">
                         {topic ? pick(topic.title, topic.titleEn) : slug}
@@ -267,8 +286,21 @@ export default function ProgressPage() {
                       <div className="mt-1.5 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
                         <div className={cn("h-full rounded-full transition-all", accent.bar)} style={{ width: `${pct}%` }} />
                       </div>
+
+                      {/* Too little room for a side column on a phone, so the
+                          same numbers sit under the bar instead. */}
+                      <div className="sm:hidden mt-1.5 flex items-baseline gap-2 text-xs">
+                        <span className="font-mono text-zinc-700 dark:text-zinc-300 shrink-0">
+                          {stat.answered}/{stat.total || "?"}
+                        </span>
+                        <span className="text-zinc-500">
+                          {stat.attempts > 0
+                            ? `${t("progress.best")} ${stat.bestPct}% · ${stat.attempts} ${t("progress.attempts")}`
+                            : "—"}
+                        </span>
+                      </div>
                     </div>
-                    <div className="text-right shrink-0">
+                    <div className="hidden sm:block text-right shrink-0">
                       <div className="text-sm font-mono text-zinc-700 dark:text-zinc-300">
                         {stat.answered}/{stat.total || "?"}
                       </div>
@@ -308,9 +340,14 @@ export default function ProgressPage() {
               const pct = r.total > 0 ? Math.round((r.correct / r.total) * 100) : 0;
 
               return (
-                <div key={r.at} className="flex items-center gap-3 px-4 py-2.5 text-sm">
-                  <span className="text-xs text-zinc-500 font-mono shrink-0 w-40">{dateFmt.format(new Date(r.at))}</span>
-                  <span className="flex flex-wrap gap-1 flex-1 min-w-0">
+                <div
+                  key={r.at}
+                  className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 sm:px-4 py-2.5 text-sm"
+                >
+                  <span className="order-1 text-xs text-zinc-500 font-mono shrink-0 sm:w-40">
+                    {dateFmt.format(new Date(r.at))}
+                  </span>
+                  <span className="order-4 sm:order-2 flex flex-wrap gap-x-2 gap-y-0.5 w-full sm:w-auto sm:flex-1 min-w-0">
                     {r.groups.map((id) => {
                       const g = GROUPS.find((x) => x.id === id);
 
@@ -321,12 +358,12 @@ export default function ProgressPage() {
                       );
                     })}
                   </span>
-                  <span className="font-mono text-zinc-700 dark:text-zinc-300 shrink-0">
+                  <span className="order-2 sm:order-3 ml-auto sm:ml-0 font-mono text-zinc-700 dark:text-zinc-300 shrink-0">
                     {r.correct}/{r.total}
                   </span>
                   <span
                     className={cn(
-                      "text-xs font-medium shrink-0 w-10 text-right",
+                      "order-3 sm:order-4 text-xs font-medium shrink-0 w-10 text-right",
                       pct >= 80
                         ? "text-green-600 dark:text-green-400"
                         : pct >= 50
@@ -413,7 +450,7 @@ export default function ProgressPage() {
               </div>
 
               <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden divide-y divide-zinc-200 dark:divide-zinc-800">
-                <div className="flex items-center gap-3 px-3 py-1.5 text-[11px] text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50">
+                <div className="hidden sm:flex items-center gap-3 px-3 py-1.5 text-[11px] text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50">
                   <span className="flex-1 min-w-0">{pick("Khoá học", "Course")}</span>
                   <span className="w-24 shrink-0 text-right">{pick("Máy này", "This browser")}</span>
                   <span className="w-24 shrink-0 text-right">{pick("Trong file", "In the file")}</span>
@@ -429,16 +466,19 @@ export default function ProgressPage() {
                     const group = GROUPS.find((g) => g.id === row.course);
 
                     return (
-                      <div key={row.course} className="flex items-center gap-3 px-3 py-2">
-                        <span className="flex-1 min-w-0 truncate text-sm text-zinc-800 dark:text-zinc-200">
+                      <div
+                        key={row.course}
+                        className="flex flex-wrap items-start gap-x-3 gap-y-1.5 px-3 py-2.5 sm:items-center sm:py-2"
+                      >
+                        <span className="w-full sm:w-auto sm:flex-1 min-w-0 truncate text-sm font-medium sm:font-normal text-zinc-800 dark:text-zinc-200">
                           {group
                             ? `${group.icon} ${pick(group.label, group.labelEn)}`
                             : row.course === UNKNOWN_COURSE
                               ? pick("Chủ đề ngoài danh mục", "Topics outside the catalogue")
                               : row.course}
                         </span>
-                        {sideCell(row.local, row.ahead !== "imported")}
-                        {sideCell(row.imported, row.ahead === "imported")}
+                        {sideCell(pick("Máy này", "This browser"), row.local, row.ahead !== "imported")}
+                        {sideCell(pick("Trong file", "In the file"), row.imported, row.ahead === "imported")}
                         {gainCell(row.gain)}
                       </div>
                     );

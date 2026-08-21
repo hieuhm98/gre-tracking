@@ -159,7 +159,7 @@ export default function SqlPracticePage() {
               <button
                 key={ex.en}
                 onClick={() => insertSnippet(ex.sql)}
-                className="text-xs px-2.5 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/70 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-700 border border-zinc-300 dark:border-zinc-700/60 transition-colors"
+                className="text-xs px-2.5 py-2 sm:py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/70 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-700 border border-zinc-300 dark:border-zinc-700/60 transition-colors"
               >
                 {pick(ex.vi, ex.en)}
               </button>
@@ -182,7 +182,7 @@ export default function SqlPracticePage() {
             <div key={t.name} className="card p-3">
               <button
                 onClick={() => insertSnippet(`SELECT * FROM ${t.name} LIMIT 20;`)}
-                className="flex items-baseline justify-between w-full text-left group"
+                className="flex items-baseline justify-between w-full text-left group py-1.5 sm:py-0"
               >
                 <span className="font-mono text-sm text-blue-700 dark:text-blue-300 group-hover:text-blue-800 dark:group-hover:text-blue-200">
                   {t.name}

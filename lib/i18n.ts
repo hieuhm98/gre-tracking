@@ -24,6 +24,7 @@ const vi: Dict = {
   "nav.exercises": "Bài tập thiết kế",
   "nav.quickTest": "Test nhanh hằng ngày",
   "nav.sectionKnowledge": "Học tập",
+  "nav.openMenu": "Mở menu",
   "nav.sectionPractice": "Luyện tập",
 
   // Language
@@ -128,6 +129,7 @@ const en: Dict = {
   "nav.exercises": "Design Exercises",
   "nav.quickTest": "Daily Quick Test",
   "nav.sectionKnowledge": "Learning",
+  "nav.openMenu": "Open menu",
   "nav.sectionPractice": "Practice",
 
   // Language
