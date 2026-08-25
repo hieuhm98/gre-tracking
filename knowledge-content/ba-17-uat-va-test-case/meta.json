@@ -1,6 +1,6 @@
 {
   "group": "ba",
-  "order": 23,
+  "order": 24,
   "title": "Hỗ trợ kiểm thử & UAT",
   "titleEn": "Supporting Testing & UAT",
   "description": "Vai trò BA trong kiểm thử, viết test case và checklist từ acceptance criteria, tổ chức UAT và xử lý kết quả.",

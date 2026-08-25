@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Bốn góc nhìn, bốn sơ đồ · Context model",
+      "titleEn": "Four views, four diagrams · The context model",
+      "sections": [
+        1,
+        2
+      ],
+      "questionIds": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "l2",
+      "title": "Functional flow diagram · Cross-functional flow diagram",
+      "titleEn": "The functional flow diagram · The cross-functional flow diagram",
+      "sections": [
+        3,
+        4
+      ],
+      "questionIds": [
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "id": "l3",
+      "title": "Process flowchart — mọi bước, mọi quyết định, mọi vòng lặp",
+      "titleEn": "The process flowchart — every step, every decision, every loop",
+      "sections": [
+        5
+      ],
+      "questionIds": [
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "id": "l4",
+      "title": "Chọn sơ đồ nào · Lỗi thường gặp",
+      "titleEn": "Choosing a diagram · Common mistakes",
+      "sections": [
+        6,
+        7
+      ],
+      "questionIds": [
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ]
+    },
+    {
+      "id": "l5",
+      "title": "Điểm cốt lõi · Tóm tắt",
+      "titleEn": "Key takeaways · Summary",
+      "sections": [
+        8,
+        9
+      ],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

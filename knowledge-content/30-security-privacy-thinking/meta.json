@@ -1,6 +1,6 @@
 {
   "group": "ba",
-  "order": 20,
+  "order": 21,
   "title": "Tư Duy Security & Privacy",
   "titleEn": "Security & Privacy Thinking",
   "description": "Cách BA nhìn requirement qua lens bảo mật: phát hiện điểm rủi ro, phân loại data nhạy cảm, tư duy privacy-by-design và đặt câu hỏi đúng với dev.",
