@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useLang } from "@/context/lang";
 import { useProgress } from "@/context/progress";
 import BilingualPair from "@/components/BilingualPair";
+import OptionRationale from "@/components/knowledge/OptionRationale";
 import { recordReview } from "@/lib/progress";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
@@ -339,29 +340,47 @@ export default function ReviewSession() {
                     </p>
                   )}
                 </div>
+                {(enQs[i].optionExplanations || viQs[i].optionExplanations) && (
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-600 mb-1.5">
+                    {t("quiz.breakdown")}
+                  </p>
+                )}
+
                 <div className="space-y-1 mb-3">
                   {q.options.map((opt, oi) => {
                     const isCorrectOpt = oi === q.answer;
                     const isUserOpt = oi === userAnswer;
+
                     return (
                       <div key={oi} className={cn(
-                        "flex gap-2 px-3 py-1.5 rounded text-xs",
+                        "flex items-start gap-2 px-3 py-1.5 rounded text-xs",
                         isCorrectOpt ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300" :
                         isUserOpt ? "bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300" : "text-zinc-500"
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
-                        {dual ? (
-                          <BilingualPair
-                            className="flex-1 gap-y-0.5"
-                            divider={false}
-                            en={<span>{enQs[i].options[oi]}</span>}
-                            vi={<span className="opacity-80">{viQs[i].options[oi]}</span>}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-start gap-2">
+                            <div className="flex-1 min-w-0">
+                              {dual ? (
+                                <BilingualPair
+                                  className="gap-y-0.5"
+                                  divider={false}
+                                  en={<span>{enQs[i].options[oi]}</span>}
+                                  vi={<span className="opacity-80">{viQs[i].options[oi]}</span>}
+                                />
+                              ) : (
+                                <span>{opt}</span>
+                              )}
+                            </div>
+                            {isCorrectOpt && <span className="shrink-0">✓</span>}
+                            {isUserOpt && !isCorrectOpt && <span className="shrink-0">{t("quiz.yourAnswer")}</span>}
+                          </div>
+                          <OptionRationale
+                            correct={isCorrectOpt}
+                            en={enQs[i].optionExplanations?.[oi]}
+                            vi={viQs[i].optionExplanations?.[oi]}
                           />
-                        ) : (
-                          <span>{opt}</span>
-                        )}
-                        {isCorrectOpt && <span className="ml-auto shrink-0">✓</span>}
-                        {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.yourAnswer")}</span>}
+                        </div>
                       </div>
                     );
                   })}

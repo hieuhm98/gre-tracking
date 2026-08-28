@@ -14,6 +14,7 @@ const KNOWLEDGE_NAV = [
   { href: "/learn", label: "nav.learn", icon: "◐" },
   { href: "/knowledge", label: "nav.knowledge", icon: "◉" },
   { href: "/knowledge-review", label: "nav.review", icon: "⟳" },
+  { href: "/exam", label: "nav.exam", icon: "◎" },
   { href: "/progress", label: "nav.progress", icon: "◑" },
 ];
 

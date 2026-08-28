@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Ba tầm — và chỉ ba · Bảng so sánh tổng hợp",
+      "titleEn": "Three horizons — and only three · The master comparison",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3", "q4", "q20"]
+    },
+    {
+      "id": "l2",
+      "title": "Những cái tên không phải tầm · Hoạt động này thuộc tầm nào?",
+      "titleEn": "Names that are not horizons · Which horizon is this activity?",
+      "sections": [3, 4],
+      "questionIds": ["q10", "q11", "q12", "q13", "q19"]
+    },
+    {
+      "id": "l3",
+      "title": "Kỹ thuật ở nhiều tầm · Điều BA KHÔNG làm ở mỗi tầm",
+      "titleEn": "Techniques across horizons · What the BA is NOT doing",
+      "sections": [5, 6],
+      "questionIds": ["q5", "q6", "q7", "q8", "q9", "q14", "q15", "q16", "q17", "q18"]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi",
+      "titleEn": "Key takeaways",
+      "sections": [7],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

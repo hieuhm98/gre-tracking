@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useLang } from "@/context/lang";
 import { useProgress } from "@/context/progress";
 import BilingualPair from "@/components/BilingualPair";
+import OptionRationale from "@/components/knowledge/OptionRationale";
 import { clearTopic, recordQuiz } from "@/lib/progress";
 import { type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,24 @@ export interface Question {
   answer: number;
   explanation?: string;
   explanationEn?: string;
+  /**
+   * One rationale per option, aligned index-for-index with `options`: why the
+   * key is right, and why each distractor is wrong. Optional — questions
+   * written before this existed fall back to the single `explanation`.
+   */
+  optionExplanations?: string[];
+  optionExplanationsEn?: string[];
+}
+
+/** Pick the localized rationale array, but only when it lines up with the options. */
+function pickOptionExplanations(q: Question, en: boolean): string[] | undefined {
+  const preferred = en ? q.optionExplanationsEn : q.optionExplanations;
+  const fallback = en ? q.optionExplanations : q.optionExplanationsEn;
+  const chosen = preferred ?? fallback;
+
+  if (!Array.isArray(chosen) || chosen.length !== q.options.length) return undefined;
+
+  return chosen;
 }
 
 /** Resolve a bilingual question to plain strings for the active language. */
@@ -24,12 +43,14 @@ export function localizeQuestion(q: Question, lang: Lang) {
   const en = lang === "en";
   const options =
     en && q.optionsEn && q.optionsEn.length === q.options.length ? q.optionsEn : q.options;
+
   return {
     id: q.id,
     answer: q.answer,
     question: en ? q.questionEn || q.question : q.question,
     options,
     explanation: en ? q.explanationEn || q.explanation : q.explanation,
+    optionExplanations: pickOptionExplanations(q, en),
   };
 }
 
@@ -102,6 +123,10 @@ export default function QuizBlock({ questions, title, slug }: Props) {
   const enQs = questions.map((q) => localizeQuestion(q, "en"));
   const viQs = questions.map((q) => localizeQuestion(q, "vi"));
   const currentQ = localized[currentIdx];
+  // Per-question: does it carry the per-option breakdown, in either language?
+  const hasRationale = questions.map(
+    (_, i) => Boolean(enQs[i].optionExplanations || viQs[i].optionExplanations)
+  );
   const totalAnswered = Object.values(answers).filter((v) => v !== null && v !== undefined).length;
   const correctCount = localized.filter((q) => answers[q.id] === q.answer).length;
 
@@ -323,10 +348,17 @@ export default function QuizBlock({ questions, title, slug }: Props) {
                   )}
                 </div>
 
+                {hasRationale[i] && (
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-600 mb-1.5">
+                    {t("quiz.breakdown")}
+                  </p>
+                )}
+
                 <div className="space-y-1.5 mb-3">
                   {q.options.map((opt, oi) => {
                     const isCorrectOpt = oi === q.answer;
                     const isUserOpt = oi === userAnswer;
+
                     return (
                       <div key={oi} className={cn(
                         "flex items-start gap-2 px-3 py-2 rounded-lg text-xs",
@@ -335,18 +367,29 @@ export default function QuizBlock({ questions, title, slug }: Props) {
                         "text-zinc-500"
                       )}>
                         <span className="font-bold shrink-0">{optionLabels[oi]}.</span>
-                        {dual ? (
-                          <BilingualPair
-                            className="flex-1 gap-y-0.5"
-                            divider={false}
-                            en={<span>{enQs[i].options[oi]}</span>}
-                            vi={<span className="opacity-80">{viQs[i].options[oi]}</span>}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-start gap-2">
+                            <div className="flex-1 min-w-0">
+                              {dual ? (
+                                <BilingualPair
+                                  className="gap-y-0.5"
+                                  divider={false}
+                                  en={<span>{enQs[i].options[oi]}</span>}
+                                  vi={<span className="opacity-80">{viQs[i].options[oi]}</span>}
+                                />
+                              ) : (
+                                <span>{opt}</span>
+                              )}
+                            </div>
+                            {isCorrectOpt && <span className="shrink-0">{t("quiz.correctLabel")}</span>}
+                            {isUserOpt && !isCorrectOpt && <span className="shrink-0">{t("quiz.yourAnswer")}</span>}
+                          </div>
+                          <OptionRationale
+                            correct={isCorrectOpt}
+                            en={enQs[i].optionExplanations?.[oi]}
+                            vi={viQs[i].optionExplanations?.[oi]}
                           />
-                        ) : (
-                          <span>{opt}</span>
-                        )}
-                        {isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.correctLabel")}</span>}
-                        {isUserOpt && !isCorrectOpt && <span className="ml-auto shrink-0">{t("quiz.yourAnswer")}</span>}
+                        </div>
                       </div>
                     );
                   })}

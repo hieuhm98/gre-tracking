@@ -1,0 +1,514 @@
+[
+  {
+    "id": "q1",
+    "question": "Kỹ thuật nào ở tầm bàn giao được dùng như một cách bàn một cách tường minh về các cơ hội cải tiến liên tục?",
+    "questionEn": "Which delivery-horizon technique is used as a means of explicitly discussing opportunities for continuous improvement?",
+    "options": [
+      "Retrospective",
+      "Planning workshop",
+      "Daily stand-up",
+      "Review"
+    ],
+    "optionsEn": [
+      "Retrospectives",
+      "Planning workshop",
+      "Daily stand-up",
+      "Review"
+    ],
+    "answer": 0,
+    "explanation": "Bốn phương án đều là sự kiện có thật. Cụm \"cải tiến liên tục\" chỉ thuộc về retrospective.",
+    "explanationEn": "All four options are real events. The phrase \"continuous improvement\" belongs only to the retrospective.",
+    "optionExplanations": [
+      "\"Bàn một cách tường minh về cải tiến liên tục\" là mô tả nguyên văn mục đích của retrospective.",
+      "Planning workshop ở tầm bàn giao dùng để lập kế hoạch các task hoàn thành iteration sắp tới, không phải để cải tiến quy trình.",
+      "Daily stand-up dùng để đội lập kế hoạch công việc trong ngày, không phải để nhìn lại và cải tiến cách làm việc.",
+      "Review dùng để trình diễn bản tăng trưởng chạy được cho bên liên quan và lấy phản hồi về sản phẩm, không phải về quy trình."
+    ],
+    "optionExplanationsEn": [
+      "\"Explicitly discussing opportunities for continuous improvement\" is the verbatim purpose of a retrospective.",
+      "A delivery-horizon planning workshop plans the tasks to complete the upcoming iteration, not process improvement.",
+      "The daily stand-up is for the team to plan the day's work, not to look back and improve the way of working.",
+      "A review shows a working increment to stakeholders and gathers feedback on the product, not on the process."
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Đầu ra then chốt của một buổi retrospective là gì?",
+    "questionEn": "A key element and output of a retrospective is what?",
+    "options": [
+      "Danh sách task cho từng người trong đội",
+      "Danh sách action item",
+      "Một bảng Kanban đã cập nhật",
+      "Danh sách các story đã hoàn thành"
+    ],
+    "optionsEn": [
+      "A list of tasks for each person on the team",
+      "A list of action items",
+      "An updated Kanban board",
+      "A list of stories completed"
+    ],
+    "answer": 1,
+    "explanation": "Bẫy hay nhất trong câu này là \"danh sách story đã hoàn thành\": đúng vị trí trong buổi họp, nhưng sai chiều — nó là đầu vào.",
+    "explanationEn": "The best trap here is \"a list of completed stories\": right place in the session, wrong direction — it is an input.",
+    "optionExplanations": [
+      "Có thể phát sinh vài task, nhưng đó không phải đầu ra chính và không phải thứ làm nên một retrospective tốt.",
+      "Cải tiến liên tục nghĩa là hành động — nếu buổi họp không kết thúc bằng hành động thì nó chưa cải tiến gì.",
+      "Bảng Kanban được cập nhật trong nhịp công việc hằng ngày, đây không phải đầu ra của retrospective.",
+      "Đây có thể là ĐẦU VÀO của retrospective — dữ liệu để cùng nhìn lại — nhưng không bao giờ là đầu ra."
+    ],
+    "optionExplanationsEn": [
+      "Some tasks may be determined, but that is not the main output and not what makes a retrospective good.",
+      "Continuous improvement means action — if the session does not end in action, nothing has been improved.",
+      "A Kanban board is updated in the daily flow of work; this is not a retrospective output.",
+      "This may be an INPUT to a retrospective — data to look back on — but never its output."
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Một BA Agile đang điều phối buổi Backlog Refinement. BA cần giúp đội TRÁNH hoạt động nào trong buổi này?",
+    "questionEn": "An agile BA is facilitating backlog refinement. Which activity does the BA need to help the team AVOID during it?",
+    "options": [
+      "Phân tích, sắp ưu tiên và chuẩn bị các hạng mục backlog",
+      "Story elaboration và story decomposition",
+      "Xác định các task chi tiết và những gì đội cần làm để hoàn thành từng hạng mục backlog",
+      "Rà soát lại các ưu tiên và loại bỏ hạng mục"
+    ],
+    "optionsEn": [
+      "Analysing, prioritising and preparing backlog items",
+      "Story elaboration and story decomposition",
+      "Identifying the detailed tasks and what the team needs to do to complete each backlog item",
+      "Reviewing priorities and removing items"
+    ],
+    "answer": 2,
+    "explanation": "Dạng câu hỏi phủ định: ba phương án đều đúng với sự kiện được hỏi, một phương án thuộc sự kiện kế bên.",
+    "explanationEn": "The negative question type: three options fit the named event and one belongs to the adjacent event.",
+    "optionExplanations": [
+      "Đây CHÍNH LÀ việc của backlog refinement — không cần tránh.",
+      "Đây LÀ nội dung được bàn trong backlog refinement — không cần tránh.",
+      "Task chi tiết được xác định trong Planning Workshop, không phải trong Backlog Refinement — đây là ranh giới sắc nhất giữa hai sự kiện.",
+      "Đây LÀ việc thực sự diễn ra trong backlog refinement — không cần tránh."
+    ],
+    "optionExplanationsEn": [
+      "This IS what backlog refinement is for — nothing to avoid.",
+      "This IS discussed in backlog refinement — nothing to avoid.",
+      "Detailed tasks are identified in the planning workshop, not in backlog refinement — this is the sharpest boundary between the two events.",
+      "This actually IS done in backlog refinement — nothing to avoid."
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Đội đang chuẩn bị cho buổi planning workshop và BA Agile dẫn dắt việc chuẩn bị. Hoạt động nào là đầu vào quan trọng?",
+    "questionEn": "A team is preparing for a planning workshop and the agile BA leads the preparation. Which activity is an important input?",
+    "options": [
+      "Backlog refinement",
+      "Một buổi lập lịch và lập ngân sách",
+      "Một buổi rà soát tài liệu yêu cầu",
+      "Một buổi họp phê duyệt phạm vi"
+    ],
+    "optionsEn": [
+      "Backlog refinement",
+      "A scheduling and budgeting session",
+      "A requirements document review",
+      "A scoping approval meeting"
+    ],
+    "answer": 0,
+    "explanation": "Chuỗi nhân quả: refinement (liên tục) chuẩn bị hạng mục → planning workshop chia task → iteration thực thi.",
+    "explanationEn": "The causal chain: refinement (continuous) prepares the items → the planning workshop splits tasks → the iteration executes.",
+    "optionExplanations": [
+      "Backlog refinement tạo ra các hạng mục đã được phân tích và sắp ưu tiên — chính là nguyên liệu buổi lập kế hoạch cần.",
+      "Lịch và ngân sách không phải đầu vào của planning workshop trong bối cảnh Agile.",
+      "Trong bối cảnh Agile, rà soát tài liệu yêu cầu không phải đầu vào — yêu cầu được làm rõ dần qua refinement.",
+      "Product vision là đầu vào hợp lệ, nhưng một buổi phê duyệt phạm vi lại ngụ ý một phạm vi đã chốt cứng."
+    ],
+    "optionExplanationsEn": [
+      "Backlog refinement produces analysed, prioritised items — exactly the material the planning session needs.",
+      "Scheduling and budgeting are not planning-workshop inputs in an agile context.",
+      "In an agile context a requirements document review is not an input — requirements are clarified progressively through refinement.",
+      "A product vision is a legitimate input, but a scoping approval meeting implies a fixed, signed-off scope."
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Bailey cùng Product Owner chuẩn bị buổi Review, nơi đội phát triển trình diễn giải pháp chạy được để lấy phản hồi xem nó có phù hợp với nhu cầu người dùng không. Họ đang trình diễn cái gì?",
+    "questionEn": "Bailey and the Product Owner prepare for the review, where the development team demonstrates a working solution to get feedback on whether it aligns with the user need. What are they demonstrating?",
+    "options": [
+      "Bảng cấu hình",
+      "UI mockup",
+      "Code",
+      "Một bản tăng trưởng của giải pháp đã hoàn thành"
+    ],
+    "optionsEn": [
+      "Configuration tables",
+      "UI mockups",
+      "The code",
+      "An increment of the completed solution"
+    ],
+    "answer": 3,
+    "explanation": "Ba phương án sai đều là những thứ có thật trong dự án, nhưng không thứ nào chứng minh được hệ thống đang chạy.",
+    "explanationEn": "The three wrong options are all real project artefacts, but none of them proves the system runs.",
+    "optionExplanations": [
+      "Đây không phải thứ được trình diễn trong review; nó là một mảnh phía sau hậu trường, không phải sản phẩm chạy được.",
+      "UI mockup không chứng minh được cái gì đang CHẠY, nên review cần nhiều hơn thế.",
+      "Đây không phải thứ được trình diễn trong review; code là mảnh hậu trường, không phải sản phẩm chạy được.",
+      "Trong review, đội trình diễn sản phẩm CHẠY ĐƯỢC — đó là điều duy nhất cho phép bên liên quan phản hồi có căn cứ."
+    ],
+    "optionExplanationsEn": [
+      "This is not what is shown in a review; it is a piece behind the scenes, not working product.",
+      "UI mockups do not demonstrate anything WORKING, so a review needs more than that.",
+      "This is not what is shown in a review; code is behind the scenes, not working product.",
+      "In a review the team shows WORKING product — the only thing that lets stakeholders give grounded feedback."
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Vì sao đội tổ chức các buổi review?",
+    "questionEn": "Why do teams use reviews?",
+    "options": [
+      "Để peer review code",
+      "Để rà soát kế hoạch cho phần tiếp theo",
+      "Để lấy phản hồi từ bên liên quan về mức độ bản tăng trưởng phù hợp với nhu cầu người dùng",
+      "Để lấy phê duyệt từ bên liên quan"
+    ],
+    "optionsEn": [
+      "To do a peer review of the code",
+      "To review the plan for what is next",
+      "To get feedback from stakeholders on the increment's alignment to user needs",
+      "To get approval from stakeholders"
+    ],
+    "answer": 2,
+    "explanation": "Cặp \"phản hồi\" và \"phê duyệt\" là bẫy chính. Review lấy phản hồi; nó không phải cổng phê duyệt.",
+    "explanationEn": "The \"feedback\" versus \"approval\" pair is the main trap. A review gathers feedback; it is not an approval gate.",
+    "optionExplanations": [
+      "Đây không phải một phần của review theo định nghĩa trong Agile Extension v2.",
+      "Đây cũng không phải một phần của review theo Agile Extension v2 — lập kế hoạch có sự kiện riêng.",
+      "Review là dịp đội trình bày công việc của mình và thu phản hồi — mục đích là học hỏi và đối thoại.",
+      "Review không phải cửa phê duyệt. Có phản hồi, nhưng là để học và đối thoại, không phải để ký duyệt."
+    ],
+    "optionExplanationsEn": [
+      "This is not part of a review as defined by the Agile Extension v2.",
+      "Also not part of a review under the Agile Extension v2 — planning has its own event.",
+      "A review is the team showing its work and gathering feedback — the purpose is learning and dialogue.",
+      "A review is not an approval gate. Feedback is given, but it is about learning and dialogue, not sign-off."
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Đội thường bàn về các phương án thiết kế chi tiết vào lúc nào?",
+    "questionEn": "When does an agile team typically discuss detailed design options?",
+    "options": [
+      "Story elaboration, trước khi iteration bắt đầu",
+      "Planning workshop",
+      "Retrospective",
+      "Review"
+    ],
+    "optionsEn": [
+      "Story elaboration, before the iteration begins",
+      "Planning workshop",
+      "Retrospective",
+      "Review"
+    ],
+    "answer": 0,
+    "explanation": "Quy tắc: thiết kế trước, task sau. Nếu đội phải bàn thiết kế trong buổi lập kế hoạch, story chưa sẵn sàng.",
+    "explanationEn": "The rule: design first, tasks second. If the team is debating design in the planning session, the story was not ready.",
+    "optionExplanations": [
+      "Thiết kế chi tiết được bàn khi story được làm rõ, tức trước iteration — để buổi lập kế hoạch chỉ còn việc chia task.",
+      "Đội lẽ ra đã bàn xong thiết kế TRƯỚC buổi planning workshop; ở đó họ lập kế hoạch task, không thiết kế.",
+      "Retrospective bàn về cách làm việc của đội, không bàn thiết kế của một story.",
+      "Review trình diễn kết quả đã hoàn thành và lấy phản hồi, không phải nơi bàn phương án thiết kế."
+    ],
+    "optionExplanationsEn": [
+      "Detailed design is discussed as the story is elaborated, before the iteration — so planning is left with only task splitting.",
+      "The team should have discussed design BEFORE a planning workshop; there they plan tasks, not design.",
+      "A retrospective discusses the team's way of working, not the design of a story.",
+      "A review demonstrates completed work and gathers feedback; it is not where design options are debated."
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "Kỹ thuật nào ở tầm bàn giao được dùng để hiểu người dùng thực hiện một công việc hoặc sử dụng giải pháp như thế nào?",
+    "questionEn": "Which delivery-horizon technique is used to understand how users perform a task or use the solution?",
+    "options": [
+      "Acceptance criteria",
+      "Purpose alignment model",
+      "Quan sát (Observation)",
+      "User story"
+    ],
+    "optionsEn": [
+      "Acceptance criteria",
+      "Purpose alignment model",
+      "Observation",
+      "User stories"
+    ],
+    "answer": 2,
+    "explanation": "Động từ quyết định: \"hiểu người dùng làm việc thế nào\" → quan sát; \"truyền đạt\" hoặc \"xác nhận\" → story hoặc acceptance criteria.",
+    "explanationEn": "The verb decides: \"understand how users work\" → observation; \"communicate\" or \"validate\" → stories or acceptance criteria.",
+    "optionExplanations": [
+      "Acceptance criteria định nghĩa ranh giới của một user story và giúp kiểm tra, xác nhận giải pháp đã đáp ứng nhu cầu — không phải công cụ tìm hiểu.",
+      "Purpose alignment model đánh giá ý tưởng trong bối cảnh giá trị khách hàng và giá trị nghiệp vụ — kỹ thuật tầm chiến lược.",
+      "Quan sát là cách trực tiếp nhất để thấy người dùng THỰC SỰ làm gì, thay vì nghe họ mô tả lại.",
+      "User story giúp truyền đạt và phân tích công việc của người dùng, nhưng không giúp ta HIỂU công việc đó tốt bằng quan sát."
+    ],
+    "optionExplanationsEn": [
+      "Acceptance criteria define the boundaries of a user story and help verify and validate the solution met the need — not an investigative tool.",
+      "The purpose alignment model assesses ideas in the context of customer and business value — a strategy-horizon technique.",
+      "Observation is the most direct way to see what users ACTUALLY do, rather than hearing them describe it.",
+      "User stories help communicate and analyse user tasks, but they do not help you UNDERSTAND those tasks as well as observation does."
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Một đội đang bàn cách cải thiện quy trình và luồng công việc của mình. Họ đang dùng kỹ thuật nào, và thể hiện nguyên tắc phân tích Agile nào?",
+    "questionEn": "A team is discussing how to improve its processes and workflow. Which technique are they using, and which agile analysis principle?",
+    "options": [
+      "Retrospective / Tránh lãng phí",
+      "Backlog Refinement / Nhìn tổng thể",
+      "Retrospective / Thúc đẩy cộng tác và cải tiến liên tục",
+      "Iteration Planning / Cụ thể hoá bằng ví dụ"
+    ],
+    "optionsEn": [
+      "Retrospectives / Avoid Waste",
+      "Backlog Refinement / See The Whole",
+      "Retrospectives / Stimulate Collaboration and Continuous Improvement",
+      "Iteration Planning / Get Real Using Examples"
+    ],
+    "answer": 2,
+    "explanation": "Dạng câu ghép đôi: cả hai vế phải đúng. Loại nhanh phương án nào sai một vế, rồi mới cân giữa hai phương án còn lại.",
+    "explanationEn": "The paired-answer type: both halves must be right. Eliminate anything wrong on one half first, then weigh what is left.",
+    "optionExplanations": [
+      "Đúng kỹ thuật nhưng sai nguyên tắc: tránh lãng phí nói về việc không xây thứ không tạo giá trị, không phải về cải thiện quy trình.",
+      "Sai cả hai: backlog refinement là kỹ thuật lập kế hoạch hướng về phía trước, không phải kỹ thuật nhìn lại để cải tiến.",
+      "Đúng cả hai vế: retrospective tồn tại để cải tiến liên tục, và cải thiện cách làm việc chính là nguyên tắc cộng tác và cải tiến.",
+      "Sai cả hai: lập kế hoạch iteration không nhằm cải thiện quy trình, và ví dụ không phải nguyên tắc ở đây."
+    ],
+    "optionExplanationsEn": [
+      "Right technique, wrong principle: avoid waste is about not building what will not add value, not about improving the process.",
+      "Wrong on both: backlog refinement is a forward-looking planning technique, not a look-back-to-improve technique.",
+      "Right on both halves: retrospectives exist for continuous improvement, and improving the way of working is exactly that principle.",
+      "Wrong on both: iteration planning is not focused on improving the process, and examples are not the principle here."
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Ranh giới giữa backlog refinement và planning workshop nằm ở đâu?",
+    "questionEn": "Where is the boundary between backlog refinement and the planning workshop?",
+    "options": [
+      "Refinement do BA điều phối, planning workshop do Scrum Master điều phối",
+      "Refinement trả lời \"hạng mục này là gì và đứng ở đâu trong hàng đợi\"; planning workshop trả lời \"cần những task nào để hoàn thành nó\"",
+      "Refinement diễn ra hằng tuần, planning workshop diễn ra hằng ngày",
+      "Refinement chỉ dành cho story, planning workshop chỉ dành cho feature"
+    ],
+    "optionsEn": [
+      "Refinement is facilitated by the BA and the planning workshop by the Scrum Master",
+      "Refinement answers \"what is this item and where does it sit in the queue\"; the planning workshop answers \"what tasks complete it\"",
+      "Refinement happens weekly and the planning workshop happens daily",
+      "Refinement is only for stories and the planning workshop only for features"
+    ],
+    "answer": 1,
+    "explanation": "Nhớ theo câu hỏi mà mỗi sự kiện trả lời, không theo người tham dự hay lịch họp.",
+    "explanationEn": "Remember them by the question each event answers, not by who attends or when it is scheduled.",
+    "optionExplanations": [
+      "Ai điều phối không phải điểm phân biệt; hai sự kiện khác nhau ở CÂU HỎI chúng trả lời.",
+      "Đúng. Refinement làm việc với bản thân hạng mục; planning workshop làm việc với công việc cần bỏ ra để hoàn thành hạng mục đó.",
+      "Nhịp cụ thể tuỳ đội và không phải điểm phân biệt; planning workshop gắn với đầu mỗi iteration, không phải hằng ngày.",
+      "Ngược lại nếu có: thứ tự feature được bàn trong planning workshop ở tầm sáng kiến, còn refinement làm việc với cả feature lẫn story."
+    ],
+    "optionExplanationsEn": [
+      "Who facilitates is not the distinction; the two events differ in the QUESTION each answers.",
+      "Correct. Refinement works on the item itself; the planning workshop works on the effort needed to complete it.",
+      "The exact cadence varies by team and is not the distinction; a planning workshop happens at the start of each iteration, not daily.",
+      "If anything the reverse: feature ordering is discussed in an initiative-horizon planning workshop, while refinement handles both features and stories."
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Hoạt động nào sau đây THỰC SỰ thuộc về backlog refinement?",
+    "questionEn": "Which of the following genuinely DOES belong to backlog refinement?",
+    "options": [
+      "Chia iteration sắp tới thành các task cụ thể cho từng thành viên",
+      "Trình diễn bản tăng trưởng chạy được cho bên liên quan",
+      "Rà soát lại các ưu tiên và loại bỏ những hạng mục không còn cần thiết",
+      "Xác định các action item để cải thiện cách làm việc của đội"
+    ],
+    "optionsEn": [
+      "Splitting the coming iteration into specific tasks per team member",
+      "Demonstrating a working increment to stakeholders",
+      "Reviewing priorities and removing items that are no longer needed",
+      "Determining action items to improve the team's way of working"
+    ],
+    "answer": 2,
+    "explanation": "Ba việc thuộc refinement: phân tích/ưu tiên/chuẩn bị hạng mục; rà soát ưu tiên và loại bỏ; elaboration và decomposition.",
+    "explanationEn": "The three things that belong to refinement: analysing/prioritising/preparing items; reviewing priorities and removing them; elaboration and decomposition.",
+    "optionExplanations": [
+      "Đây là việc của planning workshop; refinement dừng trước mức task.",
+      "Đây là việc của review, không phải refinement.",
+      "Đây đúng là nội dung của backlog refinement: hạng mục được đánh giá lại, sắp lại thứ tự và loại bỏ khi không còn cần.",
+      "Đây là đầu ra của retrospective, không phải của refinement."
+    ],
+    "optionExplanationsEn": [
+      "This is planning workshop work; refinement stops short of the task level.",
+      "This is what a review does, not refinement.",
+      "This is exactly backlog refinement: items get re-evaluated, resequenced and dropped when no longer needed.",
+      "This is a retrospective output, not a refinement one."
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Vì sao \"lấy phê duyệt từ bên liên quan\" không phải mục đích của một buổi review?",
+    "questionEn": "Why is \"getting approval from stakeholders\" not the purpose of a review?",
+    "options": [
+      "Vì bên liên quan không có thẩm quyền phê duyệt trong Agile",
+      "Vì review hướng tới học hỏi và đối thoại: phản hồi được đưa ra để đội hiểu mức phù hợp với nhu cầu, không phải để ký duyệt",
+      "Vì phê duyệt chỉ diễn ra ở tầm chiến lược",
+      "Vì đội không trình diễn đủ nội dung để phê duyệt được"
+    ],
+    "optionsEn": [
+      "Because stakeholders have no approval authority in agile",
+      "Because a review is about learning and dialogue: feedback is given so the team understands fit to the need, not for sign-off",
+      "Because approval only happens at the strategy horizon",
+      "Because the team does not demonstrate enough content to approve"
+    ],
+    "answer": 1,
+    "explanation": "Đây là ranh giới giữa vòng phản hồi và cổng nghiệm thu. Agile giữ review ở phía vòng phản hồi.",
+    "explanationEn": "This is the line between a feedback loop and an acceptance gate. Agile keeps the review on the feedback side.",
+    "optionExplanations": [
+      "Không đúng — bên liên quan vẫn có thẩm quyền ra quyết định; vấn đề là review không phải nơi thực hiện việc đó.",
+      "Đúng. Nếu review biến thành cửa phê duyệt, nó mất chức năng vòng phản hồi và quay về mô hình nghiệm thu giai đoạn.",
+      "Không có quy tắc như vậy; lý do nằm ở mục đích của review, không ở tầm phân tích.",
+      "Không phải vấn đề khối lượng — bản tăng trưởng hoàn toàn có thể đủ để đánh giá; vấn đề là mục đích của sự kiện."
+    ],
+    "optionExplanationsEn": [
+      "Not true — stakeholders still hold decision authority; the point is that a review is not where that happens.",
+      "Correct. If a review becomes an approval gate it loses its feedback-loop function and reverts to phase acceptance.",
+      "There is no such rule; the reason lies in the review's purpose, not in the analysis horizon.",
+      "Not a question of volume — the increment may well be enough to judge; the issue is the event's purpose."
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Story elaboration chủ yếu diễn ra ở tầm nào, và điều gì làm nó phức tạp hơn một chút?",
+    "questionEn": "In which horizon does story elaboration mainly happen, and what complicates the picture slightly?",
+    "options": [
+      "Tầm sáng kiến; nhưng một phần diễn ra trong planning workshop ở tầm bàn giao",
+      "Tầm bàn giao; nhưng backlog refinement ở tầm sáng kiến cũng có một phần làm rõ feature và tạo story",
+      "Tầm chiến lược; nhưng đội bàn giao mới là người thực hiện",
+      "Tầm iteration; nó là tầm riêng cho công việc trong sprint"
+    ],
+    "optionsEn": [
+      "The initiative horizon; but some of it happens in the delivery-horizon planning workshop",
+      "The delivery horizon; but initiative-horizon backlog refinement does include some elaboration of features and creation of stories",
+      "The strategy horizon; but the delivery team is the one who does it",
+      "The iteration horizon; a dedicated horizon for in-sprint work"
+    ],
+    "answer": 1,
+    "explanation": "Câu ghép đôi lại xuất hiện: kiểm tra vế đầu trước, loại nhanh, rồi mới đọc vế sau.",
+    "explanationEn": "The paired-answer type again: check the first half, eliminate fast, then read the second.",
+    "optionExplanations": [
+      "Ngược chiều: story elaboration chủ yếu ở tầm bàn giao, và planning workshop không phải nơi làm rõ story.",
+      "Đúng cả hai vế: nơi chính là tầm bàn giao, và phần chồng lấn nằm ở backlog refinement tầm sáng kiến.",
+      "Tầm chiến lược không làm việc ở mức chi tiết của story, nên vế đầu đã sai.",
+      "Iteration không phải một tầm — chỉ có ba tầm: chiến lược, sáng kiến và bàn giao."
+    ],
+    "optionExplanationsEn": [
+      "Backwards: story elaboration is mainly delivery-horizon work, and the planning workshop is not where stories get elaborated.",
+      "Right on both halves: the main home is the delivery horizon, and the overlap sits in initiative-horizon backlog refinement.",
+      "The strategy horizon does not work at story level of detail, so the first half is already wrong.",
+      "Iteration is not a horizon — there are only three: strategy, initiative and delivery."
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Planning workshop ở tầm bàn giao tập trung vào điều gì?",
+    "questionEn": "What does a planning workshop at the delivery horizon focus on?",
+    "options": [
+      "Chi tiết của iteration sắp tới — những task cần làm để hoàn thành nó",
+      "Thứ tự các feature và kế hoạch release",
+      "Mục tiêu tổ chức và các chỉ số đo mục tiêu đó",
+      "Các cơ hội cải tiến quy trình và cách làm việc"
+    ],
+    "optionsEn": [
+      "The details of the coming iteration — the tasks needed to complete it",
+      "The order of features and the release plan",
+      "Organisational goals and the metrics that measure them",
+      "Opportunities to improve the process and way of working"
+    ],
+    "answer": 0,
+    "explanation": "Cùng một tên sự kiện ở ba tầm. Từ khóa \"task\" và \"iteration sắp tới\" chốt tầm bàn giao.",
+    "explanationEn": "The same event name at three horizons. The words \"tasks\" and \"the coming iteration\" fix it at delivery.",
+    "optionExplanations": [
+      "Đây là mức chi tiết đặc trưng của planning workshop tầm bàn giao: từ hạng mục đã chọn xuống task cụ thể.",
+      "Đây là planning workshop ở tầm SÁNG KIẾN.",
+      "Đây là planning workshop ở tầm CHIẾN LƯỢC.",
+      "Đây là mục đích của retrospective, không phải của planning workshop ở bất kỳ tầm nào."
+    ],
+    "optionExplanationsEn": [
+      "This is the delivery-horizon planning workshop's characteristic level: from chosen items down to concrete tasks.",
+      "This is the INITIATIVE-horizon planning workshop.",
+      "This is the STRATEGY-horizon planning workshop.",
+      "This is the retrospective's purpose, not a planning workshop's at any horizon."
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao phương án sai trong các câu hỏi về sự kiện tầm bàn giao gần như luôn là một sự kiện CÓ THẬT khác?",
+    "questionEn": "Why is the wrong answer in delivery-horizon event questions almost always another REAL event?",
+    "options": [
+      "Vì đề bài muốn kiểm tra khả năng nhớ tên bốn sự kiện",
+      "Vì hoạt động được mô tả thật sự có xảy ra trong đội Agile, nên bạn phải phân biệt bằng MỤC ĐÍCH chứ không bằng tính hợp lý",
+      "Vì bốn sự kiện có thể thay thế cho nhau trong thực tế",
+      "Vì các sự kiện này chỉ tồn tại trong Scrum chứ không trong Agile Extension"
+    ],
+    "optionsEn": [
+      "Because the question is testing recall of the four event names",
+      "Because the described activity genuinely does happen on an agile team, so you must discriminate by PURPOSE rather than plausibility",
+      "Because the four events are interchangeable in practice",
+      "Because these events exist only in Scrum and not in the Agile Extension"
+    ],
+    "answer": 1,
+    "explanation": "Với chủ đề này, hãy học từng sự kiện theo hai vế — để làm gì và KHÔNG để làm gì. Vế thứ hai mới là thứ ghi điểm.",
+    "explanationEn": "For this topic, learn each event as two halves — what it is for and what it is NOT for. The second half is what scores.",
+    "optionExplanations": [
+      "Nhớ tên là phần dễ; nếu đó là mục tiêu thì phương án nhiễu đã có thể là những cái tên bịa.",
+      "Đúng. Không phương án nào vô lý, vì thế mẹo \"loại cái nghe sai\" không dùng được — phải biết mục đích tách bạch của từng sự kiện.",
+      "Chúng không thay thế được cho nhau — chính vì mục đích tách bạch mà mỗi hoạt động chỉ thuộc về một sự kiện.",
+      "Sai ở tiền đề: backlog refinement, planning workshop, review và retrospective đều được mô tả trong Agile Extension v2."
+    ],
+    "optionExplanationsEn": [
+      "Recalling names is the easy part; if that were the goal, the distractors could simply be invented names.",
+      "Correct. No option is implausible, so the \"eliminate what sounds wrong\" heuristic fails — you must know each event's separated purpose.",
+      "They are not interchangeable — it is precisely their separated purposes that assign each activity to one event.",
+      "Wrong at the premise: backlog refinement, planning workshops, reviews and retrospectives are all described in the Agile Extension v2."
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Đội vừa kết thúc một buổi họp và đưa ra danh sách hành động để lần tới bàn giao trơn tru hơn. Buổi họp đó nhiều khả năng là gì, và vì sao?",
+    "questionEn": "A team has just finished a session and produced a list of actions to make the next delivery smoother. What was the session, and why?",
+    "options": [
+      "Planning workshop — vì đầu ra là một danh sách công việc",
+      "Retrospective — vì đầu ra là action item nhằm cải thiện cách làm việc",
+      "Review — vì đội đã nhìn lại những gì vừa xảy ra",
+      "Backlog refinement — vì đội đã sắp lại thứ tự công việc"
+    ],
+    "optionsEn": [
+      "A planning workshop — because the output is a list of work",
+      "A retrospective — because the output is action items aimed at improving the way of working",
+      "A review — because the team looked back at what just happened",
+      "Backlog refinement — because the team resequenced its work"
+    ],
+    "answer": 1,
+    "explanation": "Hai câu hỏi để tự tách bốn sự kiện: đầu ra là gì, và nó nói về SẢN PHẨM hay về CÁCH LÀM VIỆC?",
+    "explanationEn": "Two questions separate the four events: what is the output, and is it about the PRODUCT or the WAY OF WORKING?",
+    "optionExplanations": [
+      "Planning workshop cũng cho ra danh sách công việc, nhưng đó là task để hoàn thành iteration, không phải hành động cải thiện cách làm việc.",
+      "Đúng. Dấu hiệu kép: đầu ra là hành động, và mục tiêu là cách BÀN GIAO tốt hơn chứ không phải sản phẩm khác đi.",
+      "Review cũng nhìn lại, nhưng nhìn lại SẢN PHẨM cùng bên liên quan, và đầu ra là phản hồi chứ không phải action item nội bộ.",
+      "Tình huống không nói tới việc sắp lại backlog; nó nói tới việc cải thiện cách bàn giao, thuộc một sự kiện khác."
+    ],
+    "optionExplanationsEn": [
+      "A planning workshop also yields a list of work, but those are tasks to complete the iteration, not actions to improve the way of working.",
+      "Correct. Two cues together: the output is actions, and the aim is a better WAY of delivering rather than a different product.",
+      "A review also looks back, but at the PRODUCT with stakeholders, and its output is feedback rather than internal action items.",
+      "The scenario says nothing about resequencing the backlog; it is about improving how delivery happens, which is a different event."
+    ]
+  }
+]

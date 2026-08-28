@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Tư duy Agile là gì · Bốn giá trị",
+      "titleEn": "What the agile mindset is · The four values",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q4", "q15"]
+    },
+    {
+      "id": "l2",
+      "title": "Chữ \"hơn là\" · Động từ quyết định đáp án",
+      "titleEn": "The word \"over\" · The verb decides the answer",
+      "sections": [3, 4],
+      "questionIds": ["q3", "q5", "q11", "q13", "q14"]
+    },
+    {
+      "id": "l3",
+      "title": "Cặp dễ nhầm · Tự kiểm",
+      "titleEn": "The pair that trips people up · Self-check",
+      "sections": [5, 6],
+      "questionIds": ["q6", "q7", "q8", "q9", "q10", "q12", "q16"]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi",
+      "titleEn": "Key takeaways",
+      "sections": [7],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

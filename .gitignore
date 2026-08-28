@@ -7,3 +7,4 @@ requirements.txt
 .dev-data/
 # Generated from data/progress.json by scripts/sync-progress.mjs at build time.
 public/progress.json
+local_cowork/

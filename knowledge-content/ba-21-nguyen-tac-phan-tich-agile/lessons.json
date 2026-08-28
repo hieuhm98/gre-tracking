@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Bảy nguyên tắc · Từ khóa nhận diện",
+      "titleEn": "The seven principles · The trigger words",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3", "q6", "q8"]
+    },
+    {
+      "id": "l2",
+      "title": "Những nhầm lẫn cố tình · Nguyên tắc ở ba tầm",
+      "titleEn": "The confusions on purpose · The principles at three horizons",
+      "sections": [3, 4],
+      "questionIds": ["q4", "q5", "q7", "q9", "q10", "q11", "q12", "q13"]
+    },
+    {
+      "id": "l3",
+      "title": "Sáu khái niệm BACCM · Ánh xạ sang nguyên tắc",
+      "titleEn": "The six BACCM concepts · Mapping to the principles",
+      "sections": [5, 6],
+      "questionIds": ["q14", "q15", "q16", "q17", "q18"]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi",
+      "titleEn": "Key takeaways",
+      "sections": [7],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

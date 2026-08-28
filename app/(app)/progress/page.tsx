@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLang } from "@/context/lang";
 import { useProgress } from "@/context/progress";
 import {
+  PASS_PCT,
   UNKNOWN_COURSE,
   isUnchanged,
   mergeImport,
@@ -14,6 +15,7 @@ import {
   type CourseGain,
   type CourseMerge,
   type CourseSnapshot,
+  type ExamProgress,
 } from "@/lib/progress";
 import { GROUPS, DEFAULT_GROUP, GROUP_ACCENT } from "@/lib/groups";
 import { cn } from "@/lib/utils";
@@ -61,6 +63,16 @@ export default function ProgressPage() {
   }, []);
 
   const stats = useMemo(() => overallStats(progress), [progress]);
+
+  // Tracks the learner has actually sat, in curriculum order.
+  const examRows = useMemo(
+    () =>
+      GROUPS.map((group) => ({ group, exam: progress.exams[group.id] }))
+        .filter((row): row is { group: (typeof GROUPS)[number]; exam: ExamProgress } =>
+          Boolean(row.exam && row.exam.attempts > 0)
+        ),
+    [progress]
+  );
 
   // Only topics with something recorded — the full catalogue lives on /knowledge.
   const startedTopics = useMemo(() => {
@@ -188,6 +200,9 @@ export default function ProgressPage() {
 
     if (gain.lessonsCompleted > 0) parts.push(`+${gain.lessonsCompleted} ${pick("bài", "lessons")}`);
 
+    // Exam gain is a jump in the best score, not a count, so it reads "+12% thi".
+    if (gain.examBestPct > 0) parts.push(`+${gain.examBestPct}% ${pick("thi", "exam")}`);
+
     return (
       <span className={cellClass}>
         {cellLabel(pick("Sau khi nhập", "After import"))}
@@ -255,6 +270,48 @@ export default function ProgressPage() {
         <StatTile label={t("progress.questionsAnswered")} value={String(stats.questionsAnswered)} />
         <StatTile label={t("progress.avgScore")} value={`${stats.avgBestPct}%`} />
       </div>
+
+      {/* Final tests */}
+      {examRows.length > 0 && (
+        <section className="space-y-3">
+          <h2 className="text-lg font-semibold">{t("exam.indexTitle")}</h2>
+          <div className="space-y-2">
+            {examRows.map(({ group, exam }) => {
+              const accent = GROUP_ACCENT[group.accent];
+
+              return (
+                <Link
+                  key={group.id}
+                  href={`/exam/${group.id}`}
+                  className="card flex flex-wrap items-center gap-x-3 gap-y-2 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+                >
+                  <span className={cn("text-lg shrink-0", accent.text)}>{group.icon}</span>
+                  <span className="flex-1 min-w-0 basis-full sm:basis-auto text-sm font-medium truncate">
+                    {pick(group.label, group.labelEn)}
+                  </span>
+                  {exam.passed && (
+                    <span className="text-[11px] px-1.5 py-0.5 rounded border bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800 shrink-0">
+                      {t("exam.passed")}
+                    </span>
+                  )}
+                  <div className="h-1.5 flex-1 sm:flex-none sm:w-28 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
+                    <div
+                      className={cn(
+                        "h-full rounded-full",
+                        exam.bestPct >= PASS_PCT ? "bg-green-500" : accent.bar
+                      )}
+                      style={{ width: `${exam.bestPct}%` }}
+                    />
+                  </div>
+                  <span className="text-xs text-zinc-500 tabular-nums shrink-0">
+                    {exam.bestPct}% · {exam.attempts} {t("exam.attempts").toLowerCase()}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* By topic */}
       <section className="space-y-3">

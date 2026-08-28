@@ -61,6 +61,28 @@ export interface RecallStat {
   lastAt: string;
 }
 
+/**
+ * One track's final-exam record, keyed by **group id** rather than by slug —
+ * the exam is drawn from the whole track, so the track is the thing that gets
+ * passed. `passed` and `passedAt` are sticky: a later failed retake never takes
+ * a pass away, the same way a weak quiz retake never lowers `bestPct`.
+ */
+export interface ExamProgress {
+  attempts: number;
+  /** Best percentage ever scored on this track's exam (0-100). */
+  bestPct: number;
+  /** The most recent sitting. */
+  lastPct: number;
+  lastTotal: number;
+  lastCorrect: number;
+  /** How long the most recent sitting took, in seconds. */
+  lastSeconds: number;
+  passed: boolean;
+  /** When the track was first passed. */
+  passedAt: string | null;
+  updatedAt: string;
+}
+
 export interface ProgressData {
   version: number;
   updatedAt: string;
@@ -70,6 +92,8 @@ export interface ProgressData {
   lessons: Record<string, LessonProgress>;
   /** Question recall stats, keyed by `${slug}#${questionId}`. */
   recall: Record<string, RecallStat>;
+  /** Final-exam results, keyed by **group id** (see `lib/groups.ts`). */
+  exams: Record<string, ExamProgress>;
 }
 
 /** A check test at or above this score marks the mini-lesson complete. */
@@ -83,6 +107,7 @@ export function emptyProgress(): ProgressData {
     reviews: [],
     lessons: {},
     recall: {},
+    exams: {},
   };
 }
 
@@ -99,6 +124,11 @@ function isoOr(value: unknown, fallback: string): string {
 
 function num(value: unknown, fallback = 0): number {
   return typeof value === "number" && Number.isFinite(value) ? value : fallback;
+}
+
+/** A percentage, clamped into 0-100. */
+function pct(value: unknown): number {
+  return Math.max(0, Math.min(100, num(value)));
 }
 
 /**
@@ -186,6 +216,26 @@ export function normalize(raw: unknown): ProgressData {
     }
   }
 
+  const exams: Record<string, ExamProgress> = {};
+
+  if (isRecord(raw.exams)) {
+    for (const [group, value] of Object.entries(raw.exams)) {
+      if (!isRecord(value)) continue;
+
+      exams[group] = {
+        attempts: num(value.attempts),
+        bestPct: pct(value.bestPct),
+        lastPct: pct(value.lastPct),
+        lastTotal: num(value.lastTotal),
+        lastCorrect: num(value.lastCorrect),
+        lastSeconds: num(value.lastSeconds),
+        passed: value.passed === true,
+        passedAt: typeof value.passedAt === "string" ? isoOr(value.passedAt, epoch) : null,
+        updatedAt: isoOr(value.updatedAt, epoch),
+      };
+    }
+  }
+
   return {
     version: PROGRESS_VERSION,
     updatedAt: isoOr(raw.updatedAt, epoch),
@@ -193,6 +243,7 @@ export function normalize(raw: unknown): ProgressData {
     reviews: reviews.slice(0, MAX_REVIEWS),
     lessons,
     recall,
+    exams,
   };
 }
 
@@ -249,6 +300,12 @@ export function mergeProgress(a: ProgressData, b: ProgressData): ProgressData {
     };
   }
 
+  const exams: Record<string, ExamProgress> = { ...a.exams };
+
+  for (const [group, incoming] of Object.entries(b.exams)) {
+    exams[group] = mergeExam(exams[group], incoming);
+  }
+
   return {
     version: PROGRESS_VERSION,
     updatedAt: a.updatedAt >= b.updatedAt ? a.updatedAt : b.updatedAt,
@@ -256,6 +313,7 @@ export function mergeProgress(a: ProgressData, b: ProgressData): ProgressData {
     reviews,
     lessons,
     recall,
+    exams,
   };
 }
 
@@ -306,6 +364,8 @@ export interface CourseSnapshot {
   topics: number;
   answered: number;
   lessonsCompleted: number;
+  /** Best final-exam score for this course (0-100); 0 when never sat. */
+  examBestPct: number;
 }
 
 export function courseSnapshots(data: ProgressData, groups: TopicGroups): Map<string, CourseSnapshot> {
@@ -316,7 +376,14 @@ export function courseSnapshots(data: ProgressData, groups: TopicGroups): Map<st
 
     if (existing) return existing;
 
-    const fresh: CourseSnapshot = { course, updatedAt: "", topics: 0, answered: 0, lessonsCompleted: 0 };
+    const fresh: CourseSnapshot = {
+      course,
+      updatedAt: "",
+      topics: 0,
+      answered: 0,
+      lessonsCompleted: 0,
+      examBestPct: 0,
+    };
 
     out.set(course, fresh);
 
@@ -346,6 +413,16 @@ export function courseSnapshots(data: ProgressData, groups: TopicGroups): Map<st
     if (stat.lastAt > snap.updatedAt) snap.updatedAt = stat.lastAt;
   }
 
+  // Exams are already keyed by course, so unlike everything above they need no
+  // slug lookup — and they are the one entry a course can hold with no topics.
+  for (const [course, exam] of Object.entries(data.exams)) {
+    const snap = bucket(course);
+
+    snap.examBestPct = Math.max(snap.examBestPct, exam.bestPct);
+
+    if (exam.updatedAt > snap.updatedAt) snap.updatedAt = exam.updatedAt;
+  }
+
   return out;
 }
 
@@ -357,6 +434,8 @@ export interface CourseGain {
   topics: number;
   answered: number;
   lessonsCompleted: number;
+  /** Points the import adds to this course's best exam score. */
+  examBestPct: number;
 }
 
 export interface CourseDiff {
@@ -438,6 +517,57 @@ function mergeLesson(a: LessonProgress, b: LessonProgress): LessonProgress {
  * the same history rather than a separate one, so the larger tally is the true
  * count — summing them would double-count a re-imported backup.
  */
+/**
+ * Which of two sittings is the later one.
+ *
+ * `updatedAt` decides it almost always, but two records can carry the same
+ * millisecond, and falling back to argument order there would make the merge
+ * direction-dependent — importing A into B would not match importing B into A.
+ * So the tie runs down every field the winner supplies, and only records that
+ * agree on all of them are treated as interchangeable.
+ */
+function laterExam(a: ExamProgress, b: ExamProgress): ExamProgress {
+  if (a.updatedAt !== b.updatedAt) return a.updatedAt > b.updatedAt ? a : b;
+
+  if (a.attempts !== b.attempts) return a.attempts > b.attempts ? a : b;
+
+  if (a.lastPct !== b.lastPct) return a.lastPct > b.lastPct ? a : b;
+
+  if (a.lastCorrect !== b.lastCorrect) return a.lastCorrect > b.lastCorrect ? a : b;
+
+  if (a.lastTotal !== b.lastTotal) return a.lastTotal > b.lastTotal ? a : b;
+
+  if (a.lastSeconds !== b.lastSeconds) return a.lastSeconds > b.lastSeconds ? a : b;
+
+  return a;
+}
+
+/**
+ * Two records of the same track's exam. Best score, attempts and the pass are
+ * monotonic; only the "last sitting" fields follow recency. A record with no
+ * attempts means that side never sat the exam, so its zeroed last-sitting
+ * fields must never overwrite a real result from the other side.
+ */
+function mergeExam(a: ExamProgress | undefined, b: ExamProgress): ExamProgress {
+  if (!a) return b;
+
+  const newer = laterExam(a, b);
+  const older = newer === a ? b : a;
+  const lastFrom = newer.attempts > 0 ? newer : older;
+
+  return {
+    attempts: Math.max(a.attempts, b.attempts),
+    bestPct: Math.max(a.bestPct, b.bestPct),
+    lastPct: lastFrom.lastPct,
+    lastTotal: lastFrom.lastTotal,
+    lastCorrect: lastFrom.lastCorrect,
+    lastSeconds: lastFrom.lastSeconds,
+    passed: a.passed || b.passed,
+    passedAt: earliest(a.passedAt, b.passedAt),
+    updatedAt: newer.updatedAt,
+  };
+}
+
 function mergeRecall(a: RecallStat, b: RecallStat): RecallStat {
   return {
     seen: Math.max(a.seen, b.seen),
@@ -485,6 +615,7 @@ export function diffCourses(
         topics: (end?.topics ?? 0) - (a?.topics ?? 0),
         answered: (end?.answered ?? 0) - (a?.answered ?? 0),
         lessonsCompleted: (end?.lessonsCompleted ?? 0) - (a?.lessonsCompleted ?? 0),
+        examBestPct: (end?.examBestPct ?? 0) - (a?.examBestPct ?? 0),
       },
     };
   });
@@ -492,7 +623,12 @@ export function diffCourses(
 
 /** True when an import leaves a course exactly as it was. */
 export function isUnchanged(gain: CourseGain): boolean {
-  return gain.topics === 0 && gain.answered === 0 && gain.lessonsCompleted === 0;
+  return (
+    gain.topics === 0 &&
+    gain.answered === 0 &&
+    gain.lessonsCompleted === 0 &&
+    gain.examBestPct === 0
+  );
 }
 
 /**
@@ -511,6 +647,7 @@ export function mergeImport(local: ProgressData, imported: ProgressData, groups:
     reviews: local.reviews.concat(added).sort((x, y) => y.at.localeCompare(x.at)).slice(0, MAX_REVIEWS),
     lessons: union(local.lessons, imported.lessons, mergeLesson),
     recall: union(local.recall, imported.recall, mergeRecall),
+    exams: union(local.exams, imported.exams, (x, y) => mergeExam(x, y)),
   };
 
   return { data, courses: diffCourses(local, imported, data, groups), newReviews: added.length };
@@ -565,6 +702,56 @@ export function recordQuiz(prev: ProgressData, slug: string, result: QuizResult)
   };
 
   return { ...prev, updatedAt: now, topics: { ...prev.topics, [slug]: topic } };
+}
+
+/** One finished sitting of a track's final exam. */
+export interface ExamResult {
+  correct: number;
+  total: number;
+  /** Wall-clock seconds the learner spent on the paper. */
+  seconds: number;
+  /** Per-question outcomes, so a sitting also sharpens the review ranking. */
+  answered: AnsweredQuestion[];
+}
+
+/**
+ * Record a finished final exam for one track.
+ *
+ * A sitting is also logged as a review entry, so an exam feeds the study streak
+ * and the review-accuracy figure the same way a Daily Quick Test does — it is,
+ * after all, the largest review session the learner ever runs.
+ */
+export function recordExam(prev: ProgressData, group: string, result: ExamResult): ProgressData {
+  const now = new Date().toISOString();
+  const existing = prev.exams[group];
+  const scored = result.total > 0 ? Math.round((result.correct / result.total) * 100) : 0;
+  const passedNow = result.total > 0 && scored >= PASS_PCT;
+
+  const exam: ExamProgress = {
+    attempts: (existing?.attempts ?? 0) + 1,
+    bestPct: Math.max(existing?.bestPct ?? 0, scored),
+    lastPct: scored,
+    lastTotal: result.total,
+    lastCorrect: result.correct,
+    lastSeconds: Math.max(0, Math.round(result.seconds)),
+    // Passing is sticky: a weaker retake never takes the pass away.
+    passed: (existing?.passed ?? false) || passedNow,
+    passedAt: existing?.passedAt ?? (passedNow ? now : null),
+    updatedAt: now,
+  };
+
+  const reviews = [
+    { at: now, total: result.total, correct: result.correct, groups: [group] },
+    ...prev.reviews,
+  ].slice(0, MAX_REVIEWS);
+
+  return {
+    ...prev,
+    updatedAt: now,
+    reviews,
+    recall: applyRecall(prev.recall, result.answered, now),
+    exams: { ...prev.exams, [group]: exam },
+  };
 }
 
 export function recordReview(prev: ProgressData, entry: Omit<ReviewEntry, "at">): ProgressData {
@@ -704,6 +891,8 @@ export interface OverallStats {
   reviewAccuracy: number;
   lessonsCompleted: number;
   lessonsStarted: number;
+  examsTaken: number;
+  examsPassed: number;
   streak: number;
   activeDays: number;
 }
@@ -726,6 +915,7 @@ export function overallStats(data: ProgressData): OverallStats {
   const reviewCorrect = data.reviews.reduce((sum, r) => sum + r.correct, 0);
 
   const lessons = Object.values(data.lessons);
+  const exams = Object.values(data.exams);
 
   const days = new Set<string>();
   data.reviews.forEach((r) => days.add(dayKey(r.at)));
@@ -733,6 +923,7 @@ export function overallStats(data: ProgressData): OverallStats {
     if (t.attempts > 0) days.add(dayKey(t.updatedAt));
   });
   lessons.forEach((l) => days.add(dayKey(l.updatedAt)));
+  exams.forEach((e) => days.add(dayKey(e.updatedAt)));
 
   // Walk back from today (or yesterday, so an evening-only habit isn't punished
   // before the day is over) counting consecutive active days.
@@ -756,6 +947,8 @@ export function overallStats(data: ProgressData): OverallStats {
     reviewAccuracy: reviewQuestions > 0 ? Math.round((reviewCorrect / reviewQuestions) * 100) : 0,
     lessonsCompleted: lessons.filter((l) => l.completed).length,
     lessonsStarted: lessons.length,
+    examsTaken: exams.reduce((sum, e) => sum + e.attempts, 0),
+    examsPassed: exams.filter((e) => e.passed).length,
     streak,
     activeDays: days.size,
   };

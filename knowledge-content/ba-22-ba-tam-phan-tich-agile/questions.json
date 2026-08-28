@@ -1,0 +1,642 @@
+[
+  {
+    "id": "q1",
+    "question": "Khung thời gian của tầm bàn giao định hướng hành động cho đội trong khoảng bao lâu?",
+    "questionEn": "The timeframe for the delivery horizon guides action for the team for how long?",
+    "options": [
+      "3 tháng tới",
+      "6–12 tháng tới",
+      "Hằng ngày",
+      "1–4 tuần tới"
+    ],
+    "optionsEn": [
+      "3 months out",
+      "6–12 months out",
+      "Daily",
+      "1–4 weeks out"
+    ],
+    "answer": 3,
+    "explanation": "Ba con số cần thuộc: bàn giao 1–4 tuần, sáng kiến ~3 tháng, chiến lược 6–12 tháng trở lên.",
+    "explanationEn": "Three numbers to memorise: delivery 1–4 weeks, initiative ~3 months, strategy 6–12 months and beyond.",
+    "optionExplanations": [
+      "Đây là khung thời gian của tầm SÁNG KIẾN.",
+      "Đây là khung thời gian của tầm CHIẾN LƯỢC.",
+      "\"Hằng ngày\" không ứng với tầm nào cả — daily stand-up là một sự kiện, không phải một tầm phân tích.",
+      "Tầm bàn giao là khung phân tích ngắn hạn, đúng bằng một hoặc vài iteration."
+    ],
+    "optionExplanationsEn": [
+      "This is the INITIATIVE horizon's timeframe.",
+      "This is the STRATEGY horizon's timeframe.",
+      "\"Daily\" corresponds to no horizon — the daily stand-up is an event, not an analysis horizon.",
+      "The delivery horizon is the short-term analysis window, the length of one or a few iterations."
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Khi việc phân tích diễn ra trực tiếp cùng khách hàng và bên liên quan, trong khung thời gian ngắn, nhiều khả năng bạn đang làm việc ở tầm nào?",
+    "questionEn": "When analysis happens directly with customers and stakeholders and the timeframe is short, you are most likely working within which horizon?",
+    "options": [
+      "Tầm sáng kiến (Initiative)",
+      "Tầm release (Release)",
+      "Tầm user story (User story)",
+      "Tầm bàn giao (Delivery)"
+    ],
+    "optionsEn": [
+      "Initiative horizon",
+      "Release horizon",
+      "User story horizon",
+      "Delivery horizon"
+    ],
+    "answer": 3,
+    "explanation": "Hai phương án nhiễu trong câu này thậm chí không phải tầm — đếm và loại trước, rồi mới cân giữa hai tầm thật.",
+    "explanationEn": "Two of the distractors here are not even horizons — eliminate those first, then weigh the two real ones.",
+    "optionExplanations": [
+      "Ở tầm sáng kiến, BA làm việc chủ yếu với Product Owner và các đội sáng kiến khác, trên khung ~3 tháng.",
+      "Release không phải một tầm. Kế hoạch release được lập Ở tầm sáng kiến.",
+      "User story không phải một tầm. Story là đơn vị công việc của tầm bàn giao.",
+      "Hai dấu hiệu cùng chỉ về đây: làm việc TRỰC TIẾP với khách hàng và bên liên quan, và khung thời gian NGẮN."
+    ],
+    "optionExplanationsEn": [
+      "At the initiative horizon the BA works mainly with the Product Owner and other initiative teams, over about three months.",
+      "Release is not a horizon. Release plans are made AT the initiative horizon.",
+      "User story is not a horizon. A story is the delivery horizon's unit of work.",
+      "Two cues point here at once: working DIRECTLY with customers and stakeholders, and a SHORT timeframe."
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Chris là BA Agile có khả năng nhìn ra cách các quyết định, sản phẩm và giải pháp tác động tới toàn doanh nghiệp. Cô phân tích xem cả những thay đổi nhỏ có thể ảnh hưởng thế nào tới nhiều bộ phận khác. Chris đang làm việc ở tầm nào?",
+    "questionEn": "Chris is an agile BA with a keen sense of how decisions, products and solutions impact the entire enterprise. She analyses how even small changes may affect others across the organisation. Which horizon is Chris working in?",
+    "options": [
+      "Tầm danh mục đầu tư (Portfolio)",
+      "Tầm chiến lược (Strategy)",
+      "Tầm epic (Epic)",
+      "Tầm sáng kiến (Initiative)"
+    ],
+    "optionsEn": [
+      "Portfolio horizon",
+      "Strategy horizon",
+      "Epic horizon",
+      "Initiative horizon"
+    ],
+    "answer": 1,
+    "explanation": "Từ khóa \"toàn doanh nghiệp\" và \"tác động tới nhiều bộ phận\" luôn dẫn về tầm chiến lược.",
+    "explanationEn": "The cues \"entire enterprise\" and \"impact across the organisation\" always lead to the strategy horizon.",
+    "optionExplanations": [
+      "Portfolio không phải một tầm. Danh mục đầu tư là thứ được xem xét Ở tầm chiến lược, không phải một tầm riêng.",
+      "Tầm chiến lược là tầm của các quyết định tác động tới toàn doanh nghiệp và của việc quan sát thay đổi trên phổ rộng.",
+      "Epic không phải một tầm. Epic là một mức chi tiết công việc, chủ yếu thuộc tầm sáng kiến.",
+      "Tầm sáng kiến phân tích ở quy mô nhỏ hơn — bên trong MỘT sáng kiến của doanh nghiệp, không phải toàn doanh nghiệp."
+    ],
+    "optionExplanationsEn": [
+      "Portfolio is not a horizon. A portfolio is what gets examined AT the strategy horizon, not a horizon of its own.",
+      "The strategy horizon is the horizon of decisions that impact the enterprise and of observing change across a broad spectrum.",
+      "Epic is not a horizon. An epic is a level of work detail, mostly belonging to the initiative horizon.",
+      "The initiative horizon analyses at a smaller scale — inside ONE initiative within the enterprise, not the whole enterprise."
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Ở tầm chiến lược, một BA Agile quan tâm điều gì?",
+    "questionEn": "At the strategy horizon, what is an agile BA concerned with?",
+    "options": [
+      "Đảm bảo các user story đang chuẩn bị cho sprint tới có tính áp dụng ở cấp doanh nghiệp",
+      "Không để trùng lặp công sức khi viết user story",
+      "Epic và tích hợp danh mục đầu tư",
+      "Quan sát thay đổi trên phổ rộng và ở nhiều mức chi tiết, đồng thời giảm độ phức tạp cho việc ra quyết định"
+    ],
+    "optionsEn": [
+      "Making sure user stories being prepared for the next sprint apply at the enterprise level",
+      "Not duplicating effort when writing a user story",
+      "Epics and portfolio integration",
+      "Observing change across a broad spectrum and level of detail, and reducing complexity in decision-making"
+    ],
+    "answer": 3,
+    "explanation": "Ở tầm chiến lược, BA giúp lãnh đạo QUYẾT ĐỊNH. Mọi phương án nói về story hay epic đều thuộc tầm thấp hơn.",
+    "explanationEn": "At the strategy horizon the BA helps executives DECIDE. Any option about stories or epics belongs to a lower horizon.",
+    "optionExplanations": [
+      "Story cho sprint tới là công việc tầm bàn giao; gắn thêm chữ \"cấp doanh nghiệp\" không đổi được tầm của nó.",
+      "Điều này không gắn với tầm nào; và trùng lặp đôi khi còn đáng giá nếu nó tạo ra cộng tác tốt hơn.",
+      "Epic thuộc tầm SÁNG KIẾN. Đây là phương án nhiễu mạnh vì có chữ \"danh mục đầu tư\" nghe rất chiến lược.",
+      "Đây là mô tả nguyên văn trọng tâm của BA ở tầm chiến lược: phổ rộng và làm cho quyết định dễ hơn."
+    ],
+    "optionExplanationsEn": [
+      "Stories for the next sprint are delivery-horizon work; bolting \"enterprise level\" onto them does not change their horizon.",
+      "This is not aligned with any horizon; and duplicated effort is sometimes worth it if it produces better collaboration.",
+      "Epics belong to the INITIATIVE horizon. This is a strong distractor because \"portfolio\" sounds strategic.",
+      "This is the verbatim description of the BA's strategy-horizon focus: broad spectrum, and making decisions simpler."
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Việc gì một BA Agile KHÔNG nên làm trong tầm chiến lược?",
+    "questionEn": "Which should an agile BA NOT be doing during the strategy horizon?",
+    "options": [
+      "Phân tích xem những sáng kiến nào đáng làm",
+      "Xem user story nào ánh xạ vào feature nào",
+      "Giúp lãnh đạo ra quyết định đầu tư vào sáng kiến nào",
+      "Gắn kết mục tiêu tổ chức với các sáng kiến khác nhau"
+    ],
+    "optionsEn": [
+      "Analyzing which initiatives are worth doing",
+      "Looking at which user stories map to which features",
+      "Helping executives decide which initiatives to invest in",
+      "Working to align organisational goals to the various initiatives"
+    ],
+    "answer": 1,
+    "explanation": "Dạng câu hỏi phủ định: ba phương án đúng với tầm được hỏi, một phương án thuộc tầm khác. Tìm cái lệch tầm.",
+    "explanationEn": "The negative question type: three options fit the named horizon and one belongs elsewhere. Find the one at the wrong altitude.",
+    "optionExplanations": [
+      "Đây LÀ công việc tầm chiến lược — chính là câu hỏi mà tầm này tồn tại để trả lời.",
+      "Ánh xạ story vào feature và quyết định cần bàn giao bao nhiêu phần của một feature là công việc tầm SÁNG KIẾN.",
+      "Đây LÀ công việc tầm chiến lược, và là đối tượng làm việc điển hình của BA ở tầm này.",
+      "Đây LÀ công việc tầm chiến lược — gắn mục tiêu với sáng kiến chính là nội dung của tầm này."
+    ],
+    "optionExplanationsEn": [
+      "This IS strategy-horizon work — it is the very question the horizon exists to answer.",
+      "Mapping stories to features and deciding how much of a feature to deliver is INITIATIVE-horizon work.",
+      "This IS strategy-horizon work, and executives are the BA's typical counterpart at this horizon.",
+      "This IS strategy-horizon work — aligning goals to initiatives is what this horizon does."
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Hoạt động nào KHÔNG thuộc những gì một BA Agile thường làm ở tầm bàn giao?",
+    "questionEn": "Which activity is NOT part of what an agile BA typically does in the delivery horizon?",
+    "options": [
+      "Tham gia các buổi retrospective",
+      "Đảm bảo user story sẵn sàng cho triển khai",
+      "Quyết định có nên huỷ sáng kiến hay không",
+      "Hỗ trợ để việc bàn giao thành công"
+    ],
+    "optionsEn": [
+      "Participating in retrospectives",
+      "Ensuring user stories are ready for implementation",
+      "Determining if the initiative should be cancelled",
+      "Supporting successful delivery"
+    ],
+    "answer": 2,
+    "explanation": "Quyết định sống chết của một sáng kiến luôn ở tầm chiến lược, bất kể ai phát hiện ra vấn đề.",
+    "explanationEn": "The life-or-death decision on an initiative always sits at the strategy horizon, no matter who spotted the problem.",
+    "optionExplanations": [
+      "Đây LÀ công việc tầm bàn giao — retrospective nằm trong nhịp iteration của đội.",
+      "Đây LÀ công việc tầm bàn giao — chuẩn bị story cho triển khai là trọng tâm chính của tầm này.",
+      "Huỷ một sáng kiến là quyết định đầu tư, thuộc tầm CHIẾN LƯỢC, không thuộc phân tích ở tầm bàn giao.",
+      "Đây LÀ công việc tầm bàn giao — hỗ trợ bàn giao là đúng tên gọi của tầm này."
+    ],
+    "optionExplanationsEn": [
+      "This IS delivery-horizon work — retrospectives sit in the team's iteration cadence.",
+      "This IS delivery-horizon work — preparing stories for implementation is this horizon's core focus.",
+      "Cancelling an initiative is an investment decision belonging to the STRATEGY horizon, not delivery-horizon analysis.",
+      "This IS delivery-horizon work — supporting delivery is literally what the horizon is named for."
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Điều gì KHÔNG phải trọng tâm của một BA Agile khi làm việc ở tầm sáng kiến?",
+    "questionEn": "What is NOT the focus of an agile BA when working in the initiative horizon?",
+    "options": [
+      "Đảm bảo phạm vi đã định là khả thi với ngân sách và lịch đã định",
+      "Khám phá các phương án và giải pháp thay thế để đạt kết quả nhanh hơn",
+      "Đánh giá tiến trình đi tới kết quả mong muốn",
+      "Xem mỗi feature cần chắc chắn tới đâu để đạt kết quả, và nên sắp thứ tự thế nào"
+    ],
+    "optionsEn": [
+      "Ensuring the defined scope is feasible for the defined budget and schedule",
+      "Exploring options and alternative solutions to get to the outcome faster",
+      "Evaluating progress towards the outcome",
+      "Reviewing how robust features need to be to reach the outcome, and how they should be ordered"
+    ],
+    "answer": 0,
+    "explanation": "Tầm sáng kiến hỏi \"cần bao nhiêu để đạt kết quả\", không hỏi \"phạm vi đã chốt có vừa ngân sách đã chốt không\".",
+    "explanationEn": "The initiative horizon asks \"how much is needed to reach the outcome\", not \"does the fixed scope fit the fixed budget\".",
+    "optionExplanations": [
+      "Đây là khung tư duy dự án kiểu cũ — phạm vi, ngân sách và lịch chốt cứng — không phải trọng tâm của tầm sáng kiến.",
+      "Đây LÀ trọng tâm tầm sáng kiến — khám phá phương án thay thế nằm ngay trong mô tả vai trò.",
+      "Đây LÀ trọng tâm tầm sáng kiến — đánh giá lại tiến trình tới kết quả là việc thường xuyên ở tầm này.",
+      "Đây LÀ trọng tâm tầm sáng kiến — mức độ chắc chắn và thứ tự của feature là công việc trung tâm của tầm này."
+    ],
+    "optionExplanationsEn": [
+      "This is the older project frame — fixed scope, budget and schedule — not the initiative horizon's focus.",
+      "This IS an initiative-horizon focus — exploring alternatives is in the role description itself.",
+      "This IS an initiative-horizon focus — re-evaluating progress toward the outcome is routine here.",
+      "This IS an initiative-horizon focus — feature robustness and ordering is this horizon's central work."
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "Planning workshop được dùng ở tầm nào?",
+    "questionEn": "Planning workshops are used in which horizon?",
+    "options": [
+      "Tầm sáng kiến (Initiative)",
+      "Bàn giao và Sáng kiến",
+      "Bàn giao, Chiến lược và Sáng kiến",
+      "Tầm bàn giao (Delivery)"
+    ],
+    "optionsEn": [
+      "Initiative horizon",
+      "Delivery and Initiative",
+      "Delivery, Strategy, and Initiative",
+      "Delivery horizon"
+    ],
+    "answer": 2,
+    "explanation": "Planning workshop là một trong hai kỹ thuật sống ở nhiều tầm. Đừng nhìn tên kỹ thuật, hãy nhìn nó đang được dùng để làm gì.",
+    "explanationEn": "The planning workshop is one of the two techniques that live across horizons. Do not read the technique's name — read what it is being used for.",
+    "optionExplanations": [
+      "Đúng là có ở tầm sáng kiến, nhưng chưa đủ — planning workshop còn tồn tại ở các tầm khác nữa.",
+      "Đúng hai tầm này, nhưng vẫn thiếu một tầm nữa.",
+      "Planning workshop tồn tại ở cả ba tầm; chỉ mục tiêu và mức chi tiết là thay đổi theo bối cảnh của tầm.",
+      "Đúng là có ở tầm bàn giao, nhưng đó chỉ là một trong ba nơi planning workshop xuất hiện."
+    ],
+    "optionExplanationsEn": [
+      "It does exist at the initiative horizon, but that is incomplete — planning workshops exist in other horizons too.",
+      "Both of these are right, but one horizon is still missing.",
+      "Planning workshops exist in all three horizons; only the goal and level of detail change with the horizon's context.",
+      "It does happen at the delivery horizon, but that is only one of the three places planning workshops appear."
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Dùng planning workshop ở đầu mỗi iteration để lập kế hoạch chi tiết cho iteration đó là công việc thuộc tầm nào?",
+    "questionEn": "Using planning workshops at the beginning of each iteration to plan the iteration details is done in which horizon?",
+    "options": [
+      "Tầm dự án (Project)",
+      "Tầm bàn giao (Delivery)",
+      "Tầm sáng kiến (Initiative)",
+      "Tầm chiến lược (Strategy)"
+    ],
+    "optionsEn": [
+      "Project horizon",
+      "Delivery horizon",
+      "Initiative horizon",
+      "Strategy horizon"
+    ],
+    "answer": 1,
+    "explanation": "Cùng tên kỹ thuật, ba tầm khác nhau. \"Chi tiết của iteration\" là dấu hiệu quyết định.",
+    "explanationEn": "Same technique name, three different horizons. \"Iteration details\" is the deciding cue.",
+    "optionExplanations": [
+      "Project horizon không tồn tại — không có tầm nào tên là \"project\" trong Agile Extension v2.",
+      "Chi tiết của iteration được lập trong planning workshop ở đầu mỗi iteration — đúng định nghĩa tầm bàn giao.",
+      "Ở tầm sáng kiến, planning workshop lo thứ tự feature và kế hoạch release, không phải chi tiết iteration.",
+      "Ở tầm chiến lược, planning workshop lo mục tiêu và chỉ số ở mức cao hơn nhiều."
+    ],
+    "optionExplanationsEn": [
+      "There is no project horizon — no such horizon exists in the Agile Extension v2.",
+      "Iteration details are planned in a planning workshop at the start of each iteration — the delivery horizon by definition.",
+      "At the initiative horizon a planning workshop handles feature ordering and the release plan, not iteration details.",
+      "At the strategy horizon a planning workshop handles goals and metrics at a much higher level."
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Story elaboration (làm rõ chi tiết story) diễn ra ở tầm nào?",
+    "questionEn": "In which horizon does story elaboration take place?",
+    "options": [
+      "Tầm sáng kiến (Initiative)",
+      "Tầm bàn giao (Delivery)",
+      "Tầm iteration (Iteration)",
+      "Tầm chiến lược (Strategy)"
+    ],
+    "optionsEn": [
+      "Initiative horizon",
+      "Delivery horizon",
+      "Iteration horizon",
+      "Strategy horizon"
+    ],
+    "answer": 1,
+    "explanation": "Đơn vị công việc là \"story\" → tầm bàn giao. Lưu ý phương án \"iteration horizon\" là tên bịa.",
+    "explanationEn": "The unit of work is the \"story\" → delivery horizon. Note that \"iteration horizon\" is an invented name.",
+    "optionExplanations": [
+      "Backlog refinement ở tầm sáng kiến CÓ chứa một phần làm rõ feature và tạo story, nhưng story elaboration chủ yếu ở tầm khác.",
+      "Story elaboration chủ yếu diễn ra ở tầm bàn giao, ngay trước khi iteration bắt đầu.",
+      "Iteration không phải một tầm. Nó là một nhịp làm việc bên trong tầm bàn giao.",
+      "Tầm chiến lược không làm việc ở mức chi tiết này."
+    ],
+    "optionExplanationsEn": [
+      "Backlog refinement at the initiative horizon DOES include some elaboration of features and creation of stories, but story elaboration mainly happens elsewhere.",
+      "Story elaboration mostly takes place at the delivery horizon, just before the iteration begins.",
+      "Iteration is not a horizon. It is a working cadence inside the delivery horizon.",
+      "The strategy horizon does not work at this level of detail."
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Việc xác định các thành phần giải pháp có gắn với kết quả thật hay không là trọng tâm của tầm nào?",
+    "questionEn": "Identifying whether solution components are aligned to getting real outcomes is a focus of which horizon?",
+    "options": [
+      "Tầm danh mục đầu tư (Portfolio)",
+      "Tầm bàn giao (Delivery)",
+      "Tầm chiến lược (Strategy)",
+      "Tầm sáng kiến (Initiative)"
+    ],
+    "optionsEn": [
+      "Portfolio horizon",
+      "Delivery horizon",
+      "Strategy horizon",
+      "Initiative horizon"
+    ],
+    "answer": 3,
+    "explanation": "\"Thành phần giải pháp\" là đơn vị công việc giữa feature và story — đó là dấu hiệu của tầm sáng kiến.",
+    "explanationEn": "\"Solution component\" is the unit of work between feature and story — that is the initiative-horizon signal.",
+    "optionExplanations": [
+      "Portfolio không phải một tầm. Danh mục đầu tư là thứ được xem xét Ở tầm chiến lược, không phải một tầm riêng.",
+      "Tầm bàn giao nhìn vào những khía cạnh chi tiết hơn — story, acceptance criteria, task.",
+      "Tầm chiến lược nhìn bức tranh lớn hơn — sáng kiến nào đáng đầu tư, chứ không phải thành phần bên trong một giải pháp.",
+      "Ở tầm sáng kiến, ta phân tích xem từng thành phần giải pháp có gắn được với kết quả thật hay không."
+    ],
+    "optionExplanationsEn": [
+      "Portfolio is not a horizon. A portfolio is what gets examined AT the strategy horizon, not a horizon of its own.",
+      "The delivery horizon looks at more detailed aspects — stories, acceptance criteria, tasks.",
+      "The strategy horizon looks at a bigger picture — which initiatives to invest in, not the components inside one solution.",
+      "At the initiative horizon we analyse whether each solution component can align to getting real outcomes."
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Một BA Agile đánh giá thông tin mới về cách người dùng đang dùng giải pháp, rồi mang thông tin đó vào một Planning Workshop nơi đội đang bàn xem sẽ làm feature nào tiếp theo và theo thứ tự nào. Việc này thuộc tầm nào?",
+    "questionEn": "An agile BA evaluates new information about how users are using the solution and brings it to a Planning Workshop where the team is discussing which features to implement next, and in what order. Which horizon is this?",
+    "options": [
+      "Tầm dự án (Project)",
+      "Tầm sáng kiến (Initiative)",
+      "Tầm chiến lược (Strategy)",
+      "Tầm bàn giao (Delivery)"
+    ],
+    "optionsEn": [
+      "Project horizon",
+      "Initiative horizon",
+      "Strategy horizon",
+      "Delivery horizon"
+    ],
+    "answer": 1,
+    "explanation": "Đừng để chữ \"planning workshop\" hay \"dữ liệu người dùng\" đánh lạc hướng. Đơn vị công việc là FEATURE → tầm sáng kiến.",
+    "explanationEn": "Do not be misled by \"planning workshop\" or \"usage data\". The unit of work is the FEATURE → initiative horizon.",
+    "optionExplanations": [
+      "Project horizon không tồn tại — không có tầm nào tên là \"project\" trong Agile Extension v2.",
+      "Quyết định thứ tự các feature sẽ làm là công việc tầm sáng kiến, kể cả khi đầu vào đến từ dữ liệu sử dụng thật.",
+      "Sắp thứ tự feature thường không thuộc tầm chiến lược — tầm này quyết định giữa các SÁNG KIẾN, không giữa các feature.",
+      "Sắp thứ tự feature thường không thuộc tầm bàn giao — tầm này làm việc với story và task."
+    ],
+    "optionExplanationsEn": [
+      "There is no project horizon — no such horizon exists in the Agile Extension v2.",
+      "Determining the order of features to work on is initiative-horizon work, even when the input comes from real usage data.",
+      "Ordering features is typically not strategy-horizon work — that horizon decides between INITIATIVES, not between features.",
+      "Ordering features is typically not delivery-horizon work — that horizon works with stories and tasks."
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Gerald, một BA Agile, đang sắp ưu tiên và sắp thứ tự các feature cho đội làm. Việc backlog refinement này diễn ra khi nào?",
+    "questionEn": "Gerald, an agile BA, is prioritising and sequencing the features for the team to work on. When does this backlog refinement happen?",
+    "options": [
+      "Trong buổi planning workshop của iteration",
+      "Ở giai đoạn khởi động dự án",
+      "Trong buổi strategy workshop trước khi sáng kiến bắt đầu",
+      "Liên tục và nhiều lần trong suốt sáng kiến"
+    ],
+    "optionsEn": [
+      "During the iteration planning workshop",
+      "At the beginning of project initiation",
+      "During the strategy workshop before the initiative starts",
+      "Ongoing and multiple times throughout the initiative"
+    ],
+    "answer": 3,
+    "explanation": "Backlog refinement ở tầm sáng kiến là liên tục. Nó cũng là đầu vào chính cho planning workshop.",
+    "explanationEn": "Backlog refinement at the initiative horizon is continuous. It is also the key input to a planning workshop.",
+    "optionExplanations": [
+      "Planning có ở đầu mỗi iteration, nhưng mức được lập kế hoạch ở đó là task của iteration, không phải thứ tự feature.",
+      "Có thể có ở đầu một sáng kiến, nhưng đó không phải bức tranh đầy đủ — refinement không dừng lại sau đó.",
+      "Lập kế hoạch có diễn ra ở tầm chiến lược, nhưng mức được lập kế hoạch ở đó là mục tiêu và sáng kiến, không phải feature.",
+      "Backlog refinement là hoạt động liên tục ở cấp sáng kiến, không phải một sự kiện một lần."
+    ],
+    "optionExplanationsEn": [
+      "Planning does happen at the start of each iteration, but what gets planned there is the iteration's tasks, not feature ordering.",
+      "It may happen at the start of an initiative, but that is not the complete picture — refinement does not stop there.",
+      "Planning does happen at the strategy horizon, but what gets planned there is goals and initiatives, not features.",
+      "Backlog refinement is an ongoing, initiative-level activity, not a one-off event."
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Impact mapping tăng cường vòng phản hồi giữa những tầm nào, bằng cách nối hoạt động với mục tiêu tổ chức?",
+    "questionEn": "Impact mapping enhances the feedback loops between which horizons by tying activities to organisational goals?",
+    "options": [
+      "Cả ba: chiến lược, sáng kiến và bàn giao",
+      "Chiến lược và bàn giao",
+      "Sáng kiến và chiến lược",
+      "Bàn giao và sáng kiến"
+    ],
+    "optionsEn": [
+      "All three: strategy, initiative and delivery",
+      "Strategy and delivery",
+      "Initiative and strategy",
+      "Delivery and initiative"
+    ],
+    "answer": 0,
+    "explanation": "Khi một kỹ thuật nối \"hoạt động\" với \"mục tiêu tổ chức\", nó buộc phải chạm cả ba tầm.",
+    "explanationEn": "When a technique ties \"activities\" to \"organisational goals\", it necessarily touches all three horizons.",
+    "optionExplanations": [
+      "Impact map nối hoạt động hằng ngày ngược về mục tiêu tổ chức, nên nó bắc cầu qua cả ba tầm.",
+      "Chỉ đúng một phần — thiếu tầm sáng kiến ở giữa.",
+      "Chỉ đúng một phần — thiếu tầm bàn giao, nơi hoạt động thực tế diễn ra.",
+      "Chỉ đúng một phần — thiếu tầm chiến lược, nơi có mục tiêu tổ chức."
+    ],
+    "optionExplanationsEn": [
+      "An impact map ties day-to-day activity back to organisational goals, so it bridges all three horizons.",
+      "Only partially correct — the initiative horizon in the middle is missing.",
+      "Only partially correct — the delivery horizon, where the activity actually happens, is missing.",
+      "Only partially correct — the strategy horizon, where the organisational goals live, is missing."
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Ở tầm nào thì value modeling được dùng để cung cấp thông tin cho R&D, marketing, bán hàng và nhìn khách hàng của toàn tổ chức?",
+    "questionEn": "In which horizon is value modeling used to inform research and development, marketing and sales, looking at the customers of the organisation as a whole?",
+    "options": [
+      "Chiến lược và sáng kiến",
+      "Tầm chiến lược (Strategy)",
+      "Tầm sáng kiến (Initiative)",
+      "Tầm bàn giao (Delivery)"
+    ],
+    "optionsEn": [
+      "Strategy and initiative",
+      "Strategy horizon",
+      "Initiative horizon",
+      "Delivery horizon"
+    ],
+    "answer": 1,
+    "explanation": "Value modeling dùng được ở mọi tầm. Phạm vi khách hàng trong câu hỏi mới là thứ quyết định tầm.",
+    "explanationEn": "Value modeling can be used at any horizon. It is the customer scope in the question that decides which.",
+    "optionExplanations": [
+      "Cách dùng được mô tả là ở mức toàn tổ chức, nên không phải cách value modeling được dùng ở tầm sáng kiến.",
+      "R&D, marketing, bán hàng và \"khách hàng của toàn tổ chức\" đều là dấu hiệu của phạm vi cấp doanh nghiệp.",
+      "Ở tầm sáng kiến, value modeling soi giá trị khách hàng bên trong MỘT sáng kiến, không phải toàn tổ chức.",
+      "Đây không phải cách value modeling được dùng ở tầm bàn giao, nơi phạm vi hẹp hơn nhiều."
+    ],
+    "optionExplanationsEn": [
+      "The described use is organisation-wide, so it is not how value modeling is used at the initiative horizon.",
+      "R&D, marketing, sales and \"the customers of the organisation as a whole\" are all enterprise-scope cues.",
+      "At the initiative horizon, value modeling looks at customer value inside ONE initiative, not the whole organisation.",
+      "This is not how value modeling is used at the delivery horizon, where the scope is far narrower."
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Ở tầm nào — hoặc những tầm nào — thì value modeling được dùng để tập trung vào giá trị khách hàng bên trong một sáng kiến cụ thể?",
+    "questionEn": "In which horizon, or horizons, is value modeling used to focus on customer value within a specific initiative?",
+    "options": [
+      "Sáng kiến và Bàn giao",
+      "Chiến lược và Sáng kiến",
+      "Tầm chiến lược (Strategy)",
+      "Tầm sáng kiến (Initiative)"
+    ],
+    "optionsEn": [
+      "Initiative and Delivery",
+      "Strategy and Initiative",
+      "Strategy horizon",
+      "Initiative horizon"
+    ],
+    "answer": 0,
+    "explanation": "Cùng một kỹ thuật, hai câu hỏi, hai đáp án khác nhau. Luôn đọc value modeling đang được dùng ĐỂ LÀM GÌ.",
+    "explanationEn": "Same technique, two questions, two different answers. Always read what value modeling is being used FOR.",
+    "optionExplanations": [
+      "Cả hai tầm đều áp dụng: sáng kiến định hình giá trị cần đạt, bàn giao kiểm chứng giá trị đó trên từng phần được giao.",
+      "Value modeling ở tầm chiến lược được dùng theo cách khác — nhìn toàn tổ chức, không phải một sáng kiến.",
+      "Ở tầm chiến lược, value modeling nhìn khách hàng của toàn tổ chức, không phải bên trong một sáng kiến.",
+      "Đúng một phần nhưng chưa đủ — còn một tầm nữa cũng áp dụng."
+    ],
+    "optionExplanationsEn": [
+      "Both apply: the initiative horizon shapes the value to be achieved and the delivery horizon tests it on each increment.",
+      "Value modeling at the strategy horizon is used differently — it looks at the whole organisation, not one initiative.",
+      "At the strategy horizon, value modeling looks at the organisation's customers as a whole, not inside one initiative.",
+      "Right as far as it goes, but incomplete — one more horizon also applies."
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "Một BA Agile dùng vòng phản hồi và việc học hỏi ở tầm chiến lược như thế nào?",
+    "questionEn": "How does an agile BA use feedback loops and learning at the strategy horizon?",
+    "options": [
+      "Dùng phản hồi từ lãnh đạo dự án để thích ứng qua các iteration",
+      "Dùng phản hồi từ các feature để quyết định đầu tư vào feature nào",
+      "Dùng toàn bộ phản hồi từ tất cả các tầm để nuôi chiến lược",
+      "Dùng phản hồi từ sprint review để quyết định ưu tiên cho sprint tới"
+    ],
+    "optionsEn": [
+      "Use feedback from project leaders to adapt through iterations",
+      "Use feedback from features to determine which features to invest in",
+      "Use all feedback from all horizons to feed strategy",
+      "Use feedback from sprint reviews to determine what to prioritise for the next sprint"
+    ],
+    "answer": 2,
+    "explanation": "Ba phương án sai đều \"đúng một phần\". Tầm chiến lược không loại bỏ nguồn nào, nó tổng hợp tất cả.",
+    "explanationEn": "The three wrong options are all \"partly true\". The strategy horizon excludes no source; it synthesises them all.",
+    "optionExplanations": [
+      "Tầm chiến lược có dùng nguồn phản hồi này, nhưng nó chỉ là một phần trong nhiều nguồn.",
+      "Tầm chiến lược có dùng nguồn này, nhưng nó chỉ là một phần; và quyết định ở tầm này là giữa các sáng kiến chứ không giữa các feature.",
+      "Đây là điểm đặc trưng của tầm chiến lược: nó là nơi hội tụ, tổng hợp phản hồi từ cả ba tầm để ra quyết định.",
+      "Tầm chiến lược có dùng phản hồi này, nhưng ở thời điểm và mức khác — bản thân câu này mô tả tầm bàn giao."
+    ],
+    "optionExplanationsEn": [
+      "The strategy horizon does use this feedback, but it is only one of many sources.",
+      "The strategy horizon does use this, but it is only one part; and decisions here are between initiatives, not features.",
+      "This is what makes the strategy horizon distinctive: it is the confluence, synthesising feedback from all three horizons into decisions.",
+      "The strategy horizon does use this feedback, but at a different time and level — as written, the option describes the delivery horizon."
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "Ở mức chiến lược, người sở hữu sản phẩm hoặc dẫn dắt sáng kiến giúp đội bàn giao bằng cách nào?",
+    "questionEn": "At a strategic level, how does the person who owns the product or leads the initiative help the delivery team?",
+    "options": [
+      "Bằng cách định nghĩa ngân sách cho giai đoạn đầu và xác định các thành phần giải pháp",
+      "Bằng cách định nghĩa bối cảnh kỹ thuật và kế hoạch iteration",
+      "Bằng cách định nghĩa product roadmap, xác định giá trị nghiệp vụ mong muốn và xác định các nguyên tắc dùng để sắp ưu tiên",
+      "Bằng cách định nghĩa kế hoạch release và xác định nguồn lực cần thiết"
+    ],
+    "optionsEn": [
+      "By defining the budget for the first phase and identifying the solution components",
+      "By defining the technical context and the iteration plan",
+      "By defining the product roadmap, identifying desired business value, and identifying the principles used to prioritise the work",
+      "By defining the release plan and identifying the resources needed"
+    ],
+    "answer": 2,
+    "explanation": "Ở tầm chiến lược, người dẫn dắt trao cho đội PHƯƠNG HƯỚNG và NGUYÊN TẮC, không trao lịch, ngân sách hay thiết kế.",
+    "explanationEn": "At the strategy horizon the leader gives the team DIRECTION and PRINCIPLES, not schedules, budgets or designs.",
+    "optionExplanations": [
+      "Ngân sách giai đoạn đầu không phải trọng tâm khi làm việc ở mức chiến lược.",
+      "Bối cảnh kỹ thuật không phải trọng tâm ở mức chiến lược, và kế hoạch iteration thuộc tầm bàn giao.",
+      "Ở tầm chiến lược, trọng tâm chính là giá trị nghiệp vụ mong muốn, roadmap và các nguyên tắc sắp ưu tiên.",
+      "Lập kế hoạch release là công việc tầm sáng kiến, không phải trọng tâm ở mức chiến lược."
+    ],
+    "optionExplanationsEn": [
+      "The first phase's budget is not the focus when working at the strategic level.",
+      "Technical context is not the strategic-level focus, and the iteration plan belongs to the delivery horizon.",
+      "At the strategic horizon the focus is precisely the desired business value, the roadmap, and the principles used to prioritise.",
+      "Release planning is initiative-horizon work, not the strategic-level focus."
+    ]
+  },
+  {
+    "id": "q19",
+    "question": "Vì sao \"portfolio horizon\" và \"project horizon\" là những phương án nên loại ngay?",
+    "questionEn": "Why are \"portfolio horizon\" and \"project horizon\" options to eliminate on sight?",
+    "options": [
+      "Vì chúng chỉ áp dụng cho tổ chức lớn",
+      "Vì Agile Extension v2 chỉ định nghĩa ba tầm: chiến lược, sáng kiến và bàn giao",
+      "Vì chúng đã bị thay thế bởi tầm sáng kiến trong phiên bản v2",
+      "Vì chúng chỉ dùng trong ngữ cảnh Waterfall"
+    ],
+    "optionsEn": [
+      "Because they only apply to large organisations",
+      "Because the Agile Extension v2 defines exactly three horizons: strategy, initiative and delivery",
+      "Because they were replaced by the initiative horizon in version 2",
+      "Because they are only used in a Waterfall context"
+    ],
+    "answer": 1,
+    "explanation": "Quy tắc rộng hơn: thuật ngữ không có trong Agile Extension v2 thì gần như luôn là phương án sai.",
+    "explanationEn": "The broader rule: a term that does not appear in the Agile Extension v2 is almost always the wrong option.",
+    "optionExplanations": [
+      "Không có giới hạn theo quy mô tổ chức; vấn đề là hai cái tên này không tồn tại trong khung tầm.",
+      "Đúng. Bất kỳ tên tầm nào ngoài ba tên này đều là phương án bịa ra, và đó là nguồn nhiễu phổ biến nhất trong chủ đề này.",
+      "Chúng chưa từng là tầm trong bất kỳ phiên bản nào, nên không có chuyện bị thay thế.",
+      "\"Project\" đúng là từ vựng quen thuộc của cách làm cũ, nhưng lý do loại phương án là chúng không phải TẦM, không phải vì phương pháp luận."
+    ],
+    "optionExplanationsEn": [
+      "There is no organisation-size limit; the issue is that neither name exists in the horizon framework.",
+      "Correct. Any horizon name outside those three is an invented option, and it is the most common distractor in this topic.",
+      "They were never horizons in any version, so there was nothing to replace.",
+      "\"Project\" is indeed older vocabulary, but the reason to eliminate is that they are not HORIZONS, not the methodology."
+    ]
+  },
+  {
+    "id": "q20",
+    "question": "Ba tầm phân tích quan hệ với nhau theo thời gian như thế nào?",
+    "questionEn": "How do the three analysis horizons relate to each other in time?",
+    "options": [
+      "Chúng là ba giai đoạn nối tiếp: xong chiến lược mới tới sáng kiến, xong sáng kiến mới tới bàn giao",
+      "Chúng chạy đồng thời, và một BA có thể qua lại giữa cả ba trong cùng một tuần",
+      "Mỗi tầm thuộc về một vai trò khác nhau và không bao giờ chồng lấn",
+      "Chỉ tầm bàn giao là liên tục; hai tầm còn lại chỉ chạy một lần ở đầu"
+    ],
+    "optionsEn": [
+      "They are three sequential phases: finish strategy, then initiative, then delivery",
+      "They run concurrently, and a BA can move between all three in the same week",
+      "Each horizon belongs to a different role and they never overlap",
+      "Only the delivery horizon is continuous; the other two run once at the start"
+    ],
+    "answer": 1,
+    "explanation": "Đây là hiểu nhầm nền tảng hay gặp nhất. Ba tầm là ba MỨC PHÓNG đồng thời, không phải ba giai đoạn.",
+    "explanationEn": "This is the most common foundational misreading. The three horizons are three concurrent ZOOM LEVELS, not three phases.",
+    "optionExplanations": [
+      "Đây chính là cách hiểu kiểu stage-gate mà Agile Extension phản đối; nó biến ba tầm thành một quy trình thác nước.",
+      "Đúng. Trong khi đội bàn giao iteration này, sáng kiến vẫn đang được sắp lại và danh mục đầu tư vẫn đang được đánh giá.",
+      "Tầm mô tả mức phân tích, không phải chức danh. Cùng một BA có thể làm việc ở cả ba.",
+      "Cả ba đều liên tục. Chiến lược liên tục nhận phản hồi từ hai tầm kia, và sáng kiến liên tục được sắp lại thứ tự."
+    ],
+    "optionExplanationsEn": [
+      "This is the stage-gate reading the Agile Extension argues against; it turns the three horizons back into a waterfall.",
+      "Correct. While the team delivers this iteration, the initiative is still being resequenced and the portfolio is still being evaluated.",
+      "Horizons describe a level of analysis, not a job title. The same BA can work at all three.",
+      "All three are continuous. Strategy continuously receives feedback from the other two, and the initiative is continuously resequenced."
+    ]
+  }
+]

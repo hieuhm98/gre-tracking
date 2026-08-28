@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Họ \"story\": bốn kỹ thuật dễ lẫn · Thế nào là user story tốt",
+      "titleEn": "The story family: four confusable techniques · What makes a good story",
+      "sections": [1, 2],
+      "questionIds": ["q1", "q2", "q3", "q4", "q5", "q19"]
+    },
+    {
+      "id": "l2",
+      "title": "Ba chữ C và INVEST · Job story, user story và personas",
+      "titleEn": "The three C's and INVEST · Job stories, user stories and personas",
+      "sections": [3, 4],
+      "questionIds": ["q6", "q7", "q8", "q9", "q10", "q11", "q20"]
+    },
+    {
+      "id": "l3",
+      "title": "Cú pháp Gherkin · Spike và MVP",
+      "titleEn": "Gherkin syntax · Spikes and the MVP",
+      "sections": [5, 6],
+      "questionIds": ["q12", "q13", "q14", "q15", "q16", "q17", "q18"]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi",
+      "titleEn": "Key takeaways",
+      "sections": [7],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

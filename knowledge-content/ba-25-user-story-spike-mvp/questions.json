@@ -1,0 +1,642 @@
+[
+  {
+    "id": "q1",
+    "question": "Kỹ thuật nào sắp xếp user story của một sản phẩm hoặc release theo trình tự luồng công việc của người dùng nằm ngang (trái sang phải), rồi chi tiết hoá và sắp ưu tiên các story bên dưới theo chiều dọc đi xuống?",
+    "questionEn": "Which technique arranges user stories for a product or release by the sequence of the user workflow across (left to right), then details and prioritises ordered stories underneath going down?",
+    "options": [
+      "Storyboarding",
+      "Story elaboration",
+      "Story mapping",
+      "Story decomposition"
+    ],
+    "optionsEn": [
+      "Storyboarding",
+      "Story elaboration",
+      "Story mapping",
+      "Story decomposition"
+    ],
+    "answer": 2,
+    "explanation": "Hai trục là dấu hiệu nhận diện: NGANG theo trình tự người dùng, DỌC theo chi tiết và ưu tiên.",
+    "explanationEn": "The two axes are the identifying cue: ACROSS by user sequence, DOWN by detail and priority.",
+    "optionExplanations": [
+      "Storyboarding có vài yếu tố tương tự nhưng thiên về phác hoạ trải nghiệm người dùng theo từng bước.",
+      "Story elaboration là việc bổ sung chi tiết cho một story trước iteration; nó có thể được bàn tới trong hoạt động này nhưng không phải là hoạt động này.",
+      "Đây là mô tả chuẩn của story mapping: trục ngang là luồng công việc, trục dọc là mức chi tiết và ưu tiên.",
+      "Story decomposition là phép phân rã goal → feature → story → acceptance criteria; nó có thể được dùng bên trong story mapping nhưng không phải cách bố trí này."
+    ],
+    "optionExplanationsEn": [
+      "Storyboarding shares some of these aspects but is more about sketching out the user experience step by step.",
+      "Story elaboration is adding detail to a story before an iteration; it may be discussed as part of this activity but is not the activity.",
+      "This is the standard description of story mapping: the horizontal axis is workflow, the vertical axis is detail and priority.",
+      "Story decomposition is the goal → feature → story → acceptance criteria breakdown; it may be used within story mapping but is not this layout."
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Kỹ thuật trực quan nào phân tích tương tác của người dùng với sản phẩm bằng cách phác hoạ từng bước?",
+    "questionEn": "Which visual technique analyses user interactions with a product by sketching out each step?",
+    "options": [
+      "Storyboarding",
+      "Story elaboration",
+      "User story map",
+      "Story decomposition"
+    ],
+    "optionsEn": [
+      "Storyboarding",
+      "Story elaboration",
+      "A user story map",
+      "Story decomposition"
+    ],
+    "answer": 0,
+    "explanation": "Từ khoá \"phác hoạ từng bước\" chỉ thuộc về storyboarding. Story map cho bức tranh lớn chứ không phác hoạ.",
+    "explanationEn": "The phrase \"sketching each step\" belongs only to storyboarding. A story map gives the big picture; it does not sketch.",
+    "optionExplanations": [
+      "Đúng định nghĩa: phác hoạ từng bước của trải nghiệm để thấy tương tác diễn ra thế nào.",
+      "Không mô tả story elaboration; tuy nhiên bạn có thể dùng storyboard để hỗ trợ việc làm rõ story.",
+      "Story map cũng là hình trực quan thể hiện góc nhìn người dùng, nhưng nó KHÔNG phác hoạ từng bước.",
+      "Không mô tả story decomposition; tuy nhiên bạn có thể dùng storyboard để hỗ trợ việc phân rã."
+    ],
+    "optionExplanationsEn": [
+      "The definition exactly: sketching each step of the experience to see how the interaction unfolds.",
+      "This does not describe story elaboration; though you might use a storyboard to help with elaboration.",
+      "A story map is also a visual of the user's point of view, but it does NOT sketch out each step.",
+      "This does not describe story decomposition; though you might use a storyboard to help with it."
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Story decomposition là việc BA Agile làm theo thứ tự chi tiết nào?",
+    "questionEn": "Story decomposition means an agile BA working in which order of detail?",
+    "options": [
+      "User story, Build, Test, Implement",
+      "User story, story map, storyboard, story split",
+      "Portfolio, project, release, iteration",
+      "Goal, feature, story, acceptance criteria"
+    ],
+    "optionsEn": [
+      "User story, Build, Test, Implement",
+      "User story, story map, storyboard, story split",
+      "Portfolio, project, release, iteration",
+      "Goal, feature, story, acceptance criteria"
+    ],
+    "answer": 3,
+    "explanation": "Mẹo loại: một phép phân rã story phải kết thúc ở acceptance criteria, không kết thúc ở iteration hay implement.",
+    "explanationEn": "Elimination tip: a story decomposition must end at acceptance criteria, not at an iteration or an implementation step.",
+    "optionExplanations": [
+      "Đây là các bước của vòng đời triển khai, không phải phép phân rã một story.",
+      "Danh sách này không thể hiện một phép phân rã nào — nó chỉ liệt kê bốn kỹ thuật khác nhau.",
+      "Bẫy tinh vi nhất: nó đúng là đi từ lớn tới nhỏ, nhưng nó phân rã KHUNG LẬP KẾ HOẠCH chứ không phân rã story.",
+      "Đúng chuỗi: từ bức tranh lớn xuống chi tiết của mục tiêu người dùng và các hạng mục hướng người dùng."
+    ],
+    "optionExplanationsEn": [
+      "These are implementation lifecycle steps, not a decomposition of a story.",
+      "This list demonstrates no decomposition at all — it simply names four different techniques.",
+      "The subtlest trap: it does go from big to small, but it decomposes the PLANNING FRAME, not stories.",
+      "The correct chain: from the big picture down to the details of user goals and user-focused items."
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Một BA Agile dùng story mapping để giúp đội thấy bức tranh lớn và hiểu chức năng sản phẩm. Kỹ thuật này được dùng thế nào để đạt kết quả tốt nhất?",
+    "questionEn": "An agile BA uses story mapping to help the team see the big picture and understand product functionality. How is this technique used for best results?",
+    "options": [
+      "Như một việc đội phát triển làm để tổ chức các task của họ",
+      "Như một việc BA Agile làm rồi gửi cho bên liên quan phê duyệt trước khi release bắt đầu",
+      "Như một hoạt động tự điều phối hoặc hoạt động nhóm",
+      "Như một kỹ thuật lập roadmap để thể hiện product roadmap"
+    ],
+    "optionsEn": [
+      "As something the development team does to organise their tasks",
+      "As something the agile BA does and sends to stakeholders for approval before a release can start",
+      "As a self-facilitated or group activity",
+      "As a roadmapping technique to show the product roadmap"
+    ],
+    "answer": 2,
+    "explanation": "Ba phương án sai đều biến story map thành một tài liệu bàn giao. Nó là một hoạt động, không phải một bản nộp.",
+    "explanationEn": "The three wrong options all turn the story map into a deliverable document. It is an activity, not a submission.",
+    "optionExplanations": [
+      "Story map không nói về task của đội; nó nói về luồng công việc và mức ưu tiên của người dùng.",
+      "BA Agile không gửi story map đi xin phê duyệt — làm vậy biến một công cụ đối thoại thành một cổng nghiệm thu.",
+      "Đúng cách dùng: cả nhóm cùng dựng và cùng đọc bản đồ; BA cũng có thể tự phân tích story map.",
+      "Story map có trọng tâm khác product roadmap — bản đồ story nói về luồng người dùng, roadmap nói về hướng đi tương lai của sản phẩm."
+    ],
+    "optionExplanationsEn": [
+      "A story map is not about the team's tasks; it is about the user's workflow and priorities.",
+      "An agile BA would not send a story map for approval — doing so turns a conversation tool into an acceptance gate.",
+      "The correct use: the group builds and reads the map together; the BA may also analyse the story map themselves.",
+      "A story map has a different focus from a product roadmap — the map is about user flow, the roadmap about the product's future direction."
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Đâu là một ví dụ tốt về user story?",
+    "questionEn": "Which is a good example of a user story?",
+    "options": [
+      "\"Là một developer, tôi cần tạo ra một báo cáo cho CDU.\"",
+      "\"Là một học viên, tôi muốn có một nút CDU trên màn hình dashboard để bấm ra báo cáo CDU, để tôi có thể nhận CDU.\"",
+      "\"Là một học viên, tôi cần xem chi tiết những khoá học mình đã hoàn thành, để có thể nhận CDU.\"",
+      "\"Là một product owner, tôi muốn có báo cáo cho từng học viên kèm thông tin CDU.\""
+    ],
+    "optionsEn": [
+      "\"As a developer I need to produce a report for CDUs.\"",
+      "\"As a learner I want a CDU button on my dashboard screen to click for a CDU report so I can claim CDUs.\"",
+      "\"As a learner I need to view details of which courses I have completed so I can claim CDUs.\"",
+      "\"As a product owner I want a report for each student with CDU information.\""
+    ],
+    "answer": 2,
+    "explanation": "Hai lỗi hay gặp: đặt vai trò nội bộ vào chỗ người dùng cuối, và mô tả giao diện thay vì mục tiêu.",
+    "explanationEn": "Two frequent errors: putting an internal role in the end-user slot, and describing the interface instead of the goal.",
+    "optionExplanations": [
+      "User story không nói về việc developer cần làm gì — trừ khi đội đang xây sản phẩm mà developer chính là khách hàng cuối.",
+      "Có đủ ai/gì/vì sao, nhưng nó chốt cứng CHI TIẾT MÀN HÌNH — user story tập trung vào mục tiêu người dùng, không vào giao diện.",
+      "Đủ ba thành phần và không có thành phần thừa: người dùng cuối, nhu cầu thật, và lý do — không chốt giải pháp.",
+      "User story không nói về việc product owner muốn gì — trừ khi PO chính là khách hàng cuối của sản phẩm."
+    ],
+    "optionExplanationsEn": [
+      "User stories are not about what developers need to do — unless the team is building a product where developers are the end customers.",
+      "It has who/what/why, but it fixes the SCREEN DETAIL — user stories focus on user goals and actions, not the interface.",
+      "All three parts and nothing extra: the end user, a real need, and the reason — without fixing the solution.",
+      "User stories are not about what product owners want — unless POs are the end customers of the product."
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Ba chữ C của một user story là gì?",
+    "questionEn": "What are the three C's of a user story?",
+    "options": [
+      "Card, conversation và confirmation",
+      "Context, customer và confirmation",
+      "Customer, conversation và confirmation",
+      "Customer, card và conversation"
+    ],
+    "optionsEn": [
+      "Card, conversation, and confirmation",
+      "Context, customer, and confirmation",
+      "Customer, conversation, and confirmation",
+      "Customer, card, and conversation"
+    ],
+    "answer": 0,
+    "explanation": "Mọi phương án nhiễu đều thay một hoặc hai chữ bằng \"customer\" hoặc \"context\". Đếm từng từ.",
+    "explanationEn": "Every distractor swaps one or two words for \"customer\" or \"context\". Count them word by word.",
+    "optionExplanations": [
+      "Đúng cả ba: tấm thẻ ghi story, cuộc trò chuyện làm rõ nó, và sự xác nhận rằng nó đã xong.",
+      "Sai HAI trong ba — cả \"context\" lẫn \"customer\" đều không thuộc ba chữ C.",
+      "Sai MỘT trong ba — \"customer\" đứng thay chỗ của \"card\".",
+      "Sai MỘT trong ba — \"customer\" đứng thay chỗ của \"confirmation\"."
+    ],
+    "optionExplanationsEn": [
+      "All three correct: the card that holds the story, the conversation that clarifies it, and the confirmation that it is done.",
+      "TWO of the three are wrong — neither \"context\" nor \"customer\" is one of the three C's.",
+      "ONE of the three is wrong — \"customer\" has taken the place of \"card\".",
+      "ONE of the three is wrong — \"customer\" has taken the place of \"confirmation\"."
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Một BA Agile đang kiểm tra xem mỗi user story có chất lượng cao không. Chiến lược tốt nhất để đảm bảo user story chất lượng cao là gì?",
+    "questionEn": "An agile BA is verifying that each user story is high quality. What is the best strategy for ensuring high-quality user stories?",
+    "options": [
+      "Đặc tả chi tiết kỹ thuật và các thành phần cần cập nhật",
+      "Giao cho developer quyết định story có chất lượng tốt hay không",
+      "Tuân theo bộ tiêu chí INVEST",
+      "Đảm bảo story được giữ nguyên đúng như lúc được gửi tới"
+    ],
+    "optionsEn": [
+      "Specify the technical details and components to be updated",
+      "Task developers with determining if it is good quality",
+      "Follow the INVEST criteria",
+      "Make sure it is stated exactly as submitted"
+    ],
+    "answer": 2,
+    "explanation": "INVEST là câu trả lời mặc định cho mọi câu hỏi về CHẤT LƯỢNG story. Ba chữ C thì trả lời story GỒM những gì.",
+    "explanationEn": "INVEST is the default answer to any story QUALITY question. The three C's answer what a story is MADE OF.",
+    "optionExplanations": [
+      "Đây hoàn toàn không phải một khía cạnh của user story tốt — story nói về nhu cầu người dùng, không về thành phần kỹ thuật.",
+      "Developer có thể chưa được đào tạo hoặc chưa có kỹ năng đánh giá thế nào là một user story chất lượng cao.",
+      "INVEST — Independent, Negotiable, Valuable, Estimable, Small, Testable — là bộ khung sẵn có để kiểm tra chất lượng story.",
+      "Phần lớn story được gửi tới đội đều cần tinh chỉnh thêm để đạt chất lượng tốt."
+    ],
+    "optionExplanationsEn": [
+      "This is not an aspect of a good user story at all — a story is about a user need, not technical components.",
+      "Developers may or may not be trained and skilled in what a high-quality user story is.",
+      "INVEST — Independent, Negotiable, Valuable, Estimable, Small, Testable — is the ready-made construct for story quality.",
+      "Most stories submitted to a team need refinement to reach good quality."
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "Nikhil chia sẻ với đội phát triển và bên liên quan một bộ nguyên mẫu người dùng để mọi người đồng cảm với các nhóm người dùng khác nhau. Đội bàn về từng user story cùng từng nguyên mẫu trong iteration. Nikhil đang dùng kỹ thuật gì?",
+    "questionEn": "Nikhil shares with the development team and stakeholders a set of user archetypes so everyone can empathise with the various users. The team discusses each user story alongside each archetype during the iteration. Which technique is Nikhil using?",
+    "options": [
+      "Storyboarding",
+      "Personas",
+      "Story mapping",
+      "User story"
+    ],
+    "optionsEn": [
+      "Storyboarding",
+      "Personas",
+      "Story mapping",
+      "User stories"
+    ],
+    "answer": 1,
+    "explanation": "Personas trả lời câu hỏi AI. Đó cũng là kỹ thuật tầm sáng kiến gắn chặt nhất với nguyên tắc \"nghĩ như khách hàng\".",
+    "explanationEn": "Personas answer the WHO question. They are also the initiative-horizon technique most associated with \"think as a customer\".",
+    "optionExplanations": [
+      "Storyboarding dùng để hiểu người dùng THỰC SỰ TƯƠNG TÁC với giải pháp ra sao, không phải để mô tả họ là ai.",
+      "\"Nguyên mẫu người dùng\" là chính định nghĩa của personas — chúng tạo hiểu biết chung về AI là khách hàng.",
+      "Story mapping là hình trực quan để hiểu chức năng sản phẩm và luồng người dùng, không phải để mô tả nhóm người dùng.",
+      "User story là một biểu diễn của nhu cầu khách hàng; nó không phải bộ nguyên mẫu mô tả người dùng."
+    ],
+    "optionExplanationsEn": [
+      "Storyboarding is used to understand how users actually INTERACT with a solution, not to describe who they are.",
+      "\"User archetypes\" is the definition of personas — they create shared understanding of WHO the customer is.",
+      "Story mapping is a visual for understanding product functionality and user flow, not for describing user types.",
+      "A user story is a representation of a customer need; it is not a set of archetypes describing users."
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Kỹ thuật nào ở tầm sáng kiến được dùng để tạo hiểu biết chung về AI là khách hàng — thường là hạt nhân khi \"nghĩ như khách hàng\"?",
+    "questionEn": "Which initiative-horizon technique is used to create a shared understanding of WHO the customer is — frequently core to \"thinking as a customer\"?",
+    "options": [
+      "Storyboarding",
+      "Personas",
+      "Behavior Driven Development",
+      "Job story"
+    ],
+    "optionsEn": [
+      "Storyboarding",
+      "Personas",
+      "Behavior Driven Development",
+      "Job Stories"
+    ],
+    "answer": 1,
+    "explanation": "Ranh giới cần nhớ: personas = AI; job story = TÌNH HUỐNG + ĐỘNG CƠ; storyboarding = TRẢI NGHIỆM DIỄN RA THẾ NÀO.",
+    "explanationEn": "The boundary to remember: personas = WHO; job story = SITUATION + MOTIVATION; storyboarding = HOW THE EXPERIENCE UNFOLDS.",
+    "optionExplanations": [
+      "Storyboarding thiên về trải nghiệm người dùng diễn ra thế nào, hơn là người dùng đó là ai.",
+      "Personas giúp ta hiểu khách hàng và nghĩ như khách hàng — chúng trả lời trực tiếp câu hỏi AI.",
+      "BDD giúp ta với ví dụ và kịch bản, và nó thuộc tầm bàn giao nhiều hơn.",
+      "Job story không thực sự tập trung vào việc khách hàng là ai; nó tập trung vào động cơ và tình huống của người dùng."
+    ],
+    "optionExplanationsEn": [
+      "Storyboarding is more about how the user experience unfolds than about who the user is.",
+      "Personas help us understand customers and think as a customer — they answer the WHO question directly.",
+      "BDD helps us with examples and scenarios, and it sits more at the delivery horizon.",
+      "Job stories are not really focused on who the customer is; they focus on the user's motivation and situation."
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Một BA Agile đang làm việc với đội nghiệp vụ, dùng kỹ thuật tập trung vào tình huống của người dùng, động cơ của họ, và kết quả họ mong muốn. BA đang dùng kỹ thuật gì?",
+    "questionEn": "An agile BA is working with a business team using a technique focused on the user's situation, their motivation, and the outcome they desire. Which technique is the BA using?",
+    "options": [
+      "User Story",
+      "Story Spike",
+      "Job Story",
+      "Story Map"
+    ],
+    "optionsEn": [
+      "User Story",
+      "Story Spikes",
+      "Job Story",
+      "Story Map"
+    ],
+    "answer": 2,
+    "explanation": "Khi đề bài nhấn mạnh TÌNH HUỐNG và ĐỘNG CƠ, đáp án là job story chứ không phải user story.",
+    "explanationEn": "When the stem emphasises SITUATION and MOTIVATION, the answer is a job story rather than a user story.",
+    "optionExplanations": [
+      "User story cung cấp được phần nhiều bối cảnh này, nhưng nó không phải đáp án tốt nhất khi tình huống và động cơ được nêu rõ.",
+      "Spike là nỗ lực có giới hạn thời gian để loại bỏ sự mơ hồ; nó không tập trung vào các khía cạnh này của người dùng.",
+      "Job story được định nghĩa đúng bằng ba yếu tố này: tình huống, động cơ và kết quả mong muốn.",
+      "Story map không tập trung vào động cơ của người dùng; nó tổ chức theo luồng công việc và mức ưu tiên."
+    ],
+    "optionExplanationsEn": [
+      "A user story provides much of this context, but it is not the best answer when situation and motivation are named explicitly.",
+      "A spike is a time-boxed effort to remove ambiguity; it does not focus on these aspects of the user.",
+      "A job story is defined by exactly these three: situation, motivation and desired outcome.",
+      "Story maps do not focus on user motivation; they organise by workflow and priority."
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Kỹ thuật nào để diễn đạt hạng mục backlog, tương tự user story nhưng soi vào động cơ của người dùng và nhiều bối cảnh hơn về tình huống của họ?",
+    "questionEn": "Which technique expresses backlog items similarly to a user story, but with a lens on user motivation and more context about the user's situation?",
+    "options": [
+      "Acceptance criteria",
+      "Task",
+      "Storyboarding",
+      "Job story"
+    ],
+    "optionsEn": [
+      "Acceptance criteria",
+      "Task",
+      "Storyboarding",
+      "Job story"
+    ],
+    "answer": 3,
+    "explanation": "Cùng nội dung với câu trước, hỏi theo chiều ngược. Job story = user story + tình huống + động cơ.",
+    "explanationEn": "The same content as the previous question, asked from the other direction. Job story = user story + situation + motivation.",
+    "optionExplanations": [
+      "Acceptance criteria cung cấp rất ít thông tin về động cơ hay bối cảnh của người dùng — nó định nghĩa ranh giới của story.",
+      "Một task không giúp ta hiểu động cơ hay bối cảnh của người dùng; nó chỉ mô tả công việc cần làm.",
+      "Storyboarding không cung cấp động cơ và bối cảnh của người dùng; nó phác hoạ các bước của trải nghiệm.",
+      "Job story làm tốt sẽ cho ta thông tin về động cơ và bối cảnh của người dùng — đó là điểm khác biệt so với user story."
+    ],
+    "optionExplanationsEn": [
+      "Acceptance criteria provide very little information about user motivation or context — they define the story's boundaries.",
+      "A task does not help us understand user motivation or context; it merely names work to be done.",
+      "Storyboarding does not provide user motivation and context; it sketches the steps of the experience.",
+      "A job story done well gives us information about user motivation and context — that is what differentiates it from a user story."
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Mario đưa cho đội acceptance criteria của một user story viết theo cú pháp Gherkin. Trong cú pháp này, WHEN đại diện cho điều gì?",
+    "questionEn": "Mario shows the team acceptance criteria for a user story written in Gherkin syntax. In this syntax, what does WHEN represent?",
+    "options": [
+      "Các kịch bản",
+      "Phản hồi của hệ thống",
+      "Hành động của người dùng",
+      "Các điều kiện"
+    ],
+    "optionsEn": [
+      "The scenarios",
+      "The system response",
+      "The user action",
+      "The conditions"
+    ],
+    "answer": 2,
+    "explanation": "Ba từ khoá, ba vai: GIVEN = điều kiện, WHEN = hành động người dùng, THEN = phản hồi hệ thống. Cả ba ghép lại là một scenario.",
+    "explanationEn": "Three keywords, three roles: GIVEN = conditions, WHEN = the user's action, THEN = the system response. All three together make a scenario.",
+    "optionExplanations": [
+      "Kịch bản là GIVEN, WHEN và THEN ghép lại với nhau, chứ không riêng phần WHEN.",
+      "Phản hồi của hệ thống hoặc sản phẩm là nơi phần THEN đứng.",
+      "Phần WHEN mô tả hành động người dùng thực hiện khi sử dụng sản phẩm.",
+      "Điều kiện và tiền điều kiện thuộc phần GIVEN của cú pháp Gherkin."
+    ],
+    "optionExplanationsEn": [
+      "A scenario is the given, when and then put together, not the WHEN part alone.",
+      "The system or product response is where the THEN part goes.",
+      "The WHEN part describes the action the user takes using the product.",
+      "Conditions and preconditions belong to the GIVEN part of the Gherkin syntax."
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Loại spike nào giúp tách một user story lớn thành nhiều story nhỏ, hoặc xác định nơi rủi ro và độ phức tạp xuất hiện?",
+    "questionEn": "Which type of spike helps split a large user story into smaller ones, or identify where risk and complexity occur?",
+    "options": [
+      "Research",
+      "Technical",
+      "Exploratory",
+      "Functional"
+    ],
+    "optionsEn": [
+      "Research",
+      "Technical",
+      "Exploratory",
+      "Functional"
+    ],
+    "answer": 3,
+    "explanation": "Ba loại spike: functional (tách story, tìm rủi ro), technical (khả thi, thiết kế), exploratory (rủi ro và tác động).",
+    "explanationEn": "Three spike types: functional (splitting stories, finding risk), technical (feasibility, design), exploratory (risks and impacts).",
+    "optionExplanations": [
+      "Research KHÔNG phải một loại spike — nó là hoạt động phổ biến được làm bên trong một spike.",
+      "Technical spike nói về tính khả thi và hiểu biết về thiết kế kỹ thuật, không về việc tách story.",
+      "Exploratory spike nói về khám phá rủi ro và tác động, không về việc tách một story lớn.",
+      "Functional spike đúng là loại spike dùng để tách story lớn và chỉ ra chỗ có rủi ro, độ phức tạp."
+    ],
+    "optionExplanationsEn": [
+      "Research is NOT a type of spike — it is a common activity done inside a spike.",
+      "A technical spike is about feasibility and technical design understanding, not about splitting stories.",
+      "An exploratory spike is about exploring risks and impacts, not about splitting a large story.",
+      "The functional spike is the type used to split large stories and identify where risk and complexity occur."
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Đâu KHÔNG phải một loại spike?",
+    "questionEn": "What is NOT a type of spike?",
+    "options": [
+      "Design",
+      "Exploratory",
+      "Functional",
+      "Technical"
+    ],
+    "optionsEn": [
+      "Design",
+      "Exploratory",
+      "Functional",
+      "Technical"
+    ],
+    "answer": 0,
+    "explanation": "Hai cái tên hay bị bịa ra: \"research spike\" và \"design spike\". Cả hai đều không tồn tại.",
+    "explanationEn": "Two names commonly invented: \"research spike\" and \"design spike\". Neither exists.",
+    "optionExplanations": [
+      "Design không phải một loại spike, dù những gì học được từ một spike có thể ảnh hưởng mạnh tới quyết định thiết kế.",
+      "Đây LÀ một loại spike — câu hỏi đang hỏi cái nào KHÔNG phải.",
+      "Đây LÀ một loại spike — câu hỏi đang hỏi cái nào KHÔNG phải.",
+      "Đây LÀ một loại spike — câu hỏi đang hỏi cái nào KHÔNG phải."
+    ],
+    "optionExplanationsEn": [
+      "Design is not a type of spike, though the learnings from a spike may heavily influence design decisions.",
+      "This IS a type of spike — the question is asking which one is not.",
+      "This IS a type of spike — the question is asking which one is not.",
+      "This IS a type of spike — the question is asking which one is not."
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Phát biểu sau mô tả kỹ thuật nào? \"Một nỗ lực có giới hạn thời gian dùng để điều tra, nghiên cứu hoặc làm phần việc cần thiết nhằm loại bỏ sự mơ hồ và ước lượng, bàn giao được một hạng mục backlog.\"",
+    "questionEn": "Which technique does this describe? \"A time-boxed effort used to do the investigation, research, or work needed to remove ambiguity and estimate and deliver a backlog item.\"",
+    "options": [
+      "Real options",
+      "Planning workshop",
+      "Backlog refinement",
+      "Spike"
+    ],
+    "optionsEn": [
+      "Real options",
+      "Planning workshop",
+      "Backlog refinement",
+      "Spike"
+    ],
+    "answer": 3,
+    "explanation": "Hai từ khoá chốt spike: \"giới hạn thời gian\" và \"loại bỏ sự mơ hồ\".",
+    "explanationEn": "Two words fix the spike: \"time-boxed\" and \"remove ambiguity\".",
+    "optionExplanations": [
+      "Real options nói về khung thời gian phù hợp để RA QUYẾT ĐỊNH, không phải một nỗ lực điều tra có giới hạn thời gian.",
+      "Planning workshop là buổi lập kế hoạch theo tầm; nó không phải một nỗ lực điều tra để loại bỏ mơ hồ.",
+      "Backlog refinement là hoạt động liên tục phân tích và sắp ưu tiên hạng mục; nó không có giới hạn thời gian như một spike.",
+      "Đúng nguyên văn định nghĩa của spike: có giới hạn thời gian, nhằm loại bỏ mơ hồ để ước lượng và bàn giao được hạng mục."
+    ],
+    "optionExplanationsEn": [
+      "Real options is about the appropriate timeframe in which to MAKE A DECISION, not a time-boxed investigative effort.",
+      "A planning workshop is a horizon-specific planning session; it is not an investigative effort to remove ambiguity.",
+      "Backlog refinement is the continuous activity of analysing and prioritising items; it is not time-boxed the way a spike is.",
+      "The spike definition verbatim: time-boxed, aimed at removing ambiguity so an item can be estimated and delivered."
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Đội đang bàn xem cần những năng lực nào để việc phát hành một sản phẩm mới là xứng đáng. Khái niệm này gọi là gì?",
+    "questionEn": "A team is discussing what capabilities are needed in order to merit releasing a new product. What is this concept called?",
+    "options": [
+      "Most Viable Product",
+      "Minimal Viable Product",
+      "Minimum Value Product",
+      "Most Valuable Product"
+    ],
+    "optionsEn": [
+      "Most Viable Product",
+      "Minimal Viable Product",
+      "Minimum Value Product",
+      "Most Valuable Product"
+    ],
+    "answer": 1,
+    "explanation": "Ba phương án nhiễu chỉ khác nhau ở một từ. Thuật ngữ đúng là MINIMAL Viable Product — không phải Most, không phải Value.",
+    "explanationEn": "The three distractors differ by a single word. The correct term is MINIMAL Viable Product — not Most, not Value.",
+    "optionExplanations": [
+      "Sai tên — không phải thuật ngữ đang được mô tả.",
+      "Đúng tên và đúng nghĩa: lượng chức năng tối thiểu cần có để bắt đầu học hỏi và lấy phản hồi cho các quyết định tiếp theo.",
+      "Sai tên — không phải thuật ngữ đang được mô tả.",
+      "Sai tên — không phải thuật ngữ đang được mô tả."
+    ],
+    "optionExplanationsEn": [
+      "Wrong term — this is not the concept being described.",
+      "Right name and right meaning: the minimal functionality needed to start learning and get feedback that informs further decisions.",
+      "Wrong term — this is not the concept being described.",
+      "Wrong term — this is not the concept being described."
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "Ba bước trong kỹ thuật MVP là gì?",
+    "questionEn": "What are the three steps in the MVP technique?",
+    "options": [
+      "Định nghĩa giải pháp, ghi vào backlog, và xin phê duyệt backlog",
+      "Phân tích backlog, sắp ưu tiên backlog, và lấy ý kiến từ đội",
+      "Xác định vấn đề, xác định tập tính năng tối thiểu, và phân tích những gì học được từ người dùng",
+      "Tạo backlog, rà soát với bên liên quan, và xin phê duyệt từ bên liên quan"
+    ],
+    "optionsEn": [
+      "Define the solution, document it in the backlog, and get the backlog approved",
+      "Analyse the backlog, prioritise the backlog, and get input from the team",
+      "Determine the problem, identify the minimum set of features, and analyse learning from users",
+      "Create the backlog, review with stakeholders, and get approval from stakeholders"
+    ],
+    "answer": 2,
+    "explanation": "Ba phương án sai đều kết thúc ở PHÊ DUYỆT hoặc BACKLOG. Phương án đúng kết thúc ở HỌC ĐƯỢC GÌ.",
+    "explanationEn": "The three wrong options all end at APPROVAL or the BACKLOG. The right one ends at WHAT WAS LEARNED.",
+    "optionExplanations": [
+      "Đây là quy trình backlog-và-phê-duyệt; nó không thể hiện được bản chất học hỏi của MVP.",
+      "Ba hoạt động này không đóng góp gì cho cốt lõi của MVP là học hỏi từ người dùng.",
+      "Đúng ba bước, và chú ý bước cuối: MVP chưa hoàn tất cho tới khi việc học từ người dùng được phân tích.",
+      "Lại là quy trình phê duyệt — đúng khung tư duy phi-Agile mà Agile Extension tránh."
+    ],
+    "optionExplanationsEn": [
+      "This is a backlog-and-approval workflow; it does not support what MVP is about.",
+      "These three activities do not contribute to the essence of MVP, which is learning from users.",
+      "The three steps exactly, and note the last one: an MVP is not complete until the learning from users is analysed.",
+      "Another approval workflow — precisely the non-agile framing the Agile Extension avoids."
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "Vì sao \"research\" bị loại khi câu hỏi hỏi về các loại spike?",
+    "questionEn": "Why is \"research\" eliminated when a question asks about types of spike?",
+    "options": [
+      "Vì nghiên cứu không được phép trong đội Agile",
+      "Vì nghiên cứu là một hoạt động phổ biến được làm BÊN TRONG một spike, không phải một loại spike",
+      "Vì nghiên cứu thuộc tầm chiến lược",
+      "Vì nghiên cứu đã được đổi tên thành exploratory spike"
+    ],
+    "optionsEn": [
+      "Because research is not permitted on an agile team",
+      "Because research is a common activity done INSIDE a spike, not a type of spike",
+      "Because research belongs to the strategy horizon",
+      "Because research was renamed to the exploratory spike"
+    ],
+    "answer": 1,
+    "explanation": "Cùng họ bẫy với \"design spike\": thuật ngữ thật, đặt sai chỗ trong hệ thống phân loại.",
+    "explanationEn": "The same trap family as \"design spike\": a real term placed at the wrong level of the taxonomy.",
+    "optionExplanations": [
+      "Hoàn toàn ngược lại — nghiên cứu là hoạt động bình thường và cần thiết; nó chỉ không phải một LOẠI spike.",
+      "Đúng. Đây là kiểu bẫy \"đúng khái niệm, sai cấp\": research có thật, nhưng nó ở cấp hoạt động chứ không ở cấp phân loại.",
+      "Không có ràng buộc tầm nào ở đây; lý do là research nằm ở cấp hoạt động, không phải một loại spike.",
+      "Không có việc đổi tên; exploratory spike là loại riêng, dùng để khám phá rủi ro và tác động."
+    ],
+    "optionExplanationsEn": [
+      "Quite the opposite — research is normal and necessary work; it simply is not a TYPE of spike.",
+      "Correct. This is the \"right concept, wrong level\" trap: research is real, but it lives at the activity level, not the taxonomy level.",
+      "There is no horizon constraint here; the reason is that research sits at the activity level, not as a spike type.",
+      "No renaming occurred; the exploratory spike is its own type, used to explore risks and impacts."
+    ]
+  },
+  {
+    "id": "q19",
+    "question": "Story elaboration khác story decomposition ở điểm nào?",
+    "questionEn": "How does story elaboration differ from story decomposition?",
+    "options": [
+      "Elaboration bổ sung chi tiết cho một story trước iteration; decomposition phân rã từ goal xuống acceptance criteria",
+      "Elaboration do đội phát triển làm; decomposition do BA làm",
+      "Elaboration diễn ra ở tầm chiến lược; decomposition ở tầm bàn giao",
+      "Elaboration là hình trực quan; decomposition là văn bản"
+    ],
+    "optionsEn": [
+      "Elaboration adds detail to a story before an iteration; decomposition breaks down from goal to acceptance criteria",
+      "Elaboration is done by the development team and decomposition by the BA",
+      "Elaboration happens at the strategy horizon and decomposition at delivery",
+      "Elaboration is visual and decomposition is textual"
+    ],
+    "answer": 0,
+    "explanation": "Bốn kỹ thuật họ story tách theo ĐỘNG TÁC: sắp xếp (mapping), phác hoạ (storyboarding), đi xuống (decomposition), đào sâu (elaboration).",
+    "explanationEn": "The four story-family techniques separate by ACTION: arranging (mapping), sketching (storyboarding), going down (decomposition), going deeper (elaboration).",
+    "optionExplanations": [
+      "Đúng: một bên làm SÂU thêm một hạng mục, một bên đi XUỐNG qua các cấp của cây công việc.",
+      "Ai làm không phải điểm phân biệt; cả hai đều là hoạt động cộng tác giữa BA và đội.",
+      "Sai cả hai vế: elaboration chủ yếu ở tầm bàn giao, còn decomposition được dùng ở cả tầm sáng kiến lẫn bàn giao.",
+      "Hình thức trình bày không phân biệt hai kỹ thuật này; cả hai đều có thể là văn bản, hình vẽ hoặc cả hai."
+    ],
+    "optionExplanationsEn": [
+      "Correct: one goes DEEPER on a single item, the other goes DOWN through the levels of the work tree.",
+      "Who does it is not the distinction; both are collaborative activities between the BA and the team.",
+      "Wrong on both halves: elaboration is mainly delivery-horizon, and decomposition is used at both the initiative and delivery horizons.",
+      "Presentation format does not distinguish them; both can be textual, visual, or both."
+    ]
+  },
+  {
+    "id": "q20",
+    "question": "Vì sao acceptance criteria không phải công cụ tốt để hiểu động cơ của người dùng?",
+    "questionEn": "Why are acceptance criteria a poor tool for understanding user motivation?",
+    "options": [
+      "Vì acceptance criteria luôn được viết bằng cú pháp Gherkin",
+      "Vì chúng xác định RANH GIỚI của một story để kiểm tra và xác nhận, chứ không mô tả vì sao người dùng muốn điều đó",
+      "Vì acceptance criteria do QC viết chứ không do BA viết",
+      "Vì chúng chỉ áp dụng sau khi giải pháp đã được bàn giao"
+    ],
+    "optionsEn": [
+      "Because acceptance criteria are always written in Gherkin syntax",
+      "Because they define the BOUNDARIES of a story for verification and validation, not why the user wants it",
+      "Because acceptance criteria are written by QC rather than the BA",
+      "Because they only apply after the solution has been delivered"
+    ],
+    "answer": 1,
+    "explanation": "Mỗi sản phẩm trong họ này trả lời một câu hỏi khác nhau. Acceptance criteria trả lời THẾ NÀO LÀ XONG, không trả lời VÌ SAO.",
+    "explanationEn": "Each artefact in this family answers a different question. Acceptance criteria answer WHAT IS DONE, not WHY.",
+    "optionExplanations": [
+      "Gherkin là một cách viết phổ biến chứ không bắt buộc, và cú pháp không phải lý do khiến chúng thiếu thông tin về động cơ.",
+      "Đúng. Acceptance criteria trả lời \"thế nào là xong\"; động cơ nằm ở job story hoặc ở vế \"vì sao\" của user story.",
+      "Ai viết không phải vấn đề, và trong thực tế BA thường tham gia; lý do nằm ở mục đích của chúng.",
+      "Acceptance criteria được viết TRƯỚC khi xây, để định nghĩa thế nào là xong; chúng không phải công cụ hậu kiểm."
+    ],
+    "optionExplanationsEn": [
+      "Gherkin is a common format rather than a required one, and the syntax is not why they lack motivation information.",
+      "Correct. Acceptance criteria answer \"what does done mean\"; motivation lives in a job story or in the \"why\" clause of a user story.",
+      "Authorship is not the issue, and in practice the BA is usually involved; the reason lies in their purpose.",
+      "Acceptance criteria are written BEFORE building, to define what done means; they are not a post-delivery tool."
+    ]
+  }
+]

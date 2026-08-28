@@ -1,0 +1,642 @@
+[
+  {
+    "id": "q1",
+    "question": "Một BA Agile ở tầm chiến lược dùng kỹ thuật nào để hiểu khung thời gian phù hợp cho việc ra quyết định?",
+    "questionEn": "Which technique would an agile BA use at the strategy horizon to understand the appropriate timeframe in which to make a decision?",
+    "options": [
+      "Product roadmap",
+      "Value stream mapping",
+      "Planning workshop",
+      "Real options"
+    ],
+    "optionsEn": [
+      "Product roadmap",
+      "Value stream mapping",
+      "Planning workshop",
+      "Real options"
+    ],
+    "answer": 3,
+    "explanation": "Ba phương án sai đều là kỹ thuật thật ở tầm chiến lược, nhưng cả ba đều trả lời câu hỏi CÁI GÌ. Chỉ Real options nói về thời điểm.",
+    "explanationEn": "The three wrong options are all real strategy-horizon techniques, but all three answer a WHAT question. Only Real options is about timing.",
+    "optionExplanations": [
+      "Đây là định nghĩa của Product roadmap: truyền đạt hướng đi tương lai dự kiến của sản phẩm và cải thiện cộng tác giữa các đội.",
+      "Đây là định nghĩa của Value stream mapping: hiểu việc tạo giá trị xuyên suốt toàn bộ trải nghiệm khách hàng.",
+      "Đây là định nghĩa của Planning workshop ở tầm chiến lược: lập kế hoạch phân bổ nguồn lực trên nhiều sáng kiến và tạo hiểu biết chung về mục đích của một sáng kiến mới.",
+      "Real options là kỹ thuật duy nhất trong nhóm này trả lời câu hỏi KHI NÀO: một quyết định có thể trì hoãn có trách nhiệm được bao lâu."
+    ],
+    "optionExplanationsEn": [
+      "This is the Product roadmap definition: communicating the expected future direction of the product and improving collaboration among teams.",
+      "This is the Value stream mapping definition: understanding the creation of value across the whole customer experience.",
+      "This is the strategy-horizon Planning workshop definition: planning resource allocation across multiple initiatives and giving shared understanding of a new initiative's purpose.",
+      "Real options is the only technique in this set that answers a WHEN question: how long a decision can responsibly be deferred."
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Purpose alignment model ở tầm chiến lược được dùng để làm gì?",
+    "questionEn": "The purpose alignment model at the strategy horizon is used to do what?",
+    "options": [
+      "Sắp ưu tiên các sáng kiến tiềm năng và hiểu cơ cấu nguồn lực tối ưu cùng trọng tâm chung của các sáng kiến trên toàn tổ chức",
+      "Hiểu việc tạo ra giá trị xuyên suốt toàn bộ trải nghiệm khách hàng để sắp ưu tiên, lập kế hoạch và tích hợp việc tạo giá trị cùng giảm lãng phí giữa các sáng kiến",
+      "Cung cấp khả năng nhìn thấy tiến độ theo thời gian thực của các sáng kiến trên toàn danh mục, có thể dùng kèm balanced scorecard và value stream map",
+      "Truyền đạt hướng đi tương lai dự kiến của sản phẩm và cải thiện cộng tác giữa các đội ở những sáng kiến khác nhau"
+    ],
+    "optionsEn": [
+      "Prioritise potential initiatives and understand the optimum resourcing mix and overall focus of initiatives across the organisation",
+      "Understand the creation of value across the whole customer experience to prioritise, plan and integrate value creation and waste reduction between initiatives",
+      "Provide real-time visibility of the progress of initiatives across the portfolio, possibly with balanced scorecards and value stream maps",
+      "Communicate the expected future direction of the product and improve collaboration among teams in different initiatives"
+    ],
+    "answer": 0,
+    "explanation": "Bốn phương án là bốn định nghĩa thật, mỗi định nghĩa của một kỹ thuật khác nhau. Cách duy nhất là nhớ cụm từ đặc trưng.",
+    "explanationEn": "All four options are real definitions, each of a different technique. The only way through is the distinctive phrase.",
+    "optionExplanations": [
+      "\"Cơ cấu nguồn lực tối ưu\" là cụm từ đặc trưng chỉ thuộc về purpose alignment model.",
+      "Đây là định nghĩa của Value stream mapping: hiểu việc tạo giá trị xuyên suốt toàn bộ trải nghiệm khách hàng.",
+      "Đây là định nghĩa của Portfolio Kanban: khả năng nhìn thấy tiến độ theo thời gian thực của các sáng kiến trên toàn danh mục.",
+      "Đây là định nghĩa của Product roadmap: truyền đạt hướng đi tương lai dự kiến của sản phẩm và cải thiện cộng tác giữa các đội."
+    ],
+    "optionExplanationsEn": [
+      "\"Optimum resourcing mix\" is the distinctive phrase that belongs only to the purpose alignment model.",
+      "This is the Value stream mapping definition: understanding the creation of value across the whole customer experience.",
+      "This is the Portfolio Kanban definition: real-time visibility of the progress of initiatives across the portfolio.",
+      "This is the Product roadmap definition: communicating the expected future direction of the product and improving collaboration among teams."
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Kỹ thuật nào ở tầm chiến lược được dùng để sắp ưu tiên phân bổ nguồn lực và tăng tốc độ học hỏi của tổ chức?",
+    "questionEn": "Which technique at the strategy horizon is used to prioritise the allocation of resources and increase the speed of organisational learning?",
+    "options": [
+      "Minimal viable product",
+      "Product roadmap",
+      "Portfolio Kanban",
+      "Relative estimating"
+    ],
+    "optionsEn": [
+      "Minimal viable product",
+      "Product roadmap",
+      "Portfolio Kanban",
+      "Relative estimating"
+    ],
+    "answer": 0,
+    "explanation": "\"Tăng tốc độ học hỏi của tổ chức\" là cụm từ gắn riêng với MVP ở tầm chiến lược.",
+    "explanationEn": "\"Increase the speed of organisational learning\" is the phrase tied specifically to MVP at the strategy horizon.",
+    "optionExplanations": [
+      "Ở tầm chiến lược, MVP là công cụ học nhanh: bỏ ít nguồn lực nhất để biết sớm nhất điều gì đáng đầu tư tiếp.",
+      "Đây là định nghĩa của Product roadmap: truyền đạt hướng đi tương lai dự kiến của sản phẩm và cải thiện cộng tác giữa các đội.",
+      "Đây là định nghĩa của Portfolio Kanban: khả năng nhìn thấy tiến độ theo thời gian thực của các sáng kiến trên toàn danh mục.",
+      "Ước lượng tương đối là kỹ thuật của đội ở tầm sáng kiến/bàn giao, không phải công cụ phân bổ nguồn lực ở tầm chiến lược."
+    ],
+    "optionExplanationsEn": [
+      "At the strategy horizon, MVP is a fast-learning instrument: the least resource spent to learn soonest what is worth investing in next.",
+      "This is the Product roadmap definition: communicating the expected future direction of the product and improving collaboration among teams.",
+      "This is the Portfolio Kanban definition: real-time visibility of the progress of initiatives across the portfolio.",
+      "Relative estimating is a team technique at the initiative/delivery horizons, not a strategy-horizon resource-allocation tool."
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Một BA Agile đang soạn Vision Statement phản ánh góc nhìn của lãnh đạo nghiệp vụ về kết quả mong muốn của sáng kiến. Định nghĩa đúng nhất của Vision Statement là gì?",
+    "questionEn": "An agile BA is drafting a Vision Statement to reflect the business leader's view of the desired outcome of an initiative. What is the best definition of a Vision Statement?",
+    "options": [
+      "Một tài liệu chính thức mô tả đầy đủ và chi tiết mục tiêu, phạm vi và lợi ích kỳ vọng",
+      "Một tuyên bố ngắn gọn về ngân sách, lịch trình và kế hoạch dự án",
+      "Một tuyên bố ngắn gọn về mục tiêu, phạm vi và lợi ích kỳ vọng",
+      "Một tài liệu project charter để khởi động dự án"
+    ],
+    "optionsEn": [
+      "A formal document with robust descriptions of goals, scope, and expected benefits",
+      "A concise statement of the budget, schedule, and project plan",
+      "A concise statement of goals, scope, and expected benefits",
+      "A project charter document to initiate the project"
+    ],
+    "answer": 2,
+    "explanation": "Hai trục để chọn: NGẮN GỌN (loại tài liệu chính thức và charter) và NỘI DUNG mục tiêu/phạm vi/lợi ích (loại ngân sách và lịch).",
+    "explanationEn": "Two axes decide it: CONCISE (rules out the formal document and the charter) and CONTENT of goals/scope/benefits (rules out budget and schedule).",
+    "optionExplanations": [
+      "Một tài liệu chính thức dày đặc thông tin không phải cách làm việc Agile điển hình — vấn đề nằm ở chữ \"đầy đủ, chi tiết\".",
+      "Ngắn gọn thì đúng, nhưng NỘI DUNG sai: tầm nhìn nói về mục tiêu và lợi ích, không phải ngân sách và lịch.",
+      "Đúng cả hình thức lẫn nội dung: ít chữ, thường kèm hình ảnh, nói về mục tiêu, một phần phạm vi và lợi ích.",
+      "Nghe rất hợp lý, nhưng project charter là di sản của cách làm việc cũ; ở đây không cần cả một charter."
+    ],
+    "optionExplanationsEn": [
+      "A dense formal document is not a typical agile way of working — the problem is the words \"robust descriptions\".",
+      "Concise is right but the CONTENT is wrong: a vision is about goals and benefits, not budget and schedule.",
+      "Right in both form and content: few words, usually with a visual, covering goals, some scope and benefits.",
+      "It sounds logical, but a project charter is left over from older ways of working; an entire charter is not needed here."
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Một BA Agile đang điều phối buổi Visioning cùng đội và các bên liên quan. Ví dụ nào KHÔNG phải một chỉ số tác động (impact metric) tốt?",
+    "questionEn": "An agile BA is facilitating a visioning exercise with the team and stakeholders. Which example would NOT make a good impact metric?",
+    "options": [
+      "Triển khai một bản nâng cấp cho phần mềm",
+      "Tăng số lượt mua trên mỗi khách hàng",
+      "Giảm thời gian hoàn tất một đơn đăng ký",
+      "Tạo được sự trung thành và khách quay lại"
+    ],
+    "optionsEn": [
+      "To implement an upgrade to the software",
+      "To increase the number of purchases per customer",
+      "To reduce the time it takes to complete an application",
+      "To create loyalty and repeat visitors"
+    ],
+    "answer": 0,
+    "explanation": "Quy tắc gọn: chỉ số mô tả thứ đội sẽ XÂY thì không bao giờ là chỉ số tác động. Tác động là thay đổi ở phía khách hàng.",
+    "explanationEn": "The tidy rule: a metric describing what the team will BUILD is never an impact metric. Impact is a change on the customer's side.",
+    "optionExplanations": [
+      "Đây là ĐẦU RA đội sẽ tạo ra, không phải tác động lên khách hàng — nó không hướng khách hàng và không hướng giá trị.",
+      "Đây LÀ chỉ số tác động tốt — nó mô tả thay đổi hành vi khách hàng; chỉ cần thêm baseline và giá trị mục tiêu.",
+      "Đây LÀ chỉ số tác động tốt — nó mô tả thay đổi trải nghiệm khách hàng; chỉ cần thêm baseline và giá trị mục tiêu.",
+      "Đây LÀ chỉ số tác động tốt — nó mô tả thay đổi hành vi khách hàng; chỉ cần thêm baseline và giá trị mục tiêu."
+    ],
+    "optionExplanationsEn": [
+      "This is an OUTPUT the team will produce, not an impact on a customer — it is neither customer- nor value-focused.",
+      "This IS a good impact metric — it describes a change in customer behaviour; it just needs a baseline and a goal value.",
+      "This IS a good impact metric — it describes a change in customer experience; it just needs a baseline and a goal value.",
+      "This IS a good impact metric — it describes a change in customer behaviour; it just needs a baseline and a goal value."
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Planning workshop ở tầm chiến lược tập trung vào điều gì?",
+    "questionEn": "What do planning workshops at the strategy horizon focus on?",
+    "options": [
+      "Lập kế hoạch thứ tự các feature và kế hoạch release",
+      "Lập kế hoạch chi tiết cho iteration",
+      "Tinh chỉnh user story",
+      "Mục tiêu tổ chức, các chỉ số để đạt mục tiêu đó, và những sáng kiến có thể tạo giá trị hướng tới chúng"
+    ],
+    "optionsEn": [
+      "Planning the order of features and release plans",
+      "Planning iteration details",
+      "Refining user stories",
+      "Organisational goals, metrics to achieve those goals, and initiatives that can deliver value toward them"
+    ],
+    "answer": 3,
+    "explanation": "Cùng một tên kỹ thuật ở ba tầm. Đơn vị công việc trong phương án cho biết tầm: mục tiêu → chiến lược, feature → sáng kiến, task → bàn giao.",
+    "explanationEn": "Same technique name at three horizons. The unit of work in the option tells you which: goals → strategy, features → initiative, tasks → delivery.",
+    "optionExplanations": [
+      "Đây là planning workshop ở tầm SÁNG KIẾN.",
+      "Đây là planning workshop ở tầm BÀN GIAO.",
+      "Việc này diễn ra trong backlog refinement chứ không phải trong một planning workshop, ở bất kỳ tầm nào.",
+      "Đúng ba thứ của tầm chiến lược: mục tiêu, chỉ số đo mục tiêu, và sáng kiến nào chuyển được giá trị về phía chúng."
+    ],
+    "optionExplanationsEn": [
+      "This is a planning workshop at the INITIATIVE horizon.",
+      "This is a planning workshop at the DELIVERY horizon.",
+      "This happens in backlog refinement rather than in a planning workshop, at any horizon.",
+      "Exactly the strategy horizon's three: goals, the metrics that measure them, and which initiatives move value toward them."
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Bradley đang tìm cách tránh lãng phí bằng việc xác định feature nào phù hợp nhất để thoả mãn nhu cầu. Anh điều phối cuộc thảo luận và phân tích xem đặc tính sản phẩm nào sẽ là yếu tố khác biệt và thúc đẩy sự hài lòng của khách hàng. Anh đang dùng kỹ thuật nào?",
+    "questionEn": "Bradley is working to avoid waste by determining which features are most relevant to satisfying the need. He facilitates a conversation and analysis of which product characteristics will be a differentiator and drive customer satisfaction. Which technique is he using?",
+    "options": [
+      "Portfolio Kanban",
+      "Value modeling",
+      "Impact mapping",
+      "Phân tích Kano (Kano analysis)"
+    ],
+    "optionsEn": [
+      "Portfolio Kanban",
+      "Value modeling",
+      "Impact mapping",
+      "Kano analysis"
+    ],
+    "answer": 3,
+    "explanation": "Kano là kỹ thuật duy nhất trong nhóm này phân loại đặc tính sản phẩm theo mức tác động lên sự hài lòng của khách hàng.",
+    "explanationEn": "Kano is the only technique in this set that classifies product characteristics by their effect on customer satisfaction.",
+    "optionExplanations": [
+      "Portfolio Kanban là công cụ nhìn tiến độ trên toàn danh mục, không phân tích đặc tính sản phẩm nào tạo khác biệt.",
+      "Value modeling mô hình hoá giá trị, nhưng nó không có trục \"yếu tố khác biệt và sự hài lòng\" đặc trưng của Kano.",
+      "Impact map nối mục tiêu tổ chức với sản phẩm bàn giao qua tác nhân và tác động; nó không phân loại đặc tính theo mức hài lòng.",
+      "Ba dấu hiệu cùng xuất hiện — yếu tố khác biệt, sự hài lòng của khách hàng, và tránh lãng phí công vào tính năng — đều là đặc trưng của Kano."
+    ],
+    "optionExplanationsEn": [
+      "Portfolio Kanban is a portfolio progress-visibility tool; it does not analyse which product characteristics differentiate.",
+      "Value modeling models value, but it lacks the \"differentiator and satisfaction\" axis that characterises Kano.",
+      "An impact map links organisational goals to deliverables via actors and impacts; it does not classify characteristics by satisfaction.",
+      "Three cues appear together — differentiator, customer satisfaction, and avoiding wasted effort on features — all characteristic of Kano."
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "Một BA Agile đang điều phối một cách tiếp cận nhẹ nhàng để vừa thấy bức tranh lớn vừa thấy sản phẩm bàn giao cụ thể, gắn kết mục tiêu tổ chức và giữ mọi bên liên quan tập trung vào VÌ SAO thay vì chỉ vào tính năng. Kỹ thuật nào là một hình trực quan phân rã mục tiêu tổ chức thành sản phẩm bàn giao cụ thể?",
+    "questionEn": "An agile BA is facilitating a lightweight approach that shows both the big picture and the specific deliverables, aligns organisational goals, and keeps stakeholders focused on the WHY instead of just the features. Which technique is a visual map that breaks organisational goals down into specific deliverables?",
+    "options": [
+      "Impact map",
+      "Business value map",
+      "Value stream map",
+      "User story map"
+    ],
+    "optionsEn": [
+      "Impact map",
+      "Business value map",
+      "Value stream map",
+      "User story map"
+    ],
+    "answer": 0,
+    "explanation": "Chữ \"VÌ SAO\" cộng \"mục tiêu tổ chức\" là dấu hiệu của impact map. Lưu ý \"business value map\" là tên hoàn toàn bịa.",
+    "explanationEn": "\"WHY\" plus \"organisational goals\" is the impact map signature. Note that \"business value map\" is a wholly invented name.",
+    "optionExplanations": [
+      "Đúng mô tả của impact map: nhẹ, trực quan, đi từ mục tiêu tổ chức xuống sản phẩm bàn giao và giữ trọng tâm ở chữ VÌ SAO.",
+      "Đây KHÔNG phải một kỹ thuật trong Agile Extension to the BABOK — nó là một cái tên bịa ra, thấy là loại.",
+      "Value stream map mô tả dòng tạo giá trị qua trải nghiệm khách hàng, nhưng nó không lấy mục tiêu tổ chức và chữ VÌ SAO làm trục.",
+      "User story map có bức tranh lớn, nhưng nó tổ chức theo luồng công việc của người dùng, không tập trung vào VÌ SAO và mục tiêu tổ chức."
+    ],
+    "optionExplanationsEn": [
+      "This is the impact map exactly: lightweight, visual, running from organisational goals down to deliverables and holding the focus on WHY.",
+      "This is NOT a technique in the Agile Extension to the BABOK — it is an invented name; eliminate on sight.",
+      "A value stream map describes the flow of value through the customer experience, but it is not organised around organisational goals and the WHY.",
+      "A user story map has the big picture, but it is organised by the user's workflow and is not focused on the WHY and organisational goals."
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Các thành phần chính của một Impact Map là gì?",
+    "questionEn": "What are the key elements of an Impact Map?",
+    "options": [
+      "Impact, component, feature và story",
+      "Epic, theme, feature và story",
+      "Kế hoạch chiến lược, release, sprint và story",
+      "Goal, actors, impacts và deliverables"
+    ],
+    "optionsEn": [
+      "Impacts, components, features, and stories",
+      "Epics, themes, features, and stories",
+      "Strategic plans, releases, sprints, and stories",
+      "The goal, actors, impacts, and deliverables"
+    ],
+    "answer": 3,
+    "explanation": "Nhớ chuỗi Goal → Actors → Impacts → Deliverables. Ba phương án nhiễu đều là từ vựng Agile thật ghép sai tổ hợp.",
+    "explanationEn": "Remember the chain Goal → Actors → Impacts → Deliverables. All three distractors are real agile vocabulary in the wrong combination.",
+    "optionExplanations": [
+      "Chỉ có \"impact\" là đúng; ba từ còn lại là từ vựng phân rã công việc, không phải thành phần của impact map.",
+      "Đây là thang phân rã backlog. Có thể tương ứng phần nào với impact map, nhưng không phải thành phần của nó.",
+      "Đây là các mốc lập kế hoạch. Có thể dùng KÈM impact map để lập kế hoạch, nhưng không phải thành phần của nó.",
+      "Đúng bốn thành phần và đúng thứ tự: mục tiêu → ai tác động được → tác động gì → cần bàn giao gì."
+    ],
+    "optionExplanationsEn": [
+      "Only \"impacts\" belongs; the other three are work-breakdown vocabulary, not impact map elements.",
+      "This is the backlog decomposition ladder. It can be correlated with an impact map, but it is not its elements.",
+      "These are planning horizons. They can be used WITH an impact map to help plan, but they are not its elements.",
+      "The four elements in the right order: the goal → who can affect it → what impact → what to deliver."
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Ước lượng tương đối (relative estimating) là gì?",
+    "questionEn": "What is relative estimating?",
+    "options": [
+      "Một kỹ thuật đưa user story vào công cụ để công cụ sinh ra con số Fibonacci dự đoán làm ước lượng tốt nhất",
+      "Một kỹ thuật mang tính cộng tác, trong đó cuộc đối thoại về kiến thức, kinh nghiệm lịch sử và các giả định là điều then chốt",
+      "Một kỹ thuật mà BA Agile và Scrum Master cùng làm để đảm bảo trình lên lãnh đạo những ước lượng chính xác",
+      "Một kỹ thuật phân tích mà BA Agile và Product Owner dùng để ước lượng theo công thức rồi chuyển cho Scrum Master đưa vào kế hoạch"
+    ],
+    "optionsEn": [
+      "A technique where user stories are fed into a tool that generates a predicted Fibonacci number as the best estimate",
+      "A collaborative technique where dialogue about knowledge, historical experience and assumptions is critical",
+      "A technique the agile BA and Scrum Master work on together to present accurate estimates to leadership",
+      "An analytical technique the agile BA and Product Owner use to estimate by formula and hand to the Scrum Master for the plan"
+    ],
+    "answer": 1,
+    "explanation": "Hai điều luôn đúng về ước lượng tương đối: nó do ĐỘI làm, và nó dựa trên đối thoại chứ không phải công thức hay công cụ.",
+    "explanationEn": "Two things are always true of relative estimating: the TEAM does it, and it rests on dialogue rather than a formula or a tool.",
+    "optionExplanations": [
+      "Công cụ không được dùng theo cách đó trong ước lượng tương đối — không có phép sinh số tự động nào cả.",
+      "Đúng bản chất: giá trị nằm ở cuộc đối thoại của ĐỘI về những gì họ biết, đã trải qua và đang giả định.",
+      "BA và Scrum Master không phải vai trò đưa ra ước lượng; đội mới là người ước lượng công việc của chính họ.",
+      "Ước lượng tương đối không phải kỹ thuật phân tích theo công thức, và BA cùng PO không phải người ước lượng chính."
+    ],
+    "optionExplanationsEn": [
+      "Tools are not used this way in relative estimating — there is no automatic number generation.",
+      "This is its nature: the value is in the TEAM's dialogue about what they know, have experienced and are assuming.",
+      "The BA and Scrum Master are not the roles that provide the estimates; the team estimates its own work.",
+      "Relative estimating is not a formula-driven analytical technique, and the BA and PO are not the key estimators."
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Về mặt thực hành, ước lượng tương đối bao gồm điều gì?",
+    "questionEn": "In practical terms, what does relative estimating entail?",
+    "options": [
+      "Dùng một công thức phức tạp để ước lượng và đi tới con số khả dĩ nhất",
+      "Dùng bậc độ lớn và so sánh hạng mục với những hạng mục đã làm trước đó để phán đoán hạng mục này sẽ mất bao lâu",
+      "Dùng dữ liệu lịch sử áp vào một công thức để xác định ước lượng khả dĩ nhất",
+      "Dùng phán đoán tốt nhất của đội dựa trên kinh nghiệm của họ"
+    ],
+    "optionsEn": [
+      "Use a complex formula to estimate and arrive at the most likely number",
+      "Use order of magnitude and comparison to previously delivered items to judge how long an item will likely take",
+      "Use historical data applied to a formula to determine the most likely estimate",
+      "Use the team's best guess based on their experience"
+    ],
+    "answer": 1,
+    "explanation": "Phương án \"phán đoán tốt nhất của đội\" là bẫy tinh vi nhất: đúng về vai trò nhưng thiếu toàn bộ cơ chế của kỹ thuật.",
+    "explanationEn": "\"The team's best guess\" is the subtlest trap: right about the role but missing the whole mechanism of the technique.",
+    "optionExplanations": [
+      "Ước lượng tương đối không xoay quanh công thức phức tạp — không có phép tính nào ở trung tâm kỹ thuật này.",
+      "Bậc độ lớn và so sánh là hai thuộc tính then chốt — đó chính là chữ \"tương đối\" trong tên kỹ thuật.",
+      "Dữ liệu lịch sử CÓ THỂ được cân nhắc, nhưng nó không phải thành phần chính, và không có công thức nào ở đây.",
+      "Quá mỏng: nó bỏ mất cả phần so sánh với hạng mục đã bàn giao lẫn phần bậc độ lớn — hai thứ làm nên kỹ thuật này."
+    ],
+    "optionExplanationsEn": [
+      "Relative estimating is not about complex formulas — no calculation sits at the centre of the technique.",
+      "Order of magnitude and comparison are the two key attributes — that is exactly what \"relative\" means in the name.",
+      "Historical data MAY be considered, but it is not the main component, and there is no formula involved.",
+      "Too thin: it drops both the comparison to delivered items and the order-of-magnitude aspect — the two things that make the technique."
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Kỹ thuật nào ở tầm sáng kiến được dùng để tạo hiểu biết chung về cách tiếp cận xây dựng giải pháp?",
+    "questionEn": "Which technique at the initiative horizon is used to create a shared understanding of the approach to constructing the solution?",
+    "options": [
+      "Value stream mapping",
+      "Story mapping",
+      "Planning workshop",
+      "Story decomposition"
+    ],
+    "optionsEn": [
+      "Value stream mapping",
+      "Story mapping",
+      "Planning workshop",
+      "Story decomposition"
+    ],
+    "answer": 2,
+    "explanation": "Cả bốn đều là kỹ thuật thật ở tầm sáng kiến. \"Hiểu biết chung về cách tiếp cận\" là công việc của một buổi họp lập kế hoạch.",
+    "explanationEn": "All four are real initiative-horizon techniques. \"Shared understanding of the approach\" is the work of a planning session.",
+    "optionExplanations": [
+      "Ở tầm sáng kiến, value stream mapping xác định các phần của vấn đề hoặc giải pháp và khả năng thay đổi giá trị của chúng.",
+      "Ở tầm sáng kiến, story mapping dùng để khơi gợi và mô hình hoá thông tin về giải pháp, gồm các đặc điểm nổi bật của nó.",
+      "Ở tầm sáng kiến, planning workshop lo thứ tự feature, kế hoạch release và hiểu biết chung về cách xây dựng giải pháp.",
+      "Ở tầm sáng kiến, story decomposition hỗ trợ quyết định bàn giao feature nào, theo thứ tự nào và cần bao nhiêu phần của feature."
+    ],
+    "optionExplanationsEn": [
+      "At the initiative horizon, value stream mapping identifies portions of a problem or solution and their ability to alter value.",
+      "At the initiative horizon, story mapping is used to elicit and model information about a solution, including its notable characteristics.",
+      "At the initiative horizon, a planning workshop handles feature order, the release plan, and shared understanding of how the solution will be built.",
+      "At the initiative horizon, story decomposition supports decisions about which features to deliver, in what order, and how much of each."
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Một BA Agile chuẩn bị cho buổi planning workshop của đội. Hoạt động nào là đầu vào quan trọng cho việc chuẩn bị này?",
+    "questionEn": "A team is having a planning workshop and the agile BA is preparing the team for it. Which activity is an important input to that preparation?",
+    "options": [
+      "Backlog refinement",
+      "Một buổi lập lịch và lập ngân sách",
+      "Một buổi rà soát tài liệu yêu cầu",
+      "Một buổi họp phê duyệt phạm vi"
+    ],
+    "optionsEn": [
+      "Backlog refinement",
+      "A scheduling and budgeting session",
+      "A requirements document review",
+      "A scoping approval meeting"
+    ],
+    "answer": 0,
+    "explanation": "Chuỗi nhân quả cần nhớ: backlog refinement (liên tục) → planning workshop (theo nhịp) → iteration.",
+    "explanationEn": "The causal chain to remember: backlog refinement (continuous) → planning workshop (per cadence) → iteration.",
+    "optionExplanations": [
+      "Backlog refinement là đầu vào then chốt của planning workshop: các hạng mục đã được phân tích, sắp ưu tiên và chuẩn bị sẵn.",
+      "Lịch và ngân sách không phải đầu vào của planning workshop trong bối cảnh Agile.",
+      "Rà soát tài liệu yêu cầu không phải đầu vào trong bối cảnh Agile — yêu cầu được làm rõ dần qua refinement.",
+      "Product vision thì đúng là đầu vào, nhưng một buổi phê duyệt phạm vi lại ngụ ý phạm vi đã chốt cứng."
+    ],
+    "optionExplanationsEn": [
+      "Backlog refinement is the key input to a planning workshop: items already analysed, prioritised and prepared.",
+      "Scheduling and budgeting are not inputs to a planning workshop in an agile context.",
+      "A requirements document review is not an input in an agile context — requirements are clarified progressively through refinement.",
+      "A product vision would be an input, but a scoping approval meeting implies a fixed, signed-off scope."
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Gerald sắp ưu tiên và sắp thứ tự feature cho đội. Việc backlog refinement này diễn ra khi nào?",
+    "questionEn": "Gerald is prioritising and sequencing features for the team. When does this backlog refinement happen?",
+    "options": [
+      "Trong buổi planning workshop của iteration",
+      "Liên tục và nhiều lần trong suốt sáng kiến",
+      "Ở giai đoạn khởi động dự án",
+      "Trong strategy workshop trước khi sáng kiến bắt đầu"
+    ],
+    "optionsEn": [
+      "During the iteration planning workshop",
+      "Ongoing and multiple times throughout the initiative",
+      "At the beginning of project initiation",
+      "During the strategy workshop before the initiative starts"
+    ],
+    "answer": 1,
+    "explanation": "Ba phương án sai đều gắn refinement với MỘT sự kiện. Điểm mấu chốt là nó không phải sự kiện, nó là hoạt động liên tục.",
+    "explanationEn": "The three wrong options each tie refinement to ONE event. The point is that it is not an event; it is a continuous activity.",
+    "optionExplanations": [
+      "Planning có ở đầu mỗi iteration, nhưng mức chi tiết được lập kế hoạch ở đó là task, không phải thứ tự feature.",
+      "Đây là hoạt động liên tục ở cấp sáng kiến — nó không có điểm bắt đầu và kết thúc cố định.",
+      "Có thể diễn ra ở đầu một sáng kiến, nhưng đó không phải bức tranh đầy đủ của khái niệm này.",
+      "Lập kế hoạch có ở tầm chiến lược, nhưng mức được lập kế hoạch ở đó là mục tiêu và sáng kiến, không phải feature."
+    ],
+    "optionExplanationsEn": [
+      "Planning does happen at the start of each iteration, but the level planned there is tasks, not feature ordering.",
+      "This is an ongoing, initiative-level activity — it has no fixed start and end point.",
+      "It may happen at the start of an initiative, but that is not the complete picture of the concept.",
+      "Planning does happen at the strategic horizon, but the level planned there is goals and initiatives, not features."
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Làm sao một BA Agile biết một phần đã triển khai của value stream map mới là hiệu quả?",
+    "questionEn": "How does an agile BA know if an implemented increment of a new value stream map is effective?",
+    "options": [
+      "Bằng cách đếm số feature đã bàn giao",
+      "Bằng cách đo xem từng phần đã thay đổi đang cải thiện value stream tổng thể ra sao",
+      "Bằng cách hỏi khách hàng nghĩ gì",
+      "Bằng cách báo cáo các cột mốc đã đạt"
+    ],
+    "optionsEn": [
+      "By counting the number of features delivered",
+      "By measuring how each changed piece is improving the value stream overall",
+      "By asking customers what they think",
+      "By reporting on the milestones met"
+    ],
+    "answer": 1,
+    "explanation": "Ba phương án sai đều đo ĐẦU RA hoặc ý kiến. Chỉ một phương án đo GIÁ TRỊ thực sự chảy qua value stream.",
+    "explanationEn": "The three wrong options measure OUTPUT or opinion. Only one measures the VALUE actually flowing through the stream.",
+    "optionExplanations": [
+      "Đây là thước đo ĐẦU RA. Bàn giao nhiều feature không chứng minh được value stream đã tốt lên.",
+      "Mỗi phần thay đổi phải đo được so với thứ được coi là có giá trị — đó là điều phân biệt thước đo giá trị với thước đo đầu ra.",
+      "Phản hồi khách hàng quan trọng, nhưng chỉ khi dùng kèm các thước đo khác gắn với giá trị, không đứng một mình.",
+      "Đây cũng là thước đo đầu ra. Đạt cột mốc chỉ nói rằng kế hoạch được tuân thủ, không nói giá trị đã tăng."
+    ],
+    "optionExplanationsEn": [
+      "This is an OUTPUT measure. Delivering many features does not demonstrate the value stream improved.",
+      "Each changed increment must be measurable against what is considered valuable — that is what separates a value measure from an output measure.",
+      "Customer feedback matters, but only alongside other measures aligned to value, never on its own.",
+      "Another output measure. Meeting milestones says the plan was followed, not that value increased."
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Vì sao \"business value map\" là phương án nên loại ngay khi gặp?",
+    "questionEn": "Why should \"business value map\" be eliminated on sight?",
+    "options": [
+      "Vì nó chỉ dùng ở tầm bàn giao",
+      "Vì nó không phải một kỹ thuật trong Agile Extension to the BABOK",
+      "Vì nó đã được đổi tên thành value stream map",
+      "Vì nó chỉ áp dụng cho sản phẩm thương mại"
+    ],
+    "optionsEn": [
+      "Because it is only used at the delivery horizon",
+      "Because it is not a technique in the Agile Extension to the BABOK",
+      "Because it was renamed to value stream map",
+      "Because it applies only to commercial products"
+    ],
+    "answer": 1,
+    "explanation": "Cùng họ với \"project horizon\" và \"design spike\": những cái tên nghe đúng chuẩn nhưng không có trong tài liệu nguồn.",
+    "explanationEn": "The same family as \"project horizon\" and \"design spike\": names that sound official but are absent from the source material.",
+    "optionExplanations": [
+      "Tầm không phải vấn đề — vấn đề là kỹ thuật này không tồn tại trong tài liệu nguồn.",
+      "Đúng, và đây là một quy tắc rộng: thuật ngữ không xuất hiện trong Agile Extension v2 gần như luôn là phương án sai.",
+      "Không có việc đổi tên nào; value stream map là một kỹ thuật riêng biệt, tồn tại độc lập.",
+      "Không có giới hạn theo loại sản phẩm; kỹ thuật này đơn giản là không tồn tại."
+    ],
+    "optionExplanationsEn": [
+      "The horizon is not the issue — the issue is that the technique does not exist in the source material.",
+      "Correct, and this is a broad rule: a term that does not appear in the Agile Extension v2 is almost always the wrong option.",
+      "No renaming took place; the value stream map is a separate technique in its own right.",
+      "There is no product-type limit; the technique simply does not exist."
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "Purpose alignment model và product roadmap khác nhau ở điểm nào?",
+    "questionEn": "How do the purpose alignment model and the product roadmap differ?",
+    "options": [
+      "Purpose alignment model nói về cơ cấu nguồn lực giữa các sáng kiến; product roadmap nói về hướng đi tương lai dự kiến của sản phẩm",
+      "Purpose alignment model dùng ở tầm sáng kiến; product roadmap dùng ở tầm chiến lược",
+      "Purpose alignment model là hình trực quan; product roadmap là bảng tính",
+      "Purpose alignment model dành cho lãnh đạo; product roadmap dành cho đội phát triển"
+    ],
+    "optionsEn": [
+      "The purpose alignment model is about the resourcing mix across initiatives; the product roadmap is about the expected future direction of the product",
+      "The purpose alignment model is used at the initiative horizon; the product roadmap at the strategy horizon",
+      "The purpose alignment model is a visual; the product roadmap is a spreadsheet",
+      "The purpose alignment model is for executives; the product roadmap is for development teams"
+    ],
+    "answer": 0,
+    "explanation": "Khi hai kỹ thuật có mô tả trùng nhau, đừng so tầm hay so hình thức — so cụm từ đặc trưng.",
+    "explanationEn": "When two techniques share overlapping descriptions, do not compare horizon or format — compare the distinctive phrase.",
+    "optionExplanations": [
+      "Đây là hai cụm từ đặc trưng tách hai kỹ thuật ra, dù cả hai đều được mô tả là \"hỗ trợ sắp ưu tiên\".",
+      "Cả hai đều là kỹ thuật tầm chiến lược trong bảng này, nên tầm không phải điểm phân biệt.",
+      "Hình thức trình bày không phải điểm phân biệt và cũng không được tài liệu nguồn dùng để định nghĩa hai kỹ thuật này.",
+      "Product roadmap được mô tả rõ là để cải thiện cộng tác giữa các đội ở NHIỀU sáng kiến, không riêng một đội phát triển."
+    ],
+    "optionExplanationsEn": [
+      "These are the two distinctive phrases that separate them, even though both are described as \"supporting prioritisation\".",
+      "Both are strategy-horizon techniques in this table, so the horizon is not the distinguishing factor.",
+      "The presentation format is not the distinction, and it is not how the source material defines either technique.",
+      "The product roadmap is explicitly described as improving collaboration among teams across MULTIPLE initiatives, not one development team."
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "Câu hỏi cho biết đội cần \"khả năng nhìn thấy tiến độ theo thời gian thực của các sáng kiến trên toàn danh mục\". Đây là kỹ thuật nào?",
+    "questionEn": "A question states the team needs \"real-time visibility of the progress of initiatives across the portfolio\". Which technique is this?",
+    "options": [
+      "Portfolio Kanban",
+      "Purpose alignment model",
+      "Value stream mapping",
+      "Real options"
+    ],
+    "optionsEn": [
+      "Portfolio Kanban",
+      "Purpose alignment model",
+      "Value stream mapping",
+      "Real options"
+    ],
+    "answer": 0,
+    "explanation": "Portfolio Kanban là kỹ thuật duy nhất trong nhóm chiến lược nói về THEO DÕI, không phải QUYẾT ĐỊNH hay ĐỊNH HƯỚNG.",
+    "explanationEn": "Portfolio Kanban is the only strategy-set technique about TRACKING, rather than DECIDING or DIRECTING.",
+    "optionExplanations": [
+      "\"Thời gian thực\" cộng \"trên toàn danh mục\" là cụm từ đặc trưng riêng của Portfolio Kanban.",
+      "Đây là định nghĩa của Purpose alignment model: sắp ưu tiên các sáng kiến tiềm năng và hiểu cơ cấu nguồn lực tối ưu.",
+      "Đây là định nghĩa của Value stream mapping: hiểu việc tạo giá trị xuyên suốt toàn bộ trải nghiệm khách hàng.",
+      "Real options nói về khung thời gian ra quyết định, không phải về việc theo dõi tiến độ."
+    ],
+    "optionExplanationsEn": [
+      "\"Real-time\" plus \"across the portfolio\" is the distinctive phrase belonging to Portfolio Kanban.",
+      "This is the Purpose alignment model definition: prioritising potential initiatives and understanding the optimum resourcing mix.",
+      "This is the Value stream mapping definition: understanding the creation of value across the whole customer experience.",
+      "Real options is about the timeframe for making a decision, not about tracking progress."
+    ]
+  },
+  {
+    "id": "q19",
+    "question": "Vì sao dữ liệu lịch sử không phải thành phần chính của ước lượng tương đối?",
+    "questionEn": "Why is historical data not the main component of relative estimating?",
+    "options": [
+      "Vì dữ liệu lịch sử luôn không chính xác",
+      "Vì giá trị của kỹ thuật nằm ở cuộc đối thoại của đội về kiến thức, kinh nghiệm và giả định, chứ không ở số liệu",
+      "Vì đội Agile không lưu dữ liệu lịch sử",
+      "Vì dữ liệu lịch sử chỉ dùng được ở tầm chiến lược"
+    ],
+    "optionsEn": [
+      "Because historical data is always inaccurate",
+      "Because the technique's value is in the team's dialogue about knowledge, experience and assumptions, not in the numbers",
+      "Because agile teams do not keep historical data",
+      "Because historical data can only be used at the strategy horizon"
+    ],
+    "answer": 1,
+    "explanation": "Ước lượng tương đối là một cuộc trò chuyện có cấu trúc. Số liệu tham gia cuộc trò chuyện đó chứ không thay thế nó.",
+    "explanationEn": "Relative estimating is a structured conversation. Numbers join that conversation; they do not replace it.",
+    "optionExplanations": [
+      "Tuyệt đối hoá và không phải lập luận của tài liệu nguồn; dữ liệu lịch sử vẫn được coi là đầu vào hợp lệ.",
+      "Đúng. Dữ liệu lịch sử CÓ THỂ được cân nhắc, nhưng nó chỉ là một đầu vào cho cuộc đối thoại, không thay thế được cuộc đối thoại.",
+      "Đội Agile hoàn toàn có lưu dữ liệu — velocity và các hạng mục đã bàn giao chính là dữ liệu lịch sử.",
+      "Không có giới hạn theo tầm; dữ liệu lịch sử được dùng ở mọi mức, kể cả trong chính buổi ước lượng của đội."
+    ],
+    "optionExplanationsEn": [
+      "An absolute, and not the source material's argument; historical data is still treated as a legitimate input.",
+      "Correct. Historical data MAY be considered, but it is one input to the dialogue, not a substitute for it.",
+      "Agile teams do keep data — velocity and previously delivered items are exactly historical data.",
+      "There is no horizon restriction; historical data is used at every level, including in the team's own estimation session."
+    ]
+  },
+  {
+    "id": "q20",
+    "question": "Một câu hỏi mô tả kỹ thuật dùng để \"hiểu việc tạo ra giá trị xuyên suốt toàn bộ trải nghiệm khách hàng, nhằm sắp ưu tiên, lập kế hoạch và tích hợp việc tạo giá trị cùng giảm lãng phí giữa các sáng kiến\". Đây là kỹ thuật nào?",
+    "questionEn": "A question describes the technique used to \"understand the creation of value across the whole customer experience, in order to prioritise, plan and integrate value creation and waste reduction between initiatives\". Which technique is it?",
+    "options": [
+      "Impact mapping",
+      "Value stream mapping",
+      "Product roadmap",
+      "Phân tích Kano (Kano analysis)"
+    ],
+    "optionsEn": [
+      "Impact mapping",
+      "Value stream mapping",
+      "Product roadmap",
+      "Kano analysis"
+    ],
+    "answer": 1,
+    "explanation": "Bốn kỹ thuật chiến lược dễ lẫn nhất được phân biệt bằng bốn cụm từ. Cụm ở đây là \"toàn bộ trải nghiệm khách hàng\".",
+    "explanationEn": "The four most confusable strategy techniques are separated by four phrases. The phrase here is \"the whole customer experience\".",
+    "optionExplanations": [
+      "Impact map đi từ mục tiêu tổ chức xuống sản phẩm bàn giao; nó không lấy toàn bộ trải nghiệm khách hàng làm trục.",
+      "\"Toàn bộ trải nghiệm khách hàng\" cộng \"giảm lãng phí giữa các sáng kiến\" là cụm từ đặc trưng của value stream mapping.",
+      "Đây là định nghĩa của Product roadmap: truyền đạt hướng đi tương lai dự kiến của sản phẩm và cải thiện cộng tác giữa các đội.",
+      "Kano phân loại đặc tính sản phẩm theo mức tác động lên sự hài lòng; nó không lập bản đồ dòng chảy giá trị."
+    ],
+    "optionExplanationsEn": [
+      "An impact map runs from organisational goals down to deliverables; it is not organised around the whole customer experience.",
+      "\"Whole customer experience\" plus \"waste reduction between initiatives\" is the distinctive value stream mapping phrase.",
+      "This is the Product roadmap definition: communicating the expected future direction of the product and improving collaboration among teams.",
+      "Kano classifies product characteristics by their effect on satisfaction; it does not map a flow of value."
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "l1",
+      "title": "Bốn sự kiện, phân tách rõ · Refinement vs Planning workshop",
+      "titleEn": "The four events, separated · Refinement vs the planning workshop",
+      "sections": [1, 2],
+      "questionIds": ["q3", "q4", "q10", "q11", "q14", "q15"]
+    },
+    {
+      "id": "l2",
+      "title": "Review: trình diễn gì, để làm gì · Retrospective: đầu ra là gì",
+      "titleEn": "The review: what and what for · The retrospective: its output",
+      "sections": [3, 4],
+      "questionIds": ["q1", "q2", "q5", "q6", "q9", "q12", "q16"]
+    },
+    {
+      "id": "l3",
+      "title": "Story elaboration & bàn thiết kế · Quan sát người dùng",
+      "titleEn": "Story elaboration & design talk · Observing users",
+      "sections": [5, 6],
+      "questionIds": ["q7", "q8", "q13"]
+    },
+    {
+      "id": "l4",
+      "title": "Điểm cốt lõi",
+      "titleEn": "Key takeaways",
+      "sections": [7],
+      "questionIds": [],
+      "recap": true
+    }
+  ]
+}

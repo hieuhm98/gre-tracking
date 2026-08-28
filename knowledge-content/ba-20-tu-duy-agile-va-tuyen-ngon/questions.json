@@ -1,0 +1,514 @@
+[
+  {
+    "id": "q1",
+    "question": "Điều nào sau đây KHÔNG thuộc tư duy Agile?",
+    "questionEn": "Which of the following is NOT part of an agile mindset?",
+    "options": [
+      "Kỳ vọng toàn bộ công việc yêu cầu phải hoàn thành và được phê duyệt trước khi bàn giao cho đội phát triển",
+      "Bàn giao các bản tăng trưởng nhỏ của giải pháp một cách thường xuyên và với chất lượng cao",
+      "Tập trung lấy phản hồi người dùng thường xuyên nhất có thể",
+      "Cộng tác liên tục giữa đại diện kỹ thuật, nghiệp vụ và khách hàng"
+    ],
+    "optionsEn": [
+      "Expecting that all requirements work is complete and approved before handing off to an agile development team",
+      "Delivering small increments of the solution often and with high quality",
+      "Focusing on getting user feedback as often as possible",
+      "Collaborating continuously between technical, business, and customer representatives"
+    ],
+    "answer": 0,
+    "explanation": "Ba hành vi thuộc tư duy Agile là cộng tác liên tục, lấy phản hồi thường xuyên và bàn giao bản tăng trưởng nhỏ chất lượng cao. Hoàn thiện rồi phê duyệt toàn bộ yêu cầu trước khi bàn giao là mô hình hand-off mà Agile phản đối.",
+    "explanationEn": "The three behaviours in the agile mindset are continuous collaboration, frequent feedback, and small high-quality increments. Completing and approving all requirements before hand-off is the model agile is written against.",
+    "optionExplanations": [
+      "Chi tiết hoá mọi thứ từ đầu rồi bàn giao chính là mô hình mà Agile Extension được viết ra để phản đối — nó giả định bạn biết đủ mọi thứ ở thời điểm bạn biết ít nhất.",
+      "Đây LÀ tư duy Agile. Bàn giao thường xuyên các phần nhỏ chất lượng cao là một trong ba hành vi nền tảng.",
+      "Đây LÀ tư duy Agile. Phản hồi thường xuyên từ người dùng và khách hàng là hành vi nền tảng thứ hai.",
+      "Đây LÀ tư duy Agile. Cộng tác liên tục — chứ không phải một lần ở đầu dự án — là hành vi nền tảng thứ ba."
+    ],
+    "optionExplanationsEn": [
+      "Detailing everything up front and handing off is exactly the model the Agile Extension is written against — it assumes you know everything at the moment you know the least.",
+      "This IS the agile mindset. Frequent delivery of small, high-quality increments is one of the three foundational behaviours.",
+      "This IS the agile mindset. Frequent feedback from users and customers is the second foundational behaviour.",
+      "This IS the agile mindset. Continuous collaboration — not collaboration once at kickoff — is the third foundational behaviour."
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Một BA Agile tìm kiếm phản hồi liên tục từ người dùng và các bên liên quan để hiểu giải pháp đang đáp ứng nhu cầu khách hàng tốt đến đâu. Tình huống này thể hiện rõ nhất giá trị nào?",
+    "questionEn": "An agile BA seeks ongoing feedback from users and stakeholders to learn how well a solution is working to satisfy the customer's needs. Which Manifesto value does this best represent?",
+    "options": [
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ",
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch",
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Phần mềm chạy được hơn là tài liệu đầy đủ"
+    ],
+    "optionsEn": [
+      "Individuals and interactions over processes and tools",
+      "Responding to change over following a plan",
+      "Customer collaboration over contract negotiation",
+      "Working software over comprehensive documentation"
+    ],
+    "answer": 2,
+    "explanation": "Thu thập và trao đổi phản hồi cùng khách hàng là Cộng tác với khách hàng. Chỉ khi phản hồi được đưa vào backlog và làm đổi thứ tự công việc thì mới chuyển sang Phản hồi với thay đổi.",
+    "explanationEn": "Gathering and discussing feedback with the customer is Customer collaboration. Only when the feedback goes into the backlog and reorders the work does it become Responding to change.",
+    "optionExplanations": [
+      "Giá trị này không nổi bật trong tình huống. Không có chi tiết nào nói về việc chọn tương tác người–người thay cho một quy trình hay công cụ.",
+      "Bẫy phổ biến nhất của câu này. Tình huống dừng ở việc TÌM KIẾM phản hồi; nó chưa nói gì đến việc đổi backlog hay đổi kế hoạch, nên chưa phải phản hồi với thay đổi.",
+      "Trọng tâm là mối quan hệ liên tục với người dùng và các bên liên quan để cùng hiểu giải pháp — đó chính là cộng tác với khách hàng.",
+      "Giải pháp có thể đang chạy thật, nhưng tình huống nói về việc thu thập phản hồi chứ không đặt bản chạy được lên bàn cân với tài liệu."
+    ],
+    "optionExplanationsEn": [
+      "This value is not strongly evident here. Nothing in the scenario is about choosing human interaction over a process or a tool.",
+      "The most common trap here. The scenario stops at SEEKING feedback; it says nothing about changing the backlog or the plan, so it is not yet responding to change.",
+      "The emphasis is the ongoing relationship with users and stakeholders to jointly understand the solution — that is customer collaboration.",
+      "The solution may well be running, but the scenario is about gathering feedback, not about weighing a working increment against a document."
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Trong Tuyên ngôn Agile, từ \"hơn là\" (over) có ý nghĩa gì?",
+    "questionEn": "In the Agile Manifesto, what does the word \"over\" mean?",
+    "options": [
+      "Các yếu tố bên phải vẫn có giá trị; Tuyên ngôn chỉ nói các yếu tố bên trái được ưu tiên khi hai vế xung đột",
+      "Các yếu tố bên phải đã bị loại bỏ khỏi cách làm việc Agile",
+      "Các yếu tố bên trái phải được hoàn thành trước các yếu tố bên phải theo trình tự thời gian",
+      "Các yếu tố bên trái áp dụng cho đội phát triển, các yếu tố bên phải áp dụng cho quản lý"
+    ],
+    "optionsEn": [
+      "The items on the right still have value; the Manifesto only says the items on the left take priority when the two conflict",
+      "The items on the right have been removed from agile ways of working",
+      "The left-hand items must be completed before the right-hand items in time order",
+      "The left-hand items apply to the development team and the right-hand items apply to management"
+    ],
+    "answer": 0,
+    "explanation": "\"Hơn là\" là phần bị bỏ qua nhiều nhất. Nó giữ cho vế phải vẫn có giá trị và chỉ xác lập thứ tự ưu tiên khi phải chọn.",
+    "explanationEn": "\"Over\" is the most skipped word in the Manifesto. It keeps the right-hand items valuable and only sets priority when you must choose.",
+    "optionExplanations": [
+      "Đúng nguyên văn Tuyên ngôn. Vì thế bất kỳ phương án nào khẳng định tài liệu, quy trình, hợp đồng hay kế hoạch là vô giá trị đều sai.",
+      "Không có yếu tố nào bị loại bỏ. Đội Agile vẫn viết tài liệu, vẫn có hợp đồng, vẫn lập kế hoạch — chỉ là với liều lượng khác.",
+      "\"Hơn là\" nói về mức độ ưu tiên giá trị, không phải trình tự thời gian. Tuyên ngôn không mô tả một quy trình tuần tự.",
+      "Tuyên ngôn không phân chia theo vai trò. Cả bốn giá trị áp dụng cho mọi người tham gia vào việc tạo ra phần mềm."
+    ],
+    "optionExplanationsEn": [
+      "This is the Manifesto verbatim. It is why any option claiming documentation, process, contracts or plans are worthless is wrong.",
+      "Nothing is removed. Agile teams still write documentation, still have contracts, still plan — just in different measure.",
+      "\"Over\" is about relative value, not sequence. The Manifesto does not describe a sequential process.",
+      "The Manifesto makes no split by role. All four values apply to everyone involved in creating software."
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Vì sao mô hình \"hoàn thiện toàn bộ yêu cầu rồi bàn giao cho đội phát triển\" bị coi là phản Agile?",
+    "questionEn": "Why is \"complete all the requirements, then hand off to the development team\" considered anti-agile?",
+    "options": [
+      "Vì viết tài liệu là hoạt động không tạo ra giá trị",
+      "Vì nó giả định bạn biết đủ mọi thứ ở đúng thời điểm bạn biết ít nhất về giải pháp",
+      "Vì các phương pháp Agile cấm phê duyệt yêu cầu",
+      "Vì đội phát triển không có khả năng đọc tài liệu yêu cầu dài"
+    ],
+    "optionsEn": [
+      "Because writing documentation is a non-value-adding activity",
+      "Because it assumes you know everything at exactly the moment you know least about the solution",
+      "Because agile methods forbid approving requirements",
+      "Because development teams are unable to read long requirements documents"
+    ],
+    "answer": 1,
+    "explanation": "Hand-off toàn bộ đặt toàn bộ rủi ro lên hiểu biết sớm nhất của dự án. Agile thay bằng chi tiết hoá dần theo nhịp học được từ phản hồi.",
+    "explanationEn": "A full hand-off bets everything on the project's earliest understanding. Agile replaces it with detail added progressively, at the pace feedback is learned.",
+    "optionExplanations": [
+      "Sai ngay ở tiền đề. Tuyên ngôn không nói tài liệu vô giá trị; vấn đề nằm ở thời điểm và liều lượng, không ở bản thân việc viết.",
+      "Đây là lý do cốt lõi. Hiểu biết tăng dần khi đội xây và người dùng phản hồi, nên chốt cứng mọi chi tiết từ đầu là chốt trên thông tin yếu nhất.",
+      "Không có lệnh cấm nào như vậy. Yêu cầu vẫn được thống nhất và xác nhận — chỉ là theo từng phần nhỏ và liên tục.",
+      "Đây không phải lập luận của Agile Extension và cũng không đúng thực tế; vấn đề là tính đúng đắn của thông tin, không phải khả năng đọc."
+    ],
+    "optionExplanationsEn": [
+      "Wrong at the premise. The Manifesto never says documentation has no value; the problem is timing and quantity, not writing itself.",
+      "This is the core reason. Understanding grows as the team builds and users respond, so freezing every detail up front freezes it on the weakest information.",
+      "There is no such prohibition. Requirements are still agreed and confirmed — just in small pieces, continuously.",
+      "This is not the Agile Extension's argument and is not true in practice; the issue is the validity of the information, not the ability to read."
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Khi đọc một tình huống để xác định giá trị Tuyên ngôn nào đang thể hiện, dấu hiệu quyết định là gì?",
+    "questionEn": "When reading a scenario to decide which Manifesto value it shows, what is the deciding signal?",
+    "options": [
+      "Vai trò của người trong tình huống — BA, PO hay Scrum Master",
+      "Chủ đề của tình huống — thường là phản hồi khách hàng",
+      "Động từ — người trong tình huống đang LÀM GÌ với phản hồi",
+      "Số lượng bên liên quan được nhắc đến trong tình huống"
+    ],
+    "optionsEn": [
+      "The role of the person in the scenario — BA, PO or Scrum Master",
+      "The topic of the scenario — usually customer feedback",
+      "The verb — what the person in the scenario is DOING with the feedback",
+      "How many stakeholders the scenario mentions"
+    ],
+    "answer": 2,
+    "explanation": "Cả bốn phương án luôn có lý nếu xét riêng. Thứ tách chúng ra là hành động cụ thể đang diễn ra, không phải chủ đề chung.",
+    "explanationEn": "All four options are always defensible in isolation. What separates them is the specific action taking place, not the general topic.",
+    "optionExplanations": [
+      "Vai trò không quyết định giá trị. Cùng một BA có thể đang thể hiện bất kỳ giá trị nào tuỳ hành động cụ thể.",
+      "Chủ đề gần như luôn là phản hồi khách hàng, và điều đó khớp với cả bốn giá trị, nên nó không phân biệt được gì.",
+      "Đây là dấu hiệu phân biệt thực sự: trao đổi phản hồi → cộng tác; đưa vào backlog → phản hồi với thay đổi; demo thay tài liệu → phần mềm chạy được.",
+      "Số lượng người tham gia không nói lên giá trị nào đang được ưu tiên; một cuộc trao đổi hai người vẫn có thể là bất kỳ giá trị nào."
+    ],
+    "optionExplanationsEn": [
+      "Role does not decide the value. The same BA may be demonstrating any of the four, depending on the action.",
+      "The topic is almost always customer feedback, which fits all four values, so it separates nothing.",
+      "This is the real discriminator: discussing feedback → collaboration; putting it in the backlog → responding to change; a demo instead of a document → working software.",
+      "The number of people involved says nothing about which value is being prioritised; a two-person conversation can still be any of the four."
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Chuẩn bị cho buổi backlog refinement, Product Owner và BA cùng xem lại phản hồi người dùng và dữ liệu sử dụng vài tuần qua, tổng hợp lại và mang vào buổi refinement để đội điều chỉnh backlog. Việc đưa phản hồi người dùng vào backlog là ví dụ của giá trị nào?",
+    "questionEn": "In preparation for backlog refinement the Product Owner and BA review user feedback and usage logs from the last few weeks, prepare a summary, and bring it to refinement so the team can adjust the backlog. Incorporating user feedback into the backlog is an example of which value?",
+    "options": [
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ",
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch",
+      "Phần mềm chạy được hơn là tài liệu đầy đủ"
+    ],
+    "optionsEn": [
+      "Individuals and interactions over processes and tools",
+      "Customer collaboration over contract negotiation",
+      "Responding to change over following a plan",
+      "Working software over comprehensive documentation"
+    ],
+    "answer": 2,
+    "explanation": "Đây là nửa sau của cặp dễ nhầm: thu thập phản hồi = Cộng tác với khách hàng; đưa phản hồi vào backlog và đổi thứ tự = Phản hồi với thay đổi.",
+    "explanationEn": "This is the second half of the classic pair: collecting feedback = Customer collaboration; putting the feedback into the backlog and reordering = Responding to change.",
+    "optionExplanations": [
+      "Có tương tác giữa PO và BA, nhưng tình huống không đặt tương tác lên bàn cân với quy trình hay công cụ — có đáp án rõ hơn.",
+      "Cộng tác với khách hàng cũng gắn với phản hồi, nhưng nó nói về việc CÙNG TRAO ĐỔI phản hồi, không phải việc đưa phản hồi vào backlog.",
+      "Phản hồi thường xuyên đồng nghĩa với yêu cầu và thiết kế sẽ thay đổi; đội phải phản hồi với thay đổi thay vì bám kế hoạch cũ để sản phẩm còn phù hợp.",
+      "Trình diễn phần mềm chạy được để lấy phản hồi là quan trọng, nhưng HÀNH ĐỘNG trên phản hồi và đưa nó vào backlog lại thuộc một giá trị khác."
+    ],
+    "optionExplanationsEn": [
+      "There is interaction between the PO and BA, but the scenario does not weigh interaction against a process or tool — there is a clearer answer.",
+      "Customer collaboration is also tied to feedback, but it is about collaborating ON the feedback, not about incorporating it into the backlog.",
+      "Frequent feedback means requirements and designs will change; the team must respond to change rather than follow the old plan, to keep the product relevant.",
+      "Showing working software to get feedback matters, but ACTING on the feedback and putting it into the backlog belongs to a different value."
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Amy là BA Agile, mỗi iteration cô làm việc với những người ra quyết định để cùng bỏ bớt mục, thêm mục mới và cập nhật thứ tự ưu tiên trong backlog. Đây là ví dụ của giá trị nào?",
+    "questionEn": "Amy the agile BA works with decision makers to prioritise the backlog each iteration. Together they remove things, add things, and update the order of importance. This is an example of which value?",
+    "options": [
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ",
+      "Phần mềm chạy được hơn là tài liệu đầy đủ",
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch"
+    ],
+    "optionsEn": [
+      "Customer collaboration over contract negotiation",
+      "Individuals and interactions over processes and tools",
+      "Working software over comprehensive documentation",
+      "Responding to change over following a plan"
+    ],
+    "answer": 3,
+    "explanation": "Sắp ưu tiên backlog liên tục là ví dụ kinh điển của Phản hồi với thay đổi: kế hoạch được sửa mỗi iteration theo điều vừa học được.",
+    "explanationEn": "Continuously prioritising the backlog is the classic example of Responding to change: the plan is revised each iteration according to what was just learned.",
+    "optionExplanations": [
+      "Cộng tác với khách hàng đôi khi là một phần của việc sắp ưu tiên backlog, nhưng có giá trị nổi bật hơn ở đây.",
+      "Cá nhân và sự tương tác đôi khi là một phần của việc sắp ưu tiên, nhưng không phải điều tình huống này nhấn mạnh.",
+      "Phần mềm chạy được có thể là đầu vào của việc sắp ưu tiên, nhưng tình huống không nói gì về demo hay tài liệu.",
+      "Liên tục sắp lại thứ tự backlog — bỏ, thêm, đổi ưu tiên — chính là định nghĩa thực hành của phản hồi với thay đổi hơn là bám kế hoạch."
+    ],
+    "optionExplanationsEn": [
+      "Customer collaboration may at times be part of prioritising a backlog, but a different value is more prominent here.",
+      "Individuals and interactions may at times be part of prioritising, but it is not what this scenario emphasises.",
+      "Working software may be an input to prioritising, but the scenario says nothing about a demo or a document.",
+      "Continuously reordering the backlog — removing, adding, re-prioritising — is the practical definition of responding to change over following a plan."
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "Stella đang trao đổi khó khăn với một bên liên quan khăng khăng đòi tài liệu chi tiết về những gì sẽ được xây trước khi ưu tiên bàn giao. Stella tìm hiểu kỹ lý do của họ, rồi giải thích rằng đội có thể dựng một demo chạy được nhanh hơn, và phản hồi trên demo sẽ giá trị hơn phản hồi trên tài liệu. Giá trị nào đang thể hiện?",
+    "questionEn": "Stella is having a difficult conversation with a stakeholder who insists on a detailed document of what will be built before prioritising it. Stella works to understand their reasoning, then explains the team can get a working demo in front of them sooner, and that feedback on the demo will be worth more than feedback on a document. Which value is involved?",
+    "options": [
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ",
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch",
+      "Phần mềm chạy được hơn là tài liệu đầy đủ"
+    ],
+    "optionsEn": [
+      "Individuals and interactions over processes and tools",
+      "Customer collaboration over contract negotiation",
+      "Responding to change over following a plan",
+      "Working software over comprehensive documentation"
+    ],
+    "answer": 3,
+    "explanation": "Khi thứ được đặt lên bàn cân là tài liệu so với bản chạy được, đáp án luôn là Phần mềm chạy được — kể cả khi tình huống có nhiều tương tác người–người.",
+    "explanationEn": "When what is being weighed is a document against a working increment, the answer is always Working software — even when the scenario is full of human interaction.",
+    "optionExplanations": [
+      "Cách Stella tương tác với bên liên quan là quan trọng, nhưng đó không phải giá trị thể hiện rõ nhất trong tình huống.",
+      "Stella có cộng tác với bên liên quan, nhưng việc tập trung vào bản demo chạy được mới là tín hiệu chỉ sang giá trị khác.",
+      "Demo chạy được đúng là mở đường cho kế hoạch thay đổi, nhưng trong tình huống này giá trị khác nổi bật hơn.",
+      "Chất vấn xem một tài liệu có đáng công sức của nó không, và thay bằng bản chạy được, chính là đặt phần mềm chạy được lên trên tài liệu đầy đủ."
+    ],
+    "optionExplanationsEn": [
+      "Stella's interaction with the stakeholder matters, but that is not the value best representing this scenario.",
+      "Stella does collaborate with the stakeholder, but the focus on the working demo signals a different value.",
+      "A working demo does make a changing plan possible, but another value is more prominent in this scenario.",
+      "Questioning whether a document is worth its cost, and replacing it with something running, is exactly putting working software over comprehensive documentation."
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Tập trung đảm bảo đội nhận được phản hồi liên tục để biết mình có đi đúng hướng không, duy trì các cuộc trao đổi liên tục, và đảm bảo tài liệu đúng với mục đích của nó — đây là ví dụ của giá trị nào?",
+    "questionEn": "Focusing on ensuring the team gets continuous feedback to see if it is on track, engaging in continuous conversations, and ensuring documentation matches its intended purpose is an example of which value?",
+    "options": [
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Phần mềm chạy được hơn là tài liệu đầy đủ",
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch",
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ"
+    ],
+    "optionsEn": [
+      "Customer collaboration over contract negotiation",
+      "Working software over comprehensive documentation",
+      "Responding to change over following a plan",
+      "Individuals and interactions over processes and tools"
+    ],
+    "answer": 1,
+    "explanation": "Chỉ tài liệu hoá đúng những gì phục vụ mục đích của nó là biểu hiện trực tiếp của Phần mềm chạy được hơn là tài liệu đầy đủ.",
+    "explanationEn": "Documenting only what serves its intended purpose is a direct expression of Working software over comprehensive documentation.",
+    "optionExplanations": [
+      "Giá trị này không nổi bật ở đây; tình huống không xoay quanh quan hệ khách hàng hay việc viện dẫn hợp đồng.",
+      "Mấu chốt là vế cuối: chỉ giữ tài liệu đúng với mục đích của nó, tức là đặt cái đã xây và chạy được lên trên tài liệu đầy đủ.",
+      "Giá trị này không nổi bật ở đây; tình huống không nói đến việc đổi kế hoạch hay đổi thứ tự công việc.",
+      "Có nhắc đến các cuộc trao đổi, nhưng trọng tâm là liều lượng và mục đích của tài liệu, nên có đáp án tốt hơn."
+    ],
+    "optionExplanationsEn": [
+      "This value is not strongly evident here; the scenario is not about the customer relationship or falling back on a contract.",
+      "The give-away is the last clause: keeping documentation only to its intended purpose puts what is built and running above comprehensive documentation.",
+      "This value is not strongly evident here; the scenario does not mention changing the plan or reordering work.",
+      "Conversations are mentioned, but the emphasis is the quantity and purpose of documentation, so there is a better answer."
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Làm việc sát với các bên liên quan trên mọi bước của chuỗi giá trị và đặt con người vào trung tâm khi tạo ra giải pháp là đang theo giá trị nào?",
+    "questionEn": "Working closely with stakeholders throughout every step of the value chain and putting people at the centre in creating solutions follows which value?",
+    "options": [
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch",
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ",
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Phần mềm chạy được hơn là tài liệu đầy đủ"
+    ],
+    "optionsEn": [
+      "Responding to change over following a plan",
+      "Individuals and interactions over processes and tools",
+      "Customer collaboration over contract negotiation",
+      "Working software over comprehensive documentation"
+    ],
+    "answer": 1,
+    "explanation": "Khi tình huống nhấn mạnh con người và tương tác dọc chuỗi giá trị chứ không phải một sản phẩm hay quy trình cụ thể, đáp án là Cá nhân và sự tương tác.",
+    "explanationEn": "When the scenario emphasises people and interaction along the value chain rather than a specific artefact or process, the answer is Individuals and interactions.",
+    "optionExplanations": [
+      "Làm việc sát với các bên liên quan giúp đội phản hồi với thay đổi tốt hơn, nhưng có giá trị khớp trực tiếp hơn.",
+      "\"Đặt con người vào trung tâm\" là cách diễn đạt thẳng của Cá nhân và sự tương tác hơn là quy trình và công cụ.",
+      "Có yếu tố cộng tác, nhưng tình huống nói về TOÀN BỘ chuỗi giá trị và mọi bên liên quan, không riêng khách hàng và không đối lập với hợp đồng.",
+      "Làm việc sát với các bên liên quan là cần thiết để đi tới phần mềm chạy được, nhưng đó không phải giá trị khớp nhất ở đây."
+    ],
+    "optionExplanationsEn": [
+      "Working closely with stakeholders does help a team respond to change, but a different value aligns more directly.",
+      "\"Putting people at the centre\" is a direct restatement of Individuals and interactions over processes and tools.",
+      "There is collaboration, but the scenario covers the WHOLE value chain and all stakeholders, not the customer specifically, and it is not set against a contract.",
+      "Working closely with stakeholders is needed to get to working software, but that is not the best-aligned value here."
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Trong một câu hỏi tình huống về giá trị Tuyên ngôn, vì sao cả bốn phương án thường đều có vẻ đúng?",
+    "questionEn": "In a Manifesto-value scenario question, why do all four options usually seem defensible?",
+    "options": [
+      "Vì các phương án được viết cẩu thả và trùng nghĩa nhau",
+      "Vì bốn giá trị mô tả cùng một hành vi bằng bốn cách nói khác nhau",
+      "Vì một tình huống Agile thật thường thể hiện nhiều giá trị cùng lúc; câu hỏi yêu cầu chọn giá trị THỂ HIỆN RÕ NHẤT",
+      "Vì bạn được chọn nhiều đáp án nếu thấy nhiều giá trị cùng đúng"
+    ],
+    "optionsEn": [
+      "Because the options are carelessly written and overlap in meaning",
+      "Because the four values describe the same behaviour in four different wordings",
+      "Because a real agile scenario usually shows several values at once; the question asks for the value that is MOST strongly evident",
+      "Because you may select several answers when more than one value applies"
+    ],
+    "answer": 2,
+    "explanation": "Kỹ năng được kiểm tra là phân biệt, không phải nhận diện. Hãy xếp hạng bốn phương án theo mức độ rõ ràng rồi chọn cái đầu bảng.",
+    "explanationEn": "The skill being tested is discrimination, not recognition. Rank the four options by how strongly each is evident and take the top one.",
+    "optionExplanations": [
+      "Chúng trùng nhau có chủ đích, không phải do cẩu thả — các giá trị vốn liên quan chặt với nhau trong thực tế.",
+      "Bốn giá trị là bốn sự đánh đổi khác nhau, không phải bốn cách nói của một điều. Nếu vậy thì đã không thể có đáp án đúng duy nhất.",
+      "Chính xác. Phần giải thích chính thức lặp lại công thức \"giá trị này có liên quan, nhưng có đáp án tốt hơn\", tức là đang xếp hạng chứ không loại trừ.",
+      "Dạng câu hỏi này là trắc nghiệm một đáp án với bốn phương án; chọn nhiều là không hợp lệ."
+    ],
+    "optionExplanationsEn": [
+      "They overlap by design, not by sloppiness — the values genuinely interrelate in real work.",
+      "The four values are four distinct trade-offs, not four wordings of one thing. If they were, no single answer could ever be correct.",
+      "Exactly. The official explanations repeat the formula \"this value may relate to the scenario, but there is a better answer\" — they rank rather than eliminate.",
+      "This question type is single-answer multiple choice with four options; selecting more than one is not valid."
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Ranh giới chính xác giữa \"Cộng tác với khách hàng\" và \"Phản hồi với thay đổi\" nằm ở đâu?",
+    "questionEn": "Where exactly is the boundary between \"Customer collaboration\" and \"Responding to change\"?",
+    "options": [
+      "Cộng tác dùng cho khách hàng bên ngoài, Phản hồi với thay đổi dùng cho bên liên quan nội bộ",
+      "Câu chuyện dừng ở CUỘC TRÒ CHUYỆN thì là Cộng tác; dừng ở BACKLOG ĐÃ ĐỔI thì là Phản hồi với thay đổi",
+      "Cộng tác xảy ra trong iteration, Phản hồi với thay đổi xảy ra giữa các release",
+      "Cộng tác cần có mặt trực tiếp, Phản hồi với thay đổi thì không"
+    ],
+    "optionsEn": [
+      "Collaboration applies to external customers and Responding to change applies to internal stakeholders",
+      "If the story stops at the CONVERSATION it is Collaboration; if it stops at the CHANGED BACKLOG it is Responding to change",
+      "Collaboration happens inside an iteration and Responding to change happens between releases",
+      "Collaboration requires being face to face and Responding to change does not"
+    ],
+    "answer": 1,
+    "explanation": "Cả hai giá trị đều nói về phản hồi khách hàng. Chỉ có động từ tách chúng ra: hiểu phản hồi (cộng tác) so với hành động trên phản hồi (thay đổi).",
+    "explanationEn": "Both values concern customer feedback. Only the verb separates them: understanding the feedback (collaboration) versus acting on it (change).",
+    "optionExplanations": [
+      "Không có sự phân chia theo loại bên liên quan. Cả hai giá trị đều áp dụng bất kể người đối diện là ai.",
+      "Đúng. Cùng một câu chuyện, hai điểm dừng khác nhau cho hai đáp án khác nhau — đây là cặp bị hoán đổi nhiều nhất.",
+      "Không có ràng buộc thời điểm nào như vậy; cả hai đều có thể xảy ra ở bất kỳ nhịp nào của công việc.",
+      "Hình thức gặp mặt không quyết định giá trị nào đang thể hiện; hành động mới quyết định."
+    ],
+    "optionExplanationsEn": [
+      "There is no split by stakeholder type. Both values apply regardless of who is on the other side of the table.",
+      "Correct. Same story, two stopping points, two answers — this is the most frequently swapped pair.",
+      "There is no such timing rule; both can occur at any cadence of the work.",
+      "The meeting format does not decide which value is showing; the action does."
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Một phương án viết: \"Đội Agile không viết tài liệu vì tài liệu không có giá trị.\" Vì sao phương án này chắc chắn sai?",
+    "questionEn": "An option reads: \"Agile teams do not write documentation because documentation has no value.\" Why is this option certainly wrong?",
+    "options": [
+      "Vì tài liệu là bắt buộc theo BABOK trong mọi dự án",
+      "Vì Tuyên ngôn nói vế phải VẪN CÓ giá trị, chỉ là ít hơn vế trái khi phải chọn",
+      "Vì tài liệu là cách duy nhất để lưu quyết định của dự án",
+      "Vì chỉ có Product Owner mới được quyết định lượng tài liệu cần viết"
+    ],
+    "optionsEn": [
+      "Because BABOK makes documentation mandatory on every project",
+      "Because the Manifesto says the right-hand items DO have value, just less than the left-hand ones when you must choose",
+      "Because documentation is the only way to record a project's decisions",
+      "Because only the Product Owner may decide how much documentation to write"
+    ],
+    "answer": 1,
+    "explanation": "Đây là mẹo loại trừ nhanh: bất kỳ phương án nào tuyệt đối hoá (\"không bao giờ\", \"vô giá trị\") gần như luôn sai trong dạng câu hỏi này.",
+    "explanationEn": "This is a fast elimination heuristic: any option that speaks in absolutes (\"never\", \"no value\") is almost always wrong in this question type.",
+    "optionExplanations": [
+      "BABOK không đặt ra quy định bắt buộc kiểu đó, và lập luận này không phải lý do khiến phương án sai.",
+      "Đúng. Bất kỳ phương án nào phủ nhận hoàn toàn giá trị của tài liệu, quy trình, hợp đồng hay kế hoạch đều mâu thuẫn với chính chữ \"hơn là\".",
+      "Đây là một khẳng định quá mạnh và không phải lý do Tuyên ngôn đưa ra; quyết định có thể được lưu bằng nhiều cách.",
+      "Lượng tài liệu là quyết định chung của đội theo nhu cầu thực tế, và điều này không liên quan đến lý do phương án sai."
+    ],
+    "optionExplanationsEn": [
+      "BABOK imposes no such blanket mandate, and this is not the reason the option is wrong.",
+      "Correct. Any option that denies the value of documentation, process, contracts or plans outright contradicts the word \"over\" itself.",
+      "This is an overstatement and not the Manifesto's reasoning; decisions can be recorded in many ways.",
+      "How much to document is a shared team decision driven by real need, and it is unrelated to why the option is wrong."
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Một BA Agile thay một đặc tả 30 trang bằng một bản demo 20 phút để lấy cùng một câu trả lời từ bên liên quan. Điều này minh hoạ nguyên tắc thực hành nào?",
+    "questionEn": "An agile BA replaces a 30-page specification with a 20-minute demo to get the same answer from a stakeholder. Which practical principle does this illustrate?",
+    "options": [
+      "Bản chạy được là công cụ lấy phản hồi tốt hơn tài liệu mô tả cùng nội dung",
+      "Tài liệu phải luôn được thay bằng demo trong mọi tình huống",
+      "Bên liên quan không nên được hỏi ý kiến về tài liệu",
+      "Thời gian chuẩn bị là thước đo duy nhất để chọn cách lấy phản hồi"
+    ],
+    "optionsEn": [
+      "A working increment is a better feedback instrument than a document describing the same thing",
+      "Documentation must always be replaced by a demo in every situation",
+      "Stakeholders should not be consulted about documentation",
+      "Preparation time is the only measure for choosing how to gather feedback"
+    ],
+    "answer": 0,
+    "explanation": "Phần mềm chạy được không phủ nhận tài liệu; nó nói rằng khi cùng trả lời một câu hỏi, bản chạy được thường rẻ hơn và trung thực hơn.",
+    "explanationEn": "Working software does not deny documentation; it says that when both answer the same question, the working increment is usually cheaper and more truthful.",
+    "optionExplanations": [
+      "Đúng trọng tâm của giá trị Phần mềm chạy được: câu hỏi không phải \"có tài liệu không\" mà \"cái gì lấy được phản hồi tốt hơn với ít công hơn\".",
+      "Tuyệt đối hoá. Có những thứ chỉ tài liệu mới truyền tải được — ví dụ ràng buộc pháp lý hay quy tắc nghiệp vụ phức tạp.",
+      "Ngược lại: trong tình huống này BA tìm hiểu kỹ lý do của bên liên quan trước khi đề xuất cách khác.",
+      "Thời gian là một yếu tố, nhưng thứ quyết định là chất lượng phản hồi thu được, không riêng chi phí bỏ ra."
+    ],
+    "optionExplanationsEn": [
+      "This is the heart of the Working software value: the question is not \"is there a document\" but \"what gets better feedback for less effort\".",
+      "An absolute. Some things only a document can carry — legal constraints or intricate business rules, for instance.",
+      "The opposite: in this scenario the BA works to understand the stakeholder's reasoning before proposing an alternative.",
+      "Time is one factor, but what decides is the quality of the feedback obtained, not the cost alone."
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Vì sao \"lấy phản hồi người dùng thường xuyên nhất có thể\" được coi là hành vi nền tảng của tư duy Agile chứ không phải một thủ tục?",
+    "questionEn": "Why is \"getting user feedback as often as possible\" treated as a foundational agile behaviour rather than a formality?",
+    "options": [
+      "Vì nó cho phép ký nghiệm thu sớm hơn và đóng dự án nhanh hơn",
+      "Vì phản hồi là nguồn thông tin làm thay đổi việc gì đáng làm tiếp theo",
+      "Vì nó chuyển trách nhiệm về chất lượng sang phía người dùng",
+      "Vì nó thay thế được nhu cầu bàn giao các bản tăng trưởng nhỏ"
+    ],
+    "optionsEn": [
+      "Because it lets you get sign-off earlier and close the project sooner",
+      "Because feedback is the information source that changes what is worth doing next",
+      "Because it moves responsibility for quality onto the users",
+      "Because it removes the need to deliver small increments"
+    ],
+    "answer": 1,
+    "explanation": "Phản hồi thường xuyên chỉ có ý nghĩa nếu đội được phép hành động trên nó. Đó là lý do ba hành vi của tư duy Agile luôn đi cùng nhau.",
+    "explanationEn": "Frequent feedback only means something if the team is allowed to act on it. That is why the three agile-mindset behaviours always travel together.",
+    "optionExplanations": [
+      "Đây đúng là cách hiểu phản-Agile: coi phản hồi như thủ tục nghiệm thu thay vì nguồn thông tin để học.",
+      "Đúng. Phản hồi chỉ có giá trị khi nó được phép sửa kế hoạch — đó là lý do nó gắn liền với Phản hồi với thay đổi.",
+      "Phản hồi không chuyển trách nhiệm. Chất lượng vẫn thuộc về đội; phản hồi chỉ nói cho đội biết họ đang đi đúng hướng đến đâu.",
+      "Ngược lại — bản tăng trưởng nhỏ chính là thứ tạo ra cơ hội lấy phản hồi. Hai hành vi này bổ trợ chứ không thay thế nhau."
+    ],
+    "optionExplanationsEn": [
+      "This is precisely the anti-agile reading: treating feedback as an acceptance formality instead of information to learn from.",
+      "Correct. Feedback only has value when it is allowed to revise the plan — which is why it is inseparable from Responding to change.",
+      "Feedback moves no responsibility. Quality stays with the team; feedback only tells them how close to right they are.",
+      "The opposite — small increments are what create the opportunity for feedback. The two behaviours support each other."
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Đội trình diễn một bản tăng trưởng chạy được cho người dùng, thu ý kiến, rồi ngay sau đó cùng bên liên quan sắp lại thứ tự backlog cho iteration tới. Trong toàn bộ chuỗi này, giá trị nào ứng với BƯỚC SẮP LẠI BACKLOG?",
+    "questionEn": "The team demos a working increment to users, gathers their comments, and then immediately reorders the backlog with stakeholders for the next iteration. Across this whole sequence, which value corresponds to the REORDERING STEP?",
+    "options": [
+      "Phần mềm chạy được hơn là tài liệu đầy đủ",
+      "Cộng tác với khách hàng hơn là đàm phán hợp đồng",
+      "Phản hồi với thay đổi hơn là bám theo kế hoạch",
+      "Cá nhân và sự tương tác hơn là quy trình và công cụ"
+    ],
+    "optionsEn": [
+      "Working software over comprehensive documentation",
+      "Customer collaboration over contract negotiation",
+      "Responding to change over following a plan",
+      "Individuals and interactions over processes and tools"
+    ],
+    "answer": 2,
+    "explanation": "Một tình huống dài có thể chứa cả ba giá trị nối tiếp nhau. Hãy khoanh đúng bước mà câu hỏi đang chỉ vào, rồi mới áp bảng động từ.",
+    "explanationEn": "A long scenario can contain three values in sequence. Pin down the step the question points at first, then apply the verb table.",
+    "optionExplanations": [
+      "Giá trị này ứng với bước TRÌNH DIỄN bản chạy được, không phải bước sắp lại backlog sau đó.",
+      "Giá trị này ứng với bước THU Ý KIẾN và cùng người dùng hiểu ý kiến đó, không phải bước đổi thứ tự công việc.",
+      "Sắp lại backlog vì điều vừa học được chính là sửa kế hoạch theo thực tế — đúng định nghĩa của Phản hồi với thay đổi.",
+      "Có tương tác trong cả ba bước, nhưng không bước nào đặt tương tác lên bàn cân với một quy trình hay công cụ."
+    ],
+    "optionExplanationsEn": [
+      "This value maps to the DEMO step of showing the working increment, not to the reordering that follows.",
+      "This value maps to the GATHERING step and understanding the comments with users, not to changing the order of the work.",
+      "Reordering the backlog because of what was just learned is revising the plan against reality — the definition of Responding to change.",
+      "There is interaction in all three steps, but none of them weighs interaction against a process or a tool."
+    ]
+  }
+]

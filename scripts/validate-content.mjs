@@ -9,6 +9,8 @@
 //     (the reading mode zips the two languages section by section)
 //   - questions.json parses, ids are unique, options/optionsEn line up, and
 //     `answer` is a valid 0-based index
+//   - optionExplanations / optionExplanationsEn (optional) are present in both
+//     languages and carry exactly one non-empty reason per option
 //   - lessons.json (optional) covers every article section exactly once, in
 //     order, and only references question ids that exist
 //
@@ -120,6 +122,28 @@ for (const slug of slugs) {
     if (!Number.isInteger(q?.answer) || q.answer < 0 || q.answer >= q.options.length) {
       fail(slug, `${where} answer ${q?.answer} is out of range 0..${q.options.length - 1}`);
     }
+
+    // Per-option rationale is optional, but a partial one is worse than none:
+    // the UI indexes it against `options`, so a short array silently drops the
+    // "why" from the last options rather than failing loudly.
+    const rationaleFields = ["optionExplanations", "optionExplanationsEn"];
+    const present = rationaleFields.filter((f) => q?.[f] !== undefined);
+
+    if (present.length === 1) {
+      fail(slug, `${where} has "${present[0]}" but not "${rationaleFields.find((f) => f !== present[0])}"`);
+    }
+
+    present.forEach((field) => {
+      const arr = q[field];
+
+      if (!Array.isArray(arr)) {
+        fail(slug, `${where} "${field}" must be an array`);
+      } else if (arr.length !== q.options.length) {
+        fail(slug, `${where} "${field}" has ${arr.length} entries but there are ${q.options.length} options`);
+      } else if (arr.some((s) => typeof s !== "string" || s.trim() === "")) {
+        fail(slug, `${where} "${field}" has an empty entry — every option needs a reason`);
+      }
+    });
   });
 
   totalQuestions += questions.length;

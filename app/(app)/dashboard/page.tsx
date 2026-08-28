@@ -37,6 +37,16 @@ const CARDS = [
     },
   },
   {
+    href: "/exam",
+    icon: "◎",
+    accent: "text-rose-700 dark:text-rose-300",
+    title: { vi: "Thi cuối khoá", en: "Final Test" },
+    desc: {
+      vi: "Đề thi sinh ngẫu nhiên cho từng khoá (BA, PO, PM, AWS…), phủ đều mọi chủ đề, có tính giờ và điểm đạt.",
+      en: "A randomly generated exam per track (BA, PO, PM, AWS…) covering every topic, timed, with a pass mark.",
+    },
+  },
+  {
     href: "/practice/questions",
     icon: "✐",
     accent: "text-sky-700 dark:text-sky-300",

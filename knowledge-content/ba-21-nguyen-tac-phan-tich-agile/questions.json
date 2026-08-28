@@ -1,0 +1,578 @@
+[
+  {
+    "id": "q1",
+    "question": "Một BA Agile đang dùng các kỹ thuật Behavior Driven Development như Gherkin, ví dụ và kiểm thử để tạo hiểu biết chung với đội và các bên liên quan. Nguyên tắc phân tích Agile nào đang chi phối?",
+    "questionEn": "An agile BA is using Behavior Driven Development techniques like Gherkin, examples and testing to build shared understanding with the team and stakeholders. Which agile analysis principle is most at play?",
+    "options": [
+      "Phân tích để xác định điều gì có giá trị",
+      "Cụ thể hoá bằng ví dụ (Get real using examples)",
+      "Nhìn tổng thể (See the whole)",
+      "Hiểu điều gì khả thi (Understand what's doable)"
+    ],
+    "optionsEn": [
+      "Analyze to determine what is valuable",
+      "Get real using examples",
+      "See the whole",
+      "Understand what's doable"
+    ],
+    "answer": 1,
+    "explanation": "BDD là ví dụ rõ nhất của Cụ thể hoá bằng ví dụ. Gherkin, kịch bản và luồng ngoại lệ đều là từ khóa của nguyên tắc này.",
+    "explanationEn": "BDD is the clearest example of Get real using examples. Gherkin, scenarios and exception paths are all trigger words for this principle.",
+    "optionExplanations": [
+      "Phân tích giá trị nói về THỨ TỰ ưu tiên công việc, không phải điều tình huống này nhấn mạnh.",
+      "BDD và Gherkin là hiện thân trực tiếp của nguyên tắc này — chúng biến nhu cầu thành ví dụ và kịch bản thật của người dùng.",
+      "Nhìn tổng thể xoay quanh bối cảnh và bức tranh lớn, mức trừu tượng cao hơn tình huống này.",
+      "Hiểu điều gì khả thi xoay quanh RÀNG BUỘC; tình huống này không nói về ràng buộc."
+    ],
+    "optionExplanationsEn": [
+      "Analyzing value is about the ORDER of work, which is not what this scenario emphasises.",
+      "BDD and Gherkin are the direct embodiment of this principle — they turn a need into real user examples and scenarios.",
+      "See the whole is about context and the big picture, a higher level than this scenario.",
+      "Understand what's doable is about CONSTRAINTS; this scenario is not about constraints."
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Nguyên tắc phân tích Agile nào liên quan đến việc hiểu VÌ SAO đội đang làm công việc mà họ đang làm?",
+    "questionEn": "Which agile analysis principle involves understanding WHY a team is doing the work it is doing?",
+    "options": [
+      "Tránh lãng phí (Avoid waste)",
+      "Nhìn tổng thể (See the whole)",
+      "Hiểu điều gì khả thi (Understand what's doable)",
+      "Phân tích để xác định điều gì có giá trị"
+    ],
+    "optionsEn": [
+      "Avoid waste",
+      "See the whole",
+      "Understand what's doable",
+      "Analyze to determine what is valuable"
+    ],
+    "answer": 1,
+    "explanation": "Nhìn tổng thể là nguyên tắc về bối cảnh: vì sao công việc này tồn tại và nó nối với kết quả mong muốn thế nào.",
+    "explanationEn": "See the whole is the context principle: why this work exists and how it connects to the intended outcome.",
+    "optionExplanations": [
+      "Tránh lãng phí nói về việc không tạo ra nhiều hơn mức cần; đó không phải trọng tâm ở đây.",
+      "\"Tại sao\" và \"bối cảnh\" là từ khóa của Nhìn tổng thể — nguyên tắc này chính là hiểu bối cảnh của công việc.",
+      "Hiểu điều gì khả thi xoay quanh RÀNG BUỘC; tình huống này không nói về ràng buộc.",
+      "Phân tích giá trị nói về THỨ TỰ ưu tiên công việc, không phải điều tình huống này nhấn mạnh."
+    ],
+    "optionExplanationsEn": [
+      "Avoid waste is about not producing more than is needed; that is not the focus here.",
+      "\"Why\" and \"context\" are the trigger words for See the whole — the principle is precisely about understanding the context of the work.",
+      "Understand what's doable is about CONSTRAINTS; this scenario is not about constraints.",
+      "Analyzing value is about the ORDER of work, which is not what this scenario emphasises."
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Liên tục phân tích nhu cầu khách hàng và các giải pháp khả dĩ trong khi vẫn hiểu rõ các ràng buộc là ví dụ của nguyên tắc nào?",
+    "questionEn": "Continually analyzing customer needs and potential solutions while understanding the constraints is an example of which principle?",
+    "options": [
+      "Tránh lãng phí (Avoid waste)",
+      "Phân tích để xác định điều gì có giá trị",
+      "Hiểu điều gì khả thi (Understand what's doable)",
+      "Nghĩ như khách hàng (Think as a customer)"
+    ],
+    "optionsEn": [
+      "Avoid waste",
+      "Analyze to determine what is valuable",
+      "Understand what's doable",
+      "Think as a customer"
+    ],
+    "answer": 2,
+    "explanation": "Từ khóa \"ràng buộc\" luôn dẫn tới Hiểu điều gì khả thi, kể cả khi câu còn nhắc tới nhu cầu khách hàng và giải pháp.",
+    "explanationEn": "The word \"constraints\" always leads to Understand what's doable, even when the sentence also mentions customer needs and solutions.",
+    "optionExplanations": [
+      "Tránh lãng phí nói về việc không tạo ra nhiều hơn mức cần; đó không phải trọng tâm ở đây.",
+      "Bẫy chính của câu này. Nguyên tắc giá trị nói về sắp ưu tiên, không phải về ràng buộc.",
+      "Từ khóa quyết định là \"ràng buộc\". Đó là dấu hiệu mạnh nhất trong toàn bộ bảng nguyên tắc.",
+      "Nghĩ như khách hàng nói về sự đồng cảm với khách hàng, không phải về ràng buộc."
+    ],
+    "optionExplanationsEn": [
+      "Avoid waste is about not producing more than is needed; that is not the focus here.",
+      "The main trap here. The value principle is about prioritising, not about constraints.",
+      "The deciding trigger word is \"constraints\". It is the strongest single signal in the whole principle table.",
+      "Think as a customer is about customer empathy, not about constraints."
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Cộng tác với đội để bàn về các ràng buộc của một user story là ví dụ của nguyên tắc nào?",
+    "questionEn": "Collaborating with the team to discuss the constraints of a user story is an example of which principle?",
+    "options": [
+      "Tránh lãng phí (Avoid waste)",
+      "Phân tích để xác định điều gì có giá trị",
+      "Hiểu điều gì khả thi (Understand what's doable)",
+      "Thúc đẩy cộng tác và cải tiến liên tục"
+    ],
+    "optionsEn": [
+      "Avoid waste",
+      "Analyze to determine what is valuable",
+      "Understand what's doable",
+      "Stimulate collaboration and continuous improvement"
+    ],
+    "answer": 2,
+    "explanation": "Gần như tình huống Agile nào cũng có cộng tác. \"Ràng buộc\" là dấu hiệu riêng biệt và nó thắng.",
+    "explanationEn": "Nearly every agile scenario contains collaboration. \"Constraints\" is the distinctive signal and it wins.",
+    "optionExplanations": [
+      "Tránh lãng phí nói về việc không tạo ra nhiều hơn mức cần; đó không phải trọng tâm ở đây.",
+      "Phân tích giá trị nói về THỨ TỰ ưu tiên công việc, không phải điều tình huống này nhấn mạnh.",
+      "Dù có yếu tố cộng tác, từ khóa \"ràng buộc\" mới là thứ quyết định — hoạt động này là hiểu điều gì khả thi.",
+      "Đây là bẫy được cài sẵn: đội đúng là đang cộng tác, nhưng trọng tâm vào ràng buộc đẩy câu này sang nguyên tắc khác."
+    ],
+    "optionExplanationsEn": [
+      "Avoid waste is about not producing more than is needed; that is not the focus here.",
+      "Analyzing value is about the ORDER of work, which is not what this scenario emphasises.",
+      "Collaboration is present, but the word \"constraints\" is what decides — the activity is understanding what is doable.",
+      "This is the planted trap: the team is indeed collaborating, but the focus on constraints moves this to a different principle."
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Sam chuẩn bị cho buổi backlog refinement. Anh nhìn tất cả ý tưởng, kịch bản và luồng mà một user story có thể bao gồm, thấy phạm vi có thể rất lớn, rồi phân tích xem thực sự cần bao nhiêu và cần gì ngay bây giờ, để đề xuất vài phương án phiên bản nhỏ nhất. Sam đang thể hiện nguyên tắc nào?",
+    "questionEn": "Sam is preparing for backlog refinement. He looks at all the ideas, scenarios and paths a user story could involve, sees the scope could be large, and analyses how much is actually needed and needed now, then presents a few smallest-version options. Which principle is Sam demonstrating?",
+    "options": [
+      "Hiểu điều gì khả thi (Understand what's doable)",
+      "Nhìn tổng thể (See the whole)",
+      "Thúc đẩy cộng tác và cải tiến liên tục",
+      "Tránh lãng phí (Avoid waste)"
+    ],
+    "optionsEn": [
+      "Understand what's doable",
+      "See the whole",
+      "Stimulate collaboration and continuous improvement",
+      "Avoid waste"
+    ],
+    "answer": 3,
+    "explanation": "Tránh lãng phí là chỉ xác định lượng nhỏ nhất của một tính năng đủ để học, hiểu và thoả mãn nhu cầu người dùng.",
+    "explanationEn": "Avoid waste is identifying only the smallest amount of a feature needed to learn, understand and satisfy the user need.",
+    "optionExplanations": [
+      "Hiểu điều gì khả thi xoay quanh RÀNG BUỘC; tình huống này không nói về ràng buộc.",
+      "Sam vẫn cần nhìn tổng thể, nhưng hành động cụ thể ở đây thể hiện một nguyên tắc khác.",
+      "Đội có thể đang cộng tác, nhưng cộng tác chỉ là đáp án khi CẢI THIỆN CÁCH LÀM VIỆC mới là trọng tâm.",
+      "\"Phiên bản nhỏ nhất\" và \"chỉ cái cần bây giờ\" là từ khóa của Tránh lãng phí — tinh chỉnh thêm nữa sẽ là lãng phí."
+    ],
+    "optionExplanationsEn": [
+      "Understand what's doable is about CONSTRAINTS; this scenario is not about constraints.",
+      "Sam does need to see the whole, but the specific action here represents a different principle.",
+      "The team may be collaborating, but collaboration is only the answer when IMPROVING THE WAY OF WORKING is the point.",
+      "\"Smallest version\" and \"only what is needed now\" are Avoid waste triggers — refining any further would be waste."
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Liên tục đánh giá và sắp thứ tự ưu tiên công việc của đội nhằm tối đa hoá giá trị là ví dụ của nguyên tắc nào?",
+    "questionEn": "Continuously assessing and prioritising the work a team does in order to maximise value is an example of which principle?",
+    "options": [
+      "Phân tích để xác định điều gì có giá trị",
+      "Nghĩ như khách hàng (Think as a customer)",
+      "Tránh lãng phí (Avoid waste)",
+      "Hiểu điều gì khả thi (Understand what's doable)"
+    ],
+    "optionsEn": [
+      "Analyze to determine what is valuable",
+      "Think as a customer",
+      "Avoid waste",
+      "Understand what's doable"
+    ],
+    "answer": 0,
+    "explanation": "Ranh giới với Tránh lãng phí: giá trị nói về THỨ TỰ công việc; tránh lãng phí nói về LƯỢNG công việc tạo ra.",
+    "explanationEn": "The boundary with Avoid waste: value is about the ORDER of the work; avoid waste is about the AMOUNT of work produced.",
+    "optionExplanations": [
+      "\"Sắp ưu tiên\" cộng \"tối đa hoá giá trị\" là cặp từ khóa của nguyên tắc này; và nó liên tục chứ không phải một lần.",
+      "Nghĩ như khách hàng xoay quanh sự đồng cảm và việc khách hàng là ai, không phải điều được nhấn mạnh ở đây.",
+      "Tránh lãng phí đánh giá xem HÀNH ĐỘNG của ta có tạo giá trị không, chứ không phải sắp thứ tự công việc của đội.",
+      "Hiểu điều gì khả thi xoay quanh RÀNG BUỘC; tình huống này không nói về ràng buộc."
+    ],
+    "optionExplanationsEn": [
+      "\"Prioritising\" plus \"maximise value\" is this principle's trigger pair; and it is continuous, not a one-time event.",
+      "Think as a customer is about empathy and who the customer is, which is not what is emphasised here.",
+      "Avoid waste assesses whether our ACTIONS add value, rather than ordering the team's work.",
+      "Understand what's doable is about CONSTRAINTS; this scenario is not about constraints."
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "Giúp đội hiểu một user story chi tiết sẽ đóng góp thế nào vào tiến trình đi tới kết quả mong muốn là ví dụ của nguyên tắc nào?",
+    "questionEn": "Helping the team understand how a detailed user story advances progress towards the outcome is an example of which principle?",
+    "options": [
+      "Nghĩ như khách hàng (Think as a customer)",
+      "Thúc đẩy cộng tác và cải tiến liên tục",
+      "Cụ thể hoá bằng ví dụ (Get real using examples)",
+      "Nhìn tổng thể (See the whole)"
+    ],
+    "optionsEn": [
+      "Think as a customer",
+      "Stimulate collaboration and continuous improvement",
+      "Get real using examples",
+      "See the whole"
+    ],
+    "answer": 3,
+    "explanation": "Nhìn tổng thể không chỉ có ở tầm chiến lược. Ở tầm bàn giao, nó là việc nối từng story với kết quả mong muốn.",
+    "explanationEn": "See the whole is not only a strategy-horizon principle. At the delivery horizon it is connecting each story to the intended outcome.",
+    "optionExplanations": [
+      "User story vốn hướng khách hàng, nhưng tình huống nhấn mạnh việc nối chi tiết với KẾT QUẢ, nên có nguyên tắc mạnh hơn.",
+      "Đội có thể đang cộng tác, nhưng cộng tác chỉ là đáp án khi CẢI THIỆN CÁCH LÀM VIỆC mới là trọng tâm.",
+      "Bàn về user story có thể dẫn tới ví dụ, nhưng đó không phải điều tình huống này nhấn mạnh.",
+      "Gắn chi tiết của một story vào kết quả mà đội đang hướng tới chính là Nhìn tổng thể ở tầm bàn giao."
+    ],
+    "optionExplanationsEn": [
+      "User stories are customer-focused, but the scenario emphasises connecting the detail to the OUTCOME, so a stronger principle applies.",
+      "The team may be collaborating, but collaboration is only the answer when IMPROVING THE WAY OF WORKING is the point.",
+      "Discussing a user story may lead to examples, but that is not what this scenario emphasises.",
+      "Aligning the detail of a story to the outcome the team is pursuing is See the whole, at the delivery horizon."
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "Pam giới thiệu user story ưu tiên cao nhất cho đội trong buổi backlog refinement hằng tuần. Cô bàn nhiều kịch bản và luồng khác nhau, gồm cả luồng ngoại lệ và luồng thay thế mà người dùng có thể gặp. Pam đang thể hiện nguyên tắc nào?",
+    "questionEn": "Pam shares the next high-priority user story with the team in weekly backlog refinement. She discusses various scenarios and paths, including exception and alternate paths a user may experience. Which principle is Pam demonstrating?",
+    "options": [
+      "Cụ thể hoá bằng ví dụ (Get real using examples)",
+      "Tránh lãng phí (Avoid waste)",
+      "Thúc đẩy cộng tác và cải tiến liên tục",
+      "Nhìn tổng thể (See the whole)"
+    ],
+    "optionsEn": [
+      "Get real using examples",
+      "Avoid waste",
+      "Stimulate collaboration and continuous improvement",
+      "See the whole"
+    ],
+    "answer": 0,
+    "explanation": "Từ khóa là \"kịch bản\", \"luồng ngoại lệ\", \"luồng thay thế\" — cả ba đều thuộc Cụ thể hoá bằng ví dụ.",
+    "explanationEn": "The triggers are \"scenarios\", \"exception paths\" and \"alternate paths\" — all three belong to Get real using examples.",
+    "optionExplanations": [
+      "Kịch bản người dùng, gồm luồng ngoại lệ và luồng thay thế, là cách kinh điển để cụ thể hoá bằng ví dụ thật.",
+      "Tránh lãng phí tập trung vào cái gì tạo giá trị và cái gì không; kịch bản có thể là đầu vào cho việc đó nhưng không phải trọng tâm ở đây.",
+      "Đội có thể đang cộng tác, nhưng cộng tác chỉ là đáp án khi CẢI THIỆN CÁCH LÀM VIỆC mới là trọng tâm.",
+      "Nhìn tổng thể xoay quanh bối cảnh và bức tranh lớn, mức trừu tượng cao hơn tình huống này."
+    ],
+    "optionExplanationsEn": [
+      "User scenarios, including exception and alternate paths, are the classic way to get real using examples.",
+      "Avoid waste focuses on what adds value and what does not; scenarios may be an input to that but are not the focus here.",
+      "The team may be collaborating, but collaboration is only the answer when IMPROVING THE WAY OF WORKING is the point.",
+      "See the whole is about context and the big picture, a higher level than this scenario."
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "Phân rã nhu cầu và góc nhìn của khách hàng thành hiểu biết chi tiết là ví dụ của nguyên tắc nào?",
+    "questionEn": "Decomposing customer needs and viewpoints into a detailed understanding is an example of which principle?",
+    "options": [
+      "Nghĩ như khách hàng (Think as a customer)",
+      "Thúc đẩy cộng tác và cải tiến liên tục",
+      "Phân tích để xác định điều gì có giá trị",
+      "Cụ thể hoá bằng ví dụ (Get real using examples)"
+    ],
+    "optionsEn": [
+      "Think as a customer",
+      "Stimulate collaboration and continuous improvement",
+      "Analyze to determine what is valuable",
+      "Get real using examples"
+    ],
+    "answer": 0,
+    "explanation": "Cặp Nghĩ như khách hàng ↔ Cụ thể hoá bằng ví dụ tách ở chỗ: ai/góc nhìn so với ví dụ/kịch bản.",
+    "explanationEn": "The Think as a customer ↔ Get real using examples pair separates on who/viewpoint versus examples/scenarios.",
+    "optionExplanations": [
+      "\"Phân rã nhu cầu khách hàng\" và \"góc nhìn khách hàng\" là đúng cụm từ khóa của Nghĩ như khách hàng.",
+      "Đội có thể đang cộng tác, nhưng cộng tác chỉ là đáp án khi CẢI THIỆN CÁCH LÀM VIỆC mới là trọng tâm.",
+      "Phân tích giá trị là nguyên tắc liền kề, nhưng ở đây không có yếu tố sắp thứ tự ưu tiên nào.",
+      "Chủ đề gần nhau nhưng khác nhau: hiểu khách hàng LÀ AI là nghĩ như khách hàng; đưa ra kịch bản cụ thể mới là cụ thể hoá bằng ví dụ."
+    ],
+    "optionExplanationsEn": [
+      "\"Decomposing customer needs\" and \"customer viewpoints\" are precisely the Think as a customer triggers.",
+      "The team may be collaborating, but collaboration is only the answer when IMPROVING THE WAY OF WORKING is the point.",
+      "Analyzing value is an adjacent principle, but there is no prioritisation element here.",
+      "Close but distinct: understanding WHO the customer is is thinking as a customer; producing concrete scenarios is getting real using examples."
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "Chỉ tài liệu hoá những gì cần ở thời điểm đó là ví dụ của nguyên tắc nào?",
+    "questionEn": "Only documenting what is needed at the time is an example of which principle?",
+    "options": [
+      "Hiểu điều gì khả thi (Understand what's doable)",
+      "Nghĩ như khách hàng (Think as a customer)",
+      "Tránh lãng phí (Avoid waste)",
+      "Thúc đẩy cộng tác và cải tiến liên tục"
+    ],
+    "optionsEn": [
+      "Understand what's doable",
+      "Think as a customer",
+      "Avoid waste",
+      "Stimulate collaboration and continuous improvement"
+    ],
+    "answer": 2,
+    "explanation": "Tài liệu tối thiểu là biểu hiện tầm bàn giao của Tránh lãng phí. Lưu ý phần giải thích chính thức nói rõ tài liệu không phải hình thức cộng tác mạnh.",
+    "explanationEn": "Minimal documentation is the delivery-horizon face of Avoid waste. Note the official explanation says outright that documentation is not a strong form of collaboration.",
+    "optionExplanations": [
+      "Hiểu điều gì khả thi xoay quanh RÀNG BUỘC; tình huống này không nói về ràng buộc.",
+      "Tài liệu có thể mang tiếng nói khách hàng, nhưng việc quyết định tài liệu hoá BAO NHIÊU thuộc một nguyên tắc khác.",
+      "\"Chỉ những gì cần\" là công thức trực tiếp của Tránh lãng phí, áp dụng vào tài liệu.",
+      "Bẫy có chủ ý: tài liệu không phải một hình thức cộng tác mạnh, nên đây không phải nguyên tắc cộng tác."
+    ],
+    "optionExplanationsEn": [
+      "Understand what's doable is about CONSTRAINTS; this scenario is not about constraints.",
+      "Documentation may carry the customer's voice, but deciding HOW MUCH to document belongs to a different principle.",
+      "\"Only what is needed\" is the direct Avoid waste formula, applied to documentation.",
+      "A deliberate trap: documentation is not a strong form of collaboration, so this is not the collaboration principle."
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Một BA Agile áp dụng nguyên tắc \"nhìn tổng thể\" ở TẦM CHIẾN LƯỢC bằng cách làm gì?",
+    "questionEn": "An agile BA uses the \"see the whole\" principle at the STRATEGY horizon by doing what?",
+    "options": [
+      "Gắn kết epic với feature và theme",
+      "Xem xét thị trường, bối cảnh chính trị, cùng năng lực, điểm mạnh và thách thức hiện tại của tổ chức",
+      "Để các đội từ những sáng kiến khác nhau trao đổi và báo cáo tình trạng cho nhau",
+      "Đảm bảo mỗi user story đều có acceptance criteria"
+    ],
+    "optionsEn": [
+      "Aligning epics to features and themes",
+      "Considering the market, political climate, and current organisational capabilities, strengths and challenges",
+      "Getting teams from different initiatives to talk and give each other status reports",
+      "Making sure there is acceptance criteria with each user story"
+    ],
+    "answer": 1,
+    "explanation": "Cùng một nguyên tắc co giãn theo tầm. Ở tầm chiến lược, \"tổng thể\" nghĩa là toàn doanh nghiệp và môi trường bên ngoài của nó.",
+    "explanationEn": "The same principle scales with the horizon. At the strategy horizon, \"the whole\" means the whole enterprise and its external environment.",
+    "optionExplanations": [
+      "Đây là Nhìn tổng thể ở tầm SÁNG KIẾN, không phải tầm chiến lược.",
+      "Ở tầm chiến lược, nhìn tổng thể là các yếu tố bên ngoài và năng lực của toàn doanh nghiệp.",
+      "Cộng tác giữa các sáng kiến là tốt, nhưng báo cáo tình trạng khó cung cấp được bối cảnh cần để nhìn tổng thể.",
+      "Đây là Nhìn tổng thể ở tầm BÀN GIAO, không phải tầm chiến lược."
+    ],
+    "optionExplanationsEn": [
+      "This is See the whole at the INITIATIVE horizon, not the strategy horizon.",
+      "At the strategy horizon, seeing the whole is about external factors and the capabilities of the enterprise as a whole.",
+      "Cross-initiative collaboration is good, but status reports are unlikely to provide the context needed to see the whole.",
+      "This is See the whole at the DELIVERY horizon, not the strategy horizon."
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "Thúc đẩy cộng tác và cải tiến liên tục ở TẦM SÁNG KIẾN bao gồm việc gì?",
+    "questionEn": "What is involved in stimulating collaboration and continuous improvement at the INITIATIVE horizon?",
+    "options": [
+      "Cộng tác với khách hàng về phản hồi trong buổi review hoặc demo của iteration",
+      "Cộng tác với đội mình và với các đội khác trên những sáng kiến liên quan",
+      "Cộng tác với các bên liên quan để quyết định cái gì sẽ được release tiếp theo",
+      "Cộng tác với đội để tinh chỉnh user story"
+    ],
+    "optionsEn": [
+      "Collaborate with customers on feedback in an iteration review or demo",
+      "Collaborate with the team and with other teams on related initiatives",
+      "Collaborate with stakeholders to determine what will be released next",
+      "Collaborate with the team to refine user stories"
+    ],
+    "answer": 1,
+    "explanation": "Ở tầm sáng kiến, cộng tác nghĩa là vượt khỏi ranh giới một đội. Trong một đội, với story, là tầm bàn giao.",
+    "explanationEn": "At the initiative horizon, collaboration means crossing team boundaries. Inside one team, on stories, is the delivery horizon.",
+    "optionExplanations": [
+      "Đây là ví dụ của tầm BÀN GIAO — review và demo thuộc nhịp iteration.",
+      "Đúng phạm vi của tầm sáng kiến: vượt ra khỏi một đội để gắn kết các sáng kiến liên quan.",
+      "Đây là ví dụ của tầm bàn giao — nó gắn với nhịp release ngắn hạn của đội.",
+      "Bẫy nổi tiếng nhất của dạng câu này: tinh chỉnh user story nghe như tầm sáng kiến nhưng là công việc tầm BÀN GIAO."
+    ],
+    "optionExplanationsEn": [
+      "This is a DELIVERY-horizon example — reviews and demos belong to the iteration cadence.",
+      "Exactly the initiative-horizon scope: reaching beyond one team to align related initiatives.",
+      "This is a delivery-horizon example — it is tied to the team's short-term release cadence.",
+      "The best-known trap in this question type: refining user stories sounds initiative-level but is DELIVERY-horizon work."
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Một BA Agile hỗ trợ nguyên tắc \"tránh lãng phí\" ở TẦM CHIẾN LƯỢC bằng cách nào?",
+    "questionEn": "How does an agile BA support the \"avoid waste\" principle at the STRATEGY horizon?",
+    "options": [
+      "Bằng cách đưa ra ví dụ từ câu chuyện và trải nghiệm thật của khách hàng",
+      "Đảm bảo các quyết định dựa trên thông tin hiện tại và công việc đang làm vẫn còn phù hợp với mục tiêu tổ chức",
+      "Đảm bảo các đội có sắp ưu tiên trong buổi backlog refinement",
+      "Bằng cách tập trung vào cộng tác chặt chẽ giữa các sáng kiến"
+    ],
+    "optionsEn": [
+      "By providing examples from real customer stories and experiences",
+      "Making sure decisions are based on current information and that the work is still relevant to organisational goals",
+      "Making sure teams are using prioritisation in their backlog refinement sessions",
+      "By focusing on strong collaboration between initiatives"
+    ],
+    "answer": 1,
+    "explanation": "Ở tầm chiến lược, lãng phí không phải là tài liệu thừa mà là quyết định dựa trên thông tin đã cũ.",
+    "explanationEn": "At the strategy horizon, waste is not surplus documentation but decisions made on stale information.",
+    "optionExplanations": [
+      "Đây là hoạt động của tầm bàn giao, và nó thuộc nguyên tắc cụ thể hoá bằng ví dụ hơn là tránh lãng phí.",
+      "Thông tin lỗi thời là nguồn lãng phí lớn nhất ở tầm chiến lược: nó khiến tổ chức đầu tư vào việc không còn đáng làm.",
+      "Đây là tầm sáng kiến hoặc bàn giao — nó nói về nhịp làm việc của đội, không phải quyết định cấp tổ chức.",
+      "Đây là tầm sáng kiến, và nó thuộc nguyên tắc cộng tác hơn là tránh lãng phí."
+    ],
+    "optionExplanationsEn": [
+      "This is a delivery-horizon activity, and it belongs to getting real using examples rather than avoiding waste.",
+      "Outdated information is the biggest source of strategy-level waste: it makes the organisation invest in work no longer worth doing.",
+      "This is the initiative or delivery horizon — it concerns a team's working cadence, not organisational decisions.",
+      "This is the initiative horizon, and it belongs to the collaboration principle rather than avoiding waste."
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "Sáu khái niệm cốt lõi của mô hình BACCM là gì?",
+    "questionEn": "Which represents the six core concepts of the BACCM?",
+    "options": [
+      "Adapt, customer, change, value, feedback và iteration",
+      "Change, need, solution, stakeholder, value và context",
+      "Product, customer, backlog item, value và team",
+      "Customer, team, iteration, story, review và backlog"
+    ],
+    "optionsEn": [
+      "Adapt, customer, change, value, feedback, and iteration",
+      "Change, need, solution, stakeholder, value, and context",
+      "Product, customer, backlog item, value, and team",
+      "Customer, team, iteration, story, review, and backlog"
+    ],
+    "answer": 1,
+    "explanation": "Change, Need, Solution, Stakeholder, Value, Context. Mẹo nhanh: đếm số mục — vài phương án nhiễu chỉ có năm.",
+    "explanationEn": "Change, Need, Solution, Stakeholder, Value, Context. Fast trick: count the items — some distractors list only five.",
+    "optionExplanations": [
+      "Trộn từ vựng Agile nghe hợp lý nhưng không phải BACCM. Gợi ý: Value đúng là một trong sáu, phần còn lại thì không.",
+      "Đây là đúng sáu khái niệm cốt lõi của BACCM, không hơn không kém.",
+      "Chỉ có NĂM mục — đếm là loại được ngay, kể cả khi bạn chưa nhớ danh sách đúng.",
+      "Toàn bộ là thuật ngữ vận hành Scrum, không có khái niệm nào thuộc BACCM."
+    ],
+    "optionExplanationsEn": [
+      "A mix of plausible agile vocabulary that is not the BACCM. Hint: Value is one of the six, the rest are not.",
+      "These are exactly the six BACCM core concepts, no more and no fewer.",
+      "Only FIVE items — counting eliminates it outright, even if you cannot recall the correct list.",
+      "These are all Scrum delivery vocabulary; none of them is a BACCM concept."
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "Khái niệm BACCM nào là \"một cách cụ thể để thoả mãn một hoặc nhiều nhu cầu trong một bối cảnh\"?",
+    "questionEn": "Which BACCM core concept is \"a specific way of satisfying one or more needs within a context\"?",
+    "options": [
+      "Need — Nhu cầu",
+      "Context — Bối cảnh",
+      "Change — Thay đổi",
+      "Solution — Giải pháp"
+    ],
+    "optionsEn": [
+      "Need",
+      "Context",
+      "Change",
+      "Solution"
+    ],
+    "answer": 3,
+    "explanation": "Bốn định nghĩa BACCM hay bị hoán đổi nhất là Change, Need, Solution và Context — học thuộc cả bốn cùng lúc.",
+    "explanationEn": "The four most frequently swapped BACCM definitions are Change, Need, Solution and Context — learn all four together.",
+    "optionExplanations": [
+      "Nhu cầu là MỘT VẤN ĐỀ hoặc CƠ HỘI cần được giải quyết, không phải cách giải quyết nó.",
+      "Bối cảnh là các hoàn cảnh ảnh hưởng tới, bị ảnh hưởng bởi và giúp hiểu được thay đổi.",
+      "Thay đổi là HÀNH ĐỘNG chuyển đổi để đáp lại một nhu cầu, không phải bản thân cách thoả mãn nhu cầu.",
+      "Đúng nguyên văn định nghĩa: giải pháp là một cách cụ thể để thoả mãn nhu cầu trong một bối cảnh."
+    ],
+    "optionExplanationsEn": [
+      "A need is a PROBLEM or OPPORTUNITY to be addressed, not the way of addressing it.",
+      "Context is the circumstances that influence, are influenced by, and provide understanding of the change.",
+      "Change is the ACT of transformation in response to a need, not the means of satisfying it.",
+      "This is the definition verbatim: a solution is a specific way of satisfying needs within a context."
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "\"Need\" là một khái niệm cốt lõi của BACCM. Nó ánh xạ tới nguyên tắc phân tích Agile nào?",
+    "questionEn": "\"Need\" is a BACCM core concept. Which agile analysis principle does it align to?",
+    "options": [
+      "Nghĩ như khách hàng (Think as a customer)",
+      "Cụ thể hoá bằng ví dụ (Get real using examples)",
+      "Tránh lãng phí (Avoid waste)",
+      "Phân tích để xác định điều gì có giá trị"
+    ],
+    "optionsEn": [
+      "Think as a customer",
+      "Get real using examples",
+      "Avoid waste",
+      "Analyze to determine what is valuable"
+    ],
+    "answer": 1,
+    "explanation": "Ánh xạ cần nhớ: Context → Nhìn tổng thể; Need → Cụ thể hoá bằng ví dụ; Value → Ví dụ + Tránh lãng phí; Change → tất cả.",
+    "explanationEn": "The mapping to remember: Context → See the whole; Need → Get real using examples; Value → Get real + Avoid waste; Change → all of them.",
+    "optionExplanations": [
+      "Bẫy phổ biến: nghĩ như khách hàng nghe rất gần với nhu cầu, nhưng ánh xạ chính thức lại thuộc về nguyên tắc khác.",
+      "Cụ thể hoá bằng ví dụ chính là để HIỂU NHU CẦU — biến nhu cầu trừu tượng thành ví dụ thật của người dùng.",
+      "Tránh lãng phí ánh xạ tới khái niệm Value cùng với Get real, chứ không tới Need một mình.",
+      "Phân tích giá trị nói về thứ tự công việc; nó không phải nguyên tắc mà Need ánh xạ tới."
+    ],
+    "optionExplanationsEn": [
+      "A common trap: thinking as a customer sounds close to need, but the official mapping goes to another principle.",
+      "Getting real using examples is all about UNDERSTANDING THE NEED — turning an abstract need into real user examples.",
+      "Avoid waste maps to the Value concept together with Get real, not to Need on its own.",
+      "Analyzing value is about the order of work; it is not the principle Need maps to."
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "\"Cụ thể hoá bằng ví dụ\" và \"Tránh lãng phí\" là hai nguyên tắc giúp ta hiểu khái niệm cốt lõi BACCM nào?",
+    "questionEn": "\"Get real using examples\" and \"Avoid waste\" are the principles that help us understand which BACCM core concept?",
+    "options": [
+      "Change",
+      "Value",
+      "Need",
+      "Context"
+    ],
+    "optionsEn": [
+      "Change",
+      "Value",
+      "Need",
+      "Context"
+    ],
+    "answer": 1,
+    "explanation": "Khi câu hỏi cho HAI nguyên tắc cùng lúc, đáp án gần như luôn là Value — khái niệm duy nhất được hai nguyên tắc cùng thể hiện.",
+    "explanationEn": "When the question names TWO principles at once, the answer is almost always Value — the one concept those two principles jointly embody.",
+    "optionExplanations": [
+      "Change ánh xạ tới TẤT CẢ các nguyên tắc, không riêng hai nguyên tắc này — nên nó không bao giờ là đáp án cho câu hỏi kiểu này.",
+      "Giá trị là khái niệm mà cả hai nguyên tắc này cùng thể hiện: làm rõ cái gì đáng giá và không tạo ra nhiều hơn mức cần.",
+      "Need đúng là ánh xạ tới Cụ thể hoá bằng ví dụ, nhưng Tránh lãng phí lại gắn với khái niệm khác — nên Need chỉ đúng một nửa.",
+      "Context ánh xạ tới nguyên tắc Nhìn tổng thể, không phải hai nguyên tắc trong câu hỏi."
+    ],
+    "optionExplanationsEn": [
+      "Change maps to ALL the principles, not just these two — so it is never the answer to this style of question.",
+      "Value is the concept both principles embody: making clear what is worth having and not producing more than is needed.",
+      "Need does map to Get real using examples, but Avoid waste is associated with a different concept — so Need is only half right.",
+      "Context maps to the See the whole principle, not to the two principles in the question."
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "Vì sao khái niệm \"Change\" gần như không bao giờ là đáp án đúng cho câu hỏi ánh xạ một khái niệm BACCM vào MỘT nguyên tắc?",
+    "questionEn": "Why is \"Change\" almost never the correct answer when a question maps a BACCM concept onto ONE principle?",
+    "options": [
+      "Vì Change không thực sự là một khái niệm cốt lõi của BACCM",
+      "Vì Change chỉ áp dụng ở tầm chiến lược",
+      "Vì Change xuyên suốt tất cả bảy nguyên tắc, nên không thể là đáp án của một nguyên tắc duy nhất",
+      "Vì Change đã được thay thế bằng khái niệm Value trong phiên bản v2"
+    ],
+    "optionsEn": [
+      "Because Change is not really a BACCM core concept",
+      "Because Change applies only at the strategy horizon",
+      "Because Change cuts across all seven principles, so it cannot be the answer for a single principle",
+      "Because Change was replaced by Value in version 2"
+    ],
+    "answer": 2,
+    "explanation": "Change là khái niệm bao trùm. Khi phải chọn một nguyên tắc, hãy tìm khái niệm có ánh xạ HẸP: Context, Need hoặc Value.",
+    "explanationEn": "Change is the umbrella concept. When one principle must be chosen, look for the concept with a NARROW mapping: Context, Need or Value.",
+    "optionExplanations": [
+      "Sai ở tiền đề — Change là một trong sáu khái niệm cốt lõi, đứng đầu danh sách.",
+      "BACCM không gắn với tầm nào cả; nó là khung khái niệm dùng ở mọi mức phân tích.",
+      "Đúng. Đây vừa là kiến thức về BACCM vừa là mẹo loại trừ nhanh trong dạng câu hỏi ánh xạ.",
+      "Không có sự thay thế nào; cả sáu khái niệm đều còn nguyên trong Agile Extension v2."
+    ],
+    "optionExplanationsEn": [
+      "Wrong at the premise — Change is one of the six core concepts, and heads the list.",
+      "The BACCM is not horizon-specific; it is a conceptual frame used at every level of analysis.",
+      "Correct. This is both a fact about the BACCM and a fast elimination heuristic in mapping questions.",
+      "No such replacement happened; all six concepts remain in the Agile Extension v2."
+    ]
+  }
+]

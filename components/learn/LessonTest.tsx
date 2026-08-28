@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLang } from "@/context/lang";
 import BilingualPair from "@/components/BilingualPair";
+import OptionRationale from "@/components/knowledge/OptionRationale";
 import { localizeQuestion, type Question } from "@/components/knowledge/QuizBlock";
 import { type AnsweredQuestion } from "@/lib/progress";
 import { cn } from "@/lib/utils";
@@ -107,44 +108,56 @@ export default function LessonTest({ questions, heading, blurb, ctaLabel, onFini
             const isChosen = i === choice;
 
             return (
-              <button
-                key={i}
-                onClick={() => handleSelect(i)}
-                disabled={revealed}
-                className={cn(
-                  "w-full text-left flex items-start gap-3 px-4 py-3 rounded-lg border text-sm transition-colors",
-                  revealed && isCorrect &&
-                    "bg-green-50 dark:bg-green-900/40 border-green-400 dark:border-green-700 text-green-800 dark:text-green-200",
-                  revealed && isChosen && !isCorrect &&
-                    "bg-red-50 dark:bg-red-900/40 border-red-400 dark:border-red-700 text-red-800 dark:text-red-200",
-                  revealed && !isCorrect && !isChosen &&
-                    "bg-zinc-100 dark:bg-zinc-800/40 border-zinc-200 dark:border-zinc-800 text-zinc-500",
-                  !revealed &&
-                    "bg-zinc-100 dark:bg-zinc-800/50 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600"
-                )}
-              >
-                <span
+              <div key={i}>
+                <button
+                  onClick={() => handleSelect(i)}
+                  disabled={revealed}
                   className={cn(
-                    "w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0 mt-0.5",
-                    revealed && isCorrect
-                      ? "bg-green-600 border-green-500 text-white"
-                      : revealed && isChosen
-                        ? "bg-red-600 border-red-500 text-white"
-                        : "border-zinc-400 dark:border-zinc-600 text-zinc-500"
+                    "w-full text-left flex items-start gap-3 px-4 py-3 rounded-lg border text-sm transition-colors",
+                    revealed && isCorrect &&
+                      "bg-green-50 dark:bg-green-900/40 border-green-400 dark:border-green-700 text-green-800 dark:text-green-200",
+                    revealed && isChosen && !isCorrect &&
+                      "bg-red-50 dark:bg-red-900/40 border-red-400 dark:border-red-700 text-red-800 dark:text-red-200",
+                    revealed && !isCorrect && !isChosen &&
+                      "bg-zinc-100 dark:bg-zinc-800/40 border-zinc-200 dark:border-zinc-800 text-zinc-500",
+                    !revealed &&
+                      "bg-zinc-100 dark:bg-zinc-800/50 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600"
                   )}
                 >
-                  {optionLabels[i]}
-                </span>
-                {dual ? (
-                  <BilingualPair
-                    className="flex-1 gap-y-1"
-                    en={<span>{qEn.options[i]}</span>}
-                    vi={<span className="text-zinc-600 dark:text-zinc-400">{qVi.options[i]}</span>}
+                  <span
+                    className={cn(
+                      "w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold shrink-0 mt-0.5",
+                      revealed && isCorrect
+                        ? "bg-green-600 border-green-500 text-white"
+                        : revealed && isChosen
+                          ? "bg-red-600 border-red-500 text-white"
+                          : "border-zinc-400 dark:border-zinc-600 text-zinc-500"
+                    )}
+                  >
+                    {optionLabels[i]}
+                  </span>
+                  {dual ? (
+                    <BilingualPair
+                      className="flex-1 gap-y-1"
+                      en={<span>{qEn.options[i]}</span>}
+                      vi={<span className="text-zinc-600 dark:text-zinc-400">{qVi.options[i]}</span>}
+                    />
+                  ) : (
+                    <span>{opt}</span>
+                  )}
+                </button>
+
+                {/* Outside the button: a <div> is not valid inside one, and the
+                    rationale must stay readable after the button is disabled. */}
+                {revealed && (
+                  <OptionRationale
+                    correct={isCorrect}
+                    en={qEn.optionExplanations?.[i]}
+                    vi={qVi.optionExplanations?.[i]}
+                    className="pl-[3.25rem] pr-4 mt-1 mb-1"
                   />
-                ) : (
-                  <span>{opt}</span>
                 )}
-              </button>
+              </div>
             );
           })}
         </div>
